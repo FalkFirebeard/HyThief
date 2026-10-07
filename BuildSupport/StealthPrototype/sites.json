@@ -1,0 +1,3606 @@
+{
+  "Version": "1.2.1-revamp.11",
+  "Roles": [
+    "Bramblekin",
+    "Bramblekin_Shaman",
+    "Dungeon_Skeleton_Sand_Archer",
+    "Dungeon_Skeleton_Sand_Assassin",
+    "Dungeon_Skeleton_Sand_Mage",
+    "Dungeon_Skeleton_Sand_Soldier",
+    "Feran_Burrower",
+    "Feran_Civilian",
+    "Feran_Longtooth",
+    "Feran_Sharptooth",
+    "Feran_Windwalker",
+    "Goblin_Duke",
+    "Goblin_Duke_Phase_2",
+    "Goblin_Duke_Phase_3_Fast",
+    "Goblin_Duke_Phase_3_Slow",
+    "Goblin_Hermit",
+    "Goblin_Lobber",
+    "Goblin_Lobber_Patrol",
+    "Goblin_Miner",
+    "Goblin_Miner_Patrol",
+    "Goblin_Ogre",
+    "Goblin_Scavenger",
+    "Goblin_Scavenger_Battleaxe",
+    "Goblin_Scavenger_Sword",
+    "Goblin_Scrapper",
+    "Goblin_Scrapper_Patrol",
+    "Goblin_Thief",
+    "Goblin_Thief_Patrol",
+    "Hedera",
+    "Klops_Gentleman",
+    "Klops_Merchant",
+    "Klops_Merchant_Patrol",
+    "Klops_Merchant_Wandering",
+    "Klops_Miner",
+    "Klops_Miner_Patrol",
+    "Kweebec_Merchant",
+    "Kweebec_Razorleaf",
+    "Kweebec_Razorleaf_Patrol",
+    "Kweebec_Rootling",
+    "Kweebec_Sapling",
+    "Kweebec_Sapling_Orange",
+    "Kweebec_Sapling_Pink",
+    "Outlander_Berserker",
+    "Outlander_Brute",
+    "Outlander_Cultist",
+    "Outlander_Hunter",
+    "Outlander_Marauder",
+    "Outlander_Peon",
+    "Outlander_Priest",
+    "Outlander_Sorcerer",
+    "Outlander_Stalker",
+    "Skeleton_Archer",
+    "Skeleton_Archer_Patrol",
+    "Skeleton_Archer_Wander",
+    "Skeleton_Archmage",
+    "Skeleton_Archmage_Patrol",
+    "Skeleton_Archmage_Wander",
+    "Skeleton_Burnt_Alchemist",
+    "Skeleton_Burnt_Alchemist_Patrol",
+    "Skeleton_Burnt_Alchemist_Wander",
+    "Skeleton_Burnt_Archer",
+    "Skeleton_Burnt_Archer_Patrol",
+    "Skeleton_Burnt_Archer_Wander",
+    "Skeleton_Burnt_Gunner",
+    "Skeleton_Burnt_Gunner_Patrol",
+    "Skeleton_Burnt_Gunner_Wander",
+    "Skeleton_Burnt_Knight",
+    "Skeleton_Burnt_Knight_Patrol",
+    "Skeleton_Burnt_Knight_Wander",
+    "Skeleton_Burnt_Lancer",
+    "Skeleton_Burnt_Lancer_Patrol",
+    "Skeleton_Burnt_Lancer_Wander",
+    "Skeleton_Burnt_Praetorian",
+    "Skeleton_Burnt_Praetorian_Patrol",
+    "Skeleton_Burnt_Praetorian_Wander",
+    "Skeleton_Burnt_Soldier",
+    "Skeleton_Burnt_Soldier_Patrol",
+    "Skeleton_Burnt_Soldier_Wander",
+    "Skeleton_Burnt_Wizard",
+    "Skeleton_Burnt_Wizard_Patrol",
+    "Skeleton_Burnt_Wizard_Wander",
+    "Skeleton_Fighter",
+    "Skeleton_Fighter_Patrol",
+    "Skeleton_Fighter_Wander",
+    "Skeleton_Frost_Archer",
+    "Skeleton_Frost_Archer_Patrol",
+    "Skeleton_Frost_Archer_Wander",
+    "Skeleton_Frost_Archmage",
+    "Skeleton_Frost_Archmage_Patrol",
+    "Skeleton_Frost_Archmage_Wander",
+    "Skeleton_Frost_Fighter",
+    "Skeleton_Frost_Fighter_Patrol",
+    "Skeleton_Frost_Fighter_Wander",
+    "Skeleton_Frost_Knight",
+    "Skeleton_Frost_Knight_Patrol",
+    "Skeleton_Frost_Knight_Wander",
+    "Skeleton_Frost_Mage",
+    "Skeleton_Frost_Mage_Patrol",
+    "Skeleton_Frost_Mage_Wander",
+    "Skeleton_Frost_Ranger",
+    "Skeleton_Frost_Ranger_Patrol",
+    "Skeleton_Frost_Ranger_Wander",
+    "Skeleton_Frost_Scout",
+    "Skeleton_Frost_Scout_Patrol",
+    "Skeleton_Frost_Scout_Wander",
+    "Skeleton_Frost_Soldier",
+    "Skeleton_Frost_Soldier_Patrol",
+    "Skeleton_Frost_Soldier_Wander",
+    "Skeleton_Incandescent_Fighter",
+    "Skeleton_Incandescent_Fighter_Patrol",
+    "Skeleton_Incandescent_Fighter_Wander",
+    "Skeleton_Incandescent_Footman",
+    "Skeleton_Incandescent_Footman_Patrol",
+    "Skeleton_Incandescent_Footman_Wander",
+    "Skeleton_Incandescent_Mage",
+    "Skeleton_Incandescent_Mage_Patrol",
+    "Skeleton_Incandescent_Mage_Wander",
+    "Skeleton_Knight",
+    "Skeleton_Knight_Patrol",
+    "Skeleton_Knight_Wander",
+    "Skeleton_Mage",
+    "Skeleton_Mage_Patrol",
+    "Skeleton_Mage_Wander",
+    "Skeleton_Pirate_Captain",
+    "Skeleton_Pirate_Captain_Patrol",
+    "Skeleton_Pirate_Captain_Wander",
+    "Skeleton_Pirate_Gunner",
+    "Skeleton_Pirate_Gunner_Patrol",
+    "Skeleton_Pirate_Gunner_Wander",
+    "Skeleton_Pirate_Striker",
+    "Skeleton_Pirate_Striker_Patrol",
+    "Skeleton_Pirate_Striker_Wander",
+    "Skeleton_Ranger",
+    "Skeleton_Ranger_Patrol",
+    "Skeleton_Ranger_Wander",
+    "Skeleton_Sand_Archer",
+    "Skeleton_Sand_Archer_Patrol",
+    "Skeleton_Sand_Archer_Wander",
+    "Skeleton_Sand_Archmage",
+    "Skeleton_Sand_Archmage_Patrol",
+    "Skeleton_Sand_Archmage_Wander",
+    "Skeleton_Sand_Assassin",
+    "Skeleton_Sand_Assassin_Patrol",
+    "Skeleton_Sand_Assassin_Wander",
+    "Skeleton_Sand_Guard",
+    "Skeleton_Sand_Guard_Patrol",
+    "Skeleton_Sand_Guard_Wander",
+    "Skeleton_Sand_Mage",
+    "Skeleton_Sand_Mage_Patrol",
+    "Skeleton_Sand_Mage_Wander",
+    "Skeleton_Sand_Ranger",
+    "Skeleton_Sand_Ranger_Patrol",
+    "Skeleton_Sand_Ranger_Wander",
+    "Skeleton_Sand_Scout",
+    "Skeleton_Sand_Scout_Patrol",
+    "Skeleton_Sand_Scout_Wander",
+    "Skeleton_Sand_Soldier",
+    "Skeleton_Sand_Soldier_Patrol",
+    "Skeleton_Sand_Soldier_Wander",
+    "Skeleton_Scout",
+    "Skeleton_Scout_Patrol",
+    "Skeleton_Scout_Wander",
+    "Skeleton_Soldier",
+    "Skeleton_Soldier_Patrol",
+    "Skeleton_Soldier_Wander",
+    "Trork_Brawler",
+    "Trork_Chieftain",
+    "Trork_Doctor_Witch",
+    "Trork_Guard",
+    "Trork_Hunter",
+    "Trork_Mauler",
+    "Trork_Sentry",
+    "Trork_Sentry_Patrol",
+    "Trork_Shaman",
+    "Trork_Unarmed",
+    "Trork_Warrior",
+    "Trork_Warrior_Patrol",
+    "Tuluk_Fisherman",
+    "Zombie",
+    "Zombie_Aberrant",
+    "Zombie_Aberrant_Big",
+    "Zombie_Aberrant_Small",
+    "Zombie_Burnt",
+    "Zombie_Frost",
+    "Zombie_Sand"
+  ],
+  "Sites": [
+    {
+      "Role": "Dungeon_Skeleton_Sand_Archer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Dungeon_Skeleton_Sand_Archer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Dungeon_Skeleton_Sand_Assassin",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Dungeon_Skeleton_Sand_Assassin",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Dungeon_Skeleton_Sand_Mage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Dungeon_Skeleton_Sand_Mage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Dungeon_Skeleton_Sand_Soldier",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Dungeon_Skeleton_Sand_Soldier",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Feran_Burrower",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Feran_Burrower",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Feran_Civilian",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 20
+    },
+    {
+      "Role": "Feran_Civilian",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Feran_Civilian",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Feran_Longtooth",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 20
+    },
+    {
+      "Role": "Feran_Longtooth",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Feran_Sharptooth",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 20
+    },
+    {
+      "Role": "Feran_Sharptooth",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Feran_Windwalker",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 20
+    },
+    {
+      "Role": "Feran_Windwalker",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Duke",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Duke",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Duke_Phase_2",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Goblin_Duke_Phase_3_Fast",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Goblin_Duke_Phase_3_Slow",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Goblin_Hermit",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Hermit",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Hermit",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Hermit",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/1/Instructions/1/Instructions/1/Sensor/Sensors/1",
+      "Channel": "proximity",
+      "BaseRange": 3
+    },
+    {
+      "Role": "Goblin_Hermit",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/1/Instructions/2/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 5
+    },
+    {
+      "Role": "Goblin_Hermit",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Hermit",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/4/Instructions/1/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Lobber",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Lobber",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Lobber",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Lobber",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Lobber",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Lobber",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Lobber",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Lobber_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Lobber_Patrol",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Lobber_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Lobber_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Lobber_Patrol",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Lobber_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Miner",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Miner",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Miner",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Miner",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Miner",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Miner_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Miner_Patrol",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Miner_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Miner_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Ogre",
+      "Site": "Component_Instruction_Sight_Or_Sound_Check/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Ogre",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Scavenger",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Scavenger",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Scavenger",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Scavenger",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/1/Instructions/1/Instructions/1/Sensor/Sensors/1",
+      "Channel": "proximity",
+      "BaseRange": 3
+    },
+    {
+      "Role": "Goblin_Scavenger",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/1/Instructions/2/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 5
+    },
+    {
+      "Role": "Goblin_Scavenger",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Scavenger",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/4/Instructions/1/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Scavenger_Battleaxe",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Scavenger_Battleaxe",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Scavenger_Battleaxe",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Scavenger_Battleaxe",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/1/Instructions/1/Instructions/1/Sensor/Sensors/1",
+      "Channel": "proximity",
+      "BaseRange": 3
+    },
+    {
+      "Role": "Goblin_Scavenger_Battleaxe",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/1/Instructions/2/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 5
+    },
+    {
+      "Role": "Goblin_Scavenger_Battleaxe",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Scavenger_Battleaxe",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/4/Instructions/1/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Scavenger_Sword",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Scavenger_Sword",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Scavenger_Sword",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Scavenger_Sword",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/1/Instructions/1/Instructions/1/Sensor/Sensors/1",
+      "Channel": "proximity",
+      "BaseRange": 3
+    },
+    {
+      "Role": "Goblin_Scavenger_Sword",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/1/Instructions/2/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 5
+    },
+    {
+      "Role": "Goblin_Scavenger_Sword",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Scavenger_Sword",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/4/Instructions/1/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Scrapper",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Scrapper",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Scrapper",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Scrapper",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Scrapper_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Scrapper_Patrol",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Scrapper_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Goblin_Thief",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Thief",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Thief",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 12
+    },
+    {
+      "Role": "Goblin_Thief",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Thief",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Thief",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 25
+    },
+    {
+      "Role": "Goblin_Thief_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Thief_Patrol",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Thief_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 12
+    },
+    {
+      "Role": "Goblin_Thief_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Thief_Patrol",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Goblin_Thief_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 25
+    },
+    {
+      "Role": "Hedera",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Hedera",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Klops_Gentleman",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Klops_Gentleman",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Klops_Merchant",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/0/Sensor",
+      "Channel": "watch",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Klops_Merchant_Patrol",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/0/Sensor",
+      "Channel": "watch",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Klops_Merchant_Wandering",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/0/Sensor",
+      "Channel": "watch",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Klops_Miner",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Klops_Miner",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Klops_Miner_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Klops_Miner_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Kweebec_Merchant",
+      "Site": "role/Instructions/0/Instructions/0/Instructions/0/Sensor",
+      "Channel": "watch",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Kweebec_Razorleaf",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Kweebec_Razorleaf",
+      "Site": "role/Instructions/0/Instructions/1/Instructions/4/Sensor/Sensors/2",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Kweebec_Razorleaf",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 3
+    },
+    {
+      "Role": "Kweebec_Razorleaf",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Kweebec_Razorleaf_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Kweebec_Razorleaf_Patrol",
+      "Site": "role/Instructions/0/Instructions/1/Instructions/4/Sensor/Sensors/2",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Kweebec_Razorleaf_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 3
+    },
+    {
+      "Role": "Kweebec_Rootling",
+      "Site": "role/Instructions/0/Instructions/1/Instructions/4/Sensor",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Kweebec_Rootling",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 6
+    },
+    {
+      "Role": "Kweebec_Rootling",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Kweebec_Rootling",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 3
+    },
+    {
+      "Role": "Kweebec_Rootling",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Kweebec_Sapling",
+      "Site": "role/Instructions/0/Instructions/1/Instructions/4/Sensor",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Kweebec_Sapling",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 6
+    },
+    {
+      "Role": "Kweebec_Sapling",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Kweebec_Sapling",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 3
+    },
+    {
+      "Role": "Kweebec_Sapling",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Kweebec_Sapling_Orange",
+      "Site": "role/Instructions/0/Instructions/1/Instructions/4/Sensor",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Kweebec_Sapling_Orange",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 6
+    },
+    {
+      "Role": "Kweebec_Sapling_Orange",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Kweebec_Sapling_Orange",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 3
+    },
+    {
+      "Role": "Kweebec_Sapling_Orange",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Kweebec_Sapling_Pink",
+      "Site": "role/Instructions/0/Instructions/1/Instructions/4/Sensor",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Kweebec_Sapling_Pink",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 6
+    },
+    {
+      "Role": "Kweebec_Sapling_Pink",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Kweebec_Sapling_Pink",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 3
+    },
+    {
+      "Role": "Kweebec_Sapling_Pink",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Berserker",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Berserker",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Berserker",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Outlander_Berserker",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Berserker",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Berserker",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Outlander_Berserker",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Outlander_Brute",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Brute",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Brute",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Outlander_Brute",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Brute",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Brute",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Outlander_Brute",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Outlander_Cultist",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Cultist",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Cultist",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Outlander_Cultist",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Cultist",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Cultist",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Outlander_Cultist",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Cultist",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Cultist",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Outlander_Cultist",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Outlander_Hunter",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Hunter",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Hunter",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Outlander_Hunter",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Hunter",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Hunter",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Outlander_Hunter",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Hunter",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Hunter",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Outlander_Hunter",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Outlander_Marauder",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Marauder",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Marauder",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Outlander_Peon",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Peon",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Peon",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Outlander_Peon",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Peon",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Peon",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Outlander_Peon",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Outlander_Priest",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Priest",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Priest",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Outlander_Priest",
+      "Site": "role/Instructions/2/Instructions/0/Instructions/2/Sensor/Sensors/1",
+      "Channel": "proximity",
+      "BaseRange": 50
+    },
+    {
+      "Role": "Outlander_Priest",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Priest",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Priest",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Outlander_Priest",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Priest",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Priest",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Outlander_Priest",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Outlander_Sorcerer",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Sorcerer",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Sorcerer",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Outlander_Sorcerer",
+      "Site": "role/Instructions/2/Instructions/0/Instructions/2/Sensor/Sensors/1",
+      "Channel": "proximity",
+      "BaseRange": 50
+    },
+    {
+      "Role": "Outlander_Sorcerer",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Sorcerer",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Sorcerer",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Outlander_Sorcerer",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Sorcerer",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Sorcerer",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Outlander_Sorcerer",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Outlander_Stalker",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Stalker",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Stalker",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Outlander_Stalker",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Stalker",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Stalker",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Outlander_Stalker",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Outlander_Stalker",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Outlander_Stalker",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Outlander_Stalker",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Skeleton_Archer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Archer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Archer_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Archer_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Archer_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Archer_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Archmage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Archmage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Archmage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Archmage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Archmage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Archmage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Alchemist",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Alchemist",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Alchemist_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Alchemist_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Alchemist_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Alchemist_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Archer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Archer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Archer_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Archer_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Archer_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Archer_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Gunner",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Gunner",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Gunner_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Gunner_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Gunner_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Gunner_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Knight",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Knight",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Knight_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Knight_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Knight_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Knight_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Lancer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Lancer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Lancer_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Lancer_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Lancer_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Lancer_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Praetorian",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Praetorian",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Praetorian_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Praetorian_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Praetorian_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Praetorian_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Soldier",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Soldier",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Soldier_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Soldier_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Soldier_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Soldier_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Wizard",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Wizard",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Wizard_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Wizard_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Burnt_Wizard_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Burnt_Wizard_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Fighter",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Fighter",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Fighter_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Fighter_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Fighter_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Fighter_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Archer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Archer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Archer_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Archer_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Archer_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Archer_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Archmage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Archmage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Archmage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Archmage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Archmage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Archmage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Fighter",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Fighter",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Fighter_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Fighter_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Fighter_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Fighter_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Knight",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Knight",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Knight_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Knight_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Knight_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Knight_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Mage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Mage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Mage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Mage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Mage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Mage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Ranger",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Ranger",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Ranger_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Ranger_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Ranger_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Ranger_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Scout",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Scout",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Scout_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Scout_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Scout_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Scout_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Soldier",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Soldier",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Soldier_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Soldier_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Frost_Soldier_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Frost_Soldier_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Incandescent_Fighter",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Incandescent_Fighter",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Incandescent_Fighter_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Incandescent_Fighter_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Incandescent_Fighter_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Incandescent_Fighter_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Incandescent_Footman",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Incandescent_Footman",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Incandescent_Footman_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Incandescent_Footman_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Incandescent_Footman_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Incandescent_Footman_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Incandescent_Mage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Incandescent_Mage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Incandescent_Mage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Incandescent_Mage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Incandescent_Mage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Incandescent_Mage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Knight",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Knight",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Knight_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Knight_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Knight_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Knight_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Mage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Mage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Mage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Mage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Mage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Mage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Pirate_Captain",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Pirate_Captain",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Pirate_Captain_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Pirate_Captain_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Pirate_Captain_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Pirate_Captain_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Pirate_Gunner",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Pirate_Gunner",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Pirate_Gunner_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Pirate_Gunner_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Pirate_Gunner_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Pirate_Gunner_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Pirate_Striker",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Pirate_Striker",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Pirate_Striker_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Pirate_Striker_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Pirate_Striker_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Pirate_Striker_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Ranger",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Ranger",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Ranger_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Ranger_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Ranger_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Ranger_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Archer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Archer",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Archer_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Archer_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Archer_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Archer_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Archmage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Archmage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Archmage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Archmage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Archmage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Archmage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Assassin",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Assassin",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Assassin_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Assassin_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Assassin_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Assassin_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Guard",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Guard",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Guard_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Guard_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Guard_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Guard_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Mage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Mage",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Mage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Mage_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Mage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Mage_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Ranger",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Ranger",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Ranger_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Ranger_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Ranger_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Ranger_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Scout",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Scout",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Scout_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Scout_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Scout_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Scout_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Soldier",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Soldier",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Soldier_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Soldier_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Sand_Soldier_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Sand_Soldier_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Scout",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Scout",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Scout_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Scout_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Scout_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Scout_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Soldier",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Soldier",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Soldier_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Soldier_Patrol",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Skeleton_Soldier_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Skeleton_Soldier_Wander",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Trork_Brawler",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Brawler",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Brawler",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Brawler",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Brawler",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Brawler",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Trork_Brawler",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Trork_Brawler",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Chieftain",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Chieftain",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Chieftain",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "role/Instructions/2/Instructions/0/Instructions/2/Sensor/Sensors/1",
+      "Channel": "proximity",
+      "BaseRange": 50
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Trork_Doctor_Witch",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Guard",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Guard",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 20
+    },
+    {
+      "Role": "Trork_Guard",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 20
+    },
+    {
+      "Role": "Trork_Guard",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Hunter",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Hunter",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 20
+    },
+    {
+      "Role": "Trork_Hunter",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 20
+    },
+    {
+      "Role": "Trork_Hunter",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Mauler",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Mauler",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Mauler",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Mauler",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Mauler",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Mauler",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Trork_Mauler",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Trork_Mauler",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Sentry",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Sentry",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Sentry",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Trork_Sentry",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Sentry",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Sentry",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Sentry",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Sentry",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Sentry",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Trork_Sentry",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Trork_Sentry_Patrol",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Sentry_Patrol",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Sentry_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Trork_Sentry_Patrol",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Sentry_Patrol",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Sentry_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Sentry_Patrol",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Sentry_Patrol",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Sentry_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Trork_Sentry_Patrol",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "role/Instructions/2/Instructions/0/Instructions/2/Sensor/Sensors/1",
+      "Channel": "proximity",
+      "BaseRange": 50
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Trork_Shaman",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Unarmed",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Unarmed",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Unarmed",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Unarmed",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Unarmed",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Unarmed",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Trork_Unarmed",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Trork_Unarmed",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Warrior",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Warrior",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Warrior",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Warrior",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Warrior",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Warrior",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Trork_Warrior",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Trork_Warrior",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Warrior_Patrol",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Warrior_Patrol",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Warrior_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 15
+    },
+    {
+      "Role": "Trork_Warrior_Patrol",
+      "Site": "Component_Trork_Instruction_Pre_Checks/Instructions/3/Sensor/Sensors/0",
+      "Channel": "watch",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Trork_Warrior_Patrol",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 8
+    },
+    {
+      "Role": "Trork_Warrior_Patrol",
+      "Site": "Component_Sensor_Sight_By_Attitude",
+      "Channel": "sight",
+      "BaseRange": 7.5
+    },
+    {
+      "Role": "Trork_Warrior_Patrol",
+      "Site": "Component_Trork_Instruction_Idle/Instructions/6/Instructions/1/Instructions/2/Sensor/Sensors/2",
+      "Channel": "proximity",
+      "BaseRange": 10
+    },
+    {
+      "Role": "Tuluk_Fisherman",
+      "Site": "Component_Sensor_Scent_By_Attitude",
+      "Channel": "scent",
+      "BaseRange": 20
+    },
+    {
+      "Role": "Tuluk_Fisherman",
+      "Site": "Component_Instruction_Spread_Out/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Zombie",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 28
+    },
+    {
+      "Role": "Zombie",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie",
+      "Site": "role/Instructions/1/Instructions/0/Instructions/3/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Zombie_Aberrant",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Aberrant",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 28
+    },
+    {
+      "Role": "Zombie_Aberrant",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Aberrant",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Aberrant",
+      "Site": "role/Instructions/1/Instructions/0/Instructions/3/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Zombie_Aberrant_Big",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Aberrant_Big",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 28
+    },
+    {
+      "Role": "Zombie_Aberrant_Big",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Aberrant_Big",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Aberrant_Big",
+      "Site": "role/Instructions/1/Instructions/0/Instructions/3/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Zombie_Aberrant_Small",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Aberrant_Small",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 28
+    },
+    {
+      "Role": "Zombie_Aberrant_Small",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Aberrant_Small",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Aberrant_Small",
+      "Site": "role/Instructions/1/Instructions/0/Instructions/3/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Zombie_Burnt",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Burnt",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 28
+    },
+    {
+      "Role": "Zombie_Burnt",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Burnt",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Burnt",
+      "Site": "role/Instructions/1/Instructions/0/Instructions/3/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Zombie_Frost",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Frost",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 28
+    },
+    {
+      "Role": "Zombie_Frost",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Frost",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Frost",
+      "Site": "role/Instructions/1/Instructions/0/Instructions/3/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 30
+    },
+    {
+      "Role": "Zombie_Sand",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Sand",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 28
+    },
+    {
+      "Role": "Zombie_Sand",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Sand",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 4
+    },
+    {
+      "Role": "Zombie_Sand",
+      "Site": "role/Instructions/1/Instructions/0/Instructions/3/Sensor",
+      "Channel": "proximity",
+      "BaseRange": 30
+    }
+  ]
+}

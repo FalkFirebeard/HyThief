@@ -1,0 +1,73 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Goblin_Duke_Phase_2",
+  "Parameters": {
+    "Appearance": {
+      "Value": "Goblin_Duke",
+      "Description": "Model to be used"
+    },
+    "DropList": {
+      "Value": "Empty",
+      "Description": "Drop Items"
+    },
+    "AttitudeGroup": {
+      "Value": "Goblin",
+      "Description": "This NPCs attitude group"
+    },
+    "DisableDamageGroups": {
+      "Value": [
+        "Self"
+      ],
+      "Description": "Groups not to take damage from"
+    },
+    "ViewRange": {
+      "Value": 30,
+      "Description": "View range"
+    },
+    "ArenaRadius": {
+      "Value": 12,
+      "Description": "Radius of the arena from the \"Arena\" path marker"
+    },
+    "ArenaSize": {
+      "Value": 50,
+      "Description": "A generous range to check for beacons & paths within the arena"
+    },
+    "MaxHealth": {
+      "Value": 320,
+      "Description": "Max health for the NPC"
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Goblin_Duke.name",
+      "Description": "Translation key for NPC name display"
+    }
+  },
+  "Modify": {
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "DropList": {
+      "Compute": "DropList"
+    },
+    "AttitudeGroup": {
+      "Compute": "AttitudeGroup"
+    },
+    "DisableDamageGroups": {
+      "Compute": "DisableDamageGroups"
+    },
+    "ViewRange": {
+      "Compute": "ViewRange"
+    },
+    "ArenaRadius": {
+      "Compute": "ArenaRadius"
+    },
+    "ArenaSize": {
+      "Compute": "ArenaSize"
+    },
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  }
+}

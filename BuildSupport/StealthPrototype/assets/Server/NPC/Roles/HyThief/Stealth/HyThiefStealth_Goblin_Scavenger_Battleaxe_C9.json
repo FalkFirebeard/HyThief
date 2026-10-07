@@ -1,0 +1,44 @@
+{
+  "Type": "Component",
+  "Class": "Instruction",
+  "Parameters": {
+    "_ImportStates": [
+      "Main"
+    ],
+    "Animation": {
+      "Value": "",
+      "Description": "The animation to play"
+    },
+    "Duration": {
+      "Value": [
+        3,
+        5
+      ],
+      "Description": "The amount of time to wait before transitioning"
+    }
+  },
+  "Content": {
+    "Continue": true,
+    "Instructions": [
+      {
+        "Reference": "HyThiefStealth_Goblin_Scavenger_Battleaxe_C10",
+        "Modify": {
+          "_ExportStates": [
+            "Main"
+          ],
+          "Delay": {
+            "Compute": "Duration"
+          }
+        }
+      },
+      {
+        "Reference": "HyThiefStealth_Goblin_Scavenger_Battleaxe_C11",
+        "Modify": {
+          "Animation": {
+            "Compute": "Animation"
+          }
+        }
+      }
+    ]
+  }
+}

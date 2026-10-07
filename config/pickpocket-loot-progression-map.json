@@ -1,0 +1,492 @@
+{
+  "version": "2026-03-22",
+  "purpose": "Design map for zone-aware pickpocket loot progression. Built from vanilla encounter droplists, live RPGLeveling save config, and current Intelligent NPC weapon usage.",
+  "references": {
+    "vanillaEncounterPools": {
+      "zone1": [
+        "Assets/Server/Drops/Prefabs/Zone1_Encounters_Tier1.json",
+        "Assets/Server/Drops/Prefabs/Zone1_Encounters_Tier2.json",
+        "Assets/Server/Drops/Prefabs/Zone1_Encounters_Tier3.json"
+      ],
+      "zone2": [
+        "Assets/Server/Drops/Prefabs/Zone2_Encounters_Tier1.json",
+        "Assets/Server/Drops/Prefabs/Zone2_Encounters_Tier2.json",
+        "Assets/Server/Drops/Prefabs/Zone2_Encounters_Tier3.json"
+      ],
+      "zone3": [
+        "Assets/Server/Drops/Prefabs/Zone3_Encounters_Tier1.json",
+        "Assets/Server/Drops/Prefabs/Zone3_Encounters_Tier2.json",
+        "Assets/Server/Drops/Prefabs/Zone3_Encounters_Tier3.json"
+      ],
+      "zone4": [
+        "Assets/Server/Drops/Prefabs/Zone4_Encounters_Tier1.json",
+        "Assets/Server/Drops/Prefabs/Zone4_Encounters_Tier2.json",
+        "Assets/Server/Drops/Prefabs/Zone4_Encounters_Tier3.json",
+        "Assets/Server/Drops/Prefabs/Zone4_Encounters_Tier4.json"
+      ]
+    },
+    "rpgLeveling": {
+      "zoneConfig": "C:/Users/askin/AppData/Roaming/Hytale/UserData/Saves/HighTale/mods/Zuxaw_RPGLeveling/ZoneLevelConfig.json",
+      "levelRewards": "C:/Users/askin/AppData/Roaming/Hytale/UserData/Saves/HighTale/mods/Zuxaw_RPGLeveling/LevelRewardsConfig.json",
+      "levelingCoreZones": "C:/Users/askin/AppData/Roaming/Hytale/UserData/Saves/HighTale/mods/com.azuredoom_levelingcore/data/config/mobzonemapping.csv"
+    }
+  },
+  "selectionRule": {
+    "zoneSourcePriority": [
+      "live_rpgleveling_zone_config",
+      "levelingcore_zone_mapping",
+      "vanilla_biome_zone"
+    ],
+    "weaponRule": "Prefer race-native equipped weapons when a race already uses them in basegame. If a race has no clear basegame weapon for that role, fall back to the generic zone-tier pool.",
+    "lateGameRule": "Vanilla encounter droplists top out at Adamantite and Cobalt in Zone 4. For this mod's vanilla-parallel ruleset, Mithril is the only extension-tier material currently carried forward and Onyxium stays excluded."
+  },
+  "zoneBands": {
+    "zone1": {
+      "playerLevels": [1, 15],
+      "rpgZones": [1],
+      "levelingCoreZones": ["Emerald_Wilds"],
+      "fabric": ["Ingredient_Fabric_Scrap_Linen"],
+      "essence": ["Ingredient_Life_Essence"],
+      "oresCommon": ["Ore_Copper"],
+      "oresUncommon": ["Ore_Iron"],
+      "refinedMetal": ["Ingredient_Bar_Copper", "Ingredient_Bar_Iron"],
+      "seeds": ["Plant_Seeds_Wheat", "Plant_Seeds_Lettuce"],
+      "food": [
+        "Plant_Fruit_Berries_Red",
+        "Plant_Fruit_Apple",
+        "Food_Vegetable_Cooked",
+        "Food_Wildmeat_Cooked",
+        "Food_Fish_Grilled"
+      ],
+      "potions": ["Potion_Health_Lesser", "Potion_Stamina_Lesser"],
+      "weaponsPrimary": [
+        "Weapon_Battleaxe_Crude",
+        "Weapon_Daggers_Crude",
+        "Weapon_Mace_Crude",
+        "Weapon_Sword_Crude",
+        "Weapon_Shield_Wood",
+        "Weapon_Shortbow_Crude"
+      ],
+      "weaponsSecondary": [
+        "Weapon_Battleaxe_Copper",
+        "Weapon_Daggers_Copper",
+        "Weapon_Mace_Copper",
+        "Weapon_Sword_Copper",
+        "Weapon_Shield_Copper",
+        "Weapon_Shortbow_Copper"
+      ],
+      "tools": [
+        "Tool_Hatchet_Crude",
+        "Tool_Pickaxe_Crude",
+        "Tool_Hatchet_Copper",
+        "Tool_Pickaxe_Copper"
+      ],
+      "armor": [
+        "Armor_Copper_Chest",
+        "Armor_Copper_Hands",
+        "Armor_Copper_Head",
+        "Armor_Copper_Legs"
+      ],
+      "ammo": ["Weapon_Arrow_Crude"]
+    },
+    "zone2": {
+      "playerLevels": [15, 50],
+      "rpgZones": [2],
+      "levelingCoreZones": ["Howling_Sands"],
+      "fabric": ["Ingredient_Fabric_Scrap_Linen"],
+      "essence": ["Ingredient_Void_Essence"],
+      "oresCommon": ["Ore_Iron", "Ore_Silver", "Ore_Gold"],
+      "oresUncommon": ["Ore_Thorium"],
+      "refinedMetal": [
+        "Ingredient_Bar_Iron",
+        "Ingredient_Bar_Silver",
+        "Ingredient_Bar_Gold",
+        "Ingredient_Bar_Thorium"
+      ],
+      "seeds": [
+        "Plant_Seeds_Cauliflower",
+        "Plant_Seeds_Turnip",
+        "Plant_Seeds_Carrot",
+        "Plant_Seeds_Corn"
+      ],
+      "food": [
+        "Plant_Fruit_Berries_Red",
+        "Plant_Fruit_Apple",
+        "Food_Vegetable_Cooked",
+        "Food_Wildmeat_Cooked",
+        "Food_Fish_Grilled",
+        "Food_Kebab_Mushroom",
+        "Food_Kebab_Fruit",
+        "Food_Kebab_Meat",
+        "Food_Kebab_Vegetable"
+      ],
+      "potions": ["Potion_Health_Lesser", "Potion_Stamina_Lesser", "Potion_Signature_Lesser"],
+      "weaponsPrimary": [
+        "Weapon_Sword_Copper",
+        "Weapon_Daggers_Copper",
+        "Weapon_Battleaxe_Copper",
+        "Weapon_Mace_Copper",
+        "Weapon_Shield_Copper",
+        "Weapon_Shortbow_Copper"
+      ],
+      "weaponsSecondary": [
+        "Weapon_Sword_Iron",
+        "Weapon_Daggers_Iron",
+        "Weapon_Battleaxe_Iron",
+        "Weapon_Mace_Iron",
+        "Weapon_Shield_Iron",
+        "Weapon_Shortbow_Iron"
+      ],
+      "tools": [
+        "Tool_Hatchet_Copper",
+        "Tool_Pickaxe_Copper",
+        "Tool_Hatchet_Iron",
+        "Tool_Pickaxe_Iron"
+      ],
+      "armor": [
+        "Armor_Copper_Chest",
+        "Armor_Copper_Hands",
+        "Armor_Copper_Head",
+        "Armor_Copper_Legs",
+        "Armor_Iron_Chest",
+        "Armor_Iron_Hands",
+        "Armor_Iron_Head",
+        "Armor_Iron_Legs"
+      ],
+      "ammo": ["Weapon_Arrow_Crude"]
+    },
+    "zone3": {
+      "playerLevels": [50, 75],
+      "rpgZones": [3],
+      "levelingCoreZones": ["Whisperfrost_Frontiers"],
+      "fabric": ["Ingredient_Fabric_Scrap_Shadoweave"],
+      "essence": ["Ingredient_Water_Essence", "Ingredient_Ice_Essence"],
+      "oresCommon": ["Ore_Thorium", "Ore_Silver", "Ore_Gold"],
+      "oresUncommon": ["Ore_Cobalt"],
+      "refinedMetal": [
+        "Ingredient_Bar_Thorium",
+        "Ingredient_Bar_Cobalt",
+        "Ingredient_Bar_Silver",
+        "Ingredient_Bar_Gold"
+      ],
+      "seeds": ["Plant_Seeds_Tomato", "Plant_Seeds_Chilli"],
+      "food": [
+        "Plant_Fruit_Berries_Red",
+        "Plant_Fruit_Apple",
+        "Food_Vegetable_Cooked",
+        "Food_Wildmeat_Cooked",
+        "Food_Fish_Grilled",
+        "Food_Kebab_Mushroom",
+        "Food_Kebab_Fruit",
+        "Food_Kebab_Meat",
+        "Food_Kebab_Vegetable"
+      ],
+      "potions": ["Potion_Health_Lesser", "Potion_Stamina_Lesser", "Potion_Signature_Lesser"],
+      "weaponsPrimary": [
+        "Weapon_Sword_Iron",
+        "Weapon_Daggers_Iron",
+        "Weapon_Battleaxe_Iron",
+        "Weapon_Mace_Iron",
+        "Weapon_Shield_Iron",
+        "Weapon_Shortbow_Iron"
+      ],
+      "weaponsSecondary": [
+        "Weapon_Sword_Thorium",
+        "Weapon_Daggers_Thorium",
+        "Weapon_Battleaxe_Thorium",
+        "Weapon_Mace_Thorium",
+        "Weapon_Shield_Thorium",
+        "Weapon_Shortbow_Thorium"
+      ],
+      "tools": [
+        "Tool_Hatchet_Iron",
+        "Tool_Pickaxe_Iron",
+        "Tool_Hatchet_Thorium",
+        "Tool_Pickaxe_Thorium"
+      ],
+      "armor": [
+        "Armor_Iron_Chest",
+        "Armor_Iron_Hands",
+        "Armor_Iron_Head",
+        "Armor_Iron_Legs",
+        "Armor_Thorium_Chest",
+        "Armor_Thorium_Hands",
+        "Armor_Thorium_Head",
+        "Armor_Thorium_Legs"
+      ],
+      "ammo": ["Weapon_Arrow_Crude"]
+    },
+    "zone4": {
+      "playerLevels": [75, 85],
+      "rpgZones": [4],
+      "levelingCoreZones": ["Devastated_Lands"],
+      "fabric": ["Ingredient_Fabric_Scrap_Cindercloth"],
+      "essence": ["Ingredient_Fire_Essence"],
+      "oresCommon": ["Ore_Cobalt", "Ore_Silver", "Ore_Gold"],
+      "oresUncommon": ["Ore_Adamantite"],
+      "refinedMetal": [
+        "Ingredient_Bar_Cobalt",
+        "Ingredient_Bar_Adamantite",
+        "Ingredient_Bar_Silver",
+        "Ingredient_Bar_Gold"
+      ],
+      "seeds": ["Plant_Seeds_Onion", "Plant_Seeds_Potato"],
+      "food": [
+        "Food_Vegetable_Cooked",
+        "Food_Wildmeat_Cooked",
+        "Food_Fish_Grilled",
+        "Food_Kebab_Mushroom",
+        "Food_Kebab_Fruit",
+        "Food_Kebab_Meat",
+        "Food_Kebab_Vegetable"
+      ],
+      "potions": [
+        "Potion_Health_Lesser",
+        "Potion_Stamina_Lesser",
+        "Potion_Signature_Lesser",
+        "Potion_Health_Greater",
+        "Potion_Stamina_Greater",
+        "Potion_Signature_Greater"
+      ],
+      "weaponsPrimary": [
+        "Weapon_Sword_Thorium",
+        "Weapon_Daggers_Thorium",
+        "Weapon_Battleaxe_Thorium",
+        "Weapon_Mace_Thorium",
+        "Weapon_Shield_Thorium",
+        "Weapon_Shortbow_Thorium"
+      ],
+      "weaponsSecondary": [
+        "Weapon_Sword_Cobalt",
+        "Weapon_Daggers_Cobalt",
+        "Weapon_Battleaxe_Cobalt",
+        "Weapon_Mace_Cobalt",
+        "Weapon_Shield_Cobalt",
+        "Weapon_Shortbow_Cobalt"
+      ],
+      "tools": [
+        "Tool_Hatchet_Thorium",
+        "Tool_Pickaxe_Thorium",
+        "Tool_Hatchet_Cobalt",
+        "Tool_Pickaxe_Cobalt"
+      ],
+      "armor": [
+        "Armor_Thorium_Chest",
+        "Armor_Thorium_Hands",
+        "Armor_Thorium_Head",
+        "Armor_Thorium_Legs",
+        "Armor_Cobalt_Chest",
+        "Armor_Cobalt_Hands",
+        "Armor_Cobalt_Head",
+        "Armor_Cobalt_Legs"
+      ],
+      "ammo": ["Weapon_Arrow_Crude"]
+    },
+    "zone5_extension": {
+      "playerLevels": [85, 90],
+      "rpgZones": [5],
+      "extensionOnly": true,
+      "essence": ["Ingredient_Fire_Essence"],
+      "oresCommon": ["Ore_Adamantite"],
+      "oresUncommon": ["Ore_Mithril"],
+      "refinedMetal": ["Ingredient_Bar_Adamantite", "Ingredient_Bar_Mithril"],
+      "weaponsPrimary": [
+        "Weapon_Sword_Cobalt",
+        "Weapon_Daggers_Cobalt",
+        "Weapon_Battleaxe_Cobalt",
+        "Weapon_Mace_Cobalt",
+        "Weapon_Shield_Cobalt",
+        "Weapon_Shortbow_Cobalt"
+      ],
+      "weaponsSecondary": [
+        "Weapon_Sword_Mithril",
+        "Weapon_Daggers_Mithril",
+        "Weapon_Battleaxe_Mithril",
+        "Weapon_Mace_Mithril",
+        "Weapon_Shield_Mithril",
+        "Weapon_Shortbow_Mithril"
+      ],
+      "tools": [
+        "Tool_Hatchet_Cobalt",
+        "Tool_Pickaxe_Cobalt",
+        "Tool_Hatchet_Mithril",
+        "Tool_Pickaxe_Mithril"
+      ],
+      "armor": [
+        "Armor_Cobalt_Chest",
+        "Armor_Cobalt_Hands",
+        "Armor_Cobalt_Head",
+        "Armor_Cobalt_Legs",
+        "Armor_Mithril_Chest",
+        "Armor_Mithril_Hands",
+        "Armor_Mithril_Head",
+        "Armor_Mithril_Legs"
+      ]
+    },
+    "zone6_extension": {
+      "playerLevels": [90, 100],
+      "rpgZones": [6],
+      "extensionOnly": true,
+      "essence": ["Ingredient_Fire_Essence"],
+      "oresCommon": ["Ore_Mithril"],
+      "oresUncommon": [],
+      "refinedMetal": ["Ingredient_Bar_Mithril"],
+      "weaponsPrimary": [
+        "Weapon_Sword_Mithril",
+        "Weapon_Daggers_Mithril",
+        "Weapon_Battleaxe_Mithril",
+        "Weapon_Mace_Mithril",
+        "Weapon_Shield_Mithril",
+        "Weapon_Shortbow_Mithril"
+      ],
+      "weaponsSecondary": [],
+      "tools": [
+        "Tool_Hatchet_Mithril",
+        "Tool_Pickaxe_Mithril"
+      ],
+      "armor": [
+        "Armor_Mithril_Chest",
+        "Armor_Mithril_Hands",
+        "Armor_Mithril_Head",
+        "Armor_Mithril_Legs"
+      ]
+    }
+  },
+  "classProfiles": {
+    "merchant": {
+      "slotRange": [3, 5],
+      "emphasis": ["currency_and_trade_goods", "food", "reagents", "small_tools"],
+      "zonePulls": ["fabric", "essence", "refinedMetal", "food", "potions"],
+      "weaponChance": "low"
+    },
+    "worker": {
+      "slotRange": [2, 4],
+      "emphasis": ["raw_materials", "job_tools", "rations"],
+      "zonePulls": ["oresCommon", "oresUncommon", "refinedMetal", "food", "tools"],
+      "weaponChance": "low"
+    },
+    "civilian": {
+      "slotRange": [1, 3],
+      "emphasis": ["food", "keepsakes", "small_natural_goods"],
+      "zonePulls": ["food", "seeds", "fabric", "essence"],
+      "weaponChance": "very_low"
+    },
+    "guardian": {
+      "slotRange": [1, 3],
+      "emphasis": ["patrol_supplies", "ammo", "sidearm"],
+      "zonePulls": ["food", "potions", "ammo"],
+      "weaponChance": "medium"
+    },
+    "mystic": {
+      "slotRange": [2, 4],
+      "emphasis": ["essence", "reagents", "staves", "potions"],
+      "zonePulls": ["essence", "fabric", "potions"],
+      "weaponChance": "medium"
+    },
+    "elite": {
+      "slotRange": [2, 4],
+      "emphasis": ["high_quality_gear", "rare_materials", "potions"],
+      "zonePulls": ["oresUncommon", "refinedMetal", "potions"],
+      "weaponChance": "high"
+    },
+    "melee": {
+      "slotRange": [1, 3],
+      "emphasis": ["main_weapon", "armor_piece", "rations"],
+      "zonePulls": ["food", "weaponsPrimary", "weaponsSecondary", "armor"],
+      "weaponChance": "high"
+    },
+    "skirmisher": {
+      "slotRange": [1, 3],
+      "emphasis": ["light_weapon", "stolen_goods", "powders"],
+      "zonePulls": ["fabric", "weaponsPrimary", "weaponsSecondary", "potions"],
+      "weaponChance": "high"
+    },
+    "ranged": {
+      "slotRange": [1, 3],
+      "emphasis": ["ranged_weapon", "ammo", "field_supplies"],
+      "zonePulls": ["food", "ammo", "weaponsPrimary", "weaponsSecondary"],
+      "weaponChance": "high"
+    },
+    "caster": {
+      "slotRange": [2, 4],
+      "emphasis": ["essence", "staves", "potions", "cloth"],
+      "zonePulls": ["essence", "fabric", "potions"],
+      "weaponChance": "medium"
+    }
+  },
+  "raceOverrides": {
+    "Kweebec": {
+      "preferredClasses": ["merchant", "civilian", "guardian", "special"],
+      "lootFlavor": ["Ingredient_Life_Essence", "Plant_Seeds_Wheat", "Plant_Seeds_Lettuce", "Plant_Fruit_Berries_Red"],
+      "weaponOverrides": {
+        "guardian": ["Weapon_Spear_Leaf"]
+      },
+      "notes": "Vanilla Kweebec drops are sparse, so use Zone 1 or Zone 3 natural-goods pools plus leaf weapons for guards."
+    },
+    "Bramblekin": {
+      "preferredClasses": ["civilian", "mystic"],
+      "lootFlavor": ["Food_Wildmeat_Raw", "Food_Chicken_Raw", "Ingredient_Bar_Iron", "Ingredient_Bar_Cobalt"],
+      "weaponOverrides": {},
+      "notes": "Base drop includes raw meat, bars, and occasional healing items."
+    },
+    "Feran": {
+      "preferredClasses": ["civilian", "guardian", "mystic"],
+      "lootFlavor": ["Ingredient_Bone_Fragment"],
+      "weaponOverrides": {
+        "civilian": ["Weapon_Daggers_Bone"],
+        "guardian": ["Weapon_Spear_Bone", "Weapon_Sword_Bone", "Weapon_Axe_Bone"],
+        "mystic": ["Weapon_Staff_Bone"]
+      },
+      "notes": "Mirror bone weapons directly because Feran already equip them in basegame."
+    },
+    "Tuluk": {
+      "preferredClasses": ["worker"],
+      "lootFlavor": ["Food_Fish_Grilled", "Plant_Fruit_Berries_Red"],
+      "weaponOverrides": {
+        "worker": ["Weapon_Spear_Fishbone"]
+      },
+      "notes": "Treat as a Zone 1 worker with fish and fishing gear."
+    },
+    "Klops": {
+      "preferredClasses": ["merchant", "worker", "civilian"],
+      "lootFlavor": ["Ore_Copper", "Ore_Iron", "Ingredient_Bar_Copper", "Ingredient_Bar_Iron"],
+      "weaponOverrides": {},
+      "notes": "Base merchant drop is empty, so lean on miner and gentleman ore/bar flavor."
+    },
+    "Goblin": {
+      "preferredClasses": ["worker", "melee", "skirmisher", "ranged", "caster", "elite"],
+      "lootFlavor": ["Ingredient_Fabric_Scrap_Linen", "Ingredient_Powder_Boom", "Weapon_Bomb"],
+      "weaponOverrides": {
+        "worker": ["Tool_Pickaxe_Scrap"],
+        "melee": ["Weapon_Club_Scrap", "Weapon_Mace_Scrap", "Weapon_Battleaxe_Iron", "Weapon_Sword_Iron"],
+        "skirmisher": ["Weapon_Daggers_Crude"],
+        "ranged": ["Weapon_Bomb"],
+        "elite": ["Weapon_Mace_Scrap_NPC", "Weapon_Shield_Scrap_Spiked"]
+      },
+      "notes": "Use scrap gear first, bombs for lobbers, and avoid polished zone-tier gear unless no race-native option exists."
+    },
+    "Outlander": {
+      "preferredClasses": ["worker", "melee", "skirmisher", "ranged", "caster"],
+      "lootFlavor": ["Ingredient_Fabric_Scrap_Shadoweave", "Ingredient_Void_Essence"],
+      "weaponOverrides": {
+        "worker": ["Tool_Pickaxe_Cobalt"],
+        "melee": ["Weapon_Axe_Doomed", "Weapon_Battleaxe_Doomed", "Weapon_Sword_Doomed", "Weapon_Shield_Doomed"],
+        "skirmisher": ["Weapon_Daggers_Doomed", "Weapon_Crossbow_Iron"],
+        "ranged": ["Weapon_Shortbow_Doomed", "Weapon_Daggers_Fang_Doomed"],
+        "caster": ["Weapon_Club_Doomed", "Weapon_Staff_Doomed"]
+      },
+      "notes": "Outlanders should feel faction-specific first and generic Zone 3/4 second."
+    },
+    "Trork": {
+      "preferredClasses": ["elite", "melee", "ranged", "caster"],
+      "lootFlavor": ["Ingredient_Fabric_Scrap_Linen", "Armor_Trork_Head", "Armor_Trork_Chest", "Armor_Trork_Hands", "Armor_Trork_Legs"],
+      "weaponOverrides": {
+        "elite": ["Weapon_Battleaxe_Stone_Trork"],
+        "melee": ["Weapon_Club_Crude", "Weapon_Mace_Crude", "Weapon_Battleaxe_Stone_Trork"],
+        "ranged": ["Weapon_Spear_Stone_Trork", "Weapon_Sword_Stone_Trork", "Weapon_Axe_Stone_Trork"],
+        "caster": ["Weapon_Staff_Crystal_Fire_Trork", "Weapon_Daggers_Stone_Trork", "Weapon_Sword_Stone_Trork"]
+      },
+      "notes": "Mirror Trork stone and crystal gear directly because the race already has its own weapon family."
+    }
+  }
+}

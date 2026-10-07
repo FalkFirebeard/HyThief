@@ -1,0 +1,12 @@
+{
+  "Actions": [
+    {
+      "Interactable": true,
+      "Hint": "server.hythief.interactionHints.pickpocketTest",
+      "Type": "SetInteractable"
+    }
+  ],
+  "Sensor": {
+    "Type": "HyThiefTestEligible"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "Model":  "NPC_Spawn_Marker",
+    "NPCs":  [
+                 {
+                     "Name":  "Goblin_Duke_Phase_3_Slow",
+                     "Weight":  100,
+                     "SpawnAfterGameTime":  "PT1S"
+                 }
+             ],
+    "ExclusionRadius":  10,
+    "MaxDropHeight":  4,
+    "DeactivationDistance":  150
+}

@@ -1,0 +1,82 @@
+{
+  "version": 2,
+  "defaults": {
+    "baseDetectionChance": 0.50,
+    "crouchDetectionPenalty": 0.05,
+    "behindTargetDetectionPenalty": 0.05,
+    "sideTargetDetectionPenalty": 0.02,
+    "frontTargetDetectionBonus": 0.12,
+    "frontBlockDistance": 6.0,
+    "frontBlockFacingDot": -0.15,
+    "coneBlockDistance": 10.0,
+    "coneBlockFacingDot": 0.2,
+    "closeRangeDetectionBonus": 0.08,
+    "distanceReductionPerBlock": 0.02,
+    "stolenSlotDetectionBonus": 0.08,
+    "stolenQuantityDetectionBonus": 0.01,
+    "sessionStealDetectionBonus": 0.06,
+    "sessionQuantityDetectionBonus": 0.004,
+    "weaponDetectionBonus": 0.08,
+    "armorDetectionBonus": 0.07,
+    "toolDetectionBonus": 0.05,
+    "materialDetectionBonus": 0.03,
+    "recipeDetectionBonus": 0.04,
+    "cooldownSeconds": 45
+  },
+  "classProfiles": {
+    "merchant": {
+      "baseDetectionChance": 0.52,
+      "coneBlockDistance": 8.0,
+      "cooldownSeconds": 55
+    },
+    "civilian": {
+      "baseDetectionChance": 0.45,
+      "coneBlockDistance": 9.0,
+      "cooldownSeconds": 30
+    },
+    "worker": {
+      "baseDetectionChance": 0.48,
+      "coneBlockDistance": 9.0,
+      "cooldownSeconds": 35
+    },
+    "guardian": {
+      "baseDetectionChance": 0.62,
+      "coneBlockDistance": 11.0,
+      "coneBlockFacingDot": 0.1,
+      "cooldownSeconds": 50
+    },
+    "mystic": {
+      "baseDetectionChance": 0.50,
+      "coneBlockDistance": 10.0,
+      "cooldownSeconds": 45
+    },
+    "melee": {
+      "baseDetectionChance": 0.66,
+      "coneBlockDistance": 12.0,
+      "coneBlockFacingDot": 0.05,
+      "cooldownSeconds": 45
+    },
+    "skirmisher": {
+      "baseDetectionChance": 0.58,
+      "coneBlockDistance": 11.0,
+      "cooldownSeconds": 40
+    },
+    "ranged": {
+      "baseDetectionChance": 0.64,
+      "coneBlockDistance": 12.0,
+      "coneBlockFacingDot": 0.05,
+      "cooldownSeconds": 45
+    },
+    "caster": {
+      "baseDetectionChance": 0.56,
+      "coneBlockDistance": 11.0,
+      "cooldownSeconds": 45
+    },
+    "elite": {
+      "baseDetectionChance": 0.72,
+      "coneBlockDistance": 14.0,
+      "coneBlockFacingDot": -0.05,
+      "cooldownSeconds": 60
+    }
+  }
+}

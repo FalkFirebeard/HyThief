@@ -1,0 +1,472 @@
+[
+  {
+    "SHA256": "F3E22619A22476BE161C23069C64D270957D1FA49A04459D873EA90AE3FD8A5F",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Feran/Templates/Template_Feran_Civilian.json",
+    "Role": "Template_Feran_Civilian"
+  },
+  {
+    "SHA256": "8F8E9B5804E37CA9EAFBCDBBFA413DD6DD36D41BAE90173D2CAC3F49A712109D",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Mage_Wander.json",
+    "Role": "Skeleton_Mage_Wander"
+  },
+  {
+    "SHA256": "11299B77C48F669C5E6E8F227F7D053BC9302553BF0C2B2273AE422B3EA60D9D",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Mage_Patrol.json",
+    "Role": "Skeleton_Mage_Patrol"
+  },
+  {
+    "SHA256": "B070E9DDFD59F78299BBC835CAAEC31B9387F6BF0AF47C7BE13AAFC379C3B7DF",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Striker_Wander.json",
+    "Role": "Skeleton_Pirate_Striker_Wander"
+  },
+  {
+    "SHA256": "9FB12D2DC7FBCE6DCBF94EBD957A8AE826ECBC419B4CF3FAD2CF29954B95B2DA",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archmage_Patrol.json",
+    "Role": "Skeleton_Frost_Archmage_Patrol"
+  },
+  {
+    "SHA256": "0DBCDCCAB007B879F183D7BE7A4AE113F46AA5F13269F18959BA7FB9803D7DD1",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Soldier_Wander.json",
+    "Role": "Skeleton_Burnt_Soldier_Wander"
+  },
+  {
+    "SHA256": "A9A31855A5FE8FEE0D69672E7D309A2C26B247D12E084A19F5A9C1976FB47B68",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Knight_Patrol.json",
+    "Role": "Skeleton_Knight_Patrol"
+  },
+  {
+    "SHA256": "238F2F95352874D08FB01E3891EAE94135FF60F0F4F8F5865E80ECD621F9E8E0",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Lancer_Patrol.json",
+    "Role": "Skeleton_Burnt_Lancer_Patrol"
+  },
+  {
+    "SHA256": "71A1121ADDEDD63069844385E54ED3C7D0109EA6B343CFF23CC7BE47591E6234",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archer_Wander.json",
+    "Role": "Skeleton_Archer_Wander"
+  },
+  {
+    "SHA256": "EFC5CD8B8B2190B8D2EBE40F27C3D96A8CB7F52305442A5FA7B100B4302AD5DD",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archer_Patrol.json",
+    "Role": "Skeleton_Frost_Archer_Patrol"
+  },
+  {
+    "SHA256": "0BCF43E9494E1A1BEEDE1E5AF5E942C395F1B31703ABF76B7FDECFAE84580483",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Ranger_Patrol.json",
+    "Role": "Skeleton_Ranger_Patrol"
+  },
+  {
+    "SHA256": "1470D8BEF1FBE164B2F47ADBA253E4AB6659106E3CFF98B5C21F8C546442EA5B",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archmage_Wander.json",
+    "Role": "Skeleton_Sand_Archmage_Wander"
+  },
+  {
+    "SHA256": "67756D15D9DE2CE586573C4D91ABDDA6FCDC66E290502F900FC6BFB17125619F",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Mage_Wander.json",
+    "Role": "Skeleton_Sand_Mage_Wander"
+  },
+  {
+    "SHA256": "C5AA6270AAA195F7188FD3036388B1EC1010C81F19C7E6BC7CC93F982B43EA45",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archmage_Wander.json",
+    "Role": "Skeleton_Frost_Archmage_Wander"
+  },
+  {
+    "SHA256": "2A3D695D54482F9B5AD85BCE4A0BED6EB6246DF9F6D1177B56E22B6CCD16B828",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archmage_Wander.json",
+    "Role": "Skeleton_Archmage_Wander"
+  },
+  {
+    "SHA256": "F3B643784C985100217C5D8B8C5E42CE2321861EB390DB4668CD5A6124536104",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Knight_Wander.json",
+    "Role": "Skeleton_Frost_Knight_Wander"
+  },
+  {
+    "SHA256": "AF212B7D145CD5DF01967A434F74E726461C6AE0E6C76E8C51534FD7368B2174",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Lobber.json",
+    "Role": "Template_Goblin_Lobber"
+  },
+  {
+    "SHA256": "EE6AACA5BF6671E1ED7AC5AA758DAE45BF9CF3E03D4E97891DBEA97D880A2FAA",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Mage_Patrol.json",
+    "Role": "Skeleton_Incandescent_Mage_Patrol"
+  },
+  {
+    "SHA256": "FC37F6D5D91EAEA37327CC1AFA5188E14C0C5652CF91065568E8795F0A802632",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Wizard_Patrol.json",
+    "Role": "Skeleton_Burnt_Wizard_Patrol"
+  },
+  {
+    "SHA256": "684C2DC9FA9EEB6F1296DBFD4384DA602302DBBC4E35247F837AAC92ABE64721",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Duke_Phase_3.json",
+    "Role": "Template_Goblin_Duke_Phase_3"
+  },
+  {
+    "SHA256": "00D6C3D4C290748AC8A673F3A1D4BB027CBBC202CE3478FC321C804D234241C8",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Soldier_Wander.json",
+    "Role": "Skeleton_Frost_Soldier_Wander"
+  },
+  {
+    "SHA256": "B4054BDF9700C8719D9B298A8042FC7F606AB4889837C8F90A6418BAD4A56B43",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Feran/Templates/Template_Feran_Sharptooth.json",
+    "Role": "Template_Feran_Sharptooth"
+  },
+  {
+    "SHA256": "BE30585B0642F1D53FCD95C4DD92CA6CA6D2C664445F652EC23520F0E5543F8F",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Feran/Templates/Template_Feran_Windwalker.json",
+    "Role": "Template_Feran_Windwalker"
+  },
+  {
+    "SHA256": "8E77CACAEE8F9CB1EBFC2DE4DBD46F5A6CFC6F5FEE3E89F591487577FD79F269",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Scout_Wander.json",
+    "Role": "Skeleton_Frost_Scout_Wander"
+  },
+  {
+    "SHA256": "5F50A3F4BF86121131BF362F77DF0331EC67D4E5CF98BFF3F30EF959E2CDA5F3",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Praetorian_Patrol.json",
+    "Role": "Skeleton_Burnt_Praetorian_Patrol"
+  },
+  {
+    "SHA256": "5F7CAA2A8981A9EF722F01D36739E0359628C6AC4EFCE86A7209EEC40FA74393",
+    "Asset": "Server/NPC/Roles/_Core/Templates/Template_Intelligent.json",
+    "Role": "Template_Intelligent"
+  },
+  {
+    "SHA256": "2A496695EA92B49AD164A688448D93D14D6E957ED51A91608D7CE8BEB9D4EC6E",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Wizard_Wander.json",
+    "Role": "Skeleton_Burnt_Wizard_Wander"
+  },
+  {
+    "SHA256": "A86AC8679EEF9F35C18D55C56804CB3079280D2A39B63CC872D11EC6659ADE2B",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archer_Wander.json",
+    "Role": "Skeleton_Frost_Archer_Wander"
+  },
+  {
+    "SHA256": "BAB797D9D1409FD17D8A58E4BED766DC8E42DAD593D828A420D22DF815D87988",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archer_Patrol.json",
+    "Role": "Skeleton_Sand_Archer_Patrol"
+  },
+  {
+    "SHA256": "78F0DFBE24BEADCA0ED94D306614F1CFBF3FC5AE9D25127A4183050B9C8E2DE0",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Captain_Patrol.json",
+    "Role": "Skeleton_Pirate_Captain_Patrol"
+  },
+  {
+    "SHA256": "593315F97A8274E8AD5C7FB20FFD6FF6C371CAF2BF9A489F94098115D8891806",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Soldier_Wander.json",
+    "Role": "Skeleton_Sand_Soldier_Wander"
+  },
+  {
+    "SHA256": "8E5C533D828C675B8AA3CA9B861F839EDDD3BCAFD67D78E87F17A8D7F1C3705F",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Knight_Wander.json",
+    "Role": "Skeleton_Burnt_Knight_Wander"
+  },
+  {
+    "SHA256": "D97466219BF2C7831F815EF1D9B64CDCF514CA554959AF195C856E922EC6631D",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Mage_Patrol.json",
+    "Role": "Skeleton_Frost_Mage_Patrol"
+  },
+  {
+    "SHA256": "D3CE93926654CCFA5936AC65FAEB419A5E2D92E5A40BC2D045BEC26370D929ED",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Captain_Wander.json",
+    "Role": "Skeleton_Pirate_Captain_Wander"
+  },
+  {
+    "SHA256": "64342980AC7AF8673D47E45F41AA5E7229DCA9D6D92DA4915E548A83210B7E74",
+    "Asset": "Server/NPC/Roles/_Core/Templates/Template_Predator.json",
+    "Role": "Template_Predator"
+  },
+  {
+    "SHA256": "1556C1B7EE3D20845CFB6C3AE8425F9B6E319AC9F738875624344497B5DE90F4",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Scout_Patrol.json",
+    "Role": "Skeleton_Sand_Scout_Patrol"
+  },
+  {
+    "SHA256": "4DC2499F1C9C5C2A7AEAA732F572E49881AABF151117A1109482AE25BE420ABE",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Thief.json",
+    "Role": "Template_Goblin_Thief"
+  },
+  {
+    "SHA256": "B0E4E99C528F6EB3F187601CCB3D8CDAF93EE61DB9B997515CD47185F68D3C6A",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Mage_Wander.json",
+    "Role": "Skeleton_Incandescent_Mage_Wander"
+  },
+  {
+    "SHA256": "5E15FDB399FA30CD79A8D1524DFA775414EE7E3D3CBE9815C45607E04404CF55",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Templates/Template_Trork_Melee.json",
+    "Role": "Template_Trork_Melee"
+  },
+  {
+    "SHA256": "0713E458D4D2BF0175B1FFB76E49F94ACFE83E827B225F73054C8383390D046D",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Soldier_Patrol.json",
+    "Role": "Skeleton_Burnt_Soldier_Patrol"
+  },
+  {
+    "SHA256": "89BBE14729C216218024488553B1FD8F6172AB0F44EDDA929729ADCD2F506D14",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Feran/Templates/Template_Feran_Burrower.json",
+    "Role": "Template_Feran_Burrower"
+  },
+  {
+    "SHA256": "1B25BFF29C6C013DFB71697CF4EAB78E48DE10D90868BBA8BC1B992613646155",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Knight_Patrol.json",
+    "Role": "Skeleton_Frost_Knight_Patrol"
+  },
+  {
+    "SHA256": "693645EF186EAA5CE6D46365AB1C2FC36C3278AB964842061EE3468105B4DC92",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Scrapper.json",
+    "Role": "Template_Goblin_Scrapper"
+  },
+  {
+    "SHA256": "2D0826A472C39700D7C5F1A0C6B854DA7088FB6EDA8FE1B39F595C24C0631ADB",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Mage_Patrol.json",
+    "Role": "Skeleton_Sand_Mage_Patrol"
+  },
+  {
+    "SHA256": "F1477EF73ABFEBDFDF34CE91FA2B934D4C18BBCB520A893029B083DEE058DE41",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Ranger_Patrol.json",
+    "Role": "Skeleton_Frost_Ranger_Patrol"
+  },
+  {
+    "SHA256": "48D547BF12DBB6F4F00235A7987CB472B6B4E83947C3A0C6894533E8DD0FC37E",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Fighter_Wander.json",
+    "Role": "Skeleton_Incandescent_Fighter_Wander"
+  },
+  {
+    "SHA256": "AAD8EB06D8E6A2969F98411124665B1066D0D1E9317818142DC5A9A39ABB43D4",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Knight_Patrol.json",
+    "Role": "Skeleton_Burnt_Knight_Patrol"
+  },
+  {
+    "SHA256": "75549696204A974AFC552F30F0D01066FD1CB775E7018648AB26EAA6EF5DBC4D",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archer_Patrol.json",
+    "Role": "Skeleton_Archer_Patrol"
+  },
+  {
+    "SHA256": "7B47892B43A91347291724251E1E8F4D11F04091696468DEED5EF6072EA44988",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Praetorian_Wander.json",
+    "Role": "Skeleton_Burnt_Praetorian_Wander"
+  },
+  {
+    "SHA256": "02A6AA9E6C1EDD4487E60B0010673705285D2474FEB74F60C8D13F559A180074",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archmage_Patrol.json",
+    "Role": "Skeleton_Sand_Archmage_Patrol"
+  },
+  {
+    "SHA256": "3DE5AEB4D18F9FBBBDC1F79D6D00BE1E2E2C798C4A4444213BC3DD773D4EEA66",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archmage_Patrol.json",
+    "Role": "Skeleton_Archmage_Patrol"
+  },
+  {
+    "SHA256": "3BB1343618F4721EAE4BD86DB080B1A22D18B38FE9476A3D6C7DF08DCD296263",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Gunner_Wander.json",
+    "Role": "Skeleton_Burnt_Gunner_Wander"
+  },
+  {
+    "SHA256": "E57E3DB3E12D50713C3758C5C0F0DCE72D1C7DE5646C7B2BC1E981D595C2C5B3",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Alchemist_Wander.json",
+    "Role": "Skeleton_Burnt_Alchemist_Wander"
+  },
+  {
+    "SHA256": "D7C60ECDA90DECD2024658559CCB90C67576EE35CE56EE10493104D749B070B4",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Archer_Patrol.json",
+    "Role": "Skeleton_Burnt_Archer_Patrol"
+  },
+  {
+    "SHA256": "C49A5BE70AE2DACDE280934F3ACBED02E86764B3D3B5BB4DAF8CABF22EB01B0E",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Footman_Patrol.json",
+    "Role": "Skeleton_Incandescent_Footman_Patrol"
+  },
+  {
+    "SHA256": "0683F5CC66BB1EF648C94F73759B6137F83380E5755D8EA8BAB85685BCC05C8D",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Ranger_Patrol.json",
+    "Role": "Skeleton_Sand_Ranger_Patrol"
+  },
+  {
+    "SHA256": "145C77EE89D19C2F51076B78F425D6332EA32A62E785B9B9B7AF3E3219D43267",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Duke_Phase_2.json",
+    "Role": "Template_Goblin_Duke_Phase_2"
+  },
+  {
+    "SHA256": "A14B84B4DC14F6DB6F6FFB706CB89C6CC0D6C85246F86E9DAF0B32B620BA9C39",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Fighter_Wander.json",
+    "Role": "Skeleton_Fighter_Wander"
+  },
+  {
+    "SHA256": "45A76D28385A422AE2DC16BD747BC9E5C954C2500FB042187F10D531D53EE8A7",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Gunner_Patrol.json",
+    "Role": "Skeleton_Pirate_Gunner_Patrol"
+  },
+  {
+    "SHA256": "2FCF66A3BE9AFBA78861424ACF0DBC1A1884BC85705FF623DE144708C1D0207E",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Ranger_Wander.json",
+    "Role": "Skeleton_Frost_Ranger_Wander"
+  },
+  {
+    "SHA256": "4E03B6F9D3EB9338972BFEF065E85419E49EB6677EB57BE9CD91B5D67DDBE3A9",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Scout_Patrol.json",
+    "Role": "Skeleton_Scout_Patrol"
+  },
+  {
+    "SHA256": "5230590F69BC1C9497BDD32BBADCDE6CE3BC5F70E134B5EA5901FF1FD6E78189",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Templates/Template_Kweebec_Razorleaf.json",
+    "Role": "Template_Kweebec_Razorleaf"
+  },
+  {
+    "SHA256": "22503FDB2992E380B1DC5A9CA792847126835D2AAF783DFD69A0A376EA4FDCB9",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Ranger_Wander.json",
+    "Role": "Skeleton_Ranger_Wander"
+  },
+  {
+    "SHA256": "E0906ABD442D1AE79758D5DD109D0059E6B73283B50EC1CB6BC12AB93D278275",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Ogre.json",
+    "Role": "Template_Goblin_Ogre"
+  },
+  {
+    "SHA256": "D45C498C096C8194C70F042F7ECC7EEB50244DDCA37EA1E466FC5F02F612B421",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Scout_Wander.json",
+    "Role": "Skeleton_Scout_Wander"
+  },
+  {
+    "SHA256": "143F122535B2358554591DA3182AE53DE0304EEB8FBC63C02CA7CF5F7B31A1DD",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Scavenger.json",
+    "Role": "Template_Goblin_Scavenger"
+  },
+  {
+    "SHA256": "0B6690CF53E2546E0AD216DCB6743E71D2A72CE7ABEEFC5214C64AD35BF50B78",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Fighter_Wander.json",
+    "Role": "Skeleton_Frost_Fighter_Wander"
+  },
+  {
+    "SHA256": "B65E7022996DC77051908F3081CD2FDBEB0F7FB6D66784B83F48E09A41AD2D41",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Scout_Patrol.json",
+    "Role": "Skeleton_Frost_Scout_Patrol"
+  },
+  {
+    "SHA256": "EA10F61B01E13643D73183F093C810CA2B3AA58A8A857965A61AA453C6CC1DF6",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Soldier_Patrol.json",
+    "Role": "Skeleton_Sand_Soldier_Patrol"
+  },
+  {
+    "SHA256": "A102F1FF053C7AED0E05977CF1384C5A49160F3122B9EEDCAE907AC03C263643",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Striker_Patrol.json",
+    "Role": "Skeleton_Pirate_Striker_Patrol"
+  },
+  {
+    "SHA256": "361E94695267E6D84B57304C6637120421F2725BF55EAB1C183FE6792844D5E5",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Fighter_Patrol.json",
+    "Role": "Skeleton_Incandescent_Fighter_Patrol"
+  },
+  {
+    "SHA256": "30A1719F57023F4823621579DC34C6FCD8AE9B8FF0023A5D69F6ED19BCE58A14",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Soldier_Wander.json",
+    "Role": "Skeleton_Soldier_Wander"
+  },
+  {
+    "SHA256": "226F89B29C7C0EF2D380F18FB1773306548AA4727181898E4394B580A4374D4B",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archer_Wander.json",
+    "Role": "Skeleton_Sand_Archer_Wander"
+  },
+  {
+    "SHA256": "AD494DD7117DE543526EDC06422FE2CF8B8B4118EF14DB1F8A3A3ED9C5D4DEAE",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Footman_Wander.json",
+    "Role": "Skeleton_Incandescent_Footman_Wander"
+  },
+  {
+    "SHA256": "DE9450B62B7B81C6CBB9EB63B4FF0D215403D875DFD7227D4D8B7FC97D5B746A",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Gunner_Patrol.json",
+    "Role": "Skeleton_Burnt_Gunner_Patrol"
+  },
+  {
+    "SHA256": "63FC98AD8714E676E361A022564B3EFAAA2DA5289C1BB0E87E87C412CC9E6941",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Fighter_Patrol.json",
+    "Role": "Skeleton_Fighter_Patrol"
+  },
+  {
+    "SHA256": "7661DFC4827BD5B5AEE95705B85143009757AB8514ED4F88ED5AE35FBD90E485",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Gunner_Wander.json",
+    "Role": "Skeleton_Pirate_Gunner_Wander"
+  },
+  {
+    "SHA256": "D9DBBF4FAA53FFAB0789D20B12888A0884A440C048F54739CEEC3267ED4DB095",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Templates/Template_Trork_Mage.json",
+    "Role": "Template_Trork_Mage"
+  },
+  {
+    "SHA256": "377785F015D77702FDD96E3B4D72B2685C0AC5FBDCE430BB945FB7E6AB6E8B51",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Guard_Patrol.json",
+    "Role": "Skeleton_Sand_Guard_Patrol"
+  },
+  {
+    "SHA256": "A9FA28B7E2A99D369D0DDDEBBC10895C1227F09283C8693B7CE3FFB7C01E0F6F",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Miner.json",
+    "Role": "Template_Goblin_Miner"
+  },
+  {
+    "SHA256": "B2327A475C430160583E4BE805E76F8DC4C3433514F6E0685D28AA5CADE5D268",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Alchemist_Patrol.json",
+    "Role": "Skeleton_Burnt_Alchemist_Patrol"
+  },
+  {
+    "SHA256": "BFC73F89A1215832A74067F45554AA74F50BA88D328B54EF594FB9F27A2D8D8B",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Lancer_Wander.json",
+    "Role": "Skeleton_Burnt_Lancer_Wander"
+  },
+  {
+    "SHA256": "13E73830171C614BD1B841380435860E2DBCA95D2F87F1E7826A27B514E834EC",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Soldier_Patrol.json",
+    "Role": "Skeleton_Soldier_Patrol"
+  },
+  {
+    "SHA256": "52558050B85B6626D004EC5A086B784B9368D9F97C8173B471D68BC4303BDDF9",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Guard_Wander.json",
+    "Role": "Skeleton_Sand_Guard_Wander"
+  },
+  {
+    "SHA256": "30E2F86A8A0459A0609846D8E980A649E186E856FF41011AE28F92CC8BD74829",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Soldier_Patrol.json",
+    "Role": "Skeleton_Frost_Soldier_Patrol"
+  },
+  {
+    "SHA256": "F8199C24F3A33E1B349FFF5A1761A31DB4A259F8954BD785B3F70CC12CA32616",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Scout_Wander.json",
+    "Role": "Skeleton_Sand_Scout_Wander"
+  },
+  {
+    "SHA256": "8F5854D9BF1AA4B9A19826CC404E646F4CD96FC9CE7629FB33FAA2F6281F6510",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Ranger_Wander.json",
+    "Role": "Skeleton_Sand_Ranger_Wander"
+  },
+  {
+    "SHA256": "5C21A4FFE80A654540806AFCCB76E3752C3D2919AA0F5E1BE372655F1A486CCB",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Assassin_Patrol.json",
+    "Role": "Skeleton_Sand_Assassin_Patrol"
+  },
+  {
+    "SHA256": "C997B6CC8B2201132C3E26643B5145050126C627FCB4110799461B468E32F3EC",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Mage_Wander.json",
+    "Role": "Skeleton_Frost_Mage_Wander"
+  },
+  {
+    "SHA256": "07040EE13648A6CCABC2DBE47671FF70AFC6B8BB7C26E4BD195E6E0173665BD2",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Knight_Wander.json",
+    "Role": "Skeleton_Knight_Wander"
+  },
+  {
+    "SHA256": "BE8CEBC234F87664B6D416291B1F29690E2D69AFC39EB97D1B69600A0F5D9C59",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Archer_Wander.json",
+    "Role": "Skeleton_Burnt_Archer_Wander"
+  },
+  {
+    "SHA256": "5E33D3EFC1F156E14C3B860FEC0B2FA4170C5DD39B07749D4B8611C7769D9610",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Templates/Template_Trork_Chieftain.json",
+    "Role": "Template_Trork_Chieftain"
+  },
+  {
+    "SHA256": "B109EA25A82555B25AD548BC404B12817BDFDD12EC05FA0309239195BCEE026E",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Fighter_Patrol.json",
+    "Role": "Skeleton_Frost_Fighter_Patrol"
+  },
+  {
+    "SHA256": "801B07DCA36B13ED182E24BD219228EC616775D47888895F50D427B116052690",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Assassin_Wander.json",
+    "Role": "Skeleton_Sand_Assassin_Wander"
+  }
+]

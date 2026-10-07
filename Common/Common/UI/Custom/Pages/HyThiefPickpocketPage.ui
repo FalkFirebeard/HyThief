@@ -1,0 +1,76 @@
+$C = "../Common.ui";
+
+@HintStyle = LabelStyle(
+  FontSize: 15,
+  VerticalAlignment: Center,
+  HorizontalAlignment: Center,
+  TextColor: #b4c8c9,
+  FontName: "Secondary",
+  RenderBold: true,
+  ShrinkTextToFit: true,
+  MinShrinkTextToFitFontSize: 11
+);
+
+$C.@PageOverlay {
+  $C.@DecoratedContainer {
+    Anchor: (Width: 680, Height: 430);
+
+    #Title {
+      Group {
+        $C.@Title {
+          @Text = "Pickpocket";
+        }
+      }
+    }
+
+    #Content {
+      Group {
+        LayoutMode: Top;
+        Padding: (Full: 14, Top: 8);
+
+        Label #Hint {
+          Text: "Steal one slot at a time.";
+          Style: @HintStyle;
+          Anchor: (Height: 22, Bottom: 4);
+        }
+
+        Label #SubHint {
+          Text: "Left click steals a stack. Right click steals one.";
+          Style: (...@HintStyle, FontSize: 12, RenderBold: false, TextColor: #96a9be);
+          Anchor: (Height: 18, Bottom: 14);
+        }
+
+        Group {
+          LayoutMode: Left;
+          Padding: (Right: 15, Bottom: 5);
+
+          Label {
+            FlexWeight: 1;
+            Text: "Item";
+            Style: (RenderBold: true);
+          }
+
+          Label {
+            Anchor: (Width: 80);
+            Text: "Qty";
+            Style: (RenderBold: true, Alignment: Center);
+          }
+        }
+
+        Group {
+          FlexWeight: 1;
+          Background: (TexturePath: "../Common/ContainerBackgroundSecondary.png", Border: 5);
+          Padding: 10;
+
+          Group #ElementList {
+            FlexWeight: 1;
+            LayoutMode: TopScrolling;
+            ScrollbarStyle: $C.@DefaultScrollbarStyle;
+          }
+        }
+      }
+    }
+  }
+}
+
+$C.@BackButton {}

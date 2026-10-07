@@ -1,0 +1,303 @@
+{
+  "version": "2026-03-22",
+  "source_scope": {
+    "included": [
+      "Intelligent/Aggressive/*",
+      "Intelligent/Neutral/*",
+      "Intelligent/Passive/*",
+      "Undead/Skeleton/*",
+      "Undead/Zombie/*"
+    ],
+    "excluded": [
+      "Intelligent/Passive/Temple/*"
+    ]
+  },
+  "review_required_groups": [
+    "passive_special",
+    "aggressive_edible"
+  ],
+  "non_pickpocketable_groups": [
+    "neutral_youth",
+    "neutral_special",
+    "passive_special"
+  ],
+  "non_pickpocketable_roles": [
+    "Risen_Gunner",
+    "Risen_Knight",
+    "Scarak_Broodmother",
+    "Scarak_Defender",
+    "Scarak_Defender_Patrol",
+    "Scarak_Fighter",
+    "Scarak_Fighter_Patrol",
+    "Scarak_Fighter_Royal_Guard",
+    "Scarak_Louse",
+    "Scarak_Seeker",
+    "Scarak_Seeker_Patrol",
+    "Shadow_Knight",
+    "Skeleton_Incandescent_Head"
+  ],
+  "groups": {
+    "neutral_merchant": [
+      "Kweebec_Merchant"
+    ],
+    "neutral_worker": [
+      "Tuluk_Fisherman"
+    ],
+    "neutral_civilian": [
+      "Bramblekin",
+      "Feran_Burrower",
+      "Feran_Civilian",
+      "Kweebec_Rootling",
+      "Kweebec_Sapling",
+      "Kweebec_Sapling_Orange",
+      "Kweebec_Sapling_Pink"
+    ],
+    "neutral_guardian": [
+      "Feran_Longtooth",
+      "Feran_Sharptooth",
+      "Kweebec_Razorleaf",
+      "Kweebec_Razorleaf_Patrol"
+    ],
+    "neutral_mystic": [
+      "Bramblekin_Shaman",
+      "Feran_Windwalker"
+    ],
+    "neutral_youth": [
+      "Feran_Cub",
+      "Kweebec_Seedling",
+      "Kweebec_Sproutling",
+      "Kweebec_Sproutling_Patrol"
+    ],
+    "neutral_special": [
+      "Kweebec_Elder",
+      "Kweebec_Prisoner"
+    ],
+    "passive_merchant": [
+      "Klops_Merchant",
+      "Klops_Merchant_Patrol",
+      "Klops_Merchant_Wandering"
+    ],
+    "passive_worker": [
+      "Klops_Miner",
+      "Klops_Miner_Patrol"
+    ],
+    "passive_civilian": [
+      "Klops_Gentleman"
+    ],
+    "passive_special": [
+      "Quest_Master",
+      "Slothian"
+    ],
+    "aggressive_elite": [
+      "Goblin_Duke",
+      "Goblin_Duke_Phase_2",
+      "Goblin_Duke_Phase_3_Fast",
+      "Goblin_Duke_Phase_3_Slow",
+      "Scarak_Broodmother",
+      "Scarak_Fighter_Royal_Guard",
+      "Trork_Chieftain"
+    ],
+    "aggressive_melee": [
+      "Hedera",
+      "Goblin_Ogre",
+      "Goblin_Scavenger",
+      "Goblin_Scavenger_Battleaxe",
+      "Goblin_Scavenger_Sword",
+      "Goblin_Scrapper",
+      "Goblin_Scrapper_Patrol",
+      "Outlander_Berserker",
+      "Outlander_Brute",
+      "Outlander_Marauder",
+      "Scarak_Defender",
+      "Scarak_Defender_Patrol",
+      "Scarak_Fighter",
+      "Scarak_Fighter_Patrol",
+      "Trork_Brawler",
+      "Trork_Guard",
+      "Trork_Mauler",
+      "Trork_Unarmed",
+      "Trork_Warrior",
+      "Trork_Warrior_Patrol"
+    ],
+    "aggressive_skirmisher": [
+      "Goblin_Thief",
+      "Goblin_Thief_Patrol",
+      "Outlander_Stalker"
+    ],
+    "aggressive_ranged": [
+      "Goblin_Lobber",
+      "Goblin_Lobber_Patrol",
+      "Outlander_Hunter",
+      "Scarak_Seeker",
+      "Scarak_Seeker_Patrol",
+      "Trork_Hunter",
+      "Trork_Sentry",
+      "Trork_Sentry_Patrol",
+      "Wolf_Trork_Hunter"
+    ],
+    "aggressive_caster": [
+      "Goblin_Hermit",
+      "Outlander_Cultist",
+      "Outlander_Priest",
+      "Outlander_Sorcerer",
+      "Trork_Doctor_Witch",
+      "Trork_Shaman",
+      "Wolf_Outlander_Priest",
+      "Wolf_Outlander_Sorcerer",
+      "Wolf_Trork_Shaman"
+    ],
+    "aggressive_worker": [
+      "Goblin_Miner",
+      "Goblin_Miner_Patrol",
+      "Outlander_Peon"
+    ],
+    "undead_skeleton_melee": [
+      "Skeleton",
+      "Skeleton_Fighter",
+      "Skeleton_Fighter_Patrol",
+      "Skeleton_Fighter_Wander",
+      "Skeleton_Knight",
+      "Skeleton_Knight_Patrol",
+      "Skeleton_Knight_Wander",
+      "Skeleton_Soldier",
+      "Skeleton_Soldier_Patrol",
+      "Skeleton_Soldier_Wander",
+      "Skeleton_Burnt_Knight",
+      "Skeleton_Burnt_Knight_Patrol",
+      "Skeleton_Burnt_Knight_Wander",
+      "Skeleton_Burnt_Lancer",
+      "Skeleton_Burnt_Lancer_Patrol",
+      "Skeleton_Burnt_Lancer_Wander",
+      "Skeleton_Burnt_Soldier",
+      "Skeleton_Burnt_Soldier_Patrol",
+      "Skeleton_Burnt_Soldier_Wander",
+      "Skeleton_Frost_Fighter",
+      "Skeleton_Frost_Fighter_Patrol",
+      "Skeleton_Frost_Fighter_Wander",
+      "Skeleton_Frost_Knight",
+      "Skeleton_Frost_Knight_Patrol",
+      "Skeleton_Frost_Knight_Wander",
+      "Skeleton_Frost_Soldier",
+      "Skeleton_Frost_Soldier_Patrol",
+      "Skeleton_Frost_Soldier_Wander",
+      "Skeleton_Sand_Guard",
+      "Skeleton_Sand_Guard_Patrol",
+      "Skeleton_Sand_Guard_Wander",
+      "Skeleton_Sand_Soldier",
+      "Skeleton_Sand_Soldier_Patrol",
+      "Skeleton_Sand_Soldier_Wander",
+      "Dungeon_Skeleton_Sand_Soldier",
+      "Skeleton_Incandescent_Fighter",
+      "Skeleton_Incandescent_Fighter_Patrol",
+      "Skeleton_Incandescent_Fighter_Wander",
+      "Skeleton_Incandescent_Footman",
+      "Skeleton_Incandescent_Footman_Patrol",
+      "Skeleton_Incandescent_Footman_Wander",
+      "Skeleton_Pirate_Striker",
+      "Skeleton_Pirate_Striker_Patrol",
+      "Skeleton_Pirate_Striker_Wander"
+    ],
+    "undead_skeleton_ranged": [
+      "Skeleton_Archer",
+      "Skeleton_Archer_Patrol",
+      "Skeleton_Archer_Wander",
+      "Skeleton_Ranger",
+      "Skeleton_Ranger_Patrol",
+      "Skeleton_Ranger_Wander",
+      "Skeleton_Scout",
+      "Skeleton_Scout_Patrol",
+      "Skeleton_Scout_Wander",
+      "Skeleton_Burnt_Archer",
+      "Skeleton_Burnt_Archer_Patrol",
+      "Skeleton_Burnt_Archer_Wander",
+      "Skeleton_Burnt_Gunner",
+      "Skeleton_Burnt_Gunner_Patrol",
+      "Skeleton_Burnt_Gunner_Wander",
+      "Skeleton_Frost_Archer",
+      "Skeleton_Frost_Archer_Patrol",
+      "Skeleton_Frost_Archer_Wander",
+      "Skeleton_Frost_Ranger",
+      "Skeleton_Frost_Ranger_Patrol",
+      "Skeleton_Frost_Ranger_Wander",
+      "Skeleton_Frost_Scout",
+      "Skeleton_Frost_Scout_Patrol",
+      "Skeleton_Frost_Scout_Wander",
+      "Skeleton_Sand_Archer",
+      "Skeleton_Sand_Archer_Patrol",
+      "Skeleton_Sand_Archer_Wander",
+      "Skeleton_Sand_Ranger",
+      "Skeleton_Sand_Ranger_Patrol",
+      "Skeleton_Sand_Ranger_Wander",
+      "Skeleton_Sand_Scout",
+      "Skeleton_Sand_Scout_Patrol",
+      "Skeleton_Sand_Scout_Wander",
+      "Dungeon_Skeleton_Sand_Archer",
+      "Skeleton_Pirate_Gunner",
+      "Skeleton_Pirate_Gunner_Patrol",
+      "Skeleton_Pirate_Gunner_Wander"
+    ],
+    "undead_skeleton_caster": [
+      "Skeleton_Archmage",
+      "Skeleton_Archmage_Patrol",
+      "Skeleton_Archmage_Wander",
+      "Skeleton_Mage",
+      "Skeleton_Mage_Patrol",
+      "Skeleton_Mage_Wander",
+      "Skeleton_Burnt_Alchemist",
+      "Skeleton_Burnt_Alchemist_Patrol",
+      "Skeleton_Burnt_Alchemist_Wander",
+      "Skeleton_Burnt_Wizard",
+      "Skeleton_Burnt_Wizard_Patrol",
+      "Skeleton_Burnt_Wizard_Wander",
+      "Skeleton_Frost_Archmage",
+      "Skeleton_Frost_Archmage_Patrol",
+      "Skeleton_Frost_Archmage_Wander",
+      "Skeleton_Frost_Mage",
+      "Skeleton_Frost_Mage_Patrol",
+      "Skeleton_Frost_Mage_Wander",
+      "Skeleton_Sand_Archmage",
+      "Skeleton_Sand_Archmage_Patrol",
+      "Skeleton_Sand_Archmage_Wander",
+      "Skeleton_Sand_Mage",
+      "Skeleton_Sand_Mage_Patrol",
+      "Skeleton_Sand_Mage_Wander",
+      "Dungeon_Skeleton_Sand_Mage",
+      "Skeleton_Incandescent_Mage",
+      "Skeleton_Incandescent_Mage_Patrol",
+      "Skeleton_Incandescent_Mage_Wander"
+    ],
+    "undead_skeleton_skirmisher": [
+      "Skeleton_Sand_Assassin",
+      "Skeleton_Sand_Assassin_Patrol",
+      "Skeleton_Sand_Assassin_Wander",
+      "Dungeon_Skeleton_Sand_Assassin"
+    ],
+    "undead_skeleton_elite": [
+      "Skeleton_Burnt_Praetorian",
+      "Skeleton_Burnt_Praetorian_Patrol",
+      "Skeleton_Burnt_Praetorian_Wander",
+      "Skeleton_Pirate_Captain",
+      "Skeleton_Pirate_Captain_Patrol",
+      "Skeleton_Pirate_Captain_Wander"
+    ],
+    "undead_zombie_melee": [
+      "Zombie",
+      "Zombie_Burnt",
+      "Zombie_Frost",
+      "Zombie_Sand",
+      "Zombie_Aberrant_Small"
+    ],
+    "undead_zombie_elite": [
+      "Zombie_Aberrant",
+      "Zombie_Aberrant_Big"
+    ],
+    "aggressive_beast": [
+      "Scarak_Louse"
+    ],
+    "aggressive_edible": [
+      "Edible_Goblin_Scrapper",
+      "Edible_Rat",
+      "Goblin_Ogre_Tutorial"
+    ]
+  }
+}

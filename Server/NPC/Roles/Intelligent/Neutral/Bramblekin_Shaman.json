@@ -1,0 +1,81 @@
+{
+    "$Comment":  "DisplayState",
+    "Type":  "Abstract",
+    "DropList":  "Drop_Bramblekin",
+    "Appearance":  "Bramblekin_Shaman",
+    "KnockbackScale":  0.5,
+    "MotionControllerList":  [
+                                 {
+                                     "Type":  "Walk",
+                                     "MaxWalkSpeed":  3,
+                                     "Gravity":  10,
+                                     "MaxFallSpeed":  8,
+                                     "Acceleration":  10
+                                 }
+                             ],
+    "MaxHealth":  {
+                      "Compute":  "MaxHealth"
+                  },
+    "Parameters":  {
+                       "MaxHealth":  {
+                                         "Value":  103,
+                                         "Description":  "Max health for the NPC"
+                                     },
+                       "NameTranslationKey":  {
+                                                  "Value":  "server.npcRoles.Bramblekin_Shaman.name",
+                                                  "Description":  "Translation key for NPC name display"
+                                              },
+                       "ViewRange":  {
+                                         "Value":  4,
+                                         "Description":  "View range"
+                                     }
+                   },
+    "Instructions":  [
+                         {
+                             "Instructions":  [
+                                                  {
+                                                      "Sensor":  {
+                                                                     "Type":  "Any"
+                                                                 },
+                                                      "BodyMotion":  {
+                                                                         "Type":  "Nothing"
+                                                                     }
+                                                  }
+                                              ]
+                         }
+                     ],
+    "NameTranslationKey":  {
+                               "Compute":  "NameTranslationKey"
+                           },
+    "InteractionInstruction":  {
+                                   "Instructions":  [
+                                                        {
+                                                            "Sensor":  {
+                                                                           "Type":  "Not",
+                                                                           "Sensor":  {
+                                                                                          "Type":  "CanInteract",
+                                                                                          "ViewSector":  180
+                                                                                      }
+                                                                       },
+                                                            "Actions":  [
+                                                                            {
+                                                                                "Type":  "SetInteractable",
+                                                                                "Interactable":  false
+                                                                            }
+                                                                        ]
+                                                        },
+                                                        {
+                                                            "Continue":  true,
+                                                            "Sensor":  {
+                                                                           "Type":  "Any"
+                                                                       },
+                                                            "Actions":  [
+                                                                            {
+                                                                                "Type":  "SetInteractable",
+                                                                                "Interactable":  true
+                                                                            }
+                                                                        ]
+                                                        }
+                                                    ]
+                               }
+}

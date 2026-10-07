@@ -1,0 +1,27 @@
+{
+  "recordedDate": "2026-10-04",
+  "jdk": {
+    "vendor": "Eclipse Temurin",
+    "version": "25.0.4.1+1",
+    "relativeHome": "../../Toolchains/JDK25",
+    "url": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%2B1/OpenJDK25U-jdk_x64_windows_hotspot_25.0.4.1_1.zip",
+    "sha256": "00c847d804f4a78e9f04f2683faf14fed898535b177b7fc704486cb0284e9283"
+  },
+  "gradle": {
+    "version": "9.1.0",
+    "url": "https://services.gradle.org/distributions/gradle-9.1.0-bin.zip",
+    "sha256": "a17ddd85a26b6a7f5ddb71ff8b05fc5104c0202c6e64782429790c933686c806"
+  },
+  "hytale": {
+    "version": "0.6.8",
+    "patchline": "release",
+    "revision": "d2feeb3997f2efc9b4fe23282a3ece38f0618047",
+    "dependency": ".build/dependencies/HytaleServer-0.6.8.jar",
+    "sha256": "dcd2956cc65b950084650eadd56b889cf51f7610c127c3daac1f74dc471fec97",
+    "origin": "Installed release server; matches official stable Maven metadata and documentation"
+  },
+  "baselineJar": {
+    "path": "HyThief_v1.2.jar",
+    "sha256": "45a186122e6cc3bfb2d2eb276811222e0c86039baa062af44a7855b90818bd79"
+  }
+}

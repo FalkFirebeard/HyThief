@@ -1,0 +1,173 @@
+import java.security.MessageDigest
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
+plugins {
+    id 'java'
+}
+
+group = 'com.local'
+version = '1.3.0'
+
+def stableVersion = '0.6.8'
+def serverJar = layout.projectDirectory.file(".build/dependencies/HytaleServer-${stableVersion}.jar")
+def serverSha256 = 'dcd2956cc65b950084650eadd56b889cf51f7610c127c3daac1f74dc471fec97'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+sourceSets {
+    main {
+        java.setSrcDirs(['src-java'])
+        resources.setSrcDirs([])
+    }
+}
+
+dependencies {
+    compileOnly files(serverJar)
+}
+
+tasks.register('verifyStableServer') {
+    doLast {
+        if (!serverJar.asFile.isFile()) {
+            throw new GradleException("Missing pinned server JAR: ${serverJar.asFile}. See Docs/BUILD_ENVIRONMENT.md.")
+        }
+        def digest = MessageDigest.getInstance('SHA-256')
+        serverJar.asFile.withInputStream { input ->
+            byte[] buffer = new byte[65536]
+            int count
+            while ((count = input.read(buffer)) != -1) {
+                digest.update(buffer, 0, count)
+            }
+        }
+        def actual = digest.digest().encodeHex().toString()
+        if (actual != serverSha256) {
+            throw new GradleException("Stable server checksum mismatch: ${actual}")
+        }
+        logger.lifecycle("Hytale stable target: ${stableVersion}; SHA256: ${actual}")
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    dependsOn tasks.named('verifyStableServer')
+    options.release = 25
+    options.encoding = 'UTF-8'
+    options.compilerArgs.addAll(['-Xdiags:verbose', '-Xmaxerrs', '1000'])
+    doFirst {
+        logger.lifecycle("Java compiler: ${javaCompiler.get().executablePath}")
+    }
+}
+
+def generateReleaseManifest = tasks.register('generateReleaseManifest') {
+    def output = layout.buildDirectory.file('generated/manifest/manifest.json')
+    inputs.file('manifest.json')
+    inputs.property('stableVersion', stableVersion)
+    inputs.property('releaseVersion', project.version.toString())
+    outputs.file(output)
+    doLast {
+        def manifest = new JsonSlurper().parse(file('manifest.json'))
+        manifest.ServerVersion = "=${stableVersion}"
+        manifest.Version = project.version.toString()
+        manifest.Dependencies.put("Hytale:NPC", "*")
+        output.get().asFile.parentFile.mkdirs()
+        output.get().asFile.text = JsonOutput.prettyPrint(JsonOutput.toJson(manifest)) + '\n'
+    }
+}
+
+// Shared native entry composition. Supported role IDs and resolver outcomes remain intact.
+def interactionSources = new JsonSlurper().parse(file('BuildSupport/interaction-sources.json'))
+def supportedMatrix = new JsonSlurper().parse(file('BuildSupport/supported-matrix.json'))
+def generatedRoleIds = []
+def generateNativeInteractions = tasks.register('generateNativeInteractions') {
+    def output = layout.buildDirectory.dir('generated/native-interactions')
+    inputs.dir('BuildSupport')
+    interactionSources.values().each { inputs.file(it.Source) }
+    outputs.dir(output)
+    doLast {
+        def root = output.get().asFile
+        def supported = supportedMatrix.collect { it.Role }.toSet()
+        def branch = new JsonSlurper().parse(file('BuildSupport/pickpocket-interaction.json'))
+        def done = [:]
+        def visiting = [] as Set
+        def writeRole = { String path, Object data ->
+            def target = new File(root, path)
+            target.parentFile.mkdirs()
+            target.text = JsonOutput.prettyPrint(JsonOutput.toJson(data)) + '\n'
+        }
+        def compose
+        compose = { String id ->
+            if (done.containsKey(id)) return done[id]
+            if (!visiting.add(id)) throw new GradleException("Role reference cycle: ${id}")
+            def source = interactionSources[id]
+            if (!source) throw new GradleException("Missing role source: ${id}")
+            def role = new JsonSlurper().parse(file(source.Source))
+            def resultId = supported.contains(id) ? id : "HyThiefShared_${id}"
+            boolean changed = resultId != id
+            if (role.Type == 'Variant') {
+                def parent = compose(role.Reference.toString())
+                if (parent != role.Reference) { role.Reference = parent; changed = true }
+            } else {
+                def existing = role.InteractionInstruction
+                // The tested merchant already contains the shared branch; preserve its tree exactly.
+                if (!(existing?.Instructions?.getAt(0)?.Sensor?.Type == branch.Sensor.Type)) {
+                    role.InteractionInstruction = [Instructions: [branch, existing ?: 
+                        [Sensor: [Type: 'Any'], Actions: [[Type: 'SetInteractable', Interactable: false]]]]]
+                    changed = true
+                }
+            }
+            if (changed) {
+                def path = supported.contains(id) ? source.AssetPath : "Server/NPC/Roles/HyThief/Shared/${resultId}.json"
+                writeRole(path, role)
+            }
+            visiting.remove(id)
+            done[id] = resultId
+            return resultId
+        }
+        supported.sort().each { compose(it) }
+        logger.lifecycle("Native Pickpocket composition: ${supported.size()} supported roles; ${done.size()} role/parent nodes")
+    }
+}
+
+tasks.named('processResources') {
+    from('Common') { into 'Common' }
+    from('Server') {
+        into 'Server'
+        // Generated variants replace these inputs only in build output, not original source.
+        // A role that needs no rewritten reference is copied from the generator as well below.
+        supportedMatrix.each { exclude it.Asset.replaceFirst('^Server/', '') }
+    }
+    from(generateNativeInteractions) {
+        new JsonSlurper().parse(file('BuildSupport/StealthPrototype/sites.json')).Roles.each { id ->
+            exclude interactionSources[id].AssetPath
+        }
+    }
+    from('BuildSupport/StealthPrototype/assets')
+    // Copy unchanged supported source variants absent from generated output (typically Patrol/Wander).
+    doLast {
+        supportedMatrix.each { row ->
+            def target = new File(destinationDir, row.Asset)
+            if (!target.isFile() && interactionSources[row.Role].Source.startsWith('Server/')) {
+                def source = file(interactionSources[row.Role].Source)
+                target.parentFile.mkdirs()
+                target.bytes = source.bytes
+            }
+        }
+    }
+    from('config') { into 'config' }
+    from(generateReleaseManifest)
+}
+
+tasks.named('jar') {
+    archiveFileName = "HyThief-${version}.jar"
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+tasks.named('wrapper') {
+    gradleVersion = '9.1.0'
+    distributionType = Wrapper.DistributionType.BIN
+    distributionSha256Sum = 'a17ddd85a26b6a7f5ddb71ff8b05fc5104c0202c6e64782429790c933686c806'
+}

@@ -1,0 +1,253 @@
+{
+  "Class": "Instruction",
+  "Parameters": {
+    "_ImportStates": [
+      "Alerted",
+      "Chase",
+      "Search",
+      "Warn",
+      "Neutral",
+      "Friendly",
+      "Revered",
+      "DroppedMeat"
+    ],
+    "ViewRange": {
+      "Value": 15,
+      "Description": "View range"
+    },
+    "ViewSector": {
+      "Value": 180,
+      "Description": "View sector"
+    },
+    "HearingRange": {
+      "Value": 8,
+      "Description": "Hearing range"
+    },
+    "SmellRange": {
+      "Value": 8,
+      "Description": "Smell range"
+    },
+    "AlertedRange": {
+      "Value": 30,
+      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+    },
+    "CheckDroppedMeat": {
+      "Value": true,
+      "Description": "Whether to perform dropped meat checks"
+    },
+    "CanSee": {
+      "Value": true,
+      "Description": "Whether the NPC can currently see"
+    },
+    "CanHear": {
+      "Value": true,
+      "Description": "Whether the NPC can hear"
+    },
+    "CanSmell": {
+      "Value": false,
+      "Description": "Whether the NPC can smell"
+    },
+    "ReactToChests": {
+      "Value": true,
+      "Description": "Whether to react to chest interactions"
+    },
+    "ExcludeGroups": {
+      "Value": [
+        "Trork_Underlings"
+      ],
+      "Description": "A list of groups to exclude from reputation sensors"
+    },
+    "IgnoreLockedTarget": {
+      "Value": false,
+      "Description": "Whether to ignore the current locked target"
+    },
+    "ChestBlockSet": {
+      "Value": "Trork_Chest",
+      "Description": "The block set designating chests for this NPC"
+    }
+  },
+  "Content": {
+    "TreeMode": true,
+    "Sensor": {
+      "Type": "Any"
+    },
+    "Instructions": [
+      {
+        "Reference": "HyThiefStealth_Outlander_Sorcerer_C11",
+        "Modify": {
+          "_ExportStates": [
+            "Chase",
+            "Search"
+          ],
+          "AlertedRange": {
+            "Compute": "AlertedRange"
+          }
+        }
+      },
+      {
+        "Enabled": {
+          "Compute": "ReactToChests"
+        },
+        "Sensor": {
+          "Type": "BlockChange",
+          "Range": {
+            "Compute": "ViewRange"
+          },
+          "EventType": "Damage",
+          "BlockSet": {
+            "Compute": "ChestBlockSet"
+          },
+          "SearchType": "PlayerOnly",
+          "TargetSlot": "LockedTarget"
+        },
+        "Actions": [
+          {
+            "Type": "ParentState",
+            "State": "Chase"
+          }
+        ]
+      },
+      {
+        "Enabled": {
+          "Compute": "ReactToChests"
+        },
+        "Sensor": {
+          "Type": "BlockChange",
+          "Range": {
+            "Compute": "ViewRange"
+          },
+          "EventType": "Interaction",
+          "BlockSet": {
+            "Compute": "ChestBlockSet"
+          },
+          "SearchType": "PlayerOnly",
+          "TargetSlot": "LockedTarget"
+        },
+        "Actions": [
+          {
+            "Type": "ParentState",
+            "State": "Warn"
+          }
+        ]
+      },
+      {
+        "Sensor": {
+          "Type": "Or",
+          "Sensors": [
+            {
+              "Type": "Player",
+              "Range": 2,
+              "LockOnTarget": true,
+              "Filters": [
+                {
+                  "Type": "LineOfSight"
+                },
+                {
+                  "Type": "HyThiefStealthAcquisition",
+                  "BaseRange": 2,
+                  "Channel": "watch",
+                  "Projected": false
+                }
+              ]
+            },
+            {
+              "Reference": "HyThiefStealth_Outlander_Sorcerer_C12",
+              "Modify": {
+                "SmellRange": {
+                  "Compute": "SmellRange"
+                },
+                "Enabled": {
+                  "Compute": "CanSmell"
+                },
+                "ExcludeGroups": {
+                  "Compute": "ExcludeGroups"
+                },
+                "IgnoreLockedTarget": {
+                  "Compute": "IgnoreLockedTarget"
+                }
+              }
+            },
+            {
+              "Reference": "HyThiefStealth_Outlander_Sorcerer_C13",
+              "Modify": {
+                "ViewRange": {
+                  "Compute": "ViewRange"
+                },
+                "ViewSector": {
+                  "Compute": "ViewSector"
+                },
+                "Enabled": {
+                  "Compute": "CanSee"
+                },
+                "ExcludeGroups": {
+                  "Compute": "ExcludeGroups"
+                },
+                "IgnoreLockedTarget": {
+                  "Compute": "IgnoreLockedTarget"
+                }
+              }
+            },
+            {
+              "Reference": "HyThiefStealth_Outlander_Sorcerer_C14",
+              "Modify": {
+                "HearingRange": {
+                  "Compute": "HearingRange"
+                },
+                "ThroughWalls": false,
+                "Enabled": {
+                  "Compute": "CanHear"
+                },
+                "ExcludeGroups": {
+                  "Compute": "ExcludeGroups"
+                },
+                "IgnoreLockedTarget": {
+                  "Compute": "IgnoreLockedTarget"
+                }
+              }
+            }
+          ]
+        },
+        "Instructions": [
+          {
+            "Reference": "HyThiefStealth_Outlander_Sorcerer_C15",
+            "Modify": {
+              "_ExportStates": [
+                "Alerted",
+                "Neutral",
+                "Friendly",
+                "Revered"
+              ],
+              "SwitchTime": [
+                0,
+                0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "Enabled": {
+          "Compute": "CheckDroppedMeat"
+        },
+        "Sensor": {
+          "Reference": "HyThiefStealth_Outlander_Sorcerer_C16",
+          "Modify": {
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            }
+          }
+        },
+        "Actions": [
+          {
+            "Type": "ParentState",
+            "State": "DroppedMeat"
+          }
+        ]
+      }
+    ]
+  },
+  "Type": "Component"
+}

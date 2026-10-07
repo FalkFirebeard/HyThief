@@ -1,0 +1,206 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Goblin_Ogre",
+  "Parameters": {
+    "Appearance": {
+      "Value": "Goblin_Ogre",
+      "Description": "Model to be used"
+    },
+    "ViewRange": {
+      "Value": 15,
+      "Description": "View range in blocks"
+    },
+    "ViewSector": {
+      "Value": 180,
+      "Description": "View sector in degrees"
+    },
+    "HearingRange": {
+      "Value": 8,
+      "Description": "Hearing range in blocks"
+    },
+    "DistractedPenalty": {
+      "Value": 2,
+      "Description": "A factor by which view range and hearing range will be divided when this NPC is distracted"
+    },
+    "AlertedRange": {
+      "Value": 30,
+      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+    },
+    "EatItem": {
+      "Value": "Food_Beef_Raw",
+      "Description": "The item this NPC will find when it rummages for food"
+    },
+    "SleepingAttack": {
+      "Value": "Root_NPC_Attack_Melee",
+      "Description": "Attack to use on NPCs that annoy it while sleeping"
+    },
+    "FoodNPCGroups": {
+      "Value": [
+        "Edible_Rat"
+      ],
+      "Description": "The groups of edible NPCs that will come from triggering the beacon"
+    },
+    "FoodNPCBeacon": {
+      "Value": "Edible_Rat",
+      "Description": "The spawn beacon to trigger to create an edible NPC"
+    },
+    "FoodNPCItem": {
+      "Value": "Food_Cheese",
+      "Description": "The edible NPC in item form"
+    },
+    "AttitudeGroup": {
+      "Value": "Empty",
+      "Description": "This NPCs attitude group"
+    },
+    "WarnGroups": {
+      "Value": [
+        "Goblin_Scrapper"
+      ],
+      "Description": "The groups to warn when spotting an enemy"
+    },
+    "AttackSequence": {
+      "Value": "Component_Instruction_Attack_Sequence_Goblin_Ogre",
+      "Description": "The attack sequence to use in combat"
+    },
+    "AttackDistance": {
+      "Value": 2.5,
+      "Description": "The distance at which an NPC will execute attacks"
+    },
+    "CombatRelativeTurnSpeed": {
+      "Value": 1.5,
+      "Description": "Modifier that decides turn speed difference in combat"
+    },
+    "DropList": {
+      "Value": "Empty",
+      "Description": "Drop Items"
+    },
+    "ScrapperNPCGroups": {
+      "Value": [
+        "Edible_Goblin_Scrapper"
+      ],
+      "Description": "The groups of NPCs that will come from triggering the beacon to be thrown at the player during combat"
+    },
+    "ScrapperNPCBeacon": {
+      "Value": "Edible_Goblin_Scrapper",
+      "Description": "The spawn beacon to trigger to create a throwable NPC"
+    },
+    "ScrapperRole": {
+      "Value": "Goblin_Scrapper",
+      "Description": "The type of NPC to throw at the player when successfully catching it"
+    },
+    "HealEntityEffect": {
+      "Value": "Npc_Heal_Low",
+      "Description": "The entity effect to apply to handle healing this NPC"
+    },
+    "HealEatDuration": {
+      "Value": [
+        2,
+        5
+      ],
+      "Description": "How long the NPC should eat for before the healing is triggered"
+    },
+    "MaxHealth": {
+      "Value": 124,
+      "Description": "Max health for the NPC"
+    },
+    "IsMemory": {
+      "Value": true,
+      "Description": "Defines if the NPC is a memory"
+    },
+    "MemoriesCategory": {
+      "Value": "Goblin",
+      "Description": "Defines the category of the memory"
+    },
+    "MemoriesNameOverride": {
+      "Value": "",
+      "Description": "Overrides the memory name if set"
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Goblin_Ogre.name",
+      "Description": "Translation key for NPC name display"
+    }
+  },
+  "Modify": {
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "ViewRange": {
+      "Compute": "ViewRange"
+    },
+    "ViewSector": {
+      "Compute": "ViewSector"
+    },
+    "HearingRange": {
+      "Compute": "HearingRange"
+    },
+    "DistractedPenalty": {
+      "Compute": "DistractedPenalty"
+    },
+    "AlertedRange": {
+      "Compute": "AlertedRange"
+    },
+    "EatItem": {
+      "Compute": "EatItem"
+    },
+    "SleepingAttack": {
+      "Compute": "SleepingAttack"
+    },
+    "FoodNPCGroups": {
+      "Compute": "FoodNPCGroups"
+    },
+    "FoodNPCBeacon": {
+      "Compute": "FoodNPCBeacon"
+    },
+    "FoodNPCItem": {
+      "Compute": "FoodNPCItem"
+    },
+    "AttitudeGroup": {
+      "Compute": "AttitudeGroup"
+    },
+    "WarnGroups": {
+      "Compute": "WarnGroups"
+    },
+    "AttackSequence": {
+      "Compute": "AttackSequence"
+    },
+    "AttackDistance": {
+      "Compute": "AttackDistance"
+    },
+    "CombatRelativeTurnSpeed": {
+      "Compute": "CombatRelativeTurnSpeed"
+    },
+    "DropList": {
+      "Compute": "DropList"
+    },
+    "ScrapperNPCGroups": {
+      "Compute": "ScrapperNPCGroups"
+    },
+    "ScrapperNPCBeacon": {
+      "Compute": "ScrapperNPCBeacon"
+    },
+    "ScrapperRole": {
+      "Compute": "ScrapperRole"
+    },
+    "HealEntityEffect": {
+      "Compute": "HealEntityEffect"
+    },
+    "HealEatDuration": {
+      "Compute": "HealEatDuration"
+    },
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
+    "IsMemory": {
+      "Compute": "IsMemory"
+    },
+    "MemoriesCategory": {
+      "Compute": "MemoriesCategory"
+    },
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  }
+}

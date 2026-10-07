@@ -1,0 +1,1297 @@
+[
+  {
+    "Pool": "bramblekin_civilian",
+    "Class": "civilian",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Bramblekin.json",
+    "Family": "Bramblekin",
+    "Role": "Bramblekin"
+  },
+  {
+    "Pool": "bramblekin_mystic",
+    "Class": "mystic",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Bramblekin_Shaman.json",
+    "Family": "Bramblekin",
+    "Role": "Bramblekin_Shaman"
+  },
+  {
+    "Pool": "skeleton_sand_dungeon_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Archer.json",
+    "Family": "Skeletons — Sand dungeon",
+    "Role": "Dungeon_Skeleton_Sand_Archer"
+  },
+  {
+    "Pool": "skeleton_sand_dungeon_skirmisher",
+    "Class": "skirmisher",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Assassin.json",
+    "Family": "Skeletons — Sand dungeon",
+    "Role": "Dungeon_Skeleton_Sand_Assassin"
+  },
+  {
+    "Pool": "skeleton_sand_dungeon_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Mage.json",
+    "Family": "Skeletons — Sand dungeon",
+    "Role": "Dungeon_Skeleton_Sand_Mage"
+  },
+  {
+    "Pool": "skeleton_sand_dungeon_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Soldier.json",
+    "Family": "Skeletons — Sand dungeon",
+    "Role": "Dungeon_Skeleton_Sand_Soldier"
+  },
+  {
+    "Pool": "feran_civilian",
+    "Class": "civilian",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Burrower.json",
+    "Family": "Feran",
+    "Role": "Feran_Burrower"
+  },
+  {
+    "Pool": "feran_civilian",
+    "Class": "civilian",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Civilian.json",
+    "Family": "Feran",
+    "Role": "Feran_Civilian"
+  },
+  {
+    "Pool": "feran_guardian",
+    "Class": "guardian",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Longtooth.json",
+    "Family": "Feran",
+    "Role": "Feran_Longtooth"
+  },
+  {
+    "Pool": "feran_guardian",
+    "Class": "guardian",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Sharptooth.json",
+    "Family": "Feran",
+    "Role": "Feran_Sharptooth"
+  },
+  {
+    "Pool": "feran_mystic",
+    "Class": "mystic",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Windwalker.json",
+    "Family": "Feran",
+    "Role": "Feran_Windwalker"
+  },
+  {
+    "Pool": "goblin_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Duke"
+  },
+  {
+    "Pool": "goblin_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke_Phase_2.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Duke_Phase_2"
+  },
+  {
+    "Pool": "goblin_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke_Phase_3_Fast.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Duke_Phase_3_Fast"
+  },
+  {
+    "Pool": "goblin_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke_Phase_3_Slow.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Duke_Phase_3_Slow"
+  },
+  {
+    "Pool": "goblin_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Hermit.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Hermit"
+  },
+  {
+    "Pool": "goblin_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Lobber.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Lobber"
+  },
+  {
+    "Pool": "goblin_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Lobber_Patrol.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Lobber_Patrol"
+  },
+  {
+    "Pool": "goblin_worker",
+    "Class": "worker",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Miner.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Miner"
+  },
+  {
+    "Pool": "goblin_worker",
+    "Class": "worker",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Miner_Patrol.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Miner_Patrol"
+  },
+  {
+    "Pool": "goblin_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Ogre.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Ogre"
+  },
+  {
+    "Pool": "goblin_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scavenger.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Scavenger"
+  },
+  {
+    "Pool": "goblin_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scavenger_Battleaxe.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Scavenger_Battleaxe"
+  },
+  {
+    "Pool": "goblin_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scavenger_Sword.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Scavenger_Sword"
+  },
+  {
+    "Pool": "goblin_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scrapper.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Scrapper"
+  },
+  {
+    "Pool": "goblin_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scrapper_Patrol.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Scrapper_Patrol"
+  },
+  {
+    "Pool": "goblin_skirmisher",
+    "Class": "skirmisher",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Thief.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Thief"
+  },
+  {
+    "Pool": "goblin_skirmisher",
+    "Class": "skirmisher",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Thief_Patrol.json",
+    "Family": "Goblins",
+    "Role": "Goblin_Thief_Patrol"
+  },
+  {
+    "Pool": "hedera_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Hedera.json",
+    "Family": "Hedera",
+    "Role": "Hedera"
+  },
+  {
+    "Pool": "klops_civilian",
+    "Class": "civilian",
+    "Asset": "Server/NPC/Roles/Intelligent/Passive/Klops_Gentleman.json",
+    "Family": "Klops",
+    "Role": "Klops_Gentleman"
+  },
+  {
+    "Pool": "klops_merchant",
+    "Class": "merchant",
+    "Asset": "Server/NPC/Roles/Intelligent/Passive/Klops_Merchant.json",
+    "Family": "Klops",
+    "Role": "Klops_Merchant"
+  },
+  {
+    "Pool": "klops_merchant",
+    "Class": "merchant",
+    "Asset": "Server/NPC/Roles/Intelligent/Passive/Klops_Merchant_Patrol.json",
+    "Family": "Klops",
+    "Role": "Klops_Merchant_Patrol"
+  },
+  {
+    "Pool": "klops_merchant",
+    "Class": "merchant",
+    "Asset": "Server/NPC/Roles/Intelligent/Passive/Klops_Merchant_Wandering.json",
+    "Family": "Klops",
+    "Role": "Klops_Merchant_Wandering"
+  },
+  {
+    "Pool": "klops_worker",
+    "Class": "worker",
+    "Asset": "Server/NPC/Roles/Intelligent/Passive/Klops_Miner.json",
+    "Family": "Klops",
+    "Role": "Klops_Miner"
+  },
+  {
+    "Pool": "klops_worker",
+    "Class": "worker",
+    "Asset": "Server/NPC/Roles/Intelligent/Passive/Klops_Miner_Patrol.json",
+    "Family": "Klops",
+    "Role": "Klops_Miner_Patrol"
+  },
+  {
+    "Pool": "kweebec_merchant",
+    "Class": "merchant",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Merchant.json",
+    "Family": "Kweebecs",
+    "Role": "Kweebec_Merchant"
+  },
+  {
+    "Pool": "kweebec_guardian",
+    "Class": "guardian",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Razorleaf.json",
+    "Family": "Kweebecs",
+    "Role": "Kweebec_Razorleaf"
+  },
+  {
+    "Pool": "kweebec_guardian",
+    "Class": "guardian",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Razorleaf_Patrol.json",
+    "Family": "Kweebecs",
+    "Role": "Kweebec_Razorleaf_Patrol"
+  },
+  {
+    "Pool": "kweebec_civilian",
+    "Class": "civilian",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Rootling.json",
+    "Family": "Kweebecs",
+    "Role": "Kweebec_Rootling"
+  },
+  {
+    "Pool": "kweebec_civilian",
+    "Class": "civilian",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Sapling.json",
+    "Family": "Kweebecs",
+    "Role": "Kweebec_Sapling"
+  },
+  {
+    "Pool": "kweebec_civilian",
+    "Class": "civilian",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Sapling_Orange.json",
+    "Family": "Kweebecs",
+    "Role": "Kweebec_Sapling_Orange"
+  },
+  {
+    "Pool": "kweebec_civilian",
+    "Class": "civilian",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Sapling_Pink.json",
+    "Family": "Kweebecs",
+    "Role": "Kweebec_Sapling_Pink"
+  },
+  {
+    "Pool": "outlander_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Berserker.json",
+    "Family": "Outlanders",
+    "Role": "Outlander_Berserker"
+  },
+  {
+    "Pool": "outlander_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Brute.json",
+    "Family": "Outlanders",
+    "Role": "Outlander_Brute"
+  },
+  {
+    "Pool": "outlander_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Cultist.json",
+    "Family": "Outlanders",
+    "Role": "Outlander_Cultist"
+  },
+  {
+    "Pool": "outlander_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Hunter.json",
+    "Family": "Outlanders",
+    "Role": "Outlander_Hunter"
+  },
+  {
+    "Pool": "outlander_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Marauder.json",
+    "Family": "Outlanders",
+    "Role": "Outlander_Marauder"
+  },
+  {
+    "Pool": "outlander_worker",
+    "Class": "worker",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Peon.json",
+    "Family": "Outlanders",
+    "Role": "Outlander_Peon"
+  },
+  {
+    "Pool": "outlander_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Priest.json",
+    "Family": "Outlanders",
+    "Role": "Outlander_Priest"
+  },
+  {
+    "Pool": "outlander_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Sorcerer.json",
+    "Family": "Outlanders",
+    "Role": "Outlander_Sorcerer"
+  },
+  {
+    "Pool": "outlander_skirmisher",
+    "Class": "skirmisher",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Stalker.json",
+    "Family": "Outlanders",
+    "Role": "Outlander_Stalker"
+  },
+  {
+    "Pool": "skeleton_crypt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archer.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Archer"
+  },
+  {
+    "Pool": "skeleton_crypt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archer_Patrol.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Archer_Patrol"
+  },
+  {
+    "Pool": "skeleton_crypt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archer_Wander.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Archer_Wander"
+  },
+  {
+    "Pool": "skeleton_crypt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archmage.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Archmage"
+  },
+  {
+    "Pool": "skeleton_crypt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archmage_Patrol.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Archmage_Patrol"
+  },
+  {
+    "Pool": "skeleton_crypt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archmage_Wander.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Archmage_Wander"
+  },
+  {
+    "Pool": "skeleton_burnt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Alchemist.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Alchemist"
+  },
+  {
+    "Pool": "skeleton_burnt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Alchemist_Patrol.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Alchemist_Patrol"
+  },
+  {
+    "Pool": "skeleton_burnt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Alchemist_Wander.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Alchemist_Wander"
+  },
+  {
+    "Pool": "skeleton_burnt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Archer.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Archer"
+  },
+  {
+    "Pool": "skeleton_burnt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Archer_Patrol.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Archer_Patrol"
+  },
+  {
+    "Pool": "skeleton_burnt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Archer_Wander.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Archer_Wander"
+  },
+  {
+    "Pool": "skeleton_burnt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Gunner.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Gunner"
+  },
+  {
+    "Pool": "skeleton_burnt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Gunner_Patrol.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Gunner_Patrol"
+  },
+  {
+    "Pool": "skeleton_burnt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Gunner_Wander.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Gunner_Wander"
+  },
+  {
+    "Pool": "skeleton_burnt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Knight.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Knight"
+  },
+  {
+    "Pool": "skeleton_burnt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Knight_Patrol.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Knight_Patrol"
+  },
+  {
+    "Pool": "skeleton_burnt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Knight_Wander.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Knight_Wander"
+  },
+  {
+    "Pool": "skeleton_burnt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Lancer.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Lancer"
+  },
+  {
+    "Pool": "skeleton_burnt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Lancer_Patrol.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Lancer_Patrol"
+  },
+  {
+    "Pool": "skeleton_burnt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Lancer_Wander.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Lancer_Wander"
+  },
+  {
+    "Pool": "skeleton_burnt_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Praetorian.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Praetorian"
+  },
+  {
+    "Pool": "skeleton_burnt_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Praetorian_Patrol.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Praetorian_Patrol"
+  },
+  {
+    "Pool": "skeleton_burnt_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Praetorian_Wander.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Praetorian_Wander"
+  },
+  {
+    "Pool": "skeleton_burnt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Soldier.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Soldier"
+  },
+  {
+    "Pool": "skeleton_burnt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Soldier_Patrol.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Soldier_Patrol"
+  },
+  {
+    "Pool": "skeleton_burnt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Soldier_Wander.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Soldier_Wander"
+  },
+  {
+    "Pool": "skeleton_burnt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Wizard.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Wizard"
+  },
+  {
+    "Pool": "skeleton_burnt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Wizard_Patrol.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Wizard_Patrol"
+  },
+  {
+    "Pool": "skeleton_burnt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Wizard_Wander.json",
+    "Family": "Skeletons — Burnt",
+    "Role": "Skeleton_Burnt_Wizard_Wander"
+  },
+  {
+    "Pool": "skeleton_crypt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Fighter.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Fighter"
+  },
+  {
+    "Pool": "skeleton_crypt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Fighter_Patrol.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Fighter_Patrol"
+  },
+  {
+    "Pool": "skeleton_crypt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Fighter_Wander.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Fighter_Wander"
+  },
+  {
+    "Pool": "skeleton_frost_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archer.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Archer"
+  },
+  {
+    "Pool": "skeleton_frost_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archer_Patrol.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Archer_Patrol"
+  },
+  {
+    "Pool": "skeleton_frost_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archer_Wander.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Archer_Wander"
+  },
+  {
+    "Pool": "skeleton_frost_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archmage.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Archmage"
+  },
+  {
+    "Pool": "skeleton_frost_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archmage_Patrol.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Archmage_Patrol"
+  },
+  {
+    "Pool": "skeleton_frost_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archmage_Wander.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Archmage_Wander"
+  },
+  {
+    "Pool": "skeleton_frost_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Fighter.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Fighter"
+  },
+  {
+    "Pool": "skeleton_frost_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Fighter_Patrol.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Fighter_Patrol"
+  },
+  {
+    "Pool": "skeleton_frost_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Fighter_Wander.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Fighter_Wander"
+  },
+  {
+    "Pool": "skeleton_frost_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Knight.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Knight"
+  },
+  {
+    "Pool": "skeleton_frost_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Knight_Patrol.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Knight_Patrol"
+  },
+  {
+    "Pool": "skeleton_frost_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Knight_Wander.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Knight_Wander"
+  },
+  {
+    "Pool": "skeleton_frost_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Mage.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Mage"
+  },
+  {
+    "Pool": "skeleton_frost_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Mage_Patrol.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Mage_Patrol"
+  },
+  {
+    "Pool": "skeleton_frost_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Mage_Wander.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Mage_Wander"
+  },
+  {
+    "Pool": "skeleton_frost_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Ranger.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Ranger"
+  },
+  {
+    "Pool": "skeleton_frost_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Ranger_Patrol.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Ranger_Patrol"
+  },
+  {
+    "Pool": "skeleton_frost_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Ranger_Wander.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Ranger_Wander"
+  },
+  {
+    "Pool": "skeleton_frost_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Scout.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Scout"
+  },
+  {
+    "Pool": "skeleton_frost_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Scout_Patrol.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Scout_Patrol"
+  },
+  {
+    "Pool": "skeleton_frost_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Scout_Wander.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Scout_Wander"
+  },
+  {
+    "Pool": "skeleton_frost_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Soldier.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Soldier"
+  },
+  {
+    "Pool": "skeleton_frost_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Soldier_Patrol.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Soldier_Patrol"
+  },
+  {
+    "Pool": "skeleton_frost_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Soldier_Wander.json",
+    "Family": "Skeletons — Frost",
+    "Role": "Skeleton_Frost_Soldier_Wander"
+  },
+  {
+    "Pool": "skeleton_incandescent_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Fighter.json",
+    "Family": "Skeletons — Incandescent",
+    "Role": "Skeleton_Incandescent_Fighter"
+  },
+  {
+    "Pool": "skeleton_incandescent_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Fighter_Patrol.json",
+    "Family": "Skeletons — Incandescent",
+    "Role": "Skeleton_Incandescent_Fighter_Patrol"
+  },
+  {
+    "Pool": "skeleton_incandescent_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Fighter_Wander.json",
+    "Family": "Skeletons — Incandescent",
+    "Role": "Skeleton_Incandescent_Fighter_Wander"
+  },
+  {
+    "Pool": "skeleton_incandescent_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Footman.json",
+    "Family": "Skeletons — Incandescent",
+    "Role": "Skeleton_Incandescent_Footman"
+  },
+  {
+    "Pool": "skeleton_incandescent_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Footman_Patrol.json",
+    "Family": "Skeletons — Incandescent",
+    "Role": "Skeleton_Incandescent_Footman_Patrol"
+  },
+  {
+    "Pool": "skeleton_incandescent_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Footman_Wander.json",
+    "Family": "Skeletons — Incandescent",
+    "Role": "Skeleton_Incandescent_Footman_Wander"
+  },
+  {
+    "Pool": "skeleton_incandescent_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Mage.json",
+    "Family": "Skeletons — Incandescent",
+    "Role": "Skeleton_Incandescent_Mage"
+  },
+  {
+    "Pool": "skeleton_incandescent_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Mage_Patrol.json",
+    "Family": "Skeletons — Incandescent",
+    "Role": "Skeleton_Incandescent_Mage_Patrol"
+  },
+  {
+    "Pool": "skeleton_incandescent_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Mage_Wander.json",
+    "Family": "Skeletons — Incandescent",
+    "Role": "Skeleton_Incandescent_Mage_Wander"
+  },
+  {
+    "Pool": "skeleton_crypt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Knight.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Knight"
+  },
+  {
+    "Pool": "skeleton_crypt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Knight_Patrol.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Knight_Patrol"
+  },
+  {
+    "Pool": "skeleton_crypt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Knight_Wander.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Knight_Wander"
+  },
+  {
+    "Pool": "skeleton_crypt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Mage.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Mage"
+  },
+  {
+    "Pool": "skeleton_crypt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Mage_Patrol.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Mage_Patrol"
+  },
+  {
+    "Pool": "skeleton_crypt_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Mage_Wander.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Mage_Wander"
+  },
+  {
+    "Pool": "skeleton_pirate_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Captain.json",
+    "Family": "Skeletons — Pirate",
+    "Role": "Skeleton_Pirate_Captain"
+  },
+  {
+    "Pool": "skeleton_pirate_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Captain_Patrol.json",
+    "Family": "Skeletons — Pirate",
+    "Role": "Skeleton_Pirate_Captain_Patrol"
+  },
+  {
+    "Pool": "skeleton_pirate_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Captain_Wander.json",
+    "Family": "Skeletons — Pirate",
+    "Role": "Skeleton_Pirate_Captain_Wander"
+  },
+  {
+    "Pool": "skeleton_pirate_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Gunner.json",
+    "Family": "Skeletons — Pirate",
+    "Role": "Skeleton_Pirate_Gunner"
+  },
+  {
+    "Pool": "skeleton_pirate_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Gunner_Patrol.json",
+    "Family": "Skeletons — Pirate",
+    "Role": "Skeleton_Pirate_Gunner_Patrol"
+  },
+  {
+    "Pool": "skeleton_pirate_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Gunner_Wander.json",
+    "Family": "Skeletons — Pirate",
+    "Role": "Skeleton_Pirate_Gunner_Wander"
+  },
+  {
+    "Pool": "skeleton_pirate_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Striker.json",
+    "Family": "Skeletons — Pirate",
+    "Role": "Skeleton_Pirate_Striker"
+  },
+  {
+    "Pool": "skeleton_pirate_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Striker_Patrol.json",
+    "Family": "Skeletons — Pirate",
+    "Role": "Skeleton_Pirate_Striker_Patrol"
+  },
+  {
+    "Pool": "skeleton_pirate_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Striker_Wander.json",
+    "Family": "Skeletons — Pirate",
+    "Role": "Skeleton_Pirate_Striker_Wander"
+  },
+  {
+    "Pool": "skeleton_crypt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Ranger.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Ranger"
+  },
+  {
+    "Pool": "skeleton_crypt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Ranger_Patrol.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Ranger_Patrol"
+  },
+  {
+    "Pool": "skeleton_crypt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Ranger_Wander.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Ranger_Wander"
+  },
+  {
+    "Pool": "skeleton_sand_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archer.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Archer"
+  },
+  {
+    "Pool": "skeleton_sand_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archer_Patrol.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Archer_Patrol"
+  },
+  {
+    "Pool": "skeleton_sand_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archer_Wander.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Archer_Wander"
+  },
+  {
+    "Pool": "skeleton_sand_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archmage.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Archmage"
+  },
+  {
+    "Pool": "skeleton_sand_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archmage_Patrol.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Archmage_Patrol"
+  },
+  {
+    "Pool": "skeleton_sand_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archmage_Wander.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Archmage_Wander"
+  },
+  {
+    "Pool": "skeleton_sand_skirmisher",
+    "Class": "skirmisher",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Assassin.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Assassin"
+  },
+  {
+    "Pool": "skeleton_sand_skirmisher",
+    "Class": "skirmisher",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Assassin_Patrol.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Assassin_Patrol"
+  },
+  {
+    "Pool": "skeleton_sand_skirmisher",
+    "Class": "skirmisher",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Assassin_Wander.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Assassin_Wander"
+  },
+  {
+    "Pool": "skeleton_sand_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Guard.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Guard"
+  },
+  {
+    "Pool": "skeleton_sand_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Guard_Patrol.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Guard_Patrol"
+  },
+  {
+    "Pool": "skeleton_sand_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Guard_Wander.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Guard_Wander"
+  },
+  {
+    "Pool": "skeleton_sand_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Mage.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Mage"
+  },
+  {
+    "Pool": "skeleton_sand_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Mage_Patrol.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Mage_Patrol"
+  },
+  {
+    "Pool": "skeleton_sand_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Mage_Wander.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Mage_Wander"
+  },
+  {
+    "Pool": "skeleton_sand_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Ranger.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Ranger"
+  },
+  {
+    "Pool": "skeleton_sand_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Ranger_Patrol.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Ranger_Patrol"
+  },
+  {
+    "Pool": "skeleton_sand_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Ranger_Wander.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Ranger_Wander"
+  },
+  {
+    "Pool": "skeleton_sand_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Scout.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Scout"
+  },
+  {
+    "Pool": "skeleton_sand_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Scout_Patrol.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Scout_Patrol"
+  },
+  {
+    "Pool": "skeleton_sand_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Scout_Wander.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Scout_Wander"
+  },
+  {
+    "Pool": "skeleton_sand_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Soldier.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Soldier"
+  },
+  {
+    "Pool": "skeleton_sand_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Soldier_Patrol.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Soldier_Patrol"
+  },
+  {
+    "Pool": "skeleton_sand_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Soldier_Wander.json",
+    "Family": "Skeletons — Sand",
+    "Role": "Skeleton_Sand_Soldier_Wander"
+  },
+  {
+    "Pool": "skeleton_crypt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Scout.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Scout"
+  },
+  {
+    "Pool": "skeleton_crypt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Scout_Patrol.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Scout_Patrol"
+  },
+  {
+    "Pool": "skeleton_crypt_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Scout_Wander.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Scout_Wander"
+  },
+  {
+    "Pool": "skeleton_crypt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Soldier.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Soldier"
+  },
+  {
+    "Pool": "skeleton_crypt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Soldier_Patrol.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Soldier_Patrol"
+  },
+  {
+    "Pool": "skeleton_crypt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Soldier_Wander.json",
+    "Family": "Skeletons — standard",
+    "Role": "Skeleton_Soldier_Wander"
+  },
+  {
+    "Pool": "trork_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Brawler.json",
+    "Family": "Trorks",
+    "Role": "Trork_Brawler"
+  },
+  {
+    "Pool": "trork_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Chieftain.json",
+    "Family": "Trorks",
+    "Role": "Trork_Chieftain"
+  },
+  {
+    "Pool": "trork_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Doctor_Witch.json",
+    "Family": "Trorks",
+    "Role": "Trork_Doctor_Witch"
+  },
+  {
+    "Pool": "trork_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Guard.json",
+    "Family": "Trorks",
+    "Role": "Trork_Guard"
+  },
+  {
+    "Pool": "trork_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Hunter.json",
+    "Family": "Trorks",
+    "Role": "Trork_Hunter"
+  },
+  {
+    "Pool": "trork_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Mauler.json",
+    "Family": "Trorks",
+    "Role": "Trork_Mauler"
+  },
+  {
+    "Pool": "trork_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Sentry.json",
+    "Family": "Trorks",
+    "Role": "Trork_Sentry"
+  },
+  {
+    "Pool": "trork_ranged",
+    "Class": "ranged",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Sentry_Patrol.json",
+    "Family": "Trorks",
+    "Role": "Trork_Sentry_Patrol"
+  },
+  {
+    "Pool": "trork_caster",
+    "Class": "caster",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Shaman.json",
+    "Family": "Trorks",
+    "Role": "Trork_Shaman"
+  },
+  {
+    "Pool": "trork_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Unarmed.json",
+    "Family": "Trorks",
+    "Role": "Trork_Unarmed"
+  },
+  {
+    "Pool": "trork_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Warrior.json",
+    "Family": "Trorks",
+    "Role": "Trork_Warrior"
+  },
+  {
+    "Pool": "trork_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Warrior_Patrol.json",
+    "Family": "Trorks",
+    "Role": "Trork_Warrior_Patrol"
+  },
+  {
+    "Pool": "tuluk_worker",
+    "Class": "worker",
+    "Asset": "Server/NPC/Roles/Intelligent/Neutral/Tuluk/Tuluk_Fisherman.json",
+    "Family": "Tuluk",
+    "Role": "Tuluk_Fisherman"
+  },
+  {
+    "Pool": "zombie_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Zombie/Zombie.json",
+    "Family": "Zombies",
+    "Role": "Zombie"
+  },
+  {
+    "Pool": "zombie_aberrant_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Undead/Zombie/Zombie_Aberrant.json",
+    "Family": "Zombies",
+    "Role": "Zombie_Aberrant"
+  },
+  {
+    "Pool": "zombie_aberrant_elite",
+    "Class": "elite",
+    "Asset": "Server/NPC/Roles/Undead/Zombie/Zombie_Aberrant_Big.json",
+    "Family": "Zombies",
+    "Role": "Zombie_Aberrant_Big"
+  },
+  {
+    "Pool": "zombie_aberrant_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Zombie/Zombie_Aberrant_Small.json",
+    "Family": "Zombies",
+    "Role": "Zombie_Aberrant_Small"
+  },
+  {
+    "Pool": "zombie_burnt_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Zombie/Zombie_Burnt.json",
+    "Family": "Zombies",
+    "Role": "Zombie_Burnt"
+  },
+  {
+    "Pool": "zombie_frost_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Zombie/Zombie_Frost.json",
+    "Family": "Zombies",
+    "Role": "Zombie_Frost"
+  },
+  {
+    "Pool": "zombie_sand_melee",
+    "Class": "melee",
+    "Asset": "Server/NPC/Roles/Undead/Zombie/Zombie_Sand.json",
+    "Family": "Zombies",
+    "Role": "Zombie_Sand"
+  }
+]

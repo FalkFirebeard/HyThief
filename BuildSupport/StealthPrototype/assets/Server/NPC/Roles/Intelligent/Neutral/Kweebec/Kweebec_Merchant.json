@@ -1,0 +1,36 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Kweebec_Merchant",
+  "Parameters": {
+    "Invulnerable": {
+      "Value": false,
+      "Description": "Whether this NPC is invulnerable."
+    },
+    "MemoriesNameOverride": {
+      "Value": "Kweebec_Rootling",
+      "Description": "Overrides the memory name if set"
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Kweebec_Merchant.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "ViewRange": {
+      "Value": 4,
+      "Description": "View range"
+    }
+  },
+  "Modify": {
+    "Invulnerable": {
+      "Compute": "Invulnerable"
+    },
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "ViewRange": {
+      "Compute": "ViewRange"
+    }
+  }
+}

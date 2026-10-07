@@ -1,0 +1,23 @@
+{
+  "Class": "Sensor",
+  "Content": {
+    "$Comment": "Trorks only sleep at night if they're indoors or it's not raining",
+    "Type": "Or",
+    "Sensors": [
+      {
+        "Reference": "HyThiefStealth_Outlander_Priest_C18",
+        "Modify": {}
+      },
+      {
+        "Type": "Not",
+        "Sensor": {
+          "Type": "Weather",
+          "Weathers": [
+            "*Rain*"
+          ]
+        }
+      }
+    ]
+  },
+  "Type": "Component"
+}

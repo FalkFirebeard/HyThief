@@ -1,0 +1,223 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Outlander_Marauder",
+  "Parameters": {
+    "Appearance": {
+      "Value": "Outlander_Marauder",
+      "Description": "Model to be used"
+    },
+    "ViewRange": {
+      "Value": 15,
+      "Description": "View range"
+    },
+    "ViewSector": {
+      "Value": 270,
+      "Description": "View sector"
+    },
+    "HearingRange": {
+      "Value": 4,
+      "Description": "Hearing range"
+    },
+    "AlertedRange": {
+      "Value": 50,
+      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+    },
+    "LeashDistance": {
+      "Value": 30,
+      "Description": "The range after which an NPC will start to want to return to their spawn point"
+    },
+    "LeashMinPlayerDistance": {
+      "Value": 7,
+      "Description": "The minimum distance from the player before the NPC will be willing to give up on the chase"
+    },
+    "LeashTimer": {
+      "Value": [
+        8,
+        8
+      ],
+      "Description": "How long the NPC must be more than the minimum distance form the player and too far from leash before giving up"
+    },
+    "DropList": {
+      "Value": "Drop_Outlander_Marauder",
+      "Description": "Drop Items"
+    },
+    "MaxSpeed": {
+      "Value": 8,
+      "Description": "Maximum walking speed"
+    },
+    "Weapons": {
+      "Value": [
+        "Weapon_Sword_Doomed",
+        "Weapon_Sword_Doomed"
+      ],
+      "Description": "NPC Weapon"
+    },
+    "OffHand": {
+      "Value": [
+        "Weapon_Shield_Doomed"
+      ],
+      "Description": "Off-hand items",
+      "TypeHint": "String"
+    },
+    "DefaultOffHandSlot": {
+      "Value": 0,
+      "Description": "Default off-hand item slot"
+    },
+    "AttackSequence": {
+      "Value": "Component_Instruction_Attack_Sequence_Outlander_Marauder",
+      "Description": "The attack sequence to use in combat"
+    },
+    "AttackDistance": {
+      "Value": 3,
+      "Description": "The distance at which an NPC will execute attacks"
+    },
+    "UnderlingCallFrequency": {
+      "Value": [
+        120,
+        120
+      ],
+      "Description": "How often to call an underling over to kneel"
+    },
+    "TargetGroups": {
+      "Value": [
+        "Outlander"
+      ],
+      "Description": "Beacon target groups"
+    },
+    "ChestBlockSet": {
+      "Value": "Trork_Chest",
+      "Description": "The block set designating chests for this NPC"
+    },
+    "UnderlingGroups": {
+      "Value": [
+        "Outlander_Underlings"
+      ],
+      "Description": "A list of groups to exclude from reputation sensors"
+    },
+    "DisableDamageGroups": {
+      "Value": [
+        "Self",
+        "Outlander"
+      ],
+      "Description": "Groups not to take damage from"
+    },
+    "BackupSpawnMarker": {
+      "Value": "Outlander_Marauder_Backup",
+      "Description": "The spawn marker to trigger to call for backup"
+    },
+    "AttitudeGroup": {
+      "Value": "Outlander",
+      "Description": "Attitude group"
+    },
+    "CombatRelativeTurnSpeed": {
+      "Value": 1.5,
+      "Description": "Modifier that decides turn speed difference in combat"
+    },
+    "MaxHealth": {
+      "Value": 103,
+      "Description": "Max health for the NPC"
+    },
+    "IsMemory": {
+      "Value": true,
+      "Description": "Defines if the NPC is a memory"
+    },
+    "MemoriesCategory": {
+      "Value": "Outlander",
+      "Description": "Defines the category of the memory"
+    },
+    "MemoriesNameOverride": {
+      "Value": "",
+      "Description": "Overrides the memory name if set"
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Outlander_Marauder.name",
+      "Description": "Translation key for NPC name display"
+    }
+  },
+  "Modify": {
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "ViewRange": {
+      "Compute": "ViewRange"
+    },
+    "ViewSector": {
+      "Compute": "ViewSector"
+    },
+    "HearingRange": {
+      "Compute": "HearingRange"
+    },
+    "AlertedRange": {
+      "Compute": "AlertedRange"
+    },
+    "LeashDistance": {
+      "Compute": "LeashDistance"
+    },
+    "LeashMinPlayerDistance": {
+      "Compute": "LeashMinPlayerDistance"
+    },
+    "LeashTimer": {
+      "Compute": "LeashTimer"
+    },
+    "DropList": {
+      "Compute": "DropList"
+    },
+    "MaxSpeed": {
+      "Compute": "MaxSpeed"
+    },
+    "Weapons": {
+      "Compute": "Weapons"
+    },
+    "OffHand": {
+      "Compute": "OffHand"
+    },
+    "DefaultOffHandSlot": {
+      "Compute": "DefaultOffHandSlot"
+    },
+    "AttackSequence": {
+      "Compute": "AttackSequence"
+    },
+    "AttackDistance": {
+      "Compute": "AttackDistance"
+    },
+    "UnderlingCallFrequency": {
+      "Compute": "UnderlingCallFrequency"
+    },
+    "TargetGroups": {
+      "Compute": "TargetGroups"
+    },
+    "ChestBlockSet": {
+      "Compute": "ChestBlockSet"
+    },
+    "UnderlingGroups": {
+      "Compute": "UnderlingGroups"
+    },
+    "DisableDamageGroups": {
+      "Compute": "DisableDamageGroups"
+    },
+    "BackupSpawnMarker": {
+      "Compute": "BackupSpawnMarker"
+    },
+    "AttitudeGroup": {
+      "Compute": "AttitudeGroup"
+    },
+    "CombatRelativeTurnSpeed": {
+      "Compute": "CombatRelativeTurnSpeed"
+    },
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
+    "IsMemory": {
+      "Compute": "IsMemory"
+    },
+    "MemoriesCategory": {
+      "Compute": "MemoriesCategory"
+    },
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  }
+}

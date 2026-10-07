@@ -1,0 +1,239 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Outlander_Peon",
+  "Parameters": {
+    "Appearance": {
+      "Value": "Outlander_Peon",
+      "Description": "Model to be used"
+    },
+    "IdleMotionComponent": {
+      "Value": "$Null",
+      "Description": "The component that controls how the NPC moves during idle state"
+    },
+    "ViewRange": {
+      "Value": 15,
+      "Description": "View range"
+    },
+    "ViewSector": {
+      "Value": 270,
+      "Description": "View sector"
+    },
+    "HearingRange": {
+      "Value": 4,
+      "Description": "Hearing range"
+    },
+    "AlertedRange": {
+      "Value": 50,
+      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+    },
+    "LeashDistance": {
+      "Value": 30,
+      "Description": "The range after which an NPC will start to want to return to their spawn point"
+    },
+    "LeashMinPlayerDistance": {
+      "Value": 7,
+      "Description": "The minimum distance from the player before the NPC will be willing to give up on the chase"
+    },
+    "LeashTimer": {
+      "Value": [
+        8,
+        8
+      ],
+      "Description": "How long the NPC must be more than the minimum distance form the player and too far from leash before giving up"
+    },
+    "HardLeashDistance": {
+      "Value": 160,
+      "Description": "An absolute maximum from the the leash position the NPC can go before turning back"
+    },
+    "DropList": {
+      "Value": "Drop_Outlander_Peon",
+      "Description": "Drop Items"
+    },
+    "MaxSpeed": {
+      "Value": 8,
+      "Description": "Maximum walking speed"
+    },
+    "RelativeChaseSpeed": {
+      "Value": 0.8,
+      "Description": "Relative chase speed"
+    },
+    "Weapons": {
+      "Value": [
+        "Tool_Pickaxe_Cobalt"
+      ],
+      "Description": "NPC Weapon"
+    },
+    "AttackSequence": {
+      "Value": "Component_Instruction_Attack_Sequence_Outlander_Peon",
+      "Description": "The attack sequence to use in combat"
+    },
+    "AttackDistance": {
+      "Value": 2.5,
+      "Description": "The distance at which an NPC will execute attacks"
+    },
+    "SparBeginMessage": {
+      "Value": "TrorkSparBegin",
+      "Description": "The message to send when requesting sparring"
+    },
+    "TargetGroups": {
+      "Value": [
+        "Outlander"
+      ],
+      "Description": "Beacon target groups"
+    },
+    "ChestBlockSet": {
+      "Value": "Trork_Chest",
+      "Description": "The block set designating chests for this NPC"
+    },
+    "BedBlockSet": {
+      "Value": "Trork_Bedroll",
+      "Description": "The block set designating bedrolls for this NPC"
+    },
+    "CampfireBlockSet": {
+      "Value": "Trork_Campfire",
+      "Description": "The block set designating campfires for this NPC"
+    },
+    "SparTargetGroups": {
+      "Value": [
+        "Outlander_Spar"
+      ],
+      "Description": "Groups to spar with"
+    },
+    "UnderlingGroups": {
+      "Value": [
+        "Outlander_Underlings"
+      ],
+      "Description": "A list of groups to exclude from reputation sensors"
+    },
+    "DisableDamageGroups": {
+      "Value": [
+        "Self",
+        "Outlander"
+      ],
+      "Description": "Groups not to take damage from"
+    },
+    "AttitudeGroup": {
+      "Value": "Outlander",
+      "Description": "Attitude group"
+    },
+    "CombatRelativeTurnSpeed": {
+      "Value": 1.5,
+      "Description": "Modifier that decides turn speed difference in combat"
+    },
+    "MaxHealth": {
+      "Value": 81,
+      "Description": "Max health for the NPC"
+    },
+    "IsMemory": {
+      "Value": true,
+      "Description": "Defines if the NPC is a memory"
+    },
+    "MemoriesCategory": {
+      "Value": "Outlander",
+      "Description": "Defines the category of the memory"
+    },
+    "MemoriesNameOverride": {
+      "Value": "",
+      "Description": "Overrides the memory name if set"
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Outlander_Peon.name",
+      "Description": "Translation key for NPC name display"
+    }
+  },
+  "Modify": {
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "IdleMotionComponent": {
+      "Compute": "IdleMotionComponent"
+    },
+    "ViewRange": {
+      "Compute": "ViewRange"
+    },
+    "ViewSector": {
+      "Compute": "ViewSector"
+    },
+    "HearingRange": {
+      "Compute": "HearingRange"
+    },
+    "AlertedRange": {
+      "Compute": "AlertedRange"
+    },
+    "LeashDistance": {
+      "Compute": "LeashDistance"
+    },
+    "LeashMinPlayerDistance": {
+      "Compute": "LeashMinPlayerDistance"
+    },
+    "LeashTimer": {
+      "Compute": "LeashTimer"
+    },
+    "HardLeashDistance": {
+      "Compute": "HardLeashDistance"
+    },
+    "DropList": {
+      "Compute": "DropList"
+    },
+    "MaxSpeed": {
+      "Compute": "MaxSpeed"
+    },
+    "RelativeChaseSpeed": {
+      "Compute": "RelativeChaseSpeed"
+    },
+    "Weapons": {
+      "Compute": "Weapons"
+    },
+    "AttackSequence": {
+      "Compute": "AttackSequence"
+    },
+    "AttackDistance": {
+      "Compute": "AttackDistance"
+    },
+    "SparBeginMessage": {
+      "Compute": "SparBeginMessage"
+    },
+    "TargetGroups": {
+      "Compute": "TargetGroups"
+    },
+    "ChestBlockSet": {
+      "Compute": "ChestBlockSet"
+    },
+    "BedBlockSet": {
+      "Compute": "BedBlockSet"
+    },
+    "CampfireBlockSet": {
+      "Compute": "CampfireBlockSet"
+    },
+    "SparTargetGroups": {
+      "Compute": "SparTargetGroups"
+    },
+    "UnderlingGroups": {
+      "Compute": "UnderlingGroups"
+    },
+    "DisableDamageGroups": {
+      "Compute": "DisableDamageGroups"
+    },
+    "AttitudeGroup": {
+      "Compute": "AttitudeGroup"
+    },
+    "CombatRelativeTurnSpeed": {
+      "Compute": "CombatRelativeTurnSpeed"
+    },
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
+    "IsMemory": {
+      "Compute": "IsMemory"
+    },
+    "MemoriesCategory": {
+      "Compute": "MemoriesCategory"
+    },
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  }
+}

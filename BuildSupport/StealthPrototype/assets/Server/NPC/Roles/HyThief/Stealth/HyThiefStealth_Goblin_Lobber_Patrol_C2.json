@@ -1,0 +1,173 @@
+{
+  "Class": "Instruction",
+  "Parameters": {
+    "_ImportStates": [
+      "Alerted",
+      "Chase",
+      "Search",
+      "Panic"
+    ],
+    "ViewRange": {
+      "Value": 15,
+      "Description": "View range"
+    },
+    "ViewSector": {
+      "Value": 180,
+      "Description": "View sector"
+    },
+    "HearingRange": {
+      "Value": 8,
+      "Description": "Hearing range"
+    },
+    "SmellRange": {
+      "Value": 8,
+      "Description": "Smell range"
+    },
+    "AlertedRange": {
+      "Value": 30,
+      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+    },
+    "CanSee": {
+      "Value": true,
+      "Description": "Whether the NPC can currently see"
+    },
+    "CanHear": {
+      "Value": true,
+      "Description": "Whether the NPC can hear"
+    },
+    "CanSmell": {
+      "Value": false,
+      "Description": "Whether the NPC can smell"
+    },
+    "IgnoreLockedTarget": {
+      "Value": false,
+      "Description": "Whether to ignore the current locked target"
+    }
+  },
+  "Content": {
+    "TreeMode": true,
+    "Instructions": [
+      {
+        "Reference": "HyThiefStealth_Goblin_Lobber_Patrol_C3",
+        "Modify": {
+          "_ExportStates": [
+            "Chase",
+            "Search"
+          ],
+          "AlertedRange": {
+            "Compute": "AlertedRange"
+          }
+        }
+      },
+      {
+        "Sensor": {
+          "Type": "Beacon",
+          "Message": "GoblinAlert",
+          "Range": 20,
+          "TargetSlot": "LockedTarget"
+        },
+        "Actions": [
+          {
+            "Type": "ParentState",
+            "State": "Alerted"
+          }
+        ]
+      },
+      {
+        "Sensor": {
+          "Type": "Beacon",
+          "Message": "LobberJuggleFail",
+          "Range": 8
+        },
+        "Actions": [
+          {
+            "Type": "ParentState",
+            "State": "Panic"
+          }
+        ]
+      },
+      {
+        "Sensor": {
+          "Type": "Or",
+          "Sensors": [
+            {
+              "Reference": "HyThiefStealth_Goblin_Lobber_Patrol_C4",
+              "Modify": {
+                "ViewRange": 2,
+                "ViewSector": 360,
+                "IgnoreLockedTarget": {
+                  "Compute": "IgnoreLockedTarget"
+                },
+                "Attitudes": [
+                  "Hostile"
+                ]
+              }
+            },
+            {
+              "Reference": "HyThiefStealth_Goblin_Lobber_Patrol_C5",
+              "Modify": {
+                "SmellRange": {
+                  "Compute": "SmellRange"
+                },
+                "Enabled": {
+                  "Compute": "CanSmell"
+                },
+                "IgnoreLockedTarget": {
+                  "Compute": "IgnoreLockedTarget"
+                },
+                "Attitudes": [
+                  "Hostile"
+                ]
+              }
+            },
+            {
+              "Reference": "HyThiefStealth_Goblin_Lobber_Patrol_C6",
+              "Modify": {
+                "ViewRange": {
+                  "Compute": "ViewRange"
+                },
+                "ViewSector": {
+                  "Compute": "ViewSector"
+                },
+                "Enabled": {
+                  "Compute": "CanSee"
+                },
+                "IgnoreLockedTarget": {
+                  "Compute": "IgnoreLockedTarget"
+                },
+                "Attitudes": [
+                  "Hostile"
+                ]
+              }
+            },
+            {
+              "Reference": "HyThiefStealth_Goblin_Lobber_Patrol_C7",
+              "Modify": {
+                "HearingRange": {
+                  "Compute": "HearingRange"
+                },
+                "ThroughWalls": false,
+                "Enabled": {
+                  "Compute": "CanHear"
+                },
+                "IgnoreLockedTarget": {
+                  "Compute": "IgnoreLockedTarget"
+                },
+                "Attitudes": [
+                  "Hostile"
+                ]
+              }
+            }
+          ]
+        },
+        "Actions": [
+          {
+            "Type": "ParentState",
+            "State": "Alerted"
+          }
+        ]
+      }
+    ]
+  },
+  "Type": "Component"
+}

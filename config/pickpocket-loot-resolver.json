@@ -1,0 +1,460 @@
+{
+  "version": 1,
+  "notes": [
+    "Resolver maps role groups and role-name patterns to weighted loot tables.",
+    "Zone should be resolved from world/biome data first, with race defaults only as fallback.",
+    "Groups already excluded in the role map remain non-pickpocketable here."
+  ],
+  "zoneResolution": {
+    "sourcePriority": [
+      "rpg_leveling_zone",
+      "levelingcore_zone_mapping",
+      "vanilla_zone_context",
+      "race_default"
+    ],
+    "raceDefaultZones": {
+      "Kweebec": [
+        "zone1",
+        "zone3"
+      ],
+      "Bramblekin": [
+        "zone1"
+      ],
+      "Feran": [
+        "zone2"
+      ],
+      "Tuluk": [
+        "zone1"
+      ],
+      "Klops": [
+        "zone1"
+      ],
+      "Goblin": [
+        "zone1"
+      ],
+      "Outlander": [
+        "zone3"
+      ],
+      "Trork": [
+        "zone1",
+        "zone3"
+      ],
+      "Hedera": [
+        "zone1"
+      ],
+      "Undead": [
+        "zone1",
+        "zone2",
+        "zone3",
+        "zone4"
+      ]
+    }
+  },
+  "blockedGroups": [
+    "neutral_youth",
+    "neutral_special",
+    "passive_special",
+    "aggressive_beast",
+    "aggressive_edible"
+  ],
+  "blockedRoles": [
+    "Scarak_Broodmother",
+    "Scarak_Defender",
+    "Scarak_Defender_Patrol",
+    "Scarak_Fighter",
+    "Scarak_Fighter_Patrol",
+    "Scarak_Fighter_Royal_Guard",
+    "Scarak_Louse",
+    "Scarak_Seeker",
+    "Scarak_Seeker_Patrol",
+    "Wolf_Trork_Hunter",
+    "Wolf_Trork_Shaman",
+    "Wolf_Outlander_Priest",
+    "Wolf_Outlander_Sorcerer"
+  ],
+  "groupAssignments": {
+    "neutral_merchant": {
+      "table": "kweebec_merchant",
+      "classProfile": "merchant",
+      "race": "Kweebec"
+    },
+    "neutral_worker": {
+      "byRole": {
+        "Tuluk_Fisherman": {
+          "table": "tuluk_worker",
+          "classProfile": "worker",
+          "race": "Tuluk"
+        }
+      }
+    },
+    "neutral_civilian": {
+      "byPrefix": {
+        "Bramblekin": {
+          "table": "bramblekin_civilian",
+          "classProfile": "civilian",
+          "race": "Bramblekin"
+        },
+        "Feran_": {
+          "table": "feran_civilian",
+          "classProfile": "civilian",
+          "race": "Feran"
+        },
+        "Kweebec_": {
+          "table": "kweebec_civilian",
+          "classProfile": "civilian",
+          "race": "Kweebec"
+        }
+      }
+    },
+    "neutral_guardian": {
+      "byPrefix": {
+        "Feran_": {
+          "table": "feran_guardian",
+          "classProfile": "guardian",
+          "race": "Feran"
+        },
+        "Kweebec_": {
+          "table": "kweebec_guardian",
+          "classProfile": "guardian",
+          "race": "Kweebec"
+        }
+      }
+    },
+    "neutral_mystic": {
+      "byPrefix": {
+        "Bramblekin": {
+          "table": "bramblekin_mystic",
+          "classProfile": "mystic",
+          "race": "Bramblekin"
+        },
+        "Feran_": {
+          "table": "feran_mystic",
+          "classProfile": "mystic",
+          "race": "Feran"
+        }
+      }
+    },
+    "passive_merchant": {
+      "table": "klops_merchant",
+      "classProfile": "merchant",
+      "race": "Klops"
+    },
+    "passive_worker": {
+      "table": "klops_worker",
+      "classProfile": "worker",
+      "race": "Klops"
+    },
+    "passive_civilian": {
+      "table": "klops_civilian",
+      "classProfile": "civilian",
+      "race": "Klops"
+    },
+    "aggressive_elite": {
+      "byPrefix": {
+        "Goblin_Duke": {
+          "table": "goblin_elite",
+          "classProfile": "elite",
+          "race": "Goblin"
+        },
+        "Trork_": {
+          "table": "trork_elite",
+          "classProfile": "elite",
+          "race": "Trork"
+        }
+      }
+    },
+    "aggressive_melee": {
+      "byRole": {
+        "Hedera": {
+          "table": "hedera_melee",
+          "classProfile": "melee",
+          "race": "Hedera"
+        }
+      },
+      "byPrefix": {
+        "Goblin_": {
+          "table": "goblin_melee",
+          "classProfile": "melee",
+          "race": "Goblin"
+        },
+        "Outlander_": {
+          "table": "outlander_melee",
+          "classProfile": "melee",
+          "race": "Outlander"
+        },
+        "Trork_": {
+          "table": "trork_melee",
+          "classProfile": "melee",
+          "race": "Trork"
+        }
+      }
+    },
+    "aggressive_skirmisher": {
+      "byPrefix": {
+        "Goblin_": {
+          "table": "goblin_skirmisher",
+          "classProfile": "skirmisher",
+          "race": "Goblin"
+        },
+        "Outlander_": {
+          "table": "outlander_skirmisher",
+          "classProfile": "skirmisher",
+          "race": "Outlander"
+        }
+      }
+    },
+    "aggressive_ranged": {
+      "byPrefix": {
+        "Goblin_": {
+          "table": "goblin_ranged",
+          "classProfile": "ranged",
+          "race": "Goblin"
+        },
+        "Outlander_": {
+          "table": "outlander_ranged",
+          "classProfile": "ranged",
+          "race": "Outlander"
+        },
+        "Trork_": {
+          "table": "trork_ranged",
+          "classProfile": "ranged",
+          "race": "Trork"
+        },
+        "Wolf_Trork_": {
+          "table": "trork_ranged",
+          "classProfile": "ranged",
+          "race": "Trork"
+        }
+      }
+    },
+    "aggressive_caster": {
+      "byPrefix": {
+        "Goblin_": {
+          "table": "goblin_caster",
+          "classProfile": "caster",
+          "race": "Goblin"
+        },
+        "Outlander_": {
+          "table": "outlander_caster",
+          "classProfile": "caster",
+          "race": "Outlander"
+        },
+        "Wolf_Outlander_": {
+          "table": "outlander_caster",
+          "classProfile": "caster",
+          "race": "Outlander"
+        },
+        "Trork_": {
+          "table": "trork_caster",
+          "classProfile": "caster",
+          "race": "Trork"
+        },
+        "Wolf_Trork_": {
+          "table": "trork_caster",
+          "classProfile": "caster",
+          "race": "Trork"
+        }
+      }
+    },
+    "aggressive_worker": {
+      "byPrefix": {
+        "Goblin_": {
+          "table": "goblin_worker",
+          "classProfile": "worker",
+          "race": "Goblin"
+        },
+        "Outlander_": {
+          "table": "outlander_worker",
+          "classProfile": "worker",
+          "race": "Outlander"
+        }
+      }
+    },
+    "undead_skeleton_melee": {
+      "byRole": {
+        "Dungeon_Skeleton_Sand_Soldier": {
+          "table": "skeleton_sand_dungeon_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        }
+      },
+      "byPrefix": {
+        "Skeleton_Burnt_": {
+          "table": "skeleton_burnt_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        },
+        "Skeleton_Frost_": {
+          "table": "skeleton_frost_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        },
+        "Skeleton_Incandescent_": {
+          "table": "skeleton_incandescent_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        },
+        "Skeleton_Pirate_": {
+          "table": "skeleton_pirate_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        },
+        "Skeleton_Sand_": {
+          "table": "skeleton_sand_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        },
+        "Skeleton_": {
+          "table": "skeleton_crypt_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        }
+      }
+    },
+    "undead_skeleton_ranged": {
+      "byRole": {
+        "Dungeon_Skeleton_Sand_Archer": {
+          "table": "skeleton_sand_dungeon_ranged",
+          "classProfile": "ranged",
+          "race": "Undead"
+        }
+      },
+      "byPrefix": {
+        "Skeleton_Burnt_": {
+          "table": "skeleton_burnt_ranged",
+          "classProfile": "ranged",
+          "race": "Undead"
+        },
+        "Skeleton_Frost_": {
+          "table": "skeleton_frost_ranged",
+          "classProfile": "ranged",
+          "race": "Undead"
+        },
+        "Skeleton_Pirate_": {
+          "table": "skeleton_pirate_ranged",
+          "classProfile": "ranged",
+          "race": "Undead"
+        },
+        "Skeleton_Sand_": {
+          "table": "skeleton_sand_ranged",
+          "classProfile": "ranged",
+          "race": "Undead"
+        },
+        "Skeleton_": {
+          "table": "skeleton_crypt_ranged",
+          "classProfile": "ranged",
+          "race": "Undead"
+        }
+      }
+    },
+    "undead_skeleton_caster": {
+      "byRole": {
+        "Dungeon_Skeleton_Sand_Mage": {
+          "table": "skeleton_sand_dungeon_caster",
+          "classProfile": "caster",
+          "race": "Undead"
+        }
+      },
+      "byPrefix": {
+        "Skeleton_Burnt_": {
+          "table": "skeleton_burnt_caster",
+          "classProfile": "caster",
+          "race": "Undead"
+        },
+        "Skeleton_Frost_": {
+          "table": "skeleton_frost_caster",
+          "classProfile": "caster",
+          "race": "Undead"
+        },
+        "Skeleton_Incandescent_": {
+          "table": "skeleton_incandescent_caster",
+          "classProfile": "caster",
+          "race": "Undead"
+        },
+        "Skeleton_Sand_": {
+          "table": "skeleton_sand_caster",
+          "classProfile": "caster",
+          "race": "Undead"
+        },
+        "Skeleton_": {
+          "table": "skeleton_crypt_caster",
+          "classProfile": "caster",
+          "race": "Undead"
+        }
+      }
+    },
+    "undead_skeleton_skirmisher": {
+      "byRole": {
+        "Dungeon_Skeleton_Sand_Assassin": {
+          "table": "skeleton_sand_dungeon_skirmisher",
+          "classProfile": "skirmisher",
+          "race": "Undead"
+        }
+      },
+      "byPrefix": {
+        "Skeleton_Sand_": {
+          "table": "skeleton_sand_skirmisher",
+          "classProfile": "skirmisher",
+          "race": "Undead"
+        }
+      }
+    },
+    "undead_skeleton_elite": {
+      "byPrefix": {
+        "Skeleton_Burnt_": {
+          "table": "skeleton_burnt_elite",
+          "classProfile": "elite",
+          "race": "Undead"
+        },
+        "Skeleton_Pirate_": {
+          "table": "skeleton_pirate_elite",
+          "classProfile": "elite",
+          "race": "Undead"
+        }
+      }
+    },
+    "undead_zombie_melee": {
+      "byRole": {
+        "Zombie": {
+          "table": "zombie_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        },
+        "Zombie_Burnt": {
+          "table": "zombie_burnt_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        },
+        "Zombie_Frost": {
+          "table": "zombie_frost_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        },
+        "Zombie_Sand": {
+          "table": "zombie_sand_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        },
+        "Zombie_Aberrant_Small": {
+          "table": "zombie_aberrant_melee",
+          "classProfile": "melee",
+          "race": "Undead"
+        }
+      }
+    },
+    "undead_zombie_elite": {
+      "byRole": {
+        "Zombie_Aberrant": {
+          "table": "zombie_aberrant_elite",
+          "classProfile": "elite",
+          "race": "Undead"
+        },
+        "Zombie_Aberrant_Big": {
+          "table": "zombie_aberrant_elite",
+          "classProfile": "elite",
+          "race": "Undead"
+        }
+      }
+    }
+  }
+}

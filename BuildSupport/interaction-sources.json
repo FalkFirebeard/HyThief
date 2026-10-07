@@ -1,0 +1,826 @@
+{
+  "Skeleton_Burnt_Alchemist": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Alchemist.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Alchemist.json"
+  },
+  "Kweebec_Rootling": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Rootling.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Rootling.json"
+  },
+  "Trork_Hunter": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Hunter.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Hunter.json"
+  },
+  "Tuluk_Fisherman": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Tuluk/Tuluk_Fisherman.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Tuluk/Tuluk_Fisherman.json"
+  },
+  "Skeleton_Incandescent_Mage": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Mage.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Mage.json"
+  },
+  "Template_Feran_Civilian": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Feran/Templates/Template_Feran_Civilian.json",
+    "Source": "BuildSupport/NativeRoles/Template_Feran_Civilian.json"
+  },
+  "Skeleton_Mage_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Mage_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Mage_Wander.json"
+  },
+  "Dungeon_Skeleton_Sand_Archer": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Archer.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Archer.json"
+  },
+  "Skeleton_Mage_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Mage_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Mage_Patrol.json"
+  },
+  "Skeleton_Pirate_Striker_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Striker_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Pirate_Striker_Wander.json"
+  },
+  "Skeleton_Frost_Archmage_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archmage_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Archmage_Patrol.json"
+  },
+  "Skeleton_Soldier": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Soldier.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Soldier.json"
+  },
+  "Skeleton_Burnt_Soldier_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Soldier_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Soldier_Wander.json"
+  },
+  "Skeleton_Knight_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Knight_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Knight_Patrol.json"
+  },
+  "Skeleton_Burnt_Lancer_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Lancer_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Lancer_Patrol.json"
+  },
+  "Outlander_Hunter": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Hunter.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Hunter.json"
+  },
+  "Skeleton_Archer_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archer_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Archer_Wander.json"
+  },
+  "Trork_Sentry_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Sentry_Patrol.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Sentry_Patrol.json"
+  },
+  "Skeleton_Frost_Archer_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archer_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Archer_Patrol.json"
+  },
+  "Skeleton_Frost_Soldier": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Soldier.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Soldier.json"
+  },
+  "Skeleton_Ranger_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Ranger_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Ranger_Patrol.json"
+  },
+  "Zombie_Aberrant": {
+    "AssetPath": "Server/NPC/Roles/Undead/Zombie/Zombie_Aberrant.json",
+    "Source": "Server/NPC/Roles/Undead/Zombie/Zombie_Aberrant.json"
+  },
+  "Goblin_Ogre": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Ogre.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Ogre.json"
+  },
+  "Skeleton_Sand_Archmage_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archmage_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Archmage_Wander.json"
+  },
+  "Skeleton_Sand_Mage_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Mage_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Mage_Wander.json"
+  },
+  "Klops_Merchant_Wandering": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Passive/Klops_Merchant_Wandering.json",
+    "Source": "Server/NPC/Roles/Intelligent/Passive/Klops_Merchant_Wandering.json"
+  },
+  "Klops_Gentleman": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Passive/Klops_Gentleman.json",
+    "Source": "Server/NPC/Roles/Intelligent/Passive/Klops_Gentleman.json"
+  },
+  "Skeleton_Frost_Archmage_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archmage_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Archmage_Wander.json"
+  },
+  "Skeleton_Archmage_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archmage_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Archmage_Wander.json"
+  },
+  "Skeleton_Frost_Knight_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Knight_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Knight_Wander.json"
+  },
+  "Template_Goblin_Lobber": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Lobber.json",
+    "Source": "BuildSupport/NativeRoles/Template_Goblin_Lobber.json"
+  },
+  "Skeleton_Incandescent_Mage_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Mage_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Incandescent_Mage_Patrol.json"
+  },
+  "Skeleton_Burnt_Wizard_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Wizard_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Wizard_Patrol.json"
+  },
+  "Template_Goblin_Duke_Phase_3": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Duke_Phase_3.json",
+    "Source": "BuildSupport/NativeRoles/Template_Goblin_Duke_Phase_3.json"
+  },
+  "Skeleton_Frost_Soldier_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Soldier_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Soldier_Wander.json"
+  },
+  "Template_Feran_Sharptooth": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Feran/Templates/Template_Feran_Sharptooth.json",
+    "Source": "BuildSupport/NativeRoles/Template_Feran_Sharptooth.json"
+  },
+  "Template_Feran_Windwalker": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Feran/Templates/Template_Feran_Windwalker.json",
+    "Source": "BuildSupport/NativeRoles/Template_Feran_Windwalker.json"
+  },
+  "Skeleton_Sand_Soldier": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Soldier.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Soldier.json"
+  },
+  "Skeleton_Frost_Scout_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Scout_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Scout_Wander.json"
+  },
+  "Skeleton_Sand_Archmage": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archmage.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archmage.json"
+  },
+  "Outlander_Priest": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Priest.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Priest.json"
+  },
+  "Skeleton_Burnt_Praetorian_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Praetorian_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Praetorian_Patrol.json"
+  },
+  "Template_Intelligent": {
+    "AssetPath": "Server/NPC/Roles/_Core/Templates/Template_Intelligent.json",
+    "Source": "BuildSupport/NativeRoles/Template_Intelligent.json"
+  },
+  "Zombie_Aberrant_Small": {
+    "AssetPath": "Server/NPC/Roles/Undead/Zombie/Zombie_Aberrant_Small.json",
+    "Source": "Server/NPC/Roles/Undead/Zombie/Zombie_Aberrant_Small.json"
+  },
+  "Skeleton_Burnt_Wizard_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Wizard_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Wizard_Wander.json"
+  },
+  "Skeleton_Frost_Archer_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archer_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Archer_Wander.json"
+  },
+  "Outlander_Stalker": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Stalker.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Stalker.json"
+  },
+  "Skeleton_Sand_Archer_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archer_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Archer_Patrol.json"
+  },
+  "Skeleton_Pirate_Captain_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Captain_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Pirate_Captain_Patrol.json"
+  },
+  "Skeleton_Burnt_Praetorian": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Praetorian.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Praetorian.json"
+  },
+  "Skeleton_Sand_Ranger": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Ranger.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Ranger.json"
+  },
+  "Skeleton_Sand_Soldier_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Soldier_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Soldier_Wander.json"
+  },
+  "Skeleton_Burnt_Knight_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Knight_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Knight_Wander.json"
+  },
+  "Skeleton_Frost_Archmage": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archmage.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archmage.json"
+  },
+  "Skeleton_Frost_Mage_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Mage_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Mage_Patrol.json"
+  },
+  "Skeleton_Pirate_Captain_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Captain_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Pirate_Captain_Wander.json"
+  },
+  "Template_Predator": {
+    "AssetPath": "Server/NPC/Roles/_Core/Templates/Template_Predator.json",
+    "Source": "BuildSupport/NativeRoles/Template_Predator.json"
+  },
+  "Kweebec_Merchant": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Merchant.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Merchant.json"
+  },
+  "Skeleton_Sand_Scout_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Scout_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Scout_Patrol.json"
+  },
+  "Template_Goblin_Thief": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Thief.json",
+    "Source": "BuildSupport/NativeRoles/Template_Goblin_Thief.json"
+  },
+  "Skeleton_Incandescent_Mage_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Mage_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Incandescent_Mage_Wander.json"
+  },
+  "Template_Trork_Melee": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Templates/Template_Trork_Melee.json",
+    "Source": "BuildSupport/NativeRoles/Template_Trork_Melee.json"
+  },
+  "Skeleton_Frost_Fighter": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Fighter.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Fighter.json"
+  },
+  "Trork_Sentry": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Sentry.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Sentry.json"
+  },
+  "Skeleton_Incandescent_Footman": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Footman.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Footman.json"
+  },
+  "Skeleton_Burnt_Soldier_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Soldier_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Soldier_Patrol.json"
+  },
+  "Template_Feran_Burrower": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Feran/Templates/Template_Feran_Burrower.json",
+    "Source": "BuildSupport/NativeRoles/Template_Feran_Burrower.json"
+  },
+  "Feran_Windwalker": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Windwalker.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Windwalker.json"
+  },
+  "Trork_Doctor_Witch": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Doctor_Witch.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Doctor_Witch.json"
+  },
+  "Bramblekin_Shaman": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Bramblekin_Shaman.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Bramblekin_Shaman.json"
+  },
+  "Skeleton_Frost_Knight_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Knight_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Knight_Patrol.json"
+  },
+  "Template_Goblin_Scrapper": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Scrapper.json",
+    "Source": "BuildSupport/NativeRoles/Template_Goblin_Scrapper.json"
+  },
+  "Skeleton_Sand_Mage_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Mage_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Mage_Patrol.json"
+  },
+  "Goblin_Hermit": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Hermit.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Hermit.json"
+  },
+  "Skeleton_Frost_Ranger_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Ranger_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Ranger_Patrol.json"
+  },
+  "Skeleton_Incandescent_Fighter_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Fighter_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Incandescent_Fighter_Wander.json"
+  },
+  "Skeleton_Burnt_Knight_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Knight_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Knight_Patrol.json"
+  },
+  "Trork_Mauler": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Mauler.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Mauler.json"
+  },
+  "Skeleton_Ranger": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Ranger.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Ranger.json"
+  },
+  "Goblin_Thief_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Thief_Patrol.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Thief_Patrol.json"
+  },
+  "Zombie_Burnt": {
+    "AssetPath": "Server/NPC/Roles/Undead/Zombie/Zombie_Burnt.json",
+    "Source": "Server/NPC/Roles/Undead/Zombie/Zombie_Burnt.json"
+  },
+  "Goblin_Duke": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke.json"
+  },
+  "Zombie_Frost": {
+    "AssetPath": "Server/NPC/Roles/Undead/Zombie/Zombie_Frost.json",
+    "Source": "Server/NPC/Roles/Undead/Zombie/Zombie_Frost.json"
+  },
+  "Goblin_Duke_Phase_3_Fast": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke_Phase_3_Fast.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke_Phase_3_Fast.json"
+  },
+  "Skeleton_Frost_Scout": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Scout.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Scout.json"
+  },
+  "Trork_Unarmed": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Unarmed.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Unarmed.json"
+  },
+  "Skeleton_Archer_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archer_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Archer_Patrol.json"
+  },
+  "Skeleton_Sand_Scout": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Scout.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Scout.json"
+  },
+  "Skeleton_Sand_Guard": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Guard.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Guard.json"
+  },
+  "Skeleton_Burnt_Praetorian_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Praetorian_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Praetorian_Wander.json"
+  },
+  "Skeleton_Sand_Archmage_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archmage_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Archmage_Patrol.json"
+  },
+  "Zombie_Sand": {
+    "AssetPath": "Server/NPC/Roles/Undead/Zombie/Zombie_Sand.json",
+    "Source": "Server/NPC/Roles/Undead/Zombie/Zombie_Sand.json"
+  },
+  "Skeleton_Archmage_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archmage_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Archmage_Patrol.json"
+  },
+  "Outlander_Sorcerer": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Sorcerer.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Sorcerer.json"
+  },
+  "Zombie_Aberrant_Big": {
+    "AssetPath": "Server/NPC/Roles/Undead/Zombie/Zombie_Aberrant_Big.json",
+    "Source": "Server/NPC/Roles/Undead/Zombie/Zombie_Aberrant_Big.json"
+  },
+  "Dungeon_Skeleton_Sand_Assassin": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Assassin.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Assassin.json"
+  },
+  "Skeleton_Burnt_Gunner_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Gunner_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Gunner_Wander.json"
+  },
+  "Goblin_Miner_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Miner_Patrol.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Miner_Patrol.json"
+  },
+  "Skeleton_Archer": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archer.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archer.json"
+  },
+  "Feran_Burrower": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Burrower.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Burrower.json"
+  },
+  "Hedera": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Hedera.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Hedera.json"
+  },
+  "Trork_Warrior_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Warrior_Patrol.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Warrior_Patrol.json"
+  },
+  "Skeleton_Burnt_Alchemist_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Alchemist_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Alchemist_Wander.json"
+  },
+  "Bramblekin": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Bramblekin.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Bramblekin.json"
+  },
+  "Skeleton_Burnt_Archer_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Archer_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Archer_Patrol.json"
+  },
+  "Skeleton_Knight": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Knight.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Knight.json"
+  },
+  "Outlander_Cultist": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Cultist.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Cultist.json"
+  },
+  "Skeleton_Incandescent_Footman_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Footman_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Incandescent_Footman_Patrol.json"
+  },
+  "Outlander_Peon": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Peon.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Peon.json"
+  },
+  "Kweebec_Sapling_Pink": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Sapling_Pink.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Sapling_Pink.json"
+  },
+  "Outlander_Berserker": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Berserker.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Berserker.json"
+  },
+  "Feran_Sharptooth": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Sharptooth.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Sharptooth.json"
+  },
+  "Skeleton_Sand_Ranger_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Ranger_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Ranger_Patrol.json"
+  },
+  "Skeleton_Burnt_Gunner": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Gunner.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Gunner.json"
+  },
+  "Skeleton_Frost_Archer": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archer.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Archer.json"
+  },
+  "Skeleton_Frost_Knight": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Knight.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Knight.json"
+  },
+  "Skeleton_Archmage": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archmage.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Archmage.json"
+  },
+  "Template_Goblin_Duke_Phase_2": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Duke_Phase_2.json",
+    "Source": "BuildSupport/NativeRoles/Template_Goblin_Duke_Phase_2.json"
+  },
+  "Kweebec_Razorleaf": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Razorleaf.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Razorleaf.json"
+  },
+  "Skeleton_Fighter_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Fighter_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Fighter_Wander.json"
+  },
+  "Skeleton_Pirate_Gunner_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Gunner_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Pirate_Gunner_Patrol.json"
+  },
+  "Skeleton_Frost_Ranger_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Ranger_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Ranger_Wander.json"
+  },
+  "Skeleton_Sand_Archer": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archer.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archer.json"
+  },
+  "Outlander_Marauder": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Marauder.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Marauder.json"
+  },
+  "Skeleton_Frost_Mage": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Mage.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Mage.json"
+  },
+  "Skeleton_Mage": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Mage.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Mage.json"
+  },
+  "Goblin_Lobber": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Lobber.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Lobber.json"
+  },
+  "Skeleton_Scout_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Scout_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Scout_Patrol.json"
+  },
+  "Klops_Merchant": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Passive/Klops_Merchant.json",
+    "Source": "Server/NPC/Roles/Intelligent/Passive/Klops_Merchant.json"
+  },
+  "Template_Kweebec_Razorleaf": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Templates/Template_Kweebec_Razorleaf.json",
+    "Source": "BuildSupport/NativeRoles/Template_Kweebec_Razorleaf.json"
+  },
+  "Goblin_Lobber_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Lobber_Patrol.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Lobber_Patrol.json"
+  },
+  "Kweebec_Razorleaf_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Razorleaf_Patrol.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Razorleaf_Patrol.json"
+  },
+  "Skeleton_Ranger_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Ranger_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Ranger_Wander.json"
+  },
+  "Dungeon_Skeleton_Sand_Soldier": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Soldier.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Soldier.json"
+  },
+  "Template_Goblin_Ogre": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Ogre.json",
+    "Source": "BuildSupport/NativeRoles/Template_Goblin_Ogre.json"
+  },
+  "Skeleton_Scout_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Scout_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Scout_Wander.json"
+  },
+  "Template_Goblin_Scavenger": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Scavenger.json",
+    "Source": "BuildSupport/NativeRoles/Template_Goblin_Scavenger.json"
+  },
+  "Goblin_Duke_Phase_2": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke_Phase_2.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke_Phase_2.json"
+  },
+  "Klops_Miner": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Passive/Klops_Miner.json",
+    "Source": "Server/NPC/Roles/Intelligent/Passive/Klops_Miner.json"
+  },
+  "Skeleton_Frost_Ranger": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Ranger.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Ranger.json"
+  },
+  "Skeleton_Fighter": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Fighter.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Fighter.json"
+  },
+  "Outlander_Brute": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Brute.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Outlander/Outlander_Brute.json"
+  },
+  "Skeleton_Frost_Fighter_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Fighter_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Fighter_Wander.json"
+  },
+  "Trork_Chieftain": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Chieftain.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Chieftain.json"
+  },
+  "Skeleton_Frost_Scout_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Scout_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Scout_Patrol.json"
+  },
+  "Skeleton_Sand_Soldier_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Soldier_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Soldier_Patrol.json"
+  },
+  "Goblin_Scrapper_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scrapper_Patrol.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scrapper_Patrol.json"
+  },
+  "Skeleton_Burnt_Knight": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Knight.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Knight.json"
+  },
+  "Skeleton_Pirate_Captain": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Captain.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Captain.json"
+  },
+  "Skeleton_Pirate_Striker_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Striker_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Pirate_Striker_Patrol.json"
+  },
+  "Skeleton_Incandescent_Fighter_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Fighter_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Incandescent_Fighter_Patrol.json"
+  },
+  "Trork_Shaman": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Shaman.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Shaman.json"
+  },
+  "Skeleton_Soldier_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Soldier_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Soldier_Wander.json"
+  },
+  "Trork_Guard": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Guard.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Guard.json"
+  },
+  "Feran_Longtooth": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Longtooth.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Longtooth.json"
+  },
+  "Skeleton_Sand_Archer_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Archer_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Archer_Wander.json"
+  },
+  "Skeleton_Incandescent_Footman_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Footman_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Incandescent_Footman_Wander.json"
+  },
+  "Skeleton_Burnt_Gunner_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Gunner_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Gunner_Patrol.json"
+  },
+  "Skeleton_Fighter_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Fighter_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Fighter_Patrol.json"
+  },
+  "Trork_Brawler": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Brawler.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Brawler.json"
+  },
+  "Goblin_Thief": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Thief.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Thief.json"
+  },
+  "Skeleton_Burnt_Lancer": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Lancer.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Lancer.json"
+  },
+  "Skeleton_Scout": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Scout.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Scout.json"
+  },
+  "Skeleton_Pirate_Gunner_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Gunner_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Pirate_Gunner_Wander.json"
+  },
+  "Template_Trork_Mage": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Templates/Template_Trork_Mage.json",
+    "Source": "BuildSupport/NativeRoles/Template_Trork_Mage.json"
+  },
+  "Skeleton_Sand_Guard_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Guard_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Guard_Patrol.json"
+  },
+  "Template_Goblin_Miner": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Templates/Template_Goblin_Miner.json",
+    "Source": "BuildSupport/NativeRoles/Template_Goblin_Miner.json"
+  },
+  "Kweebec_Sapling": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Sapling.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Sapling.json"
+  },
+  "Skeleton_Burnt_Alchemist_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Alchemist_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Alchemist_Patrol.json"
+  },
+  "Skeleton_Incandescent_Fighter": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Fighter.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Incandescent/Skeleton_Incandescent_Fighter.json"
+  },
+  "Skeleton_Burnt_Lancer_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Lancer_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Lancer_Wander.json"
+  },
+  "Skeleton_Soldier_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Soldier_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Soldier_Patrol.json"
+  },
+  "Zombie": {
+    "AssetPath": "Server/NPC/Roles/Undead/Zombie/Zombie.json",
+    "Source": "Server/NPC/Roles/Undead/Zombie/Zombie.json"
+  },
+  "Template_Kweebec_Sapling": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Templates/Template_Kweebec_Sapling.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Templates/Template_Kweebec_Sapling.json"
+  },
+  "Skeleton_Sand_Guard_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Guard_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Guard_Wander.json"
+  },
+  "Skeleton_Frost_Soldier_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Soldier_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Soldier_Patrol.json"
+  },
+  "Skeleton_Sand_Scout_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Scout_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Scout_Wander.json"
+  },
+  "Skeleton_Pirate_Striker": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Striker.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Striker.json"
+  },
+  "Goblin_Duke_Phase_3_Slow": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke_Phase_3_Slow.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Duke_Phase_3_Slow.json"
+  },
+  "Trork_Warrior": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Warrior.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Trork_Warrior.json"
+  },
+  "Feran_Civilian": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Civilian.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Feran/Feran_Civilian.json"
+  },
+  "Skeleton_Sand_Ranger_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Ranger_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Ranger_Wander.json"
+  },
+  "Klops_Miner_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Passive/Klops_Miner_Patrol.json",
+    "Source": "Server/NPC/Roles/Intelligent/Passive/Klops_Miner_Patrol.json"
+  },
+  "Skeleton_Sand_Assassin_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Assassin_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Assassin_Patrol.json"
+  },
+  "Skeleton_Pirate_Gunner": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Gunner.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Pirate/Skeleton_Pirate_Gunner.json"
+  },
+  "Goblin_Scavenger_Sword": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scavenger_Sword.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scavenger_Sword.json"
+  },
+  "Goblin_Scavenger_Battleaxe": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scavenger_Battleaxe.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scavenger_Battleaxe.json"
+  },
+  "Template_Trork_Ranger": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Templates/Template_Trork_Ranger.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Templates/Template_Trork_Ranger.json"
+  },
+  "Skeleton_Frost_Mage_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Mage_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Mage_Wander.json"
+  },
+  "Skeleton_Sand_Mage": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Mage.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Mage.json"
+  },
+  "Template_Trork_Hybrid": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Templates/Template_Trork_Hybrid.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Templates/Template_Trork_Hybrid.json"
+  },
+  "Skeleton_Sand_Assassin": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Assassin.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Assassin.json"
+  },
+  "Dungeon_Skeleton_Sand_Mage": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Mage.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Dungeon/Dungeon_Skeleton_Sand_Mage.json"
+  },
+  "Skeleton_Knight_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Knight_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Knight_Wander.json"
+  },
+  "Kweebec_Sapling_Orange": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Sapling_Orange.json",
+    "Source": "Server/NPC/Roles/Intelligent/Neutral/Kweebec/Kweebec_Sapling_Orange.json"
+  },
+  "Skeleton_Burnt_Archer_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Archer_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Burnt_Archer_Wander.json"
+  },
+  "Goblin_Scavenger": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scavenger.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scavenger.json"
+  },
+  "Skeleton_Burnt_Wizard": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Wizard.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Wizard.json"
+  },
+  "Klops_Merchant_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Passive/Klops_Merchant_Patrol.json",
+    "Source": "Server/NPC/Roles/Intelligent/Passive/Klops_Merchant_Patrol.json"
+  },
+  "Goblin_Miner": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Miner.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Miner.json"
+  },
+  "Template_Trork_Chieftain": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Trork/Templates/Template_Trork_Chieftain.json",
+    "Source": "BuildSupport/NativeRoles/Template_Trork_Chieftain.json"
+  },
+  "Skeleton_Burnt_Archer": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Archer.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Archer.json"
+  },
+  "Goblin_Scrapper": {
+    "AssetPath": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scrapper.json",
+    "Source": "Server/NPC/Roles/Intelligent/Aggressive/Goblin/Goblin_Scrapper.json"
+  },
+  "Skeleton_Burnt_Soldier": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Soldier.json",
+    "Source": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Burnt/Skeleton_Burnt_Soldier.json"
+  },
+  "Skeleton_Frost_Fighter_Patrol": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Frost/Skeleton_Frost_Fighter_Patrol.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Frost_Fighter_Patrol.json"
+  },
+  "Skeleton_Sand_Assassin_Wander": {
+    "AssetPath": "Server/NPC/Roles/Undead/Skeleton/Skeleton_Sand/Skeleton_Sand_Assassin_Wander.json",
+    "Source": "BuildSupport/NativeRoles/Skeleton_Sand_Assassin_Wander.json"
+  }
+}

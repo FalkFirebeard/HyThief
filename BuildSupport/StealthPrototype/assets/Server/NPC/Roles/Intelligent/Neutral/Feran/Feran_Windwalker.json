@@ -1,0 +1,133 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Feran_Windwalker",
+  "Parameters": {
+    "Appearance": {
+      "Value": "Feran_Windwalker",
+      "Description": "Model to be used"
+    },
+    "WanderRadius": {
+      "Value": 15,
+      "Description": "General wander radius"
+    },
+    "SmellRange": {
+      "Value": 20,
+      "Description": "Smell range"
+    },
+    "AlertedRange": {
+      "Value": 30,
+      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+    },
+    "DropList": {
+      "Value": "Drop_Feran_Windwalker",
+      "Description": "Drop Items"
+    },
+    "MaxSpeed": {
+      "Value": 10,
+      "Description": "Maximum walking speed"
+    },
+    "AttitudeGroup": {
+      "Value": "Feran",
+      "Description": "This NPCs attitude group"
+    },
+    "Weapons": {
+      "Value": [
+        "Weapon_Staff_Bone"
+      ],
+      "TypeHint": "String",
+      "Description": "NPC Weapons"
+    },
+    "AttackSequence": {
+      "Value": "Component_Instruction_Attack_Sequence_Feran_Windwalker",
+      "Description": "The attack sequence to use in combat"
+    },
+    "AttackDistance": {
+      "Value": 10,
+      "Description": "The distance at which an NPC will execute ranged attacks"
+    },
+    "DesiredAttackDistanceRange": {
+      "Value": [
+        5,
+        10
+      ],
+      "Description": "Desired attack distance range"
+    },
+    "CombatRelativeTurnSpeed": {
+      "Value": 1.5,
+      "Description": "Modifier that decides turn speed difference in combat"
+    },
+    "MaxHealth": {
+      "Value": 61,
+      "Description": "Max health for the NPC"
+    },
+    "IsMemory": {
+      "Value": true,
+      "Description": "Defines if the NPC is a memory"
+    },
+    "MemoriesCategory": {
+      "Value": "Feran",
+      "Description": "Defines the category of the memory"
+    },
+    "MemoriesNameOverride": {
+      "Value": "",
+      "Description": "Overrides the memory name if set"
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Feran_Windwalker.name",
+      "Description": "Translation key for NPC name display"
+    }
+  },
+  "Modify": {
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "WanderRadius": {
+      "Compute": "WanderRadius"
+    },
+    "SmellRange": {
+      "Compute": "SmellRange"
+    },
+    "AlertedRange": {
+      "Compute": "AlertedRange"
+    },
+    "DropList": {
+      "Compute": "DropList"
+    },
+    "MaxSpeed": {
+      "Compute": "MaxSpeed"
+    },
+    "AttitudeGroup": {
+      "Compute": "AttitudeGroup"
+    },
+    "Weapons": {
+      "Compute": "Weapons"
+    },
+    "AttackSequence": {
+      "Compute": "AttackSequence"
+    },
+    "AttackDistance": {
+      "Compute": "AttackDistance"
+    },
+    "DesiredAttackDistanceRange": {
+      "Compute": "DesiredAttackDistanceRange"
+    },
+    "CombatRelativeTurnSpeed": {
+      "Compute": "CombatRelativeTurnSpeed"
+    },
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
+    "IsMemory": {
+      "Compute": "IsMemory"
+    },
+    "MemoriesCategory": {
+      "Compute": "MemoriesCategory"
+    },
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  }
+}

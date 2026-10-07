@@ -1,0 +1,15 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Klops_Merchant",
+  "Parameters": {
+    "Invulnerable": {
+      "Value": false,
+      "Description": "Whether this NPC is invulnerable."
+    }
+  },
+  "Modify": {
+    "Invulnerable": {
+      "Compute": "Invulnerable"
+    }
+  }
+}

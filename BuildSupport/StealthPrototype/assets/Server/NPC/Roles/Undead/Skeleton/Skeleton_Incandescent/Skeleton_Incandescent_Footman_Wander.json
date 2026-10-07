@@ -1,0 +1,600 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Skeleton_Incandescent_Footman_Wander",
+  "Parameters": {
+    "Appearance": {
+      "Value": "Skeleton_Incandescent_Footman",
+      "Description": "Model to be used."
+    },
+    "ApplySeparation": {
+      "Value": true,
+      "Description": "When set to false, NPCs wont try to avoid each other or player, it can lead to them stacking together, but can help to avoid jerky-like movemenet in enclosed space."
+    },
+    "WanderRadius": {
+      "Value": 7,
+      "Description": "General wander radius for idle wander and wander on the break."
+    },
+    "ViewRange": {
+      "Value": 4,
+      "Description": "The range from which the target will be seen. If zero, sight will be disabled."
+    },
+    "ViewSector": {
+      "Value": 270,
+      "Description": "The view sector within which the target needs to be to be seen."
+    },
+    "HearingRange": {
+      "Value": 8,
+      "Description": "The range from which the target will be heard. If zero, hearing will be disabled."
+    },
+    "AbsoluteDetectionRange": {
+      "Value": 2,
+      "Description": "The range at which a target is guaranteed to be detected. If zero, abosulte detection will be disabled."
+    },
+    "ChanceToBeAlertedWhenReceivingCallForHelp": {
+      "Value": 70,
+      "Description": "Percentage chance to engage in combat if another intelligent NPC engages a target."
+    },
+    "AlertedRange": {
+      "Value": 45,
+      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence. Should be equal or lower than LeashDistance."
+    },
+    "AlertedTime": {
+      "Value": [
+        1,
+        2
+      ],
+      "Description": "How long to wait in an alerted state before switching to active combat."
+    },
+    "DropList": {
+      "Value": "Drop_Skeleton_Incandescent_Footman",
+      "Description": "Drop Items"
+    },
+    "MaxSpeed": {
+      "Value": 10,
+      "Description": "Maximum walking speed"
+    },
+    "RunThreshold": {
+      "Value": 0.3,
+      "Description": "Relative speed at which run animation should be used. A value of 1 disables run animations"
+    },
+    "WakingIdleBehaviorComponent": {
+      "Value": "Component_Instruction_Waking_Idle",
+      "Description": "The component used for waking idle behavior."
+    },
+    "DayFlavorAnimation": {
+      "Value": "",
+      "Description": "A flavor animation to play during the day. Ignored if null or empty."
+    },
+    "DayFlavorAnimationLength": {
+      "Value": [
+        3,
+        5
+      ],
+      "Description": "How long to play the daytime flavor animation."
+    },
+    "Patrol": {
+      "Value": true,
+      "Description": "Whether or not this NPC will patrol during its waking hours, either alone or as part of a group."
+    },
+    "PatrolPathName": {
+      "Value": "",
+      "TypeHint": "String",
+      "Description": "The specific name of the patrol path to follow. If left empty will follow any patrol path."
+    },
+    "FollowPatrolPath": {
+      "Value": false,
+      "Description": "Whether this NPC will follow patrol paths at all."
+    },
+    "PatrolWanderDistance": {
+      "Value": 25,
+      "Description": "How far to wander when patrolling and not following a path before taking a break."
+    },
+    "Weapons": {
+      "Value": [
+        "Weapon_Spear_Double_Incandescent"
+      ],
+      "Description": "NPC Weapons (and other main hand items)."
+    },
+    "DefaultHotbarSlot": {
+      "Value": 0,
+      "Description": "Default hotbar slot to equip (i.e. weapon)."
+    },
+    "RandomIdleHotbarSlot": {
+      "Value": -1,
+      "Description": "A hotbar slot that will randomly be held during idle behavior. -1 to disable."
+    },
+    "ChanceToEquipFromIdleHotbarSlot": {
+      "Value": 5,
+      "Description": "Between 0 and 100, a chance to equip the item during idle behavior INSTEAD of wander or any other idle behavior. TODO: make it a continue? prevent it from hitting 100 all the time?"
+    },
+    "OffHand": {
+      "Value": [
+        "Furniture_Crude_Torch"
+      ],
+      "Description": "Off-hand items.",
+      "TypeHint": "String"
+    },
+    "DefaultOffHandSlot": {
+      "Value": -1,
+      "Description": "Default off-hand item slot. -1 for nothing."
+    },
+    "NighttimeOffhandSlot": {
+      "Value": 0,
+      "Description": "OffHand slot to set during night. -1 for nothing."
+    },
+    "WakingPeriod": {
+      "Value": [
+        0,
+        24
+      ],
+      "Description": "The hour range this NPC is awake for. Can be the full daytime for things that don't sleep."
+    },
+    "BedBlockSet": {
+      "Value": "Trork_Bedroll",
+      "Description": "The block set designating bedrolls for this NPC. If empty, will sleep anywhere."
+    },
+    "LeashDistance": {
+      "Value": 45,
+      "Description": "The range after which an NPC will start to want to return to their spawn point."
+    },
+    "LeashMinPlayerDistance": {
+      "Value": 4,
+      "Description": "The minimum distance from the player before the NPC will be willing to give up on the chase."
+    },
+    "LeashTimer": {
+      "Value": [
+        3,
+        5
+      ],
+      "Description": "How long the NPC must be more than the minimum distance form the player and too far from leash before giving up."
+    },
+    "HardLeashDistance": {
+      "Value": 200,
+      "Description": "An absolute maximum from the the leash position the NPC can go before turning back."
+    },
+    "CombatMessageTargetGroups": {
+      "Value": [
+        "Skeleton"
+      ],
+      "TypeHint": "String",
+      "Description": "Which NPC type groups to alert when entering combat."
+    },
+    "InvestigateRange": {
+      "Value": 40,
+      "Description": "Range within which an NPC is willing to investigate reports of an attack or other event."
+    },
+    "UseCombatActionEvaluator": {
+      "Value": false,
+      "Description": "Whether to use the Combat Action Evaluator via an accompanying CombatConfig. This completely replaces all other combat behavior but still uses movement properties such as strafe durations and move speeds."
+    },
+    "Attack": {
+      "Value": "Root_NPC_Skeleton_Incandescent_Footman_Attack",
+      "Description": "The attack to use."
+    },
+    "AttackDistance": {
+      "Value": 3,
+      "Description": "The distance at which an NPC will execute attacks"
+    },
+    "DesiredAttackDistanceRange": {
+      "Value": [
+        2,
+        2.5
+      ],
+      "Description": "The distance within which the NPC wants to be from its target while attacking. The max value should be lower than AttackDistance."
+    },
+    "AttackPauseRange": {
+      "Value": [
+        1.5,
+        2
+      ],
+      "Description": "The range for absolute minimum time before an NPC can execute a second attack (or block)."
+    },
+    "CombatRelativeTurnSpeed": {
+      "Value": 1.5,
+      "Description": "Modifier that decides turn speed difference in combat."
+    },
+    "CombatBehaviorDistance": {
+      "Value": 5,
+      "Description": "The distance within which to switch from smart chasing to combat-oriented movement behavior."
+    },
+    "CombatDirectWeight": {
+      "Value": 10,
+      "Description": "Weight for the direct combat movement behavior (i.e. just going straight at the target, maintaining a close distance and attacking. Set to 0 to disable."
+    },
+    "CombatAlwaysMovingWeight": {
+      "Value": 0,
+      "Description": "Weight for the combat movement behavior where the NPC will always charge at you while attacking. Set to 0 to disable."
+    },
+    "CombatStrafeWeight": {
+      "Value": 10,
+      "Description": "Weight for the combat strafing movement behavior. Set to 0 to disable."
+    },
+    "CombatStrafingDurationRange": {
+      "Value": [
+        1,
+        1
+      ],
+      "Description": "How long to strafe for when in the combat strafing movement behavior. Only applies if CombatStrafeWeight is greater than 0."
+    },
+    "CombatStrafingFrequencyRange": {
+      "Value": [
+        2,
+        2
+      ],
+      "Description": "How frequently to strafe when in the combat strafing movement behavior. Only applies if CombatStrafeWeight is greater than 0."
+    },
+    "CombatAttackPreDelay": {
+      "Value": [
+        0.2,
+        0.2
+      ],
+      "Description": "The time delay range before the NPC performs an attack, provided it's in attack range."
+    },
+    "CombatAttackPostDelay": {
+      "Value": [
+        0.2,
+        0.2
+      ],
+      "Description": "The time delay range after the NPC performs an attack, provided it's in attack range."
+    },
+    "CombatBackOffAfterAttack": {
+      "Value": true,
+      "Description": "Whether to back off after performing an attack."
+    },
+    "CombatBackOffDistanceRange": {
+      "Value": [
+        4,
+        4
+      ],
+      "Description": "How far to back off after performing an attack. Max should be lower than the CombatBehaviorDistance."
+    },
+    "CombatBackOffDurationRange": {
+      "Value": [
+        2,
+        3
+      ],
+      "Description": "How long to back off for after performing an attack."
+    },
+    "BlockAbility": {
+      "Value": "Shield_Block",
+      "Description": "The interaction to use for blocking when backing away. Set to empty to disable blocking."
+    },
+    "BlockProbability": {
+      "Value": 50,
+      "Description": "The probability this NPC will block when backing away if a BlockAbility is set."
+    },
+    "CombatFleeIfTooCloseDistance": {
+      "Value": 0,
+      "Description": "In combat, if the target gets within this distance for a certain amount of time, the NPC will attempt to flee to a safe distance instead of simply backing away. Set to 0 to disable behavior."
+    },
+    "AdditionalCombatBehaviorMacroElement": {
+      "Value": "Component_Instruction_Null",
+      "Description": "An optional macro element for supplying more bespoke combat movement behavior. Weight for the behavior must be internally defined in the macro element."
+    },
+    "TargetSwitchTimer": {
+      "Value": [
+        1,
+        3
+      ],
+      "Description": "Minimum time the NPC will be locked onto a single target before switching"
+    },
+    "TargetRange": {
+      "Value": 2,
+      "Description": "The distance the target needs to be within to maintain priority over other targets while in combat"
+    },
+    "ChaseRelativeSpeed": {
+      "Value": 0.67,
+      "Description": "Relative chasing speed when pursuing a target."
+    },
+    "CombatMovingRelativeSpeed": {
+      "Value": 0.6,
+      "Description": "Relative speed to use during combat specific movement (e.g. to achieve slower strafing)."
+    },
+    "CombatBackwardsRelativeSpeed": {
+      "Value": 0.3,
+      "Description": "Relative speed to use during combat when backing away from target."
+    },
+    "AttitudeGroup": {
+      "Value": "Empty",
+      "Description": "This NPC's attitude group."
+    },
+    "DefaultPlayerAttitude": {
+      "Value": "Hostile",
+      "Description": "Default attitude towards players."
+    },
+    "FlockArray": {
+      "Value": [
+        "Skeleton_Incandescent_Footman_Wander",
+        "Skeleton_Incandescent_Mage_Wander"
+      ],
+      "TypeHint": "String",
+      "Description": "Array containing NPCs for this flock type."
+    },
+    "DisableDamageGroups": {
+      "Value": [
+        "Self"
+      ],
+      "Description": "Groups not to take damage from."
+    },
+    "MaxHealth": {
+      "Value": 103,
+      "Description": "Max health for the NPC."
+    },
+    "ConfusedTimeRange": {
+      "Value": [
+        1,
+        2
+      ],
+      "Description": "How long the NPC should act confused for when losing its target before beginning the search. While confused the NPC detection range is lowered."
+    },
+    "SearchTimeRange": {
+      "Value": [
+        10,
+        14
+      ],
+      "Description": "How long the NPC should actively search for its lost target before giving up and going back to idle."
+    },
+    "DeathParticles": {
+      "Value": "Effect_Death_Medium",
+      "Description": "The particle system that spawns when the NPC's corpse disappears."
+    },
+    "DropDeathItemsInstantly": {
+      "Value": false,
+      "Description": "Whether the NPC's drop list should be executed when the NPC dies. If set to false, items drop when the corpse disappears."
+    },
+    "DeathAnimationTime": {
+      "Value": 1.5,
+      "Description": "The time it takes for this NPC's corpse to disappear."
+    },
+    "IsMemory": {
+      "Value": true,
+      "Description": "Defines if the NPC is a memory"
+    },
+    "MemoriesCategory": {
+      "Value": "Undead",
+      "Description": "Defines the category of the memory"
+    },
+    "MemoriesNameOverride": {
+      "Value": "Skeleton_Incandescent_Footman",
+      "Description": "Overrides the memory name if set"
+    },
+    "BreathesInWater": {
+      "Value": true,
+      "Description": "Whether this NPC can breathe underwater."
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Skeleton_Incandescent_Footman.name",
+      "Description": "Translation key for NPC name display"
+    }
+  },
+  "Modify": {
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "ApplySeparation": {
+      "Compute": "ApplySeparation"
+    },
+    "WanderRadius": {
+      "Compute": "WanderRadius"
+    },
+    "ViewRange": {
+      "Compute": "ViewRange"
+    },
+    "ViewSector": {
+      "Compute": "ViewSector"
+    },
+    "HearingRange": {
+      "Compute": "HearingRange"
+    },
+    "AbsoluteDetectionRange": {
+      "Compute": "AbsoluteDetectionRange"
+    },
+    "ChanceToBeAlertedWhenReceivingCallForHelp": {
+      "Compute": "ChanceToBeAlertedWhenReceivingCallForHelp"
+    },
+    "AlertedRange": {
+      "Compute": "AlertedRange"
+    },
+    "AlertedTime": {
+      "Compute": "AlertedTime"
+    },
+    "DropList": {
+      "Compute": "DropList"
+    },
+    "MaxSpeed": {
+      "Compute": "MaxSpeed"
+    },
+    "RunThreshold": {
+      "Compute": "RunThreshold"
+    },
+    "WakingIdleBehaviorComponent": {
+      "Compute": "WakingIdleBehaviorComponent"
+    },
+    "DayFlavorAnimation": {
+      "Compute": "DayFlavorAnimation"
+    },
+    "DayFlavorAnimationLength": {
+      "Compute": "DayFlavorAnimationLength"
+    },
+    "Patrol": {
+      "Compute": "Patrol"
+    },
+    "PatrolPathName": {
+      "Compute": "PatrolPathName"
+    },
+    "FollowPatrolPath": {
+      "Compute": "FollowPatrolPath"
+    },
+    "PatrolWanderDistance": {
+      "Compute": "PatrolWanderDistance"
+    },
+    "Weapons": {
+      "Compute": "Weapons"
+    },
+    "DefaultHotbarSlot": {
+      "Compute": "DefaultHotbarSlot"
+    },
+    "RandomIdleHotbarSlot": {
+      "Compute": "RandomIdleHotbarSlot"
+    },
+    "ChanceToEquipFromIdleHotbarSlot": {
+      "Compute": "ChanceToEquipFromIdleHotbarSlot"
+    },
+    "OffHand": {
+      "Compute": "OffHand"
+    },
+    "DefaultOffHandSlot": {
+      "Compute": "DefaultOffHandSlot"
+    },
+    "NighttimeOffhandSlot": {
+      "Compute": "NighttimeOffhandSlot"
+    },
+    "WakingPeriod": {
+      "Compute": "WakingPeriod"
+    },
+    "BedBlockSet": {
+      "Compute": "BedBlockSet"
+    },
+    "LeashDistance": {
+      "Compute": "LeashDistance"
+    },
+    "LeashMinPlayerDistance": {
+      "Compute": "LeashMinPlayerDistance"
+    },
+    "LeashTimer": {
+      "Compute": "LeashTimer"
+    },
+    "HardLeashDistance": {
+      "Compute": "HardLeashDistance"
+    },
+    "CombatMessageTargetGroups": {
+      "Compute": "CombatMessageTargetGroups"
+    },
+    "InvestigateRange": {
+      "Compute": "InvestigateRange"
+    },
+    "UseCombatActionEvaluator": {
+      "Compute": "UseCombatActionEvaluator"
+    },
+    "Attack": {
+      "Compute": "Attack"
+    },
+    "AttackDistance": {
+      "Compute": "AttackDistance"
+    },
+    "DesiredAttackDistanceRange": {
+      "Compute": "DesiredAttackDistanceRange"
+    },
+    "AttackPauseRange": {
+      "Compute": "AttackPauseRange"
+    },
+    "CombatRelativeTurnSpeed": {
+      "Compute": "CombatRelativeTurnSpeed"
+    },
+    "CombatBehaviorDistance": {
+      "Compute": "CombatBehaviorDistance"
+    },
+    "CombatDirectWeight": {
+      "Compute": "CombatDirectWeight"
+    },
+    "CombatAlwaysMovingWeight": {
+      "Compute": "CombatAlwaysMovingWeight"
+    },
+    "CombatStrafeWeight": {
+      "Compute": "CombatStrafeWeight"
+    },
+    "CombatStrafingDurationRange": {
+      "Compute": "CombatStrafingDurationRange"
+    },
+    "CombatStrafingFrequencyRange": {
+      "Compute": "CombatStrafingFrequencyRange"
+    },
+    "CombatAttackPreDelay": {
+      "Compute": "CombatAttackPreDelay"
+    },
+    "CombatAttackPostDelay": {
+      "Compute": "CombatAttackPostDelay"
+    },
+    "CombatBackOffAfterAttack": {
+      "Compute": "CombatBackOffAfterAttack"
+    },
+    "CombatBackOffDistanceRange": {
+      "Compute": "CombatBackOffDistanceRange"
+    },
+    "CombatBackOffDurationRange": {
+      "Compute": "CombatBackOffDurationRange"
+    },
+    "BlockAbility": {
+      "Compute": "BlockAbility"
+    },
+    "BlockProbability": {
+      "Compute": "BlockProbability"
+    },
+    "CombatFleeIfTooCloseDistance": {
+      "Compute": "CombatFleeIfTooCloseDistance"
+    },
+    "AdditionalCombatBehaviorMacroElement": {
+      "Compute": "AdditionalCombatBehaviorMacroElement"
+    },
+    "TargetSwitchTimer": {
+      "Compute": "TargetSwitchTimer"
+    },
+    "TargetRange": {
+      "Compute": "TargetRange"
+    },
+    "ChaseRelativeSpeed": {
+      "Compute": "ChaseRelativeSpeed"
+    },
+    "CombatMovingRelativeSpeed": {
+      "Compute": "CombatMovingRelativeSpeed"
+    },
+    "CombatBackwardsRelativeSpeed": {
+      "Compute": "CombatBackwardsRelativeSpeed"
+    },
+    "AttitudeGroup": {
+      "Compute": "AttitudeGroup"
+    },
+    "DefaultPlayerAttitude": {
+      "Compute": "DefaultPlayerAttitude"
+    },
+    "FlockArray": {
+      "Compute": "FlockArray"
+    },
+    "DisableDamageGroups": {
+      "Compute": "DisableDamageGroups"
+    },
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
+    "ConfusedTimeRange": {
+      "Compute": "ConfusedTimeRange"
+    },
+    "SearchTimeRange": {
+      "Compute": "SearchTimeRange"
+    },
+    "DeathParticles": {
+      "Compute": "DeathParticles"
+    },
+    "DropDeathItemsInstantly": {
+      "Compute": "DropDeathItemsInstantly"
+    },
+    "DeathAnimationTime": {
+      "Compute": "DeathAnimationTime"
+    },
+    "IsMemory": {
+      "Compute": "IsMemory"
+    },
+    "MemoriesCategory": {
+      "Compute": "MemoriesCategory"
+    },
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
+    "BreathesInWater": {
+      "Compute": "BreathesInWater"
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  }
+}

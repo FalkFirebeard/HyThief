@@ -1,0 +1,46 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Predator",
+  "Modify": {
+    "Appearance": "Zombie",
+    "DropList": "Drop_Zombie",
+    "DisableDamageGroups": [
+      "Zombie"
+    ],
+    "MaxHealth": 49,
+    "ViewRange": 4,
+    "HearingRange": 8,
+    "WanderRadius": 6,
+    "MaxSpeed": 9,
+    "Attack": "Root_NPC_Zombie_Melee",
+    "AttackDistance": 2,
+    "CombatStrafeWeight": 0,
+    "CombatBackOffAfterAttack": false,
+    "AlwaysSleepAtNight": false,
+    "IsMemory": true,
+    "MemoriesCategory": "Undead",
+    "_InteractionVars": {
+      "Melee_Damage": {
+        "Interactions": [
+          {
+            "Parent": "NPC_Attack_Melee_Damage",
+            "DamageCalculator": {
+              "BaseDamage": {
+                "Physical": 18
+              }
+            }
+          }
+        ]
+      }
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Zombie.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

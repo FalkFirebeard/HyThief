@@ -1,0 +1,11 @@
+/.gradle/
+/build/
+/.build/
+/DevTesting/
+/Backup Versions/
+/com/
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+/Docs/*
+!/Docs/BUILD_ENVIRONMENT_RELEASE.md
+!/Docs/RELEASE_1.3.0.md

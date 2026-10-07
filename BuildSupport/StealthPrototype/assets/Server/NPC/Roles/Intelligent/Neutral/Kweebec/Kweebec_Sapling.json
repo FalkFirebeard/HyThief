@@ -1,0 +1,162 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Kweebec_Sapling",
+  "Parameters": {
+    "Appearance": {
+      "Value": "Kweebec_Sapling",
+      "Description": "Model to be used"
+    },
+    "WanderRadius": {
+      "Value": 15,
+      "Description": "General wander radius"
+    },
+    "ViewRange": {
+      "Value": 4,
+      "Description": "View range"
+    },
+    "ViewSector": {
+      "Value": 180,
+      "Description": "View sector"
+    },
+    "HearingRange": {
+      "Value": 10,
+      "Description": "Hearing range"
+    },
+    "AlertedRange": {
+      "Value": 30,
+      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+    },
+    "GreetRange": {
+      "Value": 6,
+      "Description": "The range at which Kweebecs will greet nearby (non-hostile) targets"
+    },
+    "WatchRange": {
+      "Value": 3,
+      "Description": "The range at which Kweebecs will look at nearby (non-hostile) targets"
+    },
+    "DropList": {
+      "Value": "Drop_Kweebec_Sapling",
+      "Description": "Drop Items"
+    },
+    "MaxSpeed": {
+      "Value": 5,
+      "Description": "Maximum walking speed"
+    },
+    "AttitudeGroup": {
+      "Value": "Kweebec",
+      "Description": "This NPCs attitude group"
+    },
+    "Weapons": {
+      "Value": [],
+      "TypeHint": "String",
+      "Description": "NPC Weapons"
+    },
+    "FlockArray": {
+      "Value": [
+        "Kweebec_Seedling",
+        "Kweebec_Sproutling"
+      ],
+      "Description": "Array containing NPCs for this flock type"
+    },
+    "Component": {
+      "Value": "$Null"
+    },
+    "AnchorX": {
+      "Value": 0
+    },
+    "AnchorY": {
+      "Value": 0
+    },
+    "AnchorZ": {
+      "Value": 0
+    },
+    "MaxHealth": {
+      "Value": 74,
+      "Description": "Max health for the NPC"
+    },
+    "IsMemory": {
+      "Value": true,
+      "Description": "Defines if the NPC is a memory"
+    },
+    "MemoriesCategory": {
+      "Value": "Kweebec",
+      "Description": "Defines the category of the memory"
+    },
+    "MemoriesNameOverride": {
+      "Value": "Kweebec_Sapling",
+      "Description": "Overrides the memory name if set"
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Kweebec_Sapling.name",
+      "Description": "Translation key for NPC name display"
+    }
+  },
+  "Modify": {
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "WanderRadius": {
+      "Compute": "WanderRadius"
+    },
+    "ViewRange": {
+      "Compute": "ViewRange"
+    },
+    "ViewSector": {
+      "Compute": "ViewSector"
+    },
+    "HearingRange": {
+      "Compute": "HearingRange"
+    },
+    "AlertedRange": {
+      "Compute": "AlertedRange"
+    },
+    "GreetRange": {
+      "Compute": "GreetRange"
+    },
+    "WatchRange": {
+      "Compute": "WatchRange"
+    },
+    "DropList": {
+      "Compute": "DropList"
+    },
+    "MaxSpeed": {
+      "Compute": "MaxSpeed"
+    },
+    "AttitudeGroup": {
+      "Compute": "AttitudeGroup"
+    },
+    "Weapons": {
+      "Compute": "Weapons"
+    },
+    "FlockArray": {
+      "Compute": "FlockArray"
+    },
+    "Component": {
+      "Compute": "Component"
+    },
+    "AnchorX": {
+      "Compute": "AnchorX"
+    },
+    "AnchorY": {
+      "Compute": "AnchorY"
+    },
+    "AnchorZ": {
+      "Compute": "AnchorZ"
+    },
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
+    "IsMemory": {
+      "Compute": "IsMemory"
+    },
+    "MemoriesCategory": {
+      "Compute": "MemoriesCategory"
+    },
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  }
+}

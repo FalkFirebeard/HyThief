@@ -1,0 +1,627 @@
+{
+    "version":  8,
+    "blockIdVersion":  8,
+    "anchorX":  0,
+    "anchorY":  1,
+    "anchorZ":  0,
+    "blocks":  [
+                   {
+                       "x":  0,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  1,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  2,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  3,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  4,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  5,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  6,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  7,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  8,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  9,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  10,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   }
+               ],
+    "entities":  [
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Outlander_Test_01_Outlander_Berserker"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Outlander_Test_01_Outlander_Berserker",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  0,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  0.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "QOU3PYE4x0+tDiHk0KWSTA==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Outlander_Test_02_Outlander_Brute"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Outlander_Test_02_Outlander_Brute",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  1,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  1.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "6k7VROIVS0q1WIMUkeVQbQ==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Outlander_Test_03_Outlander_Cultist"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Outlander_Test_03_Outlander_Cultist",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  2,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  2.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "EKmfBiJ3LkSEAisJ6fdHVQ==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Outlander_Test_04_Outlander_Hunter"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Outlander_Test_04_Outlander_Hunter",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  3,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  3.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "T5iu+osDd0KauT+fQALuLA==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Outlander_Test_05_Outlander_Marauder"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Outlander_Test_05_Outlander_Marauder",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  4,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  4.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "XR9tO6fYVUeaTTcZFLN7Sw==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Outlander_Test_06_Outlander_Peon"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Outlander_Test_06_Outlander_Peon",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  5,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  5.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "UfyD9CpTHU6JjLBIUIR0WA==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Outlander_Test_07_Outlander_Priest"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Outlander_Test_07_Outlander_Priest",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  6,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  6.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "+x//svwSqkSjimBw5rWIRQ==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Outlander_Test_08_Outlander_Sorcerer"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Outlander_Test_08_Outlander_Sorcerer",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  7,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  7.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "553NlFgdfEuSDvawN3BDAg==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Outlander_Test_09_Outlander_Stalker"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Outlander_Test_09_Outlander_Stalker",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  8,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  8.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "tb1xiiT2BEuYdtL3GRwwwg==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Outlander_Test_10_Wolf_Outlander_Priest"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Outlander_Test_10_Wolf_Outlander_Priest",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  9,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  9.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "MR68VhOqiUKK7eaFwiYq7g==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Outlander_Test_11_Wolf_Outlander_Sorcerer"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Outlander_Test_11_Wolf_Outlander_Sorcerer",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  10,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  10.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "sLp7lHmfSUerNiU6DwSVTg==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     }
+                 ]
+}

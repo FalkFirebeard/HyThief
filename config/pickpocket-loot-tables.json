@@ -1,0 +1,982 @@
+{
+  "version": 4,
+  "vanillaOnly": true,
+  "notes": [
+    "Tables use only base-game item ids.",
+    "Late-game RPGLeveling extension materials are intentionally excluded from these weighted tables for now.",
+    "Existing prototype keys are preserved as compatibility aliases.",
+    "Nested tableRef entries support rare jackpot pulls and junk rolls.",
+    "Top-level loot tables can now roll an entire pickpocket inventory as empty via nothingFoundChancePercent."
+  ],
+  "tables": {
+    "kweebec_merchant": {
+      "nothingFoundChancePercent": 2,
+      "maxStealsPerRefresh": 6,
+      "entries": [
+        { "tableRef": "kweebec_high_value", "weight": 4 },
+        { "tableRef": "common_junk", "weight": 6 },
+        { "itemId": "Ingredient_Life_Essence", "min": 4, "max": 12, "weight": 54 },
+        { "itemId": "Ingredient_Life_Essence_Concentrated", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Ingredient_Spices", "min": 1, "max": 3, "weight": 24 },
+        { "itemId": "Ingredient_Salt", "min": 1, "max": 3, "weight": 24 },
+        { "itemId": "Ingredient_Dough", "min": 1, "max": 3, "weight": 20 },
+        { "itemId": "Plant_Crop_Berry_Block", "min": 1, "max": 1, "weight": 20 },
+        { "itemId": "Plant_Seeds_Wheat", "min": 1, "max": 2, "weight": 12 },
+        { "itemId": "Plant_Seeds_Lettuce", "min": 1, "max": 2, "weight": 12 },
+        { "itemId": "Ingredient_Tree_Sap", "min": 1, "max": 2, "weight": 14 },
+        { "itemId": "Food_Salad_Berry", "min": 1, "max": 1, "weight": 16 },
+        { "itemId": "Food_Salad_Mushroom", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Food_Kebab_Mushroom", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Food_Kebab_Vegetable", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Food_Kebab_Fruit", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Food_Pie_Apple", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Food_Pie_Pumpkin", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Food_Pie_Meat", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Food_Salad_Caesar", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Recipe_Food_Pie_Apple", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Recipe_Food_Pie_Pumpkin", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Recipe_Food_Salad_Caesar", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Recipe_Food_Pie_Meat", "min": 1, "max": 1, "weight": 2 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 8 }
+      ]
+    },
+    "kweebec_civilian": {
+      "nothingFoundChancePercent": 8,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "kweebec_high_value", "weight": 2 },
+        { "tableRef": "common_junk", "weight": 8 },
+        { "itemId": "Ingredient_Life_Essence", "min": 1, "max": 4, "weight": 36 },
+        { "itemId": "Plant_Crop_Berry_Block", "min": 1, "max": 1, "weight": 20 },
+        { "itemId": "Plant_Seeds_Wheat", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Plant_Seeds_Lettuce", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Plant_Fruit_Berries_Red", "min": 1, "max": 3, "weight": 22 },
+        { "itemId": "Ingredient_Tree_Sap", "min": 1, "max": 1, "weight": 14 },
+        { "itemId": "Food_Salad_Berry", "min": 1, "max": 1, "weight": 15 },
+        { "itemId": "Food_Salad_Mushroom", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Furniture_Crude_Torch", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Ore_Copper", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 16 }
+      ]
+    },
+    "kweebec_guardian": {
+      "nothingFoundChancePercent": 4,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "kweebec_high_value", "weight": 2 },
+        { "tableRef": "common_junk", "weight": 6 },
+        { "itemId": "Ingredient_Life_Essence", "min": 2, "max": 6, "weight": 28 },
+        { "itemId": "Weapon_Spear_Leaf", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Furniture_Crude_Torch", "min": 1, "max": 1, "weight": 15 },
+        { "itemId": "Food_Kebab_Vegetable", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Food_Kebab_Fruit", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ore_Copper", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 26 }
+      ]
+    },
+    "kweebec_villager": {
+      "nothingFoundChancePercent": 8,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "kweebec_high_value", "weight": 2 },
+        { "tableRef": "common_junk", "weight": 8 },
+        { "itemId": "Ingredient_Life_Essence", "min": 1, "max": 4, "weight": 36 },
+        { "itemId": "Plant_Crop_Berry_Block", "min": 1, "max": 1, "weight": 20 },
+        { "itemId": "Plant_Seeds_Wheat", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Plant_Seeds_Lettuce", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Plant_Fruit_Berries_Red", "min": 1, "max": 3, "weight": 22 },
+        { "itemId": "Ingredient_Tree_Sap", "min": 1, "max": 1, "weight": 14 },
+        { "itemId": "Food_Salad_Berry", "min": 1, "max": 1, "weight": 15 },
+        { "itemId": "Food_Salad_Mushroom", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Furniture_Crude_Torch", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Ore_Copper", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 16 }
+      ]
+    },
+    "kweebec_guard": {
+      "nothingFoundChancePercent": 4,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "kweebec_high_value", "weight": 2 },
+        { "tableRef": "common_junk", "weight": 6 },
+        { "itemId": "Ingredient_Life_Essence", "min": 2, "max": 6, "weight": 28 },
+        { "itemId": "Weapon_Spear_Leaf", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Furniture_Crude_Torch", "min": 1, "max": 1, "weight": 15 },
+        { "itemId": "Food_Kebab_Vegetable", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Food_Kebab_Fruit", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ore_Copper", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 26 }
+      ]
+    },
+
+    "bramblekin_civilian": {
+      "nothingFoundChancePercent": 9,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "bramblekin_high_value", "weight": 2 },
+        { "tableRef": "common_junk", "weight": 8 },
+        { "itemId": "Ingredient_Life_Essence", "min": 1, "max": 4, "weight": 16 },
+        { "itemId": "Ingredient_Tree_Sap", "min": 1, "max": 2, "weight": 22 },
+        { "itemId": "Ingredient_Fibre", "min": 1, "max": 3, "weight": 18 },
+        { "itemId": "Plant_Seeds_Wheat", "min": 1, "max": 2, "weight": 10 },
+        { "itemId": "Plant_Seeds_Lettuce", "min": 1, "max": 2, "weight": 10 },
+        { "itemId": "Plant_Fruit_Berries_Red", "min": 1, "max": 2, "weight": 14 },
+        { "itemId": "Ore_Iron", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Potion_Health", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 15 }
+      ]
+    },
+    "bramblekin_mystic": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "bramblekin_high_value", "weight": 3 },
+        { "tableRef": "common_junk", "weight": 6 },
+        { "itemId": "Ingredient_Life_Essence", "min": 2, "max": 6, "weight": 18 },
+        { "itemId": "Ingredient_Life_Essence_Concentrated", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Ingredient_Tree_Sap", "min": 1, "max": 2, "weight": 18 },
+        { "itemId": "Ingredient_Fibre", "min": 1, "max": 3, "weight": 16 },
+        { "itemId": "Plant_Fruit_Berries_Red", "min": 1, "max": 2, "weight": 12 },
+        { "itemId": "Plant_Seeds_Lettuce", "min": 1, "max": 2, "weight": 8 },
+        { "itemId": "Ore_Iron", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Potion_Health", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Potion_Regen_Health", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 18 }
+      ]
+    },
+
+    "feran_civilian": {
+      "nothingFoundChancePercent": 8,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "feran_high_value", "weight": 2 },
+        { "tableRef": "common_junk", "weight": 8 },
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 34 },
+        { "itemId": "Plant_Fruit_Berries_Red", "min": 1, "max": 2, "weight": 18 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 16 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Weapon_Daggers_Bone", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Ore_Thorium", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 18 }
+      ]
+    },
+    "feran_guardian": {
+      "nothingFoundChancePercent": 4,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "feran_high_value", "weight": 3 },
+        { "tableRef": "common_junk", "weight": 6 },
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 30 },
+        { "itemId": "Weapon_Spear_Bone", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Sword_Bone", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Weapon_Axe_Bone", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Ore_Thorium", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 24 }
+      ]
+    },
+    "feran_mystic": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "feran_high_value", "weight": 4 },
+        { "tableRef": "common_junk", "weight": 5 },
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 24 },
+        { "itemId": "Weapon_Staff_Bone", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Ingredient_Void_Essence", "min": 1, "max": 2, "weight": 10 },
+        { "itemId": "Plant_Fruit_Berries_Red", "min": 1, "max": 2, "weight": 14 },
+        { "itemId": "Potion_Stamina_Lesser", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Potion_Health_Lesser", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Ore_Thorium", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 28 }
+      ]
+    },
+
+    "tuluk_worker": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "tuluk_high_value", "weight": 2 },
+        { "tableRef": "common_junk", "weight": 6 },
+        { "itemId": "Weapon_Spear_Fishbone", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Food_Fish_Grilled", "min": 1, "max": 2, "weight": 24 },
+        { "itemId": "Plant_Fruit_Berries_Red", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Plant_Fruit_Apple", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Plant_Seeds_Wheat", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ingredient_Salt", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 24 }
+      ]
+    },
+
+    "klops_merchant": {
+      "nothingFoundChancePercent": 3,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "klops_high_value", "weight": 4 },
+        { "tableRef": "common_junk", "weight": 6 },
+        { "itemId": "Ore_Copper", "min": 1, "max": 1, "weight": 16 },
+        { "itemId": "Ore_Iron", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ingredient_Bar_Copper", "min": 1, "max": 1, "weight": 14 },
+        { "itemId": "Ingredient_Bar_Iron", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Plant_Fruit_Apple", "min": 1, "max": 1, "weight": 16 },
+        { "itemId": "Ingredient_Salt", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 30 }
+      ]
+    },
+    "klops_worker": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "klops_high_value", "weight": 3 },
+        { "tableRef": "common_junk", "weight": 5 },
+        { "itemId": "Ore_Copper", "min": 1, "max": 2, "weight": 36 },
+        { "itemId": "Ore_Iron", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Ingredient_Bar_Copper", "min": 1, "max": 1, "weight": 14 },
+        { "itemId": "Ingredient_Bar_Iron", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Tool_Pickaxe_Crude", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Tool_Pickaxe_Copper", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ingredient_Salt", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 18 }
+      ]
+    },
+    "klops_civilian": {
+      "nothingFoundChancePercent": 8,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "klops_high_value", "weight": 2 },
+        { "tableRef": "common_junk", "weight": 8 },
+        { "itemId": "Ingredient_Bar_Copper", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Ingredient_Bar_Iron", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Plant_Fruit_Apple", "min": 1, "max": 1, "weight": 20 },
+        { "itemId": "Ingredient_Salt", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 36 }
+      ]
+    },
+
+    "goblin_worker": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "goblin_high_value", "weight": 2 },
+        { "tableRef": "hostile_junk", "weight": 10 },
+        { "itemId": "Tool_Pickaxe_Scrap", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 34 },
+        { "itemId": "Ore_Copper", "min": 1, "max": 2, "weight": 18 },
+        { "itemId": "Ore_Iron", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Ingredient_Powder_Boom", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 14 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 20 }
+      ]
+    },
+    "goblin_melee": {
+      "nothingFoundChancePercent": 7,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "goblin_high_value", "weight": 2 },
+        { "tableRef": "hostile_junk", "weight": 10 },
+        { "itemId": "Weapon_Club_Scrap", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Weapon_Mace_Scrap", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Weapon_Battleaxe_Iron", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Weapon_Sword_Iron", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Weapon_Shield_Scrap", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 24 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 22 }
+      ]
+    },
+    "goblin_skirmisher": {
+      "nothingFoundChancePercent": 8,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "goblin_high_value", "weight": 2 },
+        { "tableRef": "hostile_junk", "weight": 10 },
+        { "itemId": "Weapon_Daggers_Crude", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 28 },
+        { "itemId": "Ingredient_Powder_Boom", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Plant_Fruit_Berries_Red", "min": 1, "max": 2, "weight": 12 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 32 }
+      ]
+    },
+    "goblin_ranged": {
+      "nothingFoundChancePercent": 7,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "goblin_high_value", "weight": 2 },
+        { "tableRef": "hostile_junk", "weight": 10 },
+        { "itemId": "Ingredient_Powder_Boom", "min": 1, "max": 2, "weight": 28 },
+        { "itemId": "Weapon_Bomb", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 24 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 28 }
+      ]
+    },
+    "goblin_caster": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "goblin_high_value", "weight": 2 },
+        { "tableRef": "hostile_junk", "weight": 10 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Weapon_Shield_Scrap", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 28 },
+        { "itemId": "Ingredient_Powder_Boom", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Plant_Fruit_Berries_Red", "min": 1, "max": 2, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 30 }
+      ]
+    },
+    "goblin_elite": {
+      "nothingFoundChancePercent": 3,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "goblin_high_value", "weight": 4 },
+        { "tableRef": "hostile_junk", "weight": 8 },
+        { "itemId": "Weapon_Mace_Scrap_NPC", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Weapon_Shield_Scrap_Spiked", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 24 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 16 },
+        { "itemId": "Ingredient_Powder_Boom", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 34 }
+      ]
+    },
+
+    "outlander_worker": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 5,
+      "entries": [
+        { "tableRef": "outlander_high_value", "weight": 3 },
+        { "tableRef": "hostile_junk", "weight": 6 },
+        { "itemId": "Tool_Pickaxe_Cobalt", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Tool_Pickaxe_Mithril", "min": 1, "max": 1, "weight": 1 },
+        { "itemId": "Ingredient_Fabric_Scrap_Shadoweave", "min": 1, "max": 3, "weight": 32 },
+        { "itemId": "Ore_Thorium", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Ore_Cobalt", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Ore_Mithril", "min": 1, "max": 1, "weight": 2 },
+        { "itemId": "Ingredient_Bar_Mithril", "min": 1, "max": 1, "weight": 2 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 16 },
+        { "itemId": "Potion_Stamina_Lesser", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 22 }
+      ]
+    },
+    "outlander_melee": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "outlander_high_value", "weight": 3 },
+        { "tableRef": "hostile_junk", "weight": 6 },
+        { "itemId": "Weapon_Axe_Doomed", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Battleaxe_Doomed", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Sword_Doomed", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Shield_Doomed", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Weapon_Axe_Mithril", "min": 1, "max": 1, "weight": 1 },
+        { "itemId": "Weapon_Battleaxe_Mithril", "min": 1, "max": 1, "weight": 1 },
+        { "itemId": "Weapon_Sword_Mithril", "min": 1, "max": 1, "weight": 1 },
+        { "itemId": "Weapon_Shield_Mithril", "min": 1, "max": 1, "weight": 1 },
+        { "itemId": "Ingredient_Fabric_Scrap_Shadoweave", "min": 1, "max": 3, "weight": 24 },
+        { "itemId": "Ingredient_Void_Essence", "min": 1, "max": 2, "weight": 14 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 16 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 26 }
+      ]
+    },
+    "outlander_skirmisher": {
+      "nothingFoundChancePercent": 7,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "outlander_high_value", "weight": 3 },
+        { "tableRef": "hostile_junk", "weight": 7 },
+        { "itemId": "Weapon_Daggers_Doomed", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Weapon_Crossbow_Iron", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Weapon_Daggers_Mithril", "min": 1, "max": 1, "weight": 1 },
+        { "itemId": "Ingredient_Bar_Mithril", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Ingredient_Fabric_Scrap_Shadoweave", "min": 1, "max": 3, "weight": 26 },
+        { "itemId": "Ingredient_Void_Essence", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Potion_Health_Lesser", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Potion_Stamina_Lesser", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 30 }
+      ]
+    },
+    "outlander_ranged": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "outlander_high_value", "weight": 3 },
+        { "tableRef": "hostile_junk", "weight": 7 },
+        { "itemId": "Weapon_Shortbow_Doomed", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Daggers_Fang_Doomed", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Weapon_Shortbow_Mithril", "min": 1, "max": 1, "weight": 1 },
+        { "itemId": "Ingredient_Bar_Mithril", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Ingredient_Fabric_Scrap_Shadoweave", "min": 1, "max": 3, "weight": 24 },
+        { "itemId": "Weapon_Arrow_Crude", "min": 2, "max": 5, "weight": 18 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 14 },
+        { "itemId": "Potion_Stamina_Lesser", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 34 }
+      ]
+    },
+    "outlander_caster": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "outlander_high_value", "weight": 3 },
+        { "tableRef": "hostile_junk", "weight": 7 },
+        { "itemId": "Weapon_Club_Doomed", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Staff_Doomed", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Weapon_Staff_Mithril", "min": 1, "max": 1, "weight": 1 },
+        { "itemId": "Ingredient_Bar_Mithril", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Ingredient_Fabric_Scrap_Shadoweave", "min": 1, "max": 3, "weight": 24 },
+        { "itemId": "Ingredient_Void_Essence", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Potion_Health_Lesser", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Potion_Stamina_Lesser", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 26 }
+      ]
+    },
+
+    "trork_melee": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "trork_high_value", "weight": 2 },
+        { "tableRef": "hostile_junk", "weight": 8 },
+        { "itemId": "Weapon_Club_Crude", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Weapon_Mace_Crude", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Weapon_Battleaxe_Stone_Trork", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 24 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Armor_Trork_Head", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Armor_Trork_Chest", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Armor_Trork_Hands", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Armor_Trork_Legs", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Ore_Cobalt", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 28 }
+      ]
+    },
+    "trork_ranged": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "trork_high_value", "weight": 2 },
+        { "tableRef": "hostile_junk", "weight": 8 },
+        { "itemId": "Weapon_Spear_Stone_Trork", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Weapon_Sword_Stone_Trork", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Axe_Stone_Trork", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 24 },
+        { "itemId": "Armor_Trork_Head", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Armor_Trork_Chest", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Armor_Trork_Hands", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Armor_Trork_Legs", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Food_Wildmeat_Cooked", "min": 1, "max": 1, "weight": 16 },
+        { "itemId": "Ore_Cobalt", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 28 }
+      ]
+    },
+    "trork_caster": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "trork_high_value", "weight": 3 },
+        { "tableRef": "hostile_junk", "weight": 7 },
+        { "itemId": "Weapon_Staff_Crystal_Fire_Trork", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Weapon_Daggers_Stone_Trork", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Sword_Stone_Trork", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 20 },
+        { "itemId": "Ingredient_Fire_Essence", "min": 1, "max": 2, "weight": 14 },
+        { "itemId": "Potion_Health_Lesser", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ore_Cobalt", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 32 }
+      ]
+    },
+    "trork_elite": {
+      "nothingFoundChancePercent": 3,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "trork_high_value", "weight": 4 },
+        { "tableRef": "hostile_junk", "weight": 6 },
+        { "itemId": "Weapon_Battleaxe_Stone_Trork", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Armor_Trork_Head", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Armor_Trork_Chest", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Armor_Trork_Hands", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Armor_Trork_Legs", "min": 1, "max": 1, "weight": 5 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 18 },
+        { "itemId": "Ingredient_Fire_Essence", "min": 1, "max": 2, "weight": 14 },
+        { "itemId": "Potion_Health_Lesser", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Ore_Cobalt", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 26 }
+      ]
+    },
+    "hedera_melee": {
+      "nothingFoundChancePercent": 9,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "tableRef": "bramblekin_high_value", "weight": 2 },
+        { "tableRef": "common_junk", "weight": 8 },
+        { "itemId": "Ingredient_Fibre", "min": 1, "max": 3, "weight": 30 },
+        { "itemId": "Ingredient_Tree_Sap", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Ingredient_Life_Essence", "min": 1, "max": 2, "weight": 10 },
+        { "itemId": "Plant_Fruit_Berries_Red", "min": 1, "max": 2, "weight": 10 },
+        { "itemId": "Plant_Seeds_Lettuce", "min": 1, "max": 2, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 42 }
+      ]
+    },
+    "skeleton_crypt_melee": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 34 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 26 },
+        { "itemId": "Weapon_Sword_Scrap", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Weapon_Sword_Steel_Rusty", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Weapon_Shield_Rusty", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 32 }
+      ]
+    },
+    "skeleton_crypt_ranged": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 28 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 24 },
+        { "itemId": "Weapon_Arrow_Crude", "min": 10, "max": 20, "weight": 16 },
+        { "itemId": "Weapon_Shortbow_Crude", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Weapon_Shortbow_Iron_Rusty", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Weapon_Crossbow_Ancient_Steel", "min": 1, "max": 1, "weight": 2 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 28 }
+      ]
+    },
+    "skeleton_crypt_caster": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 22 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 22 },
+        { "itemId": "Ingredient_Crystal_Green", "min": 8, "max": 16, "weight": 28 },
+        { "itemId": "Weapon_Staff_Wood_Rotten", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 20 }
+      ]
+    },
+    "skeleton_frost_melee": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 24 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 20 },
+        { "itemId": "Ingredient_Ice_Essence", "min": 1, "max": 2, "weight": 24 },
+        { "itemId": "Weapon_Sword_Steel_Rusty", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Weapon_Shield_Rusty", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 30 }
+      ]
+    },
+    "skeleton_frost_ranged": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 20 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 20 },
+        { "itemId": "Ingredient_Ice_Essence", "min": 1, "max": 2, "weight": 20 },
+        { "itemId": "Weapon_Arrow_Crude", "min": 10, "max": 20, "weight": 14 },
+        { "itemId": "Weapon_Shortbow_Crude", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Shortbow_Iron_Rusty", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 32 }
+      ]
+    },
+    "skeleton_frost_caster": {
+      "nothingFoundChancePercent": 4,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 18 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 18 },
+        { "itemId": "Ingredient_Ice_Essence", "min": 2, "max": 3, "weight": 22 },
+        { "itemId": "Ingredient_Crystal_Blue", "min": 10, "max": 18, "weight": 24 },
+        { "itemId": "Weapon_Staff_Frost", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 20 }
+      ]
+    },
+    "skeleton_sand_melee": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 26 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 22 },
+        { "itemId": "Weapon_Sword_Bronze", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Ingredient_Crystal_Cyan", "min": 6, "max": 14, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 34 }
+      ]
+    },
+    "skeleton_sand_ranged": {
+      "nothingFoundChancePercent": 6,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 22 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 20 },
+        { "itemId": "Weapon_Arrow_Crude", "min": 10, "max": 20, "weight": 16 },
+        { "itemId": "Weapon_Shortbow_Iron_Rusty", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Crossbow_Iron", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Ingredient_Crystal_Cyan", "min": 6, "max": 14, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 28 }
+      ]
+    },
+    "skeleton_sand_caster": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 18 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 18 },
+        { "itemId": "Ingredient_Crystal_Cyan", "min": 10, "max": 18, "weight": 28 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 24 }
+      ]
+    },
+    "skeleton_sand_skirmisher": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 24 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 22 },
+        { "itemId": "Weapon_Daggers_Bronze_Ancient", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ingredient_Crystal_Cyan", "min": 8, "max": 14, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 34 }
+      ]
+    },
+    "skeleton_sand_dungeon_melee": {
+      "nothingFoundChancePercent": 4,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 22 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 20 },
+        { "itemId": "Weapon_Sword_Bronze", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ingredient_Crystal_Cyan", "min": 8, "max": 16, "weight": 14 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 30 }
+      ]
+    },
+    "skeleton_sand_dungeon_ranged": {
+      "nothingFoundChancePercent": 4,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 20 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 18 },
+        { "itemId": "Weapon_Arrow_Crude", "min": 12, "max": 24, "weight": 16 },
+        { "itemId": "Weapon_Shortbow_Iron_Rusty", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Weapon_Crossbow_Iron", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ingredient_Crystal_Cyan", "min": 8, "max": 16, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 24 }
+      ]
+    },
+    "skeleton_sand_dungeon_caster": {
+      "nothingFoundChancePercent": 3,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 16 },
+        { "itemId": "Ingredient_Crystal_Cyan", "min": 12, "max": 24, "weight": 34 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 20 }
+      ]
+    },
+    "skeleton_sand_dungeon_skirmisher": {
+      "nothingFoundChancePercent": 4,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 20 },
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 18 },
+        { "itemId": "Weapon_Daggers_Bronze_Ancient", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Ingredient_Crystal_Cyan", "min": 10, "max": 18, "weight": 14 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 28 }
+      ]
+    },
+    "skeleton_burnt_melee": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Fabric_Scrap_Cindercloth", "min": 1, "max": 3, "weight": 24 },
+        { "itemId": "Ingredient_Fire_Essence", "min": 1, "max": 2, "weight": 20 },
+        { "itemId": "Weapon_Battleaxe_Steel_Rusty", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Weapon_Sword_Steel_Rusty", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Shield_Rusty", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Armor_Steel_Ancient_Hands", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Armor_Steel_Ancient_Legs", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 32 }
+      ]
+    },
+    "skeleton_burnt_ranged": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Fabric_Scrap_Cindercloth", "min": 1, "max": 3, "weight": 22 },
+        { "itemId": "Ingredient_Fire_Essence", "min": 1, "max": 2, "weight": 18 },
+        { "itemId": "Weapon_Arrow_Crude", "min": 10, "max": 20, "weight": 14 },
+        { "itemId": "Weapon_Crossbow_Ancient_Steel", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Ingredient_Bar_Cobalt", "min": 1, "max": 2, "weight": 4 },
+        { "itemId": "Armor_Steel_Ancient_Head", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Armor_Steel_Ancient_Chest", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 28 }
+      ]
+    },
+    "skeleton_burnt_caster": {
+      "nothingFoundChancePercent": 4,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Fabric_Scrap_Cindercloth", "min": 1, "max": 3, "weight": 22 },
+        { "itemId": "Ingredient_Fire_Essence", "min": 1, "max": 3, "weight": 22 },
+        { "itemId": "Potion_Antidote", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Weapon_Bomb_Potion_Poison", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Spellbook_Rekindle_Embers", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Armor_Steel_Ancient_Head", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Armor_Steel_Ancient_Chest", "min": 1, "max": 1, "weight": 3 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 24 }
+      ]
+    },
+    "skeleton_burnt_elite": {
+      "nothingFoundChancePercent": 2,
+      "maxStealsPerRefresh": 3,
+      "entries": [
+        { "itemId": "Ingredient_Bar_Thorium", "min": 1, "max": 2, "weight": 20 },
+        { "itemId": "Ingredient_Bar_Cobalt", "min": 1, "max": 2, "weight": 12 },
+        { "itemId": "Ingredient_Fire_Essence", "min": 2, "max": 4, "weight": 18 },
+        { "itemId": "Armor_Steel_Ancient_Head", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Armor_Steel_Ancient_Chest", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Armor_Steel_Ancient_Hands", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Armor_Steel_Ancient_Legs", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Weapon_Spellbook_Rekindle_Embers", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Deco_Bone_Skulls", "min": 2, "max": 4, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 10 }
+      ]
+    },
+    "skeleton_incandescent_melee": {
+      "nothingFoundChancePercent": 4,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Fabric_Scrap_Cindercloth", "min": 1, "max": 3, "weight": 24 },
+        { "itemId": "Ingredient_Fire_Essence", "min": 1, "max": 3, "weight": 22 },
+        { "itemId": "Weapon_Spear_Double_Incandescent", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 40 }
+      ]
+    },
+    "skeleton_incandescent_caster": {
+      "nothingFoundChancePercent": 3,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Fabric_Scrap_Cindercloth", "min": 1, "max": 3, "weight": 22 },
+        { "itemId": "Ingredient_Fire_Essence", "min": 2, "max": 3, "weight": 24 },
+        { "itemId": "Weapon_Spellbook_Fire", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 32 }
+      ]
+    },
+    "skeleton_pirate_melee": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 34 },
+        { "itemId": "Ingredient_Powder_Boom", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Ingredient_Bar_Gold", "min": 1, "max": 2, "weight": 12 },
+        { "itemId": "Weapon_Sword_Iron", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Weapon_Longsword_Iron", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 20 }
+      ]
+    },
+    "skeleton_pirate_ranged": {
+      "nothingFoundChancePercent": 4,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 28 },
+        { "itemId": "Ingredient_Powder_Boom", "min": 1, "max": 2, "weight": 18 },
+        { "itemId": "Ingredient_Bar_Gold", "min": 1, "max": 2, "weight": 10 },
+        { "itemId": "Weapon_Gun", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Weapon_Crossbow_Iron", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 30 }
+      ]
+    },
+    "skeleton_pirate_elite": {
+      "nothingFoundChancePercent": 2,
+      "maxStealsPerRefresh": 3,
+      "entries": [
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 2, "weight": 20 },
+        { "itemId": "Ingredient_Powder_Boom", "min": 1, "max": 3, "weight": 14 },
+        { "itemId": "Ingredient_Bar_Gold", "min": 1, "max": 2, "weight": 16 },
+        { "itemId": "Weapon_Gun", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Weapon_Longsword_Iron", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Weapon_Sword_Iron", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 18 }
+      ]
+    },
+    "zombie_melee": {
+      "nothingFoundChancePercent": 8,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 34 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Ingredient_Life_Essence", "min": 1, "max": 2, "weight": 8 },
+        { "itemId": "Potion_Health", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 36 }
+      ]
+    },
+    "zombie_burnt_melee": {
+      "nothingFoundChancePercent": 7,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Fabric_Scrap_Cindercloth", "min": 1, "max": 3, "weight": 28 },
+        { "itemId": "Ingredient_Fire_Essence", "min": 1, "max": 2, "weight": 18 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Potion_Health", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 40 }
+      ]
+    },
+    "zombie_frost_melee": {
+      "nothingFoundChancePercent": 7,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 3, "weight": 28 },
+        { "itemId": "Ingredient_Ice_Essence", "min": 1, "max": 2, "weight": 18 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Potion_Health", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 40 }
+      ]
+    },
+    "zombie_sand_melee": {
+      "nothingFoundChancePercent": 8,
+      "maxStealsPerRefresh": 4,
+      "entries": [
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 2, "weight": 34 },
+        { "itemId": "Rock_Sandstone_Cobble", "min": 1, "max": 1, "weight": 14 },
+        { "itemId": "Rubble_Sandstone_Red", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 32 }
+      ]
+    },
+    "zombie_aberrant_melee": {
+      "nothingFoundChancePercent": 5,
+      "maxStealsPerRefresh": 3,
+      "entries": [
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 2, "weight": 22 },
+        { "itemId": "Ingredient_Life_Essence", "min": 1, "max": 3, "weight": 16 },
+        { "itemId": "Potion_Health", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 56 }
+      ]
+    },
+    "zombie_aberrant_elite": {
+      "nothingFoundChancePercent": 3,
+      "maxStealsPerRefresh": 3,
+      "entries": [
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 2, "weight": 20 },
+        { "itemId": "Ingredient_Life_Essence", "min": 2, "max": 4, "weight": 16 },
+        { "itemId": "Ingredient_Life_Essence_Concentrated", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Potion_Health", "min": 1, "max": 1, "weight": 6 },
+        { "itemId": "Potion_Regen_Health", "min": 1, "max": 1, "weight": 4 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 48 }
+      ]
+    },
+    "common_junk": {
+      "maxStealsPerRefresh": 1,
+      "entries": [
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 1, "weight": 28 },
+        { "itemId": "Rock_Sandstone_Cobble", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Rubble_Sandstone_Red", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Rubble_Sandstone_White", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 20 }
+      ]
+    },
+    "hostile_junk": {
+      "maxStealsPerRefresh": 1,
+      "entries": [
+        { "itemId": "Ingredient_Fabric_Scrap_Linen", "min": 1, "max": 1, "weight": 34 },
+        { "itemId": "Rock_Sandstone_Cobble", "min": 1, "max": 1, "weight": 14 },
+        { "itemId": "Rubble_Sandstone_Red", "min": 1, "max": 1, "weight": 14 },
+        { "itemId": "Ingredient_Bone_Fragment", "min": 1, "max": 1, "weight": 16 },
+        { "itemId": "Food_Wildmeat_Raw", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Empty", "min": 0, "max": 0, "weight": 14 }
+      ]
+    },
+    "kweebec_high_value": {
+      "maxStealsPerRefresh": 1,
+      "entries": [
+        { "itemId": "Ingredient_Life_Essence_Concentrated", "min": 1, "max": 1, "weight": 40 },
+        { "itemId": "Recipe_Food_Pie_Apple", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Recipe_Food_Pie_Pumpkin", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Recipe_Food_Salad_Caesar", "min": 1, "max": 1, "weight": 16 },
+        { "itemId": "Weapon_Spear_Leaf", "min": 1, "max": 1, "weight": 8 }
+      ]
+    },
+    "bramblekin_high_value": {
+      "maxStealsPerRefresh": 1,
+      "entries": [
+        { "itemId": "Ingredient_Life_Essence_Concentrated", "min": 1, "max": 1, "weight": 30 },
+        { "itemId": "Potion_Regen_Health", "min": 1, "max": 1, "weight": 30 },
+        { "itemId": "Potion_Health", "min": 1, "max": 1, "weight": 24 },
+        { "itemId": "Ore_Iron", "min": 1, "max": 1, "weight": 16 }
+      ]
+    },
+    "feran_high_value": {
+      "maxStealsPerRefresh": 1,
+      "entries": [
+        { "itemId": "Weapon_Staff_Bone", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Weapon_Spear_Bone", "min": 1, "max": 1, "weight": 20 },
+        { "itemId": "Weapon_Sword_Bone", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Ingredient_Void_Essence", "min": 1, "max": 2, "weight": 22 },
+        { "itemId": "Potion_Health_Lesser", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Potion_Stamina_Lesser", "min": 1, "max": 1, "weight": 10 }
+      ]
+    },
+    "tuluk_high_value": {
+      "maxStealsPerRefresh": 1,
+      "entries": [
+        { "itemId": "Weapon_Spear_Fishbone", "min": 1, "max": 1, "weight": 28 },
+        { "itemId": "Food_Fish_Grilled", "min": 1, "max": 1, "weight": 34 },
+        { "itemId": "Ingredient_Salt", "min": 1, "max": 1, "weight": 20 },
+        { "itemId": "Plant_Fruit_Apple", "min": 1, "max": 1, "weight": 18 }
+      ]
+    },
+    "klops_high_value": {
+      "maxStealsPerRefresh": 1,
+      "entries": [
+        { "itemId": "Ingredient_Bar_Iron", "min": 1, "max": 1, "weight": 30 },
+        { "itemId": "Ingredient_Bar_Copper", "min": 1, "max": 1, "weight": 32 },
+        { "itemId": "Tool_Pickaxe_Copper", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Ore_Iron", "min": 1, "max": 1, "weight": 20 }
+      ]
+    },
+    "goblin_high_value": {
+      "maxStealsPerRefresh": 1,
+      "entries": [
+        { "itemId": "Weapon_Bomb", "min": 1, "max": 1, "weight": 26 },
+        { "itemId": "Weapon_Battleaxe_Iron", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Weapon_Sword_Iron", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Weapon_Shield_Scrap_Spiked", "min": 1, "max": 1, "weight": 18 },
+        { "itemId": "Ingredient_Powder_Boom", "min": 1, "max": 1, "weight": 20 }
+      ]
+    },
+    "outlander_high_value": {
+      "maxStealsPerRefresh": 1,
+      "entries": [
+        { "itemId": "Tool_Pickaxe_Mithril", "min": 1, "max": 1, "weight": 8 },
+        { "itemId": "Ore_Mithril", "min": 1, "max": 1, "weight": 14 },
+        { "itemId": "Ingredient_Bar_Mithril", "min": 1, "max": 1, "weight": 14 },
+        { "itemId": "Weapon_Staff_Mithril", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Weapon_Shortbow_Mithril", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Weapon_Daggers_Mithril", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Weapon_Axe_Mithril", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Weapon_Sword_Mithril", "min": 1, "max": 1, "weight": 10 },
+        { "itemId": "Ingredient_Void_Essence", "min": 1, "max": 2, "weight": 8 }
+      ]
+    },
+    "trork_high_value": {
+      "maxStealsPerRefresh": 1,
+      "entries": [
+        { "itemId": "Weapon_Staff_Crystal_Fire_Trork", "min": 1, "max": 1, "weight": 22 },
+        { "itemId": "Weapon_Battleaxe_Stone_Trork", "min": 1, "max": 1, "weight": 16 },
+        { "itemId": "Armor_Trork_Chest", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Armor_Trork_Head", "min": 1, "max": 1, "weight": 12 },
+        { "itemId": "Ingredient_Fire_Essence", "min": 1, "max": 2, "weight": 22 },
+        { "itemId": "Potion_Health_Lesser", "min": 1, "max": 1, "weight": 16 }
+      ]
+    }
+  }
+}

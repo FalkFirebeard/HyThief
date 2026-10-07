@@ -1,0 +1,287 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Outlander_Hunter",
+  "Parameters": {
+    "Appearance": {
+      "Value": "Outlander_Hunter",
+      "Description": "Model to be used"
+    },
+    "IdleMotionComponent": {
+      "Value": "$Null",
+      "Description": "The component that controls how the NPC moves during idle state"
+    },
+    "ViewRange": {
+      "Value": 30,
+      "Description": "View range"
+    },
+    "ViewSector": {
+      "Value": 270,
+      "Description": "View sector"
+    },
+    "HearingRange": {
+      "Value": 4,
+      "Description": "Hearing range"
+    },
+    "AlertedRange": {
+      "Value": 50,
+      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+    },
+    "DropList": {
+      "Value": "Drop_Outlander_Hunter",
+      "Description": "Drop Items"
+    },
+    "MaxSpeed": {
+      "Value": 8,
+      "Description": "Maximum walking speed"
+    },
+    "Weapons": {
+      "Value": [
+        "Weapon_Shortbow_Doomed",
+        "Weapon_Daggers_Fang_Doomed"
+      ],
+      "Description": "NPC Weapon"
+    },
+    "RangedAttack": {
+      "Value": "Trork_Sentry_Spear_Throw",
+      "Description": "Ranged attack"
+    },
+    "RangedAttackSequence": {
+      "Value": "Component_Instruction_Attack_Sequence_Outlander_Hunter_Ranged",
+      "Description": "The ranged attack sequence to use"
+    },
+    "DesiredRangedAttackDistanceRange": {
+      "Value": [
+        10,
+        20
+      ],
+      "Description": "Desired ranged attack distance range"
+    },
+    "AttackSequence": {
+      "Value": "Component_Instruction_Attack_Sequence_Outlander_Hunter",
+      "Description": "The attack sequence to use in combat"
+    },
+    "AttackDistance": {
+      "Value": 2.5,
+      "Description": "The distance at which an NPC will execute attacks"
+    },
+    "FollowPath": {
+      "Value": false,
+      "Description": "Whether this NPC should follow the nearest patrol path"
+    },
+    "FollowPathRange": {
+      "Value": 30,
+      "Description": "The search radius when looking for a patrol path"
+    },
+    "PathShape": {
+      "Value": "Line",
+      "Description": "The shape of the path the NPC should follow. 'Chain' will result in chained paths"
+    },
+    "SleepsAtNight": {
+      "Value": false,
+      "Description": "Whether this NPC will sleep at night"
+    },
+    "AlertedTime": {
+      "Value": [
+        1,
+        2
+      ],
+      "Description": "The duration for which the NPC is alert before switching to attack"
+    },
+    "LeashDistance": {
+      "Value": 30,
+      "Description": "The range after which an NPC will start to want to return to their spawn point"
+    },
+    "LeashMinPlayerDistance": {
+      "Value": 7,
+      "Description": "The minimum distance from the player before the NPC will be willing to give up on the chase"
+    },
+    "LeashTimer": {
+      "Value": [
+        8,
+        8
+      ],
+      "Description": "How long the NPC must be more than the minimum distance form the player and too far from leash before giving up"
+    },
+    "BreakOffRange": {
+      "Value": 8,
+      "Description": "The range when the NPC will switch from melee back to ranged attacks"
+    },
+    "TargetGroups": {
+      "Value": [
+        "Outlander"
+      ],
+      "Description": "Beacon target groups"
+    },
+    "ChestBlockSet": {
+      "Value": "Trork_Chest",
+      "Description": "The block set designating chests for this NPC"
+    },
+    "BedBlockSet": {
+      "Value": "Trork_Bedroll",
+      "Description": "The block set designating bedrolls for this NPC"
+    },
+    "CampfireBlockSet": {
+      "Value": "Trork_Campfire",
+      "Description": "The block set designating campfires for this NPC"
+    },
+    "UnderlingGroups": {
+      "Value": [
+        "Outlander_Underlings"
+      ],
+      "Description": "A list of groups to exclude from reputation sensors"
+    },
+    "DisableDamageGroups": {
+      "Value": [
+        "Self",
+        "Outlander"
+      ],
+      "Description": "Groups not to take damage from"
+    },
+    "AttitudeGroup": {
+      "Value": "Outlander_Ranged",
+      "Description": "Attitude group"
+    },
+    "CrouchToAttack": {
+      "$TODO": "Remove this when Outlanders have their own template",
+      "Value": false,
+      "Description": "Whether this NPC should crouch during its attack phase"
+    },
+    "CombatRelativeTurnSpeed": {
+      "Value": 1.5,
+      "Description": "Modifier that decides turn speed difference in combat"
+    },
+    "MaxHealth": {
+      "Value": 61,
+      "Description": "Max health for the NPC"
+    },
+    "IsMemory": {
+      "Value": true,
+      "Description": "Defines if the NPC is a memory"
+    },
+    "MemoriesCategory": {
+      "Value": "Outlander",
+      "Description": "Defines the category of the memory"
+    },
+    "MemoriesNameOverride": {
+      "Value": "",
+      "Description": "Overrides the memory name if set"
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Outlander_Hunter.name",
+      "Description": "Translation key for NPC name display"
+    }
+  },
+  "Modify": {
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "IdleMotionComponent": {
+      "Compute": "IdleMotionComponent"
+    },
+    "ViewRange": {
+      "Compute": "ViewRange"
+    },
+    "ViewSector": {
+      "Compute": "ViewSector"
+    },
+    "HearingRange": {
+      "Compute": "HearingRange"
+    },
+    "AlertedRange": {
+      "Compute": "AlertedRange"
+    },
+    "DropList": {
+      "Compute": "DropList"
+    },
+    "MaxSpeed": {
+      "Compute": "MaxSpeed"
+    },
+    "Weapons": {
+      "Compute": "Weapons"
+    },
+    "RangedAttack": {
+      "Compute": "RangedAttack"
+    },
+    "RangedAttackSequence": {
+      "Compute": "RangedAttackSequence"
+    },
+    "DesiredRangedAttackDistanceRange": {
+      "Compute": "DesiredRangedAttackDistanceRange"
+    },
+    "AttackSequence": {
+      "Compute": "AttackSequence"
+    },
+    "AttackDistance": {
+      "Compute": "AttackDistance"
+    },
+    "FollowPath": {
+      "Compute": "FollowPath"
+    },
+    "FollowPathRange": {
+      "Compute": "FollowPathRange"
+    },
+    "PathShape": {
+      "Compute": "PathShape"
+    },
+    "SleepsAtNight": {
+      "Compute": "SleepsAtNight"
+    },
+    "AlertedTime": {
+      "Compute": "AlertedTime"
+    },
+    "LeashDistance": {
+      "Compute": "LeashDistance"
+    },
+    "LeashMinPlayerDistance": {
+      "Compute": "LeashMinPlayerDistance"
+    },
+    "LeashTimer": {
+      "Compute": "LeashTimer"
+    },
+    "BreakOffRange": {
+      "Compute": "BreakOffRange"
+    },
+    "TargetGroups": {
+      "Compute": "TargetGroups"
+    },
+    "ChestBlockSet": {
+      "Compute": "ChestBlockSet"
+    },
+    "BedBlockSet": {
+      "Compute": "BedBlockSet"
+    },
+    "CampfireBlockSet": {
+      "Compute": "CampfireBlockSet"
+    },
+    "UnderlingGroups": {
+      "Compute": "UnderlingGroups"
+    },
+    "DisableDamageGroups": {
+      "Compute": "DisableDamageGroups"
+    },
+    "AttitudeGroup": {
+      "Compute": "AttitudeGroup"
+    },
+    "CrouchToAttack": {
+      "Compute": "CrouchToAttack"
+    },
+    "CombatRelativeTurnSpeed": {
+      "Compute": "CombatRelativeTurnSpeed"
+    },
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
+    "IsMemory": {
+      "Compute": "IsMemory"
+    },
+    "MemoriesCategory": {
+      "Compute": "MemoriesCategory"
+    },
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  }
+}

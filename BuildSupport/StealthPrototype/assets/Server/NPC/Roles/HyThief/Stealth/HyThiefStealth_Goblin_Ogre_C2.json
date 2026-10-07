@@ -1,0 +1,122 @@
+{
+  "Type": "Component",
+  "Class": "Instruction",
+  "Parameters": {
+    "_ImportStates": [
+      "Alerted"
+    ],
+    "ViewRange": {
+      "Value": 10,
+      "Description": "The range from which a target will be seen"
+    },
+    "ViewSector": {
+      "Value": 120,
+      "Description": "The view sector within which a target needs to be to be seen"
+    },
+    "HearingRange": {
+      "Value": 10,
+      "Description": "The range from which a target will be heard"
+    },
+    "ThroughWalls": {
+      "Value": true,
+      "Description": "Whether the NPC can hear a target through obstacles"
+    },
+    "Attitudes": {
+      "Value": [
+        "Hostile",
+        "Revered",
+        "Friendly",
+        "Neutral"
+      ],
+      "Description": "A prioritised list of attitudes to respond to"
+    },
+    "ExcludeGroups": {
+      "Value": [],
+      "TypeHint": "String",
+      "Description": "Groups to exclude"
+    },
+    "GetNPCs": {
+      "Value": true,
+      "Description": "Whether to include NPCs in this sensor"
+    },
+    "IgnoreLockedTarget": {
+      "Value": false,
+      "Description": "Whether to ignore the current locked target"
+    }
+  },
+  "Content": {
+    "Sensor": {
+      "Type": "Or",
+      "Sensors": [
+        {
+          "Type": "Player",
+          "Range": 2,
+          "LockOnTarget": true,
+          "Filters": [
+            {
+              "Type": "LineOfSight"
+            },
+            {
+              "Type": "HyThiefStealthAcquisition",
+              "BaseRange": 2,
+              "Channel": "watch",
+              "Projected": false
+            }
+          ]
+        },
+        {
+          "Reference": "HyThiefStealth_Goblin_Ogre_C3",
+          "Modify": {
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            },
+            "Attitudes": {
+              "Compute": "Attitudes"
+            },
+            "ExcludeGroups": {
+              "Compute": "ExcludeGroups"
+            },
+            "GetNPCs": {
+              "Compute": "GetNPCs"
+            },
+            "IgnoreLockedTarget": {
+              "Compute": "IgnoreLockedTarget"
+            }
+          }
+        },
+        {
+          "Reference": "HyThiefStealth_Goblin_Ogre_C4",
+          "Modify": {
+            "HearingRange": {
+              "Compute": "HearingRange"
+            },
+            "ThroughWalls": {
+              "Compute": "ThroughWalls"
+            },
+            "Attitudes": {
+              "Compute": "Attitudes"
+            },
+            "ExcludeGroups": {
+              "Compute": "ExcludeGroups"
+            },
+            "GetNPCs": {
+              "Compute": "GetNPCs"
+            },
+            "IgnoreLockedTarget": {
+              "Compute": "IgnoreLockedTarget"
+            }
+          }
+        }
+      ]
+    },
+    "Actions": [
+      {
+        "Type": "ParentState",
+        "State": "Alerted"
+      }
+    ]
+  }
+}

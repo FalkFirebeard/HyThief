@@ -1,0 +1,795 @@
+{
+    "version":  8,
+    "blockIdVersion":  8,
+    "anchorX":  0,
+    "anchorY":  1,
+    "anchorZ":  0,
+    "blocks":  [
+                   {
+                       "x":  0,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  1,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  2,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  3,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  4,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  5,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  6,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  7,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  8,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  9,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  10,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  11,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  12,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   },
+                   {
+                       "x":  13,
+                       "y":  0,
+                       "z":  0,
+                       "name":  "Soil_Grass"
+                   }
+               ],
+    "entities":  [
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_01_Trork_Brawler"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_01_Trork_Brawler",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  0,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  0.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "Fd0JSNQxDE6tJTJwvq7tNg==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_02_Trork_Chieftain"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_02_Trork_Chieftain",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  1,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  1.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "8ZM5sJHedEme3InQbbOSkQ==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_03_Trork_Doctor_Witch"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_03_Trork_Doctor_Witch",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  2,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  2.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "AuVhuOSYLkO0zmrGqXnFlg==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_04_Trork_Guard"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_04_Trork_Guard",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  3,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  3.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "GolQnqgJbki4ftTNPV94HQ==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_05_Trork_Hunter"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_05_Trork_Hunter",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  4,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  4.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "5vZM1P2d4UWc1MNL1ESFtA==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_06_Trork_Mauler"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_06_Trork_Mauler",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  5,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  5.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "/qhjTNLK7Uej8r07GmSr7w==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_07_Trork_Sentry"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_07_Trork_Sentry",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  6,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  6.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "hPaPwbeE6U2Q3e/gsL8ffw==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_08_Trork_Sentry_Patrol"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_08_Trork_Sentry_Patrol",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  7,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  7.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "V14WRiA/PES1g9Rjj8dKVw==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_09_Trork_Shaman"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_09_Trork_Shaman",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  8,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  8.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "kknSf5A+PUyJ9kHXgjLvVA==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_10_Trork_Unarmed"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_10_Trork_Unarmed",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  9,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  9.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "snd5z/x1Iku5tSC5Aofk7w==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_11_Trork_Warrior"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_11_Trork_Warrior",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  10,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  10.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "uw5SsX5gREGtDUQl178QBA==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_12_Trork_Warrior_Patrol"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_12_Trork_Warrior_Patrol",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  11,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  11.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "UYnc2G8nx0eY2OQovijmvA==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_13_Wolf_Trork_Hunter"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_13_Wolf_Trork_Hunter",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  12,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  12.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "ZbtymEIrKUOWKgW5vkEztg==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     },
+                     {
+                         "Components":  {
+                                            "Nameplate":  {
+                                                              "Text":  "Trork_Test_14_Wolf_Trork_Shaman"
+                                                          },
+                                            "HiddenFromAdventurePlayer":  {
+
+                                                                          },
+                                            "SpawnMarkerComponent":  {
+                                                                         "SpawnMarker":  "Trork_Test_14_Wolf_Trork_Shaman",
+                                                                         "RespawnTime":  0,
+                                                                         "SpawnCount":  0,
+                                                                         "PersistedFlock":  {
+
+                                                                                            },
+                                                                         "SpawnPosition":  {
+                                                                                               "X":  13,
+                                                                                               "Y":  0,
+                                                                                               "Z":  0
+                                                                                           }
+                                                                     },
+                                            "Transform":  {
+                                                              "Position":  {
+                                                                               "X":  13.5,
+                                                                               "Y":  1,
+                                                                               "Z":  0.5
+                                                                           },
+                                                              "Rotation":  {
+                                                                               "Pitch":  0,
+                                                                               "Yaw":  0,
+                                                                               "Roll":  0
+                                                                           }
+                                                          },
+                                            "Intangible":  {
+
+                                                           },
+                                            "Model":  {
+                                                          "Model":  {
+                                                                        "Id":  "NPC_Spawn_Marker",
+                                                                        "Scale":  1
+                                                                    }
+                                                      },
+                                            "UUID":  {
+                                                         "UUID":  {
+                                                                      "$binary":  "7B/7PB6Mt0qg6ic5u3PmZA==",
+                                                                      "$type":  "04"
+                                                                  }
+                                                     }
+                                        }
+                     }
+                 ]
+}
