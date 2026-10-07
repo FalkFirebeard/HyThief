@@ -132,9 +132,14 @@ def generateNativeInteractions = tasks.register('generateNativeInteractions') {
 }
 
 tasks.named('processResources') {
-    from('Common') { into 'Common' }
+    from('Common') {
+        into 'Common'
+        exclude '**/*.bak*'
+    }
     from('Server') {
         into 'Server'
+        exclude 'Prefabs/Testing/**'
+        exclude 'NPC/Spawn/Markers/*_Test_*.json'
         // Generated variants replace these inputs only in build output, not original source.
         // A role that needs no rewritten reference is copied from the generator as well below.
         supportedMatrix.each { exclude it.Asset.replaceFirst('^Server/', '') }

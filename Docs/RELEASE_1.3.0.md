@@ -6,10 +6,10 @@ Prepared October 6, 2026 (America/Denver), from validated 1.2.1-revamp.11.
 
 - Clean build passed with Java 25, Gradle 9.1.0, pinned stable Hytale server 0.6.8.
 - Final JAR: `HyThief-1.3.0.jar`.
-- SHA256: `5e47f1158fde00fdb00ef4aceb5781bbe416d1713d2ece4d2eb41853467250a0`.
+- SHA256: `c31a4fcae1b24fd5f5b9b783e48e634bb1d90f8566c45f9031de1de54810d64d`.
 - Manifest: version 1.3.0, server target =0.6.8, author Falk Interactive Studios.
 - Local:HyThief identity and main entry point preserved to retain the existing data location.
-- All 1,805 production assets/config entries byte-identical to revamp.11; 1,798 packaged JSON entries parsed successfully.
+- Excluded 54 test/backup assets: old UI backup, NPC test spawn markers and testing prefabs. All remaining 1,751 production assets/config entries byte-identical to revamp.11; 1,745 packaged JSON entries parsed successfully. Source prefab files remain intact.
 - No diagnostic helper, diagnostic event strings, delayed guard observations, test verifier classes, logs or development worlds in the release JAR.
 - Fresh isolated native validation passed: 185 configured IDs, 183 concrete spawns, two abstract builder validations, 2,782 state checks, 732 calibration checks, zero matrix failures.
 - Two existing inventory API removal warnings remain. These compile and run against the pinned 0.6.8 target; future Hytale targets will require a separate compatibility review.
@@ -37,3 +37,4 @@ Upload display name: **HyThief 1.3.0 — Hytale 0.6.8**. Type: **Release**, not 
 Release changelog: `RELEASE_NOTES_1.3.0.md`. Planned GitHub destination: `FalkFirebeard/HyThief`, tag `v1.3.0`, final JAR and SHA256 file as release assets.
 
 Local preparation is complete. GitHub push/release and CurseForge upload status must be verified separately; this record does not assert publication.
+

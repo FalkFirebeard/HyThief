@@ -5,6 +5,7 @@
 /Backup Versions/
 /com/
 *.jar
+*.bak*
 !gradle/wrapper/gradle-wrapper.jar
 /Docs/*
 !/Docs/BUILD_ENVIRONMENT_RELEASE.md
