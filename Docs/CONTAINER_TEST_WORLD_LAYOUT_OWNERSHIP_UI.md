@@ -1,3 +1,5 @@
+> Superseded by container.3 checkpoint 2: see `CONTAINER_THEFT_CHECKPOINT_2_VISUAL_WITNESS.md`. Custom owned-chest hints are removed; this note preserves historical checkpoint-1 evidence.
+
 # Container Theft Test World: forward control and ownership hints
 
 Current diagnostic JAR remains **HyThief 1.3.1-container.2**, stable target **=0.6.8**. Its SHA256 remains `020369D69BBADEBB13FD0B57257FDEE39C1970F133518BE494652FC8B6EE62DB`. No Java/backend source or global mod changes. The save-local `ContainerTheftFixture` asset pack is now **1.0.1**, layout version **2**.

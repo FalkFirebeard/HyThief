@@ -23,16 +23,23 @@ final class HyThiefGuardAlert {
   static void signal(PickpocketPlugin plugin, PlayerRef player, String victimRole,
       Ref<EntityStore> victim, Store<EntityStore> store) {
     if (!"Kweebec_Merchant".equals(victimRole)) return;
+    deliver(plugin, player == null ? null : player.getReference(), victim, store);
+  }
+
+  record Delivery(boolean sent, String reason, Ref<EntityStore> guard) {}
+
+  /** Shared downstream handoff; callers establish caught/witness policy separately. */
+  static Delivery deliver(PickpocketPlugin plugin, Ref<EntityStore> offender,
+      Ref<EntityStore> victim, Store<EntityStore> store) {
     try {
-      Ref<EntityStore> offender = player == null ? null : player.getReference();
       if (store == null || offender == null || !offender.isValid()
           || victim == null || !victim.isValid() || offender.getStore() != store
           || victim.getStore() != store) {
-        return;
+        return new Delivery(false, "invalid-source-or-offender", null);
       }
       TransformComponent origin = store.getComponent(victim, TransformComponent.getComponentType());
       if (origin == null) {
-        return;
+        return new Delivery(false, "missing-source-transform", null);
       }
       var nearby = new ArrayList<Ref<EntityStore>>();
       store.getResource(NPCPlugin.get().getNpcSpatialResource()).getSpatialStructure()
@@ -61,13 +68,14 @@ final class HyThiefGuardAlert {
         }
       }
       if (chosen == null) {
-        return;
+        return new Delivery(false, "no-ready-native-guard", null);
       }
-      BeaconSupport beacon = store.getComponent(chosen, BeaconSupport.getComponentType());
       // Same one-second lifetime as native ActionBeacon. No forced state, attitude or attack.
       BeaconBroadcast.post(chosen, DANGER, offender, 1.0, store);
+      return new Delivery(true, "native-danger-posted", chosen);
     } catch (RuntimeException exception) {
       plugin.getLogger().at(java.util.logging.Level.WARNING).withCause(exception).log("HyThief guard alert failed");
+      return new Delivery(false, "native-danger-error", null);
     }
   }
 

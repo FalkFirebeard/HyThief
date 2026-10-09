@@ -13,7 +13,10 @@
       10.5
     ],
     "yaw": 3.141592653589793,
-    "frozen": true
+    "frozen": true,
+    "nativeTemplate": "HyThiefContainerFixture_Native_Sapling",
+    "standingVisualRange": 15,
+    "visualSectorDegrees": 180
   },
   "guard": {
     "role": "Kweebec_Razorleaf",
@@ -54,7 +57,7 @@
         }
       ],
       "automaticallyOwned": true,
-      "blockId": "HyThief_Test_Owned_Kweebec_Chest"
+      "blockId": "Furniture_Kweebec_Chest_Large"
     },
     {
       "name": "Rear",
@@ -82,7 +85,7 @@
         }
       ],
       "automaticallyOwned": true,
-      "blockId": "HyThief_Test_Owned_Kweebec_Chest"
+      "blockId": "Furniture_Kweebec_Chest_Large"
     },
     {
       "name": "Control",
@@ -342,16 +345,17 @@
       15.5
     ]
   ],
-  "notes": "Control first, rear second, front last. Attribution only; future witnessed/unseen consequences are not implemented. Owned hints come from a save-local native-inherited test item.",
+  "notes": "Native chest opening for all stations. Control -> Rear -> Front. Real visual witnessed owned removal sends one native guard danger signal. No commands, random caught roll, crouch reduction or forced UI closure.",
   "testOrder": [
     "Control",
     "Rear",
     "Front"
   ],
-  "fixtureVersion": "1.0.1",
+  "fixtureVersion": "1.0.2",
   "controlPlayer": [
     -2.5,
     64,
     15.5
-  ]
+  ],
+  "diagnosticVersion": "1.3.1-container.3"
 }

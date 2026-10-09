@@ -30,8 +30,8 @@ public final class ContainerWorldBuilder extends JavaPlugin {
  public ContainerWorldBuilder(JavaPluginInit init){super(init);}
  static final int[][] CHESTS={{0,64,16},{0,64,4},{-3,64,16}};
  private org.joml.Vector3d guardStart;
- static final String OWNED="HyThief_Test_Owned_Kweebec_Chest";
- static final String HINT="server.hythief.containerFixture.stealFromChest";
+ static final String OWNED="Furniture_Kweebec_Chest_Large";
+ static final String HINT="server.interactionHints.openDoor";
  static final String[] ITEMS={"Ingredient_Bar_Copper","Ingredient_Bar_Iron","Ingredient_Fibre"};
  static final int[] AMOUNTS={16,8,32};
  protected void start(){Universe.get().getUniverseReady().thenRun(()->{
@@ -71,23 +71,9 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   c.clear();for(short s=0;s<ITEMS.length;s++)c.setItemStackForSlot(s,new ItemStack(ITEMS[s],AMOUNTS[s]));
  }
  static void applyLayout(World w){
-  container(w,new int[]{-4,64,-2}).clear();
-  w.setBlock(-4,64,-2,"Empty");
-  w.setBlock(CHESTS[2][0],64,CHESTS[2][2],"Furniture_Kweebec_Chest_Large");
-  for(int i=0;i<2;i++)w.setBlock(CHESTS[i][0],64,CHESTS[i][2],OWNED);
-  for(var p:CHESTS)fill(container(w,p));
-  var store=w.getEntityStore().getStore();
-  store.forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){
-   var ref=chunk.getReferenceTo(i);var label=store.getComponent(ref,Nameplate.getComponentType());var text=label.getText();
-   if(text.startsWith("FRONT"))label.setText("3 OWNED - FRONT / WITNESSED");
-   if(text.startsWith("REAR"))label.setText("2 OWNED - REAR / UNSEEN");
-   if(text.startsWith("UNOWNED CONTROL")){
-    label.setText("1 CONTROL - UNOWNED");
-    store.getComponent(ref,TransformComponent.getComponentType()).setPosition(new org.joml.Vector3d(-4.5,66.4,16.5));
-   }
-   if(text.startsWith("ZERO COMMANDS"))label.setText("TEST ORDER: 1 CONTROL -> 2 REAR -> 3 FRONT / no commands");
-  }});
+  for(int i=0;i<2;i++){w.setBlock(CHESTS[i][0],64,CHESTS[i][2],OWNED);fill(container(w,CHESTS[i]));}
  }
+
  static void oneRun(World w,OwnedContainerRegistry registry){
   var player=new SimpleItemContainer((short)36);int[] order={2,1,0};int ownedReports=0;
   for(int i:order){
@@ -105,6 +91,20 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   for(var p:CHESTS)fill(container(w,p));
   System.out.println("ONE_RUN_PASS Order=CONTROL,REAR,FRONT ControlReports=0 OwnedReports=2 Received=12");
  }
+ static void nativeStates(World w,OwnedContainerRegistry registry){
+  var chunks=w.getChunkStore();
+  for(int i=0;i<2;i++){
+   var p=CHESTS[i];var original=registry.findAutomatic(w,container(w,p),null);
+   var base=w.getBlockType(p[0],p[1],p[2]);var section=chunks.getChunkSectionReferenceAtBlock(p[0],p[1],p[2]);
+   for(String state:new String[]{"OpenWindow","CloseWindow"}){
+    com.hypixel.hytale.server.core.universe.world.chunk.BlockOperations.setBlockInteractionState(chunks,section,p[0],p[1],p[2],base,state,false);
+    if(!registry.valid(w,original)||container(w,p)!=original.container())throw new IllegalStateException("Ownership/container lost during native "+state);
+   }
+
+
+  }
+  System.out.println("NATIVE_CHEST_STATE_PASS OpenCloseOwnership=PRESERVED SameContainer=true");
+ }
  static void inspect(World w,org.joml.Vector3d guardStart)throws Exception{
   var store=w.getEntityStore().getStore();var npcs=new HashMap<String,Ref<EntityStore>>();
   store.forEachChunk(NPCEntity.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){
@@ -116,6 +116,8 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   var t=store.getComponent(civilian,TransformComponent.getComponentType());var h=store.getComponent(civilian,HeadRotation.getComponentType());
   if(store.getComponent(civilian,Frozen.getComponentType())==null||store.getComponent(guard,Frozen.getComponentType())!=null)throw new IllegalStateException("Frozen must apply only to civilian");
   if(t.getPosition().distance(.5,64,10.5)>0.01||Math.abs(t.getRotation().yaw()-(float)Math.PI)>.001||Math.abs(h.getRotation().yaw()-(float)Math.PI)>.001||h.getDirection().z<.99)throw new IllegalStateException("Civilian moved/turned: "+t.getPosition()+" body="+t.getRotation()+" head="+h.getRotation());
+  var nativeWitness=JsonParser.parseString(Files.readString(Path.of("mods/ContainerTheftFixture/Server/NPC/Roles/HyThiefContainerFixture_Native_Sapling.json"))).getAsJsonObject().getAsJsonObject("Parameters");
+  if(nativeWitness.getAsJsonObject("ViewRange").get("Value").getAsDouble()!=ContainerVisualWitness.RANGE||nativeWitness.getAsJsonObject("ViewSector").get("Value").getAsDouble()!=180)throw new IllegalStateException("Witness/native template perception mismatch");
   var report=new JsonObject();report.addProperty("civilianRole","Kweebec_Sapling");report.addProperty("civilianFrozen",true);report.addProperty("civilianBodyYaw",t.getRotation().yaw());report.addProperty("civilianHeadYaw",h.getRotation().yaw());report.addProperty("civilianDirection",h.getDirection().toString());report.addProperty("guardRole","Kweebec_Razorleaf");report.addProperty("guardFrozen",false);
   var gp=store.getComponent(guard,TransformComponent.getComponentType()).getPosition();report.addProperty("guardPosition",gp.toString());
   if(Boolean.getBoolean("containerworld.stationaryguard")){if(guardStart==null||gp.distance(guardStart)>.25)throw new IllegalStateException("Guard idle movement remained active "+guardStart+" -> "+gp);report.addProperty("guardIdleObservedSeconds",60);report.addProperty("guardIdleDisplacement",gp.distance(guardStart));}
@@ -154,19 +156,19 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   var nativeChest=com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType.getAssetMap().getAsset("Furniture_Kweebec_Chest_Large");
   for(int i=0;i<3;i++){
    var p=CHESTS[i];var type=w.getBlockType(p[0],p[1],p[2]);
-   if(!type.getId().equals(i==2?"Furniture_Kweebec_Chest_Large":OWNED))throw new IllegalStateException("Wrong owned/control asset");
+   if(!type.getId().equals(OWNED) && !type.getId().equals(nativeChest.getBlockForState("OpenWindow").getId()) && !type.getId().equals(nativeChest.getBlockForState("CloseWindow").getId()))throw new IllegalStateException("Wrong native chest family");
    if(!type.getInteractions().get(com.hypixel.hytale.protocol.InteractionType.Use).equals("Open_Container"))throw new IllegalStateException("Native open changed");
    if(!type.getCustomModel().equals(nativeChest.getCustomModel())||type.getCustomModelScale()!=nativeChest.getCustomModelScale())throw new IllegalStateException("Chest appearance changed");
    if(!type.getInteractionHint().equals(i==2?nativeChest.getInteractionHint():HINT))throw new IllegalStateException("Incorrect ownership hint");
   }
-  if(!"Steal from Chest".equals(com.hypixel.hytale.server.core.modules.i18n.I18nModule.get().getMessages("en-US").get(HINT)))throw new IllegalStateException("Owned hint translation missing");
+  if(Files.exists(Path.of("mods/ContainerTheftFixture/Server/Item/Items/Container/HyThief_Test_Owned_Kweebec_Chest.json")))throw new IllegalStateException("Custom chest definition remains");
   for(double x:new double[]{-2.5,.5}){
    double dx=x-.5,dz=5;double distance=Math.hypot(dx,dz),angle=Math.toDegrees(Math.atan2(Math.abs(dx),dz));
    if(distance>15||angle>=90)throw new IllegalStateException("Front approach outside native forward sector/range");
    for(int step=1;step<=20;step++){double f=step/20.0;if(!w.getBlockType((int)Math.floor(.5+dx*f),65,(int)Math.floor(10.5+dz*f)).getId().equals("Empty"))throw new IllegalStateException("Front/control approach obstructed");}
   }
   report.addProperty("controlPlayerDistance",Math.hypot(3,5));report.addProperty("controlPlayerForwardAngleDegrees",Math.toDegrees(Math.atan2(3,5)));report.addProperty("frontControlSightlinesClear",true);
-  report.addProperty("ownedHint","Steal from Chest");report.addProperty("controlNativeHint",nativeChest.getInteractionHint());report.addProperty("nativeOpenContainerPreserved",true);
+  report.addProperty("ownedHint","native");report.addProperty("controlNativeHint",nativeChest.getInteractionHint());report.addProperty("nativeOpenContainerPreserved",true);
   for(int[] p:CHESTS){var c=container(w,p);if(c.getCapacity()!=36)throw new IllegalStateException("Wrong chest capacity");
    for(short s=0;s<3;s++){var item=c.getItemStack(s);if(item==null||!item.getItemId().equals(ITEMS[s])||item.getQuantity()!=AMOUNTS[s])throw new IllegalStateException("Test stack missing");}
    var r=new JsonObject();r.addProperty("coordinate",Arrays.toString(p));r.addProperty("capacity",c.getCapacity());r.addProperty("matchingStacks",true);chestReport.add(r);
@@ -177,6 +179,8 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   for(var entry:entries)if(registry.findAutomatic(w,entry.container(),null)!=entry)throw new IllegalStateException("Automatic lookup mismatch");
   if(registry.findAutomatic(w,container(w,CHESTS[2]),null)!=null)throw new IllegalStateException("Control owned");
   registry.removeAutomatic(w);if(!registry.automatic(w).isEmpty())throw new IllegalStateException("Stale world ownership");registry.replaceAutomatic(w,entries);
+  nativeStates(w,registry);
+  ContainerWitnessTest.run(w,civilian,guard,report);
   oneRun(w,registry);report.addProperty("oneRunControlRearFrontWithoutReset",true);
   report.addProperty("automaticRegistryTwoOwnedOneControl",true);report.addProperty("registryRemovalRebuild",true);
   // Use the SAME packaged probe/registry as the installed diagnostic plugin, on this world's actual containers.

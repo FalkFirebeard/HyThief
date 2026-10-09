@@ -15,8 +15,12 @@ final class ContainerRemovalProbe {
   private final Set<SlotTransaction> receipt = Collections.newSetFromMap(new IdentityHashMap<>());
   private final Set<SlotTransaction> reported = Collections.newSetFromMap(new IdentityHashMap<>());
   private final Consumer<Removal> sink;
+  private final Consumer<Removal> capture;
   ContainerRemovalProbe(ItemContainer chest, Consumer<Removal> sink) {
-    this.chest = chest; this.sink = sink;
+    this(chest, sink, removal -> {});
+  }
+  ContainerRemovalProbe(ItemContainer chest, Consumer<Removal> sink, Consumer<Removal> capture) {
+    this.chest = chest; this.sink = sink; this.capture = capture;
   }
   void source(Transaction transaction) {
     visit(transaction, move -> {
@@ -28,8 +32,9 @@ final class ContainerRemovalProbe {
       ItemStack before = slot.getSlotBefore(), after = slot.getSlotAfter();
       int amount = removed(before, after);
       if (amount > 0) {
-        source.put(move.getRemoveTransaction(), new Removal(slot.getSlot(), before.getItemId(),
-            amount, Instant.now(), System.nanoTime()));
+        var removal = new Removal(slot.getSlot(), before.getItemId(), amount, Instant.now(), System.nanoTime());
+        source.put(move.getRemoveTransaction(), removal);
+        capture.accept(removal);
       }
     });
   }

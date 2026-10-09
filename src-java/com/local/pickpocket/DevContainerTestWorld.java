@@ -83,6 +83,15 @@ final class DevContainerTestWorld implements AutoCloseable {
     if(Math.abs((long)s.x())>1024 || Math.abs((long)s.z())>1024 || s.y()<0 || s.y()>255)throw new IllegalStateException("Fixture coordinate outside bounded test region");
     return s;
   }
+  private static boolean nativeChestState(com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType type, String base) {
+    var root = com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType.getAssetMap().getAsset(base);
+    return root != null && (type.getId().equals(base)
+        || sameState(type, root.getBlockForState("OpenWindow"))
+        || sameState(type, root.getBlockForState("CloseWindow")));
+  }
+  private static boolean sameState(com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType type, com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType state) {
+    return state != null && type.getId().equals(state.getId());
+  }
   // Called only on load and inventory requests, on the owning world thread. No tick polling/listeners on arbitrary inventories.
   void refresh(World world) {
     if (!enabled(world)) return;
@@ -96,7 +105,7 @@ final class DevContainerTestWorld implements AutoCloseable {
         var chunks=world.getChunkStore();var section=chunks.getChunkSectionReferenceAtBlock(station.x(),station.y(),station.z());
         if(section==null || !section.isValid())return; // Never force a packet to wait for unloaded terrain.
         var type=world.getBlockType(station.x(),station.y(),station.z());
-        if(!type.getId().equals(station.block()) || !BlockEntity.declaresComponent(type,ItemContainerBlock.getComponentType()))throw new IllegalStateException("Unexpected live fixture block at "+station);
+        if(!nativeChestState(type, station.block()) || !BlockEntity.declaresComponent(type,ItemContainerBlock.getComponentType()))throw new IllegalStateException("Unexpected live fixture block at "+station);
         var store=chunks.getStore();var components=store.ensureAndGetComponent(section,BlockComponentSection.getComponentType());
         var blocks=store.getComponent(section,BlockSection.getComponentType());
         var block=BlockEntity.ensureBlockEntity(store,section,components,station.x(),station.y(),station.z(),type,blocks.getRotationIndex(station.x(),station.y(),station.z()));
@@ -107,6 +116,13 @@ final class DevContainerTestWorld implements AutoCloseable {
       errors.remove(world.getWorldConfig().getUuid());
       log.accept("Action=AUTO_REGISTER Owner=Kweebec World="+world.getWorldConfig().getUuid()+" Owned="+entries.stream().map(e->e.key().toString()).toList()+" Control=UNOWNED");
     } catch (RuntimeException error) { error(world, error.toString()); }
+  }
+  boolean isControl(World world, com.hypixel.hytale.server.core.inventory.container.ItemContainer source) {
+    var fixture = fixtures.get(world.getWorldConfig().getUuid());
+    if (fixture == null || fixture.world() != world) return false;
+    var c = fixture.control();
+    var live = BlockModule.getComponent(ItemContainerBlock.getComponentType(), world, c.x(), c.y(), c.z());
+    return live != null && live.getItemContainer() == source;
   }
   void remove(World world) {
     fixtures.computeIfPresent(world.getWorldConfig().getUuid(),(id,f)->f.world()==world?null:f);

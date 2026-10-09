@@ -1,3 +1,5 @@
+> Superseded by container.3 checkpoint 2: see `CONTAINER_THEFT_CHECKPOINT_2_VISUAL_WITNESS.md`. Custom owned-chest hints are removed; this note preserves historical checkpoint-1 evidence.
+
 > Layout/test-order update: see `CONTAINER_TEST_WORLD_LAYOUT_OWNERSHIP_UI.md`. This document preserves the previous container.2 checkpoint layout.
 
 # HyThief automatic container attribution test world

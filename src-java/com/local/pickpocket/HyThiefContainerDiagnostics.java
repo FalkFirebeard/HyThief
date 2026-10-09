@@ -71,6 +71,8 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     ItemContainer destination = packet instanceof MoveItemStack ? InventoryUtils.getSectionById(ref, to, store) : null;
     if (automatic) entry = registry.findAutomatic(world, source, destination);
     if (entry == null || (source != entry.container() && destination != entry.container())) {
+      if (automatic && source != null && testWorld.isControl(world, source))
+        log("Player=" + player.getUuid() + " Action=CONTROL_UNOWNED_IGNORE");
       fallback(player, packet); return;
     }
     if (store.getArchetype(ref).contains(PreventInventoryAccess.getComponentType())) {
@@ -78,12 +80,23 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     }
     long request = sequence.incrementAndGet();
     var observed = entry;
+    var evidence = new IdentityHashMap<ContainerRemovalProbe.Removal, ContainerVisualWitness.Evidence>();
+    var confirmed = new ArrayList<ContainerVisualWitness.Evidence>();
     var probe = new ContainerRemovalProbe(observed.container(), removal -> {
       var key = observed.key();
+      if (automatic) {
+        var visual = evidence.get(removal);
+        if (visual != null) { confirmed.add(visual); log("Request=" + request + " " + visual.diagnostic()); }
+      }
       log("Request=" + request + " Player=" + player.getUsername() + "/" + player.getUuid()
           + " Chest=" + key.world() + ":" + key.x() + "," + key.y() + "," + key.z()
           + " Slot=" + removal.slot() + " Item=" + removal.item() + " Amount=" + removal.amount()
           + " Action=REMOVE Result=SUCCESS Time=" + removal.time() + " Mono=" + removal.nanoTime());
+    }, removal -> {
+      if (automatic) {
+        try { evidence.put(removal, ContainerVisualWitness.capture(ref, store)); }
+        catch (RuntimeException error) { log("Request=" + request + " WITNESS=UNSEEN Reason=visual-error:" + error.getClass().getSimpleName()); }
+      }
     });
     var registrations = new ArrayList<com.hypixel.hytale.event.EventRegistration<?, ?>>();
     boolean executed = false;
@@ -111,6 +124,12 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     } finally {
       for (var event : registrations) event.unregister();
     }
+    // All inventory locks/callbacks have unwound. One downstream notification per request.
+    confirmed.stream().filter(ContainerVisualWitness.Evidence::seen).findFirst().ifPresent(visual -> {
+      var delivery = HyThiefGuardAlert.deliver(plugin, ref, visual.witness(), store);
+      log("Request=" + request + " Action=" + (delivery.sent() ? "DANGER_SENT" : "DANGER_NOT_SENT")
+          + " Witness=" + visual.role() + " Guard=" + delivery.guard() + " Reason=" + delivery.reason());
+    });
   }
   private void log(String message) { plugin.getLogger().atInfo().log("[HyThief ContainerTest] " + message); }
   private final class Command extends AbstractPlayerCommand {

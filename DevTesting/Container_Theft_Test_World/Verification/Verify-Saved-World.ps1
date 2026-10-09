@@ -1,15 +1,15 @@
 [CmdletBinding()]
-param([string]$DiagnosticJar, [switch]$LongGuardCheck)
+param([string]$DiagnosticJar, [switch]$LongGuardCheck, [string]$MasterPath)
 $ErrorActionPreference='Stop'
 $project=Split-Path (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent) -Parent
 $root=Join-Path $project 'DevTesting\Container_Theft_Test_World'
 $jdk=Join-Path (Split-Path (Split-Path $project -Parent) -Parent) 'Toolchains\JDK25\bin'
 $server=Join-Path $project '.build\dependencies\HytaleServer-0.6.8.jar'
-if(!$DiagnosticJar){$DiagnosticJar=Join-Path $project 'build\libs\HyThief-1.3.1-container.2.jar'}
+if(!$DiagnosticJar){$DiagnosticJar=Join-Path $project 'build\libs\HyThief-1.3.1-container.3.jar'}
 $run=Join-Path $root ('VerificationRuns\'+(Get-Date -Format yyyyMMdd-HHmmss)+'-'+[guid]::NewGuid().ToString('N'))
 if(![IO.Path]::GetFullPath($run).StartsWith($root+'\VerificationRuns\')){throw 'Unsafe verification path'}
 New-Item -ItemType Directory -Path (Split-Path $run -Parent) -Force|Out-Null
-Copy-Item -LiteralPath (Join-Path $root 'Master') -Destination $run -Recurse
+if(!$MasterPath){$MasterPath=Join-Path $root 'Master'}; Copy-Item -LiteralPath $MasterPath -Destination $run -Recurse
 Copy-Item -LiteralPath (Join-Path $root 'Prefabs') -Destination (Join-Path $run 'prefabs') -Recurse
 Copy-Item -LiteralPath $DiagnosticJar -Destination (Join-Path $run 'mods')
 $cfg=Get-Content (Join-Path $run 'config.json') -Raw|ConvertFrom-Json
@@ -17,11 +17,11 @@ $cfg.Mods.'FirebeardDev:ContainerWorldBuilder'.Enabled=$true
 $cfg|ConvertTo-Json -Depth 35|Set-Content (Join-Path $run 'config.json')
 $classes=Join-Path $run 'verification-classes'
 New-Item -ItemType Directory -Path $classes|Out-Null
-& (Join-Path $jdk 'javac.exe') -cp ($server+';'+$DiagnosticJar) -d $classes (Join-Path $PSScriptRoot 'ContainerWorldBuilder.java') (Join-Path $PSScriptRoot 'ContainerProbeTest.java')
+& (Join-Path $jdk 'javac.exe') -cp ($server+';'+$DiagnosticJar) -d $classes (Join-Path $PSScriptRoot 'ContainerWorldBuilder.java') (Join-Path $PSScriptRoot 'ContainerProbeTest.java') (Join-Path $PSScriptRoot 'ContainerWitnessTest.java')
 if($LASTEXITCODE -ne 0){throw 'Verifier compilation failed'}
 $zip=[IO.Compression.ZipFile]::OpenRead($DiagnosticJar)
 try{foreach($entry in $zip.Entries){
- if($entry.FullName -match '^com/local/pickpocket/(ContainerRemovalProbe|OwnedContainerRegistry).*\.class$'){
+ if($entry.FullName -match '^com/local/pickpocket/(ContainerRemovalProbe|OwnedContainerRegistry|ContainerVisualWitness|HyThiefGuardAlert).*\.class$'){
   $dest=Join-Path $classes $entry.FullName
   New-Item -ItemType Directory -Path (Split-Path $dest -Parent) -Force|Out-Null
   [IO.Compression.ZipFileExtensions]::ExtractToFile($entry,$dest,$true)
