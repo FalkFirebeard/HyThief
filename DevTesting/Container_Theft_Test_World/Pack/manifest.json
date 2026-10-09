@@ -1,0 +1,10 @@
+{
+  "Group": "FirebeardDev",
+  "Name": "ContainerTheftFixture",
+  "Version": "1.0.1",
+  "ServerVersion": "=0.6.8",
+  "IncludesAssetPack": true,
+  "Dependencies": {
+    "Local:HyThief": "*"
+  }
+}

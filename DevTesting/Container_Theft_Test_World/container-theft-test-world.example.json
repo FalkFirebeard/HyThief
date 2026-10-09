@@ -9,7 +9,6 @@
   "DiagnosticVersion": "1.3.1-container.2",
   "PrefabSHA256": "18570914CCA51CF30A800CADEB21629677EBBB83B357BAA73E7D4D3B190EB26B",
   "CivilianFrozen": true,
-  "GuardIdleWanderRadius": 1,
   "AutoContainerDiagnostics": {
     "Version": 1,
     "Owner": "Kweebec",
@@ -20,7 +19,7 @@
           64,
           16
         ],
-        "BlockId": "Furniture_Kweebec_Chest_Large"
+        "BlockId": "HyThief_Test_Owned_Kweebec_Chest"
       },
       {
         "Position": [
@@ -28,16 +27,24 @@
           64,
           4
         ],
-        "BlockId": "Furniture_Kweebec_Chest_Large"
+        "BlockId": "HyThief_Test_Owned_Kweebec_Chest"
       }
     ],
     "Control": {
       "Position": [
-        -4,
+        -3,
         64,
-        -2
+        16
       ],
       "BlockId": "Furniture_Kweebec_Chest_Large"
     }
-  }
+  },
+  "FixtureVersion": "1.0.1",
+  "LayoutVersion": 2,
+  "TestOrder": [
+    "Control",
+    "Rear",
+    "Front"
+  ],
+  "GuardIdleMotion": "$Null"
 }

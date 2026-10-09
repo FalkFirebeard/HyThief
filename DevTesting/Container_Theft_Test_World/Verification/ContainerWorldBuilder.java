@@ -28,7 +28,10 @@ import com.google.gson.*;
 /** Disposable native builder/verifier. Never installed globally or in the pristine playable save. */
 public final class ContainerWorldBuilder extends JavaPlugin {
  public ContainerWorldBuilder(JavaPluginInit init){super(init);}
- static final int[][] CHESTS={{0,64,16},{0,64,4},{-4,64,-2}};
+ static final int[][] CHESTS={{0,64,16},{0,64,4},{-3,64,16}};
+ private org.joml.Vector3d guardStart;
+ static final String OWNED="HyThief_Test_Owned_Kweebec_Chest";
+ static final String HINT="server.hythief.containerFixture.stealFromChest";
  static final String[] ITEMS={"Ingredient_Bar_Copper","Ingredient_Bar_Iron","Ingredient_Fibre"};
  static final int[] AMOUNTS={16,8,32};
  protected void start(){Universe.get().getUniverseReady().thenRun(()->{
@@ -42,12 +45,14 @@ public final class ContainerWorldBuilder extends JavaPlugin {
      if(!Boolean.getBoolean("containerworld.reload")){
       PrefabUtil.paste(buffer,w,new Vector3i(),Rotation.None,new Random(106081),PrefabUtil.Flags.FORCE,0,region,PrefabUtil.NOOP_BLOCK_ENTITY_CONSUMER,PrefabUtil.NOOP_ENTITY_CONSUMER,w.getEntityStore().getStore());
      }
+     w.getEntityStore().getStore().forEachChunk(NPCEntity.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){var ref=chunk.getReferenceTo(i);var es=w.getEntityStore().getStore();if(es.getComponent(ref,NPCEntity.getComponentType()).getRoleName().equals("Kweebec_Razorleaf"))guardStart=new org.joml.Vector3d(es.getComponent(ref,TransformComponent.getComponentType()).getPosition());}});
      w.scheduleAfter(()->w.execute(()->{
       try{
        if(!Boolean.getBoolean("containerworld.reload"))for(int[] p:CHESTS)fill(container(w,p));
-       inspect(w);
+       if(Boolean.getBoolean("containerworld.layout"))applyLayout(w);
+       inspect(w,guardStart);
       }catch(Throwable t){fail(t);}
-     }),6,TimeUnit.SECONDS);
+     }),Boolean.getBoolean("containerworld.stationaryguard")?60:6,TimeUnit.SECONDS);
     }catch(Throwable t){fail(t);}
    })).exceptionally(t->{fail(t);return null;});
   }catch(Throwable t){fail(t);}
@@ -58,14 +63,49 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   // Native offline authoring: activate a saved holder just as opening a chest does.
   BlockEntity.ensureBlockEntity(cs.getStore(),section,bc,p[0],p[1],p[2],w.getBlockType(p[0],p[1],p[2]),0);
   var c=BlockModule.getComponent(ItemContainerBlock.getComponentType(),w,p[0],p[1],p[2]);
-  if(c!=null && c.getItemContainer()==null && !Boolean.getBoolean("containerworld.reload"))c.setItemContainer(new SimpleItemContainer(c.getCapacity()));
+  if(c!=null && c.getItemContainer()==null && (!Boolean.getBoolean("containerworld.reload")||Boolean.getBoolean("containerworld.layout")))c.setItemContainer(new SimpleItemContainer(c.getCapacity()));
   if(c==null||c.getItemContainer()==null)throw new IllegalStateException("Missing native chest "+Arrays.toString(p)+" block="+w.getBlockType(p[0],p[1],p[2]).getId()+" blockBelow="+w.getBlockType(p[0],p[1]-1,p[2]).getId());
   return c.getItemContainer();
  }
  static void fill(com.hypixel.hytale.server.core.inventory.container.ItemContainer c){
   c.clear();for(short s=0;s<ITEMS.length;s++)c.setItemStackForSlot(s,new ItemStack(ITEMS[s],AMOUNTS[s]));
  }
- static void inspect(World w)throws Exception{
+ static void applyLayout(World w){
+  container(w,new int[]{-4,64,-2}).clear();
+  w.setBlock(-4,64,-2,"Empty");
+  w.setBlock(CHESTS[2][0],64,CHESTS[2][2],"Furniture_Kweebec_Chest_Large");
+  for(int i=0;i<2;i++)w.setBlock(CHESTS[i][0],64,CHESTS[i][2],OWNED);
+  for(var p:CHESTS)fill(container(w,p));
+  var store=w.getEntityStore().getStore();
+  store.forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){
+   var ref=chunk.getReferenceTo(i);var label=store.getComponent(ref,Nameplate.getComponentType());var text=label.getText();
+   if(text.startsWith("FRONT"))label.setText("3 OWNED - FRONT / WITNESSED");
+   if(text.startsWith("REAR"))label.setText("2 OWNED - REAR / UNSEEN");
+   if(text.startsWith("UNOWNED CONTROL")){
+    label.setText("1 CONTROL - UNOWNED");
+    store.getComponent(ref,TransformComponent.getComponentType()).setPosition(new org.joml.Vector3d(-4.5,66.4,16.5));
+   }
+   if(text.startsWith("ZERO COMMANDS"))label.setText("TEST ORDER: 1 CONTROL -> 2 REAR -> 3 FRONT / no commands");
+  }});
+ }
+ static void oneRun(World w,OwnedContainerRegistry registry){
+  var player=new SimpleItemContainer((short)36);int[] order={2,1,0};int ownedReports=0;
+  for(int i:order){
+   var chest=container(w,CHESTS[i]);var owned=registry.findAutomatic(w,chest,null);
+   if(i==2){if(owned!=null)throw new IllegalStateException("Control owned in one-run test");chest.moveItemStackFromSlotToSlot((short)0,4,player,(short)0);}
+   else{
+    if(owned==null)throw new IllegalStateException("Owned chest missing in one-run test");
+    var results=new ArrayList<ContainerRemovalProbe.Removal>();var probe=new ContainerRemovalProbe(chest,results::add);
+    var a=chest.registerChangeEvent(e->probe.source(e.transaction()));var b=player.registerChangeEvent(e->probe.receipt(e.transaction()));
+    try{chest.moveItemStackFromSlotToSlot((short)0,4,player,(short)0);probe.finish();if(results.size()!=1||results.getFirst().amount()!=4)throw new IllegalStateException("One-run attribution mismatch");ownedReports+=results.size();}finally{a.unregister();b.unregister();}
+   }
+  }
+  if(player.getItemStack((short)0).getQuantity()!=12||ownedReports!=2)throw new IllegalStateException("One-run sequence failed");
+  // Restore only after the entire sequence; there was no reset between its three transfers.
+  for(var p:CHESTS)fill(container(w,p));
+  System.out.println("ONE_RUN_PASS Order=CONTROL,REAR,FRONT ControlReports=0 OwnedReports=2 Received=12");
+ }
+ static void inspect(World w,org.joml.Vector3d guardStart)throws Exception{
   var store=w.getEntityStore().getStore();var npcs=new HashMap<String,Ref<EntityStore>>();
   store.forEachChunk(NPCEntity.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){
    var ref=chunk.getReferenceTo(i);var npc=store.getComponent(ref,NPCEntity.getComponentType());
@@ -78,10 +118,11 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   if(t.getPosition().distance(.5,64,10.5)>0.01||Math.abs(t.getRotation().yaw()-(float)Math.PI)>.001||Math.abs(h.getRotation().yaw()-(float)Math.PI)>.001||h.getDirection().z<.99)throw new IllegalStateException("Civilian moved/turned: "+t.getPosition()+" body="+t.getRotation()+" head="+h.getRotation());
   var report=new JsonObject();report.addProperty("civilianRole","Kweebec_Sapling");report.addProperty("civilianFrozen",true);report.addProperty("civilianBodyYaw",t.getRotation().yaw());report.addProperty("civilianHeadYaw",h.getRotation().yaw());report.addProperty("civilianDirection",h.getDirection().toString());report.addProperty("guardRole","Kweebec_Razorleaf");report.addProperty("guardFrozen",false);
   var gp=store.getComponent(guard,TransformComponent.getComponentType()).getPosition();report.addProperty("guardPosition",gp.toString());
+  if(Boolean.getBoolean("containerworld.stationaryguard")){if(guardStart==null||gp.distance(guardStart)>.25)throw new IllegalStateException("Guard idle movement remained active "+guardStart+" -> "+gp);report.addProperty("guardIdleObservedSeconds",60);report.addProperty("guardIdleDisplacement",gp.distance(guardStart));}
   if(gp.x<7||gp.x>=12||gp.z<0||gp.z>=22)throw new IllegalStateException("Guard left shielded alcove "+gp);
   // Validate opaque intersections along the entire eye-to-chest/player segment, not a crime/witness check.
-  for(double zz:new double[]{4.5,5.5,15.5,16.5}){
-   double fraction=(gp.x-6.5)/(gp.x-.5), wallZ=gp.z+fraction*(zz-gp.z);
+  for(double[] point:new double[][]{{.5,4.5},{.5,5.5},{.5,15.5},{.5,16.5},{-2.5,15.5},{-2.5,16.5}}){
+   double fraction=(gp.x-6.5)/(gp.x-point[0]), wallZ=gp.z+fraction*(point[1]-gp.z);
    for(int y=64;y<=68;y++)if(!w.getBlockType(6,y,(int)Math.floor(wallZ)).getId().equals("Rock_Stone_Cobble"))throw new IllegalStateException("Shield wall gap");
   }
   report.addProperty("guardChestAndApproachSightlinesOpaque",true);
@@ -90,7 +131,7 @@ public final class ContainerWorldBuilder extends JavaPlugin {
    if(x< -8||x>13||z< -7||z>44||reachable.contains(k))continue;
    if(w.getBlockType(x,64,z).getId().equals("Empty")&&w.getBlockType(x,65,z).getId().equals("Empty")){reachable.add(k);q.add(new int[]{x,z});}
   }}
-  if(!reachable.contains("9,10")||!reachable.contains("0,15")||!reachable.contains("0,5")||!reachable.contains("-1,15"))throw new IllegalStateException("Missing guard/hub/two-player walk access");
+  if(!reachable.contains("9,10")||!reachable.contains("0,15")||!reachable.contains("0,5")||!reachable.contains("-3,15"))throw new IllegalStateException("Missing guard/control/owned walk access");
   report.addProperty("hubChestGuardTwoPlayerWalkAccess",true);report.addProperty("guardRoute","south around wall x=6,z<0");
   var spawn=w.getWorldConfig().getSpawnProvider().getSpawnPoint(w,new UUID(0,0)).getPosition();
   if(spawn.distance(.5,64.1,7.5)>.01||w.getBlock(0,63,7)==0||w.getBlock(0,64,7)!=0||w.getBlock(0,65,7)!=0)throw new IllegalStateException("Invalid hub spawn");
@@ -98,16 +139,34 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   int[] labelCount={0};store.forEachChunk(Nameplate.getComponentType(),(chunk,b)->{labelCount[0]+=chunk.size();});
   if(labelCount[0]<15)throw new IllegalStateException("Missing coordinate/range labels: "+labelCount[0]);report.addProperty("labelEntities",labelCount[0]);
   var registry=new OwnedContainerRegistry();var chestReport=new JsonArray();
-  int[] ownedLabels={0};
+  int[] ownedLabels={0};int[] controls={0};
   store.forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){
-    var ref=chunk.getReferenceTo(i);var label=store.getComponent(ref,Nameplate.getComponentType());String text=label.getText(); if(Boolean.getBoolean("containerworld.pristine") && text.contains("/hythiefcontainer"))throw new IllegalStateException("Manual-command label persisted"); if(Boolean.getBoolean("containerworld.pristine") && text.contains("/hythiefcontainer"))throw new IllegalStateException("Manual-command label persisted");
-    if(text.startsWith("FRONT")){label.setText("FRONT - Kweebec-owned / open and take items");ownedLabels[0]++;}
-    if(text.startsWith("REAR")){label.setText("REAR - Kweebec-owned / open and take items");ownedLabels[0]++;}
-    if(text.startsWith("UNOWNED CONTROL"))label.setText("UNOWNED CONTROL - no removal diagnostic");
-    if(text.startsWith("HUB"))label.setText("ZERO COMMANDS - automatic attribution / no crime consequences");
+    var ref=chunk.getReferenceTo(i);var label=store.getComponent(ref,Nameplate.getComponentType());String text=label.getText();
+    if(text.contains("/hythiefcontainer"))throw new IllegalStateException("Manual-command label persisted");
+    if(text.equals("3 OWNED - FRONT / WITNESSED")||text.equals("2 OWNED - REAR / UNSEEN"))ownedLabels[0]++;
+    if(text.equals("1 CONTROL - UNOWNED")){
+     controls[0]++;if(store.getComponent(ref,TransformComponent.getComponentType()).getPosition().distance(-4.5,66.4,16.5)>.01)throw new IllegalStateException("Control label not moved");
+    }
   }});
-  if(ownedLabels[0]!=2)throw new IllegalStateException("Expected two owned station labels");
+  if(ownedLabels[0]!=2||controls[0]!=1)throw new IllegalStateException("Expected numbered owned/control labels");
   report.addProperty("ownedLabelsWithoutCommands",true);
+  if(!w.getBlockType(-4,64,-2).getId().equals("Empty"))throw new IllegalStateException("Old hidden control remains");
+  var nativeChest=com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType.getAssetMap().getAsset("Furniture_Kweebec_Chest_Large");
+  for(int i=0;i<3;i++){
+   var p=CHESTS[i];var type=w.getBlockType(p[0],p[1],p[2]);
+   if(!type.getId().equals(i==2?"Furniture_Kweebec_Chest_Large":OWNED))throw new IllegalStateException("Wrong owned/control asset");
+   if(!type.getInteractions().get(com.hypixel.hytale.protocol.InteractionType.Use).equals("Open_Container"))throw new IllegalStateException("Native open changed");
+   if(!type.getCustomModel().equals(nativeChest.getCustomModel())||type.getCustomModelScale()!=nativeChest.getCustomModelScale())throw new IllegalStateException("Chest appearance changed");
+   if(!type.getInteractionHint().equals(i==2?nativeChest.getInteractionHint():HINT))throw new IllegalStateException("Incorrect ownership hint");
+  }
+  if(!"Steal from Chest".equals(com.hypixel.hytale.server.core.modules.i18n.I18nModule.get().getMessages("en-US").get(HINT)))throw new IllegalStateException("Owned hint translation missing");
+  for(double x:new double[]{-2.5,.5}){
+   double dx=x-.5,dz=5;double distance=Math.hypot(dx,dz),angle=Math.toDegrees(Math.atan2(Math.abs(dx),dz));
+   if(distance>15||angle>=90)throw new IllegalStateException("Front approach outside native forward sector/range");
+   for(int step=1;step<=20;step++){double f=step/20.0;if(!w.getBlockType((int)Math.floor(.5+dx*f),65,(int)Math.floor(10.5+dz*f)).getId().equals("Empty"))throw new IllegalStateException("Front/control approach obstructed");}
+  }
+  report.addProperty("controlPlayerDistance",Math.hypot(3,5));report.addProperty("controlPlayerForwardAngleDegrees",Math.toDegrees(Math.atan2(3,5)));report.addProperty("frontControlSightlinesClear",true);
+  report.addProperty("ownedHint","Steal from Chest");report.addProperty("controlNativeHint",nativeChest.getInteractionHint());report.addProperty("nativeOpenContainerPreserved",true);
   for(int[] p:CHESTS){var c=container(w,p);if(c.getCapacity()!=36)throw new IllegalStateException("Wrong chest capacity");
    for(short s=0;s<3;s++){var item=c.getItemStack(s);if(item==null||!item.getItemId().equals(ITEMS[s])||item.getQuantity()!=AMOUNTS[s])throw new IllegalStateException("Test stack missing");}
    var r=new JsonObject();r.addProperty("coordinate",Arrays.toString(p));r.addProperty("capacity",c.getCapacity());r.addProperty("matchingStacks",true);chestReport.add(r);
@@ -118,6 +177,7 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   for(var entry:entries)if(registry.findAutomatic(w,entry.container(),null)!=entry)throw new IllegalStateException("Automatic lookup mismatch");
   if(registry.findAutomatic(w,container(w,CHESTS[2]),null)!=null)throw new IllegalStateException("Control owned");
   registry.removeAutomatic(w);if(!registry.automatic(w).isEmpty())throw new IllegalStateException("Stale world ownership");registry.replaceAutomatic(w,entries);
+  oneRun(w,registry);report.addProperty("oneRunControlRearFrontWithoutReset",true);
   report.addProperty("automaticRegistryTwoOwnedOneControl",true);report.addProperty("registryRemovalRebuild",true);
   // Use the SAME packaged probe/registry as the installed diagnostic plugin, on this world's actual containers.
   realProbe(container(w,CHESTS[0]),"front-partial",4,(c,p)->c.moveItemStackFromSlotToSlot((short)0,4,p,(short)0));

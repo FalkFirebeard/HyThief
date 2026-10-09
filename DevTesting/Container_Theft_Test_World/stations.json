@@ -1,0 +1,357 @@
+{
+  "name": "HyThief Container Theft Test World",
+  "spawn": [
+    0.5,
+    64.1,
+    7.5
+  ],
+  "civilian": {
+    "role": "Kweebec_Sapling",
+    "position": [
+      0.5,
+      64,
+      10.5
+    ],
+    "yaw": 3.141592653589793,
+    "frozen": true
+  },
+  "guard": {
+    "role": "Kweebec_Razorleaf",
+    "position": [
+      9.5,
+      64,
+      10.5
+    ],
+    "frozen": false,
+    "idleWanderRadius": 0,
+    "idleConstraintScope": "save-local nullable native idle motion omitted; unfrozen native combat retained",
+    "idleMotion": "$Null"
+  },
+  "stations": [
+    {
+      "name": "Front",
+      "coordinate": [
+        0,
+        64,
+        16
+      ],
+      "ownedCandidate": true,
+      "stacks": [
+        {
+          "slot": 0,
+          "item": "Ingredient_Bar_Copper",
+          "quantity": 16
+        },
+        {
+          "slot": 1,
+          "item": "Ingredient_Bar_Iron",
+          "quantity": 8
+        },
+        {
+          "slot": 2,
+          "item": "Ingredient_Fibre",
+          "quantity": 32
+        }
+      ],
+      "automaticallyOwned": true,
+      "blockId": "HyThief_Test_Owned_Kweebec_Chest"
+    },
+    {
+      "name": "Rear",
+      "coordinate": [
+        0,
+        64,
+        4
+      ],
+      "ownedCandidate": true,
+      "stacks": [
+        {
+          "slot": 0,
+          "item": "Ingredient_Bar_Copper",
+          "quantity": 16
+        },
+        {
+          "slot": 1,
+          "item": "Ingredient_Bar_Iron",
+          "quantity": 8
+        },
+        {
+          "slot": 2,
+          "item": "Ingredient_Fibre",
+          "quantity": 32
+        }
+      ],
+      "automaticallyOwned": true,
+      "blockId": "HyThief_Test_Owned_Kweebec_Chest"
+    },
+    {
+      "name": "Control",
+      "coordinate": [
+        -3,
+        64,
+        16
+      ],
+      "ownedCandidate": false,
+      "stacks": [
+        {
+          "slot": 0,
+          "item": "Ingredient_Bar_Copper",
+          "quantity": 16
+        },
+        {
+          "slot": 1,
+          "item": "Ingredient_Bar_Iron",
+          "quantity": 8
+        },
+        {
+          "slot": 2,
+          "item": "Ingredient_Fibre",
+          "quantity": 32
+        }
+      ],
+      "automaticallyOwned": false,
+      "blockId": "Furniture_Kweebec_Chest_Large"
+    }
+  ],
+  "markers": [
+    {
+      "distance": 1,
+      "playerFeet": [
+        0.5,
+        64,
+        11.5
+      ]
+    },
+    {
+      "distance": 3,
+      "playerFeet": [
+        0.5,
+        64,
+        13.5
+      ]
+    },
+    {
+      "distance": 4,
+      "playerFeet": [
+        0.5,
+        64,
+        14.5
+      ]
+    },
+    {
+      "distance": 5,
+      "playerFeet": [
+        0.5,
+        64,
+        15.5
+      ]
+    },
+    {
+      "distance": 8,
+      "playerFeet": [
+        0.5,
+        64,
+        18.5
+      ]
+    },
+    {
+      "distance": 12,
+      "playerFeet": [
+        0.5,
+        64,
+        22.5
+      ]
+    },
+    {
+      "distance": 15,
+      "playerFeet": [
+        0.5,
+        64,
+        25.5
+      ]
+    },
+    {
+      "distance": 30,
+      "playerFeet": [
+        0.5,
+        64,
+        40.5
+      ]
+    },
+    {
+      "distance": 32,
+      "playerFeet": [
+        0.5,
+        64,
+        42.5
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "3 OWNED - FRONT / WITNESSED",
+      "position": [
+        -1.5,
+        66.4,
+        16.5
+      ]
+    },
+    {
+      "text": "2 OWNED - REAR / UNSEEN",
+      "position": [
+        -1.5,
+        66.4,
+        4.5
+      ]
+    },
+    {
+      "text": "1 CONTROL - UNOWNED",
+      "position": [
+        -4.5,
+        66.4,
+        16.5
+      ]
+    },
+    {
+      "text": "CIVILIAN: fixed +Z facing / native Frozen",
+      "position": [
+        0.5,
+        67.3,
+        10.5
+      ]
+    },
+    {
+      "text": "TEST ORDER: 1 CONTROL -> 2 REAR -> 3 FRONT / no commands",
+      "position": [
+        0.5,
+        66.8,
+        -4.5
+      ]
+    },
+    {
+      "text": "GUARD: native Razorleaf / entrance around south wall",
+      "position": [
+        9.5,
+        67.5,
+        10.5
+      ]
+    },
+    {
+      "text": "1m from civilian \u2014 centerline",
+      "position": [
+        -3.5,
+        64.8,
+        11.5
+      ]
+    },
+    {
+      "text": "3m from civilian \u2014 centerline",
+      "position": [
+        -3.5,
+        64.8,
+        13.5
+      ]
+    },
+    {
+      "text": "4m from civilian \u2014 centerline",
+      "position": [
+        -3.5,
+        64.8,
+        14.5
+      ]
+    },
+    {
+      "text": "5m from civilian \u2014 centerline",
+      "position": [
+        -3.5,
+        64.8,
+        15.5
+      ]
+    },
+    {
+      "text": "8m from civilian \u2014 centerline",
+      "position": [
+        -3.5,
+        64.8,
+        18.5
+      ]
+    },
+    {
+      "text": "12m from civilian \u2014 centerline",
+      "position": [
+        -3.5,
+        64.8,
+        22.5
+      ]
+    },
+    {
+      "text": "15m from civilian \u2014 centerline",
+      "position": [
+        -3.5,
+        64.8,
+        25.5
+      ]
+    },
+    {
+      "text": "30m from civilian \u2014 centerline",
+      "position": [
+        -3.5,
+        64.8,
+        40.5
+      ]
+    },
+    {
+      "text": "32m from civilian \u2014 centerline",
+      "position": [
+        -3.5,
+        64.8,
+        42.5
+      ]
+    }
+  ],
+  "wall": {
+    "x": 6,
+    "z": [
+      0,
+      22
+    ],
+    "y": [
+      64,
+      68
+    ]
+  },
+  "frontPlayer": [
+    0.5,
+    64,
+    15.5
+  ],
+  "rearPlayer": [
+    0.5,
+    64,
+    5.5
+  ],
+  "twoPlayerPositions": [
+    [
+      0.5,
+      64,
+      15.5
+    ],
+    [
+      -0.5,
+      64,
+      15.5
+    ]
+  ],
+  "notes": "Control first, rear second, front last. Attribution only; future witnessed/unseen consequences are not implemented. Owned hints come from a save-local native-inherited test item.",
+  "testOrder": [
+    "Control",
+    "Rear",
+    "Front"
+  ],
+  "fixtureVersion": "1.0.1",
+  "controlPlayer": [
+    -2.5,
+    64,
+    15.5
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "Parent": "Furniture_Kweebec_Chest_Large",
+  "BlockType": {
+    "InteractionHint": "server.hythief.containerFixture.stealFromChest",
+    "Interactions": {
+      "Use": "Open_Container"
+    }
+  }
+}

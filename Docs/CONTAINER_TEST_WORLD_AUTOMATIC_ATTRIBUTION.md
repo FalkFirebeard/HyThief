@@ -1,3 +1,5 @@
+> Layout/test-order update: see `CONTAINER_TEST_WORLD_LAYOUT_OWNERSHIP_UI.md`. This document preserves the previous container.2 checkpoint layout.
+
 # HyThief automatic container attribution test world
 
 Checkpoint: `1.3.1-container.2`, Hytale stable `=0.6.8`. No public release.
@@ -44,11 +46,11 @@ Individual reset executes the existing `Reset-Container-Theft.ps1` (CMD wrapper 
 
 ## Standing development test-world rule
 
-For Firebeard Hytale development, manual-mechanic tests must be purpose-built and plug-and-play: load → spawn at stage → walk to object → test. Random-world searches, manual coordinates, entity/container marking and setup commands must not be part of normal testing. Fallback commands are debug tools only. A fresh reset/load must permit immediate testing.
+For Firebeard Hytale development, manual-mechanic tests must be purpose-built and plug-and-play: load â†’ spawn at stage â†’ walk to object â†’ test. Random-world searches, manual coordinates, entity/container marking and setup commands must not be part of normal testing. Fallback commands are debug tools only. A fresh reset/load must permit immediate testing.
 
 Runtime save/master/rollback binaries and private permission data stay local under the established DevTesting ignore rule. Source, diagnostic version configuration, reset scripts, verifier sources and this note are committed as the development checkpoint; no public release is published.
 
-## Final deployment acceptance — 2026-10-09
+## Final deployment acceptance â€” 2026-10-09
 
 Final native validation used `Verification/Verify-Saved-World.ps1` against a disposable copy of the actual restored master. Evidence: `VerificationRuns/20261009-154713-9aa907b997fc458baec2f1fcf19d043f/native.log` and `reload-verification.json`. Front full withdrawal: 16 copper, exactly one report. Rear quick withdrawal: 16 copper, exactly one report. Each partial withdrawal: 4 copper, exactly one report. Actual control transfer: 4 copper, automatic registry remained unowned. All prior matrix cases passed again.
 

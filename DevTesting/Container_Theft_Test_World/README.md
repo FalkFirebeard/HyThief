@@ -1,61 +1,53 @@
-# HyThief automatic container attribution test world
+# Container Theft Test World: forward control and ownership hints
 
-Checkpoint: `1.3.1-container.2`, Hytale stable `=0.6.8`. No public release.
+Current diagnostic JAR remains **HyThief 1.3.1-container.2**, stable target **=0.6.8**. Its SHA256 remains `020369D69BBADEBB13FD0B57257FDEE39C1970F133518BE494652FC8B6EE62DB`. No Java/backend source or global mod changes. The save-local `ContainerTheftFixture` asset pack is now **1.0.1**, layout version **2**.
 
-## Firebeard workflow
+## Firebeard: one run, zero commands
 
-Load **HyThief Container Theft Test World**. Spawn is `(0.5,64.1,7.5)`, facing +Z toward the civilian/front stage. Open the labeled FRONT chest and take items, then REAR, then UNOWNED CONTROL. No mark, clear, join, coordinates, or other commands are required.
+Load **HyThief Container Theft Test World**. Spawn remains `(0.5,64.1,7.5)`, looking +Z at the central civilian/front stage. Follow the numbered labels:
 
-| Object | Block position | Automatic ownership |
-|---|---|---|
-| Front chest | `0 64 16` | Kweebec test property |
-| Rear chest | `0 64 4` | Kweebec test property |
-| Control chest | `-4 64 -2` | Unowned |
+1. **CONTROL â€” UNOWNED**: the left front-side chest. Open it and remove items.
+2. **OWNED â€” REAR / UNSEEN**: behind the civilian. Open it and remove items.
+3. **OWNED â€” FRONT / WITNESSED**: directly in front of the civilian. Open it and remove items last.
 
-All three native 36-slot chests reset to 16 copper bars, 8 iron bars and 32 fibre. Civilian is native `Kweebec_Sapling`, frozen at `(0.5,64,10.5)` with body/head yaw pi, facing +Z/front. Native `Kweebec_Razorleaf` remains unfrozen behind the opaque x=6 shield wall; walking access goes around the south end, z<0. Existing range markers 1/3/4/5/8/12/15/30/32m remain. No witness, sound, crime, warning or guard consequence is implemented here.
+No reset between these tests. No mark/clear/join/coordinates/setup commands. Each chest starts with its own 16 copper bars, 8 iron bars and 32 fibre in a native 36-slot container.
 
-Expected: each valid owned withdrawal creates one `[HyThief ContainerTest] Action=REMOVE` log with the actual sender UUID, exact chest, item and withdrawn quantity. Insertion, internal moves, sorting, failed moves and control withdrawals create no owned removal. IGNORE diagnostics may describe a scoped request without a paired withdrawal. Front/rear direction does not change attribution in this checkpoint.
+| Chest | Block position | Approach position | Hint | Attribution |
+|---|---|---|---|---|
+| Control | `-3 64 16` | `-2.5 64 15.5` | Normal native wording | Unowned; no owned-removal diagnostic |
+| Rear | `0 64 4` | `0.5 64 5.5` | **Steal from Chest** | Automatically owned |
+| Front | `0 64 16` | `0.5 64 15.5` | **Steal from Chest** | Automatically owned |
 
-## Recovery and safety
+The old off-side control at `-4 64 -2` was removed from the new stage. Ownership labels are visible before removing anything; hint rendering on the real client remains part of Firebeard's acceptance test.
 
-Interrupted session had not applied automatic ownership: installed JAR remained container.1 with matching SHA256; all 28 pristine-master files verified. Existing uncommitted source was valid completed Checkpoint-1 work. No interrupted changes needed rollback.
+## Current behavior versus future behavior
 
-Complete pre-change source, JAR, master and active save were backed up to `Rollback-container.1-before-auto` beside this README. The original diagnostic probe is byte-identical in source; existing pickpocket gameplay/stealth/combat code is unchanged except diagnostic lifecycle setup/start/shutdown wiring. Public Gradle version remains 1.3.0; diagnostic init script selects container.2.
+**Current checkpoint is attribution only.** Valid rear/front withdrawals should each log one correctly attributed `[HyThief ContainerTest] Action=REMOVE`; control withdrawal should not. Native insertion/internal movement/sort/no-op behavior remains unchanged. None of the three chest tests should trigger a newly added theft warning or guard response.
 
-## Automatic registration architecture
+The labels **WITNESSED** and **UNSEEN** describe staged geometry for the future witness checkpoint. Actual witness evaluation, NPC warning, Kweebec danger messages, guard aggression, sound, faction ownership and integrations are not implemented by this update. Future order remains control â†’ unseen rear â†’ witnessed front, with the potentially aggressive front test last.
 
-`PickpocketPlugin` enables diagnostics only for `-container.` builds. Setup registers StartWorld/RemoveWorld events; plugin start waits for Universe ready to catch already loaded worlds. The universe-ready future is not available at setup on stable 0.6.8, verified by an isolated failed boot and corrected before deployment.
+The native `Kweebec_Sapling` remains frozen at `(0.5,64,10.5)` with body/head yaw pi, facing +Z. Its native template declares ViewRange 15 and ViewSector 180. The control approach is 5.83095 blocks away at 30.96376 degrees from forward; the front approach is 5 blocks directly forward. Both approach eye-level block sightlines are clear. This is geometry/perception-configuration validation, not proof that the frozen NPC currently runs witness AI. No perception or crouch calibration was changed.
 
-Automatic configuration is stored in the **development save marker**, `container-theft-test-world.json`, under `AutoContainerDiagnostics`, not in production ownership coordinates. It requires the exact display name, fixture kind, matching world UUID, schema version, Kweebec owner, exactly two distinct owned positions and a distinct control position. Each loaded native block ID/container is validated on the world thread before registry registration. Keys are world UUID + XYZ; entries also retain world instance and live ItemContainer identity.
+The native Razorleaf remains unfrozen in the shielded alcove. Native verification checks opaque guard sightline intersections to all three chests and player approaches, and walkable access around the south end of the x=6 wall. Existing range markers and reusable prefabs remain intact. A post-reset check exposed the old idle-wander escape: its native motion component hard-codes radius 10 and does not consume the fixture WanderRadius=1 setting. The save-local variant now sets only `Modify.MotionComponent = "$Null"`, using the native template nullable idle-motion hook. The guard stays unfrozen; inherited beacon/alert/search/attack branches and movement controller remain unchanged. A 60-second native idle check measured zero displacement and preserved shielding. No hostility signal was sent; combat execution itself remains reserved for the future witness checkpoint.
 
-World-load section requests activate native containers. Automatic entries are removed on world removal/shutdown, recreated on load/restart and refreshed on inventory requests if references have changed. No tick polling. Repeated registration failures are deduplicated. Every player in the identified fixture is automatically observed; no join is necessary. Manual opt-in commands remain available outside this fixture. Control is never entered into the automatic registry. The existing scoped native inventory dispatch/probe correlates the real packet sender's inventory receipt, preserves mirrored-event deduplication and never replays a possibly applied native operation.
+## Test-only native ownership hint
 
-## Validation evidence and limits
+New asset: `Pack/Server/Item/Items/Container/HyThief_Test_Owned_Kweebec_Chest.json`.
 
-Clean Gradle build passed against pinned stable 0.6.8 with Java 25. Only the existing two MerchantStoragePage inventory-removal warnings and existing Gradle deprecation notice remain.
+It inherits `Furniture_Kweebec_Chest_Large`, overriding only the block interaction hint and explicitly retaining `Use = Open_Container`. The native model/scale, textures, open/close states, capacity, sounds and other parent behavior are inherited; no replacement custom UI. Localization in `Pack/Server/Languages/en-US/server.lang` defines `server.hythief.containerFixture.stealFromChest` as **Steal from Chest**. The control uses the untouched native chest asset and its existing `server.interactionHints.openDoor` key. The two automatically owned entries now validate the test-only block ID; the control stays outside the registry.
 
-`Auto-Validation/label-persistence.log` and `Auto-Restart/native.log` prove actual HyThief automatic registration of both coordinates with control unowned, on separate native server boots. The packaged registry/probe bytecode was also exercised against actual saved native containers: front and rear partial withdrawals of four copper bars each report once; insert/internal operations report zero; the 14-case native matrix includes full/partial/quick/swap/failed/sort/rapid transfers, two recipients plus untouched viewer, and combined inventories. Registry lookups exclude control and removal/rebuild clears entries.
+This pack resides only inside this development save's `mods/ContainerTheftFixture`; it is not installed as a global chest override and is not added to the production HyThief JAR. The named-world/UUID/marker gating and native attribution code are unchanged.
 
-The native verifier confirms spawn configuration/headroom, all fixed chest stacks, persisted command-free labels, the exact two NPC roles, stable frozen civilian body/head orientation, unfrozen guard, opaque guard-to-chest/approach geometry and walkable access. Saved-label mutation required native `markNeedsSaving()`; fresh-restart verification caught and corrected missing persistence before handoff.
+Verified source references: [stable block asset reference](https://docs.hytale.com/assets/item/block/blocks/), [native container interaction reference](https://docs.hytale.com/api/com/hypixel/hytale/server/core/modules/interaction/interaction/config/server/OpenContainerInteraction), [official Update 6 hotfix notes](https://hytale.com/news/2026/8/hotfixes-update-6). The installed stable Assets.zip supplied the native chest definition and Kweebec template; the live installation was read-only. No discrepancy affecting this hint approach was found. The simple native hint string meets this checkpoint; no custom second-line ownership UI was introduced.
 
-Real client spawn, interaction UI and inbound transfer packets still require Firebeard's physical test. Automated native receipt tests are not a real network/UI session. Guard shielding was verified in the native test runs; prolonged free-running guard movement is not certified here. The frozen civilian is a deterministic future witness fixture; witness execution policy is intentionally deferred.
+## Validation, rollback and handoff
 
-Individual reset executes the existing `Reset-Container-Theft.ps1` (CMD wrapper unchanged), restores only this new active save, verifies checksums and preserves dirty backups. Shared reset already contains all three worlds and is left unchanged. Its acceptance test executes the exact scripts on disposable copies of all three masters, preserving the two existing live worlds. The existing desktop shortcut still reaches the shared launcher.
+`Layout-Authoring/native.log` proves native asset inheritance/localization and authoring. `Layout-Reload/native.log` proves a fresh saved-world load automatically registers both owned chests with the new live block IDs, preserves the numbered labels/control position/frozen orientation, and excludes the native control. The packaged attribution probe/registry and existing 14-case matrix passed on native containers. A shared recipient took four copper from control, rear and front in that order without reset between transfers: twelve received, zero control reports, two owned reports.
 
-## Standing development test-world rule
+The reusable `Verification/Verify-Saved-World.ps1` now checks this layout, ownership hints, normal Open_Container wiring, front/control geometry and one-run sequence. It still operates only on disposable master copies. Physical client hover hints and chest opening/transfer UI remain Firebeard's acceptance test.
 
-For Firebeard Hytale development, manual-mechanic tests must be purpose-built and plug-and-play: load → spawn at stage → walk to object → test. Random-world searches, manual coordinates, entity/container marking and setup commands must not be part of normal testing. Fallback commands are debug tools only. A fresh reset/load must permit immediate testing.
+Pre-change master, active save, JAR, verifier and notes are preserved in `Rollback-layout.1-before-forward-control`. Individual reset restores the new stage and its fixed inventories; reset scripts and shared/desktop launchers are unchanged. Shared-reset verification uses disposable copies of all three worlds, keeping both older live saves/masters untouched. No public release is published.
 
-Runtime save/master/rollback binaries and private permission data stay local under the established DevTesting ignore rule. Source, diagnostic version configuration, reset scripts, verifier sources and this note are committed as the development checkpoint; no public release is published.
+Final idle-staging evidence: `Layout-Idle-Guard-Verification/native.log` and `reload-verification.json`, 60 seconds, displacement 0.0. The prior failed disposable run is preserved in `VerificationRuns/20261009-160336-c1225c599b6c4bf787c52e026cf32ef7/native.log`; it did not change the active save/master. The reusable verifier accepts `-LongGuardCheck` to repeat the 60-second check; default checks remain short. This is a test-save-only guard idle change, not a production NPC policy change.
 
-## Final deployment acceptance — 2026-10-09
-
-Final native validation used `Verification/Verify-Saved-World.ps1` against a disposable copy of the actual restored master. Evidence: `VerificationRuns/20261009-154713-9aa907b997fc458baec2f1fcf19d043f/native.log` and `reload-verification.json`. Front full withdrawal: 16 copper, exactly one report. Rear quick withdrawal: 16 copper, exactly one report. Each partial withdrawal: 4 copper, exactly one report. Actual control transfer: 4 copper, automatic registry remained unowned. All prior matrix cases passed again.
-
-Final installed JAR SHA256: `020369D69BBADEBB13FD0B57257FDEE39C1970F133518BE494652FC8B6EE62DB`. Active JAR equals clean-build output, version container.2, target =0.6.8, one Local:HyThief identity. The null-container validation guard rejects a missing live native inventory before registration.
-
-The individual live reset passed and active/master are checksum-identical (28 files). Shared-reset disposable-copy tests restored all three worlds, preserving dirty backups: HyThief 27 files, HyStash 42, Container Theft 28. `auto-boundary-verification.json` confirms both older masters/live saves, archived releases including v1.2, reusable arena and unrelated global mods remain hash-identical.
-
-Cross-drive installation recovery: the first Python rename from C: to E: was rejected by Windows before removing the active container.1 JAR. Deployment resumed from that exact state using verified copy, then a same-drive staged replacement. Both original container.1 copies and the pre-final-validation container.2 JAR remain in the rollback directory. No reset scripts or desktop shortcuts were changed.
-
-Run the reusable native verifier with Hytale closed and a completed diagnostic build. It compiles a disposable helper, extracts the exact packaged registry/probe bytecode, clones the local master, and boots the pinned server in an isolated VerificationRuns directory. It never modifies the master or active saves. Runtime worlds, rollback binaries and personal permissions remain local, intentionally uncommitted.
+Final acceptance validation (2026-10-09): the freshly reset 30-file master and active Container Theft save are checksum-identical. The final reusable native-server run passed at `VerificationRuns/20261009-160925-dba535542ece4034b3017185c61beb98`, including automatic ownership, hint localization/Open_Container inheritance, layout geometry, fixed inventories and the control/rear/front one-run attribution sequence. Final shared-reset verification passed on disposable copies of all three current masters, including dirty-save backup checks; the existing HyThief and HyStash live worlds were not reset. `layout-boundary-verification.json` confirms unchanged Java source, global installed mods, archived releases, reusable prefabs and both older worlds/masters. Firebeard must still confirm real-client hints, opening and item transfers; no witness/guard consequence is implemented by this checkpoint.

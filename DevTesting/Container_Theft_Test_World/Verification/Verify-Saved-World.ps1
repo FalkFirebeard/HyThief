@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$DiagnosticJar)
+param([string]$DiagnosticJar, [switch]$LongGuardCheck)
 $ErrorActionPreference='Stop'
 $project=Split-Path (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent) -Parent
 $root=Join-Path $project 'DevTesting\Container_Theft_Test_World'
@@ -29,9 +29,10 @@ try{foreach($entry in $zip.Entries){
 }}finally{$zip.Dispose()}
 & (Join-Path $jdk 'jar.exe') --create --file (Join-Path $run 'mods\ContainerWorldBuilder.jar') -C $classes . -C $PSScriptRoot manifest.json
 if($LASTEXITCODE -ne 0){throw 'Verifier packaging failed'}
+$guardFlag='-Dcontainerworld.stationaryguard='+$LongGuardCheck.IsPresent
 Push-Location -LiteralPath $run
 try{
- & (Join-Path $jdk 'java.exe') '-Dcontainerworld.reload=true' '-Dcontainerworld.pristine=true' -jar $server --assets 'C:\Users\askin\AppData\Roaming\Hytale\install\release\package\game\latest\Assets.zip' --auth-mode offline --bind 127.0.0.1:15539 --disable-sentry --disable-file-watcher --disable-cpb-build *> 'native.log'
+ & (Join-Path $jdk 'java.exe') '-Dcontainerworld.reload=true' '-Dcontainerworld.pristine=true' $guardFlag -jar $server --assets 'C:\Users\askin\AppData\Roaming\Hytale\install\release\package\game\latest\Assets.zip' --auth-mode offline --bind 127.0.0.1:15539 --disable-sentry --disable-file-watcher --disable-cpb-build *> 'native.log'
  if($LASTEXITCODE -ne 0 -or !(Test-Path 'reload-verification.json')){throw ('Native verification failed; inspect '+$run+'\native.log')}
  if(!(Select-String -LiteralPath 'native.log' -SimpleMatch 'Action=AUTO_REGISTER Owner=Kweebec')){throw 'No real plugin automatic registration'}
  if(Select-String -LiteralPath 'native.log' -Pattern 'AUTO_REGISTER_ERROR|CONTAINER_WORLD_FAILED'){throw 'Native validation error'}
