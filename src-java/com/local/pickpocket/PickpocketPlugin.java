@@ -51,6 +51,7 @@ public final class PickpocketPlugin extends JavaPlugin {
       new ConcurrentHashMap<>();
   private final Gson gson = new Gson();
   private MerchantInteractListener merchantInteractListener;
+  private HyThiefContainerDiagnostics containerDiagnostics;
   private PickpocketRoleResolver roleResolver = PickpocketRoleResolver.fallback();
   private PickpocketRules pickpocketRules = PickpocketRules.fallback();
 
@@ -68,10 +69,17 @@ public final class PickpocketPlugin extends JavaPlugin {
     com.hypixel.hytale.server.npc.NPCPlugin.get().registerCoreComponentType(
         HyThiefStealthAcquisition.TYPE, HyThiefStealthAcquisition.FilterBuilder::new);
     getEntityStoreRegistry().registerSystem(new HyThiefNativeProbe(this));
+    if (getManifest().getVersion().toString().contains("-container.")) {
+      containerDiagnostics = new HyThiefContainerDiagnostics(this);
+    }
   }
 
   @Override
+  protected void start() { if (containerDiagnostics != null) containerDiagnostics.start(); }
+
+  @Override
   protected void shutdown() {
+    if (containerDiagnostics != null) containerDiagnostics.close();
     if (merchantInteractListener != null) {
       merchantInteractListener.shutdown();
     }

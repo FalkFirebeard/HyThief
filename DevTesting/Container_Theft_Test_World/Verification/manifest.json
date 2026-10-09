@@ -1,0 +1,10 @@
+{
+  "Group": "FirebeardDev",
+  "Name": "ContainerWorldBuilder",
+  "Version": "1.0.0",
+  "ServerVersion": "=0.6.8",
+  "Main": "com.local.pickpocket.ContainerWorldBuilder",
+  "Dependencies": {
+    "Local:HyThief": "*"
+  }
+}

@@ -1,0 +1,48 @@
+[CmdletBinding()]
+param()
+$ErrorActionPreference='Stop'
+$root=$PSScriptRoot
+$master=Join-Path $root 'Master'
+$saves='C:\Users\askin\AppData\Roaming\Hytale\UserData\Saves'
+$active=[IO.Path]::GetFullPath((Join-Path $saves 'HyThief Container Theft Test World'))
+if($active -cne 'C:\Users\askin\AppData\Roaming\Hytale\UserData\Saves\HyThief Container Theft Test World'){throw 'Unexpected active path'}
+function Assert-Closed {
+ $running=@(Get-CimInstance Win32_Process | Where-Object { $_.Name -like 'HytaleClient*' -or $_.Name -like 'HytaleServer*' -or ($_.Name -eq 'java.exe' -and $_.CommandLine -match 'HytaleServer|hytale.server') })
+ if($running.Count){throw 'Close Hytale and all Hytale servers before resetting. No save changed.'}
+}
+function Check-Hashes($base,$records){foreach($r in $records){$p=Join-Path $base $r.Relative;if(!(Test-Path -LiteralPath $p) -or (Get-FileHash -LiteralPath $p).Hash -ne $r.Hash){throw ('Checksum mismatch: '+$p)}}}
+function Check-NoRedirect($base){if(Test-Path -LiteralPath $base){$items=@(Get-Item -LiteralPath $base)+@(Get-ChildItem -LiteralPath $base -Recurse -Force);if(@($items|Where-Object {$_.Attributes -band [IO.FileAttributes]::ReparsePoint}).Count){throw ('Refusing redirected directory: '+$base)}}}
+Assert-Closed
+Check-NoRedirect $master
+Check-NoRedirect $active
+$marker=Get-Content -LiteralPath (Join-Path $master 'container-theft-test-world.json') -Raw|ConvertFrom-Json
+if($marker.Kind -ne 'Firebeard.HyThief.ContainerDevWorld' -or $marker.Name -ne 'HyThief Container Theft Test World'){throw 'Invalid master marker'}
+$records=@(Get-Content -LiteralPath (Join-Path $root 'master-checksums.json') -Raw|ConvertFrom-Json)
+Check-Hashes $master $records
+if(@(Get-ChildItem -LiteralPath $master -File -Recurse -Force).Count -ne $records.Count){throw 'Unexpected master files'}
+if(!(Test-Path -LiteralPath (Join-Path $master 'universe\worlds\default\chunks'))){throw 'Master saved chunks missing'}
+if(Test-Path -LiteralPath $active){
+ $mp=Join-Path $active 'container-theft-test-world.json'
+ if(!(Test-Path -LiteralPath $mp)){throw 'Refusing to replace an unmarked save'}
+ $am=Get-Content -LiteralPath $mp -Raw|ConvertFrom-Json
+ if($am.Kind -ne $marker.Kind -or ($am.WorldUUID|ConvertTo-Json -Compress) -ne ($marker.WorldUUID|ConvertTo-Json -Compress)){throw 'Active world identity mismatch'}
+}
+$stage=Join-Path $saves ('.HyThief-container-reset-'+[guid]::NewGuid().ToString('N'))
+Copy-Item -LiteralPath $master -Destination $stage -Recurse
+Check-Hashes $stage $records
+Assert-Closed
+$backup=$null
+if(Test-Path -LiteralPath $active){
+ $backup=Join-Path $root ('Archives\'+(Get-Date -Format yyyyMMdd-HHmmss)+'-'+[guid]::NewGuid().ToString('N'))
+ New-Item -ItemType Directory -Path (Split-Path $backup -Parent) -Force|Out-Null
+ Copy-Item -LiteralPath $active -Destination $backup -Recurse
+ $dirty=@(Get-ChildItem -LiteralPath $active -File -Recurse -Force|ForEach-Object {@{Relative=[IO.Path]::GetRelativePath($active,$_.FullName);Hash=(Get-FileHash -LiteralPath $_.FullName).Hash}})
+ Check-Hashes $backup $dirty
+ Assert-Closed
+ if([IO.Path]::GetFullPath($active) -cne 'C:\Users\askin\AppData\Roaming\Hytale\UserData\Saves\HyThief Container Theft Test World'){throw 'Unsafe removal target'}
+ Remove-Item -LiteralPath $active -Recurse
+}
+try{Move-Item -LiteralPath $stage -Destination $active;Check-Hashes $active $records}
+catch{if($backup -and !(Test-Path -LiteralPath $active)){Copy-Item -LiteralPath $backup -Destination $active -Recurse};throw}
+Write-Host 'HyThief Container Theft reset: OK'
+[pscustomobject]@{Ready=$active;DirtyBackup=$backup;VerifiedFiles=$records.Count;MasterUnchanged=$true}|ConvertTo-Json
