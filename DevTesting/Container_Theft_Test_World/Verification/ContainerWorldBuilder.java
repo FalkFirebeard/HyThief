@@ -28,7 +28,7 @@ import com.google.gson.*;
 /** Disposable native builder/verifier. Never installed globally or in the pristine playable save. */
 public final class ContainerWorldBuilder extends JavaPlugin {
  public ContainerWorldBuilder(JavaPluginInit init){super(init);}
- static final int[][] CHESTS={{0,64,16},{0,64,4},{-3,64,16}};
+ static final int[][] CHESTS={{0,64,20},{0,64,4},{-3,64,16},{0,64,14}};
  private org.joml.Vector3d guardStart;
  static final String OWNED="Furniture_Kweebec_Chest_Large";
  static final String HINT="server.interactionHints.openDoor";
@@ -71,7 +71,29 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   c.clear();for(short s=0;s<ITEMS.length;s++)c.setItemStackForSlot(s,new ItemStack(ITEMS[s],AMOUNTS[s]));
  }
  static void applyLayout(World w){
-  for(int i=0;i<2;i++){w.setBlock(CHESTS[i][0],64,CHESTS[i][2],OWNED);fill(container(w,CHESTS[i]));}
+  // Author only the copied Container Theft save, retaining native chest definitions.
+  w.setBlock(0,64,16,"Empty");
+  for(int i:new int[]{0,1,3}){w.setBlock(CHESTS[i][0],64,CHESTS[i][2],OWNED);fill(container(w,CHESTS[i]));}
+  w.setBlock(0,63,19,"Rock_Stone_Cobble");w.setBlock(0,63,13,"Rock_Stone_Cobble");
+  var store=w.getEntityStore().getStore();var labels=new ArrayList<Ref<EntityStore>>();
+  store.forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++)labels.add(chunk.getReferenceTo(i));});
+  Ref<EntityStore> template=null;
+  for(var ref:labels){var label=store.getComponent(ref,Nameplate.getComponentType());var t=store.getComponent(ref,TransformComponent.getComponentType());
+   if(label.getText().equals("3 OWNED - FRONT / WITNESSED")){template=ref;label.setText("3 OWNED - MID / stand caught, crouch unseen");t.setPosition(new org.joml.Vector3d(-1.5,66.4,20.5));}
+   else if(label.getText().contains("FRONT")||label.getText().contains("5 blocks")||label.getText().contains("15 blocks")||label.getText().contains("ZERO COMMANDS"))label.setText("CHECKPOINT 3 - standing 15 / crouched 4 blocks; use marked pads");
+  }
+  if(template==null)throw new IllegalStateException("Missing prior FRONT label");
+  addLabel(store,template,"4 OWNED - CLOSE / caught in either stance",-1.5,66.4,14.5);
+  addLabel(store,template,"MID PAD: stand here / distance 9 blocks",.5,66.2,19.5);
+  addLabel(store,template,"CLOSE PAD: stand here / distance 3 blocks",.5,66.2,13.5);
+ }
+ static void addLabel(Store<EntityStore> store,Ref<EntityStore> source,String text,double x,double y,double z){
+  var holder=EntityStore.REGISTRY.newHolder();var t=store.getComponent(source,TransformComponent.getComponentType()).clone();t.setPosition(new org.joml.Vector3d(x,y,z));
+  holder.addComponent(TransformComponent.getComponentType(),t);holder.addComponent(Nameplate.getComponentType(),new Nameplate(text));
+  holder.addComponent(ModelComponent.getComponentType(),(ModelComponent)store.getComponent(source,ModelComponent.getComponentType()).clone());
+  holder.addComponent(Frozen.getComponentType(),Frozen.get());
+  holder.addComponent(com.hypixel.hytale.server.core.entity.UUIDComponent.getComponentType(),com.hypixel.hytale.server.core.entity.UUIDComponent.randomUUID());
+  store.addEntity(holder,AddReason.SPAWN);
  }
 
  static void oneRun(World w,OwnedContainerRegistry registry){
@@ -93,7 +115,7 @@ public final class ContainerWorldBuilder extends JavaPlugin {
  }
  static void nativeStates(World w,OwnedContainerRegistry registry){
   var chunks=w.getChunkStore();
-  for(int i=0;i<2;i++){
+  for(int i:new int[]{0,1,3}){
    var p=CHESTS[i];var original=registry.findAutomatic(w,container(w,p),null);
    var base=w.getBlockType(p[0],p[1],p[2]);var section=chunks.getChunkSectionReferenceAtBlock(p[0],p[1],p[2]);
    for(String state:new String[]{"OpenWindow","CloseWindow"}){
@@ -133,7 +155,7 @@ public final class ContainerWorldBuilder extends JavaPlugin {
    if(x< -8||x>13||z< -7||z>44||reachable.contains(k))continue;
    if(w.getBlockType(x,64,z).getId().equals("Empty")&&w.getBlockType(x,65,z).getId().equals("Empty")){reachable.add(k);q.add(new int[]{x,z});}
   }}
-  if(!reachable.contains("9,10")||!reachable.contains("0,15")||!reachable.contains("0,5")||!reachable.contains("-3,15"))throw new IllegalStateException("Missing guard/control/owned walk access");
+  if(!reachable.contains("9,10")||!reachable.contains("0,19")||!reachable.contains("0,13")||!reachable.contains("0,5")||!reachable.contains("-3,15"))throw new IllegalStateException("Missing guard/control/owned walk access");
   report.addProperty("hubChestGuardTwoPlayerWalkAccess",true);report.addProperty("guardRoute","south around wall x=6,z<0");
   var spawn=w.getWorldConfig().getSpawnProvider().getSpawnPoint(w,new UUID(0,0)).getPosition();
   if(spawn.distance(.5,64.1,7.5)>.01||w.getBlock(0,63,7)==0||w.getBlock(0,64,7)!=0||w.getBlock(0,65,7)!=0)throw new IllegalStateException("Invalid hub spawn");
@@ -145,16 +167,16 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   store.forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){
     var ref=chunk.getReferenceTo(i);var label=store.getComponent(ref,Nameplate.getComponentType());String text=label.getText();
     if(text.contains("/hythiefcontainer"))throw new IllegalStateException("Manual-command label persisted");
-    if(text.equals("3 OWNED - FRONT / WITNESSED")||text.equals("2 OWNED - REAR / UNSEEN"))ownedLabels[0]++;
+    if(text.startsWith("3 OWNED - MID")||text.startsWith("4 OWNED - CLOSE")||text.equals("2 OWNED - REAR / UNSEEN"))ownedLabels[0]++;
     if(text.equals("1 CONTROL - UNOWNED")){
      controls[0]++;if(store.getComponent(ref,TransformComponent.getComponentType()).getPosition().distance(-4.5,66.4,16.5)>.01)throw new IllegalStateException("Control label not moved");
     }
   }});
-  if(ownedLabels[0]!=2||controls[0]!=1)throw new IllegalStateException("Expected numbered owned/control labels");
+  if(ownedLabels[0]!=3||controls[0]!=1)throw new IllegalStateException("Expected numbered owned/control labels");
   report.addProperty("ownedLabelsWithoutCommands",true);
   if(!w.getBlockType(-4,64,-2).getId().equals("Empty"))throw new IllegalStateException("Old hidden control remains");
   var nativeChest=com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType.getAssetMap().getAsset("Furniture_Kweebec_Chest_Large");
-  for(int i=0;i<3;i++){
+  for(int i=0;i<CHESTS.length;i++){
    var p=CHESTS[i];var type=w.getBlockType(p[0],p[1],p[2]);
    if(!type.getId().equals(OWNED) && !type.getId().equals(nativeChest.getBlockForState("OpenWindow").getId()) && !type.getId().equals(nativeChest.getBlockForState("CloseWindow").getId()))throw new IllegalStateException("Wrong native chest family");
    if(!type.getInteractions().get(com.hypixel.hytale.protocol.InteractionType.Use).equals("Open_Container"))throw new IllegalStateException("Native open changed");
@@ -174,16 +196,17 @@ public final class ContainerWorldBuilder extends JavaPlugin {
    var r=new JsonObject();r.addProperty("coordinate",Arrays.toString(p));r.addProperty("capacity",c.getCapacity());r.addProperty("matchingStacks",true);chestReport.add(r);
   }
   var entries=new ArrayList<OwnedContainerRegistry.Entry>();
-  for(int i=0;i<2;i++){var p=CHESTS[i];entries.add(new OwnedContainerRegistry.Entry(new OwnedContainerRegistry.Key(w.getWorldConfig().getUuid(),p[0],p[1],p[2]),container(w,p)));}
+  for(int i:new int[]{0,1,3}){var p=CHESTS[i];entries.add(new OwnedContainerRegistry.Entry(new OwnedContainerRegistry.Key(w.getWorldConfig().getUuid(),p[0],p[1],p[2]),container(w,p)));}
   registry.replaceAutomatic(w,entries);
   for(var entry:entries)if(registry.findAutomatic(w,entry.container(),null)!=entry)throw new IllegalStateException("Automatic lookup mismatch");
   if(registry.findAutomatic(w,container(w,CHESTS[2]),null)!=null)throw new IllegalStateException("Control owned");
   registry.removeAutomatic(w);if(!registry.automatic(w).isEmpty())throw new IllegalStateException("Stale world ownership");registry.replaceAutomatic(w,entries);
   nativeStates(w,registry);
-  ContainerWitnessTest.run(w,civilian,guard,report);
+  if(!Boolean.getBoolean("containerworld.layout"))ContainerWitnessTest.run(w,civilian,guard,report);
   oneRun(w,registry);report.addProperty("oneRunControlRearFrontWithoutReset",true);
-  report.addProperty("automaticRegistryTwoOwnedOneControl",true);report.addProperty("registryRemovalRebuild",true);
+  report.addProperty("automaticRegistryThreeOwnedOneControl",true);report.addProperty("registryRemovalRebuild",true);
   // Use the SAME packaged probe/registry as the installed diagnostic plugin, on this world's actual containers.
+  realProbe(container(w,CHESTS[3]),"close-partial",4,(c,p)->c.moveItemStackFromSlotToSlot((short)0,4,p,(short)0));
   realProbe(container(w,CHESTS[0]),"front-partial",4,(c,p)->c.moveItemStackFromSlotToSlot((short)0,4,p,(short)0));
   realProbe(container(w,CHESTS[0]),"insertion",0,(c,p)->p.moveItemStackFromSlotToSlot((short)1,3,c,(short)4));
   realProbe(container(w,CHESTS[0]),"internal",0,(c,p)->c.moveItemStackFromSlotToSlot((short)0,4,c,(short)5));

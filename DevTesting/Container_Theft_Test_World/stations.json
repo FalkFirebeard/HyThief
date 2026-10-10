@@ -32,88 +32,64 @@
   },
   "stations": [
     {
-      "name": "Front",
-      "coordinate": [
+      "name": "Mid",
+      "position": [
         0,
         64,
-        16
+        20
       ],
       "ownedCandidate": true,
-      "stacks": [
-        {
-          "slot": 0,
-          "item": "Ingredient_Bar_Copper",
-          "quantity": 16
-        },
-        {
-          "slot": 1,
-          "item": "Ingredient_Bar_Iron",
-          "quantity": 8
-        },
-        {
-          "slot": 2,
-          "item": "Ingredient_Fibre",
-          "quantity": 32
-        }
-      ],
       "automaticallyOwned": true,
-      "blockId": "Furniture_Kweebec_Chest_Large"
+      "approach": [
+        0.5,
+        64,
+        19.5
+      ]
     },
     {
       "name": "Rear",
-      "coordinate": [
+      "position": [
         0,
         64,
         4
       ],
       "ownedCandidate": true,
-      "stacks": [
-        {
-          "slot": 0,
-          "item": "Ingredient_Bar_Copper",
-          "quantity": 16
-        },
-        {
-          "slot": 1,
-          "item": "Ingredient_Bar_Iron",
-          "quantity": 8
-        },
-        {
-          "slot": 2,
-          "item": "Ingredient_Fibre",
-          "quantity": 32
-        }
-      ],
       "automaticallyOwned": true,
-      "blockId": "Furniture_Kweebec_Chest_Large"
+      "approach": [
+        0.5,
+        64,
+        5.5
+      ]
     },
     {
       "name": "Control",
-      "coordinate": [
+      "position": [
         -3,
         64,
         16
       ],
       "ownedCandidate": false,
-      "stacks": [
-        {
-          "slot": 0,
-          "item": "Ingredient_Bar_Copper",
-          "quantity": 16
-        },
-        {
-          "slot": 1,
-          "item": "Ingredient_Bar_Iron",
-          "quantity": 8
-        },
-        {
-          "slot": 2,
-          "item": "Ingredient_Fibre",
-          "quantity": 32
-        }
-      ],
       "automaticallyOwned": false,
-      "blockId": "Furniture_Kweebec_Chest_Large"
+      "approach": [
+        -2.5,
+        64,
+        15.5
+      ]
+    },
+    {
+      "name": "Close",
+      "position": [
+        0,
+        64,
+        14
+      ],
+      "ownedCandidate": true,
+      "automaticallyOwned": true,
+      "approach": [
+        0.5,
+        64,
+        13.5
+      ]
     }
   ],
   "markers": [
@@ -192,9 +168,9 @@
   ],
   "labels": [
     {
-      "text": "3 OWNED - FRONT / WITNESSED",
+      "text": "1 CONTROL - UNOWNED",
       "position": [
-        -1.5,
+        -4.5,
         66.4,
         16.5
       ]
@@ -208,107 +184,35 @@
       ]
     },
     {
-      "text": "1 CONTROL - UNOWNED",
+      "text": "3 OWNED - MID / stand caught, crouch unseen",
       "position": [
-        -4.5,
+        -1.5,
         66.4,
-        16.5
+        20.5
       ]
     },
     {
-      "text": "CIVILIAN: fixed +Z facing / native Frozen",
+      "text": "4 OWNED - CLOSE / caught in either stance",
       "position": [
-        0.5,
-        67.3,
-        10.5
-      ]
-    },
-    {
-      "text": "TEST ORDER: 1 CONTROL -> 2 REAR -> 3 FRONT / no commands",
-      "position": [
-        0.5,
-        66.8,
-        -4.5
-      ]
-    },
-    {
-      "text": "GUARD: native Razorleaf / entrance around south wall",
-      "position": [
-        9.5,
-        67.5,
-        10.5
-      ]
-    },
-    {
-      "text": "1m from civilian \u2014 centerline",
-      "position": [
-        -3.5,
-        64.8,
-        11.5
-      ]
-    },
-    {
-      "text": "3m from civilian \u2014 centerline",
-      "position": [
-        -3.5,
-        64.8,
-        13.5
-      ]
-    },
-    {
-      "text": "4m from civilian \u2014 centerline",
-      "position": [
-        -3.5,
-        64.8,
+        -1.5,
+        66.4,
         14.5
       ]
     },
     {
-      "text": "5m from civilian \u2014 centerline",
+      "text": "MID PAD: distance 9",
       "position": [
-        -3.5,
-        64.8,
-        15.5
+        0.5,
+        66.2,
+        19.5
       ]
     },
     {
-      "text": "8m from civilian \u2014 centerline",
+      "text": "CLOSE PAD: distance 3",
       "position": [
-        -3.5,
-        64.8,
-        18.5
-      ]
-    },
-    {
-      "text": "12m from civilian \u2014 centerline",
-      "position": [
-        -3.5,
-        64.8,
-        22.5
-      ]
-    },
-    {
-      "text": "15m from civilian \u2014 centerline",
-      "position": [
-        -3.5,
-        64.8,
-        25.5
-      ]
-    },
-    {
-      "text": "30m from civilian \u2014 centerline",
-      "position": [
-        -3.5,
-        64.8,
-        40.5
-      ]
-    },
-    {
-      "text": "32m from civilian \u2014 centerline",
-      "position": [
-        -3.5,
-        64.8,
-        42.5
+        0.5,
+        66.2,
+        13.5
       ]
     }
   ],
@@ -345,7 +249,7 @@
       15.5
     ]
   ],
-  "notes": "Native chest opening for all stations. Control -> Rear -> Front. Real visual witnessed owned removal sends one native guard danger signal. No commands, random caught roll, crouch reduction or forced UI closure.",
+  "notes": "Checkpoint 3: MID distance9, CLOSE distance3; current standing15/crouched4; use labeled pads. Reset between caught cases.",
   "testOrder": [
     "Control",
     "Rear",

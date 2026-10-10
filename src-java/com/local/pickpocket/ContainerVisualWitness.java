@@ -16,14 +16,17 @@ import java.util.List;
 
 /** Development fixture only: fresh visual evidence captured in the removal callback. */
 final class ContainerVisualWitness {
-  // Verified standing Sapling sight declaration; no crouch scaling in checkpoint 2.
+  // Standing Sapling declaration; crouch uses the existing shared sight multiplier.
   static final double RANGE = 15.0;
+  static double visualRange(boolean crouched, String role) {
+    return crouched ? RANGE * HyThiefStealthAcquisition.multiplier("sight", role) : RANGE;
+  }
   static final float SECTOR = (float) Math.toRadians(180);
   record Evidence(Ref<EntityStore> witness, String role, double distance, boolean sector,
       boolean los, boolean crouched, Vector3d playerPosition, String reason, Vector3d witnessPosition, float headYaw) {
     boolean seen() { return "seen".equals(reason); }
     String diagnostic() { return "WITNESS=" + (seen() ? role : "UNSEEN") + " Reason=" + reason
-        + " Distance=" + distance + " Range=" + RANGE + " Sector=" + sector + " LOS=" + los
+        + " Distance=" + distance + " Range=" + visualRange(crouched, role) + " StandingRange=" + RANGE + " Sector=" + sector + " LOS=" + los
         + " Witness=" + witness + " WitnessPosition=" + witnessPosition + " HeadYaw=" + headYaw + " ViewSectorDegrees=180"
         + " Crouched=" + crouched + " PlayerPosition=" + playerPosition; }
   }
@@ -64,8 +67,9 @@ final class ContainerVisualWitness {
     // and does not clear or mutate that NPC's AI cache/target/perception state.
     var sight = new PositionCache();
     sight.setOpaqueBlockSet(-1); // native block opacity, no custom opaque-set policy
-    boolean los = distance <= RANGE && sector && sight.hasLineOfSight(witness, player, store);
-    String reason = distance > RANGE ? "range" : !sector ? "sector" : !los ? "occluded" : "seen";
+    double range = visualRange(crouched, npc.getRoleName());
+    boolean los = distance <= range && sector && sight.hasLineOfSight(witness, player, store);
+    String reason = distance > range ? "range" : !sector ? "sector" : !los ? "occluded" : "seen";
     return new Evidence(witness, npc.getRoleName(), distance, sector, los, crouched,
         new Vector3d(position), reason, new Vector3d(t.getPosition()), head.getRotation().yaw());
   }
