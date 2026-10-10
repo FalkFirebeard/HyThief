@@ -5,7 +5,7 @@ $project=Split-Path (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent) -Par
 $root=Join-Path $project 'DevTesting\Container_Theft_Test_World'
 $jdk=Join-Path (Split-Path (Split-Path $project -Parent) -Parent) 'Toolchains\JDK25\bin'
 $server=Join-Path $project '.build\dependencies\HytaleServer-0.6.8.jar'
-if(!$DiagnosticJar){$DiagnosticJar=Join-Path $project 'build\libs\HyThief-1.3.1-container.4.jar'}
+if(!$DiagnosticJar){$DiagnosticJar=Join-Path $project 'build\libs\HyThief-1.3.1-container.5.jar'}
 $run=Join-Path $root ('VerificationRuns\'+(Get-Date -Format yyyyMMdd-HHmmss)+'-'+[guid]::NewGuid().ToString('N'))
 if(![IO.Path]::GetFullPath($run).StartsWith($root+'\VerificationRuns\')){throw 'Unsafe verification path'}
 New-Item -ItemType Directory -Path (Split-Path $run -Parent) -Force|Out-Null
@@ -35,6 +35,7 @@ try{
  & (Join-Path $jdk 'java.exe') '-Dcontainerworld.reload=true' '-Dcontainerworld.pristine=true' $guardFlag -jar $server --assets 'C:\Users\askin\AppData\Roaming\Hytale\install\release\package\game\latest\Assets.zip' --auth-mode offline --bind 127.0.0.1:15539 --disable-sentry --disable-file-watcher --disable-cpb-build *> 'native.log'
  if($LASTEXITCODE -ne 0 -or !(Test-Path 'reload-verification.json')){throw ('Native verification failed; inspect '+$run+'\native.log')}
  if(!(Select-String -LiteralPath 'native.log' -SimpleMatch 'Action=AUTO_REGISTER Owner=Kweebec')){throw 'No real plugin automatic registration'}
+ if(!(Select-String -LiteralPath 'native.log' -SimpleMatch 'NATIVE_GUARD_PURSUIT_PASS')){throw 'Native pursuit did not retain offender'}
  if(Select-String -LiteralPath 'native.log' -Pattern 'AUTO_REGISTER_ERROR|CONTAINER_WORLD_FAILED'){throw 'Native validation error'}
  Select-String -LiteralPath 'native.log' -Pattern 'AUTO_REGISTER|REAL_CHEST_PROBE_PASS|REAL_CONTROL_TRANSFER_PASS|CONTAINER_WORLD_VERIFIED'|ForEach-Object Line
  Write-Host ('Verified disposable fresh-master load: '+$run)

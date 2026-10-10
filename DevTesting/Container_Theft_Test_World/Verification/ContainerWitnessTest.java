@@ -54,14 +54,26 @@ final class ContainerWitnessTest {
    var beacon=store.getComponent(guard,BeaconSupport.getComponentType());int slot=-1;
    for(int i=0;i<beacon.getMessageSlots().length;i++)if("Kweebec_All_Danger".equals(beacon.getMessageTextForIndex(i)))slot=i;
    require(slot>=0&&beacon.isMessageQueued(slot)&&actor.equals(beacon.peekMessage(slot)),"native danger offender mismatch");
-   beacon.pollMessage(slot); // Disposable proof ends before fake target is allowed to drive combat.
+   beacon.pollMessage(slot);
+   HyThiefGuardAlert.deliver(plugin,actor,civilian,store,System.out::println);
+   var start=new Vector3d(store.getComponent(guard,TransformComponent.getComponentType()).getPosition());
+   world.scheduleAfter(()->world.execute(()->{
+    try{
+     var state=store.getComponent(guard,com.hypixel.hytale.server.npc.role.support.StateSupport.getComponentType());
+     var targets=store.getComponent(guard,com.hypixel.hytale.server.npc.role.support.MarkedEntitySupport.getComponentType());
+     boolean marked=java.util.Arrays.asList(targets.getEntityTargets()).contains(actor);
+     double moved=start.distance(store.getComponent(guard,TransformComponent.getComponentType()).getPosition());
+     require(state.getStateName().startsWith("Attack") && marked && moved>.1,"native pursuit lost offender: "+state.getStateName()+" marked="+marked+" moved="+moved);
+     System.out.println("NATIVE_GUARD_PURSUIT_PASS State="+state.getStateName()+" ExactOffenderMarked="+marked+" DistanceMoved="+moved);
+    }catch(Throwable error){ContainerWorldBuilder.fail(error);}
+   }),1250,java.util.concurrent.TimeUnit.MILLISECONDS);
    report.addProperty("nativeVisualFrontWitnessed",true);report.addProperty("nativeVisualRearUnseen",true);
    report.addProperty("nativeControlApproachVisibleButUnowned",true);report.addProperty("nativeRangeAndOpaqueWallRejected",true);
    report.addProperty("exactRemovalSnapshotSurvivesLaterMovement",true);report.addProperty("guardHasNoNativeDirectLOS",true);
    report.addProperty("actualPluginAdapterPostsOneDangerWithExactOffender",true);
    report.addProperty("realClientCombatAcceptancePending",true);
    System.out.println("WITNESS_NATIVE_PASS Control=VISIBLE_UNOWNED Rear=UNSEEN Front=WITNESSED Wall=OCCLUDED Range=REJECTED RemovalSnapshot=EXACT Danger=QUEUED_ONE Offender=EXACT GuardLOS=false");
-  }finally{store.removeEntity(actor,RemoveReason.REMOVE);}
+  }finally{} // Actor stays only in the disposable verifier until server shutdown.
  }
  static void require(boolean b,String message){if(!b)throw new IllegalStateException(message);}
 }

@@ -1,6 +1,6 @@
 {
   "Type": "Variant",
-  "Reference": "Template_Kweebec_Razorleaf",
+  "Reference": "HyThiefContainerFixture_Razorleaf_WitnessHandoff",
   "Modify": {
     "Appearance": "Kweebec_Sapling_Razorleaf",
     "DropList": "Drop_Kweebec_Sapling_Razorleaf",

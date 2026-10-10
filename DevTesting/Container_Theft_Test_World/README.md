@@ -1,3 +1,5 @@
+Current test: 1.3.1-container.5; fixture pack 1.0.3. See Docs/CONTAINER_THEFT_CHECKPOINT_2_LASTSEEN_HANDOFF.md for actual container.4 evidence and native LastSeen handoff correction. CONTROL then REAR then FRONT standing; native chest interaction unchanged.
+
 Current test: 1.3.1-container.4. See Docs/CONTAINER_THEFT_CHECKPOINT_2_RUNTIME_INGRESS.md for the Quiche ingress repair and exact retest. Native chest interaction and master unchanged.
 
 # Container theft checkpoint 2: native chest and visual witness
