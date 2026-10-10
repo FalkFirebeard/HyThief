@@ -13,6 +13,7 @@ import java.util.*;
 /** Native API integration proof with an inert modeled test target, not a client session. */
 final class ContainerWitnessTest {
  static void run(World world,Ref<EntityStore> civilian,Ref<EntityStore> guard,JsonObject report){
+  ContainerPacketBridgeTest.run();
   var store=world.getEntityStore().getStore();var holder=EntityStore.REGISTRY.newHolder();
   var transform=store.getComponent(civilian,TransformComponent.getComponentType()).clone();
   transform.setPosition(new Vector3d(.5,64,15.5));holder.addComponent(TransformComponent.getComponentType(),transform);

@@ -20,10 +20,11 @@ final class ContainerVisualWitness {
   static final double RANGE = 15.0;
   static final float SECTOR = (float) Math.toRadians(180);
   record Evidence(Ref<EntityStore> witness, String role, double distance, boolean sector,
-      boolean los, boolean crouched, Vector3d playerPosition, String reason) {
+      boolean los, boolean crouched, Vector3d playerPosition, String reason, Vector3d witnessPosition, float headYaw) {
     boolean seen() { return "seen".equals(reason); }
     String diagnostic() { return "WITNESS=" + (seen() ? role : "UNSEEN") + " Reason=" + reason
         + " Distance=" + distance + " Range=" + RANGE + " Sector=" + sector + " LOS=" + los
+        + " Witness=" + witness + " WitnessPosition=" + witnessPosition + " HeadYaw=" + headYaw + " ViewSectorDegrees=180"
         + " Crouched=" + crouched + " PlayerPosition=" + playerPosition; }
   }
   private ContainerVisualWitness() {}
@@ -66,9 +67,9 @@ final class ContainerVisualWitness {
     boolean los = distance <= RANGE && sector && sight.hasLineOfSight(witness, player, store);
     String reason = distance > RANGE ? "range" : !sector ? "sector" : !los ? "occluded" : "seen";
     return new Evidence(witness, npc.getRoleName(), distance, sector, los, crouched,
-        new Vector3d(position), reason);
+        new Vector3d(position), reason, new Vector3d(t.getPosition()), head.getRotation().yaw());
   }
   private static Evidence missing(String reason) {
-    return new Evidence(null, "missing", Double.NaN, false, false, false, null, reason);
+    return new Evidence(null, "missing", Double.NaN, false, false, false, null, reason, null, Float.NaN);
   }
 }

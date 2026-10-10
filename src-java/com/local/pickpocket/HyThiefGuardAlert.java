@@ -31,7 +31,16 @@ final class HyThiefGuardAlert {
   /** Shared downstream handoff; callers establish caught/witness policy separately. */
   static Delivery deliver(PickpocketPlugin plugin, Ref<EntityStore> offender,
       Ref<EntityStore> victim, Store<EntityStore> store) {
+    return deliver(plugin, offender, victim, store, null);
+  }
+
+  static Delivery deliver(PickpocketPlugin plugin, Ref<EntityStore> offender,
+      Ref<EntityStore> victim, Store<EntityStore> store, java.util.function.Consumer<String> diagnostic) {
+    boolean tracing = diagnostic != null;
+    if (diagnostic == null) diagnostic = message -> {};
+    var trace = diagnostic;
     try {
+      diagnostic.accept("Action=DANGER_ADAPTER Offender=" + offender + " Witness=" + victim);
       if (store == null || offender == null || !offender.isValid()
           || victim == null || !victim.isValid() || offender.getStore() != store
           || victim.getStore() != store) {
@@ -60,6 +69,10 @@ final class HyThiefGuardAlert {
         boolean ready = npc.getRole() != null && acceptsDanger(stateName) && slot >= 0
             && beacon.isMessageEnabled(slot) && !beacon.isMessageQueued(slot)
             && store.getComponent(candidate, DeathComponent.getComponentType()) == null;
+        diagnostic.accept("Action=GUARD_CANDIDATE Role=" + npc.getRoleName() + " Ref=" + candidate
+            + " State=" + stateName + " Slot=" + slot + " Enabled=" + (slot >= 0 && beacon.isMessageEnabled(slot))
+            + " Queued=" + (slot >= 0 && beacon.isMessageQueued(slot)) + " Ready=" + ready
+            + " Position=" + (position == null ? "missing" : position.getPosition()));
         if (!ready || position == null) continue;
         double distanceSq = origin.getPosition().distanceSquared(position.getPosition());
         if (distanceSq <= nearest) {
@@ -72,6 +85,23 @@ final class HyThiefGuardAlert {
       }
       // Same one-second lifetime as native ActionBeacon. No forced state, attitude or attack.
       BeaconBroadcast.post(chosen, DANGER, offender, 1.0, store);
+      var beacon = store.getComponent(chosen, BeaconSupport.getComponentType());
+      int slot = dangerSlot(beacon);
+      diagnostic.accept("Action=NATIVE_DANGER_QUEUED Guard=" + chosen + " Slot=" + slot
+          + " Signal=" + DANGER + " Queued=" + (slot >= 0 && beacon.isMessageQueued(slot))
+          + " ExactOffender=" + (slot >= 0 && offender.equals(beacon.peekMessage(slot))));
+      var guard = chosen;
+      if (tracing) for (long delay : new long[]{250, 1250}) java.util.concurrent.CompletableFuture.delayedExecutor(delay, java.util.concurrent.TimeUnit.MILLISECONDS).execute(() ->
+          store.getExternalData().getWorld().execute(() -> {
+            if (!guard.isValid() || !offender.isValid()) return;
+            var state = store.getComponent(guard, StateSupport.getComponentType());
+            var messages = store.getComponent(guard, BeaconSupport.getComponentType());
+            var marked = store.getComponent(guard, com.hypixel.hytale.server.npc.role.support.MarkedEntitySupport.getComponentType());
+            trace.accept("Action=NATIVE_GUARD_OBSERVATION DelayMs=" + delay + " Guard=" + guard
+                + " State=" + (state == null ? "missing" : state.getStateName())
+                + " DangerQueued=" + (messages != null && slot >= 0 && messages.isMessageQueued(slot))
+                + " OffenderMarked=" + (marked != null && java.util.Arrays.asList(marked.getEntityTargets()).contains(offender)));
+          }));
       return new Delivery(true, "native-danger-posted", chosen);
     } catch (RuntimeException exception) {
       plugin.getLogger().at(java.util.logging.Level.WARNING).withCause(exception).log("HyThief guard alert failed");

@@ -27,15 +27,36 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
   private final OwnedContainerRegistry registry = new OwnedContainerRegistry();
   private final Set<UUID> participants = ConcurrentHashMap.newKeySet();
   private final AtomicLong sequence = new AtomicLong();
-  private final PacketFilter registration;
+  private final Map<com.hypixel.hytale.server.core.io.handlers.game.GamePacketHandler, ContainerPacketBridge> bridges = new ConcurrentHashMap<>();
+  private final com.hypixel.hytale.event.EventRegistration<?, ?> readyRegistration;
+  private volatile boolean closed;
   private final DevContainerTestWorld testWorld;
   HyThiefContainerDiagnostics(PickpocketPlugin plugin) {
     this.plugin = plugin;
     testWorld = new DevContainerTestWorld(plugin, registry, this::log);
-    registration = PacketAdapters.registerInbound((PlayerPacketFilter) this);
+    readyRegistration = plugin.getEventRegistry().registerGlobal(
+        com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent.class, event -> {
+          var ref = event.getPlayerRef();
+          if (ref != null && ref.isValid()) {
+            var player = ref.getStore().getComponent(ref, PlayerRef.getComponentType());
+            if (player != null && testWorld.enabled(ref.getStore().getExternalData().getWorld())) bind(player);
+          }
+        });
+    log("Action=INGRESS_READY Mode=native-handler-registration Version=" + plugin.getManifest().getVersion());
     plugin.getCommandRegistry().registerCommand(new Command());
   }
-  void close() { testWorld.close(); participants.clear(); registry.close(); PacketAdapters.deregisterInbound(registration); }
+  void close() { closed = true; readyRegistration.unregister(); testWorld.close(); participants.clear(); registry.close(); bridges.values().forEach(ContainerPacketBridge::close); bridges.clear(); }
+  private void bind(PlayerRef player) {
+    if (closed || !(player.getPacketHandler() instanceof com.hypixel.hytale.server.core.io.handlers.game.GamePacketHandler handler)) return;
+    handler.getChannel(com.hypixel.hytale.protocol.NetworkChannel.Default).execute(() -> {
+      if (closed || bridges.containsKey(handler)) return;
+      var nativeInventory = handler.getSubPacketHandler(InventoryPacketHandler.class);
+      if (nativeInventory == null) { log("Action=INGRESS_BIND_FAILED Reason=no-native-inventory-handler"); return; }
+      bridges.put(handler, new ContainerPacketBridge(handler, packet -> test(player, packet),
+          nativeInventory::handle, nativeInventory::handle));
+      log("Action=INGRESS_BOUND Player=" + player.getUuid() + " Handler=" + handler.getClass().getSimpleName());
+    });
+  }
   void start() { testWorld.start(); }
   @Override public boolean test(PlayerRef player, Packet packet) {
     if (!(player.getPacketHandler() instanceof com.hypixel.hytale.server.core.io.handlers.IPacketHandler)
@@ -44,6 +65,8 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     var ref = player.getReference();
     if (ref == null || !ref.isValid()) return false;
     World world = ref.getStore().getExternalData().getWorld();
+    if (DevContainerTestWorld.NAME.equals(world.getWorldConfig().getDisplayName()) || participants.contains(player.getUuid()))
+      log("Action=INGRESS Player=" + player.getUuid() + " Packet=" + packet.getClass().getSimpleName() + " World=" + world.getWorldConfig().getUuid() + " FixtureEnabled=" + testWorld.enabled(world));
     if (!participants.contains(player.getUuid()) && !testWorld.enabled(world)) return false;
     world.execute(() -> dispatch(player, packet, world));
     return true;
@@ -66,13 +89,18 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     int from = packet instanceof MoveItemStack m ? m.fromSectionId : ((SmartMoveItemStack) packet).fromSectionId;
     int to = packet instanceof MoveItemStack m ? m.toSectionId : Integer.MIN_VALUE;
     // Preserve native utility active-slot request/event side effects; not attributed in this proof.
-    if (to == InventoryComponent.UTILITY_SECTION_ID) { fallback(player, packet); return; }
+    if (to == InventoryComponent.UTILITY_SECTION_ID) { log("Action=PASSTHROUGH Reason=utility-section"); fallback(player, packet); return; }
     ItemContainer source = InventoryUtils.getSectionById(ref, from, store);
     ItemContainer destination = packet instanceof MoveItemStack ? InventoryUtils.getSectionById(ref, to, store) : null;
     if (automatic) entry = registry.findAutomatic(world, source, destination);
+    log("Action=SECTION_RESOLVED Player=" + player.getUuid() + " From=" + from + " To=" + to
+        + " Source=" + identity(source) + " Destination=" + identity(destination)
+        + " Owned=" + (entry == null ? "none" : entry.key())
+        + " Registered=" + registry.automatic(world).stream().map(e -> e.key() + "/" + identity(e.container())).toList());
     if (entry == null || (source != entry.container() && destination != entry.container())) {
       if (automatic && source != null && testWorld.isControl(world, source))
         log("Player=" + player.getUuid() + " Action=CONTROL_UNOWNED_IGNORE");
+      log("Action=PASSTHROUGH Reason=no-owned-container-match");
       fallback(player, packet); return;
     }
     if (store.getArchetype(ref).contains(PreventInventoryAccess.getComponentType())) {
@@ -80,6 +108,7 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     }
     long request = sequence.incrementAndGet();
     var observed = entry;
+    log("Request=" + request + " Action=OWNED_REQUEST Offender=" + ref + " Player=" + player.getUuid() + " Chest=" + observed.key());
     var evidence = new IdentityHashMap<ContainerRemovalProbe.Removal, ContainerVisualWitness.Evidence>();
     var confirmed = new ArrayList<ContainerVisualWitness.Evidence>();
     var probe = new ContainerRemovalProbe(observed.container(), removal -> {
@@ -94,8 +123,8 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
           + " Action=REMOVE Result=SUCCESS Time=" + removal.time() + " Mono=" + removal.nanoTime());
     }, removal -> {
       if (automatic) {
-        try { evidence.put(removal, ContainerVisualWitness.capture(ref, store)); }
-        catch (RuntimeException error) { log("Request=" + request + " WITNESS=UNSEEN Reason=visual-error:" + error.getClass().getSimpleName()); }
+        try { log("Request=" + request + " Action=OWNED_REMOVE_CAPTURE Item=" + removal.item() + " Amount=" + removal.amount()); evidence.put(removal, ContainerVisualWitness.capture(ref, store)); }
+        catch (RuntimeException error) { log("Request=" + request + " WITNESS=UNSEEN Reason=visual-error:" + error.getClass().getSimpleName()); plugin.getLogger().atWarning().withCause(error).log("HyThief container visual capture failed"); }
       }
     });
     var registrations = new ArrayList<com.hypixel.hytale.event.EventRegistration<?, ?>>();
@@ -126,11 +155,12 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     }
     // All inventory locks/callbacks have unwound. One downstream notification per request.
     confirmed.stream().filter(ContainerVisualWitness.Evidence::seen).findFirst().ifPresent(visual -> {
-      var delivery = HyThiefGuardAlert.deliver(plugin, ref, visual.witness(), store);
+      var delivery = HyThiefGuardAlert.deliver(plugin, ref, visual.witness(), store, message -> log("Request=" + request + " " + message));
       log("Request=" + request + " Action=" + (delivery.sent() ? "DANGER_SENT" : "DANGER_NOT_SENT")
           + " Witness=" + visual.role() + " Guard=" + delivery.guard() + " Reason=" + delivery.reason());
     });
   }
+  private static String identity(Object value) { return value == null ? "null" : value.getClass().getSimpleName() + "@" + Integer.toHexString(System.identityHashCode(value)); }
   private void log(String message) { plugin.getLogger().atInfo().log("[HyThief ContainerTest] " + message); }
   private final class Command extends AbstractPlayerCommand {
     Command() {
@@ -150,12 +180,12 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
         if (!registry.valid(world, registry.current())) {
           context.sendMessage(Message.raw("No valid marked chest in this world.")); return;
         }
-        participants.add(player.getUuid()); context.sendMessage(Message.raw("Your native transfers are now observed for the marked chest.")); return;
+        participants.add(player.getUuid()); bind(player); context.sendMessage(Message.raw("Your native transfers are now observed for the marked chest.")); return;
       }
       if (words.length == 5 && words[1].equals("mark")) {
         try {
           var marker = registry.mark(world, Integer.parseInt(words[2]), Integer.parseInt(words[3]), Integer.parseInt(words[4]));
-          participants.add(player.getUuid()); context.sendMessage(Message.raw("Diagnostics armed: " + marker.key()));
+          participants.add(player.getUuid()); bind(player); context.sendMessage(Message.raw("Diagnostics armed: " + marker.key()));
         } catch (IllegalStateException | NumberFormatException error) { context.sendMessage(Message.raw(error.getMessage())); }
         return;
       }

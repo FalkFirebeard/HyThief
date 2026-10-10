@@ -1,3 +1,5 @@
+Current test: 1.3.1-container.4. See Docs/CONTAINER_THEFT_CHECKPOINT_2_RUNTIME_INGRESS.md for the Quiche ingress repair and exact retest. Native chest interaction and master unchanged.
+
 # Container theft checkpoint 2: native chest and visual witness
 
 Development build: **1.3.1-container.3**, target **=0.6.8**, fixture pack **1.0.2**, layout **3**. No public release.
@@ -6,9 +8,9 @@ Development build: **1.3.1-container.3**, target **=0.6.8**, fixture pack **1.0.
 
 The active **HyThief Container Theft Test World** has been freshly reset. Load it, remain **standing**, use the numbered chests in this order, without commands or resets between tests:
 
-1. **CONTROL — UNOWNED**, front-left: open and take items. Expected: one interaction opens native inventory; no theft/guard response.
-2. **OWNED — REAR / UNSEEN**, behind the Sapling: open and take items while remaining behind it. Expected: one interaction opens native inventory; owned removal is recorded, visual witness is UNSEEN, no guard response.
-3. **OWNED — FRONT / WITNESSED**, directly forward of the Sapling, last: open and take an item while standing at the front approach. Opening/browsing alone must do nothing. Expected: the successful withdrawal is witnessed and one Razorleaf receives `Kweebec_All_Danger` with the player target, then pursues/attacks using its native role.
+1. **CONTROL â€” UNOWNED**, front-left: open and take items. Expected: one interaction opens native inventory; no theft/guard response.
+2. **OWNED â€” REAR / UNSEEN**, behind the Sapling: open and take items while remaining behind it. Expected: one interaction opens native inventory; owned removal is recorded, visual witness is UNSEEN, no guard response.
+3. **OWNED â€” FRONT / WITNESSED**, directly forward of the Sapling, last: open and take an item while standing at the front approach. Opening/browsing alone must do nothing. Expected: the successful withdrawal is witnessed and one Razorleaf receives `Kweebec_All_Danger` with the player target, then pursues/attacks using its native role.
 
 Do not judge the third test by opening alone: the crime candidate begins only after successful item withdrawal. No random caught roll and no forced inventory closure were added. All chests display native interaction wording; ownership is indicated by the unchanged numbered labels.
 
