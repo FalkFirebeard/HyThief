@@ -18,6 +18,10 @@ public final class ContainerProbeTest {
     action.accept(chest,player);
     probe.finish(); probe.finish();
     int quantity=results.stream().mapToInt(ContainerRemovalProbe.Removal::amount).sum();
+    var notifications=new ArrayList<com.hypixel.hytale.server.core.Message>();
+    var confirmed=results.stream().map(r->new ContainerVisualWitness.Evidence(null,"test-witness",1,true,true,false,null,"seen",null,0)).toList();
+    ContainerCaughtNotification.notifyWitnessed(confirmed,notifications::add);
+    if(notifications.size()!=(expected>0?1:0))throw new AssertionError(name+": incorrect caught notification count "+notifications.size());
     a.unregister(); b.unregister();
     if(quantity!=expected)throw new AssertionError(name+": expected "+expected+" got "+quantity+" "+results);
     System.out.println("PASS "+name+" removed="+quantity+" reports="+results.size());

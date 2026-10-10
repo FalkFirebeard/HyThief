@@ -29,6 +29,13 @@ final class ContainerWitnessTest {
    require(!rear.seen()&&!rear.sector()&&rear.reason().equals("sector"),"rear must be unseen");
    transform.setPosition(new Vector3d(-2.5,64,15.5));var visibleControl=ContainerVisualWitness.capture(actor,store);
    require(visibleControl.seen(),"control position must be visually visible");
+   var messages=new ArrayList<com.hypixel.hytale.server.core.Message>();
+   require(ContainerCaughtNotification.notifyWitnessed(List.of(),messages::add).isEmpty(),"unowned/control or no paired withdrawal notified");
+   require(ContainerCaughtNotification.notifyWitnessed(List.of(rear),messages::add).isEmpty(),"unseen rear notified");
+   require(messages.isEmpty(),"control/rear notification count");
+   require(ContainerCaughtNotification.notifyWitnessed(List.of(rear,front,front),messages::add).orElseThrow()==front,"wrong witness selected");
+   require(messages.size()==1&&"You have been caught stealing!".equals(messages.getFirst().getRawText()),"front must notify exactly once with exact text");
+   System.out.println("CAUGHT_NOTIFICATION_PASS Control=0 Rear=0 Front=1 ExactText=true MultipleEvidenceDeduplicated=true");
    transform.setPosition(new Vector3d(.5,64,26.5));var outside=ContainerVisualWitness.capture(actor,store);
    require(!outside.seen()&&outside.reason().equals("range"),"outside visual range");
    transform.setPosition(new Vector3d(9,64,16));var blocked=ContainerVisualWitness.capture(actor,store);

@@ -154,7 +154,8 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
       for (var event : registrations) event.unregister();
     }
     // All inventory locks/callbacks have unwound. One downstream notification per request.
-    confirmed.stream().filter(ContainerVisualWitness.Evidence::seen).findFirst().ifPresent(visual -> {
+    ContainerCaughtNotification.notifyWitnessed(confirmed, player::sendMessage).ifPresent(visual -> {
+      log("Request=" + request + " Action=CAUGHT_NOTIFICATION Player=" + player.getUuid() + " Witness=" + visual.role());
       var delivery = HyThiefGuardAlert.deliver(plugin, ref, visual.witness(), store, message -> log("Request=" + request + " " + message));
       log("Request=" + request + " Action=" + (delivery.sent() ? "DANGER_SENT" : "DANGER_NOT_SENT")
           + " Witness=" + visual.role() + " Guard=" + delivery.guard() + " Reason=" + delivery.reason());
