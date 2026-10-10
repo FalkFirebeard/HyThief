@@ -1,0 +1,10 @@
+{
+  "Group": "FirebeardDev",
+  "Name": "HyThiefOwnershipProof",
+  "Version": "0.1.0",
+  "ServerVersion": "=0.6.8",
+  "Main": "com.local.hythief.devownership.OwnershipProof",
+  "Dependencies": {
+    "Local:HyThief": "*"
+  }
+}

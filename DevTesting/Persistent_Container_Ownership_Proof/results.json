@@ -1,0 +1,29 @@
+{
+  "Stable": "0.6.8",
+  "NativeChest": "Furniture_Kweebec_Chest_Large",
+  "Phases": {
+    "seed": {
+      "passed": true,
+      "owned": true,
+      "scope": "NEARBY",
+      "encodes": 3,
+      "decodes": 3
+    },
+    "restart-1": {
+      "passed": true,
+      "owned": true,
+      "scope": "NEARBY",
+      "encodes": 3,
+      "decodes": 4
+    },
+    "restart-2": {
+      "passed": true,
+      "owned": true,
+      "scope": "NEARBY",
+      "encodes": 3,
+      "decodes": 4
+    }
+  },
+  "ProtectedContentUnchanged": true,
+  "ClientWindowTest": "Not repeated; native server state/transfer APIs exercised"
+}
