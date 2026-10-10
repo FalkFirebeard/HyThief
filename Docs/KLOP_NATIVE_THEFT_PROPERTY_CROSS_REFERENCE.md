@@ -203,3 +203,7 @@ Smallest follow-up, only if approved: observe an **unmodified native** Klop role
 ## Checkpoint
 
 Documentation only. No compilation or deployment was needed. Current container test remains `1.3.1-container.8`; no balance, UI, inventory, perception, guard, registry, prefab, master, reset-script, or installed-JAR change was made. Protected-content hash comparison is recorded locally with the research evidence. Stop for Firebeard review.
+
+## 2026-10-10 clarification: generated chest placeholders
+
+The zero-chest count above is a count of directly authored chest/storage blocks, not realized generated containers. The production ownership investigation traced Block_Spawner_Block entries in Klop cave prefabs to native chest-generating tables: Zone1_Encounters_Tier3 (34 occurrences), Zone2_Encounters_Tier3 (23), Zone3_Encounters_Tier3 (50), and Zone3_Encounters_Tier1 (1). These generic tables do not declare Klop ownership. The unreferenced Klop chest-protection component and absence of a reusable Klop ownership registry remain the findings; chest generation must additionally be traced through spawners. See PRODUCTION_CONTAINER_OWNERSHIP_ARCHITECTURE.md and PRODUCTION_CONTAINER_OWNERSHIP_NATIVE_MAP.md.
