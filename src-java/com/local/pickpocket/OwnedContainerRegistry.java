@@ -18,7 +18,7 @@ final class OwnedContainerRegistry {
   record Automatic(World instance, List<Entry> entries) {}
   private final ConcurrentHashMap<UUID, Automatic> automatic = new ConcurrentHashMap<>();
   void replaceAutomatic(World world, List<Entry> entries) {
-    if (entries.size() < 2 || entries.size() > 3 || entries.stream().map(Entry::key).distinct().count() != entries.size()
+    if (entries.size() < 2 || entries.size() > 5 || entries.stream().map(Entry::key).distinct().count() != entries.size()
         || entries.stream().anyMatch(e -> !valid(world, e)))
       throw new IllegalStateException("Invalid automatic test containers");
     automatic.put(world.getWorldConfig().getUuid(), new Automatic(world, List.copyOf(entries)));

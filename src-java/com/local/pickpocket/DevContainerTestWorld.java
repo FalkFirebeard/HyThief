@@ -60,7 +60,7 @@ final class DevContainerTestWorld implements AutoCloseable {
       var stations = new ArrayList<Station>();
       for (var item : config.getAsJsonArray("Owned")) stations.add(station(item.getAsJsonObject()));
       var control = station(config.getAsJsonObject("Control"));
-      if (stations.size() < 2 || stations.size() > 3 || stations.stream().map(s -> s.x()+","+s.y()+","+s.z()).distinct().count() != stations.size() || stations.stream().anyMatch(s -> samePosition(s, control))) throw new IllegalStateException("Expected two or three distinct owned stations and separate unowned control");
+      if (stations.size() < 2 || stations.size() > 5 || stations.stream().map(s -> s.x()+","+s.y()+","+s.z()).distinct().count() != stations.size() || stations.stream().anyMatch(s -> samePosition(s, control))) throw new IllegalStateException("Expected two to five distinct owned stations and separate unowned control");
       var fixture = new Fixture(world, List.copyOf(stations), control);
       fixtures.put(uuid, fixture);registry.removeAutomatic(world);
       var loads = new ArrayList<CompletableFuture<?>>();

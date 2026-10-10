@@ -27,21 +27,24 @@ final class ContainerWitnessTest {
   try{
    transform=store.getComponent(actor,TransformComponent.getComponentType());
    var movement=store.getComponent(actor,com.hypixel.hytale.server.core.entity.movement.MovementStatesComponent.getComponentType());
-   require(ContainerVisualWitness.visualRange(true,"Kweebec_Sapling")==4.0&&ContainerVisualWitness.visualRange(false,"Kweebec_Sapling")==15.0,"shared current sight range");
-   transform.setPosition(new Vector3d(.5,64,19.5));
-   var midStanding=ContainerVisualWitness.capture(actor,store);movement.getMovementStates().crouching=true;
-   var midCrouched=ContainerVisualWitness.capture(actor,store);
-   require(midStanding.seen()&&midStanding.distance()==9&&midStanding.los()&&midStanding.sector(),"MID standing witnessed/clear LOS");
-   require(!midCrouched.seen()&&midCrouched.crouched()&&midCrouched.reason().equals("range")&&midCrouched.sector(),"MID crouched outside range");
-   transform.setPosition(new Vector3d(.5,64,13.5));var closeCrouched=ContainerVisualWitness.capture(actor,store);
-   movement.getMovementStates().crouching=false;var closeStanding=ContainerVisualWitness.capture(actor,store);
-   require(closeCrouched.seen()&&closeCrouched.crouched()&&closeCrouched.distance()==3&&closeCrouched.los()&&closeStanding.seen(),"CLOSE both stances witnessed");
-   var stanceMessages=new ArrayList<com.hypixel.hytale.server.core.Message>();
-   ContainerCaughtNotification.notifyWitnessed(List.of(midCrouched),stanceMessages::add);require(stanceMessages.isEmpty(),"MID crouch notified");
-   for(var visual:List.of(midStanding,closeCrouched,closeStanding))ContainerCaughtNotification.notifyWitnessed(List.of(visual),stanceMessages::add);
-   require(stanceMessages.size()==3,"stance caught notifications");
-   report.addProperty("stanceMidStandingCaught",true);report.addProperty("stanceMidCrouchedUnseen",true);report.addProperty("stanceCloseBothCaught",true);
-   System.out.println("STANCE_WITNESS_PASS StandingRange=15 CrouchedRange=4 MidDistance=9 CloseDistance=3 MidStanding=WITNESSED MidCrouched=UNSEEN CloseStanding=WITNESSED CloseCrouched=WITNESSED LOS=CLEAR Sector=true Notifications=0,1,1,1");
+   require(ContainerVisualWitness.visualRange(true,"Kweebec_Sapling")==6.0&&ContainerVisualWitness.visualRange(false,"Kweebec_Sapling")==20.0,"container-only experimental range");
+   require(15.0*HyThiefStealthAcquisition.multiplier("sight","Kweebec_Sapling")==4.0,"normal crouched sight changed");
+   for(int distance:new int[]{5,8,18,22}){
+    transform.setPosition(new Vector3d(.5,64,10.5+distance));
+    var rawSight=new PositionCache();rawSight.setOpaqueBlockSet(-1);
+    require(rawSight.hasLineOfSight(civilian,actor,store),"test station LOS obstruction at "+distance);
+    for(boolean crouched:new boolean[]{false,true}){
+     movement.getMovementStates().crouching=crouched;var visual=ContainerVisualWitness.capture(actor,store);
+     boolean expected=distance<=(crouched?6:20);
+     require(visual.distance()==distance&&visual.sector()&&visual.crouched()==crouched&&visual.seen()==expected,"stance range failure "+visual);
+     var messagesForCase=new ArrayList<com.hypixel.hytale.server.core.Message>();ContainerCaughtNotification.notifyWitnessed(List.of(visual),messagesForCase::add);
+     require(messagesForCase.size()==(expected?1:0),"caught message mismatch "+distance+" crouched="+crouched);
+     System.out.println("SIGHT_TUNING_CASE Distance="+distance+" Crouched="+crouched+" EffectiveRange="+ContainerVisualWitness.visualRange(crouched,visual.role())+" Sector=true RawLOS=true Witnessed="+visual.seen()+" Notifications="+messagesForCase.size());
+    }
+   }
+   movement.getMovementStates().crouching=false;
+   report.addProperty("containerStandingRange",20);report.addProperty("containerCrouchedRange",6);report.addProperty("normalSightMultiplierUnchanged",true);report.addProperty("allFourStancePairsPassed",true);
+   System.out.println("SIGHT_TUNING_PASS ContainerStanding=20 ContainerCrouched=6 Pads=5,8,18,22 RawLOS=CLEAR Sector=true NormalStanding=15 NormalCrouched=4");
    transform.setPosition(new Vector3d(.5,64,15.5));
    var front=ContainerVisualWitness.capture(actor,store);
    require(front.seen()&&front.los()&&front.sector(),"front must be witnessed "+front);
@@ -57,7 +60,7 @@ final class ContainerWitnessTest {
    require(ContainerCaughtNotification.notifyWitnessed(List.of(rear,front,front),messages::add).orElseThrow()==front,"wrong witness selected");
    require(messages.size()==1&&"You have been caught stealing!".equals(messages.getFirst().getRawText()),"front must notify exactly once with exact text");
    System.out.println("CAUGHT_NOTIFICATION_PASS Control=0 Rear=0 Front=1 ExactText=true MultipleEvidenceDeduplicated=true");
-   transform.setPosition(new Vector3d(.5,64,26.5));var outside=ContainerVisualWitness.capture(actor,store);
+   transform.setPosition(new Vector3d(.5,64,32.5));var outside=ContainerVisualWitness.capture(actor,store);
    require(!outside.seen()&&outside.reason().equals("range"),"outside visual range");
    transform.setPosition(new Vector3d(9,64,16));var blocked=ContainerVisualWitness.capture(actor,store);
    require(blocked.sector()&&!blocked.los()&&!blocked.seen(),"wall must block visual witness");
@@ -75,6 +78,8 @@ final class ContainerWitnessTest {
    finally{a.unregister();b.unregister();ContainerWorldBuilder.fill(chest);}
    require(captured.size()==1&&captured.getFirst().seen()&&captured.getFirst().playerPosition().z==15.5,"removal-time snapshot changed");
    transform.setPosition(new Vector3d(.5,64,15.5));
+   transform.setPosition(new Vector3d(.5,64,28.5));
+   require(!guardSight.hasLineOfSight(guard,actor,store),"guard sees 18-block pad directly");
    var plugin=PluginManager.get().getPlugin(PickpocketPlugin.class);
    require(plugin!=null,"actual HyThief plugin unavailable");
    var delivery=HyThiefGuardAlert.deliver(plugin,actor,civilian,store);
@@ -92,7 +97,7 @@ final class ContainerWitnessTest {
      boolean marked=java.util.Arrays.asList(targets.getEntityTargets()).contains(actor);
      double moved=start.distance(store.getComponent(guard,TransformComponent.getComponentType()).getPosition());
      require(state.getStateName().startsWith("Attack") && marked && moved>.1,"native pursuit lost offender: "+state.getStateName()+" marked="+marked+" moved="+moved);
-     System.out.println("NATIVE_GUARD_PURSUIT_PASS State="+state.getStateName()+" ExactOffenderMarked="+marked+" DistanceMoved="+moved);
+     System.out.println("NATIVE_GUARD_PURSUIT_PASS WitnessDistance=18 State="+state.getStateName()+" ExactOffenderMarked="+marked+" DistanceMoved="+moved);
     }catch(Throwable error){ContainerWorldBuilder.fail(error);}
    }),1250,java.util.concurrent.TimeUnit.MILLISECONDS);
    report.addProperty("nativeVisualFrontWitnessed",true);report.addProperty("nativeVisualRearUnseen",true);

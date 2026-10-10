@@ -16,10 +16,11 @@ import java.util.List;
 
 /** Development fixture only: fresh visual evidence captured in the removal callback. */
 final class ContainerVisualWitness {
-  // Standing Sapling declaration; crouch uses the existing shared sight multiplier.
-  static final double RANGE = 15.0;
+  // Container theft balance experiment only; normal NPC/pickpocket perception is unchanged.
+  static final double RANGE = 20.0;
+  static final double CROUCHED_RANGE = 6.0;
   static double visualRange(boolean crouched, String role) {
-    return crouched ? RANGE * HyThiefStealthAcquisition.multiplier("sight", role) : RANGE;
+    return crouched ? CROUCHED_RANGE : RANGE;
   }
   static final float SECTOR = (float) Math.toRadians(180);
   record Evidence(Ref<EntityStore> witness, String role, double distance, boolean sector,

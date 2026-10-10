@@ -1,44 +1,42 @@
-Current test: 1.3.1-container.7. Container Theft Checkpoint 3. Standing sight 15 blocks; crouched sight 4 blocks (existing shared multiplier unchanged).
+Current test: 1.3.1-container.8. CONTAINER-ONLY 20 standing / 6 crouched; normal NPC perception unchanged.
 
-# Container Theft Checkpoint 3 — stance range, container.7
+# Container theft sight tuning pass 1 — container.8
 
-Container.6 real-client standing pipeline passed, including exact caught message and native guard reaction.
+Container.7 15/4 stance checkpoint passed Firebeard's real-client test. Container.8 is an experimental container-only balance build: standing visual witness range 20 blocks, crouched 6 blocks. No additional modifiers. The normal HyThief initial-acquisition multiplier and pickpocket behavior remain byte-identical (native Sapling ViewRange 15, normal sight multiplier 4/15 = crouched 4). ContainerVisualWitness uses separate constants 20 and 6. Removal-time ECS crouch, facing, native LOS, ownership attribution, native chest open/close, notification and guard adapter are unchanged.
 
-## Actual existing range
+## Compact playable stage
 
-HyThiefStealthAcquisition.multiplier("sight", role) returns 4.0 / 15.0. The stable Sapling declaration used by this fixture is ViewRange=15, ViewSector=180 degrees. Result: standing 15 blocks, crouched 4 blocks. No values were tuned. ContainerVisualWitness previously recorded crouch but always used 15. It now reuses this same shared multiplier with removal-time MovementStatesComponent.crouching, retaining existing facing, native opacity/LOS, notification and danger adapter.
+Same frozen Kweebec_Sapling at (0.5,64,10.5), facing +Z, on the existing platform. Each owned station is a native Furniture_Kweebec_Chest_Large with fixed Copper bars 16, Iron bars 8 and Fibre 32. The floor pads are ordinary cobble blocks with floating distance/expectation labels; stand on the Kweebec-facing side of each chest. No commands/setup.
 
-This borrows the range calculation, not the acquisition filter's idle/marked-target exceptions: a visual observation of a new theft is not a request to clear or mutate NPC combat awareness. Pursuit/combat memory is untouched. Full 3D distance remains the existing fixture metric; all marked pads are at the witness floor height.
+|Station|Chest position|Player pad center|Distance|Standing|Crouched|
+|---|---|---|---|---|---|
+|CROUCH INSIDE|(0,64,16)|(0.5,64,15.5)|5|Caught|Caught|
+|CROUCH OUTSIDE / STANDING INSIDE|(0,64,19)|(0.5,64,18.5)|8|Caught|Unseen|
+|STANDING NEAR EDGE|(0,64,29)|(0.5,64,28.5)|18|Caught|Unseen|
+|STANDING OUTSIDE|(0,64,33)|(0.5,64,32.5)|22|Unseen|Unseen|
+|CONTROL unowned|(-3,64,16)|(-2.5,64,15.5)|5.831|Safe|Safe|
+|REAR owned|(0,64,4)|(0.5,64,5.5)|5|Unseen by facing|Unseen by facing|
 
-## Layout
+All four front pads are forward and have independently verified clear native LOS, including the 22-block pad where the witness check normally short-circuits on range. Pads avoid thresholds by 1, 2, 2 and 2 blocks respectively. Six chests, five automatic owned stations, one unowned control; only the bounded development fixture station count changed. Existing ownership validity rules remain. Prior MID/CLOSE chests/pads are replaced in this saved layout; original reusable prefab is preserved as its base reference.
 
-Same stationary Kweebec_Sapling at (0.5,64,10.5), facing +Z. Same native guard role, opaque wall and native LastSeen handoff. Four ordinary native Furniture_Kweebec_Chest_Large chests:
-
-|Station|Chest coordinate|Marked approach position|Distance|Expected|
-|---|---|---|---|---|
-|CONTROL unowned|(-3,64,16)|(-2.5,64,15.5)|5.831|No caught notification/response|
-|REAR owned|(0,64,4)|(0.5,64,5.5)|5|Unseen by facing while standing|
-|MID owned|(0,64,20)|(0.5,64,19.5)|9|Standing caught; crouched unseen|
-|CLOSE owned|(0,64,14)|(0.5,64,13.5)|3|Caught in both stances|
-
-Use the labeled cobble floor pads on the Kweebec side of MID and CLOSE. CLOSE's far side can put the player beyond 4 blocks, so the marked pad matters. MID has a five-block margin outside the crouched limit and six-block margin inside standing range. CLOSE has a one-block margin inside crouched range. Positions remain comfortably inside the forward sector. Native standing LOS at MID and both stance LOS at CLOSE verified clear.
-
-The old FRONT chest at (0,64,16) is removed from this save, replaced by MID and CLOSE. The unowned control stays where it was. Only the bounded development fixture's station count accepts two or three distinct owned stations; its world/marker/container validity rules remain unchanged. The original reusable prefab and other test worlds are preserved; this new stage is authored in the saved Container Theft master, with the existing prefab retained as its base reference.
+Same Razorleaf and unchanged native role assets/LastSeen handoff. Its stage placement moves from (8.999,64,7.462) to (8.999,64,16.5) within the existing shielded alcove. This keeps caught stations within native pursuit entry distance, without tuning guard AI/perception. Guard-to-player LOS is blocked at every pad by the unchanged wall. Witness-to-player LOS remains clear. Native pathing chooses its own route around that wall.
 
 ## Validation
 
-Clean container.7 build, stable 0.6.8, manifest =0.6.8. Existing inventory warnings unchanged. Native save reload: four chests, 18 labels, same stationary witness, same unfrozen guard, three automatic owned registrations, control unowned. Native chest state/open/close and attribution tests pass. Using real ECS movement stance: MID standing witnessed, MID crouched range rejection, CLOSE standing and crouched witnessed. Notification dispatch counts match stance results; existing guard native pursuit retains the offender. Pickpocket sources, stealth acquisition policy/multipliers, guard adapter and private native guard role bytes unchanged. No sound/random chance/ownership policy/UI changes.
+Clean build on Java 25 / stable Hytale 0.6.8, manifest =0.6.8. Existing inventory/Gradle deprecation warnings unchanged. Native authoring then playable save reload: six native chests, fixed loot, five ownership registrations, 22 label entities, same frozen witness/unfrozen guard. Eight stance cases at 5/8/18/22 all pass. For each, actual ECS movement stance, exact distance, FOV, independent LOS and notification count are checked. 5 crouched caught; 8 crouched unseen; 8 standing caught; 18 standing caught; 22 both unseen. Rear facing rejection and control exclusion pass. Paired-withdrawal, insertion, rearrangement/failure and native chest state tests pass. Native danger delivered from 18-block standing pad; guard retains exact offender in Attack.Default and moves with native chase. Real-client feel/attack confirmation remains Firebeard's checkpoint.
+
+Normal acquisition source and all other Java gameplay/UI/guard code and all packaged NPC/loot/config assets are byte-identical to container.7. Role pack, original prefabs, other test worlds and archived releases are preserved. The unchanged safe reset system archives the dirty live save and restores the checksum-verified new master. Native-generated .bak resource copies are excluded from the candidate, while old master is fully backed up.
 
 ## Firebeard test order
 
-Use toggle crouch so opening a native chest does not accidentally stand you up. Observe one withdrawal per caught test.
+Use toggle crouch; each pad is measured to the player's floor position, not the chest center. Check the distance feel while approaching/standing on each pad. Opening or browsing alone must never notify. Use one successful withdrawal per caught test.
 
-1. Run A: standing CONTROL, standing REAR, crouched MID on its pad (all no notification/reaction), then crouched CLOSE on its pad (caught message and Razorleaf response).
-2. Exit Hytale and use the existing Reset Container Theft launcher. Run B: standing MID (caught message and guard response).
-3. Exit/reset again. Run C: standing CLOSE (caught message and guard response).
+Run A, before any caught event: standing CONTROL; standing and crouched REAR; 22 standing and crouched; 18 crouched; 8 crouched. All safe. Then 5 crouched: exactly one `You have been caught stealing!` notification and native Razorleaf response.
 
-Each caught case starts with a fresh guard. Opening/browsing alone remains harmless. If results differ, quit to flush the live log and report station/stance. Diagnostics now show Distance, effective Range, StandingRange, Crouched, Sector, LOS, reason, notification and native danger delivery.
+Exit Hytale and use the existing Reset Container Theft Test World desktop launcher before each remaining caught test: run B = 8 standing; run C = 18 standing; optional run D = 5 standing. Each caught withdrawal should notify and produce guard response. These separate runs preserve a fresh guard rather than weakening aggression between tests. No commands or manual chest setup.
 
-Rollback: DevTesting/Container_Theft_Test_World/Rollback-container.6-before-stance includes full old source, verification, master, station plan, reset/checksum files and previous JAR. The live dirty save is archived by the unchanged checked reset script. Real-client stance acceptance pending Firebeard.
+Report whether 20/6 feels believable, and any difference from the expected table. If failure occurs, quit to flush logs and report station + actual stance. Logs include actual Distance, effective Range, StandingRange, Crouched, Sector, LOS/Reason, caught message and danger/guard observations.
 
-API verified against installed stable binary and official MovementStatesComponent documentation: https://docs.hytale.com/api/com/hypixel/hytale/server/core/entity/movement/MovementStatesComponent
+Rollback: DevTesting/Container_Theft_Test_World/Rollback-container.7-before-sight-tuning, including source, old master, role pack/prefabs, verification files, reset/checksum/station metadata and installed container.7 JAR. Runtime balance acceptance pending Firebeard; no public release promotion.
+
+Stance API verified against installed stable server and official API: https://docs.hytale.com/api/com/hypixel/hytale/server/core/entity/movement/MovementStatesComponent
