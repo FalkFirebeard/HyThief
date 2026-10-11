@@ -13,12 +13,17 @@ public final class OwnershipProofData implements Component<ChunkStore> {
           .append(new KeyedCodec<>("Owned", Codec.BOOLEAN),
               (data, value) -> data.owned = value, data -> data.owned).add()
           .append(new KeyedCodec<>("Scope", Codec.STRING),
-              (data, value) -> data.scope = value, data -> data.scope).add().build();
+              (data, value) -> data.scope = value, data -> data.scope).add()
+          .append(new KeyedCodec<>("Faction", Codec.STRING),
+              (data, value) -> data.faction = value, data -> data.faction).add().build();
   private static ComponentType<ChunkStore, OwnershipProofData> type;
   private boolean owned;
   private String scope = "";
+  private String faction = "";
   public OwnershipProofData() {}
   public OwnershipProofData(boolean owned, String scope) { this.owned=owned; this.scope=scope; }
+  public OwnershipProofData(boolean owned,String scope,String faction) { this(owned,scope);this.faction=faction; }
+  public String faction() { return faction; }
   static void register(PickpocketPlugin plugin) {
     type=plugin.getChunkStoreRegistry().registerComponent(
         OwnershipProofData.class, "HyThiefOwnershipProof", CODEC);
@@ -26,5 +31,5 @@ public final class OwnershipProofData implements Component<ChunkStore> {
   public static ComponentType<ChunkStore, OwnershipProofData> getComponentType() { return type; }
   public boolean owned() { return owned; }
   public String scope() { return scope; }
-  @Override public OwnershipProofData clone() { return new OwnershipProofData(owned,scope); }
+  @Override public OwnershipProofData clone() { return new OwnershipProofData(owned,scope,faction); }
 }

@@ -55,6 +55,39 @@ final class ContainerVisualWitness {
     if (candidates.size() != 1) return missing("missing-or-ambiguous-fixture-witness");
     return evaluate(candidates.getFirst(), player, position, crouched, store);
   }
+  static List<Evidence> capture(Ref<EntityStore> player, Store<EntityStore> store,
+      OwnershipProofData ownership, java.util.Set<String> enabledRoles, java.util.function.Consumer<String> log) {
+    var result=new ArrayList<Evidence>();
+    if(player==null || !player.isValid())return result;
+    var t=store.getComponent(player,TransformComponent.getComponentType());
+    if(t==null)return result;
+    var movement=store.getComponent(player,MovementStatesComponent.getComponentType());
+    boolean crouched=movement!=null && movement.getMovementStates().crouching;
+    var position=new Vector3d(t.getPosition());
+    var candidates=new ArrayList<Ref<EntityStore>>();
+    store.forEachChunk(NPCEntity.getComponentType(),(chunk,buffer)->{
+      for(int n=0;n<chunk.size();n++) {
+        var ref=chunk.getReferenceTo(n);var npc=store.getComponent(ref,NPCEntity.getComponentType());
+        var transform=store.getComponent(ref,TransformComponent.getComponentType());
+        if(npc.getRole()!=null && enabledRoles.contains(npc.getRoleName()) && transform!=null
+            && transform.getPosition().distance(position)<=RANGE
+            && store.getComponent(ref,DeathComponent.getComponentType())==null)candidates.add(ref);
+      }
+    });
+    candidates.sort(java.util.Comparator.comparing(ref->store.getComponent(ref,NPCEntity.getComponentType()).getRoleName()));
+    for(var candidate:candidates) {
+      var npc=store.getComponent(candidate,NPCEntity.getComponentType());
+      String faction=ContainerOwnershipPolicy.faction(candidate,store);
+      String rejected=ContainerOwnershipPolicy.rejection(ownership,candidate,store);
+      log.accept("Action=OWNERSHIP_CANDIDATE Role="+npc.getRoleName()+" Faction="+faction
+          +" Eligible="+(rejected==null)+" Reason="+(rejected==null?"scope-match":rejected));
+      if(rejected!=null)continue;
+      var evidence=evaluate(candidate,player,position,crouched,store);
+      log.accept("Action=VISUAL_CANDIDATE Faction="+faction+" "+evidence.diagnostic());
+      result.add(evidence);
+    }
+    return result;
+  }
   static Evidence evaluate(Ref<EntityStore> witness, Ref<EntityStore> player,
       Vector3d position, boolean crouched, Store<EntityStore> store) {
     var t = store.getComponent(witness, TransformComponent.getComponentType());

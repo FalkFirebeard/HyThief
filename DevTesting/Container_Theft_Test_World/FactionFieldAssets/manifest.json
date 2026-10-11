@@ -1,0 +1,10 @@
+{
+  "Group": "FirebeardDev",
+  "Name": "ContainerFactionField",
+  "Version": "1.0.0",
+  "ServerVersion": "=0.6.8",
+  "IncludesAssetPack": true,
+  "Dependencies": {
+    "Local:HyThief": "*"
+  }
+}

@@ -98,7 +98,7 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
       var entity=store.getComponent(ref,Player.getComponentType());
       for(var open:entity.getWindowManager().getWindows())if(open instanceof ContainerBlockWindow window
           && (window.getItemContainer()==source || window.getItemContainer()==destination)
-          && (testWorld.persistentPosition(world,window.getX(),window.getY(),window.getZ())
+          && (testWorld.persistentField(world) || testWorld.persistentPosition(world,window.getX(),window.getY(),window.getZ())
               || testWorld.controlPosition(world,window.getX(),window.getY(),window.getZ()))) {
         componentRoute=true;
         persistent=PersistentContainerOwnership.resolve(world,window,window.getItemContainer());
@@ -127,14 +127,14 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     long request = sequence.incrementAndGet();
     var observed = entry;
     log("Request=" + request + " Action=OWNED_REQUEST Offender=" + ref + " Player=" + player.getUuid() + " Chest=" + observed.key());
-    var evidence = new IdentityHashMap<ContainerRemovalProbe.Removal, ContainerVisualWitness.Evidence>();
+    var evidence = new IdentityHashMap<ContainerRemovalProbe.Removal, java.util.List<ContainerVisualWitness.Evidence>>();
     var confirmed = new ArrayList<ContainerVisualWitness.Evidence>();
     var probe = new ContainerRemovalProbe(observed.container(), removal -> {
       var key = observed.key();
       if (attachedSource!=null) {
         log("Request="+request+" Action=SOURCE_RESOLVED Entity="+attachedSource.entity()+" Authority=component NoRegistryFallback=true");
         var data=attachedSource.read();
-        log("Request="+request+" Action="+(data==null?"COMPONENT_MISSING":"COMPONENT_FOUND")+" Owned="+(data!=null&&data.owned())+" Scope="+(data==null?"MISSING":data.scope()));
+        log("Request="+request+" Action="+(data==null?"COMPONENT_MISSING":"COMPONENT_FOUND")+" Owned="+(data!=null&&data.owned())+" Scope="+(data==null?"MISSING":data.scope())+" Faction="+(data==null?"MISSING":data.faction()));
         if(!PersistentContainerOwnership.eligible(data)) {
           boolean proof=testWorld.persistentPosition(world,attachedSource.key().x(),attachedSource.key().y(),attachedSource.key().z());
           log("Request="+request+" Action=UNOWNED_IGNORE ProofFailure="+(proof&&data==null)+" NoRegistryFallback=true");return;
@@ -142,15 +142,16 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
       }
       if (automatic) {
         var visual = evidence.get(removal);
-        if (visual != null) { confirmed.add(visual); log("Request=" + request + " " + visual.diagnostic()); }
+        if (visual != null) { confirmed.addAll(visual); for(var seen:visual)log("Request=" + request + " " + seen.diagnostic()); }
       }
       log("Request=" + request + " Player=" + player.getUsername() + "/" + player.getUuid()
           + " Chest=" + key.world() + ":" + key.x() + "," + key.y() + "," + key.z()
           + " Slot=" + removal.slot() + " Item=" + removal.item() + " Amount=" + removal.amount()
           + " Action=REMOVE Result=SUCCESS Time=" + removal.time() + " Mono=" + removal.nanoTime());
     }, removal -> {
-      if (automatic && (attachedSource==null || attachedSource.ownedNearby())) {
-        try { log("Request=" + request + " Action=OWNED_REMOVE_CAPTURE Item=" + removal.item() + " Amount=" + removal.amount()); evidence.put(removal, ContainerVisualWitness.capture(ref, store)); }
+      if (automatic && (attachedSource==null || PersistentContainerOwnership.eligible(attachedSource.read()))) {
+        try { log("Request=" + request + " Action=OWNED_REMOVE_CAPTURE Item=" + removal.item() + " Amount=" + removal.amount()); evidence.put(removal, attachedSource==null ? java.util.List.of(ContainerVisualWitness.capture(ref,store))
+            : ContainerVisualWitness.capture(ref,store,attachedSource.read(),testWorld.witnessRoles(world),message->log("Request="+request+" "+message))); }
         catch (RuntimeException error) { log("Request=" + request + " WITNESS=UNSEEN Reason=visual-error:" + error.getClass().getSimpleName()); plugin.getLogger().atWarning().withCause(error).log("HyThief container visual capture failed"); }
       }
     });
@@ -183,7 +184,7 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     // All inventory locks/callbacks have unwound. One downstream notification per request.
     ContainerCaughtNotification.notifyWitnessed(confirmed, player::sendMessage).ifPresent(visual -> {
       log("Request=" + request + " Action=CAUGHT_NOTIFICATION Player=" + player.getUuid() + " Witness=" + visual.role());
-      var delivery = HyThiefGuardAlert.deliver(plugin, ref, visual.witness(), store, message -> log("Request=" + request + " " + message));
+      var delivery = HyThiefGuardAlert.deliverContainer(plugin, ref, visual.witness(), store, message -> log("Request=" + request + " " + message));
       log("Request=" + request + " Action=" + (delivery.sent() ? "DANGER_SENT" : "DANGER_NOT_SENT")
           + " Witness=" + visual.role() + " Guard=" + delivery.guard() + " Reason=" + delivery.reason());
     });

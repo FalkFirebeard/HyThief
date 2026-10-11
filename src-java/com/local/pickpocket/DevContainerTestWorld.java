@@ -27,6 +27,8 @@ final class DevContainerTestWorld implements AutoCloseable {
   private final Map<UUID, String> errors = new ConcurrentHashMap<>();
   private final List<EventRegistration<?, ?>> events = new ArrayList<>();
   private volatile boolean closed;
+  private final Set<UUID> ownershipFields=ConcurrentHashMap.newKeySet();
+  private final Map<UUID,Set<String>> fieldWitnessRoles=new ConcurrentHashMap<>();
   DevContainerTestWorld(PickpocketPlugin plugin, OwnedContainerRegistry registry, Consumer<String> log) {
     this.registry = registry; this.log = log;
     events.add(plugin.getEventRegistry().registerGlobal(StartWorldEvent.class, e -> load(e.getWorld())));
@@ -54,6 +56,12 @@ final class DevContainerTestWorld implements AutoCloseable {
       if (bytes.length != 16) throw new IllegalStateException("Invalid test world UUID");
       var buffer = ByteBuffer.wrap(bytes);var uuid = new UUID(buffer.getLong(), buffer.getLong());
       if (!uuid.equals(world.getWorldConfig().getUuid())) throw new IllegalStateException("Test marker UUID does not match loaded world");
+      if(root.has("OwnershipField") && root.get("OwnershipField").getAsBoolean()) {
+        var roles=new HashSet<String>();for(var value:root.getAsJsonArray("WitnessRoles"))roles.add(value.getAsString());
+        fieldWitnessRoles.put(uuid,Set.copyOf(roles));ownershipFields.add(uuid);
+        fixtures.put(uuid,new Fixture(world,List.of(),null,null));registry.removeAutomatic(world);
+        log.accept("Action=OWNERSHIP_FIELD_READY RegistryFallback=false WitnessRoles="+roles);return;
+      }
       var config = root.getAsJsonObject("AutoContainerDiagnostics");
       if (config == null) return; // Old manually configured fixture remains a valid rollback.
       if (config.get("Version").getAsInt() != 1 || !"Kweebec".equals(config.get("Owner").getAsString())) throw new IllegalStateException("Invalid diagnostic fixture schema");
@@ -108,6 +116,7 @@ final class DevContainerTestWorld implements AutoCloseable {
   }
   // Called only on load and inventory requests, on the owning world thread. No tick polling/listeners on arbitrary inventories.
   void refresh(World world) {
+    if(persistentField(world))return;
     if (!enabled(world)) return;
     var fixture=fixtures.get(world.getWorldConfig().getUuid());
     var current=registry.automatic(world);
@@ -131,6 +140,10 @@ final class DevContainerTestWorld implements AutoCloseable {
       log.accept("Action=AUTO_REGISTER Owner=Kweebec World="+world.getWorldConfig().getUuid()+" Owned="+entries.stream().map(e->e.key().toString()).toList()+" Control=UNOWNED");
     } catch (RuntimeException error) { error(world, error.toString()); }
   }
+  Set<String> witnessRoles(World world) {
+    return fieldWitnessRoles.getOrDefault(world.getWorldConfig().getUuid(),Set.of("Kweebec_Sapling"));
+  }
+  boolean persistentField(World world) { return ownershipFields.contains(world.getWorldConfig().getUuid()); }
   boolean persistentPosition(World world,int x,int y,int z) {
     var f=fixtures.get(world.getWorldConfig().getUuid());var s=f==null?null:f.persistent();
     return s!=null && f.world()==world && s.x()==x && s.y()==y && s.z()==z;
@@ -143,15 +156,17 @@ final class DevContainerTestWorld implements AutoCloseable {
     var fixture = fixtures.get(world.getWorldConfig().getUuid());
     if (fixture == null || fixture.world() != world) return false;
     var c = fixture.control();
+    if(c==null)return false;
     var live = BlockModule.getComponent(ItemContainerBlock.getComponentType(), world, c.x(), c.y(), c.z());
     return live != null && live.getItemContainer() == source;
   }
   void remove(World world) {
     fixtures.computeIfPresent(world.getWorldConfig().getUuid(),(id,f)->f.world()==world?null:f);
+    ownershipFields.remove(world.getWorldConfig().getUuid());fieldWitnessRoles.remove(world.getWorldConfig().getUuid());
     registry.removeAutomatic(world);
     errors.remove(world.getWorldConfig().getUuid());
   }
   public void close() {
-    closed=true;for(var e:events)e.unregister();fixtures.values().forEach(f->registry.removeAutomatic(f.world()));fixtures.clear();errors.clear();
+    closed=true;for(var e:events)e.unregister();fixtures.values().forEach(f->registry.removeAutomatic(f.world()));fixtures.clear();errors.clear();ownershipFields.clear();fieldWitnessRoles.clear();
   }
 }

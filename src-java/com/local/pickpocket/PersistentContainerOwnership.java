@@ -19,11 +19,12 @@ public final class PersistentContainerOwnership {
         throw new IllegalStateException("Source inventory/entity no longer match");
       return store.getComponent(entity,OwnershipProofData.getComponentType());
     }
-    public boolean ownedNearby() { return eligible(read()); }
+    public boolean ownedNearby() { var data=read(); return eligible(data) && "NEARBY".equals(data.scope()); }
   }
   private PersistentContainerOwnership() {}
   public static boolean eligible(OwnershipProofData data) {
-    return data!=null && data.owned() && "NEARBY".equals(data.scope());
+    return data!=null && data.owned() && ("NEARBY".equals(data.scope())
+        || ("FACTION".equals(data.scope()) && com.hypixel.hytale.builtin.tagset.config.NPCGroup.getAssetMap().getIndex(data.faction())>=0));
   }
   public static Source resolve(World world,ContainerBlockWindow window,ItemContainer attributed) {
     if(window==null || attributed==null || window.getItemContainer()!=attributed)return null;

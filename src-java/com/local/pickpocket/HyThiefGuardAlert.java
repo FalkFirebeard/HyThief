@@ -36,6 +36,19 @@ final class HyThiefGuardAlert {
 
   static Delivery deliver(PickpocketPlugin plugin, Ref<EntityStore> offender,
       Ref<EntityStore> victim, Store<EntityStore> store, java.util.function.Consumer<String> diagnostic) {
+    return deliverNative(plugin,offender,victim,store,diagnostic,DANGER,java.util.Set.of("Kweebec_Razorleaf","Kweebec_Razorleaf_Patrol"),"Kweebec");
+  }
+  static Delivery deliverContainer(PickpocketPlugin plugin,Ref<EntityStore> offender,
+      Ref<EntityStore> victim,Store<EntityStore> store,java.util.function.Consumer<String> diagnostic) {
+    String faction=ContainerOwnershipPolicy.faction(victim,store);
+    if("Kweebec".equals(faction))return deliver(plugin,offender,victim,store,diagnostic);
+    if("Feran".equals(faction))return deliverNative(plugin,offender,victim,store,diagnostic,
+        "Feran_Warriors_Attack",java.util.Set.of("Feran_Sharptooth","Feran_Longtooth"),faction);
+    return new Delivery(false,"unsupported-witness-faction",null);
+  }
+  private static Delivery deliverNative(PickpocketPlugin plugin,Ref<EntityStore> offender,
+      Ref<EntityStore> victim,Store<EntityStore> store,java.util.function.Consumer<String> diagnostic,
+      String danger,java.util.Set<String> responderRoles,String faction) {
     boolean tracing = diagnostic != null;
     if (diagnostic == null) diagnostic = message -> {};
     var trace = diagnostic;
@@ -58,18 +71,17 @@ final class HyThiefGuardAlert {
       for (Ref<EntityStore> candidate : nearby) {
         if (candidate == null || !candidate.isValid()) continue;
         NPCEntity npc = store.getComponent(candidate, NPCEntity.getComponentType());
-        if (npc == null || !("Kweebec_Razorleaf".equals(npc.getRoleName())
-            || "Kweebec_Razorleaf_Patrol".equals(npc.getRoleName()))
+        if (npc == null || !responderRoles.contains(npc.getRoleName())
             || !plugin.isPickpocketableRole(npc.getRoleName())) continue;
         StateSupport state = store.getComponent(candidate, StateSupport.getComponentType());
         BeaconSupport beacon = store.getComponent(candidate, BeaconSupport.getComponentType());
         TransformComponent position = store.getComponent(candidate, TransformComponent.getComponentType());
-        int slot = dangerSlot(beacon);
+        int slot = dangerSlot(beacon,danger);
         String stateName = state == null ? "missing" : state.getStateName();
         boolean ready = npc.getRole() != null && acceptsDanger(stateName) && slot >= 0
             && beacon.isMessageEnabled(slot) && !beacon.isMessageQueued(slot)
             && store.getComponent(candidate, DeathComponent.getComponentType()) == null;
-        diagnostic.accept("Action=GUARD_CANDIDATE Role=" + npc.getRoleName() + " Ref=" + candidate
+        diagnostic.accept("Action=GUARD_CANDIDATE Faction="+faction+" Role=" + npc.getRoleName() + " Ref=" + candidate
             + " State=" + stateName + " Slot=" + slot + " Enabled=" + (slot >= 0 && beacon.isMessageEnabled(slot))
             + " Queued=" + (slot >= 0 && beacon.isMessageQueued(slot)) + " Ready=" + ready
             + " Position=" + (position == null ? "missing" : position.getPosition()));
@@ -84,11 +96,11 @@ final class HyThiefGuardAlert {
         return new Delivery(false, "no-ready-native-guard", null);
       }
       // Same one-second lifetime as native ActionBeacon. No forced state, attitude or attack.
-      BeaconBroadcast.post(chosen, DANGER, offender, 1.0, store);
+      BeaconBroadcast.post(chosen, danger, offender, 1.0, store);
       var beacon = store.getComponent(chosen, BeaconSupport.getComponentType());
-      int slot = dangerSlot(beacon);
+      int slot = dangerSlot(beacon,danger);
       diagnostic.accept("Action=NATIVE_DANGER_QUEUED Guard=" + chosen + " Slot=" + slot
-          + " Signal=" + DANGER + " Queued=" + (slot >= 0 && beacon.isMessageQueued(slot))
+          + " Signal=" + danger + " Queued=" + (slot >= 0 && beacon.isMessageQueued(slot))
           + " ExactOffender=" + (slot >= 0 && offender.equals(beacon.peekMessage(slot))));
       var guard = chosen;
       if (tracing) for (long delay : new long[]{250, 1250}) java.util.concurrent.CompletableFuture.delayedExecutor(delay, java.util.concurrent.TimeUnit.MILLISECONDS).execute(() ->
@@ -114,10 +126,10 @@ final class HyThiefGuardAlert {
         || state.equals("Alerted") || state.startsWith("Alerted."));
   }
 
-  private static int dangerSlot(BeaconSupport beacon) {
+  private static int dangerSlot(BeaconSupport beacon,String danger) {
     if (beacon == null || beacon.getMessageSlots() == null) return -1;
     for (int i = 0; i < beacon.getMessageSlots().length; i++) {
-      if (DANGER.equals(beacon.getMessageTextForIndex(i))) return i;
+      if (danger.equals(beacon.getMessageTextForIndex(i))) return i;
     }
     return -1;
   }
