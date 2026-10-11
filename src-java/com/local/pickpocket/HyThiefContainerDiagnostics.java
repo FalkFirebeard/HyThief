@@ -129,6 +129,7 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     log("Request=" + request + " Action=OWNED_REQUEST Offender=" + ref + " Player=" + player.getUuid() + " Chest=" + observed.key());
     var evidence = new IdentityHashMap<ContainerRemovalProbe.Removal, java.util.List<ContainerVisualWitness.Evidence>>();
     var confirmed = new ArrayList<ContainerVisualWitness.Evidence>();
+    var caughtOwnership = new OwnershipProofData[1];
     var probe = new ContainerRemovalProbe(observed.container(), removal -> {
       var key = observed.key();
       if (attachedSource!=null) {
@@ -140,6 +141,7 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
           log("Request="+request+" Action=UNOWNED_IGNORE ProofFailure="+(proof&&data==null)+" NoRegistryFallback=true");return;
         }
       }
+      if (attachedSource != null) caughtOwnership[0] = attachedSource.read().clone();
       if (automatic) {
         var visual = evidence.get(removal);
         if (visual != null) { confirmed.addAll(visual); for(var seen:visual)log("Request=" + request + " " + seen.diagnostic()); }
@@ -184,9 +186,9 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     // All inventory locks/callbacks have unwound. One downstream notification per request.
     ContainerCaughtNotification.notifyWitnessed(confirmed, player::sendMessage).ifPresent(visual -> {
       log("Request=" + request + " Action=CAUGHT_NOTIFICATION Player=" + player.getUuid() + " Witness=" + visual.role());
-      var delivery = HyThiefGuardAlert.deliverContainer(plugin, ref, visual.witness(), store, message -> log("Request=" + request + " " + message));
+      var delivery = HyThiefContainerAlert.deliver(plugin, caughtOwnership[0], ref, visual.witness(), store, message -> log("Request=" + request + " " + message));
       log("Request=" + request + " Action=" + (delivery.sent() ? "DANGER_SENT" : "DANGER_NOT_SENT")
-          + " Witness=" + visual.role() + " Guard=" + delivery.guard() + " Reason=" + delivery.reason());
+          + " Witness=" + visual.role() + " AlertType=" + delivery.type() + " Signal=" + delivery.signal() + " Responders=" + delivery.responders() + " Reason=" + delivery.reason());
     });
   }
   private static String identity(Object value) { return value == null ? "null" : value.getClass().getSimpleName() + "@" + Integer.toHexString(System.identityHashCode(value)); }

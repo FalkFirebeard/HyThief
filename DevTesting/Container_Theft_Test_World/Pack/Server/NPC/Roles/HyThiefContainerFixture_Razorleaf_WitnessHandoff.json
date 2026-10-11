@@ -168,9 +168,19 @@
             },
             {
               "Sensor": {
-                "Type": "Beacon",
-                "Message": "Kweebec_All_Danger",
-                "TargetSlot": "LockedTarget"
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "Beacon",
+                    "Message": "Kweebec_All_Danger",
+                    "TargetSlot": "LockedTarget"
+                  },
+                  {
+                    "Type": "Beacon",
+                    "Message": "HyThief_Local_Theft",
+                    "TargetSlot": "LockedTarget"
+                  }
+                ]
               },
               "Actions": [
                 {
@@ -423,9 +433,19 @@
             },
             {
               "Sensor": {
-                "Type": "Beacon",
-                "Message": "Kweebec_All_Danger",
-                "TargetSlot": "LockedTarget"
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "Beacon",
+                    "Message": "Kweebec_All_Danger",
+                    "TargetSlot": "LockedTarget"
+                  },
+                  {
+                    "Type": "Beacon",
+                    "Message": "HyThief_Local_Theft",
+                    "TargetSlot": "LockedTarget"
+                  }
+                ]
               },
               "Actions": [
                 {

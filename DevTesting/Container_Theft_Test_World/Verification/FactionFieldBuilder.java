@@ -138,11 +138,32 @@ public final class FactionFieldBuilder extends JavaPlugin {
   require(15.0*HyThiefStealthAcquisition.multiplier("sight","Feran_Civilian")==4.0,"normal perception changed");
   String test=System.getProperty("factionfield.response","");
   if(!test.isEmpty()){
-   var victim=test.equals("Feran")?f:k;var target=roles.get(test.equals("Feran")?"Feran_Sharptooth":"Kweebec_Razorleaf");require(target!=null,"responder missing");
-   store.getComponent(actor,TransformComponent.getComponentType()).setPosition(new Vector3d(test.equals("Feran")?6.5:-1.5,64,11.5));
-   var plugin=PluginManager.get().getPlugin(PickpocketPlugin.class);var before=new Vector3d(store.getComponent(target,TransformComponent.getComponentType()).getPosition());
-   var delivery=HyThiefGuardAlert.deliverContainer(plugin,actor,victim,store,System.out::println);require(delivery.sent()&&delivery.guard().equals(target),"faction responder not selected "+delivery);
-   w.scheduleAfter(()->w.execute(()->{try{require(target.isValid(),"chosen guard disappeared during native response");var state=store.getComponent(target,StateSupport.getComponentType());var marked=store.getComponent(target,MarkedEntitySupport.getComponentType());double moved=before.distance(store.getComponent(target,TransformComponent.getComponentType()).getPosition());require(Arrays.asList(marked.getEntityTargets()).contains(actor),"offender not marked");require(state.getStateName().startsWith("Attack")&&moved>.2,"no native pursuit "+state.getStateName()+" moved="+moved);var other=roles.get(test.equals("Feran")?"Kweebec_Razorleaf":"Feran_Sharptooth");require(other.isValid(),"unchosen responder disappeared");var otherMarked=store.getComponent(other,MarkedEntitySupport.getComponentType());require(otherMarked==null||!Arrays.asList(otherMarked.getEntityTargets()).contains(actor),"wrong faction responder targeted offender");System.out.println("FACTION_NATIVE_RESPONSE_PASS Faction="+test+" State="+state.getStateName()+" ExactOffender=true WrongFactionTargeted=false Movement="+moved);finish();}catch(Throwable e){fail(e);}}),3,TimeUnit.SECONDS);
+   boolean local=test.startsWith("Local");boolean feran=test.equals("Feran")||test.equals("LocalFeran");
+   store.getComponent(actor,TransformComponent.getComponentType()).setPosition(new Vector3d(local?2.5:feran?6.5:-1.5,64,11.5));
+   if(local){int blockX=feran?-1:3;for(int y=64;y<=67;y++)w.setBlock(blockX,y,6,"Rock_Stone_Cobble");}
+   var ownership=local?data(2):feran?data(3):data(1);
+   var visuals=ContainerVisualWitness.capture(actor,store,ownership,WITNESSES,System.out::println);
+   var notifications=new ArrayList<com.hypixel.hytale.server.core.Message>();
+   var selected=ContainerCaughtNotification.notifyWitnessed(visuals,notifications::add).orElseThrow();
+   require(notifications.size()==1&&selected.role().equals(feran?F:K),"witness/notification mismatch "+test);
+   var plugin=PluginManager.get().getPlugin(PickpocketPlugin.class);
+   var before=new HashMap<Ref<EntityStore>,Vector3d>();for(var name:List.of("Kweebec_Razorleaf","Feran_Sharptooth")){var ref=roles.get(name);before.put(ref,new Vector3d(store.getComponent(ref,TransformComponent.getComponentType()).getPosition()));}
+   var delivery=HyThiefContainerAlert.deliver(plugin,ownership,actor,selected.witness(),store,System.out::println);
+   require(delivery.sent()&&delivery.responders().size()==(local?2:1),"wrong responder count "+delivery);
+   if(local)require(delivery.type().equals("LOCAL")&&delivery.signal().equals(HyThiefContainerAlert.LOCAL),"wrong local alert");
+   else require(delivery.responders().contains(roles.get(feran?"Feran_Sharptooth":"Kweebec_Razorleaf")),"wrong faction delivery");
+   w.scheduleAfter(()->w.execute(()->{try{
+    for(var name:List.of("Kweebec_Razorleaf","Feran_Sharptooth")){
+     var ref=roles.get(name);require(ref.isValid(),"responder disappeared");var state=store.getComponent(ref,StateSupport.getComponentType());var marked=store.getComponent(ref,MarkedEntitySupport.getComponentType());
+     boolean targeted=marked!=null&&Arrays.asList(marked.getEntityTargets()).contains(actor);double moved=before.get(ref).distance(store.getComponent(ref,TransformComponent.getComponentType()).getPosition());
+     boolean expected=local||(feran?name.equals("Feran_Sharptooth"):name.equals("Kweebec_Razorleaf"));
+     require(targeted==expected,"target faction mismatch "+name);
+     if(expected)require(state.getStateName().startsWith("Attack")&&moved>.2,"no native pursuit "+name+" state="+state.getStateName()+" moved="+moved);
+     System.out.println("THEFT_NATIVE_RESPONDER Role="+name+" Expected="+expected+" Targeted="+targeted+" State="+state.getStateName()+" Movement="+moved);
+    }
+    System.out.println("FACTION_NATIVE_RESPONSE_PASS Test="+test+" Type="+delivery.type()+" Signal="+delivery.signal()+" Responders="+delivery.responders().size()+" Notifications="+notifications.size()+" Witness="+selected.role());finish();
+   }catch(Throwable error){fail(error);}}),3,TimeUnit.SECONDS);
+
   }else{store.removeEntity(actor,RemoveReason.REMOVE);finish();}
  }
  static void finish(){try{Files.writeString(Path.of("faction-verification.json"),"{\"fourStationsPassed\":true}");}catch(Exception e){throw new RuntimeException(e);}System.out.println("FACTION_FIELD_VERIFIED");CompletableFuture.runAsync(()->com.hypixel.hytale.server.core.HytaleServer.get().shutdownServer());}

@@ -40,7 +40,10 @@ final class HyThiefGuardAlert {
   }
   static Delivery deliverContainer(PickpocketPlugin plugin,Ref<EntityStore> offender,
       Ref<EntityStore> victim,Store<EntityStore> store,java.util.function.Consumer<String> diagnostic) {
-    String faction=ContainerOwnershipPolicy.faction(victim,store);
+    return deliverContainer(plugin,offender,victim,store,ContainerOwnershipPolicy.faction(victim,store),diagnostic);
+  }
+  static Delivery deliverContainer(PickpocketPlugin plugin,Ref<EntityStore> offender,
+      Ref<EntityStore> victim,Store<EntityStore> store,String faction,java.util.function.Consumer<String> diagnostic) {
     if("Kweebec".equals(faction))return deliver(plugin,offender,victim,store,diagnostic);
     if("Feran".equals(faction))return deliverNative(plugin,offender,victim,store,diagnostic,
         "Feran_Warriors_Attack",java.util.Set.of("Feran_Sharptooth","Feran_Longtooth"),faction);

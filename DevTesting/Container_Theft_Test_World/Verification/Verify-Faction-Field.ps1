@@ -1,11 +1,11 @@
 [CmdletBinding()]
-param([switch]$Author,[string]$InputWorld,[ValidateSet('','Kweebec','Feran')][string]$Response='')
+param([switch]$Author,[string]$InputWorld,[ValidateSet('','Kweebec','Feran','LocalFeran','LocalKweebec')][string]$Response='')
 $ErrorActionPreference='Stop'
 $project=Split-Path (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent) -Parent
 $root=Join-Path $project 'DevTesting\Container_Theft_Test_World'
 $jdk=Join-Path (Split-Path (Split-Path $project -Parent) -Parent) 'Toolchains\JDK25\bin'
 $server=Join-Path $project '.build\dependencies\HytaleServer-0.6.8.jar'
-$jar=Join-Path $project 'build\libs\HyThief-1.3.1-container.10.jar'
+$jar=Join-Path $project 'build\libs\HyThief-1.3.1-container.11.jar'
 if(!$InputWorld){$InputWorld=Join-Path $root 'Master'}
 $run=Join-Path $root ('FactionVerificationRuns\'+(Get-Date -Format yyyyMMdd-HHmmss)+'-'+[guid]::NewGuid().ToString('N'))
 if(![IO.Path]::GetFullPath($run).StartsWith($root+'\FactionVerificationRuns\')){throw 'Unsafe verifier path'}
@@ -18,7 +18,7 @@ $classes=Join-Path $run 'classes';New-Item -ItemType Directory -Path $classes|Ou
 & (Join-Path $jdk 'javac.exe') -cp ($server+';'+$jar) -d $classes (Join-Path $PSScriptRoot 'FactionFieldBuilder.java') (Join-Path $PSScriptRoot 'ContainerWorldBuilder.java') (Join-Path $PSScriptRoot 'ContainerWitnessTest.java') (Join-Path $PSScriptRoot 'ContainerProbeTest.java') (Join-Path $PSScriptRoot 'ContainerPacketBridgeTest.java') (Join-Path $PSScriptRoot 'PersistentOwnershipIntegrationTest.java')
 if($LASTEXITCODE -ne 0){throw 'Verifier compilation failed'}
 $zip=[IO.Compression.ZipFile]::OpenRead($jar)
-try{foreach($entry in $zip.Entries){if($entry.FullName -match '^com/local/pickpocket/(ContainerRemovalProbe|OwnedContainerRegistry|ContainerVisualWitness|ContainerCaughtNotification|HyThiefStealthAcquisition|HyThiefGuardAlert|ContainerPacketBridge|PersistentContainerOwnership|ContainerOwnershipPolicy).*\.class$'){
+try{foreach($entry in $zip.Entries){if($entry.FullName -match '^com/local/pickpocket/(ContainerRemovalProbe|OwnedContainerRegistry|ContainerVisualWitness|ContainerCaughtNotification|HyThiefStealthAcquisition|HyThiefGuardAlert|ContainerPacketBridge|PersistentContainerOwnership|ContainerOwnershipPolicy|HyThiefContainerAlert).*\.class$'){
  $dest=Join-Path $classes $entry.FullName;New-Item -ItemType Directory -Path (Split-Path $dest -Parent) -Force|Out-Null
  [IO.Compression.ZipFileExtensions]::ExtractToFile($entry,$dest,$true)
 }}}finally{$zip.Dispose()}
