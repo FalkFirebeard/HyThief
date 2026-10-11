@@ -26,16 +26,18 @@ import java.nio.file.*;
 public final class FactionFieldBuilder extends JavaPlugin {
  public FactionFieldBuilder(JavaPluginInit init){super(init);}
  static final int[] XS={-6,-2,2,6,-12,11};
- static final String[] LABELS={"1 CONTROL - UNOWNED","2 OWNED - NEARBY","3 FACTION - KWEEBEC","4 FACTION - FERAN","5 KWEEBEC OWNED - KWEEBEC BLOCKED","6 FERAN OWNED - FERAN BLOCKED"};
+ static final String[] LABELS={"1 CONTROL - UNOWNED","2 OWNED - NEARBY","3 FACTION - KWEEBEC","4 FACTION - FERAN","5 KWEEBEC OWNED - MANUAL LOS TEST","6 FERAN OWNED - MANUAL LOS TEST"};
  static final String K="Kweebec_Sapling_HyThiefWitness", F="Feran_Civilian_HyThiefWitness";
  static final Set<String> WITNESSES=Set.of(K,F);
  static OwnershipProofData data(int i){return new OwnershipProofData(i!=0,i==1?"NEARBY":i==0?"":"FACTION",i==2||i==4?"Kweebec":i==3||i==5?"Feran":"");}
+ static boolean containsX(int x){for(int v:XS)if(v==x)return true;return false;}
  static void require(boolean condition,String message){if(!condition)throw new IllegalStateException(message);}
  protected void start(){Universe.get().getUniverseReady().thenRun(()->{
   var w=Universe.get().getDefaultWorld();var loads=new ArrayList<CompletableFuture<?>>();
   for(int x=-1;x<=0;x++)for(int z=-1;z<=1;z++)loads.add(w.getChunkAsync(com.hypixel.hytale.math.util.ChunkUtil.indexChunk(x,z)));
   CompletableFuture.allOf(loads.toArray(CompletableFuture[]::new)).thenRun(()->w.execute(()->{
    try{if(Boolean.getBoolean("factionfield.author"))author(w);
+    if(Boolean.getBoolean("factionfield.opengeometry"))openGeometry(w);
     w.scheduleAfter(()->w.execute(()->{try{validate(w);}catch(Throwable e){fail(e);}}),5,TimeUnit.SECONDS);
    }catch(Throwable e){fail(e);}
   }));
@@ -66,15 +68,23 @@ public final class FactionFieldBuilder extends JavaPlugin {
    var ref=BlockModule.getBlockEntity(w,XS[i],64,12);w.getChunkStore().getStore().addComponent(ref,OwnershipProofData.getComponentType(),data(i));mark(w,i);
    w.setBlock(XS[i],63,11,"Rock_Stone_Brick");label(store,LABELS[i],XS[i]+.5,66.5,12.5);
   }
-  for(int x:new int[]{-8,7})for(int y=64;y<=67;y++)for(int z=5;z<=6;z++)w.setBlock(x,y,z,"Rock_Stone_Brick");
-  // Native responders stay mobile; shield direct view and provide an open rear exit.
-  for(int side:new int[]{-1,1})for(int y=64;y<=67;y++){
-   for(int x=17;x<=22;x++)w.setBlock(side*x,y,-5,"Rock_Stone_Brick");
-   for(int z=-10;z<=-5;z++){w.setBlock(side*17,y,z,"Rock_Stone_Brick");w.setBlock(side*22,y,z,"Rock_Stone_Brick");}
-  }
-  label(store,"SAFE FIRST: 1 CONTROL, 5 KWEEBEC BLOCKED, 6 FERAN BLOCKED",.5,67,7.5);
+  label(store,"CONTROL SAFE; 5 / 6: PLACE YOUR OWN LOS BLOCKS",.5,67,7.5);
   label(store,"CAUGHT TESTS: 3 KWEEBEC, RESET, 4 FERAN, RESET, 2 NEARBY",.5,66.2,7.5);
   System.out.println("FACTION_FIELD_AUTHOR_PASS SixNativeChests=true SerializedOwnership=true");
+ }
+ static void openGeometry(World w){
+  for(int x:new int[]{-8,7})for(int y=64;y<=67;y++)for(int z=5;z<=6;z++)w.setBlock(x,y,z,"Empty");
+  for(int side:new int[]{-1,1})for(int y=64;y<=67;y++){
+   for(int x=17;x<=22;x++)w.setBlock(side*x,y,-5,"Empty");
+   for(int z=-10;z<=-5;z++){w.setBlock(side*17,y,z,"Empty");w.setBlock(side*22,y,z,"Empty");}
+  }
+  var store=w.getEntityStore().getStore();
+  var labels=new ArrayList<Ref<EntityStore>>(); store.forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++)labels.add(chunk.getReferenceTo(i));}); for(var ref:labels){
+   var t=store.getComponent(ref,TransformComponent.getComponentType());if(t==null)continue;var pos=t.getPosition();
+   if(Math.abs(pos.y-66.5)<.01&&Math.abs(pos.z-12.5)<.01)for(int j=0;j<XS.length;j++)if(Math.abs(pos.x-(XS[j]+.5))<.01)store.putComponent(ref,Nameplate.getComponentType(),new Nameplate(LABELS[j]));
+   if(Math.abs(pos.x-.5)<.01&&Math.abs(pos.z-7.5)<.01&&Math.abs(pos.y-67)<.01)store.putComponent(ref,Nameplate.getComponentType(),new Nameplate("CONTROL SAFE; 5 / 6: PLACE YOUR OWN LOS BLOCKS"));
+  }
+  System.out.println("FACTION_OPEN_GEOMETRY_PATCHED NPCsPreserved=true OwnershipPreserved=true");
  }
  static void label(Store<EntityStore> store,String text,double x,double y,double z){
   var holder=EntityStore.REGISTRY.newHolder();holder.addComponent(TransformComponent.getComponentType(),new TransformComponent(new Vector3d(x,y,z),new Rotation3f()));
@@ -83,10 +93,15 @@ public final class FactionFieldBuilder extends JavaPlugin {
   holder.addComponent(Frozen.getComponentType(),Frozen.get());holder.addComponent(com.hypixel.hytale.server.core.entity.UUIDComponent.getComponentType(),com.hypixel.hytale.server.core.entity.UUIDComponent.randomUUID());store.addEntity(holder,AddReason.SPAWN);
  }
  static void validate(World w)throws Exception{
+  for(int x=-26;x<=26;x++)for(int z=-16;z<=26;z++)for(int y=64;y<=70;y++){
+   boolean isChest=y==64&&z==12&&(containsX(x)||containsX(x+1)||containsX(x-1));
+   require(isChest||"Empty".equals(w.getBlockType(x,y,z).getId()),"Unexpected above-ground obstacle "+x+","+y+","+z);
+  }
+  System.out.println("FACTION_OPEN_FIELD_PASS NoPermanentWalls=true ClearResponderPaths=true");
   var store=w.getEntityStore().getStore();var roles=new HashMap<String,Ref<EntityStore>>();
   store.forEachChunk(NPCEntity.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){var ref=chunk.getReferenceTo(i);roles.put(store.getComponent(ref,NPCEntity.getComponentType()).getRoleName(),ref);}});
   var k=roles.get(K);var f=roles.get(F);require(k!=null&&f!=null,"witness roles missing");
-  for(var name:List.of("Kweebec_Razorleaf","Feran_Sharptooth")){var ref=roles.get(name);System.out.println("FIELD_RESPONDER Role="+name+" Position="+(ref==null?"missing":store.getComponent(ref,TransformComponent.getComponentType()).getPosition())+" State="+(ref==null?"missing":store.getComponent(ref,StateSupport.getComponentType()).getStateName()));}
+  for(var name:List.of("Kweebec_Razorleaf","Feran_Sharptooth")){var ref=roles.get(name);require(ref!=null&&store.getComponent(ref,Frozen.getComponentType())==null,"responder missing or frozen");System.out.println("FIELD_RESPONDER Role="+name+" Position="+(ref==null?"missing":store.getComponent(ref,TransformComponent.getComponentType()).getPosition())+" State="+(ref==null?"missing":store.getComponent(ref,StateSupport.getComponentType()).getStateName()));}
   for(var ref:List.of(k,f)) {require(store.getComponent(ref,Frozen.getComponentType())==null,"witness Frozen disables role processing");var t=store.getComponent(ref,TransformComponent.getComponentType());var h=store.getComponent(ref,HeadRotation.getComponentType());require(Math.abs(Math.abs(h.getRotation().yaw())-Math.PI)<.001,"witness head rotated");require(Math.abs(t.getPosition().z-.5)<.01,"witness wandered");}
   require(ContainerOwnershipPolicy.member(k,"Kweebec",store)&&!ContainerOwnershipPolicy.member(k,"Feran",store),"native Kweebec group");
   require(ContainerOwnershipPolicy.member(f,"Feran",store)&&!ContainerOwnershipPolicy.member(f,"Kweebec",store),"native Feran group");
@@ -109,13 +124,13 @@ public final class FactionFieldBuilder extends JavaPlugin {
    var rawK=ContainerVisualWitness.evaluate(k,actor,store.getComponent(actor,TransformComponent.getComponentType()).getPosition(),false,store);
    var rawF=ContainerVisualWitness.evaluate(f,actor,store.getComponent(actor,TransformComponent.getComponentType()).getPosition(),false,store);
    require(rawK.sector()&&rawF.sector(),"outside forward FOV station "+(i+1));
-   require(rawK.los()==(i!=4)&&rawF.los()==(i!=5),"wrong occlusion station "+(i+1)+" K="+rawK+" F="+rawF);
+   require(rawK.los()&&rawF.los(),"wrong occlusion station "+(i+1)+" K="+rawK+" F="+rawF);
    var visual=ContainerVisualWitness.capture(actor,store,d,WITNESSES,System.out::println);var messages=new ArrayList<com.hypixel.hytale.server.core.Message>();
    var selected=ContainerCaughtNotification.notifyWitnessed(visual,messages::add);
-   require(messages.size()==((i==1||i==2||i==3)?1:0),"notification station "+(i+1));
+   require(messages.size()==(i!=0?1:0),"notification station "+(i+1));
    if(i==1)require(visual.size()==2&&visual.stream().allMatch(ContainerVisualWitness.Evidence::seen),"NEARBY filtered faction");
-   if(i==2)require(selected.orElseThrow().role().equals(K),"Kweebec faction wrong witness");
-   if(i==3)require(selected.orElseThrow().role().equals(F),"Feran faction wrong witness");
+   if(i==2||i==4)require(selected.orElseThrow().role().equals(K),"Kweebec faction wrong witness");
+   if(i==3||i==5)require(selected.orElseThrow().role().equals(F),"Feran faction wrong witness");
    // Confirm the source component gates actual paired native inventory withdrawal.
    var receipts=new SimpleItemContainer((short)4);var confirmed=new ArrayList<ContainerVisualWitness.Evidence>();var snapshots=new IdentityHashMap<ContainerRemovalProbe.Removal,List<ContainerVisualWitness.Evidence>>();
    var probe=new ContainerRemovalProbe(c,r->{if(PersistentContainerOwnership.eligible(source.read()))confirmed.addAll(snapshots.getOrDefault(r,List.of()));},r->{if(PersistentContainerOwnership.eligible(source.read()))snapshots.put(r,ContainerVisualWitness.capture(actor,store,source.read(),WITNESSES,s->{}));});

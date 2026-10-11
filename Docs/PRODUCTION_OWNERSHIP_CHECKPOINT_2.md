@@ -425,3 +425,6 @@ Relevant log boundaries: SOURCE_RESOLVED (Authority=component, NoRegistryFallbac
 No PREFAB, creator UI, generalized all-NPC configuration, reputation, stolen flags or other banked systems were implemented. Stop for runtime results and Java review. Recommended next checkpoint only after acceptance: a targeted ownership-editing tool, followed by production data-driven witness participation.
 
 References: current installed 0.6.8 native group/role assets and server API; [official role attitude/group documentation](https://docs.hytale.com/assets/npc/attitude/roles/), [Update 6 patch notes](https://hytale.com/news/2026/8/update-6-patch-notes). Update 7 remains pre-release and was not adopted.
+
+## Open-field correction (2026-10-10)
+The responder shelters and both built-in witness occlusion walls were removed after this checkpoint. Stations 5/6 are now manual LOS tests and are witnessed by default. See CONTAINER_FIELD_OPEN_GEOMETRY.md and the current test-world README. No production gameplay changes.

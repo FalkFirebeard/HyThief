@@ -94,7 +94,7 @@
     },
     {
       "number": 5,
-      "label": "KWEEBEC OWNED - KWEEBEC BLOCKED",
+      "label": "KWEEBEC OWNED - MANUAL LOS TEST",
       "position": [
         -12,
         64,
@@ -108,13 +108,14 @@
       "Owned": true,
       "Scope": "FACTION",
       "Faction": "Kweebec",
-      "KweebecLOS": false,
+      "KweebecLOS": true,
       "FeranLOS": true,
-      "ExpectedCaught": false
+      "ExpectedCaught": true,
+      "ManualBlockedMatchingWitnessExpectedCaught": false
     },
     {
       "number": 6,
-      "label": "FERAN OWNED - FERAN BLOCKED",
+      "label": "FERAN OWNED - MANUAL LOS TEST",
       "position": [
         11,
         64,
@@ -129,8 +130,9 @@
       "Scope": "FACTION",
       "Faction": "Feran",
       "KweebecLOS": true,
-      "FeranLOS": false,
-      "ExpectedCaught": false
+      "FeranLOS": true,
+      "ExpectedCaught": true,
+      "ManualBlockedMatchingWitnessExpectedCaught": false
     }
   ]
 }

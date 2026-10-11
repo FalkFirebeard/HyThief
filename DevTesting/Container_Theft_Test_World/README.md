@@ -1,24 +1,16 @@
-# HyThief Container Theft Test World — container.10
+# HyThief Container Theft Test World - container.10 / open field
 
-Production ownership checkpoint 2: persistent NEARBY + FACTION, six native chests in a compact flat field. No commands or creator tools required.
+This geometry-only correction removes both responder shelters and both prebuilt witness LOS walls. Stationary Kweebec and Feran witnesses remain fixed; Razorleaf and Sharptooth remain mobile. All six stations now have clear witness LOS by default. There are no permanent LOS barriers or responder enclosures.
 
-Use the existing Reset Container Theft shortcut with Hytale closed. It restores this master and archives the dirty active save. Other test worlds are protected.
+Use the existing Reset Container Theft shortcut with Hytale closed. It restores this master and archives the dirty active save. Other worlds are untouched. Stand on a brick pad and withdraw one copper bar; opening/browsing alone must do nothing.
 
-Stand on each brick pad when withdrawing one copper bar. Opening or browsing alone must do nothing. All stations use identical native Kweebec large chests with 16 copper bars and 8 iron bars.
+1. Station 1 CONTROL: no notification or theft response.
+2. Station 3 KWEEBEC FACTION: one caught notification and Razorleaf response. Reset afterward.
+3. Station 4 FERAN FACTION: one caught notification and Sharptooth response. Reset afterward.
+4. Station 2 NEARBY: both witnesses eligible; one notification and one handoff (deterministic order selects Feran). Reset afterward.
+5. Station 5 KWEEBEC MANUAL LOS: place your own opaque blocks between the Kweebec witness and the player pad, keeping Feran LOS clear. Withdrawal should be unseen: the Feran cannot witness Kweebec-faction theft. Without your blocks, expect caught/Razorleaf. Reset afterward.
+6. Station 6 FERAN MANUAL LOS: block the Feran witness yourself while keeping Kweebec LOS clear. Withdrawal should be unseen. Without your blocks, expect caught/Sharptooth.
 
-Test order:
+Use standing for this checkpoint. Manually placed walls should block the witness-to-player view without enclosing a responder or obstructing its pursuit route. Reset removes your temporary blocks. Guard behavior can contaminate later tests, so reset between caught tests.
 
-1. Station 1 CONTROL — no notification/reaction.
-2. Station 5 KWEEBEC OWNED / KWEEBEC BLOCKED — no notification/reaction. Feran sees but is ineligible.
-3. Station 6 FERAN OWNED / FERAN BLOCKED — no notification/reaction. Kweebec sees but is ineligible.
-4. Station 3 KWEEBEC FACTION — one caught notification; Kweebec Razorleaf responds.
-5. Close Hytale and reset.
-6. Station 4 FERAN FACTION — one caught notification; Feran Sharptooth responds.
-7. Close Hytale and reset.
-8. Station 2 NEARBY — both witnesses eligible; exactly one caught notification and one chosen handoff. Current deterministic witness order selects the Feran when both see the same transfer.
-
-Witnesses use scoped development roles derived from Kweebec_Sapling and Feran_Civilian, requesting no movement/turn motion. They are not Frozen. Native head rotation, visual range/FOV/LOS and role/interaction processing remain active. Responders are mobile. Sharptooth's field-only idle setup suppresses camp-leaving/sleep choices, and its attack-beacon receiver captures LastSeen using the same native StorePosition pattern as the existing Razorleaf fixture. Attack/chase/search logic is unchanged.
-
-Container sight remains 20 standing / 6 crouched; normal HyThief perception remains 15 / 4. Use standing for this ownership checkpoint. Reset between caught tests to avoid combat contaminating another station.
-
-Ownership and faction IDs are saved on each native container entity. The field marker controls diagnostic participation only, never container ownership. See Docs/PRODUCTION_OWNERSHIP_CHECKPOINT_2.md for the Java walkthrough and native validation evidence.
+Native chests, persistent ownership, faction filtering, notification and guard delivery are unchanged. Container sight remains 20 standing / 6 crouched; normal HyThief perception remains 15 / 4. Installed HyThief-1.3.1-container.10.jar is unchanged. Native automated validation is useful evidence; Firebeard must confirm pursuit in the real client.
