@@ -25,11 +25,12 @@ import java.nio.file.*;
 /** Disposable author/validator for the ownership field; never installed in the live Mods folder. */
 public final class FactionFieldBuilder extends JavaPlugin {
  public FactionFieldBuilder(JavaPluginInit init){super(init);}
- static final int[] XS={-6,-2,2,6};
- static final String[] LABELS={"1 CONTROL - UNOWNED","2 FACTION - KWEEBEC","3 OWNED - NEARBY","4 FACTION - FERAN"};
+ static final int[] XS={-6,-2,0,6};
+ static final String[] LABELS={"1 CONTROL - UNOWNED","2 FACTION - KWEEBEC","3 OWNED - NEARBY - STAND ON CENTER SEAM X=0","4 FACTION - FERAN"};
  static final String K="Kweebec_Sapling_HyThiefWitness", F="Feran_Civilian_HyThiefWitness";
  static final Set<String> WITNESSES=Set.of(K,F);
  static OwnershipProofData data(int i){return new OwnershipProofData(i!=0,i==2?"NEARBY":i==0?"":"FACTION",i==1?"Kweebec":i==3?"Feran":"");}
+ static double padX(int i){return i==2?0.0:XS[i]+.5;}
  static boolean containsX(int x){for(int v:XS)if(v==x)return true;return false;}
  static void require(boolean condition,String message){if(!condition)throw new IllegalStateException(message);}
  protected void start(){Universe.get().getUniverseReady().thenRun(()->{
@@ -37,16 +38,18 @@ public final class FactionFieldBuilder extends JavaPlugin {
   for(int x=-1;x<=0;x++)for(int z=-1;z<=1;z++)loads.add(w.getChunkAsync(com.hypixel.hytale.math.util.ChunkUtil.indexChunk(x,z)));
   CompletableFuture.allOf(loads.toArray(CompletableFuture[]::new)).thenRun(()->w.execute(()->{
    try{if(Boolean.getBoolean("factionfield.author"))author(w);
+    if(Boolean.getBoolean("factionfield.symmetry"))symmetry(w);
     w.scheduleAfter(()->w.execute(()->{try{validate(w);}catch(Throwable e){fail(e);}}),5,TimeUnit.SECONDS);
    }catch(Throwable e){fail(e);}
   }));
  });}
- static ItemContainer chest(World w,int i){int x=XS[i];var cs=w.getChunkStore();var section=cs.getChunkSectionReferenceAtBlock(x,64,12);
+ static ItemContainer chest(World w,int i){return chestAt(w,XS[i]);}
+ static ItemContainer chestAt(World w,int x){var cs=w.getChunkStore();var section=cs.getChunkSectionReferenceAtBlock(x,64,12);
   var block=cs.getStore().getComponent(section,BlockComponentSection.getComponentType());
   BlockEntity.ensureBlockEntity(cs.getStore(),section,block,x,64,12,w.getBlockType(x,64,12),0);
   var inventory=BlockModule.getComponent(ItemContainerBlock.getComponentType(),w,x,64,12);
   require(inventory!=null,"native chest component missing");
-  if(inventory.getItemContainer()==null){require(Boolean.getBoolean("factionfield.author"),"inventory lost on restart");inventory.setItemContainer(new SimpleItemContainer(inventory.getCapacity()));}
+  if(inventory.getItemContainer()==null){require(Boolean.getBoolean("factionfield.author")||Boolean.getBoolean("factionfield.symmetry"),"inventory lost on restart");inventory.setItemContainer(new SimpleItemContainer(inventory.getCapacity()));}
   return inventory.getItemContainer();
  }
  static void mark(World w,int i){var cs=w.getChunkStore();var section=cs.getChunkSectionReferenceAtBlock(XS[i],64,12);
@@ -54,6 +57,21 @@ public final class FactionFieldBuilder extends JavaPlugin {
  static Ref<EntityStore> spawn(World w,String role,double x,double z,String label){var store=w.getEntityStore().getStore();
   var pair=NPCPlugin.get().spawnNPC(store,role,null,new Vector3d(x,64,z),new Rotation3f(0,role.endsWith("HyThiefWitness")?(float)Math.PI:0,0));require(pair!=null,"spawn failed "+role);
   var ref=pair.first();store.putComponent(ref,Nameplate.getComponentType(),new Nameplate(label));return ref;
+ }
+ static void symmetry(World w){
+  var old=chestAt(w,2);var items=new ItemStack[old.getCapacity()];for(short i=0;i<items.length;i++)items[i]=old.getItemStack(i);
+  var source=BlockModule.getBlockEntity(w,2,64,12);var ownership=w.getChunkStore().getStore().getComponent(source,OwnershipProofData.getComponentType());
+  require(ownership!=null&&ownership.owned()&&ownership.scope().equals("NEARBY"),"old NEARBY ownership missing");
+  var preserved=new OwnershipProofData(ownership.owned(),ownership.scope(),ownership.faction());
+  w.setBlock(2,64,12,"Empty");w.setBlock(1,64,12,"Empty");w.setBlock(2,63,11,"Rock_Stone_Cobble");
+  w.setBlock(0,64,12,"Furniture_Kweebec_Chest_Large");var next=chest(w,2);for(short i=0;i<items.length;i++)next.setItemStackForSlot(i,items[i]);
+  w.getChunkStore().getStore().addComponent(BlockModule.getBlockEntity(w,0,64,12),OwnershipProofData.getComponentType(),preserved);mark(w,2);
+  w.setBlock(-1,63,11,"Rock_Stone_Brick");w.setBlock(0,63,11,"Rock_Stone_Brick");
+  var store=w.getEntityStore().getStore();var labels=new ArrayList<Ref<EntityStore>>();var moved=new int[]{0};store.forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){
+   var ref=chunk.getReferenceTo(i);var n=store.getComponent(ref,Nameplate.getComponentType());if(n.getText().startsWith("3 OWNED - NEARBY")){
+    labels.add(ref);moved[0]++;
+   }
+  }});for(var ref:labels){store.getComponent(ref,TransformComponent.getComponentType()).setPosition(new Vector3d(0,66.5,12.5));store.putComponent(ref,Nameplate.getComponentType(),new Nameplate(LABELS[2]));}require(moved[0]==1,"NEARBY label count "+moved[0]);System.out.println("SYMMETRY_MOVE_PASS OldOrigin=2,64,12 NewOrigin=0,64,12 PlayerPad=0,64,11.5");
  }
  static void author(World w){
   for(int x=-26;x<=26;x++)for(int z=-16;z<=26;z++){
@@ -65,7 +83,7 @@ public final class FactionFieldBuilder extends JavaPlugin {
   for(int i=0;i<XS.length;i++){
    w.setBlock(XS[i],64,12,"Furniture_Kweebec_Chest_Large");var c=chest(w,i);c.setItemStackForSlot((short)0,new ItemStack("Ingredient_Bar_Copper",16));c.setItemStackForSlot((short)1,new ItemStack("Ingredient_Bar_Iron",8));
    var ref=BlockModule.getBlockEntity(w,XS[i],64,12);w.getChunkStore().getStore().addComponent(ref,OwnershipProofData.getComponentType(),data(i));mark(w,i);
-   w.setBlock(XS[i],63,11,"Rock_Stone_Brick");label(store,LABELS[i],XS[i]+.5,66.5,12.5);
+   w.setBlock(XS[i],63,11,"Rock_Stone_Brick");if(i==2)w.setBlock(-1,63,11,"Rock_Stone_Brick");label(store,LABELS[i],padX(i),66.5,12.5);
   }
   label(store,"FOUR CHESTS ONLY - USE YOUR BLOCKS FOR MANUAL LOS",.5,67,7.5);
   label(store,"1 CONTROL | 2 KWEEBEC | 3 NEARBY | 4 FERAN - RESET AFTER CAUGHT",.5,66.2,7.5);
@@ -92,6 +110,7 @@ public final class FactionFieldBuilder extends JavaPlugin {
   require(blocks!=null&&blocks.getItemId().equals("Rock_Stone_Cobble")&&blocks.getQuantity()==64,"starting building blocks missing");
   System.out.println("FOUR_CHEST_LAYOUT_PASS ChestCount=4 StartingBlocks=Rock_Stone_Cobble Quantity=64");
   System.out.println("FACTION_OPEN_FIELD_PASS NoPermanentWalls=true ClearResponderPaths=true");
+  require(w.getBlockType(-1,63,11).getId().equals("Rock_Stone_Brick")&&w.getBlockType(0,63,11).getId().equals("Rock_Stone_Brick"),"center seam pad missing");var labelCount=new int[]{0};w.getEntityStore().getStore().forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){var ref=chunk.getReferenceTo(i);var store=w.getEntityStore().getStore();if(store.getComponent(ref,Nameplate.getComponentType()).getText().equals(LABELS[2])){require(store.getComponent(ref,TransformComponent.getComponentType()).getPosition().x==0,"center label position");labelCount[0]++;}}});require(labelCount[0]==1,"center label lost on restart");
   var store=w.getEntityStore().getStore();var roles=new HashMap<String,Ref<EntityStore>>();var npcCount=new int[]{0};
   store.forEachChunk(NPCEntity.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){npcCount[0]++;var ref=chunk.getReferenceTo(i);roles.put(store.getComponent(ref,NPCEntity.getComponentType()).getRoleName(),ref);}});
   require(npcCount[0]==4&&roles.size()==4,"expected exactly four NPC roles");
@@ -115,7 +134,7 @@ public final class FactionFieldBuilder extends JavaPlugin {
     com.hypixel.hytale.server.core.universe.world.chunk.BlockOperations.setBlockInteractionState(w.getChunkStore(),section,XS[i],64,12,base,state,false);
     require(chest(w,i)==c&&source.read().faction().equals(expected.faction()),"native open/close lost inventory/ownership");
    }
-   store.getComponent(actor,TransformComponent.getComponentType()).setPosition(new Vector3d(XS[i]+.5,64,11.5));
+   store.getComponent(actor,TransformComponent.getComponentType()).setPosition(new Vector3d(padX(i),64,11.5));
    var rawK=ContainerVisualWitness.evaluate(k,actor,store.getComponent(actor,TransformComponent.getComponentType()).getPosition(),false,store);
    var rawF=ContainerVisualWitness.evaluate(f,actor,store.getComponent(actor,TransformComponent.getComponentType()).getPosition(),false,store);
    require(rawK.sector()&&rawF.sector(),"outside forward FOV station "+(i+1));
@@ -123,7 +142,12 @@ public final class FactionFieldBuilder extends JavaPlugin {
    var visual=ContainerVisualWitness.capture(actor,store,d,WITNESSES,System.out::println);var messages=new ArrayList<com.hypixel.hytale.server.core.Message>();
    var selected=ContainerCaughtNotification.notifyWitnessed(visual,messages::add);
    require(messages.size()==(i!=0?1:0),"notification station "+(i+1));
-   if(i==2)require(visual.size()==2&&visual.stream().allMatch(ContainerVisualWitness.Evidence::seen),"NEARBY filtered faction");
+   if(i==2){require(visual.size()==2&&visual.stream().allMatch(ContainerVisualWitness.Evidence::seen),"NEARBY filtered faction");
+    var kp=store.getComponent(k,TransformComponent.getComponentType()).getPosition();var fp=store.getComponent(f,TransformComponent.getComponentType()).getPosition();var point=new Vector3d(padX(i),64,11.5);
+    double kd=kp.distance(point),fd=fp.distance(point);require(Math.abs(kd-fd)<1e-8&&kd<20&&fd<20,"unequal/out-of-range distances");
+    require(Math.abs(kp.y-fp.y)<1e-8&&Math.abs((kp.x+fp.x)/2-point.x)<1e-8,"midpoint/elevation mismatch");
+    System.out.println("NEARBY_SYMMETRY_PASS Kweebec="+kp+" Feran="+fp+" Pad="+point+" KDistance="+kd+" FDistance="+fd+" FacingAngleDegrees="+Math.toDegrees(Math.atan2(Math.abs(kp.x-point.x),point.z-kp.z))+" KLOS="+rawK.los()+" FLOS="+rawF.los()+" KFOV="+rawK.sector()+" FFOV="+rawF.sector());
+   }
    if(i==1)require(selected.orElseThrow().role().equals(K),"Kweebec faction wrong witness");
    if(i==3)require(selected.orElseThrow().role().equals(F),"Feran faction wrong witness");
    // Confirm the source component gates actual paired native inventory withdrawal.
@@ -139,8 +163,8 @@ public final class FactionFieldBuilder extends JavaPlugin {
   String test=System.getProperty("factionfield.response","");
   if(!test.isEmpty()){
    boolean local=test.startsWith("Local");boolean feran=test.equals("Feran")||test.equals("LocalFeran");
-   store.getComponent(actor,TransformComponent.getComponentType()).setPosition(new Vector3d(local?2.5:feran?6.5:-1.5,64,11.5));
-   if(local){int blockX=feran?-1:3;for(int y=64;y<=67;y++)w.setBlock(blockX,y,6,"Rock_Stone_Cobble");}
+   store.getComponent(actor,TransformComponent.getComponentType()).setPosition(new Vector3d(local?padX(2):feran?6.5:-1.5,64,11.5));
+   if(local){int blockX=feran?-3:2;for(int y=64;y<=67;y++)w.setBlock(blockX,y,6,"Rock_Stone_Cobble");}
    var ownership=local?data(2):feran?data(3):data(1);
    var visuals=ContainerVisualWitness.capture(actor,store,ownership,WITNESSES,System.out::println);
    var notifications=new ArrayList<com.hypixel.hytale.server.core.Message>();

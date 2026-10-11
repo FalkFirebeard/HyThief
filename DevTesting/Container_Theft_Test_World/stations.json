@@ -54,14 +54,14 @@
     },
     {
       "number": 3,
-      "label": "OWNED - NEARBY",
+      "label": "OWNED - NEARBY - CENTER SEAM X=0",
       "position": [
-        2,
+        0,
         64,
         12
       ],
       "playerPad": [
-        2.5,
+        0,
         64,
         11.5
       ],

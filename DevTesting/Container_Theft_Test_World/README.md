@@ -2,7 +2,7 @@
 
 Installed gameplay: HyThief-1.3.1-container.11.jar.
 
-Left to right: **1 CONTROL | 2 KWEEBEC | 3 NEARBY | 4 FERAN**. These are the only four chests/stations. NEARBY is near the row center. All are native Kweebec large chests, with 16 copper bars and 8 iron bars. Stand on the corresponding brick pad and withdraw one copper bar. Opening/browsing is safe.
+Left to right: **1 CONTROL | 2 KWEEBEC | 3 NEARBY | 4 FERAN**. These are the only four chests/stations. NEARBY is centered between the witnesses at X=0. All are native Kweebec large chests, with 16 copper bars and 8 iron bars. For NEARBY, stand on the **center seam (X=0)** between its two brick tiles; the label marks this precisely. For other chests, stand on the corresponding brick pad and withdraw one copper bar. Opening/browsing is safe.
 
 - CONTROL: unowned; no caught notification or theft reaction.
 - KWEEBEC: FACTION/Kweebec; matching visual witness alerts Razorleaf, not Sharptooth.
@@ -16,3 +16,5 @@ For manual LOS tests, place opaque blocks between your player pad and the chosen
 Test CONTROL first, then one caught test per reset. Close Hytale and use the existing Reset Container Theft shortcut. It archives the active save and restores exactly these four chests, four NPCs, clean LOS, loot and your starting block stack. There are no stations 5/6 or legacy range stations.
 
 Container sight stays 20/6, normal HyThief perception stays 15/4. Ownership, faction filtering, native chest interaction, caught notification, native pursuit/combat, LastSeen and pickpocket logic remain unchanged. NEARBY now selects a generic native LOCAL alert; FACTION retains its faction alert. Firebeard's real-client test is still required.
+
+Geometry verification: Kweebec (-4.5,64,0.5), Feran (4.5,64,0.5), NEARBY player position (0,64,11.5). Both distances are 11.884864 blocks, both facing angles 22.249 degrees, both native FOV/LOS checks pass. The two-block chest is anchored at (0,64,12). See Docs/CONTAINER_FIELD_SYMMETRY.md.

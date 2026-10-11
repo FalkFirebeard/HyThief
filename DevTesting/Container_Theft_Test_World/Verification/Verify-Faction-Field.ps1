@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([switch]$Author,[string]$InputWorld,[ValidateSet('','Kweebec','Feran','LocalFeran','LocalKweebec')][string]$Response='')
+param([switch]$Symmetry,[switch]$Author,[string]$InputWorld,[ValidateSet('','Kweebec','Feran','LocalFeran','LocalKweebec')][string]$Response='')
 $ErrorActionPreference='Stop'
 $project=Split-Path (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent) -Parent
 $root=Join-Path $project 'DevTesting\Container_Theft_Test_World'
@@ -28,9 +28,9 @@ $manifest|ConvertTo-Json|Set-Content -LiteralPath (Join-Path $classes 'manifest.
 if($LASTEXITCODE -ne 0){throw 'Verifier packaging failed'}
 Push-Location -LiteralPath $run
 try{
- & (Join-Path $jdk 'java.exe') ('-Dfactionfield.author='+$Author.IsPresent) ('-Dfactionfield.response='+$Response) -jar $server --assets 'C:\Users\askin\AppData\Roaming\Hytale\install\release\package\game\latest\Assets.zip' --auth-mode offline --bind 127.0.0.1:15539 --disable-sentry --disable-file-watcher --disable-cpb-build *> 'native.log'
+ & (Join-Path $jdk 'java.exe') ('-Dfactionfield.author='+$Author.IsPresent) ('-Dfactionfield.symmetry='+$Symmetry.IsPresent) ('-Dfactionfield.response='+$Response) -jar $server --assets 'C:\Users\askin\AppData\Roaming\Hytale\install\release\package\game\latest\Assets.zip' --auth-mode offline --bind 127.0.0.1:15539 --disable-sentry --disable-file-watcher --disable-cpb-build *> 'native.log'
  if($LASTEXITCODE -ne 0 -or !(Test-Path 'faction-verification.json') -or (Select-String -LiteralPath 'native.log' -SimpleMatch 'FACTION_FIELD_FAILED')){throw ('Native faction validation failed: '+$run+'\native.log')}
  if($Response -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'FACTION_NATIVE_RESPONSE_PASS')){throw 'Native responder failed'}
- Select-String -LiteralPath 'native.log' -Pattern 'FACTION_STATION_PASS|FACTION_NATIVE_RESPONSE_PASS|FACTION_FIELD_VERIFIED'|ForEach-Object Line
+ Select-String -LiteralPath 'native.log' -Pattern 'NEARBY_SYMMETRY_PASS|SYMMETRY_MOVE_PASS|FACTION_STATION_PASS|FACTION_NATIVE_RESPONSE_PASS|FACTION_FIELD_VERIFIED'|ForEach-Object Line
  Write-Host ('RUN='+$run)
 }finally{Pop-Location}
