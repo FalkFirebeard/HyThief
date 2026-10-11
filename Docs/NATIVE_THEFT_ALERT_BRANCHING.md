@@ -1,6 +1,8 @@
 # Native container theft alert branching - container.11
 
-Development checkpoint only. Stable target =0.6.8; no public release.
+**REAL-CLIENT PROVEN — Firebeard report, 2026-10-10.** Stable target =0.6.8; development checkpoint, no public release.
+
+Symmetric NEARBY trials passed with both witnesses visible, Kweebec LOS blocked, and Feran LOS blocked. Exactly one caught notification and both Razorleaf/Sharptooth responses occurred in every trial. FACTION and NEARBY ownership/alert branches are proven for the configured participants. See CONTAINER_11_PROOF_AND_PREFAB_PROPERTY.md for the end-of-night record and next-scope investigation.
 
 Before: `deliverContainer(...)` inferred the danger signal from the first confirmed witness's faction. NEARBY therefore only selected that witness's faction guard.
 
@@ -198,4 +200,4 @@ LOCAL cases passed before the final explicit-ownership faction overload; the LOC
 
 Installed JAR SHA256: 08ddb2033d942c901a52de3ef20429e83f21db7212bf676e5287f05b0123c233. Exactly one active HyThief plugin; previous installed file preserved at Rollback-container.10-before-local-20261010-202845/Installed-Removed-HyThief-container.10.jar. Reset completed and all 33 live files match Master hashes, including four chests and the 64-block hotbar. Unrelated Mods hashes and other-world file metadata match the before snapshots. Dirty save archive: Archives/20261010-203909-28538069596c4f72bc3371f8267b18b0.
 
-Real-client behavior remains the final runtime checkpoint; only the scoped test responders opt into the generic listener so far. No public release.
+Real-client checkpoint completed: all three symmetric LOCAL witness cases passed, each with one notification and both native responders. Only the scoped test responders opt into the generic listener so far; this is not proof for all arbitrary roles. No public release.
