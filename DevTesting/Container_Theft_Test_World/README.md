@@ -1,16 +1,18 @@
-# HyThief Container Theft Test World - container.10 / open field
+# HyThief Container Theft Test World - four-chest field
 
-This geometry-only correction removes both responder shelters and both prebuilt witness LOS walls. Stationary Kweebec and Feran witnesses remain fixed; Razorleaf and Sharptooth remain mobile. All six stations now have clear witness LOS by default. There are no permanent LOS barriers or responder enclosures.
+Installed gameplay: unchanged HyThief-1.3.1-container.10.jar.
 
-Use the existing Reset Container Theft shortcut with Hytale closed. It restores this master and archives the dirty active save. Other worlds are untouched. Stand on a brick pad and withdraw one copper bar; opening/browsing alone must do nothing.
+Left to right: **1 CONTROL | 2 KWEEBEC | 3 NEARBY | 4 FERAN**. These are the only four chests/stations. NEARBY is near the row center. All are native Kweebec large chests, with 16 copper bars and 8 iron bars. Stand on the corresponding brick pad and withdraw one copper bar. Opening/browsing is safe.
 
-1. Station 1 CONTROL: no notification or theft response.
-2. Station 3 KWEEBEC FACTION: one caught notification and Razorleaf response. Reset afterward.
-3. Station 4 FERAN FACTION: one caught notification and Sharptooth response. Reset afterward.
-4. Station 2 NEARBY: both witnesses eligible; one notification and one handoff (deterministic order selects Feran). Reset afterward.
-5. Station 5 KWEEBEC MANUAL LOS: place your own opaque blocks between the Kweebec witness and the player pad, keeping Feran LOS clear. Withdrawal should be unseen: the Feran cannot witness Kweebec-faction theft. Without your blocks, expect caught/Razorleaf. Reset afterward.
-6. Station 6 FERAN MANUAL LOS: block the Feran witness yourself while keeping Kweebec LOS clear. Withdrawal should be unseen. Without your blocks, expect caught/Sharptooth.
+- CONTROL: unowned; no caught notification or theft reaction.
+- KWEEBEC: FACTION/Kweebec; matching visual witness alerts Razorleaf, not Sharptooth.
+- NEARBY: any eligible visible theft-aware witness; one caught notification and one chosen handoff. With both witnesses seeing, current deterministic selection chooses Feran.
+- FERAN: FACTION/Feran; matching visual witness alerts Sharptooth, not Razorleaf.
 
-Use standing for this checkpoint. Manually placed walls should block the witness-to-player view without enclosing a responder or obstructing its pursuit route. Reset removes your temporary blocks. Guard behavior can contaminate later tests, so reset between caught tests.
+The stationary witnesses face the row. Both responders remain mobile in a flat field without shelters or permanent LOS walls. You start at the spawn pad with **64 Rock_Stone_Cobble blocks in hotbar slot 1**, matching the field floor.
 
-Native chests, persistent ownership, faction filtering, notification and guard delivery are unchanged. Container sight remains 20 standing / 6 crouched; normal HyThief perception remains 15 / 4. Installed HyThief-1.3.1-container.10.jar is unchanged. Native automated validation is useful evidence; Firebeard must confirm pursuit in the real client.
+For manual LOS tests, place opaque blocks between your player pad and the chosen witness. A blocked matching witness should not catch faction theft; the other faction must not substitute. For NEARBY, any unblocked eligible witness may still catch you. Keep responder pursuit routes open. Use standing for this ownership checkpoint.
+
+Test CONTROL first, then one caught test per reset. Close Hytale and use the existing Reset Container Theft shortcut. It archives the active save and restores exactly these four chests, four NPCs, clean LOS, loot and your starting block stack. There are no stations 5/6 or legacy range stations.
+
+Container sight stays 20/6, normal HyThief perception stays 15/4. Ownership, faction filtering, native chest interaction, caught notification, native guard behavior and pickpocket logic remain unchanged. Firebeard's real-client test is still required.

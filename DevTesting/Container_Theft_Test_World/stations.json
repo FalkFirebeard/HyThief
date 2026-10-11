@@ -34,7 +34,7 @@
     },
     {
       "number": 2,
-      "label": "OWNED - NEARBY",
+      "label": "FACTION - KWEEBEC",
       "position": [
         -2,
         64,
@@ -46,15 +46,15 @@
         11.5
       ],
       "Owned": true,
-      "Scope": "NEARBY",
-      "Faction": "",
+      "Scope": "FACTION",
+      "Faction": "Kweebec",
       "KweebecLOS": true,
       "FeranLOS": true,
       "ExpectedCaught": true
     },
     {
       "number": 3,
-      "label": "FACTION - KWEEBEC",
+      "label": "OWNED - NEARBY",
       "position": [
         2,
         64,
@@ -66,8 +66,8 @@
         11.5
       ],
       "Owned": true,
-      "Scope": "FACTION",
-      "Faction": "Kweebec",
+      "Scope": "NEARBY",
+      "Faction": "",
       "KweebecLOS": true,
       "FeranLOS": true,
       "ExpectedCaught": true
@@ -91,48 +91,6 @@
       "KweebecLOS": true,
       "FeranLOS": true,
       "ExpectedCaught": true
-    },
-    {
-      "number": 5,
-      "label": "KWEEBEC OWNED - MANUAL LOS TEST",
-      "position": [
-        -12,
-        64,
-        12
-      ],
-      "playerPad": [
-        -11.5,
-        64,
-        11.5
-      ],
-      "Owned": true,
-      "Scope": "FACTION",
-      "Faction": "Kweebec",
-      "KweebecLOS": true,
-      "FeranLOS": true,
-      "ExpectedCaught": true,
-      "ManualBlockedMatchingWitnessExpectedCaught": false
-    },
-    {
-      "number": 6,
-      "label": "FERAN OWNED - MANUAL LOS TEST",
-      "position": [
-        11,
-        64,
-        12
-      ],
-      "playerPad": [
-        11.5,
-        64,
-        11.5
-      ],
-      "Owned": true,
-      "Scope": "FACTION",
-      "Faction": "Feran",
-      "KweebecLOS": true,
-      "FeranLOS": true,
-      "ExpectedCaught": true,
-      "ManualBlockedMatchingWitnessExpectedCaught": false
     }
   ]
 }

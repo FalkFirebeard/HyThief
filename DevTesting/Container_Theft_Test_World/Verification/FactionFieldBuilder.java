@@ -25,11 +25,11 @@ import java.nio.file.*;
 /** Disposable author/validator for the ownership field; never installed in the live Mods folder. */
 public final class FactionFieldBuilder extends JavaPlugin {
  public FactionFieldBuilder(JavaPluginInit init){super(init);}
- static final int[] XS={-6,-2,2,6,-12,11};
- static final String[] LABELS={"1 CONTROL - UNOWNED","2 OWNED - NEARBY","3 FACTION - KWEEBEC","4 FACTION - FERAN","5 KWEEBEC OWNED - MANUAL LOS TEST","6 FERAN OWNED - MANUAL LOS TEST"};
+ static final int[] XS={-6,-2,2,6};
+ static final String[] LABELS={"1 CONTROL - UNOWNED","2 FACTION - KWEEBEC","3 OWNED - NEARBY","4 FACTION - FERAN"};
  static final String K="Kweebec_Sapling_HyThiefWitness", F="Feran_Civilian_HyThiefWitness";
  static final Set<String> WITNESSES=Set.of(K,F);
- static OwnershipProofData data(int i){return new OwnershipProofData(i!=0,i==1?"NEARBY":i==0?"":"FACTION",i==2||i==4?"Kweebec":i==3||i==5?"Feran":"");}
+ static OwnershipProofData data(int i){return new OwnershipProofData(i!=0,i==2?"NEARBY":i==0?"":"FACTION",i==1?"Kweebec":i==3?"Feran":"");}
  static boolean containsX(int x){for(int v:XS)if(v==x)return true;return false;}
  static void require(boolean condition,String message){if(!condition)throw new IllegalStateException(message);}
  protected void start(){Universe.get().getUniverseReady().thenRun(()->{
@@ -37,7 +37,6 @@ public final class FactionFieldBuilder extends JavaPlugin {
   for(int x=-1;x<=0;x++)for(int z=-1;z<=1;z++)loads.add(w.getChunkAsync(com.hypixel.hytale.math.util.ChunkUtil.indexChunk(x,z)));
   CompletableFuture.allOf(loads.toArray(CompletableFuture[]::new)).thenRun(()->w.execute(()->{
    try{if(Boolean.getBoolean("factionfield.author"))author(w);
-    if(Boolean.getBoolean("factionfield.opengeometry"))openGeometry(w);
     w.scheduleAfter(()->w.execute(()->{try{validate(w);}catch(Throwable e){fail(e);}}),5,TimeUnit.SECONDS);
    }catch(Throwable e){fail(e);}
   }));
@@ -68,23 +67,9 @@ public final class FactionFieldBuilder extends JavaPlugin {
    var ref=BlockModule.getBlockEntity(w,XS[i],64,12);w.getChunkStore().getStore().addComponent(ref,OwnershipProofData.getComponentType(),data(i));mark(w,i);
    w.setBlock(XS[i],63,11,"Rock_Stone_Brick");label(store,LABELS[i],XS[i]+.5,66.5,12.5);
   }
-  label(store,"CONTROL SAFE; 5 / 6: PLACE YOUR OWN LOS BLOCKS",.5,67,7.5);
-  label(store,"CAUGHT TESTS: 3 KWEEBEC, RESET, 4 FERAN, RESET, 2 NEARBY",.5,66.2,7.5);
-  System.out.println("FACTION_FIELD_AUTHOR_PASS SixNativeChests=true SerializedOwnership=true");
- }
- static void openGeometry(World w){
-  for(int x:new int[]{-8,7})for(int y=64;y<=67;y++)for(int z=5;z<=6;z++)w.setBlock(x,y,z,"Empty");
-  for(int side:new int[]{-1,1})for(int y=64;y<=67;y++){
-   for(int x=17;x<=22;x++)w.setBlock(side*x,y,-5,"Empty");
-   for(int z=-10;z<=-5;z++){w.setBlock(side*17,y,z,"Empty");w.setBlock(side*22,y,z,"Empty");}
-  }
-  var store=w.getEntityStore().getStore();
-  var labels=new ArrayList<Ref<EntityStore>>(); store.forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++)labels.add(chunk.getReferenceTo(i));}); for(var ref:labels){
-   var t=store.getComponent(ref,TransformComponent.getComponentType());if(t==null)continue;var pos=t.getPosition();
-   if(Math.abs(pos.y-66.5)<.01&&Math.abs(pos.z-12.5)<.01)for(int j=0;j<XS.length;j++)if(Math.abs(pos.x-(XS[j]+.5))<.01)store.putComponent(ref,Nameplate.getComponentType(),new Nameplate(LABELS[j]));
-   if(Math.abs(pos.x-.5)<.01&&Math.abs(pos.z-7.5)<.01&&Math.abs(pos.y-67)<.01)store.putComponent(ref,Nameplate.getComponentType(),new Nameplate("CONTROL SAFE; 5 / 6: PLACE YOUR OWN LOS BLOCKS"));
-  }
-  System.out.println("FACTION_OPEN_GEOMETRY_PATCHED NPCsPreserved=true OwnershipPreserved=true");
+  label(store,"FOUR CHESTS ONLY - USE YOUR BLOCKS FOR MANUAL LOS",.5,67,7.5);
+  label(store,"1 CONTROL | 2 KWEEBEC | 3 NEARBY | 4 FERAN - RESET AFTER CAUGHT",.5,66.2,7.5);
+  System.out.println("FACTION_FIELD_AUTHOR_PASS FourNativeChests=true SerializedOwnership=true");
  }
  static void label(Store<EntityStore> store,String text,double x,double y,double z){
   var holder=EntityStore.REGISTRY.newHolder();holder.addComponent(TransformComponent.getComponentType(),new TransformComponent(new Vector3d(x,y,z),new Rotation3f()));
@@ -97,9 +82,19 @@ public final class FactionFieldBuilder extends JavaPlugin {
    boolean isChest=y==64&&z==12&&(containsX(x)||containsX(x+1)||containsX(x-1));
    require(isChest||"Empty".equals(w.getBlockType(x,y,z).getId()),"Unexpected above-ground obstacle "+x+","+y+","+z);
   }
+  int chestCount=0;for(int x=-32;x<32;x++)for(int z=-32;z<64;z++)for(int y=0;y<=80;y++)if(w.getBlockType(x,y,z).getId().contains("Chest")&&w.getChunk(com.hypixel.hytale.math.util.ChunkUtil.indexChunkFromBlock(x,z)).getFiller(x,y,z)==0){
+   require(y==64&&z==12&&containsX(x),"unexpected chest "+x+","+y+","+z);chestCount++;
+  }
+  require(chestCount==4,"native chest count="+chestCount);
+  var players=Universe.get().getPlayerStorage().getPlayers();require(players.size()==1,"expected one starting player");var saved=Universe.get().getPlayerStorage().load(players.iterator().next()).join();
+  require(saved!=null,"Firebeard starting player missing");var hotbar=saved.getComponent(InventoryComponent.Hotbar.getComponentType());
+  require(hotbar!=null,"starting hotbar missing");var blocks=hotbar.getInventory().getItemStack((short)0);
+  require(blocks!=null&&blocks.getItemId().equals("Rock_Stone_Cobble")&&blocks.getQuantity()==64,"starting building blocks missing");
+  System.out.println("FOUR_CHEST_LAYOUT_PASS ChestCount=4 StartingBlocks=Rock_Stone_Cobble Quantity=64");
   System.out.println("FACTION_OPEN_FIELD_PASS NoPermanentWalls=true ClearResponderPaths=true");
-  var store=w.getEntityStore().getStore();var roles=new HashMap<String,Ref<EntityStore>>();
-  store.forEachChunk(NPCEntity.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){var ref=chunk.getReferenceTo(i);roles.put(store.getComponent(ref,NPCEntity.getComponentType()).getRoleName(),ref);}});
+  var store=w.getEntityStore().getStore();var roles=new HashMap<String,Ref<EntityStore>>();var npcCount=new int[]{0};
+  store.forEachChunk(NPCEntity.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){npcCount[0]++;var ref=chunk.getReferenceTo(i);roles.put(store.getComponent(ref,NPCEntity.getComponentType()).getRoleName(),ref);}});
+  require(npcCount[0]==4&&roles.size()==4,"expected exactly four NPC roles");
   var k=roles.get(K);var f=roles.get(F);require(k!=null&&f!=null,"witness roles missing");
   for(var name:List.of("Kweebec_Razorleaf","Feran_Sharptooth")){var ref=roles.get(name);require(ref!=null&&store.getComponent(ref,Frozen.getComponentType())==null,"responder missing or frozen");System.out.println("FIELD_RESPONDER Role="+name+" Position="+(ref==null?"missing":store.getComponent(ref,TransformComponent.getComponentType()).getPosition())+" State="+(ref==null?"missing":store.getComponent(ref,StateSupport.getComponentType()).getStateName()));}
   for(var ref:List.of(k,f)) {require(store.getComponent(ref,Frozen.getComponentType())==null,"witness Frozen disables role processing");var t=store.getComponent(ref,TransformComponent.getComponentType());var h=store.getComponent(ref,HeadRotation.getComponentType());require(Math.abs(Math.abs(h.getRotation().yaw())-Math.PI)<.001,"witness head rotated");require(Math.abs(t.getPosition().z-.5)<.01,"witness wandered");}
@@ -128,9 +123,9 @@ public final class FactionFieldBuilder extends JavaPlugin {
    var visual=ContainerVisualWitness.capture(actor,store,d,WITNESSES,System.out::println);var messages=new ArrayList<com.hypixel.hytale.server.core.Message>();
    var selected=ContainerCaughtNotification.notifyWitnessed(visual,messages::add);
    require(messages.size()==(i!=0?1:0),"notification station "+(i+1));
-   if(i==1)require(visual.size()==2&&visual.stream().allMatch(ContainerVisualWitness.Evidence::seen),"NEARBY filtered faction");
-   if(i==2||i==4)require(selected.orElseThrow().role().equals(K),"Kweebec faction wrong witness");
-   if(i==3||i==5)require(selected.orElseThrow().role().equals(F),"Feran faction wrong witness");
+   if(i==2)require(visual.size()==2&&visual.stream().allMatch(ContainerVisualWitness.Evidence::seen),"NEARBY filtered faction");
+   if(i==1)require(selected.orElseThrow().role().equals(K),"Kweebec faction wrong witness");
+   if(i==3)require(selected.orElseThrow().role().equals(F),"Feran faction wrong witness");
    // Confirm the source component gates actual paired native inventory withdrawal.
    var receipts=new SimpleItemContainer((short)4);var confirmed=new ArrayList<ContainerVisualWitness.Evidence>();var snapshots=new IdentityHashMap<ContainerRemovalProbe.Removal,List<ContainerVisualWitness.Evidence>>();
    var probe=new ContainerRemovalProbe(c,r->{if(PersistentContainerOwnership.eligible(source.read()))confirmed.addAll(snapshots.getOrDefault(r,List.of()));},r->{if(PersistentContainerOwnership.eligible(source.read()))snapshots.put(r,ContainerVisualWitness.capture(actor,store,source.read(),WITNESSES,s->{}));});
@@ -144,12 +139,12 @@ public final class FactionFieldBuilder extends JavaPlugin {
   String test=System.getProperty("factionfield.response","");
   if(!test.isEmpty()){
    var victim=test.equals("Feran")?f:k;var target=roles.get(test.equals("Feran")?"Feran_Sharptooth":"Kweebec_Razorleaf");require(target!=null,"responder missing");
-   store.getComponent(actor,TransformComponent.getComponentType()).setPosition(new Vector3d(test.equals("Feran")?6.5:2.5,64,11.5));
+   store.getComponent(actor,TransformComponent.getComponentType()).setPosition(new Vector3d(test.equals("Feran")?6.5:-1.5,64,11.5));
    var plugin=PluginManager.get().getPlugin(PickpocketPlugin.class);var before=new Vector3d(store.getComponent(target,TransformComponent.getComponentType()).getPosition());
    var delivery=HyThiefGuardAlert.deliverContainer(plugin,actor,victim,store,System.out::println);require(delivery.sent()&&delivery.guard().equals(target),"faction responder not selected "+delivery);
    w.scheduleAfter(()->w.execute(()->{try{require(target.isValid(),"chosen guard disappeared during native response");var state=store.getComponent(target,StateSupport.getComponentType());var marked=store.getComponent(target,MarkedEntitySupport.getComponentType());double moved=before.distance(store.getComponent(target,TransformComponent.getComponentType()).getPosition());require(Arrays.asList(marked.getEntityTargets()).contains(actor),"offender not marked");require(state.getStateName().startsWith("Attack")&&moved>.2,"no native pursuit "+state.getStateName()+" moved="+moved);var other=roles.get(test.equals("Feran")?"Kweebec_Razorleaf":"Feran_Sharptooth");require(other.isValid(),"unchosen responder disappeared");var otherMarked=store.getComponent(other,MarkedEntitySupport.getComponentType());require(otherMarked==null||!Arrays.asList(otherMarked.getEntityTargets()).contains(actor),"wrong faction responder targeted offender");System.out.println("FACTION_NATIVE_RESPONSE_PASS Faction="+test+" State="+state.getStateName()+" ExactOffender=true WrongFactionTargeted=false Movement="+moved);finish();}catch(Throwable e){fail(e);}}),3,TimeUnit.SECONDS);
   }else{store.removeEntity(actor,RemoveReason.REMOVE);finish();}
  }
- static void finish(){try{Files.writeString(Path.of("faction-verification.json"),"{\"sixStationsPassed\":true}");}catch(Exception e){throw new RuntimeException(e);}System.out.println("FACTION_FIELD_VERIFIED");CompletableFuture.runAsync(()->com.hypixel.hytale.server.core.HytaleServer.get().shutdownServer());}
+ static void finish(){try{Files.writeString(Path.of("faction-verification.json"),"{\"fourStationsPassed\":true}");}catch(Exception e){throw new RuntimeException(e);}System.out.println("FACTION_FIELD_VERIFIED");CompletableFuture.runAsync(()->com.hypixel.hytale.server.core.HytaleServer.get().shutdownServer());}
  static void fail(Throwable t){t.printStackTrace();System.err.println("FACTION_FIELD_FAILED "+t);CompletableFuture.runAsync(()->com.hypixel.hytale.server.core.HytaleServer.get().shutdownServer());}
 }
