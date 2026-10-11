@@ -70,6 +70,7 @@ public final class PickpocketPlugin extends JavaPlugin {
         HyThiefStealthAcquisition.TYPE, HyThiefStealthAcquisition.FilterBuilder::new);
     getEntityStoreRegistry().registerSystem(new HyThiefNativeProbe(this));
     if (getManifest().getVersion().toString().contains("-container.")) {
+      OwnershipProofData.register(this);
       containerDiagnostics = new HyThiefContainerDiagnostics(this);
     }
   }

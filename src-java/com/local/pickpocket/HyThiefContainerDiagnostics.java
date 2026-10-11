@@ -92,7 +92,25 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     if (to == InventoryComponent.UTILITY_SECTION_ID) { log("Action=PASSTHROUGH Reason=utility-section"); fallback(player, packet); return; }
     ItemContainer source = InventoryUtils.getSectionById(ref, from, store);
     ItemContainer destination = packet instanceof MoveItemStack ? InventoryUtils.getSectionById(ref, to, store) : null;
-    if (automatic) entry = registry.findAutomatic(world, source, destination);
+    PersistentContainerOwnership.Source persistent = null;
+    boolean componentRoute = false;
+    if(automatic) {
+      var entity=store.getComponent(ref,Player.getComponentType());
+      for(var open:entity.getWindowManager().getWindows())if(open instanceof ContainerBlockWindow window
+          && (window.getItemContainer()==source || window.getItemContainer()==destination)
+          && (testWorld.persistentPosition(world,window.getX(),window.getY(),window.getZ())
+              || testWorld.controlPosition(world,window.getX(),window.getY(),window.getZ()))) {
+        componentRoute=true;
+        persistent=PersistentContainerOwnership.resolve(world,window,window.getItemContainer());
+        break;
+      }
+      if(componentRoute) {
+        if(persistent==null) { log("Action=SOURCE_UNRESOLVED Authority=component NoRegistryFallback=true"); fallback(player,packet); return; }
+        // Entry is only a request-local host descriptor; never registered as ownership.
+        entry=new OwnedContainerRegistry.Entry(persistent.key(),persistent.container());
+      } else entry = registry.findAutomatic(world, source, destination);
+    }
+    final var attachedSource=persistent;
     log("Action=SECTION_RESOLVED Player=" + player.getUuid() + " From=" + from + " To=" + to
         + " Source=" + identity(source) + " Destination=" + identity(destination)
         + " Owned=" + (entry == null ? "none" : entry.key())
@@ -113,6 +131,15 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
     var confirmed = new ArrayList<ContainerVisualWitness.Evidence>();
     var probe = new ContainerRemovalProbe(observed.container(), removal -> {
       var key = observed.key();
+      if (attachedSource!=null) {
+        log("Request="+request+" Action=SOURCE_RESOLVED Entity="+attachedSource.entity()+" Authority=component NoRegistryFallback=true");
+        var data=attachedSource.read();
+        log("Request="+request+" Action="+(data==null?"COMPONENT_MISSING":"COMPONENT_FOUND")+" Owned="+(data!=null&&data.owned())+" Scope="+(data==null?"MISSING":data.scope()));
+        if(!PersistentContainerOwnership.eligible(data)) {
+          boolean proof=testWorld.persistentPosition(world,attachedSource.key().x(),attachedSource.key().y(),attachedSource.key().z());
+          log("Request="+request+" Action=UNOWNED_IGNORE ProofFailure="+(proof&&data==null)+" NoRegistryFallback=true");return;
+        }
+      }
       if (automatic) {
         var visual = evidence.get(removal);
         if (visual != null) { confirmed.add(visual); log("Request=" + request + " " + visual.diagnostic()); }
@@ -122,7 +149,7 @@ final class HyThiefContainerDiagnostics implements PlayerPacketFilter {
           + " Slot=" + removal.slot() + " Item=" + removal.item() + " Amount=" + removal.amount()
           + " Action=REMOVE Result=SUCCESS Time=" + removal.time() + " Mono=" + removal.nanoTime());
     }, removal -> {
-      if (automatic) {
+      if (automatic && (attachedSource==null || attachedSource.ownedNearby())) {
         try { log("Request=" + request + " Action=OWNED_REMOVE_CAPTURE Item=" + removal.item() + " Amount=" + removal.amount()); evidence.put(removal, ContainerVisualWitness.capture(ref, store)); }
         catch (RuntimeException error) { log("Request=" + request + " WITNESS=UNSEEN Reason=visual-error:" + error.getClass().getSimpleName()); plugin.getLogger().atWarning().withCause(error).log("HyThief container visual capture failed"); }
       }

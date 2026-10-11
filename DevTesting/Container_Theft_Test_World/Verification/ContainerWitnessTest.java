@@ -46,6 +46,7 @@ final class ContainerWitnessTest {
    report.addProperty("containerStandingRange",20);report.addProperty("containerCrouchedRange",6);report.addProperty("normalSightMultiplierUnchanged",true);report.addProperty("allFourStancePairsPassed",true);
    System.out.println("SIGHT_TUNING_PASS ContainerStanding=20 ContainerCrouched=6 Pads=5,8,18,22 RawLOS=CLEAR Sector=true NormalStanding=15 NormalCrouched=4");
    transform.setPosition(new Vector3d(.5,64,15.5));
+   PersistentOwnershipIntegrationTest.run(world,actor);
    var front=ContainerVisualWitness.capture(actor,store);
    require(front.seen()&&front.los()&&front.sector(),"front must be witnessed "+front);
    transform=store.getComponent(actor,TransformComponent.getComponentType());

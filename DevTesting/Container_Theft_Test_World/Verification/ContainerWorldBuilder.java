@@ -50,6 +50,28 @@ public final class ContainerWorldBuilder extends JavaPlugin {
       try{
        if(!Boolean.getBoolean("containerworld.reload"))for(int[] p:CHESTS)fill(container(w,p));
        if(Boolean.getBoolean("containerworld.layout"))applyLayout(w);
+       if(Boolean.getBoolean("containerworld.ownershipseed")) {
+        var p=CHESTS[0];container(w,p);
+        var ref=BlockModule.getBlockEntity(w,p[0],p[1],p[2]);
+        if(w.getChunkStore().getStore().getComponent(ref,OwnershipProofData.getComponentType())!=null)throw new IllegalStateException("Refusing ownership reseed");
+        w.getChunkStore().getStore().addComponent(ref,OwnershipProofData.getComponentType(),new OwnershipProofData(true,"NEARBY"));
+        var section=w.getChunkStore().getChunkSectionReferenceAtBlock(p[0],p[1],p[2]);
+        var components=w.getChunkStore().getStore().getComponent(section,BlockComponentSection.getComponentType());
+        components.markBlockNeedsSaving(com.hypixel.hytale.math.util.ChunkUtil.indexBlock(p[0],p[1],p[2]));components.markNeedsSaving();
+        w.getEntityStore().getStore().forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){
+         var label=chunk.getComponent(i,Nameplate.getComponentType());if(label.getText().startsWith("3 OWNED - 5 BLOCKS"))label.setText("3 PERSISTENT OWNED - NEARBY / 5 BLOCKS");
+        }});
+        System.out.println("PERSISTENT_AUTHOR_PASS Owned=true Scope=NEARBY NativeChest=true");
+       }
+       if(Boolean.getBoolean("containerworld.ownershiprestartonly")) {
+        var c=container(w,CHESTS[0]);
+        var source=PersistentContainerOwnership.resolve(w,new com.hypixel.hytale.server.core.entity.entities.player.windows.ContainerBlockWindow(0,64,16,0,w.getBlockType(0,64,16),c),c);
+        if(source==null || !source.ownedNearby())throw new IllegalStateException("Ownership lost after pipeline/save/restart");
+        if(BlockModule.getComponent(OwnershipProofData.getComponentType(),w,-3,64,16)!=null)throw new IllegalStateException("Control became owned");
+        Files.writeString(Path.of("reload-verification.json"),"{\"persistentRestartAfterPipeline\":true}");
+        System.out.println("PERSISTENT_RESTART_AFTER_PIPELINE_PASS Owned=true Scope=NEARBY NoReattach=true");
+        CompletableFuture.runAsync(()->HytaleServer.get().shutdownServer());return;
+       }
        inspect(w,guardStart);
       }catch(Throwable t){fail(t);}
      }),Boolean.getBoolean("containerworld.stationaryguard")?60:6,TimeUnit.SECONDS);
@@ -178,7 +200,7 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   store.forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int i=0;i<chunk.size();i++){
     var ref=chunk.getReferenceTo(i);var label=store.getComponent(ref,Nameplate.getComponentType());String text=label.getText();
     if(text.contains("/hythiefcontainer"))throw new IllegalStateException("Manual-command label persisted");
-    if(text.startsWith("3 OWNED - 5 BLOCKS")||text.startsWith("4 OWNED - 8 BLOCKS")||text.startsWith("5 OWNED - 18 BLOCKS")||text.startsWith("6 OWNED - 22 BLOCKS")||text.equals("2 OWNED - REAR / UNSEEN"))ownedLabels[0]++;
+    if(text.startsWith("3 PERSISTENT OWNED - NEARBY")||text.startsWith("3 OWNED - 5 BLOCKS")||text.startsWith("4 OWNED - 8 BLOCKS")||text.startsWith("5 OWNED - 18 BLOCKS")||text.startsWith("6 OWNED - 22 BLOCKS")||text.equals("2 OWNED - REAR / UNSEEN"))ownedLabels[0]++;
     if(text.equals("1 CONTROL - UNOWNED")){
      controls[0]++;if(store.getComponent(ref,TransformComponent.getComponentType()).getPosition().distance(-4.5,66.4,16.5)>.01)throw new IllegalStateException("Control label not moved");
     }
@@ -213,7 +235,11 @@ public final class ContainerWorldBuilder extends JavaPlugin {
   if(registry.findAutomatic(w,container(w,CHESTS[2]),null)!=null)throw new IllegalStateException("Control owned");
   registry.removeAutomatic(w);if(!registry.automatic(w).isEmpty())throw new IllegalStateException("Stale world ownership");registry.replaceAutomatic(w,entries);
   nativeStates(w,registry);
-  if(!Boolean.getBoolean("containerworld.layout"))ContainerWitnessTest.run(w,civilian,guard,report);
+  var proof=BlockModule.getComponent(OwnershipProofData.getComponentType(),w,0,64,16);
+  if(!PersistentContainerOwnership.eligible(proof))throw new IllegalStateException("Serialized ownership missing on candidate load");
+  if(BlockModule.getComponent(OwnershipProofData.getComponentType(),w,-3,64,16)!=null)throw new IllegalStateException("Control has ownership metadata");
+  System.out.println("PERSISTENT_RESTORED_PASS Owned=true Scope=NEARBY NoReattach="+!Boolean.getBoolean("containerworld.ownershipseed"));
+  if(!Boolean.getBoolean("containerworld.layout") && !Boolean.getBoolean("containerworld.ownershipauthoronly"))ContainerWitnessTest.run(w,civilian,guard,report);
   oneRun(w,registry);report.addProperty("oneRunControlRearFrontWithoutReset",true);
   report.addProperty("automaticRegistryFiveOwnedOneControl",true);report.addProperty("registryRemovalRebuild",true);
   // Use the SAME packaged probe/registry as the installed diagnostic plugin, on this world's actual containers.

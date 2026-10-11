@@ -20,7 +20,7 @@ import java.util.function.Consumer;
 final class DevContainerTestWorld implements AutoCloseable {
   static final String NAME = "HyThief Container Theft Test World";
   record Station(int x, int y, int z, String block) {}
-  record Fixture(World world, List<Station> stations, Station control) {}
+  record Fixture(World world, List<Station> stations, Station control, Station persistent) {}
   private final OwnedContainerRegistry registry;
   private final Consumer<String> log;
   private final Map<UUID, Fixture> fixtures = new ConcurrentHashMap<>();
@@ -60,14 +60,28 @@ final class DevContainerTestWorld implements AutoCloseable {
       var stations = new ArrayList<Station>();
       for (var item : config.getAsJsonArray("Owned")) stations.add(station(item.getAsJsonObject()));
       var control = station(config.getAsJsonObject("Control"));
+      var persistent = config.has("PersistentOwned") ? station(config.getAsJsonObject("PersistentOwned")) : null;
+      if(persistent!=null && (samePosition(persistent,control) || !stations.removeIf(s->samePosition(s,persistent))))
+        throw new IllegalStateException("Persistent station must be an existing owned fixture, separate from control");
       if (stations.size() < 2 || stations.size() > 5 || stations.stream().map(s -> s.x()+","+s.y()+","+s.z()).distinct().count() != stations.size() || stations.stream().anyMatch(s -> samePosition(s, control))) throw new IllegalStateException("Expected two to five distinct owned stations and separate unowned control");
-      var fixture = new Fixture(world, List.copyOf(stations), control);
+      var fixture = new Fixture(world, List.copyOf(stations), control, persistent);
       fixtures.put(uuid, fixture);registry.removeAutomatic(world);
       var loads = new ArrayList<CompletableFuture<?>>();
-      for (var station : stations)
+      var loadedStations=new ArrayList<>(stations); if(persistent!=null)loadedStations.add(persistent);
+      for (var station : loadedStations)
         loads.add(world.getChunkStore().getChunkSectionReferenceAsync(ChunkUtil.chunkCoordinate(station.x()),ChunkUtil.chunkCoordinate(station.y()),ChunkUtil.chunkCoordinate(station.z())));
       CompletableFuture.allOf(loads.toArray(CompletableFuture[]::new)).thenRun(() -> world.execute(() -> {
-        if (!closed && fixtures.get(uuid) == fixture) refresh(world);
+        if (!closed && fixtures.get(uuid) == fixture) {
+          refresh(world);
+          if(persistent!=null) {
+            var block=BlockModule.getBlockEntity(world.getChunkStore().getStore(),world.getChunkStore().getChunkSectionReferenceAtBlock(persistent.x(),persistent.y(),persistent.z()),persistent.x(),persistent.y(),persistent.z());
+            var section=world.getChunkStore().getChunkSectionReferenceAtBlock(persistent.x(),persistent.y(),persistent.z());
+            var components=world.getChunkStore().getStore().getComponent(section,BlockComponentSection.getComponentType());
+            var holder=block==null && components!=null ? components.getBlockHolder(ChunkUtil.indexBlock(persistent.x(),persistent.y(),persistent.z())) : null;
+            var data=block!=null ? world.getChunkStore().getStore().getComponent(block,OwnershipProofData.getComponentType()) : holder==null?null:holder.getComponent(OwnershipProofData.getComponentType());
+            log.accept("Action=PERSISTENT_LOAD Entity="+block+" ComponentFound="+(data!=null)+" Owned="+(data==null?false:data.owned())+" Scope="+(data==null?"MISSING":data.scope())+" Authority=serialized-component NoReattach=true");
+          }
+        }
       })).exceptionally(error -> { error(world, error.toString()); return null; });
     } catch (Exception error) { error(world, error.toString()); }
   }
@@ -116,6 +130,14 @@ final class DevContainerTestWorld implements AutoCloseable {
       errors.remove(world.getWorldConfig().getUuid());
       log.accept("Action=AUTO_REGISTER Owner=Kweebec World="+world.getWorldConfig().getUuid()+" Owned="+entries.stream().map(e->e.key().toString()).toList()+" Control=UNOWNED");
     } catch (RuntimeException error) { error(world, error.toString()); }
+  }
+  boolean persistentPosition(World world,int x,int y,int z) {
+    var f=fixtures.get(world.getWorldConfig().getUuid());var s=f==null?null:f.persistent();
+    return s!=null && f.world()==world && s.x()==x && s.y()==y && s.z()==z;
+  }
+  boolean controlPosition(World world,int x,int y,int z) {
+    var f=fixtures.get(world.getWorldConfig().getUuid());var s=f==null?null:f.control();
+    return s!=null && f.world()==world && s.x()==x && s.y()==y && s.z()==z;
   }
   boolean isControl(World world, com.hypixel.hytale.server.core.inventory.container.ItemContainer source) {
     var fixture = fixtures.get(world.getWorldConfig().getUuid());

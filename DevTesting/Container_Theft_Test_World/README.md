@@ -40,3 +40,9 @@ Report whether 20/6 feels believable, and any difference from the expected table
 Rollback: DevTesting/Container_Theft_Test_World/Rollback-container.7-before-sight-tuning, including source, old master, role pack/prefabs, verification files, reset/checksum/station metadata and installed container.7 JAR. Runtime balance acceptance pending Firebeard; no public release promotion.
 
 Stance API verified against installed stable server and official API: https://docs.hytale.com/api/com/hypixel/hytale/server/core/entity/movement/MovementStatesComponent
+
+## container.9 — persistent ownership handoff
+
+The existing 5-block front native chest is labeled `PERSISTENT OWNED - NEARBY`. It is excluded from automatic ownership registration. Its saved block component is the sole ownership authority. Other distance/rear stations keep their previous diagnostic behavior.
+
+Test without commands: withdraw from `1 CONTROL - UNOWNED` first (no message/reaction); then stand on the 5-block front pad, open `3 PERSISTENT OWNED - NEARBY / 5 BLOCKS` (opening alone does nothing), withdraw one copper bar (one caught message and Razorleaf response). Metadata is already saved in the reset master. Use the existing safe reset between caught runs.

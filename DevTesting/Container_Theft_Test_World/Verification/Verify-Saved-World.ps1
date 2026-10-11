@@ -1,11 +1,11 @@
 [CmdletBinding()]
-param([string]$DiagnosticJar, [switch]$LongGuardCheck, [string]$MasterPath, [switch]$RebuildLayout)
+param([string]$DiagnosticJar, [switch]$LongGuardCheck, [string]$MasterPath, [switch]$RebuildLayout, [switch]$SeedOwnership, [switch]$OwnershipAuthorOnly, [switch]$OwnershipRestartOnly)
 $ErrorActionPreference='Stop'
 $project=Split-Path (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent) -Parent
 $root=Join-Path $project 'DevTesting\Container_Theft_Test_World'
 $jdk=Join-Path (Split-Path (Split-Path $project -Parent) -Parent) 'Toolchains\JDK25\bin'
 $server=Join-Path $project '.build\dependencies\HytaleServer-0.6.8.jar'
-if(!$DiagnosticJar){$DiagnosticJar=Join-Path $project 'build\libs\HyThief-1.3.1-container.8.jar'}
+if(!$DiagnosticJar){$DiagnosticJar=Join-Path $project 'build\libs\HyThief-1.3.1-container.9.jar'}
 $run=Join-Path $root ('VerificationRuns\'+(Get-Date -Format yyyyMMdd-HHmmss)+'-'+[guid]::NewGuid().ToString('N'))
 if(![IO.Path]::GetFullPath($run).StartsWith($root+'\VerificationRuns\')){throw 'Unsafe verification path'}
 New-Item -ItemType Directory -Path (Split-Path $run -Parent) -Force|Out-Null
@@ -17,11 +17,11 @@ $cfg.Mods.'FirebeardDev:ContainerWorldBuilder'.Enabled=$true
 $cfg|ConvertTo-Json -Depth 35|Set-Content (Join-Path $run 'config.json')
 $classes=Join-Path $run 'verification-classes'
 New-Item -ItemType Directory -Path $classes|Out-Null
-& (Join-Path $jdk 'javac.exe') -cp ($server+';'+$DiagnosticJar) -d $classes (Join-Path $PSScriptRoot 'ContainerWorldBuilder.java') (Join-Path $PSScriptRoot 'ContainerProbeTest.java') (Join-Path $PSScriptRoot 'ContainerWitnessTest.java') (Join-Path $PSScriptRoot 'ContainerPacketBridgeTest.java')
+& (Join-Path $jdk 'javac.exe') -cp ($server+';'+$DiagnosticJar) -d $classes (Join-Path $PSScriptRoot 'ContainerWorldBuilder.java') (Join-Path $PSScriptRoot 'ContainerProbeTest.java') (Join-Path $PSScriptRoot 'ContainerWitnessTest.java') (Join-Path $PSScriptRoot 'ContainerPacketBridgeTest.java') (Join-Path $PSScriptRoot 'PersistentOwnershipIntegrationTest.java')
 if($LASTEXITCODE -ne 0){throw 'Verifier compilation failed'}
 $zip=[IO.Compression.ZipFile]::OpenRead($DiagnosticJar)
 try{foreach($entry in $zip.Entries){
- if($entry.FullName -match '^com/local/pickpocket/(ContainerRemovalProbe|OwnedContainerRegistry|ContainerVisualWitness|ContainerCaughtNotification|HyThiefStealthAcquisition|HyThiefGuardAlert|ContainerPacketBridge).*\.class$'){
+ if($entry.FullName -match '^com/local/pickpocket/(ContainerRemovalProbe|OwnedContainerRegistry|ContainerVisualWitness|ContainerCaughtNotification|HyThiefStealthAcquisition|HyThiefGuardAlert|ContainerPacketBridge|PersistentContainerOwnership).*\.class$'){
   $dest=Join-Path $classes $entry.FullName
   New-Item -ItemType Directory -Path (Split-Path $dest -Parent) -Force|Out-Null
   [IO.Compression.ZipFileExtensions]::ExtractToFile($entry,$dest,$true)
@@ -31,14 +31,20 @@ try{foreach($entry in $zip.Entries){
 if($LASTEXITCODE -ne 0){throw 'Verifier packaging failed'}
 $guardFlag='-Dcontainerworld.stationaryguard='+$LongGuardCheck.IsPresent
 $layoutFlag='-Dcontainerworld.layout='+$RebuildLayout.IsPresent
+$ownershipFlag='-Dcontainerworld.ownershipseed='+$SeedOwnership.IsPresent
+$authorOnlyFlag='-Dcontainerworld.ownershipauthoronly='+$OwnershipAuthorOnly.IsPresent
+$restartOnlyFlag='-Dcontainerworld.ownershiprestartonly='+$OwnershipRestartOnly.IsPresent
 Push-Location -LiteralPath $run
 try{
- & (Join-Path $jdk 'java.exe') '-Dcontainerworld.reload=true' '-Dcontainerworld.pristine=true' $guardFlag $layoutFlag -jar $server --assets 'C:\Users\askin\AppData\Roaming\Hytale\install\release\package\game\latest\Assets.zip' --auth-mode offline --bind 127.0.0.1:15539 --disable-sentry --disable-file-watcher --disable-cpb-build *> 'native.log'
+ & (Join-Path $jdk 'java.exe') '-Dcontainerworld.reload=true' '-Dcontainerworld.pristine=true' $guardFlag $layoutFlag $ownershipFlag $authorOnlyFlag $restartOnlyFlag -jar $server --assets 'C:\Users\askin\AppData\Roaming\Hytale\install\release\package\game\latest\Assets.zip' --auth-mode offline --bind 127.0.0.1:15539 --disable-sentry --disable-file-watcher --disable-cpb-build *> 'native.log'
  if($LASTEXITCODE -ne 0 -or !(Test-Path 'reload-verification.json')){throw ('Native verification failed; inspect '+$run+'\native.log')}
- if(!$RebuildLayout -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'Action=AUTO_REGISTER Owner=Kweebec')){throw 'No real plugin automatic registration'}
- if(!$RebuildLayout -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'SIGHT_TUNING_PASS')){throw 'Stance range validation failed'}
- if(!$RebuildLayout -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'CAUGHT_NOTIFICATION_PASS')){throw 'Caught notification verification failed'}
- if(!$RebuildLayout -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'NATIVE_GUARD_PURSUIT_PASS')){throw 'Native pursuit did not retain offender'}
+ if(!$RebuildLayout -and !$OwnershipAuthorOnly -and !$OwnershipRestartOnly -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'Action=AUTO_REGISTER Owner=Kweebec')){throw 'No real plugin automatic registration'}
+ if(!$RebuildLayout -and !$OwnershipAuthorOnly -and !$OwnershipRestartOnly -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'SIGHT_TUNING_PASS')){throw 'Stance range validation failed'}
+ if(!$RebuildLayout -and !$OwnershipAuthorOnly -and !$OwnershipRestartOnly -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'CAUGHT_NOTIFICATION_PASS')){throw 'Caught notification verification failed'}
+ if(!$RebuildLayout -and !$OwnershipAuthorOnly -and !$OwnershipRestartOnly -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'NATIVE_GUARD_PURSUIT_PASS')){throw 'Native pursuit did not retain offender'}
+ if(!$OwnershipRestartOnly -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'PERSISTENT_RESTORED_PASS')){throw 'Persistent ownership restore failed'}
+ if(!$OwnershipAuthorOnly -and !$OwnershipRestartOnly -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'PERSISTENT_PIPELINE_PASS')){throw 'Persistent pipeline proof failed'}
+ if($OwnershipRestartOnly -and !(Select-String -LiteralPath 'native.log' -SimpleMatch 'PERSISTENT_RESTART_AFTER_PIPELINE_PASS')){throw 'Post-pipeline restart failed'}
  if(Select-String -LiteralPath 'native.log' -Pattern 'AUTO_REGISTER_ERROR|CONTAINER_WORLD_FAILED'){throw 'Native validation error'}
  Select-String -LiteralPath 'native.log' -Pattern 'AUTO_REGISTER|REAL_CHEST_PROBE_PASS|REAL_CONTROL_TRANSFER_PASS|CONTAINER_WORLD_VERIFIED'|ForEach-Object Line
  Write-Host ('Verified disposable fresh-master load: '+$run)

@@ -32,14 +32,14 @@
   },
   "stations": [
     {
-      "name": "CrouchInside",
+      "name": "PersistentOwnedNearby",
       "position": [
         0,
         64,
         16
       ],
       "ownedCandidate": true,
-      "automaticallyOwned": true,
+      "automaticallyOwned": false,
       "approach": [
         0.5,
         64,
@@ -59,7 +59,11 @@
           "item": "Ingredient_Fibre",
           "amount": 32
         }
-      ]
+      ],
+      "ownershipSource": "serialized HyThiefOwnershipProof",
+      "Owned": true,
+      "Scope": "NEARBY",
+      "label": "PERSISTENT OWNED - NEARBY"
     },
     {
       "name": "Rear",
