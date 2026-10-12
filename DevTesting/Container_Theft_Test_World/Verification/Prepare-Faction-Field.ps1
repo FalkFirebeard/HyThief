@@ -12,7 +12,20 @@ if($playerFiles.Count -ne 1){throw 'Master must contain exactly one starting-pla
 $seed=Join-Path $master ('universe\players\'+$playerId)
 if(!(Test-Path -LiteralPath $seed)){$seed=Join-Path $PSScriptRoot 'StartingPlayer.json'}
 if(!(Test-Path -LiteralPath $seed)){throw 'Starting-player seed missing'}
-$player=Get-Content -LiteralPath $seed -Raw
+$playerObject=Get-Content -LiteralPath $seed -Raw|ConvertFrom-Json
+$playerObject.Components.Transform.Position.X=0.0
+$playerObject.Components.Transform.Position.Y=64.1
+$playerObject.Components.Transform.Position.Z=10.5
+$playerObject.Components.Transform.Rotation.Yaw=0.0
+$playerObject.Components.HeadRotation.Rotation.Yaw=0.0
+function Set-FieldLastPosition($node) {
+ if($node -is [pscustomobject]){foreach($property in $node.PSObject.Properties){
+  if($property.Name -eq 'LastPosition'){$property.Value.X=0.0;$property.Value.Y=64.1;$property.Value.Z=10.5;$property.Value.Yaw=0.0}
+  else{Set-FieldLastPosition $property.Value}
+ }}elseif($node -is [array]){foreach($value in $node){Set-FieldLastPosition $value}}
+}
+Set-FieldLastPosition $playerObject
+$player=$playerObject|ConvertTo-Json -Depth 60
 $world=Get-Content -LiteralPath (Join-Path $authorInput 'universe\worlds\default\config.json') -Raw
 $universe=[IO.Path]::GetFullPath((Join-Path $authorInput 'universe'))
 if(!$universe.StartsWith($authorInput+'\')){throw 'Unsafe copied universe path'}

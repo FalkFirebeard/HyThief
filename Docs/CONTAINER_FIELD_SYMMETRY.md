@@ -1,5 +1,7 @@
 # Container.11 test-field symmetry correction
 
+Superseded fixture geometry: see COLOR_FIELD_AND_NATIVE_PREFAB_REVIEW.md for the 2026-10-12 mirrored color field. This note preserves the earlier proven checkpoint.
+
 2026-10-10. Geometry-only checkpoint; gameplay/source/assets and installed container.11 JAR unchanged. Preserve commit `f90bbcf` as gameplay and previous fixture-helper rollback. No build, deployment swap, push or public release.
 
 ## Measured geometry

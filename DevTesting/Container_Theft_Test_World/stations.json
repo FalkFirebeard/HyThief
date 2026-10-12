@@ -14,83 +14,146 @@
   "stations": [
     {
       "number": 1,
-      "label": "CONTROL - UNOWNED",
+      "label": "CONTROL / UNOWNED",
       "position": [
-        -6,
+        0,
         64,
-        12
+        -6
       ],
       "playerPad": [
-        -5.5,
+        0,
         64,
-        11.5
+        -6.5
       ],
       "Owned": false,
       "Scope": "",
       "Faction": "",
       "KweebecLOS": true,
       "FeranLOS": true,
-      "ExpectedCaught": false
+      "ExpectedCaught": false,
+      "color": "Red",
+      "colorMarker": "Cloth_Block_Wool_Red",
+      "witnessDistances": [
+        10.259142264341596,
+        10.259142264341596
+      ]
     },
     {
       "number": 2,
-      "label": "FACTION - KWEEBEC",
+      "label": "FACTION / KWEEBEC",
       "position": [
-        -2,
+        0,
         64,
-        12
+        -2
       ],
       "playerPad": [
-        -1.5,
+        0,
         64,
-        11.5
+        -2.5
       ],
       "Owned": true,
       "Scope": "FACTION",
       "Faction": "Kweebec",
       "KweebecLOS": true,
       "FeranLOS": true,
-      "ExpectedCaught": true
+      "ExpectedCaught": true,
+      "color": "Blue",
+      "colorMarker": "Cloth_Block_Wool_Blue",
+      "witnessDistances": [
+        8.077747210701755,
+        8.077747210701755
+      ]
     },
     {
       "number": 3,
-      "label": "OWNED - NEARBY - CENTER SEAM X=0",
+      "label": "NEARBY",
       "position": [
         0,
         64,
-        12
+        2
       ],
       "playerPad": [
         0,
         64,
-        11.5
+        1.5
       ],
       "Owned": true,
       "Scope": "NEARBY",
       "Faction": "",
       "KweebecLOS": true,
       "FeranLOS": true,
-      "ExpectedCaught": true
+      "ExpectedCaught": true,
+      "color": "Green",
+      "colorMarker": "Cloth_Block_Wool_Green",
+      "witnessDistances": [
+        7.566372975210778,
+        7.566372975210778
+      ]
     },
     {
       "number": 4,
-      "label": "FACTION - FERAN",
+      "label": "FACTION / FERAN",
       "position": [
-        6,
+        0,
         64,
-        12
+        6
       ],
       "playerPad": [
-        6.5,
+        0,
         64,
-        11.5
+        5.5
       ],
       "Owned": true,
       "Scope": "FACTION",
       "Faction": "Feran",
       "KweebecLOS": true,
       "FeranLOS": true,
-      "ExpectedCaught": true
+      "ExpectedCaught": true,
+      "color": "Yellow",
+      "colorMarker": "Cloth_Block_Wool_Yellow",
+      "witnessDistances": [
+        9.013878188659973,
+        9.013878188659973
+      ]
     }
+  ],
+  "spawn": [
+    0,
+    64.1,
+    10.5
+  ],
+  "witnessPositions": [
+    [
+      -7.5,
+      64,
+      0.5
+    ],
+    [
+      7.5,
+      64,
+      0.5
+    ]
+  ],
+  "responderPositions": [
+    [
+      -21.5,
+      64,
+      0.5
+    ],
+    [
+      21.5,
+      64,
+      0.5
+    ]
+  ],
+  "localAlertDistances": [
+    [
+      14,
+      29
+    ],
+    [
+      29,
+      14
+    ]
   ]
 }

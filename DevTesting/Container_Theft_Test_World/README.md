@@ -1,20 +1,20 @@
-# HyThief Container Theft Test World - four-chest field
+# HyThief Container Theft Test World - mirrored color field
 
-Installed gameplay: HyThief-1.3.1-container.11.jar.
+Gameplay remains **HyThief-1.3.1-container.11.jar**, target =0.6.8. The fixture changed; no gameplay build or rules changed.
 
-Left to right: **1 CONTROL | 2 KWEEBEC | 3 NEARBY | 4 FERAN**. These are the only four chests/stations. NEARBY is centered between the witnesses at X=0. All are native Kweebec large chests, with 16 copper bars and 8 iron bars. For NEARBY, stand on the **center seam (X=0)** between its two brick tiles; the label marks this precisely. For other chests, stand on the corresponding brick pad and withdraw one copper bar. Opening/browsing is safe.
+Use the colored floor pad immediately in front of each identical native chest:
 
-- CONTROL: unowned; no caught notification or theft reaction.
-- KWEEBEC: FACTION/Kweebec; matching visual witness alerts Razorleaf, not Sharptooth.
-- NEARBY: any eligible visible theft-aware witness; exactly one caught notification and a generic LOCAL theft alert to both ready compatible responders, independent of the witness faction.
-- FERAN: FACTION/Feran; matching visual witness alerts Sharptooth, not Razorleaf.
+- **RED: CONTROL / UNOWNED** - safe, no theft notification/response.
+- **BLUE: FACTION / KWEEBEC** - matching Kweebec witness / Razorleaf response.
+- **GREEN: NEARBY** - either eligible visible civilian witness / LOCAL response from both ready responders.
+- **YELLOW: FACTION / FERAN** - matching Feran witness / Sharptooth response.
 
-The stationary witnesses face the row. Both responders remain mobile in a flat field without shelters or permanent LOS walls. You start at the spawn pad with **64 Rock_Stone_Cobble blocks in hotbar slot 1**, matching the field floor.
+Four chests lie along the center line X=0 at Z=-6,-2,2,6. Each color pad spans two floor blocks; stand on its center seam X=0 at Z=-6.5,-2.5,1.5,5.5 respectively. Labels use colors and ownership names, not station numbers. GREEN is near the useful field center. Walk alongside the line to see each marker, then center yourself on that colored pad. No commands needed.
 
-For manual LOS tests, place opaque blocks between your player pad and the chosen witness. A blocked matching witness should not catch faction theft; the other faction must not substitute. For NEARBY, any unblocked eligible witness may still catch you. Keep responder pursuit routes open. Use standing for this ownership checkpoint.
+Spawn (0,64.1,10.5) faces the chest line. Both civilian witnesses are stationary at mirrored (-7.5,64,0.5)/(7.5,64,0.5), facing inward. Mobile responders sit farther behind them at (-21.5,64,0.5)/(21.5,64,0.5). Every pad is equally distant from both witnesses; both LOS/FOV checks pass. All witness-to-responder alert distances are 14 or 29 blocks, within unchanged LOCAL range 30. Both responders are farther than 20 blocks from every pad. No shelters/permanent walls.
 
-Test CONTROL first, then one caught test per reset. Close Hytale and use the existing Reset Container Theft shortcut. It archives the active save and restores exactly these four chests, four NPCs, clean LOS, loot and your starting block stack. There are no stations 5/6 or legacy range stations.
+Start with 64 Rock_Stone_Cobble blocks in hotbar slot 1, matching the field floor. Manually block civilian LOS as required; keep responder routes open. Use standing for alert-scope comparisons. Each chest holds 16 copper / 8 iron bars; withdrawing one copper bar is enough. Opening/browsing alone is safe.
 
-Container sight stays 20/6, normal HyThief perception stays 15/4. Ownership, faction filtering, native chest interaction, caught notification, native pursuit/combat, LastSeen and pickpocket logic remain unchanged. NEARBY now selects a generic native LOCAL alert; FACTION retains its faction alert. Firebeard's real-client test is still required.
+For GREEN, test both visible, then each witness blocked separately, resetting between caught trials. Each confirmed theft should produce one caught message and both native responders. RED remains safe; BLUE/YELLOW retain faction isolation. Close Hytale and use the existing Reset Container Theft launcher; it archives the active save and restores this exact clean field, loot, spawn, colors and starting blocks.
 
-Geometry verification: Kweebec (-4.5,64,0.5), Feran (4.5,64,0.5), NEARBY player position (0,64,11.5). Both distances are 11.884864 blocks, both facing angles 22.249 degrees, both native FOV/LOS checks pass. The two-block chest is anchored at (0,64,12). See Docs/CONTAINER_FIELD_SYMMETRY.md.
+Container visual range 20/6 and normal perception 15/4 are unchanged. Exactly four chests/four NPCs remain. The previous master and active save are preserved in Rollback-color-field-20261012-163359. See Docs/COLOR_FIELD_AND_NATIVE_PREFAB_REVIEW.md for measured geometry, native validation evidence and research-only PREFAB conclusions.
