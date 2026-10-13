@@ -1,5 +1,5 @@
 {
-  "Version": "1.2.1-revamp.11",
+  "Version": "Hytale 0.7.0 compatibility",
   "Roles": [
     "Bramblekin",
     "Bramblekin_Shaman",
@@ -375,48 +375,6 @@
       "BaseRange": 15
     },
     {
-      "Role": "Goblin_Lobber",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 2
-    },
-    {
-      "Role": "Goblin_Lobber",
-      "Site": "Component_Sensor_Scent_By_Attitude",
-      "Channel": "scent",
-      "BaseRange": 8
-    },
-    {
-      "Role": "Goblin_Lobber",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 15
-    },
-    {
-      "Role": "Goblin_Lobber",
-      "Site": "Component_Instruction_Spread_Out/Sensor",
-      "Channel": "proximity",
-      "BaseRange": 2
-    },
-    {
-      "Role": "Goblin_Lobber",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 2
-    },
-    {
-      "Role": "Goblin_Lobber",
-      "Site": "Component_Sensor_Scent_By_Attitude",
-      "Channel": "scent",
-      "BaseRange": 8
-    },
-    {
-      "Role": "Goblin_Lobber",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 15
-    },
-    {
       "Role": "Goblin_Lobber_Patrol",
       "Site": "Component_Sensor_Sight_By_Attitude",
       "Channel": "sight",
@@ -451,36 +409,6 @@
       "Site": "Component_Sensor_Sight_By_Attitude",
       "Channel": "sight",
       "BaseRange": 15
-    },
-    {
-      "Role": "Goblin_Miner",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 2
-    },
-    {
-      "Role": "Goblin_Miner",
-      "Site": "Component_Sensor_Scent_By_Attitude",
-      "Channel": "scent",
-      "BaseRange": 8
-    },
-    {
-      "Role": "Goblin_Miner",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 15
-    },
-    {
-      "Role": "Goblin_Miner",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 15
-    },
-    {
-      "Role": "Goblin_Miner",
-      "Site": "Component_Instruction_Spread_Out/Sensor",
-      "Channel": "proximity",
-      "BaseRange": 2
     },
     {
       "Role": "Goblin_Miner_Patrol",
@@ -645,30 +573,6 @@
       "BaseRange": 15
     },
     {
-      "Role": "Goblin_Scrapper",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 2
-    },
-    {
-      "Role": "Goblin_Scrapper",
-      "Site": "Component_Sensor_Scent_By_Attitude",
-      "Channel": "scent",
-      "BaseRange": 8
-    },
-    {
-      "Role": "Goblin_Scrapper",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 15
-    },
-    {
-      "Role": "Goblin_Scrapper",
-      "Site": "Component_Instruction_Spread_Out/Sensor",
-      "Channel": "proximity",
-      "BaseRange": 2
-    },
-    {
       "Role": "Goblin_Scrapper_Patrol",
       "Site": "Component_Sensor_Sight_By_Attitude",
       "Channel": "sight",
@@ -685,42 +589,6 @@
       "Site": "Component_Sensor_Sight_By_Attitude",
       "Channel": "sight",
       "BaseRange": 15
-    },
-    {
-      "Role": "Goblin_Thief",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 2
-    },
-    {
-      "Role": "Goblin_Thief",
-      "Site": "Component_Sensor_Scent_By_Attitude",
-      "Channel": "scent",
-      "BaseRange": 8
-    },
-    {
-      "Role": "Goblin_Thief",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 12
-    },
-    {
-      "Role": "Goblin_Thief",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 2
-    },
-    {
-      "Role": "Goblin_Thief",
-      "Site": "Component_Sensor_Scent_By_Attitude",
-      "Channel": "scent",
-      "BaseRange": 8
-    },
-    {
-      "Role": "Goblin_Thief",
-      "Site": "Component_Sensor_Sight_By_Attitude",
-      "Channel": "sight",
-      "BaseRange": 25
     },
     {
       "Role": "Goblin_Thief_Patrol",
@@ -3601,6 +3469,66 @@
       "Site": "role/Instructions/1/Instructions/0/Instructions/3/Sensor",
       "Channel": "proximity",
       "BaseRange": 30
+    },
+    {
+      "Role": "Goblin_Lobber",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Lobber",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 16
+    },
+    {
+      "Role": "Goblin_Miner",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Miner",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 12
+    },
+    {
+      "Role": "Goblin_Scrapper",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Scrapper",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 12
+    },
+    {
+      "Role": "Goblin_Scrapper",
+      "Site": "role/Instructions/1/Instructions/3/Sensor/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 12
+    },
+    {
+      "Role": "Goblin_Scrapper",
+      "Site": "role/Instructions/1/Instructions/6/Sensor/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 12
+    },
+    {
+      "Role": "Goblin_Thief",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/0",
+      "Channel": "proximity",
+      "BaseRange": 2
+    },
+    {
+      "Role": "Goblin_Thief",
+      "Site": "Component_Sensor_Standard_Detection/Sensors/1",
+      "Channel": "sight",
+      "BaseRange": 12
     }
   ]
 }

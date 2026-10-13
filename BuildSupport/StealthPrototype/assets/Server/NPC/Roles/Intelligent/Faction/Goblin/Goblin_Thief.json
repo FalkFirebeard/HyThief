@@ -1,0 +1,283 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Goblin_Thief",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Goblin_Thief.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "Appearance": {
+      "Value": "Goblin_Thief",
+      "Description": "Model to be used"
+    },
+    "MaxHealth": {
+      "Value": 30,
+      "Description": "Max health for the NPC"
+    },
+    "MaxSpeed": {
+      "Description": "The max speed of the NPC",
+      "TypeHint": "Double",
+      "Value": 7
+    },
+    "ViewRange": {
+      "Value": 12,
+      "Description": "The view range of the NPC",
+      "TypeHint": "Double"
+    },
+    "ViewSector": {
+      "Value": 160,
+      "Description": "The view sector of the NPC",
+      "TypeHint": "Double"
+    },
+    "HearingRange": {
+      "Value": 8,
+      "Description": "The hearing range of the NPC",
+      "TypeHint": "Double"
+    },
+    "AbsoluteDetectionRange": {
+      "Value": 2,
+      "Description": "The range at which an entity is guaranteed to be detected",
+      "TypeHint": "Double"
+    },
+    "WanderRadius": {
+      "Description": "The wander radius of the NPC",
+      "Value": 5
+    },
+    "IdleWalkWeight": {
+      "Description": "The weight of the walk behavior",
+      "Value": 10
+    },
+    "IdleRunWeight": {
+      "Description": "The weight of the run behavior",
+      "Value": 0
+    },
+    "IdleAnimationWeight": {
+      "Description": "The weight of the animation behavior (with the NPC standing still)",
+      "Value": 20
+    },
+    "DigFrequency": {
+      "Description": "How often the NPC will dig up trash piles",
+      "Value": [
+        8,
+        30
+      ]
+    },
+    "DigBlockset": {
+      "Description": "The set of blocks this NPC will dig up",
+      "TypeHint": "String",
+      "Value": "Goblin_Scrapper_Flavor_Dig"
+    },
+    "AlertedRange": {
+      "Value": 30,
+      "Description": "The alerted range of the NPC",
+      "TypeHint": "Double"
+    },
+    "AlertedTimeout": {
+      "Value": [
+        1,
+        1.5
+      ],
+      "Description": "The time range after which an NPC will transition from alerted to combat"
+    },
+    "CombatMessageTargetGroups": {
+      "Value": [
+        "Goblin"
+      ],
+      "Description": "The NPC groups the combat message will be sent to",
+      "TypeHint": "String"
+    },
+    "CombatMessageFrequency": {
+      "Description": "The frequency at which combat alert messages will be sent",
+      "Value": [
+        4,
+        8
+      ]
+    },
+    "FleeDistance": {
+      "Description": "The distance to which the NPC will flee when faced with a hostile target",
+      "TypeHint": "Double",
+      "Value": 20
+    },
+    "FleeSeekGoblinGroups": {
+      "Description": "The Goblin groups that will be warned and sought by this NPC",
+      "TypeHint": "String",
+      "Value": [
+        "Goblin_Thief_Seek"
+      ]
+    },
+    "FleeSeekGoblinDistance": {
+      "Description": "If there are friendly goblins at this distance, seek them instead of fleeing the pursuer",
+      "TypeHint": "String",
+      "Value": 40
+    },
+    "FleeCowerMaintainDistance": {
+      "Description": "The distance cowering Goblins will maintain from the target",
+      "TypeHint": "Double",
+      "Value": 6
+    },
+    "FleeTimeoutDuration": {
+      "Description": "The time range after which a fleeing NPC will timeout to idle, as long as the pursuer is at a safe distance",
+      "Value": [
+        5,
+        8
+      ]
+    },
+    "FleeTripFrequency": {
+      "Description": "How often the NPC trips and falls while being chased",
+      "Value": [
+        10,
+        18
+      ]
+    },
+    "FleeTripDropList": {
+      "Description": "The drop list that is run when the NPC trips and falls",
+      "TypeHint": "String",
+      "Value": "Drop_Goblin_Thief_Fall"
+    },
+    "ConfusedTimeRange": {
+      "Value": [
+        1,
+        2
+      ],
+      "Description": "The time during which the NPC will be confused"
+    },
+    "SearchTimeRange": {
+      "Value": [
+        10,
+        14
+      ],
+      "Description": "The time during which the NPC will search for a target"
+    },
+    "IsMemory": {
+      "Value": true,
+      "Description": "Parameter IsMemory",
+      "TypeHint": "Boolean"
+    },
+    "MemoriesCategory": {
+      "Value": "Goblin",
+      "Description": "Parameter MemoriesCategory",
+      "TypeHint": "String"
+    },
+    "MemoriesNameOverride": {
+      "Value": "Goblin_Thief",
+      "Description": "Parameter MemoriesNameOverride",
+      "TypeHint": "String"
+    },
+    "MemoriesUnlockedBy": {
+      "Value": "Kill",
+      "Description": "How the player records the memory, either Proximity or Kill.",
+      "TypeHint": "String"
+    },
+    "MemoriesKillRange": {
+      "Value": 0,
+      "Description": "Radius in blocks in which the memory is recorded when the NPC dies. 0 uses the server default.",
+      "TypeHint": "Double"
+    },
+    "KnockbackScale": {
+      "Description": "Parameter KnockbackScale",
+      "TypeHint": "Double",
+      "Value": 0.5
+    }
+  },
+  "Modify": {
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
+    "MaxSpeed": {
+      "Compute": "MaxSpeed"
+    },
+    "ViewRange": {
+      "Compute": "ViewRange"
+    },
+    "ViewSector": {
+      "Compute": "ViewSector"
+    },
+    "HearingRange": {
+      "Compute": "HearingRange"
+    },
+    "AbsoluteDetectionRange": {
+      "Compute": "AbsoluteDetectionRange"
+    },
+    "WanderRadius": {
+      "Compute": "WanderRadius"
+    },
+    "IdleWalkWeight": {
+      "Compute": "IdleWalkWeight"
+    },
+    "IdleRunWeight": {
+      "Compute": "IdleRunWeight"
+    },
+    "IdleAnimationWeight": {
+      "Compute": "IdleAnimationWeight"
+    },
+    "DigFrequency": {
+      "Compute": "DigFrequency"
+    },
+    "DigBlockset": {
+      "Compute": "DigBlockset"
+    },
+    "AlertedRange": {
+      "Compute": "AlertedRange"
+    },
+    "AlertedTimeout": {
+      "Compute": "AlertedTimeout"
+    },
+    "CombatMessageTargetGroups": {
+      "Compute": "CombatMessageTargetGroups"
+    },
+    "CombatMessageFrequency": {
+      "Compute": "CombatMessageFrequency"
+    },
+    "FleeDistance": {
+      "Compute": "FleeDistance"
+    },
+    "FleeSeekGoblinGroups": {
+      "Compute": "FleeSeekGoblinGroups"
+    },
+    "FleeSeekGoblinDistance": {
+      "Compute": "FleeSeekGoblinDistance"
+    },
+    "FleeCowerMaintainDistance": {
+      "Compute": "FleeCowerMaintainDistance"
+    },
+    "FleeTimeoutDuration": {
+      "Compute": "FleeTimeoutDuration"
+    },
+    "FleeTripFrequency": {
+      "Compute": "FleeTripFrequency"
+    },
+    "FleeTripDropList": {
+      "Compute": "FleeTripDropList"
+    },
+    "ConfusedTimeRange": {
+      "Compute": "ConfusedTimeRange"
+    },
+    "SearchTimeRange": {
+      "Compute": "SearchTimeRange"
+    },
+    "IsMemory": {
+      "Compute": "IsMemory"
+    },
+    "MemoriesCategory": {
+      "Compute": "MemoriesCategory"
+    },
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
+    "MemoriesUnlockedBy": {
+      "Compute": "MemoriesUnlockedBy"
+    },
+    "MemoriesKillRange": {
+      "Compute": "MemoriesKillRange"
+    },
+    "KnockbackScale": {
+      "Compute": "KnockbackScale"
+    }
+  }
+}

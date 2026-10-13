@@ -1,90 +1,230 @@
 {
-  "Class": "Sensor",
+  "Type": "Component",
+  "Class": "Instruction",
   "Parameters": {
-    "ViewRange": {
-      "Value": 10,
-      "Description": "The range from which the player will be seen"
+    "WanderRadius": {
+      "Description": "The max range within which the NPC will wander",
+      "TypeHint": "Double",
+      "Value": 15
     },
-    "ViewSector": {
-      "Value": 120,
-      "Description": "The view sector within which the player needs to be to be seen"
+    "_ImportStates": [
+      "State1",
+      "State2"
+    ],
+    "WeightWalk": {
+      "Description": "Parameter WeightWalk",
+      "TypeHint": "Double",
+      "Value": 20
     },
-    "Attitudes": {
-      "Value": [
-        "Hostile",
-        "Revered",
-        "Friendly",
-        "Neutral"
-      ],
-      "Description": "A prioritised list of attitudes to respond to"
+    "WeightRun": {
+      "Description": "Parameter WeightRun",
+      "TypeHint": "Double",
+      "Value": 20
     },
-    "ExcludeGroups": {
-      "Value": [],
+    "WeightAnimation": {
+      "Description": "Parameter WeightAnimation",
+      "TypeHint": "Double",
+      "Value": 10
+    },
+    "WeightState1": {
+      "Description": "Parameter WeightState",
       "TypeHint": "String",
-      "Description": "Groups to exclude"
+      "Value": 0
     },
-    "GetNPCs": {
-      "Value": true,
-      "Description": "Whether to include NPCs in this sensor"
-    },
-    "IgnoreLockedTarget": {
-      "Value": false,
-      "Description": "Whether to ignore the current locked target"
-    },
-    "Enabled": {
-      "Value": true,
-      "Description": "Whether this should be enabled"
+    "WeightState2": {
+      "Description": "Parameter WeightState2",
+      "TypeHint": "Double",
+      "Value": 0
     }
   },
   "Content": {
-    "Enabled": {
-      "Compute": "Enabled"
+    "Sensor": {
+      "Type": "Any"
     },
-    "Type": "Mob",
-    "Range": {
-      "Compute": "ViewRange"
-    },
-    "LockOnTarget": true,
-    "GetPlayers": true,
-    "GetNPCs": {
-      "Compute": "GetNPCs"
-    },
-    "ExcludeOwnType": true,
-    "Filters": [
+    "Instructions": [
       {
-        "Type": "LineOfSight"
-      },
-      {
-        "Enabled": {
-          "Compute": "!isEmptyStringArray(ExcludeGroups)"
-        },
-        "Type": "NPCGroup",
-        "ExcludeGroups": {
-          "Compute": "ExcludeGroups"
-        }
-      },
-      {
-        "Type": "ViewSector",
-        "ViewSector": {
-          "Compute": "ViewSector"
-        }
-      },
-      {
-        "Type": "HyThiefStealthAcquisition",
-        "BaseRange": 2,
-        "Channel": "sight",
-        "Projected": false
+        "$Comment": "Idle behaviours",
+        "Type": "Random",
+        "Name": "Goblin_Random_Idles",
+        "ExecuteFor": [
+          15,
+          20
+        ],
+        "Instructions": [
+          {
+            "$Comment": "Walk around",
+            "Enabled": {
+              "Compute": "WeightWalk > 0"
+            },
+            "Weight": {
+              "Compute": "WeightWalk"
+            },
+            "BodyMotion": {
+              "Type": "Sequence",
+              "Looped": true,
+              "Motions": [
+                {
+                  "Type": "Timer",
+                  "Time": [
+                    4,
+                    8
+                  ],
+                  "Motion": {
+                    "Type": "WanderInCircle",
+                    "Radius": {
+                      "Compute": "WanderRadius"
+                    }
+                  }
+                },
+                {
+                  "Type": "Timer",
+                  "Time": [
+                    2,
+                    4
+                  ],
+                  "Motion": {
+                    "Type": "Nothing"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "$Comment": "Run around",
+            "Enabled": {
+              "Compute": "WeightRun > 0"
+            },
+            "Weight": {
+              "Compute": "WeightRun"
+            },
+            "BodyMotion": {
+              "Type": "Sequence",
+              "Looped": true,
+              "Motions": [
+                {
+                  "Type": "Timer",
+                  "Time": [
+                    4,
+                    6
+                  ],
+                  "Motion": {
+                    "Type": "WanderInCircle",
+                    "MaxHeadingChange": 20,
+                    "Radius": {
+                      "Compute": "WanderRadius"
+                    },
+                    "RelativeSpeed": 1
+                  }
+                },
+                {
+                  "Type": "Timer",
+                  "Time": [
+                    1,
+                    3
+                  ],
+                  "Motion": {
+                    "Type": "Nothing"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "$Comment": "Stop and play a random animation",
+            "Enabled": {
+              "Compute": "WeightAnimation > 0"
+            },
+            "Weight": {
+              "Compute": "WeightAnimation"
+            },
+            "BodyMotion": {
+              "Type": "Nothing"
+            },
+            "ActionsBlocking": true,
+            "Actions": [
+              {
+                "Type": "Timeout",
+                "Delay": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "Type": "Random",
+                "Actions": [
+                  {
+                    "Action": {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status",
+                      "Animation": "Yawn"
+                    },
+                    "Weight": 1
+                  },
+                  {
+                    "Action": {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status",
+                      "Animation": "ScratchButt"
+                    },
+                    "Weight": 1
+                  },
+                  {
+                    "Action": {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status",
+                      "Animation": "KickGround"
+                    },
+                    "Weight": 1
+                  }
+                ]
+              },
+              {
+                "Type": "Timeout",
+                "Delay": [
+                  3,
+                  4
+                ]
+              },
+              {
+                "Type": "ResetInstructions",
+                "Instructions": [
+                  "Goblin_Random_Idles"
+                ]
+              }
+            ]
+          },
+          {
+            "$Comment": "Go to a custom flavor state",
+            "Enabled": {
+              "Compute": "WeightState1 > 0"
+            },
+            "Weight": {
+              "Compute": "WeightState1"
+            },
+            "Actions": [
+              {
+                "Type": "ParentState",
+                "State": "State1"
+              }
+            ]
+          },
+          {
+            "$Comment": "Go to a custom flavor state",
+            "Enabled": {
+              "Compute": "WeightState2 > 0"
+            },
+            "Weight": {
+              "Compute": "WeightState2"
+            },
+            "Actions": [
+              {
+                "Type": "ParentState",
+                "State": "State2"
+              }
+            ]
+          }
+        ]
       }
-    ],
-    "Prioritiser": {
-      "Type": "Attitude",
-      "AttitudesByPriority": {
-        "Compute": "Attitudes"
-      }
-    },
-    "Collector": {
-      "Type": "CombatTargets"
-    }
-  },
-  "Type": "Component"
+    ]
+  }
 }

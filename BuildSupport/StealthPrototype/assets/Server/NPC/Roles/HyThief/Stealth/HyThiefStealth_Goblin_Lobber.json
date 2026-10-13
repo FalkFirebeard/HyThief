@@ -1,84 +1,309 @@
 {
   "Type": "Abstract",
-  "StartState": "Idle",
-  "AttitudeGroup": {
-    "Compute": "AttitudeGroup"
-  },
-  "DefaultNPCAttitude": "Ignore",
-  "DefaultPlayerAttitude": "Hostile",
   "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Goblin_Lobber.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "LeashDistance": {
+      "Value": 30,
+      "Description": "Distance from the leash point before the NPC wants to return home"
+    },
+    "LeashMinPlayerDistance": {
+      "Value": 6,
+      "Description": "The NPC will not give up the chase while the player is closer than this"
+    },
+    "LeashTimer": {
+      "Value": [
+        4,
+        4
+      ],
+      "Description": "Seconds beyond leash range, without damage or a close player, before the NPC returns home"
+    },
+    "HardLeashDistance": {
+      "Value": 60,
+      "Description": "Absolute maximum distance from the leash point before the NPC returns home unconditionally"
+    },
     "Appearance": {
       "Value": "Goblin_Lobber",
       "Description": "Model to be used"
+    },
+    "MaxHealth": {
+      "Value": 80,
+      "Description": "Max health for the NPC"
+    },
+    "MaxSpeed": {
+      "Description": "The NPC's max speed",
+      "TypeHint": "Double",
+      "Value": 3
+    },
+    "ViewRange": {
+      "Value": 16,
+      "Description": "The view range of the NPC",
+      "TypeHint": "Double"
+    },
+    "ViewSector": {
+      "Value": 160,
+      "Description": "The view sector of the NPC",
+      "TypeHint": "Double"
+    },
+    "HearingRange": {
+      "Value": 8,
+      "Description": "The hearing range of the NPC",
+      "TypeHint": "Double"
+    },
+    "AbsoluteDetectionRange": {
+      "Value": 2,
+      "Description": "The range at which an entity is guaranteed to be detected",
+      "TypeHint": "Double"
+    },
+    "WanderRadius": {
+      "Description": "The wander radius of the NPC",
+      "Value": 5
+    },
+    "IdleWalkWeight": {
+      "Description": "The weight of the walk behavior",
+      "Value": 15
+    },
+    "IdleRunWeight": {
+      "Description": "The weight of the run behavior",
+      "Value": 0
+    },
+    "IdleAnimationWeight": {
+      "Description": "The weight of the animation behavior (with the NPC standing still)",
+      "Value": 20
+    },
+    "IdleFlavorWeight": {
+      "Description": "The weight of the idle flavor state behavior",
+      "Value": 20
+    },
+    "IdleEatWeight": {
+      "Description": "Parameter IdleEatWeight",
+      "TypeHint": "Double",
+      "Value": 5
+    },
+    "FoodItems": {
+      "Description": "Parameter FoodItems",
+      "TypeHint": "String",
+      "Value": [
+        "Food*"
+      ]
+    },
+    "JuggleFailChance": {
+      "Description": "The change a juggle will fail and drop a bomb",
+      "TypeHint": "Double",
+      "Value": 50
+    },
+    "JuggleFailInteraction": {
+      "Description": "The interaction that runs when a juggle fails",
+      "TypeHint": "String",
+      "Value": "Root_NPC_Goblin_Lobber_Juggle_Drop"
+    },
+    "JuggleAlertGroups": {
+      "Description": "The NPC groups that will spectate and flee from a dropped juggle bomb",
+      "TypeHint": "String",
+      "Value": [
+        "Goblin_Scrapper"
+      ]
+    },
+    "JuggleAlertRange": {
+      "Description": "How far the NPC will notify others of a juggle",
+      "TypeHint": "Double",
+      "Value": 8
+    },
+    "AlertedRange": {
+      "Value": 25,
+      "Description": "The alerted range of the NPC",
+      "TypeHint": "Double"
+    },
+    "VoidFleeGoblinNearbyCount": {
+      "Value": 1,
+      "Description": "The maximum nearby Goblin count that causes this Goblin to flee"
+    },
+    "VoidFleeGoblinNearbyRange": {
+      "Value": [
+        0,
+        10
+      ],
+      "Description": "The range used to count nearby Goblins"
+    },
+    "VoidFleeDistance": {
+      "Description": "How far a Goblin will flee from nearby Void creatures. This should be higher than any detection range to avoid state loops",
+      "TypeHint": "Double",
+      "Value": 20
+    },
+    "VoidFleeDelay": {
+      "Description": "How long a Goblin will wait before starting to flee from Void creatures",
+      "Value": [
+        0.5,
+        1
+      ]
+    },
+    "AlertedTimeout": {
+      "Value": [
+        1,
+        1
+      ],
+      "Description": "The time range after which an NPC will transition from alerted to combat"
+    },
+    "CombatMessageRange": {
+      "Description": "The range at which the NPC will send/receive combat messages",
+      "TypeHint": "Double",
+      "Value": 30
+    },
+    "CombatMessageTargetGroups": {
+      "Value": [
+        "Goblin"
+      ],
+      "Description": "The NPC groups the combat message will be sent to",
+      "TypeHint": "String"
+    },
+    "CombatMessageAcceptChance": {
+      "Value": 100,
+      "Description": "The chance an NPC will respond to a combat beacon",
+      "TypeHint": "Double"
+    },
+    "Attack": {
+      "Value": "Root_NPC_Goblin_Lobber_Attack",
+      "Description": "The attack interaction the NPC will use",
+      "TypeHint": "String"
+    },
+    "AttackDistance": {
+      "Value": 12,
+      "Description": "The distance at which the NPC will perform the attack interaction",
+      "TypeHint": "Double"
+    },
+    "AttackPauseRange": {
+      "Value": [
+        2,
+        4
+      ],
+      "Description": "The time delay between consecutive attacks"
+    },
+    "CombatMovingRelativeSpeed": {
+      "Description": "The relative speed at which the NPC will perform combat movement (strafing, etc)",
+      "TypeHint": "Double",
+      "Value": 0.7
+    },
+    "CombatStrafingDurationRange": {
+      "Description": "The duration of strafing motions",
+      "TypeHint": "Double",
+      "Value": [
+        1,
+        1
+      ]
+    },
+    "CombatStrafingFrequencyRange": {
+      "Description": "The frequency of strafing motions",
+      "Value": [
+        7,
+        15
+      ]
+    },
+    "CombatTauntAnimation": {
+      "Description": "The animation that the NPC will play to taunt the target",
+      "TypeHint": "String",
+      "Value": "Taunt"
+    },
+    "CombatTauntFrequency": {
+      "Description": "How often the NPC will taunt the target. This timer only counts down when the target is beyond AttackRange / 2",
+      "Value": [
+        5,
+        10
+      ]
+    },
+    "ConfusedTimeRange": {
+      "Value": [
+        1,
+        2
+      ],
+      "Description": "The time during which the NPC will be confused"
+    },
+    "SearchTimeRange": {
+      "Value": [
+        15,
+        20
+      ],
+      "Description": "The time during which the NPC will search for a target"
+    },
+    "IsMemory": {
+      "Value": true,
+      "Description": "Parameter IsMemory",
+      "TypeHint": "Boolean"
+    },
+    "MemoriesCategory": {
+      "Value": "Goblin",
+      "Description": "Parameter MemoriesCategory",
+      "TypeHint": "String"
+    },
+    "MemoriesNameOverride": {
+      "Value": "Goblin_Lobber",
+      "Description": "Parameter MemoriesNameOverride",
+      "TypeHint": "String"
+    },
+    "MemoriesUnlockedBy": {
+      "Value": "Kill",
+      "Description": "How the player records the memory, either Proximity or Kill.",
+      "TypeHint": "String"
+    },
+    "MemoriesKillRange": {
+      "Value": 0,
+      "Description": "Radius in blocks in which the memory is recorded when the NPC dies. 0 uses the server default.",
+      "TypeHint": "Double"
+    },
+    "ScoldGroups": {
+      "Description": "The groups that will listen (and react) to scolding by this NPC",
+      "TypeHint": "String",
+      "Value": [
+        "Goblin_Scrapper",
+        "Goblin_Miner"
+      ]
+    },
+    "KnockbackScale": {
+      "Description": "Parameter KnockbackScale",
+      "TypeHint": "Double",
+      "Value": 0.3
     },
     "DropList": {
       "Value": "Drop_Goblin_Lobber",
       "Description": "Drop Items"
     },
-    "ViewRange": {
-      "Value": 15,
-      "Description": "View range"
+    "AttitudeGroup": {
+      "Value": "Goblin",
+      "Description": "Attitude group the goblin belongs to.",
+      "TypeHint": "String"
     },
-    "ViewSector": {
-      "Value": 180,
-      "Description": "View sector"
-    },
-    "HearingRange": {
-      "Value": 8,
-      "Description": "Hearing range"
-    },
-    "SmellRange": {
-      "Value": 8,
-      "Description": "Smell range"
-    },
-    "AlertedRange": {
-      "Value": 15,
-      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
-    },
-    "AlertedTime": {
-      "Value": [
-        1,
-        1
-      ],
-      "Description": "The duration for which the NPC is alert before switching to attack"
-    },
-    "TargetGroups": {
+    "DisableDamageGroups": {
       "Value": [
         "Goblin"
       ],
-      "Description": "Beacon target groups"
-    },
-    "AttitudeGroup": {
-      "Value": "Goblin",
-      "Description": "This NPCs attitude group"
-    },
-    "IdleMotionComponent": {
-      "Value": "Component_Instruction_Intelligent_Idle_Motion_Wander",
-      "Description": "The motion component to use when idling. Allows path following instead of normal wander"
-    },
-    "MaxHealth": {
-      "Value": 48,
-      "Description": "Max health for the NPC"
-    },
-    "IsMemory": {
-      "Value": true,
-      "Description": "Defines if the NPC is a memory"
-    },
-    "MemoriesCategory": {
-      "Value": "Goblin",
-      "Description": "Defines the category of the memory"
-    },
-    "MemoriesNameOverride": {
-      "Value": "Goblin_Lobber",
-      "Description": "Overrides the memory name if set"
-    },
-    "NameTranslationKey": {
-      "Value": "server.npcRoles.Goblin_Lobber.name",
-      "Description": "Translation key for NPC name display"
+      "Description": "Attitude groups whose damage this goblin ignores."
     }
   },
+  "Appearance": {
+    "Compute": "Appearance"
+  },
+  "ApplySeparation": true,
+  "AttitudeGroup": {
+    "Compute": "AttitudeGroup"
+  },
+  "Debug": "",
+  "DefaultNPCAttitude": "Ignore",
+  "DisableDamageGroups": {
+    "Compute": "DisableDamageGroups"
+  },
+  "DropList": {
+    "Compute": "DropList"
+  },
+  "HotbarItems": [],
   "IsMemory": {
     "Compute": "IsMemory"
+  },
+  "KnockbackScale": {
+    "Compute": "KnockbackScale"
+  },
+  "MaxHealth": {
+    "Compute": "MaxHealth"
   },
   "MemoriesCategory": {
     "Compute": "MemoriesCategory"
@@ -86,20 +311,29 @@
   "MemoriesNameOverride": {
     "Compute": "MemoriesNameOverride"
   },
-  "DisableDamageGroups": [
-    "Goblin"
-  ],
-  "Appearance": {
-    "Compute": "Appearance"
+  "MemoriesUnlockedBy": {
+    "Compute": "MemoriesUnlockedBy"
   },
-  "DropList": {
-    "Compute": "DropList"
+  "MemoriesKillRange": {
+    "Compute": "MemoriesKillRange"
   },
-  "KnockbackScale": 0.5,
+  "NameTranslationKey": {
+    "Compute": "NameTranslationKey"
+  },
+  "SeparationDistance": 1.5,
+  "SeparationMode": "Push",
+  "StartState": "Idle",
+  "CombatConfig": {
+    "EntityEffects": [
+      "Goblin_Lobber_Bomb_Fuse"
+    ]
+  },
   "MotionControllerList": [
     {
       "Type": "Walk",
-      "MaxWalkSpeed": 6,
+      "MaxWalkSpeed": {
+        "Compute": "MaxSpeed"
+      },
       "Gravity": 10,
       "MaxFallSpeed": 8,
       "Acceleration": 10
@@ -107,9 +341,38 @@
   ],
   "StateTransitions": [
     {
+      "$Comment": "Ensure no item is being held by default",
       "States": [
         {
           "From": [],
+          "To": [
+            "Idle",
+            "IdleEat",
+            "IdleFlavor",
+            "IdleJuggle",
+            "IdleScold",
+            "Alerted",
+            "Combat",
+            "Search"
+          ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "Inventory",
+          "Operation": "RemoveHeldItem",
+          "UseTarget": false
+        }
+      ]
+    },
+    {
+      "$Comment": "Release target and reset animation",
+      "States": [
+        {
+          "From": [
+            "Combat",
+            "IdleScold"
+          ],
           "To": [
             "Idle"
           ]
@@ -117,32 +380,665 @@
       ],
       "Actions": [
         {
-          "Type": "Inventory",
-          "Operation": "ClearHeldItem",
-          "UseTarget": false
+          "Type": "ReleaseTarget"
+        },
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status"
+        }
+      ]
+    },
+    {
+      "$Comment": "Reset animation and the instruction from the idle component",
+      "States": [
+        {
+          "From": [
+            "IdleEat",
+            "IdleJuggle",
+            "IdleFlavor"
+          ],
+          "To": []
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status"
+        },
+        {
+          "Type": "ResetInstructions",
+          "Instructions": [
+            "Goblin_Random_Idles"
+          ]
         }
       ]
     }
   ],
-  "MaxHealth": {
-    "Compute": "MaxHealth"
-  },
   "Instructions": [
     {
+      "Reference": "Component_Instruction_Hit_Interrupt"
+    },
+    {
+      "$Comment": "Explode when set on fire",
+      "Sensor": {
+        "Type": "State",
+        "State": "BlowingUp"
+      },
+      "BodyMotion": {
+        "Type": "Nothing"
+      },
+      "ActionsBlocking": true,
+      "Actions": [
+        {
+          "Type": "Attack",
+          "Attack": "Root_NPC_Goblin_Lobber_Explode",
+          "Once": true
+        },
+        {
+          "Type": "Timeout",
+          "Delay": [
+            2.5,
+            2.5
+          ]
+        },
+        {
+          "Type": "PlayAnimation",
+          "Animation": "Alerted",
+          "Slot": "Status"
+        }
+      ]
+    },
+    {
+      "$Comment": "Detect when set on fire",
+      "Sensor": {
+        "Type": "Self",
+        "Filters": [
+          {
+            "Type": "EntityEffect",
+            "EffectId": "Flame_Staff_Burn"
+          }
+        ]
+      },
+      "Actions": [
+        {
+          "Type": "SpawnParticles",
+          "ParticleSystem": "Question",
+          "TargetNodeName": "Head"
+        },
+        {
+          "Type": "State",
+          "State": "BlowingUp"
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Idle"
+      },
       "Instructions": [
         {
+          "$Comment": "Standard detection component: listen for beacons and check for nearby hostiles",
+          "Reference": "HyThiefStealth_Goblin_Lobber_C1",
+          "Modify": {
+            "_ExportStates": [
+              "Alerted",
+              "Combat.Maybe",
+              "Combat.Message",
+              "Search"
+            ],
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            },
+            "HearingRange": {
+              "Compute": "HearingRange"
+            },
+            "AbsoluteDetectionRange": {
+              "Compute": "AbsoluteDetectionRange"
+            },
+            "AlertedRange": {
+              "Compute": "AlertedRange"
+            },
+            "BeaconMessage": "Goblin_Attack",
+            "Attitudes": [
+              "Hostile",
+              "Neutral"
+            ]
+          }
+        },
+        {
+          "$Comment": "Detect mischief",
+          "Sensor": {
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "Beacon",
+                "Message": "Goblin_Sleep",
+                "Range": {
+                  "Compute": "ViewRange"
+                },
+                "TargetSlot": "LockedTarget"
+              },
+              {
+                "Type": "Beacon",
+                "Message": "Brawl_Punch",
+                "Range": {
+                  "Compute": "max(ViewRange,HearingRange)"
+                },
+                "TargetSlot": "LockedTarget"
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "IdleScold"
+            }
+          ]
+        },
+        {
+          "$Comment": "Detect dropped food items",
+          "Sensor": {
+            "Type": "DroppedItem",
+            "Items": {
+              "Compute": "FoodItems"
+            },
+            "LineOfSight": true,
+            "Range": {
+              "Compute": "ViewRange"
+            }
+          },
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "IdleEat"
+            }
+          ]
+        },
+        {
+          "$Comment": "Idle behaviors",
+          "Reference": "HyThiefStealth_Goblin_Lobber_C4",
+          "Modify": {
+            "_ExportStates": [
+              "IdleFlavor",
+              "IdleEat"
+            ],
+            "WeightWalk": {
+              "Compute": "IdleWalkWeight"
+            },
+            "WeightRun": {
+              "Compute": "IdleRunWeight"
+            },
+            "WeightAnimation": {
+              "Compute": "IdleAnimationWeight"
+            },
+            "WeightState1": {
+              "Compute": "IdleFlavorWeight"
+            },
+            "WeightState2": {
+              "Compute": "IdleEatWeight"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "$Comment": "Eat an item, either from own inventory or from the ground",
+      "Sensor": {
+        "Type": "State",
+        "State": "IdleEat"
+      },
+      "Instructions": [
+        {
+          "$Comment": "Standard detection component: listen for beacons and check for nearby hostiles, with lowered awareness",
+          "Reference": "Component_Instruction_Generic_Detection",
+          "Modify": {
+            "_ExportStates": [
+              "Alerted",
+              "Combat.Maybe",
+              "Combat.Message",
+              "Search"
+            ],
+            "ViewRange": {
+              "Compute": "ViewRange * 0.5"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector * 0.5"
+            },
+            "HearingRange": {
+              "Compute": "HearingRange * 0.5"
+            },
+            "AbsoluteDetectionRange": {
+              "Compute": "AbsoluteDetectionRange"
+            },
+            "AlertedRange": {
+              "Compute": "AlertedRange * 0.5"
+            },
+            "BeaconMessage": "Goblin_Attack"
+          }
+        },
+        {
+          "$Comment": "Eat food",
+          "Reference": "Component_Instruction_Goblin_Eat",
+          "Modify": {
+            "_ExportStates": [
+              "Idle",
+              "Search"
+            ],
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            },
+            "FoodItems": {
+              "Compute": "FoodItems"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "$Comment": "Scold sleeping miners or brawling scrappers",
+      "Sensor": {
+        "Type": "State",
+        "State": "IdleScold"
+      },
+      "Instructions": [
+        {
+          "$Comment": "Always watch the target",
+          "Continue": true,
+          "Sensor": {
+            "Type": "Target",
+            "Filters": [
+              {
+                "Type": "LineOfSight"
+              }
+            ]
+          },
+          "HeadMotion": {
+            "Type": "Watch"
+          }
+        },
+        {
+          "$Comment": "Standard detection component: listen for beacons and check for nearby hostiles",
+          "Reference": "Component_Instruction_Generic_Detection",
+          "Modify": {
+            "_ExportStates": [
+              "Alerted",
+              "Combat.Maybe",
+              "Combat.Message",
+              "Search"
+            ],
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            },
+            "HearingRange": {
+              "Compute": "HearingRange"
+            },
+            "AbsoluteDetectionRange": {
+              "Compute": "AbsoluteDetectionRange"
+            },
+            "AlertedRange": {
+              "Compute": "AlertedRange"
+            },
+            "BeaconMessage": "Goblin_Attack"
+          }
+        },
+        {
+          "$Comment": "Scold any nearby misbehaving NPCs, which includes the target",
           "Sensor": {
             "Type": "State",
-            "State": "Idle"
+            "State": ".Angry"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status",
+              "Animation": "Scold"
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                0.5,
+                1
+              ]
+            },
+            {
+              "Type": "Beacon",
+              "Message": "Goblin_Scold",
+              "Range": {
+                "Compute": "HearingRange * 2"
+              },
+              "TargetGroups": {
+                "Compute": "ScoldGroups"
+              }
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                2,
+                4
+              ]
+            },
+            {
+              "Type": "SpawnParticles",
+              "ParticleSystem": "Angry",
+              "TargetNodeName": "Head"
+            },
+            {
+              "Type": "State",
+              "State": "Idle"
+            }
+          ]
+        },
+        {
+          "$Comment": "When close to the target, scold it",
+          "Sensor": {
+            "Type": "Target",
+            "Range": 2
+          },
+          "Actions": [
+            {
+              "Type": "State",
+              "State": ".Angry"
+            }
+          ]
+        },
+        {
+          "$Comment": "Seek the target",
+          "Sensor": {
+            "Type": "Target",
+            "Range": {
+              "Compute": "ViewRange"
+            }
+          },
+          "BodyMotion": {
+            "Type": "Seek",
+            "SlowDownDistance": 3,
+            "StopDistance": 1
+          }
+        },
+        {
+          "$Comment": "If the target was lost for some reason, go back to default",
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "Idle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$Comment": "Idle flavor: mostly juggle, sometimes stop and play a standalone emote",
+      "Sensor": {
+        "Type": "State",
+        "State": "IdleFlavor"
+      },
+      "Instructions": [
+        {
+          "$Comment": "Stay alert to threats while deciding",
+          "Reference": "Component_Instruction_Generic_Detection",
+          "Modify": {
+            "_ExportStates": [
+              "Alerted",
+              "Combat.Maybe",
+              "Combat.Message",
+              "Search"
+            ],
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            },
+            "HearingRange": {
+              "Compute": "HearingRange"
+            },
+            "AbsoluteDetectionRange": {
+              "Compute": "AbsoluteDetectionRange"
+            },
+            "AlertedRange": {
+              "Compute": "AlertedRange"
+            },
+            "BeaconMessage": "Goblin_Attack"
+          }
+        },
+        {
+          "$Comment": "Stop and play a standalone emote, then return to idle",
+          "Sensor": {
+            "Type": "State",
+            "State": ".Emote"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "Random",
+              "Actions": [
+                {
+                  "$Comment": "Hold matched to the laugh VO length so the anim doesn't loop past it",
+                  "Action": {
+                    "Type": "Sequence",
+                    "Blocking": true,
+                    "Actions": [
+                      {
+                        "Type": "PlayAnimation",
+                        "Slot": "Status",
+                        "Animation": "Laugh"
+                      },
+                      {
+                        "Type": "Timeout",
+                        "Delay": [
+                          3.5,
+                          3.5
+                        ]
+                      }
+                    ]
+                  },
+                  "Weight": 1
+                },
+                {
+                  "$Comment": "Hold matched to the cackle VO length so the anim doesn't loop past it",
+                  "Action": {
+                    "Type": "Sequence",
+                    "Blocking": true,
+                    "Actions": [
+                      {
+                        "Type": "PlayAnimation",
+                        "Slot": "Status",
+                        "Animation": "LaughEvil"
+                      },
+                      {
+                        "Type": "Timeout",
+                        "Delay": [
+                          3.5,
+                          3.5
+                        ]
+                      }
+                    ]
+                  },
+                  "Weight": 1
+                },
+                {
+                  "Action": {
+                    "Type": "Sequence",
+                    "Blocking": true,
+                    "Actions": [
+                      {
+                        "Type": "PlaySound",
+                        "SoundEventId": "SFX_Goblin_Lobber_VO_Idle_Bravado"
+                      },
+                      {
+                        "Type": "Timeout",
+                        "Delay": [
+                          3,
+                          5
+                        ]
+                      }
+                    ]
+                  },
+                  "Weight": 1
+                },
+                {
+                  "Action": {
+                    "Type": "Sequence",
+                    "Blocking": true,
+                    "Actions": [
+                      {
+                        "Type": "PlaySound",
+                        "SoundEventId": "SFX_Goblin_Lobber_VO_Idle_Bombshell_Love"
+                      },
+                      {
+                        "Type": "Timeout",
+                        "Delay": [
+                          3,
+                          5
+                        ]
+                      }
+                    ]
+                  },
+                  "Weight": 1
+                },
+                {
+                  "Action": {
+                    "Type": "Sequence",
+                    "Blocking": true,
+                    "Actions": [
+                      {
+                        "Type": "PlaySound",
+                        "SoundEventId": "SFX_Goblin_Lobber_VO_Idle_Singing"
+                      },
+                      {
+                        "Type": "Timeout",
+                        "Delay": [
+                          3,
+                          5
+                        ]
+                      }
+                    ]
+                  },
+                  "Weight": 1
+                },
+                {
+                  "Action": {
+                    "Type": "Sequence",
+                    "Blocking": true,
+                    "Actions": [
+                      {
+                        "Type": "PlaySound",
+                        "SoundEventId": "SFX_Goblin_Lobber_VO_Idle_Interact"
+                      },
+                      {
+                        "Type": "Timeout",
+                        "Delay": [
+                          3,
+                          5
+                        ]
+                      }
+                    ]
+                  },
+                  "Weight": 1
+                },
+                {
+                  "Action": {
+                    "Type": "Sequence",
+                    "Blocking": true,
+                    "Actions": [
+                      {
+                        "Type": "PlaySound",
+                        "SoundEventId": "SFX_Goblin_Lobber_VO_Idle_Phrases_B"
+                      },
+                      {
+                        "Type": "Timeout",
+                        "Delay": [
+                          3,
+                          5
+                        ]
+                      }
+                    ]
+                  },
+                  "Weight": 1
+                }
+              ]
+            },
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status"
+            },
+            {
+              "Type": "State",
+              "State": "Idle"
+            }
+          ]
+        },
+        {
+          "$Comment": "Roll the outcome",
+          "Actions": [
+            {
+              "Type": "Random",
+              "Actions": [
+                {
+                  "Action": {
+                    "Type": "State",
+                    "State": "IdleJuggle"
+                  },
+                  "Weight": 1
+                },
+                {
+                  "Action": {
+                    "Type": "State",
+                    "State": ".Emote"
+                  },
+                  "Weight": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$Comment": "Juggle bombs, which some chance of failing",
+      "Sensor": {
+        "Type": "State",
+        "State": "IdleJuggle"
+      },
+      "Instructions": [
+        {
+          "$Comment": "If a hostile is suddenly detected, or the NPC is damaged, drop a bomb and check for a target",
+          "Sensor": {
+            "Type": "State",
+            "State": ".Alerted"
           },
           "Instructions": [
             {
+              "$Comment": "Drop a bomb and clear animation",
               "Continue": true,
               "Sensor": {
-                "Type": "Any",
-                "Once": true
+                "Type": "Any"
               },
               "Actions": [
+                {
+                  "Type": "Attack",
+                  "Attack": {
+                    "Compute": "JuggleFailInteraction"
+                  },
+                  "Once": true
+                },
                 {
                   "Type": "PlayAnimation",
                   "Slot": "Status"
@@ -150,570 +1046,66 @@
               ]
             },
             {
+              "$Comment": "If a target was spotted, get alerted",
               "Sensor": {
-                "Type": "State",
-                "State": ".Default"
+                "Type": "Target"
               },
               "Instructions": [
                 {
-                  "Reference": "HyThiefStealth_Goblin_Lobber_C1"
-                },
-                {
-                  "Reference": "HyThiefStealth_Goblin_Lobber_C2",
-                  "Modify": {
-                    "_ExportStates": [
-                      "Alerted",
-                      "Ranged",
-                      "Search",
-                      "Alerted"
-                    ],
-                    "ViewRange": {
-                      "Compute": "ViewRange"
-                    },
-                    "ViewSector": {
-                      "Compute": "ViewSector"
-                    },
-                    "HearingRange": {
-                      "Compute": "HearingRange"
-                    },
-                    "AlertedRange": {
-                      "Compute": "AlertedRange"
-                    }
-                  }
-                },
-                {
-                  "Reference": "HyThiefStealth_Goblin_Lobber_C8",
-                  "Interfaces": [
-                    "Hytale.Instruction.Intelligent.Idle.Motion"
-                  ]
-                },
-                {
-                  "Sensor": {
-                    "Type": "And",
-                    "Sensors": [
-                      {
-                        "Once": true,
-                        "Type": "Beacon",
-                        "Message": "MinerSleep",
-                        "TargetSlot": "LockedTarget"
-                      },
-                      {
-                        "Type": "Target",
-                        "Range": {
-                          "Compute": "ViewRange"
-                        },
-                        "AutoUnlockTarget": true,
-                        "Filters": [
-                          {
-                            "Type": "LineOfSight"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "Actions": [
-                    {
-                      "Type": "PlayAnimation",
-                      "Slot": "Status",
-                      "Animation": "Alerted"
-                    },
-                    {
-                      "Type": "Timeout",
-                      "Delay": [
-                        1,
-                        1
-                      ],
-                      "Action": {
-                        "Type": "State",
-                        "State": ".Order"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "Actions": [
-                    {
-                      "Type": "Timeout",
-                      "Delay": [
-                        5,
-                        10
-                      ],
-                      "Action": {
-                        "Type": "State",
-                        "State": ".Flavor"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "Sensor": {
-                "Type": "State",
-                "State": ".Flavor"
-              },
-              "Type": "Random",
-              "Instructions": [
-                {
-                  "Weight": 5,
-                  "Instructions": [
-                    {
-                      "Reference": "HyThiefStealth_Goblin_Lobber_C10"
-                    },
-                    {
-                      "ActionsBlocking": true,
-                      "Actions": [
-                        {
-                          "Type": "Attack",
-                          "Attack": "Goblin_Lobber_Bomb_Juggle_Fail",
-                          "AttackPauseRange": [
-                            4,
-                            5
-                          ]
-                        },
-                        {
-                          "Type": "Timeout",
-                          "Delay": [
-                            5,
-                            5
-                          ],
-                          "Action": {
-                            "Type": "PlayAnimation",
-                            "Slot": "Status",
-                            "Animation": "PlugEars"
-                          }
-                        },
-                        {
-                          "Type": "Beacon",
-                          "Range": 8,
-                          "Message": "LobberJuggleFail",
-                          "TargetGroups": {
-                            "Compute": "TargetGroups"
-                          },
-                          "SendCount": -1
-                        },
-                        {
-                          "Type": "Timeout",
-                          "Delay": [
-                            2,
-                            2
-                          ],
-                          "Action": {
-                            "Type": "State",
-                            "State": ".Default"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "Weight": 5,
-                  "Instructions": [
-                    {
-                      "Reference": "HyThiefStealth_Goblin_Lobber_C11"
-                    },
-                    {
-                      "ActionsBlocking": true,
-                      "Actions": [
-                        {
-                          "Type": "PlayAnimation",
-                          "Slot": "Status",
-                          "Animation": "JuggleSuccess"
-                        },
-                        {
-                          "Type": "Timeout",
-                          "Delay": [
-                            5.5,
-                            5.5
-                          ],
-                          "Action": {
-                            "Type": "State",
-                            "State": ".Default"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "Weight": 3,
-                  "Instructions": [
-                    {
-                      "Reference": "HyThiefStealth_Goblin_Lobber_C12"
-                    },
-                    {
-                      "ActionsBlocking": true,
-                      "Actions": [
-                        {
-                          "Type": "PlayAnimation",
-                          "Slot": "Status",
-                          "Animation": "FixGlasses"
-                        },
-                        {
-                          "Type": "Timeout",
-                          "Delay": [
-                            1.2,
-                            1.2
-                          ],
-                          "Action": {
-                            "Type": "State",
-                            "State": ".Default"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "Weight": 3,
-                  "Instructions": [
-                    {
-                      "Reference": "HyThiefStealth_Goblin_Lobber_C13"
-                    },
-                    {
-                      "ActionsBlocking": true,
-                      "Actions": [
-                        {
-                          "Type": "PlayAnimation",
-                          "Slot": "Status",
-                          "Animation": "ScratchButt"
-                        },
-                        {
-                          "Type": "Timeout",
-                          "Delay": [
-                            1.2,
-                            1.2
-                          ],
-                          "Action": {
-                            "Type": "State",
-                            "State": ".Default"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "Sensor": {
-                "Type": "State",
-                "State": ".Order"
-              },
-              "Instructions": [
-                {
-                  "Reference": "HyThiefStealth_Goblin_Lobber_C14",
-                  "Modify": {
-                    "_ExportStates": [
-                      "Alerted",
-                      "Ranged",
-                      "Search",
-                      "Alerted"
-                    ],
-                    "ViewRange": {
-                      "Compute": "ViewRange"
-                    },
-                    "ViewSector": {
-                      "Compute": "ViewSector"
-                    },
-                    "HearingRange": {
-                      "Compute": "HearingRange"
-                    },
-                    "AlertedRange": {
-                      "Compute": "AlertedRange"
-                    }
-                  }
-                },
-                {
+                  "$Comment": "If the target is friendly, get angry but go to idle",
                   "Sensor": {
                     "Type": "Target",
-                    "Range": 2
-                  },
-                  "ActionsBlocking": true,
-                  "Actions": [
-                    {
-                      "Type": "PlayAnimation",
-                      "Slot": "Status",
-                      "Animation": "Scold"
-                    },
-                    {
-                      "Type": "Timeout",
-                      "Delay": [
-                        0.8,
-                        0.8
-                      ]
-                    },
-                    {
-                      "Type": "Beacon",
-                      "Range": 4,
-                      "Message": "LobberOrder",
-                      "TargetGroups": {
-                        "Compute": "TargetGroups"
-                      },
-                      "SendCount": -1
-                    },
-                    {
-                      "Type": "State",
-                      "State": ".Default"
-                    }
-                  ]
-                },
-                {
-                  "Sensor": {
-                    "Type": "Target",
-                    "Range": {
-                      "Compute": "ViewRange"
-                    },
                     "Filters": [
                       {
-                        "Type": "LineOfSight"
+                        "Type": "Attitude",
+                        "Attitudes": [
+                          "Friendly"
+                        ]
                       }
                     ]
                   },
                   "BodyMotion": {
-                    "Type": "Seek",
-                    "SlowDownDistance": 1,
-                    "StopDistance": 0.5
-                  }
-                },
-                {
+                    "Type": "Nothing"
+                  },
+                  "ActionsBlocking": true,
                   "Actions": [
+                    {
+                      "Type": "Timeout"
+                    },
+                    {
+                      "Type": "PlayAnimation",
+                      "Animation": "Angry",
+                      "Slot": "Status"
+                    },
                     {
                       "Type": "Timeout",
                       "Delay": [
-                        7,
-                        7
-                      ],
-                      "Action": {
-                        "Type": "State",
-                        "State": ".Default"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "Sensor": {
-            "Type": "State",
-            "State": "Alerted"
-          },
-          "Instructions": [
-            {
-              "Reference": "Component_Goblin_Instruction_Alerted",
-              "Modify": {
-                "_ExportStates": [
-                  "Idle",
-                  "Search",
-                  "Ranged"
-                ],
-                "ViewRange": {
-                  "Compute": "ViewRange"
-                },
-                "ViewSector": {
-                  "Compute": "ViewSector"
-                },
-                "HearingRange": {
-                  "Compute": "HearingRange"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "Sensor": {
-            "Type": "State",
-            "State": "Search"
-          },
-          "Instructions": [
-            {
-              "Reference": "Component_Instruction_Generic_Search",
-              "Modify": {
-                "_ExportStates": [
-                  "Alerted",
-                  "Ranged",
-                  "Search",
-                  "Idle"
-                ],
-                "ViewRange": {
-                  "Compute": "ViewRange"
-                },
-                "ViewSector": {
-                  "Compute": "ViewSector"
-                },
-                "HearingRange": {
-                  "Compute": "HearingRange"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "Sensor": {
-            "Type": "State",
-            "State": "Ranged"
-          },
-          "Instructions": [
-            {
-              "Continue": true,
-              "Sensor": {
-                "Type": "Any",
-                "Once": true
-              },
-              "Actions": [
-                {
-                  "Type": "PlayAnimation",
-                  "Slot": "Status"
-                }
-              ]
-            },
-            {
-              "Sensor": {
-                "Type": "Or",
-                "Sensors": [
-                  {
-                    "Reference": "Component_Sensor_Sight_By_Attitude",
-                    "Modify": {
-                      "ViewRange": {
-                        "Compute": "AlertedRange"
-                      },
-                      "ViewSector": {
-                        "Compute": "ViewSector"
-                      },
-                      "Attitudes": [
-                        "Hostile"
-                      ]
-                    }
-                  },
-                  {
-                    "Type": "HasHostileTargetMemory"
-                  }
-                ]
-              },
-              "Instructions": [
-                {
-                  "Sensor": {
-                    "Type": "State",
-                    "State": ".Default"
-                  },
-                  "Instructions": [
-                    {
-                      "Continue": true,
-                      "Sensor": {
-                        "Type": "Target",
-                        "Range": 5,
-                        "Filters": [
-                          {
-                            "Type": "LineOfSight"
-                          }
-                        ]
-                      },
-                      "Actions": [
-                        {
-                          "Type": "Timeout",
-                          "Delay": [
-                            1,
-                            1
-                          ],
-                          "Action": {
-                            "Type": "State",
-                            "State": ".Flee"
-                          }
-                        }
+                        2,
+                        2
                       ]
                     },
                     {
-                      "Sensor": {
-                        "Type": "CombatActionEvaluator",
-                        "TargetInRange": true
-                      },
-                      "HeadMotion": {
-                        "Type": "Aim"
-                      },
-                      "BodyMotion": {
-                        "Type": "MaintainDistance",
-                        "DesiredDistanceRange": [
-                          2,
-                          3
-                        ],
-                        "MoveThreshold": 0.2,
-                        "RelativeForwardsSpeed": 0.45,
-                        "RelativeBackwardsSpeed": 0.25
-                      },
-                      "Actions": [
-                        {
-                          "Type": "CombatAbility"
-                        }
-                      ]
+                      "Type": "ReleaseTarget"
                     },
                     {
-                      "Reference": "Component_Instruction_Intelligent_Chase",
-                      "Modify": {
-                        "_ExportStates": [
-                          "Search",
-                          "Search",
-                          "Search"
-                        ],
-                        "ViewRange": {
-                          "Compute": "AlertedRange * 2"
-                        },
-                        "HearingRange": {
-                          "Compute": "HearingRange * 2"
-                        },
-                        "RelativeSpeed": 0.8
-                      }
+                      "Type": "State",
+                      "State": "Idle"
                     }
                   ]
                 },
                 {
-                  "Sensor": {
-                    "Type": "State",
-                    "State": ".Flee"
-                  },
-                  "Instructions": [
+                  "$Comment": "Else, get alerted",
+                  "Actions": [
                     {
-                      "Reference": "Component_Instruction_Clear_Status_Animation"
-                    },
-                    {
-                      "Sensor": {
-                        "Type": "CombatActionEvaluator",
-                        "TargetInRange": true
-                      },
-                      "HeadMotion": {
-                        "Type": "Aim"
-                      },
-                      "BodyMotion": {
-                        "Type": "Flee",
-                        "SlowDownDistance": {
-                          "Compute": "AlertedRange - 5"
-                        },
-                        "StopDistance": {
-                          "Compute": "AlertedRange - 2"
-                        },
-                        "RelativeSpeed": 0.6
-                      },
-                      "Actions": [
-                        {
-                          "Type": "CombatAbility"
-                        }
-                      ]
-                    },
-                    {
-                      "Actions": [
-                        {
-                          "Type": "State",
-                          "State": ".Default"
-                        }
-                      ]
+                      "Type": "State",
+                      "State": "Alerted"
                     }
                   ]
                 }
               ]
             },
             {
+              "$Comment": "If damage came from an unknown source, get confused",
               "Actions": [
                 {
                   "Type": "State",
@@ -722,32 +1114,1078 @@
               ]
             }
           ]
+        },
+        {
+          "Reference": "Component_Instruction_Generic_Detection",
+          "Modify": {
+            "_ExportStates": [
+              "IdleJuggle.Alerted",
+              "Combat.Default",
+              "IdleJuggle.Alerted",
+              "IdleJuggle.Alerted"
+            ],
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            },
+            "HearingRange": {
+              "Compute": "HearingRange"
+            },
+            "AbsoluteDetectionRange": {
+              "Compute": "AbsoluteDetectionRange"
+            },
+            "AlertedRange": {
+              "Compute": "AlertedRange"
+            },
+            "BeaconMessage": "Goblin_Attack"
+          }
+        },
+        {
+          "$Comment": "Pick a random outcome",
+          "Sensor": {
+            "Type": "State",
+            "State": ".Default"
+          },
+          "Actions": [
+            {
+              "Type": "Random",
+              "Actions": [
+                {
+                  "Action": {
+                    "Type": "State",
+                    "Enabled": {
+                      "Compute": "JuggleFailChance < 100"
+                    },
+                    "State": ".Success"
+                  },
+                  "Weight": {
+                    "Compute": "100 - JuggleFailChance"
+                  }
+                },
+                {
+                  "Action": {
+                    "Type": "State",
+                    "Enabled": {
+                      "Compute": "JuggleFailChance > 0"
+                    },
+                    "State": ".Fail"
+                  },
+                  "Weight": {
+                    "Compute": "JuggleFailChance"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$Comment": "Logic to execute when the juggle fails. This is a separate substate to make the advertisement easier to implement",
+          "Sensor": {
+            "Type": "State",
+            "State": ".Afraid"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "Attack",
+              "Attack": {
+                "Compute": "JuggleFailInteraction"
+              },
+              "Once": true
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                0.2,
+                0.8
+              ]
+            },
+            {
+              "Type": "Beacon",
+              "Message": "JuggleFail",
+              "Range": {
+                "Compute": "JuggleAlertRange"
+              },
+              "TargetGroups": {
+                "Compute": "JuggleAlertGroups"
+              }
+            },
+            {
+              "Type": "PlayAnimation",
+              "Animation": "PlugEars",
+              "Slot": "Status"
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                3,
+                4
+              ]
+            },
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status"
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                3,
+                5
+              ],
+              "Action": {
+                "Type": "State",
+                "State": "Idle"
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "Advertise the juggling to nearby NPCs. The expiration time gives spectators more time to react, staggering the gathering of the spectator group",
+          "Continue": true,
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "Timeout",
+              "Delay": [
+                1,
+                1
+              ],
+              "Action": {
+                "Type": "Beacon",
+                "ExpirationTime": 4,
+                "Message": "Goblin_Juggle",
+                "Range": {
+                  "Compute": "JuggleAlertRange"
+                },
+                "TargetGroups": {
+                  "Compute": "JuggleAlertGroups"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": ".Success"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status",
+              "Animation": "JuggleSuccess"
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                6,
+                6
+              ]
+            },
+            {
+              "Type": "Beacon",
+              "Message": "JuggleSuccess",
+              "Range": {
+                "Compute": "JuggleAlertRange"
+              },
+              "TargetGroups": {
+                "Compute": "JuggleAlertGroups"
+              }
+            },
+            {
+              "Type": "State",
+              "State": "Idle"
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": ".Fail"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Animation": "JuggleFail",
+              "Slot": "Status"
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                4,
+                4
+              ]
+            },
+            {
+              "Type": "State",
+              "State": ".Afraid"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Alerted"
+      },
+      "Instructions": [
+        {
+          "$Comment": "Play alerted animation",
+          "Sensor": {
+            "Type": "Any",
+            "Once": true
+          },
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status",
+              "Animation": "Alerted"
+            }
+          ],
+          "ActionsBlocking": true,
+          "Continue": true
+        },
+        {
+          "Sensor": {
+            "Type": "Damage"
+          },
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "Combat.Default"
+            }
+          ],
+          "$Comment": "Switch to combat if attacked"
+        },
+        {
+          "$Comment": "Always watch the target and switch to combat after a timeout",
+          "Sensor": {
+            "Type": "Target",
+            "Range": {
+              "Compute": "AlertedRange"
+            }
+          },
+          "HeadMotion": {
+            "Type": "Watch"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "Timeout",
+              "Delay": {
+                "Compute": "AlertedTimeout"
+              },
+              "Action": {
+                "Type": "State",
+                "State": "Combat.Message"
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "No target, go back to idling",
+          "Actions": [
+            {
+              "Type": "Timeout",
+              "Delay": [
+                2,
+                2
+              ],
+              "Action": {
+                "Type": "State",
+                "State": "Idle"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Combat"
+      },
+      "Instructions": [
+        {
+          "$Comment": "Flee from nearby Void creatures",
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "Target",
+                    "Filters": [
+                      {
+                        "Type": "Attitude",
+                        "Attitudes": [
+                          "Neutral"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Reference": "Component_Sensor_Standard_Detection",
+                    "Modify": {
+                      "ViewRange": {
+                        "Compute": "ViewRange"
+                      },
+                      "ViewSector": {
+                        "Compute": "ViewSector"
+                      },
+                      "HearingRange": {
+                        "Compute": "HearingRange"
+                      },
+                      "AbsoluteDetectionRange": {
+                        "Compute": "ViewRange"
+                      },
+                      "Attitudes": [
+                        "Neutral"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Count",
+                "Count": {
+                  "Compute": "[0,VoidFleeGoblinNearbyCount]"
+                },
+                "IncludeGroups": [
+                  "Goblin"
+                ],
+                "Range": {
+                  "Compute": "VoidFleeGoblinNearbyRange"
+                }
+              }
+            ]
+          },
+          "HeadMotion": {
+            "Type": "Watch"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "Timeout",
+              "Delay": {
+                "Compute": "VoidFleeDelay"
+              }
+            },
+            {
+              "Type": "State",
+              "State": "Flee"
+            }
+          ]
+        },
+        {
+          "Reference": "Component_Instruction_Soft_Leash",
+          "Modify": {
+            "_ExportStates": [
+              "ReturnHome"
+            ],
+            "LeashDistance": {
+              "Compute": "LeashDistance"
+            },
+            "LeashMinPlayerDistance": {
+              "Compute": "LeashMinPlayerDistance"
+            },
+            "LeashTimer": {
+              "Compute": "LeashTimer"
+            },
+            "HardLeashDistance": {
+              "Compute": "HardLeashDistance"
+            }
+          }
+        },
+        {
+          "$Comment": "Check whether the target should be swapped for a closer one",
+          "Reference": "Component_Instruction_Combat_Target_Swap",
+          "Modify": {
+            "TargetRange": {
+              "Compute": "AttackDistance"
+            },
+            "NextTargetRangeView": {
+              "Compute": "ViewRange"
+            },
+            "NextTargetRangeHearing": {
+              "Compute": "HearingRange"
+            }
+          }
+        },
+        {
+          "$Comment": "Default state: combat action and motions",
+          "Sensor": {
+            "Type": "State",
+            "State": ".Default"
+          },
+          "Instructions": [
+            {
+              "$Comment": "Count down a timer to taunt the target",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "Target",
+                  "Range": {
+                    "Compute": "AttackDistance * 0.5"
+                  },
+                  "Filters": []
+                }
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "Timeout",
+                  "Delay": {
+                    "Compute": "CombatTauntFrequency"
+                  },
+                  "Action": {
+                    "Type": "State",
+                    "State": ".Taunt"
+                  }
+                }
+              ]
+            },
+            {
+              "Reference": "Component_Instruction_Spread_Out",
+              "Modify": {
+                "RelativeSpeed": 1
+              }
+            },
+            {
+              "$Comment": "Maintain distance to the target",
+              "Enabled": true,
+              "Continue": true,
+              "Sensor": {
+                "Type": "Target",
+                "Range": {
+                  "Compute": "AlertedRange"
+                },
+                "Filters": [
+                  {
+                    "Type": "LineOfSight"
+                  }
+                ]
+              },
+              "BodyMotion": {
+                "Type": "MaintainDistance",
+                "DesiredDistanceRange": {
+                  "Compute": "makeRange(AttackDistance - 2)"
+                },
+                "RelativeForwardsSpeed": {
+                  "Compute": "CombatMovingRelativeSpeed"
+                },
+                "StrafingDurationRange": {
+                  "Compute": "CombatStrafingDurationRange"
+                },
+                "StrafingFrequencyRange": {
+                  "Compute": "CombatStrafingFrequencyRange"
+                }
+              }
+            },
+            {
+              "Sensor": {
+                "Reference": "Component_Sensor_Hit_Interrupted"
+              },
+              "Actions": [
+                {
+                  "Type": "Nothing"
+                }
+              ]
+            },
+            {
+              "$Comment": "Attack the target when within attack range",
+              "Sensor": {
+                "Type": "Target",
+                "Range": {
+                  "Compute": "AlertedRange"
+                },
+                "Filters": [
+                  {
+                    "Type": "LineOfSight"
+                  }
+                ]
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "HitProbability": 1,
+                "Spread": 0
+              },
+              "Actions": [
+                {
+                  "Type": "Attack",
+                  "Attack": {
+                    "Compute": "Attack"
+                  },
+                  "AttackPauseRange": {
+                    "Compute": "AttackPauseRange"
+                  },
+                  "BallisticMode": "Short"
+                }
+              ]
+            },
+            {
+              "$Comment": "Fallback: go to .Chase (target loss is handled there)",
+              "Enabled": true,
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": ".Chase"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$Comment": "Watch the target when detected",
+          "Continue": true,
+          "Sensor": {
+            "Reference": "Component_Sensor_Target_Sight_Or_Sound",
+            "Modify": {
+              "HearingRange": {
+                "Compute": "HearingRange"
+              },
+              "ViewRange": {
+                "Compute": "ViewRange"
+              },
+              "ViewSector": {
+                "Compute": "ViewSector"
+              }
+            }
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Filters": []
+              },
+              "HeadMotion": {
+                "Type": "Watch"
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "Send a message to nearby allies",
+          "Sensor": {
+            "Type": "State",
+            "State": ".Message"
+          },
+          "Instructions": [
+            {
+              "$Comment": "If damaged, go straight to combat",
+              "Sensor": {
+                "Type": "Damage"
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ]
+            },
+            {
+              "$Comment": "If there are friendly NPCs nearby, rally them before engaging",
+              "Sensor": {
+                "Type": "Mob",
+                "ExcludeOwnType": false,
+                "Range": {
+                  "Compute": "CombatMessageRange"
+                },
+                "Filters": [
+                  {
+                    "Type": "NPCGroup",
+                    "IncludeGroups": {
+                      "Compute": "CombatMessageTargetGroups"
+                    }
+                  }
+                ]
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "Beacon",
+                  "Message": "Goblin_Attack",
+                  "TargetGroups": {
+                    "Compute": "CombatMessageTargetGroups"
+                  },
+                  "SendTargetSlot": "LockedTarget",
+                  "Range": {
+                    "Compute": "CombatMessageRange"
+                  }
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Status",
+                  "Animation": "Rally"
+                },
+                {
+                  "Type": "Timeout",
+                  "Delay": [
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Status"
+                },
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ]
+            },
+            {
+              "$Comment": "Otherwise, go straight to combat",
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$Comment": "When rallied, make a decision on whether to attack the target or just mind own business",
+          "Type": "Random",
+          "Sensor": {
+            "Type": "State",
+            "State": ".Maybe"
+          },
+          "Instructions": [
+            {
+              "Enabled": {
+                "Compute": "CombatMessageAcceptChance > 0"
+              },
+              "Weight": {
+                "Compute": "CombatMessageAcceptChance"
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Status",
+                  "Animation": "Alerted"
+                },
+                {
+                  "Type": "Timeout",
+                  "Delay": [
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ],
+              "$Comment": "Attack the target",
+              "ActionsBlocking": true
+            },
+            {
+              "Enabled": {
+                "Compute": "CombatMessageAcceptChance < 100"
+              },
+              "Weight": {
+                "Compute": "100 - CombatMessageAcceptChance"
+              },
+              "Actions": [
+                {
+                  "Type": "Timeout",
+                  "Delay": [
+                    2,
+                    4
+                  ]
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Status",
+                  "Animation": "Yawn"
+                },
+                {
+                  "Type": "Timeout",
+                  "Delay": [
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "Type": "State",
+                  "State": "Idle"
+                }
+              ],
+              "ActionsBlocking": true,
+              "$Comment": "Get lazy and go back to idle"
+            }
+          ]
+        },
+        {
+          "$Comment": "Chase the target",
+          "Sensor": {
+            "Type": "State",
+            "State": ".Chase"
+          },
+          "Instructions": [
+            {
+              "$Comment": "If LoS is lost, store the last target position before chasing. This is important for ranged NPCs if .Chase is often triggered by lost LoS",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Target",
+                "Once": true,
+                "Range": {
+                  "Compute": "AlertedRange"
+                }
+              },
+              "Actions": [
+                {
+                  "Type": "StorePosition",
+                  "Slot": "LastSeen"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": {
+                  "Compute": "AttackDistance"
+                },
+                "Filters": [
+                  {
+                    "Type": "LineOfSight"
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ]
+            },
+            {
+              "Reference": "Component_Instruction_Intelligent_Chase",
+              "Modify": {
+                "_ExportStates": [
+                  "Search",
+                  "Search",
+                  "Idle"
+                ],
+                "ViewRange": {
+                  "Compute": "AlertedRange"
+                },
+                "HearingRange": {
+                  "Compute": "HearingRange"
+                },
+                "SlowDownDistance": 1,
+                "StopDistance": 0.5,
+                "RelativeSpeed": 1
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "Taunt the target",
+          "Sensor": {
+            "Type": "State",
+            "State": ".Taunt"
+          },
+          "Instructions": [
+            {
+              "$Comment": "If damaged, return to combat",
+              "Sensor": {
+                "Type": "Damage"
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Status"
+                },
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ]
+            },
+            {
+              "$Comment": "If LoS to the target is lost, return to combat",
+              "Sensor": {
+                "Type": "Target",
+                "Filters": [
+                  {
+                    "Type": "Not",
+                    "Filter": {
+                      "Type": "LineOfSight"
+                    }
+                  }
+                ]
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "Random",
+                  "Actions": [
+                    {
+                      "Action": {
+                        "Type": "PlayAnimation",
+                        "Animation": "Alerted",
+                        "Slot": "Status"
+                      },
+                      "Weight": 1
+                    },
+                    {
+                      "Action": {
+                        "Type": "PlayAnimation",
+                        "Slot": "Status"
+                      },
+                      "Weight": 1
+                    }
+                  ]
+                },
+                {
+                  "Type": "Timeout",
+                  "Delay": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ]
+            },
+            {
+              "$Comment": "If target gets too close, return to combat",
+              "Sensor": {
+                "Type": "Target",
+                "Range": {
+                  "Compute": "AttackDistance * 0.5"
+                },
+                "Filters": [
+                  {
+                    "Type": "LineOfSight"
+                  }
+                ]
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "Random",
+                  "Actions": [
+                    {
+                      "Action": {
+                        "Type": "PlayAnimation",
+                        "Animation": "Alerted",
+                        "Slot": "Status"
+                      },
+                      "Weight": 1
+                    },
+                    {
+                      "Action": {
+                        "Type": "PlayAnimation",
+                        "Slot": "Status"
+                      },
+                      "Weight": 1
+                    }
+                  ]
+                },
+                {
+                  "Type": "Timeout",
+                  "Delay": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ]
+            },
+            {
+              "$Comment": "Taunt the target",
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Animation": {
+                    "Compute": "CombatTauntAnimation"
+                  },
+                  "Slot": "Status"
+                },
+                {
+                  "Type": "Timeout",
+                  "Delay": [
+                    2,
+                    4
+                  ]
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Status"
+                },
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Flee"
+      },
+      "Instructions": [
+        {
+          "Reference": "Component_Instruction_Goblin_Flee_Void",
+          "Modify": {
+            "_ExportStates": [
+              "Combat.Default",
+              "Idle"
+            ],
+            "AlertedRange": {
+              "Compute": "AlertedRange"
+            },
+            "AttackDistance": {
+              "Compute": "AttackDistance"
+            },
+            "VoidFleeGoblinNearbyCount": {
+              "Compute": "VoidFleeGoblinNearbyCount"
+            },
+            "VoidFleeGoblinNearbyRange": {
+              "Compute": "VoidFleeGoblinNearbyRange"
+            },
+            "VoidFleeDistance": {
+              "Compute": "VoidFleeDistance"
+            },
+            "HostileOverrideDuration": 3,
+            "FleeRelativeSpeed": 2
+          }
+        }
+      ]
+    },
+    {
+      "$TODO": "Maybe we can transfer some of this logic over to the Generic Search macro element instead since it's mostly duplicated from the Predator template.",
+      "Sensor": {
+        "Type": "State",
+        "State": "Search"
+      },
+      "Instructions": [
+        {
+          "Reference": "Component_Instruction_Generic_Search",
+          "Modify": {
+            "_ExportStates": [
+              "Alerted",
+              "Combat",
+              "Combat.Message",
+              "Idle",
+              "Search"
+            ],
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            },
+            "HearingRange": {
+              "Compute": "HearingRange"
+            },
+            "AbsoluteDetectionRange": {
+              "Compute": "AbsoluteDetectionRange"
+            },
+            "AlertedRange": {
+              "Compute": "AlertedRange"
+            },
+            "ConfusedTimeRange": {
+              "Compute": "ConfusedTimeRange"
+            },
+            "SearchTimeRange": {
+              "Compute": "SearchTimeRange"
+            },
+            "SearchRadius": {
+              "Compute": "WanderRadius"
+            },
+            "ConfusedSoundEventId": "SFX_Goblin_Lobber_VO_Search_Confused",
+            "Attitudes": [
+              "Hostile",
+              "Neutral"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "ReturnHome"
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Damage",
+                "Combat": true,
+                "TargetSlot": "LockedTarget"
+              },
+              {
+                "Type": "Target",
+                "TargetSlot": "LockedTarget",
+                "Range": {
+                  "Compute": "AbsoluteDetectionRange"
+                }
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "AddToHostileTargetMemory"
+            },
+            {
+              "Type": "State",
+              "State": "Combat"
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "Leash",
+            "Range": 2
+          },
+          "BodyMotion": {
+            "Type": "Seek",
+            "SlowDownDistance": 1,
+            "StopDistance": 0.5,
+            "RelativeSpeed": 1.5,
+            "UsePathfinder": true
+          }
+        },
+        {
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "Idle"
+            }
+          ]
         }
       ]
     }
   ],
-  "DeathInstruction": {
-    "Instructions": [
-      {
-        "Sensor": {
-          "Once": true,
-          "Type": "Any"
-        },
-        "Actions": [
-          {
-            "Type": "Attack",
-            "Attack": "Goblin_Lobber_Bomb_Death",
-            "SkipAiming": true,
-            "LineOfSight": false,
-            "AvoidFriendlyFire": false
-          }
-        ]
-      }
-    ]
-  },
-  "NameTranslationKey": {
-    "Compute": "NameTranslationKey"
-  },
   "InteractionInstruction": {
     "Instructions": [
       {

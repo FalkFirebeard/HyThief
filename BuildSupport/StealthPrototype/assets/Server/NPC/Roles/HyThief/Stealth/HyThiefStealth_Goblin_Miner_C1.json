@@ -1,17 +1,126 @@
 {
+  "Type": "Component",
   "Class": "Instruction",
-  "Content": {
-    "Continue": true,
-    "Sensor": {
-      "Type": "Any",
-      "Once": true
+  "Parameters": {
+    "ViewRange": {
+      "Description": "The view range of the NPC",
+      "TypeHint": "Double",
+      "Value": 12
     },
-    "Actions": [
+    "ViewSector": {
+      "Description": "The view sector of the NPC",
+      "TypeHint": "Double",
+      "Value": 160
+    },
+    "HearingRange": {
+      "Description": "The hearing range of the NPC",
+      "TypeHint": "String",
+      "Value": 8
+    },
+    "AbsoluteDetectionRange": {
+      "Description": "The absolute detection range of the NPC",
+      "TypeHint": "String",
+      "Value": 2
+    },
+    "_ImportStates": [
+      "OwnDetection",
+      "Beacon",
+      "DamageTarget",
+      "DamageNoTarget"
+    ],
+    "AlertedRange": {
+      "Description": "The range at which the NPC will detect an attacker",
+      "TypeHint": "Double",
+      "Value": 45
+    },
+    "BeaconMessage": {
+      "Description": "The beacon message the NPC will listen to",
+      "TypeHint": "String",
+      "Value": ""
+    },
+    "BeaconRange": {
+      "Description": "The range at which the NPC will detect alert beacons",
+      "TypeHint": "Double",
+      "Value": 45
+    },
+    "Attitudes": {
+      "Description": "Parameter Attitudes",
+      "TypeHint": "String",
+      "Value": [
+        "Hostile"
+      ]
+    }
+  },
+  "Content": {
+    "TreeMode": true,
+    "Sensor": {
+      "Type": "Any"
+    },
+    "Instructions": [
       {
-        "Type": "PlayAnimation",
-        "Slot": "Status"
+        "$Comment": "Listen for alert beacons",
+        "Enabled": {
+          "Compute": "!isEmpty(BeaconMessage)"
+        },
+        "Sensor": {
+          "Type": "Beacon",
+          "Message": {
+            "Compute": "BeaconMessage"
+          },
+          "Range": {
+            "Compute": "BeaconRange"
+          },
+          "TargetSlot": "LockedTarget"
+        },
+        "Actions": [
+          {
+            "Type": "ParentState",
+            "State": "Beacon"
+          }
+        ]
+      },
+      {
+        "Reference": "HyThiefStealth_Goblin_Miner_C2",
+        "Modify": {
+          "_ExportStates": [
+            "DamageTarget",
+            "DamageNoTarget"
+          ],
+          "AlertedRange": {
+            "Compute": "AlertedRange"
+          }
+        },
+        "$Comment": "Detect hostile damage"
+      },
+      {
+        "Sensor": {
+          "Reference": "HyThiefStealth_Goblin_Miner_C3",
+          "Modify": {
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            },
+            "HearingRange": {
+              "Compute": "HearingRange"
+            },
+            "AbsoluteDetectionRange": {
+              "Compute": "AbsoluteDetectionRange"
+            },
+            "Attitudes": {
+              "Compute": "Attitudes"
+            }
+          }
+        },
+        "Actions": [
+          {
+            "Type": "ParentState",
+            "State": "OwnDetection"
+          }
+        ],
+        "$Comment": "Detect hostile targets"
       }
     ]
-  },
-  "Type": "Component"
+  }
 }

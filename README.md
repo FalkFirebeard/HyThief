@@ -1,3 +1,5 @@
+> Current main branch: **1.3.1-container.11 development**, targeting Hytale **0.7.0**. Public Update 7 candidate **1.3.1** is isolated on `compatibility/1.3.1` from `v1.3.0`. Container development is not part of that public patch.
+
 # HyThief
 
 By Falk Interactive Studios. Crouch-based NPC pickpocketing for Hytale 0.6.8.

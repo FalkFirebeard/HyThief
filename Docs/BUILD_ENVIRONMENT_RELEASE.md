@@ -1,13 +1,11 @@
-# Building HyThief 1.3.0
+# Building HyThief development container.11
 
-Use a complete Java 25 JDK and the included Gradle 9.1.0 wrapper. Obtain the Hytale server dependency from your licensed stable 0.6.8 installation and place it at `.build/dependencies/HytaleServer-0.6.8.jar`.
+Use a complete Java 25 JDK and the included Gradle 9.1.0 wrapper. Copy the server from your licensed stable Hytale 0.7.0 installation to `.build/dependencies/HytaleServer-0.7.0.jar`.
 
-Required dependency SHA256: `dcd2956cc65b950084650eadd56b889cf51f7610c127c3daac1f74dc471fec97`.
+Required SHA256: `c3b5985b9e72727bf3bcf220923d7e61e78fe0f37cd1cd9c2a73f51e4f408ff8`.
 
-On Windows, run `./build.ps1 -JdkHome 'path/to/JDK25' clean build`. When no JDK path is supplied, the script expects `../../Toolchains/JDK25` relative to this project. The script restores its environment changes when it exits.
+Run `./build.ps1 -JdkHome 'E:/Hytale adjustments/Toolchains/JDK25' clean build`. The default JDK lookup expects a standard project layout; the isolated public worktree must supply the explicit JDK path. Output: `build/libs/HyThief-1.3.1-container.11.jar`; exact manifest server target `=0.7.0`. Native dependencies are compile-only and are not bundled.
 
-Output: `build/libs/HyThief-1.3.0.jar`. The source and generated manifest both identify version 1.3.0 and exact server target =0.6.8. The Hytale server dependency is compile-only and is not included in the output.
+The main checkout is ongoing container development. The public candidate is separately based on tag v1.3.0, branch compatibility/1.3.1. Do not publish a main-checkout container JAR as the public patch.
 
-All required Java sources, resources, native interaction generation inputs and stealth assets are included. Test worlds, backups, installed mods, raw logs and local dependency JARs are excluded from version control and the release JAR.
-
-The two existing inventory deprecation/removal warnings are recorded in the release validation document. They are not compilation failures for 0.6.8.
+The same two inventory removal warnings and Gradle deprecation notice remain. Test helpers, native server dependencies, worlds and backups are excluded from published JARs. Client testing is required before publishing 1.3.1.

@@ -127,10 +127,11 @@ final class DevContainerTestWorld implements AutoCloseable {
       for(var station:fixture.stations()) {
         var chunks=world.getChunkStore();var section=chunks.getChunkSectionReferenceAtBlock(station.x(),station.y(),station.z());
         if(section==null || !section.isValid())return; // Never force a packet to wait for unloaded terrain.
-        var type=world.getBlockType(station.x(),station.y(),station.z());
+        var blocks=chunks.getStore().getComponent(section,BlockSection.getComponentType());
+        var type=com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType.getAssetMap().getAsset(blocks.get(station.x(),station.y(),station.z()));
         if(!nativeChestState(type, station.block()) || !BlockEntity.declaresComponent(type,ItemContainerBlock.getComponentType()))throw new IllegalStateException("Unexpected live fixture block at "+station);
         var store=chunks.getStore();var components=store.ensureAndGetComponent(section,BlockComponentSection.getComponentType());
-        var blocks=store.getComponent(section,BlockSection.getComponentType());
+
         var block=BlockEntity.ensureBlockEntity(store,section,components,station.x(),station.y(),station.z(),type,blocks.getRotationIndex(station.x(),station.y(),station.z()));
         var container=store.getComponent(block,ItemContainerBlock.getComponentType());
         entries.add(new OwnedContainerRegistry.Entry(new OwnedContainerRegistry.Key(world.getWorldConfig().getUuid(),station.x(),station.y(),station.z()),container.getItemContainer()));

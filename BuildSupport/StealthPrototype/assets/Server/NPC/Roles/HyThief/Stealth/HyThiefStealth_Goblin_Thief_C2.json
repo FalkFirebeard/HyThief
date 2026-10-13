@@ -12,21 +12,9 @@
   },
   "Content": {
     "Sensor": {
-      "Type": "And",
-      "Sensors": [
-        {
-          "Type": "Not",
-          "Sensor": {
-            "Type": "Damage",
-            "Friendly": true
-          }
-        },
-        {
-          "Type": "Damage",
-          "Combat": true,
-          "TargetSlot": "LockedTarget"
-        }
-      ]
+      "Type": "Damage",
+      "Combat": true,
+      "TargetSlot": "LockedTarget"
     },
     "Instructions": [
       {

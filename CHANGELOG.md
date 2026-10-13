@@ -1,3 +1,7 @@
+## Development compatibility — Hytale 0.7.0
+
+Container.11 is preserved and updated for 0.7.0. Public compatibility candidate 1.3.1 is isolated from v1.3.0; see Docs/UPDATE_0_7_0_COMPATIBILITY_AUDIT.md. No public container release is approved.
+
 # HyThief 1.3.0
 
 Falk Interactive Studios
