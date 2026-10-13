@@ -1,0 +1,40 @@
+{
+  "publicCompatibilityParity": true,
+  "publicGameplayAssetsSemanticallyMatch": true,
+  "byteDifferenceCountIncludingLineEndings": 1546,
+  "publicSharedClassDifferences": [
+    "com/local/pickpocket/HyThiefGuardAlert.class",
+    "com/local/pickpocket/PickpocketPlugin$ItemEntry.class",
+    "com/local/pickpocket/PickpocketPlugin$PickpocketAttemptResult.class",
+    "com/local/pickpocket/PickpocketPlugin$PickpocketSessionKey.class",
+    "com/local/pickpocket/PickpocketPlugin$SessionCarryover.class",
+    "com/local/pickpocket/PickpocketPlugin$SessionCarryoverState.class",
+    "com/local/pickpocket/PickpocketPlugin$TheftSummary.class",
+    "com/local/pickpocket/PickpocketPlugin.class",
+    "manifest.json"
+  ],
+  "noGameplaySourceChanges": true,
+  "developmentSHA256": "f8ca7abd0a53298da8e1e3a1ac8f982caf044d3d4d88f08e160a5f841995e029",
+  "byteIdenticalToPreviousDevelopment": true,
+  "nativeModesPassed": [
+    "Kweebec",
+    "Feran",
+    "LocalBoth",
+    "LocalKweebec",
+    "LocalFeran"
+  ],
+  "runtimeFixtureChangeOnly": "ServerVersion =0.6.8 -> =0.7.0",
+  "generalWorldsUnchanged": true,
+  "containerWorldDataUnchanged": true,
+  "historicalRetiredRoleOverridesExcluded": [
+    "Goblin_Hermit",
+    "Goblin_Lobber_Patrol",
+    "Goblin_Miner_Patrol",
+    "Goblin_Ogre",
+    "Goblin_Scavenger",
+    "Goblin_Scavenger_Battleaxe",
+    "Goblin_Scavenger_Sword",
+    "Goblin_Scrapper_Patrol",
+    "Goblin_Thief_Patrol"
+  ]
+}

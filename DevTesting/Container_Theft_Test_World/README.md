@@ -1,6 +1,6 @@
 # HyThief Container Theft Test World - mirrored color field
 
-Gameplay remains **HyThief-1.3.1-container.11.jar**, target =0.6.8. The fixture changed; no gameplay build or rules changed.
+Gameplay remains **HyThief-1.3.1-container.11.jar**, target =0.7.0. The fixture changed; no gameplay build or rules changed.
 
 Use the colored floor pad immediately in front of each identical native chest:
 
