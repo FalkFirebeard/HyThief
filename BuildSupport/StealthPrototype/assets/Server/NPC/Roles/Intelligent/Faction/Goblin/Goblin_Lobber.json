@@ -1,0 +1,442 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Goblin_Lobber",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Goblin_Lobber.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "LeashDistance": {
+      "Value": 30,
+      "Description": "Distance from the leash point before the NPC wants to return home"
+    },
+    "LeashMinPlayerDistance": {
+      "Value": 6,
+      "Description": "The NPC will not give up the chase while the player is closer than this"
+    },
+    "LeashTimer": {
+      "Value": [
+        4,
+        4
+      ],
+      "Description": "Seconds beyond leash range, without damage or a close player, before the NPC returns home"
+    },
+    "HardLeashDistance": {
+      "Value": 60,
+      "Description": "Absolute maximum distance from the leash point before the NPC returns home unconditionally"
+    },
+    "Appearance": {
+      "Value": "Goblin_Lobber",
+      "Description": "Model to be used"
+    },
+    "MaxHealth": {
+      "Value": 80,
+      "Description": "Max health for the NPC"
+    },
+    "MaxSpeed": {
+      "Description": "The NPC's max speed",
+      "TypeHint": "Double",
+      "Value": 3
+    },
+    "ViewRange": {
+      "Value": 16,
+      "Description": "The view range of the NPC",
+      "TypeHint": "Double"
+    },
+    "ViewSector": {
+      "Value": 160,
+      "Description": "The view sector of the NPC",
+      "TypeHint": "Double"
+    },
+    "HearingRange": {
+      "Value": 8,
+      "Description": "The hearing range of the NPC",
+      "TypeHint": "Double"
+    },
+    "AbsoluteDetectionRange": {
+      "Value": 2,
+      "Description": "The range at which an entity is guaranteed to be detected",
+      "TypeHint": "Double"
+    },
+    "WanderRadius": {
+      "Description": "The wander radius of the NPC",
+      "Value": 5
+    },
+    "IdleWalkWeight": {
+      "Description": "The weight of the walk behavior",
+      "Value": 15
+    },
+    "IdleRunWeight": {
+      "Description": "The weight of the run behavior",
+      "Value": 0
+    },
+    "IdleAnimationWeight": {
+      "Description": "The weight of the animation behavior (with the NPC standing still)",
+      "Value": 20
+    },
+    "IdleFlavorWeight": {
+      "Description": "The weight of the idle flavor state behavior",
+      "Value": 20
+    },
+    "IdleEatWeight": {
+      "Description": "Parameter IdleEatWeight",
+      "TypeHint": "Double",
+      "Value": 5
+    },
+    "FoodItems": {
+      "Description": "Parameter FoodItems",
+      "TypeHint": "String",
+      "Value": [
+        "Food*"
+      ]
+    },
+    "JuggleFailChance": {
+      "Description": "The change a juggle will fail and drop a bomb",
+      "TypeHint": "Double",
+      "Value": 50
+    },
+    "JuggleFailInteraction": {
+      "Description": "The interaction that runs when a juggle fails",
+      "TypeHint": "String",
+      "Value": "Root_NPC_Goblin_Lobber_Juggle_Drop"
+    },
+    "JuggleAlertGroups": {
+      "Description": "The NPC groups that will spectate and flee from a dropped juggle bomb",
+      "TypeHint": "String",
+      "Value": [
+        "Goblin_Scrapper"
+      ]
+    },
+    "JuggleAlertRange": {
+      "Description": "How far the NPC will notify others of a juggle",
+      "TypeHint": "Double",
+      "Value": 8
+    },
+    "AlertedRange": {
+      "Value": 25,
+      "Description": "The alerted range of the NPC",
+      "TypeHint": "Double"
+    },
+    "VoidFleeGoblinNearbyCount": {
+      "Value": 1,
+      "Description": "The maximum nearby Goblin count that causes this Goblin to flee"
+    },
+    "VoidFleeGoblinNearbyRange": {
+      "Value": [
+        0,
+        10
+      ],
+      "Description": "The range used to count nearby Goblins"
+    },
+    "VoidFleeDistance": {
+      "Description": "How far a Goblin will flee from nearby Void creatures. This should be higher than any detection range to avoid state loops",
+      "TypeHint": "Double",
+      "Value": 20
+    },
+    "VoidFleeDelay": {
+      "Description": "How long a Goblin will wait before starting to flee from Void creatures",
+      "Value": [
+        0.5,
+        1
+      ]
+    },
+    "AlertedTimeout": {
+      "Value": [
+        1,
+        1
+      ],
+      "Description": "The time range after which an NPC will transition from alerted to combat"
+    },
+    "CombatMessageRange": {
+      "Description": "The range at which the NPC will send/receive combat messages",
+      "TypeHint": "Double",
+      "Value": 30
+    },
+    "CombatMessageTargetGroups": {
+      "Value": [
+        "Goblin"
+      ],
+      "Description": "The NPC groups the combat message will be sent to",
+      "TypeHint": "String"
+    },
+    "CombatMessageAcceptChance": {
+      "Value": 100,
+      "Description": "The chance an NPC will respond to a combat beacon",
+      "TypeHint": "Double"
+    },
+    "Attack": {
+      "Value": "Root_NPC_Goblin_Lobber_Attack",
+      "Description": "The attack interaction the NPC will use",
+      "TypeHint": "String"
+    },
+    "AttackDistance": {
+      "Value": 12,
+      "Description": "The distance at which the NPC will perform the attack interaction",
+      "TypeHint": "Double"
+    },
+    "AttackPauseRange": {
+      "Value": [
+        2,
+        4
+      ],
+      "Description": "The time delay between consecutive attacks"
+    },
+    "CombatMovingRelativeSpeed": {
+      "Description": "The relative speed at which the NPC will perform combat movement (strafing, etc)",
+      "TypeHint": "Double",
+      "Value": 0.7
+    },
+    "CombatStrafingDurationRange": {
+      "Description": "The duration of strafing motions",
+      "TypeHint": "Double",
+      "Value": [
+        1,
+        1
+      ]
+    },
+    "CombatStrafingFrequencyRange": {
+      "Description": "The frequency of strafing motions",
+      "Value": [
+        7,
+        15
+      ]
+    },
+    "CombatTauntAnimation": {
+      "Description": "The animation that the NPC will play to taunt the target",
+      "TypeHint": "String",
+      "Value": "Taunt"
+    },
+    "CombatTauntFrequency": {
+      "Description": "How often the NPC will taunt the target. This timer only counts down when the target is beyond AttackRange / 2",
+      "Value": [
+        5,
+        10
+      ]
+    },
+    "ConfusedTimeRange": {
+      "Value": [
+        1,
+        2
+      ],
+      "Description": "The time during which the NPC will be confused"
+    },
+    "SearchTimeRange": {
+      "Value": [
+        15,
+        20
+      ],
+      "Description": "The time during which the NPC will search for a target"
+    },
+    "IsMemory": {
+      "Value": true,
+      "Description": "Parameter IsMemory",
+      "TypeHint": "Boolean"
+    },
+    "MemoriesCategory": {
+      "Value": "Goblin",
+      "Description": "Parameter MemoriesCategory",
+      "TypeHint": "String"
+    },
+    "MemoriesNameOverride": {
+      "Value": "Goblin_Lobber",
+      "Description": "Parameter MemoriesNameOverride",
+      "TypeHint": "String"
+    },
+    "MemoriesUnlockedBy": {
+      "Value": "Kill",
+      "Description": "How the player records the memory, either Proximity or Kill.",
+      "TypeHint": "String"
+    },
+    "MemoriesKillRange": {
+      "Value": 0,
+      "Description": "Radius in blocks in which the memory is recorded when the NPC dies. 0 uses the server default.",
+      "TypeHint": "Double"
+    },
+    "ScoldGroups": {
+      "Description": "The groups that will listen (and react) to scolding by this NPC",
+      "TypeHint": "String",
+      "Value": [
+        "Goblin_Scrapper",
+        "Goblin_Miner"
+      ]
+    },
+    "KnockbackScale": {
+      "Description": "Parameter KnockbackScale",
+      "TypeHint": "Double",
+      "Value": 0.3
+    },
+    "DropList": {
+      "Value": "Drop_Goblin_Lobber",
+      "Description": "Drop Items"
+    },
+    "AttitudeGroup": {
+      "Value": "Goblin",
+      "Description": "Attitude group the goblin belongs to.",
+      "TypeHint": "String"
+    },
+    "DisableDamageGroups": {
+      "Value": [
+        "Goblin"
+      ],
+      "Description": "Attitude groups whose damage this goblin ignores."
+    }
+  },
+  "Modify": {
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "LeashDistance": {
+      "Compute": "LeashDistance"
+    },
+    "LeashMinPlayerDistance": {
+      "Compute": "LeashMinPlayerDistance"
+    },
+    "LeashTimer": {
+      "Compute": "LeashTimer"
+    },
+    "HardLeashDistance": {
+      "Compute": "HardLeashDistance"
+    },
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
+    "MaxSpeed": {
+      "Compute": "MaxSpeed"
+    },
+    "ViewRange": {
+      "Compute": "ViewRange"
+    },
+    "ViewSector": {
+      "Compute": "ViewSector"
+    },
+    "HearingRange": {
+      "Compute": "HearingRange"
+    },
+    "AbsoluteDetectionRange": {
+      "Compute": "AbsoluteDetectionRange"
+    },
+    "WanderRadius": {
+      "Compute": "WanderRadius"
+    },
+    "IdleWalkWeight": {
+      "Compute": "IdleWalkWeight"
+    },
+    "IdleRunWeight": {
+      "Compute": "IdleRunWeight"
+    },
+    "IdleAnimationWeight": {
+      "Compute": "IdleAnimationWeight"
+    },
+    "IdleFlavorWeight": {
+      "Compute": "IdleFlavorWeight"
+    },
+    "IdleEatWeight": {
+      "Compute": "IdleEatWeight"
+    },
+    "FoodItems": {
+      "Compute": "FoodItems"
+    },
+    "JuggleFailChance": {
+      "Compute": "JuggleFailChance"
+    },
+    "JuggleFailInteraction": {
+      "Compute": "JuggleFailInteraction"
+    },
+    "JuggleAlertGroups": {
+      "Compute": "JuggleAlertGroups"
+    },
+    "JuggleAlertRange": {
+      "Compute": "JuggleAlertRange"
+    },
+    "AlertedRange": {
+      "Compute": "AlertedRange"
+    },
+    "VoidFleeGoblinNearbyCount": {
+      "Compute": "VoidFleeGoblinNearbyCount"
+    },
+    "VoidFleeGoblinNearbyRange": {
+      "Compute": "VoidFleeGoblinNearbyRange"
+    },
+    "VoidFleeDistance": {
+      "Compute": "VoidFleeDistance"
+    },
+    "VoidFleeDelay": {
+      "Compute": "VoidFleeDelay"
+    },
+    "AlertedTimeout": {
+      "Compute": "AlertedTimeout"
+    },
+    "CombatMessageRange": {
+      "Compute": "CombatMessageRange"
+    },
+    "CombatMessageTargetGroups": {
+      "Compute": "CombatMessageTargetGroups"
+    },
+    "CombatMessageAcceptChance": {
+      "Compute": "CombatMessageAcceptChance"
+    },
+    "Attack": {
+      "Compute": "Attack"
+    },
+    "AttackDistance": {
+      "Compute": "AttackDistance"
+    },
+    "AttackPauseRange": {
+      "Compute": "AttackPauseRange"
+    },
+    "CombatMovingRelativeSpeed": {
+      "Compute": "CombatMovingRelativeSpeed"
+    },
+    "CombatStrafingDurationRange": {
+      "Compute": "CombatStrafingDurationRange"
+    },
+    "CombatStrafingFrequencyRange": {
+      "Compute": "CombatStrafingFrequencyRange"
+    },
+    "CombatTauntAnimation": {
+      "Compute": "CombatTauntAnimation"
+    },
+    "CombatTauntFrequency": {
+      "Compute": "CombatTauntFrequency"
+    },
+    "ConfusedTimeRange": {
+      "Compute": "ConfusedTimeRange"
+    },
+    "SearchTimeRange": {
+      "Compute": "SearchTimeRange"
+    },
+    "IsMemory": {
+      "Compute": "IsMemory"
+    },
+    "MemoriesCategory": {
+      "Compute": "MemoriesCategory"
+    },
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
+    "MemoriesUnlockedBy": {
+      "Compute": "MemoriesUnlockedBy"
+    },
+    "MemoriesKillRange": {
+      "Compute": "MemoriesKillRange"
+    },
+    "ScoldGroups": {
+      "Compute": "ScoldGroups"
+    },
+    "KnockbackScale": {
+      "Compute": "KnockbackScale"
+    },
+    "DropList": {
+      "Compute": "DropList"
+    },
+    "AttitudeGroup": {
+      "Compute": "AttitudeGroup"
+    },
+    "DisableDamageGroups": {
+      "Compute": "DisableDamageGroups"
+    }
+  }
+}

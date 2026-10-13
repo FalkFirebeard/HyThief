@@ -7,11 +7,11 @@ plugins {
 }
 
 group = 'com.local'
-version = '1.3.0'
+version = '1.3.1'
 
-def stableVersion = '0.6.8'
+def stableVersion = '0.7.0'
 def serverJar = layout.projectDirectory.file(".build/dependencies/HytaleServer-${stableVersion}.jar")
-def serverSha256 = 'dcd2956cc65b950084650eadd56b889cf51f7610c127c3daac1f74dc471fec97'
+def serverSha256 = 'c3b5985b9e72727bf3bcf220923d7e61e78fe0f37cd1cd9c2a73f51e4f408ff8'
 
 java {
     toolchain {
@@ -81,6 +81,9 @@ def generateReleaseManifest = tasks.register('generateReleaseManifest') {
 def interactionSources = new JsonSlurper().parse(file('BuildSupport/interaction-sources.json'))
 def supportedMatrix = new JsonSlurper().parse(file('BuildSupport/supported-matrix.json'))
 def generatedRoleIds = []
+// Keep resolver entries for historical IDs; do not recreate roles removed by native 0.7.0.
+def retiredNativeRoles = new JsonSlurper().parse(file('BuildSupport/native-retired-0.7.0.json')).toSet()
+def refreshedNativeRoles = new JsonSlurper().parse(file('BuildSupport/native-refreshed-0.7.0.json')).toSet()
 def generateNativeInteractions = tasks.register('generateNativeInteractions') {
     def output = layout.buildDirectory.dir('generated/native-interactions')
     inputs.dir('BuildSupport')
@@ -126,7 +129,7 @@ def generateNativeInteractions = tasks.register('generateNativeInteractions') {
             done[id] = resultId
             return resultId
         }
-        supported.sort().each { compose(it) }
+        supported.findAll { !retiredNativeRoles.contains(it) && !refreshedNativeRoles.contains(it) }.sort().each { compose(it) }
         logger.lifecycle("Native Pickpocket composition: ${supported.size()} supported roles; ${done.size()} role/parent nodes")
     }
 }
@@ -149,10 +152,16 @@ tasks.named('processResources') {
             exclude interactionSources[id].AssetPath
         }
     }
-    from('BuildSupport/StealthPrototype/assets')
+    from('BuildSupport/StealthPrototype/assets') {
+        retiredNativeRoles.each { id ->
+            exclude interactionSources[id].AssetPath
+            exclude "Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_${id}.json"
+            exclude "Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_${id}_C*.json"
+        }
+    }
     // Copy unchanged supported source variants absent from generated output (typically Patrol/Wander).
     doLast {
-        supportedMatrix.each { row ->
+        supportedMatrix.findAll { !retiredNativeRoles.contains(it.Role) && !refreshedNativeRoles.contains(it.Role) }.each { row ->
             def target = new File(destinationDir, row.Asset)
             if (!target.isFile() && interactionSources[row.Role].Source.startsWith('Server/')) {
                 def source = file(interactionSources[row.Role].Source)

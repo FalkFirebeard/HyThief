@@ -1,0 +1,381 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefStealth_Goblin_Miner",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Goblin_Miner.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "LeashDistance": {
+      "Value": 30,
+      "Description": "Distance from the leash point before the NPC wants to return home"
+    },
+    "LeashMinPlayerDistance": {
+      "Value": 6,
+      "Description": "The NPC will not give up the chase while the player is closer than this"
+    },
+    "LeashTimer": {
+      "Value": [
+        4,
+        4
+      ],
+      "Description": "Seconds beyond leash range, without damage or a close player, before the NPC returns home"
+    },
+    "HardLeashDistance": {
+      "Value": 60,
+      "Description": "Absolute maximum distance from the leash point before the NPC returns home unconditionally"
+    },
+    "Appearance": {
+      "Value": "Goblin_Miner",
+      "Description": "Model to be used"
+    },
+    "MaxHealth": {
+      "Value": 140,
+      "Description": "Max health for the NPC"
+    },
+    "MaxSpeed": {
+      "Description": "The NPC's max speed",
+      "TypeHint": "Double",
+      "Value": 2
+    },
+    "ViewRange": {
+      "Value": 12,
+      "Description": "The view range of the NPC",
+      "TypeHint": "Double"
+    },
+    "ViewSector": {
+      "Value": 160,
+      "Description": "The view sector of the NPC",
+      "TypeHint": "Double"
+    },
+    "HearingRange": {
+      "Value": 8,
+      "Description": "The hearing range of the NPC",
+      "TypeHint": "Double"
+    },
+    "AbsoluteDetectionRange": {
+      "Value": 2,
+      "Description": "The range at which an entity is guaranteed to be detected",
+      "TypeHint": "Double"
+    },
+    "WanderRadius": {
+      "Description": "The wander radius of the NPC",
+      "Value": 5
+    },
+    "IdleWalkWeight": {
+      "Description": "The weight of the walk behavior",
+      "Value": 10
+    },
+    "IdleRunWeight": {
+      "Description": "The weight of the run behavior",
+      "Value": 0
+    },
+    "IdleAnimationWeight": {
+      "Description": "The weight of the animation behavior (with the NPC standing still)",
+      "Value": 20
+    },
+    "IdleEatWeight": {
+      "Description": "The weight of the idle flavour state behavior",
+      "Value": 5
+    },
+    "FoodItems": {
+      "Description": "Parameter Like",
+      "TypeHint": "String",
+      "Value": [
+        "Food*"
+      ]
+    },
+    "MineBlockset": {
+      "Description": "The set of blocks this NPC will mine (detected with a block sensor)",
+      "TypeHint": "String",
+      "Value": "Goblin_Miner_Flavor_Mine"
+    },
+    "MineBlocksetRay": {
+      "Description": "The set of blocks this NPC will mine (detected with a search ray)",
+      "TypeHint": "String",
+      "Value": "Goblin_Miner_Flavor_Mine_Ray"
+    },
+    "MineFrequency": {
+      "Description": "The time range before the NPC decides to mine",
+      "Value": [
+        15,
+        30
+      ]
+    },
+    "MineDuration": {
+      "Description": "How long the mining behaviour will last, in seconds",
+      "Value": [
+        90,
+        120
+      ]
+    },
+    "SleepFrequency": {
+      "Description": "The time range before the NPC decides to go to sleep",
+      "Value": [
+        15,
+        30
+      ]
+    },
+    "SleepDuration": {
+      "Description": "The duration of the sleep state",
+      "Value": [
+        30,
+        45
+      ]
+    },
+    "SleepBeaconTargetGroups": {
+      "Description": "The NPC group the sleep beacon is sent to",
+      "TypeHint": "String",
+      "Value": [
+        "Goblin_Lobber"
+      ]
+    },
+    "SleepBeaconRange": {
+      "Description": "The distance at which the sleep beacon will be sent",
+      "TypeHint": "Double",
+      "Value": 20
+    },
+    "AlertedRange": {
+      "Value": 20,
+      "Description": "The alerted range of the NPC",
+      "TypeHint": "Double"
+    },
+    "AlertedTimeout": {
+      "Value": [
+        1,
+        1.5
+      ],
+      "Description": "The time range after which an NPC will transition from alerted to combat"
+    },
+    "CombatMessageTargetGroups": {
+      "Value": [
+        "Goblin"
+      ],
+      "Description": "The NPC groups the combat message will be sent to",
+      "TypeHint": "String"
+    },
+    "CombatMessageAcceptChance": {
+      "Value": 80,
+      "Description": "The chance an NPC will respond to a combat beacon",
+      "TypeHint": "Double"
+    },
+    "Attack": {
+      "Value": "Root_NPC_Goblin_Miner_Attack",
+      "Description": "The attack interaction the NPC will use",
+      "TypeHint": "String"
+    },
+    "AttackDistance": {
+      "Value": 3,
+      "Description": "The distance at which the NPC will perform the attack interaction",
+      "TypeHint": "Double"
+    },
+    "AttackPauseRange": {
+      "Value": [
+        1.5,
+        2
+      ],
+      "Description": "The time delay between consecutive attacks"
+    },
+    "CombatBehaviorDistance": {
+      "Description": "The distance at which the NPC will switch to combat-oriented movement",
+      "TypeHint": "Double",
+      "Value": 6
+    },
+    "ConfusedTimeRange": {
+      "Value": [
+        1,
+        2
+      ],
+      "Description": "The time during which the NPC will be confused"
+    },
+    "SearchTimeRange": {
+      "Value": [
+        10,
+        14
+      ],
+      "Description": "The time during which the NPC will search for a target"
+    },
+    "IsMemory": {
+      "Value": true,
+      "Description": "Parameter IsMemory",
+      "TypeHint": "Boolean"
+    },
+    "MemoriesCategory": {
+      "Value": "Goblin",
+      "Description": "Parameter MemoriesCategory",
+      "TypeHint": "String"
+    },
+    "MemoriesNameOverride": {
+      "Value": "Goblin_Miner",
+      "Description": "Parameter MemoriesNameOverride",
+      "TypeHint": "String"
+    },
+    "MemoriesUnlockedBy": {
+      "Value": "Kill",
+      "Description": "How the player records the memory, either Proximity or Kill.",
+      "TypeHint": "String"
+    },
+    "MemoriesKillRange": {
+      "Value": 0,
+      "Description": "Radius in blocks in which the memory is recorded when the NPC dies. 0 uses the server default.",
+      "TypeHint": "Double"
+    },
+    "KnockbackScale": {
+      "Description": "Parameter KnockbackScale",
+      "TypeHint": "Double",
+      "Value": 0.2
+    },
+    "DropList": {
+      "Value": "Drop_Goblin_Miner",
+      "Description": "Drop Items"
+    },
+    "AttitudeGroup": {
+      "Value": "Goblin_Brave",
+      "Description": "Attitude group the goblin belongs to.",
+      "TypeHint": "String"
+    },
+    "DisableDamageGroups": {
+      "Value": [
+        "Goblin"
+      ],
+      "Description": "Attitude groups whose damage this goblin ignores."
+    }
+  },
+  "Modify": {
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "LeashDistance": {
+      "Compute": "LeashDistance"
+    },
+    "LeashMinPlayerDistance": {
+      "Compute": "LeashMinPlayerDistance"
+    },
+    "LeashTimer": {
+      "Compute": "LeashTimer"
+    },
+    "HardLeashDistance": {
+      "Compute": "HardLeashDistance"
+    },
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
+    "MaxSpeed": {
+      "Compute": "MaxSpeed"
+    },
+    "ViewRange": {
+      "Compute": "ViewRange"
+    },
+    "ViewSector": {
+      "Compute": "ViewSector"
+    },
+    "HearingRange": {
+      "Compute": "HearingRange"
+    },
+    "AbsoluteDetectionRange": {
+      "Compute": "AbsoluteDetectionRange"
+    },
+    "WanderRadius": {
+      "Compute": "WanderRadius"
+    },
+    "IdleWalkWeight": {
+      "Compute": "IdleWalkWeight"
+    },
+    "IdleRunWeight": {
+      "Compute": "IdleRunWeight"
+    },
+    "IdleAnimationWeight": {
+      "Compute": "IdleAnimationWeight"
+    },
+    "IdleEatWeight": {
+      "Compute": "IdleEatWeight"
+    },
+    "FoodItems": {
+      "Compute": "FoodItems"
+    },
+    "MineBlockset": {
+      "Compute": "MineBlockset"
+    },
+    "MineBlocksetRay": {
+      "Compute": "MineBlocksetRay"
+    },
+    "MineFrequency": {
+      "Compute": "MineFrequency"
+    },
+    "MineDuration": {
+      "Compute": "MineDuration"
+    },
+    "SleepFrequency": {
+      "Compute": "SleepFrequency"
+    },
+    "SleepDuration": {
+      "Compute": "SleepDuration"
+    },
+    "SleepBeaconTargetGroups": {
+      "Compute": "SleepBeaconTargetGroups"
+    },
+    "SleepBeaconRange": {
+      "Compute": "SleepBeaconRange"
+    },
+    "AlertedRange": {
+      "Compute": "AlertedRange"
+    },
+    "AlertedTimeout": {
+      "Compute": "AlertedTimeout"
+    },
+    "CombatMessageTargetGroups": {
+      "Compute": "CombatMessageTargetGroups"
+    },
+    "CombatMessageAcceptChance": {
+      "Compute": "CombatMessageAcceptChance"
+    },
+    "Attack": {
+      "Compute": "Attack"
+    },
+    "AttackDistance": {
+      "Compute": "AttackDistance"
+    },
+    "AttackPauseRange": {
+      "Compute": "AttackPauseRange"
+    },
+    "CombatBehaviorDistance": {
+      "Compute": "CombatBehaviorDistance"
+    },
+    "ConfusedTimeRange": {
+      "Compute": "ConfusedTimeRange"
+    },
+    "SearchTimeRange": {
+      "Compute": "SearchTimeRange"
+    },
+    "IsMemory": {
+      "Compute": "IsMemory"
+    },
+    "MemoriesCategory": {
+      "Compute": "MemoriesCategory"
+    },
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
+    "MemoriesUnlockedBy": {
+      "Compute": "MemoriesUnlockedBy"
+    },
+    "MemoriesKillRange": {
+      "Compute": "MemoriesKillRange"
+    },
+    "KnockbackScale": {
+      "Compute": "KnockbackScale"
+    },
+    "DropList": {
+      "Compute": "DropList"
+    },
+    "AttitudeGroup": {
+      "Compute": "AttitudeGroup"
+    },
+    "DisableDamageGroups": {
+      "Compute": "DisableDamageGroups"
+    }
+  }
+}

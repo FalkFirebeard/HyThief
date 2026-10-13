@@ -1,5 +1,5 @@
 {
-  "recordedDate": "2026-10-04",
+  "recordedDate": "2026-10-12",
   "jdk": {
     "vendor": "Eclipse Temurin",
     "version": "25.0.4.1+1",
@@ -13,12 +13,12 @@
     "sha256": "a17ddd85a26b6a7f5ddb71ff8b05fc5104c0202c6e64782429790c933686c806"
   },
   "hytale": {
-    "version": "0.6.8",
+    "version": "0.7.0",
     "patchline": "release",
-    "revision": "d2feeb3997f2efc9b4fe23282a3ece38f0618047",
-    "dependency": ".build/dependencies/HytaleServer-0.6.8.jar",
-    "sha256": "dcd2956cc65b950084650eadd56b889cf51f7610c127c3daac1f74dc471fec97",
-    "origin": "Installed release server; matches official stable Maven metadata and documentation"
+    "dependency": ".build/dependencies/HytaleServer-0.7.0.jar",
+    "sha256": "c3b5985b9e72727bf3bcf220923d7e61e78fe0f37cd1cd9c2a73f51e4f408ff8",
+    "origin": "Installed release server, java -jar --version confirms 0.7.0",
+    "revision": "648ebf375a034beabf119d7d790cd11d4f665ff4"
   },
   "baselineJar": {
     "path": "HyThief_v1.2.jar",

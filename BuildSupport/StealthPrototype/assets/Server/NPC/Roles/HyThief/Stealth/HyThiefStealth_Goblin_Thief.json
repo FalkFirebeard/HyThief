@@ -1,70 +1,201 @@
 {
   "Type": "Abstract",
-  "StartState": "Idle",
-  "DefaultNPCAttitude": "Ignore",
-  "DefaultPlayerAttitude": "Hostile",
   "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Goblin_Thief.name",
+      "Description": "Translation key for NPC name display"
+    },
     "Appearance": {
       "Value": "Goblin_Thief",
       "Description": "Model to be used"
     },
+    "MaxHealth": {
+      "Value": 30,
+      "Description": "Max health for the NPC"
+    },
+    "MaxSpeed": {
+      "Description": "The max speed of the NPC",
+      "TypeHint": "Double",
+      "Value": 7
+    },
     "ViewRange": {
-      "Value": 25,
-      "Description": "View range"
+      "Value": 12,
+      "Description": "The view range of the NPC",
+      "TypeHint": "Double"
     },
     "ViewSector": {
-      "Value": 180,
-      "Description": "View sector"
+      "Value": 160,
+      "Description": "The view sector of the NPC",
+      "TypeHint": "Double"
     },
     "HearingRange": {
-      "Value": 12,
-      "Description": "Hearing range"
+      "Value": 8,
+      "Description": "The hearing range of the NPC",
+      "TypeHint": "Double"
     },
-    "SmellRange": {
-      "Value": 12,
-      "Description": "Smell range"
+    "AbsoluteDetectionRange": {
+      "Value": 2,
+      "Description": "The range at which an entity is guaranteed to be detected",
+      "TypeHint": "Double"
+    },
+    "WanderRadius": {
+      "Description": "The wander radius of the NPC",
+      "Value": 5
+    },
+    "IdleWalkWeight": {
+      "Description": "The weight of the walk behavior",
+      "Value": 10
+    },
+    "IdleRunWeight": {
+      "Description": "The weight of the run behavior",
+      "Value": 0
+    },
+    "IdleAnimationWeight": {
+      "Description": "The weight of the animation behavior (with the NPC standing still)",
+      "Value": 20
+    },
+    "DigFrequency": {
+      "Description": "How often the NPC will dig up trash piles",
+      "Value": [
+        8,
+        30
+      ]
+    },
+    "DigBlockset": {
+      "Description": "The set of blocks this NPC will dig up",
+      "TypeHint": "String",
+      "Value": "Goblin_Scrapper_Flavor_Dig"
     },
     "AlertedRange": {
       "Value": 30,
-      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+      "Description": "The alerted range of the NPC",
+      "TypeHint": "Double"
     },
-    "AttitudeGroup": {
-      "Value": "Goblin",
-      "Description": "This NPCs attitude group"
+    "AlertedTimeout": {
+      "Value": [
+        1,
+        1.5
+      ],
+      "Description": "The time range after which an NPC will transition from alerted to combat"
     },
-    "DisableDamageGroups": {
+    "CombatMessageTargetGroups": {
       "Value": [
         "Goblin"
       ],
-      "Description": "Groups not to take damage from"
+      "Description": "The NPC groups the combat message will be sent to",
+      "TypeHint": "String"
     },
-    "Despawn": {
-      "Value": false,
-      "Description": "Should the Thief despawn once disengaged"
+    "CombatMessageFrequency": {
+      "Description": "The frequency at which combat alert messages will be sent",
+      "Value": [
+        4,
+        8
+      ]
     },
-    "MaxHealth": {
-      "Value": 38,
-      "Description": "Max health for the NPC"
+    "FleeDistance": {
+      "Description": "The distance to which the NPC will flee when faced with a hostile target",
+      "TypeHint": "Double",
+      "Value": 20
+    },
+    "FleeSeekGoblinGroups": {
+      "Description": "The Goblin groups that will be warned and sought by this NPC",
+      "TypeHint": "String",
+      "Value": [
+        "Goblin_Thief_Seek"
+      ]
+    },
+    "FleeSeekGoblinDistance": {
+      "Description": "If there are friendly goblins at this distance, seek them instead of fleeing the pursuer",
+      "TypeHint": "String",
+      "Value": 40
+    },
+    "FleeCowerMaintainDistance": {
+      "Description": "The distance cowering Goblins will maintain from the target",
+      "TypeHint": "Double",
+      "Value": 6
+    },
+    "FleeTimeoutDuration": {
+      "Description": "The time range after which a fleeing NPC will timeout to idle, as long as the pursuer is at a safe distance",
+      "Value": [
+        5,
+        8
+      ]
+    },
+    "FleeTripFrequency": {
+      "Description": "How often the NPC trips and falls while being chased",
+      "Value": [
+        10,
+        18
+      ]
+    },
+    "FleeTripDropList": {
+      "Description": "The drop list that is run when the NPC trips and falls",
+      "TypeHint": "String",
+      "Value": "Drop_Goblin_Thief_Fall"
+    },
+    "ConfusedTimeRange": {
+      "Value": [
+        1,
+        2
+      ],
+      "Description": "The time during which the NPC will be confused"
+    },
+    "SearchTimeRange": {
+      "Value": [
+        10,
+        14
+      ],
+      "Description": "The time during which the NPC will search for a target"
     },
     "IsMemory": {
       "Value": true,
-      "Description": "Defines if the NPC is a memory"
+      "Description": "Parameter IsMemory",
+      "TypeHint": "Boolean"
     },
     "MemoriesCategory": {
       "Value": "Goblin",
-      "Description": "Defines the category of the memory"
+      "Description": "Parameter MemoriesCategory",
+      "TypeHint": "String"
     },
     "MemoriesNameOverride": {
       "Value": "Goblin_Thief",
-      "Description": "Overrides the memory name if set"
+      "Description": "Parameter MemoriesNameOverride",
+      "TypeHint": "String"
     },
-    "NameTranslationKey": {
-      "Value": "server.npcRoles.Goblin_Thief.name",
-      "Description": "Translation key for NPC name display"
+    "MemoriesUnlockedBy": {
+      "Value": "Kill",
+      "Description": "How the player records the memory, either Proximity or Kill.",
+      "TypeHint": "String"
+    },
+    "MemoriesKillRange": {
+      "Value": 0,
+      "Description": "Radius in blocks in which the memory is recorded when the NPC dies. 0 uses the server default.",
+      "TypeHint": "Double"
+    },
+    "KnockbackScale": {
+      "Description": "Parameter KnockbackScale",
+      "TypeHint": "Double",
+      "Value": 0.5
     }
   },
+  "Appearance": {
+    "Compute": "Appearance"
+  },
+  "ApplySeparation": true,
+  "AttitudeGroup": "Goblin",
+  "Debug": "",
+  "DefaultNPCAttitude": "Ignore",
+  "DisableDamageGroups": [
+    "Goblin"
+  ],
   "IsMemory": {
     "Compute": "IsMemory"
+  },
+  "KnockbackScale": {
+    "Compute": "KnockbackScale"
+  },
+  "MaxHealth": {
+    "Compute": "MaxHealth"
   },
   "MemoriesCategory": {
     "Compute": "MemoriesCategory"
@@ -72,44 +203,30 @@
   "MemoriesNameOverride": {
     "Compute": "MemoriesNameOverride"
   },
-  "DropList": "Empty",
-  "Appearance": {
-    "Compute": "Appearance"
+  "MemoriesUnlockedBy": {
+    "Compute": "MemoriesUnlockedBy"
   },
-  "DisableDamageGroups": {
-    "Compute": "DisableDamageGroups"
+  "MemoriesKillRange": {
+    "Compute": "MemoriesKillRange"
   },
-  "AttitudeGroup": {
-    "Compute": "AttitudeGroup"
+  "NameTranslationKey": {
+    "Compute": "NameTranslationKey"
   },
-  "KnockbackScale": 0.5,
+  "SeparationDistance": 1.5,
+  "SeparationMode": "Push",
+  "StartState": "Idle",
   "MotionControllerList": [
     {
       "Type": "Walk",
-      "MaxWalkSpeed": 8,
+      "MaxWalkSpeed": {
+        "Compute": "MaxSpeed"
+      },
       "Gravity": 10,
       "MaxFallSpeed": 8,
       "Acceleration": 10
     }
   ],
   "StateTransitions": [
-    {
-      "States": [
-        {
-          "From": [],
-          "To": [
-            "Flee"
-          ]
-        }
-      ],
-      "Actions": [
-        {
-          "Type": "PlayAnimation",
-          "Slot": "Status",
-          "Animation": "Flee"
-        }
-      ]
-    },
     {
       "States": [
         {
@@ -125,365 +242,981 @@
           "Slot": "Status"
         }
       ]
+    },
+    {
+      "States": [
+        {
+          "From": [
+            "Flee"
+          ],
+          "To": [
+            "Idle"
+          ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "ReleaseTarget",
+          "TargetSlot": "LockedTarget"
+        },
+        {
+          "Type": "ReleaseTarget",
+          "TargetSlot": "SeekTarget"
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "From": [],
+          "To": [
+            "Alerted"
+          ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SpawnParticles",
+          "ParticleSystem": "Alerted",
+          "TargetNodeName": "Head"
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "From": [
+            "IdleDig"
+          ],
+          "To": []
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status"
+        }
+      ]
     }
   ],
-  "MaxHealth": {
-    "Compute": "MaxHealth"
-  },
   "Instructions": [
     {
+      "Sensor": {
+        "Type": "State",
+        "State": "Idle"
+      },
       "Instructions": [
         {
+          "$Comment": "Start the dig timer",
           "Sensor": {
-            "Type": "State",
-            "State": "Idle"
+            "Type": "Any",
+            "Once": true
           },
-          "Instructions": [
+          "Actions": [
             {
-              "Sensor": {
-                "Type": "State",
-                "State": ".Default"
+              "Type": "TimerStart",
+              "Name": "Timer_Dig",
+              "RestartValueRange": {
+                "Compute": "DigFrequency"
               },
-              "Instructions": [
-                {
-                  "Reference": "HyThiefStealth_Goblin_Thief_C1",
-                  "Modify": {
-                    "_ExportStates": [
-                      "Alerted",
-                      "Alerted",
-                      "Search",
-                      "Search"
-                    ],
-                    "ViewRange": {
-                      "Compute": "HearingRange"
-                    },
-                    "ViewSector": {
-                      "Compute": "ViewSector"
-                    },
-                    "HearingRange": {
-                      "Compute": "HearingRange"
-                    },
-                    "AlertedRange": {
-                      "Compute": "AlertedRange"
-                    }
-                  }
-                },
-                {
-                  "Reference": "HyThiefStealth_Goblin_Thief_C7",
-                  "Modify": {
-                    "_ExportStates": [
-                      "Idle.Peak"
-                    ],
-                    "Animation": "Dig",
-                    "Duration": [
-                      5,
-                      30
-                    ]
-                  }
-                }
-              ]
+              "StartValueRange": {
+                "Compute": "DigFrequency"
+              }
             },
             {
-              "Sensor": {
-                "$Comment": "The thiefs veiw radius changes in this state, creating a larger awareness",
-                "Type": "State",
-                "State": ".Peak"
-              },
-              "Instructions": [
-                {
-                  "Reference": "HyThiefStealth_Goblin_Thief_C10",
-                  "Modify": {
-                    "_ExportStates": [
-                      "Alerted",
-                      "Alerted",
-                      "Search",
-                      "Search"
-                    ],
-                    "ViewRange": {
-                      "Compute": "ViewRange"
-                    },
-                    "ViewSector": {
-                      "Compute": "ViewSector"
-                    },
-                    "HearingRange": {
-                      "Compute": "HearingRange"
-                    },
-                    "AlertedRange": {
-                      "Compute": "AlertedRange"
-                    }
-                  }
+              "Type": "TimerRestart",
+              "Name": "Timer_Dig"
+            }
+          ]
+        },
+        {
+          "$Comment": "Standard detection component: listen for beacons and check for nearby hostiles",
+          "Reference": "HyThiefStealth_Goblin_Thief_C1",
+          "Modify": {
+            "_ExportStates": [
+              "Alerted",
+              "Flee",
+              "Flee",
+              "Search"
+            ],
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            },
+            "HearingRange": {
+              "Compute": "HearingRange"
+            },
+            "AbsoluteDetectionRange": {
+              "Compute": "AbsoluteDetectionRange"
+            },
+            "AlertedRange": {
+              "Compute": "AlertedRange"
+            },
+            "BeaconMessage": "Goblin_Attack",
+            "Attitudes": [
+              "Hostile",
+              "Neutral"
+            ]
+          }
+        },
+        {
+          "$Comment": "Dig up nearby blocks to look for treasure",
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Block",
+                "Blocks": {
+                  "Compute": "DigBlockset"
                 },
-                {
-                  "Reference": "HyThiefStealth_Goblin_Thief_C16",
-                  "Modify": {
-                    "_ExportStates": [
-                      "Idle.Default"
-                    ],
-                    "Animation": "Search",
-                    "Duration": [
-                      1,
-                      2
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "Sensor": {
-            "Type": "State",
-            "State": "Alerted"
-          },
-          "Instructions": [
-            {
-              "Sensor": {
-                "Type": "State",
-                "State": "Alerted"
+                "Range": {
+                  "Compute": "ViewRange"
+                },
+                "Reserve": true
               },
-              "Instructions": [
-                {
-                  "Reference": "Component_Goblin_Instruction_Alerted",
-                  "Modify": {
-                    "_ExportStates": [
-                      "Idle",
-                      "Search",
-                      "Flee"
-                    ],
-                    "AlertedTime": [
-                      0.5,
-                      0.5
-                    ],
-                    "ViewRange": {
-                      "Compute": "ViewRange"
-                    },
-                    "ViewSector": {
-                      "Compute": "ViewSector"
-                    },
-                    "HearingRange": {
-                      "Compute": "HearingRange"
-                    }
-                  }
-                }
-              ]
+              {
+                "Type": "Timer",
+                "Name": "Timer_Dig",
+                "State": "Stopped"
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "StorePosition",
+              "Slot": "Dig_TargetPos"
+            },
+            {
+              "Type": "State",
+              "State": "IdleDig"
             }
           ]
         },
         {
+          "$Comment": "Idle behaviors",
+          "Reference": "HyThiefStealth_Goblin_Thief_C4",
+          "Modify": {
+            "_ExportStates": [
+              "Idle",
+              "Idle"
+            ],
+            "WeightWalk": {
+              "Compute": "IdleWalkWeight"
+            },
+            "WeightRun": {
+              "Compute": "IdleRunWeight"
+            },
+            "WeightAnimation": {
+              "Compute": "IdleAnimationWeight"
+            },
+            "WanderRadius": {
+              "Compute": "WanderRadius"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "IdleDig"
+      },
+      "Instructions": [
+        {
+          "$Comment": "Standard detection component: listen for beacons and check for nearby hostiles",
+          "Reference": "Component_Instruction_Generic_Detection",
+          "Modify": {
+            "_ExportStates": [
+              "Alerted",
+              "Flee",
+              "Flee",
+              "Search"
+            ],
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            },
+            "HearingRange": {
+              "Compute": "HearingRange"
+            },
+            "AbsoluteDetectionRange": {
+              "Compute": "AbsoluteDetectionRange"
+            },
+            "AlertedRange": {
+              "Compute": "AlertedRange"
+            },
+            "BeaconMessage": "Goblin_Attack"
+          }
+        },
+        {
+          "$Comment": "Always look at the target block",
+          "Continue": true,
           "Sensor": {
-            "Type": "State",
-            "State": "Flee"
+            "Type": "ReadPosition",
+            "Range": {
+              "Compute": "ViewRange"
+            },
+            "Slot": "Dig_TargetPos"
           },
-          "Instructions": [
+          "HeadMotion": {
+            "Type": "Watch"
+          }
+        },
+        {
+          "$Comment": "When close to the block, dig it",
+          "Sensor": {
+            "Type": "ReadPosition",
+            "Range": 1.5,
+            "Slot": "Dig_TargetPos"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
             {
-              "Continue": true,
+              "Type": "Random",
               "Actions": [
                 {
-                  "$Comment": "Alert the goblin fleet",
-                  "Type": "Beacon",
-                  "TargetGroups": [
-                    "Goblin"
-                  ],
-                  "Range": 5,
-                  "Message": "GoblinAlert"
+                  "Action": {
+                    "Type": "PlayAnimation",
+                    "Animation": "Dig",
+                    "Slot": "Status"
+                  },
+                  "Weight": 1
+                },
+                {
+                  "Action": {
+                    "Type": "PlayAnimation",
+                    "Animation": "DigFind",
+                    "Slot": "Status"
+                  },
+                  "Weight": 1
                 }
               ]
             },
             {
-              "Sensor": {
-                "Type": "And",
-                "Sensors": [
+              "Type": "Timeout",
+              "Delay": [
+                4,
+                7
+              ]
+            },
+            {
+              "Type": "TimerRestart",
+              "Name": "Timer_Dig"
+            },
+            {
+              "Type": "State",
+              "State": "Idle"
+            }
+          ]
+        },
+        {
+          "$Comment": "Seek the block",
+          "Sensor": {
+            "Type": "ReadPosition",
+            "Range": {
+              "Compute": "ViewRange"
+            },
+            "Slot": "Dig_TargetPos"
+          },
+          "BodyMotion": {
+            "Type": "Seek",
+            "RelativeSpeed": 1,
+            "SlowDownDistance": 2,
+            "StopDistance": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Alerted"
+      },
+      "Instructions": [
+        {
+          "$Comment": "Play alerted animation",
+          "Continue": true,
+          "Sensor": {
+            "Type": "Any",
+            "Once": true
+          },
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status",
+              "Animation": "Alerted"
+            }
+          ]
+        },
+        {
+          "$Comment": "Start fleeing if the target gets too close or the NPC is damaged",
+          "Sensor": {
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "Damage"
+              },
+              {
+                "Type": "Target",
+                "Range": {
+                  "Compute": "ViewRange * 0.5"
+                },
+                "Filters": [
                   {
-                    "Type": "Not",
-                    "Sensor": {
-                      "Type": "Player",
-                      "Range": {
-                        "Compute": "ViewRange"
-                      },
-                      "MinRange": 2,
-                      "Filters": [
-                        {
-                          "Type": "LineOfSight"
-                        },
-                        {
-                          "Type": "ViewSector",
-                          "ViewSector": 100
-                        }
-                      ]
-                    }
+                    "Type": "LineOfSight"
                   },
                   {
-                    "Type": "Mob",
-                    "Range": {
-                      "Compute": "ViewRange"
+                    "Type": "ViewSector",
+                    "ViewSector": {
+                      "Compute": "ViewSector"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "Flee"
+            }
+          ]
+        },
+        {
+          "$Comment": "Always watch the target",
+          "Sensor": {
+            "Type": "Target",
+            "Range": {
+              "Compute": "AlertedRange"
+            }
+          },
+          "HeadMotion": {
+            "Type": "Watch"
+          },
+          "Actions": [
+            {
+              "Type": "Timeout",
+              "Delay": {
+                "Compute": "AlertedTimeout"
+              },
+              "Action": {
+                "Type": "State",
+                "State": "Flee"
+              }
+            }
+          ],
+          "ActionsBlocking": true
+        },
+        {
+          "$Comment": "No target, go back to idling",
+          "Actions": [
+            {
+              "Type": "Timeout",
+              "Delay": [
+                2,
+                2
+              ],
+              "Action": {
+                "Type": "State",
+                "State": "Idle"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Flee"
+      },
+      "Instructions": [
+        {
+          "Reference": "Component_Instruction_Combat_Target_Swap",
+          "Modify": {
+            "NextTargetRangeView": {
+              "Compute": "ViewRange"
+            },
+            "NextTargetRangeHearing": {
+              "Compute": "HearingRange"
+            }
+          }
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": ".Timeout"
+          },
+          "Instructions": [
+            {
+              "$Comment": "Watch the target when detected",
+              "Continue": true,
+              "Sensor": {
+                "Reference": "Component_Sensor_Target_Sight_Or_Sound",
+                "Modify": {
+                  "HearingRange": {
+                    "Compute": "HearingRange"
+                  },
+                  "ViewRange": {
+                    "Compute": "ViewRange"
+                  },
+                  "ViewSector": {
+                    "Compute": "ViewSector"
+                  }
+                }
+              },
+              "Instructions": [
+                {
+                  "Sensor": {
+                    "Type": "Target"
+                  },
+                  "HeadMotion": {
+                    "Type": "Watch"
+                  }
+                }
+              ]
+            },
+            {
+              "$Comment": "If the target gets too close again, resume fleeing",
+              "Sensor": {
+                "Type": "Target",
+                "Filters": [
+                  {
+                    "Type": "LineOfSight"
+                  },
+                  {
+                    "Type": "ViewSector",
+                    "ViewSector": {
+                      "Compute": "ViewSector"
+                    }
+                  }
+                ],
+                "Range": {
+                  "Compute": "FleeDistance * 0.5"
+                }
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Status",
+                  "Animation": "Alerted"
+                },
+                {
+                  "Type": "Timeout",
+                  "Delay": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ]
+            },
+            {
+              "$Comment": "Timeout, do an animation and go back to idle",
+              "Sensor": {
+                "Type": "Target",
+                "Filters": [
+                  {
+                    "Type": "LineOfSight"
+                  }
+                ]
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "Timeout",
+                  "Delay": {
+                    "Compute": "FleeTimeoutDuration"
+                  }
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Status",
+                  "Animation": "Angry"
+                },
+                {
+                  "Type": "Timeout",
+                  "Delay": [
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "Type": "State",
+                  "State": "Idle"
+                }
+              ]
+            },
+            {
+              "$Comment": "No target, back to idle",
+              "Actions": [
+                {
+                  "Type": "Timeout"
+                },
+                {
+                  "Type": "Timeout",
+                  "Delay": [
+                    1,
+                    1
+                  ],
+                  "Action": {
+                    "Type": "State",
+                    "State": "Idle"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": ".Fall"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status",
+              "Animation": "Death"
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                0.5,
+                0.5
+              ]
+            },
+            {
+              "Type": "DropItem",
+              "DropList": {
+                "Compute": "FleeTripDropList"
+              },
+              "Once": true,
+              "ThrowSpeed": 10
+            },
+            {
+              "Type": "SpawnParticles",
+              "ParticleSystem": "Stunned",
+              "TargetNodeName": "Head"
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                1,
+                1
+              ]
+            },
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status"
+            },
+            {
+              "Type": "State",
+              "ClearState": false,
+              "State": ".Default"
+            }
+          ]
+        },
+        {
+          "$Comment": "Cower in fear while another Goblin engages the target",
+          "Sensor": {
+            "Type": "State",
+            "State": ".Cower"
+          },
+          "Instructions": [
+            {
+              "$Comment": "If the NPC is damaged, go back to fleeing",
+              "Sensor": {
+                "Type": "Damage"
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ]
+            },
+            {
+              "$Comment": "If there are no Goblins that can help nearby, go back to fleeing",
+              "Sensor": {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "Mob",
+                  "Range": {
+                    "Compute": "FleeCowerMaintainDistance * 2"
+                  },
+                  "Filters": [
+                    {
+                      "Type": "NPCGroup",
+                      "IncludeGroups": {
+                        "Compute": "FleeSeekGoblinGroups"
+                      }
                     },
-                    "MinRange": 2,
-                    "GetNPCs": true,
-                    "ExcludeOwnType": true,
-                    "Filters": [
-                      {
-                        "Type": "LineOfSight"
-                      },
-                      {
-                        "Type": "NPCGroup",
-                        "IncludeGroups": [
-                          "Goblin_No_Bosses"
+                    {
+                      "Type": "LineOfSight"
+                    }
+                  ]
+                }
+              },
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "Random",
+                  "Actions": [
+                    {
+                      "Action": {
+                        "Type": "Sequence",
+                        "Blocking": true,
+                        "Actions": [
+                          {
+                            "Type": "PlayAnimation",
+                            "Animation": "Scared",
+                            "Slot": "Status"
+                          },
+                          {
+                            "Type": "Timeout",
+                            "Delay": [
+                              1,
+                              3
+                            ]
+                          },
+                          {
+                            "Type": "PlayAnimation",
+                            "Slot": "Status"
+                          }
                         ]
                       },
-                      {
-                        "Type": "ViewSector",
-                        "ViewSector": 100
-                      }
-                    ]
+                      "Weight": 1
+                    },
+                    {
+                      "Action": {
+                        "Type": "Nothing"
+                      },
+                      "Weight": 1
+                    }
+                  ]
+                },
+                {
+                  "Type": "State",
+                  "State": ".Default"
+                }
+              ]
+            },
+            {
+              "$Comment": "Watch the combat target",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Target",
+                "Range": {
+                  "Compute": "FleeDistance"
+                },
+                "Filters": [
+                  {
+                    "Type": "LineOfSight"
                   }
                 ]
               },
               "BodyMotion": {
-                "Type": "Seek",
-                "SlowDownDistance": 0.5,
-                "StopDistance": 0.1,
-                "RelativeSpeed": 0.75
+                "Type": "MaintainDistance",
+                "DesiredDistanceRange": {
+                  "Compute": "makeRange(FleeCowerMaintainDistance)"
+                }
+              },
+              "HeadMotion": {
+                "Type": "Watch"
               }
             },
             {
+              "$Comment": "If the combat target leaves the flee distance, go back to idling",
               "Sensor": {
                 "Type": "Not",
                 "Sensor": {
                   "Type": "Target",
                   "Range": {
-                    "Compute": "ViewRange"
-                  }
+                    "Compute": "FleeDistance"
+                  },
+                  "TargetSlot": "LockedTarget",
+                  "Filters": []
                 }
               },
               "Actions": [
                 {
+                  "Type": "Timeout",
+                  "Action": {
+                    "Type": "State",
+                    "State": "Idle"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$Comment": "Periodically send an alert beacon to nearby friendlies",
+          "Continue": true,
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "Timeout",
+              "Delay": {
+                "Compute": "CombatMessageFrequency"
+              }
+            },
+            {
+              "Type": "SpawnParticles",
+              "ParticleSystem": "Alerted",
+              "TargetNodeName": "Head"
+            },
+            {
+              "Type": "Beacon",
+              "Message": "Goblin_Attack",
+              "Range": {
+                "Compute": "AlertedRange"
+              },
+              "SendTargetSlot": "LockedTarget",
+              "TargetGroups": {
+                "Compute": "CombatMessageTargetGroups"
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "Periodically trip and fall, losing items in the process",
+          "Continue": true,
+          "Sensor": {
+            "Type": "Self",
+            "Filters": [
+              {
+                "Type": "MovementState",
+                "State": "Running"
+              }
+            ]
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "Timeout",
+              "Delay": {
+                "Compute": "FleeTripFrequency"
+              }
+            },
+            {
+              "Type": "State",
+              "State": ".Fall"
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": ".Default"
+          },
+          "Instructions": [
+            {
+              "$Comment": "If there's a Goblin nearby, seek them",
+              "Sensor": {
+                "Type": "Mob",
+                "MinRange": {
+                  "Compute": "FleeSeekGoblinDistance * 0.25"
+                },
+                "Range": {
+                  "Compute": "FleeSeekGoblinDistance"
+                },
+                "Filters": [
+                  {
+                    "Type": "NPCGroup",
+                    "IncludeGroups": {
+                      "Compute": "FleeSeekGoblinGroups"
+                    }
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "SetMarkedTarget",
+                  "TargetSlot": "SeekTarget"
+                },
+                {
                   "Type": "State",
-                  "State": "Search"
+                  "State": ".SeekGoblin"
                 }
               ]
             },
             {
+              "$Comment": "Flee from the target until it's beyond FleeDistance",
               "Sensor": {
                 "Type": "Target",
                 "Range": {
-                  "Compute": "ViewRange"
+                  "Compute": "FleeDistance"
                 }
               },
               "BodyMotion": {
                 "Type": "Flee",
                 "SlowDownDistance": {
-                  "Compute": "ViewRange + 2"
+                  "Compute": "FleeDistance - 4"
                 },
                 "StopDistance": {
-                  "Compute": "ViewRange + 5"
-                },
-                "RelativeSpeed": 0.9
-              }
-            }
-          ]
-        },
-        {
-          "Sensor": {
-            "$Comment": "This could act more like a taunt behaviour with some nice animations",
-            "Type": "State",
-            "State": "Search"
-          },
-          "Instructions": [
-            {
-              "Reference": "Component_Goblin_Instruction_Pre_Checks",
-              "Modify": {
-                "_ExportStates": [
-                  "Flee",
-                  "Flee",
-                  "Flee",
-                  "Flee"
-                ],
-                "ViewRange": {
-                  "Compute": "HearingRange"
-                },
-                "ViewSector": {
-                  "Compute": "ViewSector"
-                },
-                "HearingRange": {
-                  "Compute": "HearingRange"
-                },
-                "AlertedRange": {
-                  "Compute": "AlertedRange"
+                  "Compute": "FleeDistance + 1"
                 }
               }
             },
             {
-              "Continue": true,
-              "Sensor": {
-                "Type": "Target",
-                "Range": {
-                  "Compute": "ViewRange + 10"
-                }
-              },
-              "HeadMotion": {
-                "Type": "Aim"
-              }
-            },
-            {
-              "Reference": "Component_Instruction_Play_Animation_In_State_For_Duration",
-              "Modify": {
-                "_ExportStates": [
-                  "Despawn"
-                ],
-                "Animation": "Search",
-                "Duration": [
-                  5,
-                  10
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "Enabled": {
-            "Compute": "Despawn"
-          },
-          "Sensor": {
-            "Type": "State",
-            "State": "Despawn"
-          },
-          "Instructions": [
-            {
+              "$Comment": "Go to the timeout state once the target has been fled from",
               "Actions": [
                 {
-                  "Type": "Despawn"
+                  "Type": "State",
+                  "State": ".Timeout"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": ".SeekGoblin"
+          },
+          "Instructions": [
+            {
+              "$Comment": "When close to the target Goblin, get them to attack the target",
+              "Sensor": {
+                "Type": "Target",
+                "Range": 5,
+                "TargetSlot": "SeekTarget",
+                "Filters": [
+                  {
+                    "Type": "LineOfSight"
+                  }
+                ]
+              },
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "HeadMotion": {
+                "Type": "Watch"
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "Timeout"
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Animation": "Angry",
+                  "Slot": "Status"
+                },
+                {
+                  "Type": "Notify",
+                  "Message": "Goblin_Attack"
+                },
+                {
+                  "Type": "Timeout",
+                  "Delay": [
+                    2,
+                    2
+                  ]
+                },
+                {
+                  "Type": "State",
+                  "State": ".Cower"
+                }
+              ]
+            },
+            {
+              "$Comment": "Seek a nearby Goblin",
+              "Sensor": {
+                "Type": "Target",
+                "TargetSlot": "SeekTarget",
+                "Filters": []
+              },
+              "BodyMotion": {
+                "Type": "Seek",
+                "SlowDownDistance": 6,
+                "StopDistance": 4
+              }
+            },
+            {
+              "$Comment": "If the target Goblin was lost, back to default",
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": ".Default"
                 }
               ]
             }
           ]
         }
       ]
+    },
+    {
+      "$TODO": "Maybe we can transfer some of this logic over to the Generic Search macro element instead since it's mostly duplicated from the Predator template.",
+      "Sensor": {
+        "Type": "State",
+        "State": "Search"
+      },
+      "Instructions": [
+        {
+          "Reference": "Component_Instruction_Generic_Search",
+          "Modify": {
+            "_ExportStates": [
+              "Alerted",
+              "Flee",
+              "Flee",
+              "Idle",
+              "Search"
+            ],
+            "ViewRange": {
+              "Compute": "ViewRange"
+            },
+            "ViewSector": {
+              "Compute": "ViewSector"
+            },
+            "HearingRange": {
+              "Compute": "HearingRange"
+            },
+            "AbsoluteDetectionRange": {
+              "Compute": "AbsoluteDetectionRange"
+            },
+            "AlertedRange": {
+              "Compute": "AlertedRange"
+            },
+            "ConfusedTimeRange": {
+              "Compute": "ConfusedTimeRange"
+            },
+            "SearchTimeRange": {
+              "Compute": "SearchTimeRange"
+            },
+            "SearchRadius": {
+              "Compute": "WanderRadius"
+            },
+            "ConfusedSoundEventId": "SFX_Goblin_Scrapper_VO_Search",
+            "Attitudes": [
+              "Hostile",
+              "Neutral"
+            ]
+          }
+        }
+      ]
     }
   ],
-  "DeathInstruction": {
-    "Instructions": [
-      {
-        "Sensor": {
-          "Once": true,
-          "Type": "Any"
-        },
-        "ActionsBlocking": true,
-        "Actions": [
-          {
-            "$Comment": "This will eventually be replaced by a more nuanced block placement behaviour native to NPCs",
-            "Type": "Attack",
-            "Attack": "Goblin_Thief_Chest"
-          },
-          {
-            "Type": "Despawn"
-          }
-        ]
-      }
-    ]
-  },
-  "NameTranslationKey": {
-    "Compute": "NameTranslationKey"
-  },
   "InteractionInstruction": {
     "Instructions": [
       {

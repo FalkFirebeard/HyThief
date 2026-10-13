@@ -1,173 +1,126 @@
 {
+  "Type": "Component",
   "Class": "Instruction",
   "Parameters": {
-    "_ImportStates": [
-      "Alerted",
-      "Chase",
-      "Search",
-      "Panic"
-    ],
     "ViewRange": {
-      "Value": 15,
-      "Description": "View range"
+      "Description": "The view range of the NPC",
+      "TypeHint": "Double",
+      "Value": 12
     },
     "ViewSector": {
-      "Value": 180,
-      "Description": "View sector"
+      "Description": "The view sector of the NPC",
+      "TypeHint": "Double",
+      "Value": 160
     },
     "HearingRange": {
-      "Value": 8,
-      "Description": "Hearing range"
+      "Description": "The hearing range of the NPC",
+      "TypeHint": "String",
+      "Value": 8
     },
-    "SmellRange": {
-      "Value": 8,
-      "Description": "Smell range"
+    "AbsoluteDetectionRange": {
+      "Description": "The absolute detection range of the NPC",
+      "TypeHint": "String",
+      "Value": 2
     },
+    "_ImportStates": [
+      "OwnDetection",
+      "Beacon",
+      "DamageTarget",
+      "DamageNoTarget"
+    ],
     "AlertedRange": {
-      "Value": 30,
-      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+      "Description": "The range at which the NPC will detect an attacker",
+      "TypeHint": "Double",
+      "Value": 45
     },
-    "CanSee": {
-      "Value": true,
-      "Description": "Whether the NPC can currently see"
+    "BeaconMessage": {
+      "Description": "The beacon message the NPC will listen to",
+      "TypeHint": "String",
+      "Value": ""
     },
-    "CanHear": {
-      "Value": true,
-      "Description": "Whether the NPC can hear"
+    "BeaconRange": {
+      "Description": "The range at which the NPC will detect alert beacons",
+      "TypeHint": "Double",
+      "Value": 45
     },
-    "CanSmell": {
-      "Value": false,
-      "Description": "Whether the NPC can smell"
-    },
-    "IgnoreLockedTarget": {
-      "Value": false,
-      "Description": "Whether to ignore the current locked target"
+    "Attitudes": {
+      "Description": "Parameter Attitudes",
+      "TypeHint": "String",
+      "Value": [
+        "Hostile"
+      ]
     }
   },
   "Content": {
     "TreeMode": true,
+    "Sensor": {
+      "Type": "Any"
+    },
     "Instructions": [
       {
-        "Reference": "HyThiefStealth_Goblin_Thief_C2",
-        "Modify": {
-          "_ExportStates": [
-            "Chase",
-            "Search"
-          ],
-          "AlertedRange": {
-            "Compute": "AlertedRange"
-          }
-        }
-      },
-      {
+        "$Comment": "Listen for alert beacons",
+        "Enabled": {
+          "Compute": "!isEmpty(BeaconMessage)"
+        },
         "Sensor": {
           "Type": "Beacon",
-          "Message": "GoblinAlert",
-          "Range": 20,
+          "Message": {
+            "Compute": "BeaconMessage"
+          },
+          "Range": {
+            "Compute": "BeaconRange"
+          },
           "TargetSlot": "LockedTarget"
         },
         "Actions": [
           {
             "Type": "ParentState",
-            "State": "Alerted"
+            "State": "Beacon"
           }
         ]
       },
       {
-        "Sensor": {
-          "Type": "Beacon",
-          "Message": "LobberJuggleFail",
-          "Range": 8
+        "Reference": "HyThiefStealth_Goblin_Thief_C2",
+        "Modify": {
+          "_ExportStates": [
+            "DamageTarget",
+            "DamageNoTarget"
+          ],
+          "AlertedRange": {
+            "Compute": "AlertedRange"
+          }
         },
-        "Actions": [
-          {
-            "Type": "ParentState",
-            "State": "Panic"
-          }
-        ]
+        "$Comment": "Detect hostile damage"
       },
       {
         "Sensor": {
-          "Type": "Or",
-          "Sensors": [
-            {
-              "Reference": "HyThiefStealth_Goblin_Thief_C3",
-              "Modify": {
-                "ViewRange": 2,
-                "ViewSector": 360,
-                "IgnoreLockedTarget": {
-                  "Compute": "IgnoreLockedTarget"
-                },
-                "Attitudes": [
-                  "Hostile"
-                ]
-              }
+          "Reference": "HyThiefStealth_Goblin_Thief_C3",
+          "Modify": {
+            "ViewRange": {
+              "Compute": "ViewRange"
             },
-            {
-              "Reference": "HyThiefStealth_Goblin_Thief_C4",
-              "Modify": {
-                "SmellRange": {
-                  "Compute": "SmellRange"
-                },
-                "Enabled": {
-                  "Compute": "CanSmell"
-                },
-                "IgnoreLockedTarget": {
-                  "Compute": "IgnoreLockedTarget"
-                },
-                "Attitudes": [
-                  "Hostile"
-                ]
-              }
+            "ViewSector": {
+              "Compute": "ViewSector"
             },
-            {
-              "Reference": "HyThiefStealth_Goblin_Thief_C5",
-              "Modify": {
-                "ViewRange": {
-                  "Compute": "ViewRange"
-                },
-                "ViewSector": {
-                  "Compute": "ViewSector"
-                },
-                "Enabled": {
-                  "Compute": "CanSee"
-                },
-                "IgnoreLockedTarget": {
-                  "Compute": "IgnoreLockedTarget"
-                },
-                "Attitudes": [
-                  "Hostile"
-                ]
-              }
+            "HearingRange": {
+              "Compute": "HearingRange"
             },
-            {
-              "Reference": "HyThiefStealth_Goblin_Thief_C6",
-              "Modify": {
-                "HearingRange": {
-                  "Compute": "HearingRange"
-                },
-                "ThroughWalls": false,
-                "Enabled": {
-                  "Compute": "CanHear"
-                },
-                "IgnoreLockedTarget": {
-                  "Compute": "IgnoreLockedTarget"
-                },
-                "Attitudes": [
-                  "Hostile"
-                ]
-              }
+            "AbsoluteDetectionRange": {
+              "Compute": "AbsoluteDetectionRange"
+            },
+            "Attitudes": {
+              "Compute": "Attitudes"
             }
-          ]
+          }
         },
         "Actions": [
           {
             "Type": "ParentState",
-            "State": "Alerted"
+            "State": "OwnDetection"
           }
-        ]
+        ],
+        "$Comment": "Detect hostile targets"
       }
     ]
-  },
-  "Type": "Component"
+  }
 }

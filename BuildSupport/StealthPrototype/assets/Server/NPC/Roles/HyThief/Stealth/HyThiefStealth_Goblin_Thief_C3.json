@@ -1,13 +1,26 @@
 {
+  "Type": "Component",
   "Class": "Sensor",
   "Parameters": {
     "ViewRange": {
       "Value": 10,
-      "Description": "The range from which the player will be seen"
+      "Description": "The range from which the target will be seen. If zero, sight will be disabled."
     },
     "ViewSector": {
       "Value": 120,
-      "Description": "The view sector within which the player needs to be to be seen"
+      "Description": "The view sector within which the target needs to be to be seen"
+    },
+    "HearingRange": {
+      "Value": 10,
+      "Description": "The range from which the target will be heard. If zero, hearing will be disabled."
+    },
+    "AbsoluteDetectionRange": {
+      "Value": 2,
+      "Description": "The range at which a target is guaranteed to be detected. If zero, abosulte detection will be disabled."
+    },
+    "ThroughWalls": {
+      "Value": true,
+      "Description": "Whether the NPC can hear the target through obstacles"
     },
     "Attitudes": {
       "Value": [
@@ -30,61 +43,150 @@
     "IgnoreLockedTarget": {
       "Value": false,
       "Description": "Whether to ignore the current locked target"
-    },
-    "Enabled": {
-      "Value": true,
-      "Description": "Whether this should be enabled"
     }
   },
   "Content": {
-    "Enabled": {
-      "Compute": "Enabled"
-    },
-    "Type": "Mob",
-    "Range": {
-      "Compute": "ViewRange"
-    },
-    "LockOnTarget": true,
-    "GetPlayers": true,
-    "GetNPCs": {
-      "Compute": "GetNPCs"
-    },
-    "ExcludeOwnType": true,
-    "Filters": [
+    "Type": "Or",
+    "Sensors": [
       {
-        "Type": "LineOfSight"
+        "Enabled": {
+          "Compute": "AbsoluteDetectionRange > 0"
+        },
+        "Type": "Mob",
+        "Range": {
+          "Compute": "AbsoluteDetectionRange"
+        },
+        "LockOnTarget": true,
+        "GetPlayers": true,
+        "GetNPCs": {
+          "Compute": "GetNPCs"
+        },
+        "ExcludeOwnType": true,
+        "Filters": [
+          {
+            "Type": "NPCGroup",
+            "Enabled": {
+              "Compute": "!isEmptyStringArray(ExcludeGroups)"
+            },
+            "ExcludeGroups": {
+              "Compute": "ExcludeGroups"
+            }
+          },
+          {
+            "Type": "HyThiefStealthAcquisition",
+            "BaseRange": 2,
+            "Channel": "proximity",
+            "Projected": false
+          }
+        ],
+        "Prioritiser": {
+          "Type": "Attitude",
+          "AttitudesByPriority": {
+            "Compute": "Attitudes"
+          }
+        },
+        "Collector": {
+          "Type": "CombatTargets"
+        }
       },
       {
         "Enabled": {
-          "Compute": "!isEmptyStringArray(ExcludeGroups)"
+          "Compute": "ViewRange > 0"
         },
-        "Type": "NPCGroup",
-        "ExcludeGroups": {
-          "Compute": "ExcludeGroups"
+        "Type": "Mob",
+        "Range": {
+          "Compute": "ViewRange"
+        },
+        "LockOnTarget": true,
+        "GetPlayers": true,
+        "GetNPCs": {
+          "Compute": "GetNPCs"
+        },
+        "ExcludeOwnType": true,
+        "Filters": [
+          {
+            "Type": "LineOfSight"
+          },
+          {
+            "Type": "NPCGroup",
+            "Enabled": {
+              "Compute": "!isEmptyStringArray(ExcludeGroups)"
+            },
+            "ExcludeGroups": {
+              "Compute": "ExcludeGroups"
+            }
+          },
+          {
+            "Type": "ViewSector",
+            "ViewSector": {
+              "Compute": "ViewSector"
+            }
+          },
+          {
+            "Type": "HyThiefStealthAcquisition",
+            "BaseRange": 12,
+            "Channel": "sight",
+            "Projected": false
+          }
+        ],
+        "Prioritiser": {
+          "Type": "Attitude",
+          "AttitudesByPriority": {
+            "Compute": "Attitudes"
+          }
+        },
+        "Collector": {
+          "Type": "CombatTargets"
         }
       },
       {
-        "Type": "ViewSector",
-        "ViewSector": {
-          "Compute": "ViewSector"
+        "Enabled": {
+          "Compute": "HearingRange > 0"
+        },
+        "Type": "Mob",
+        "Range": {
+          "Compute": "HearingRange"
+        },
+        "LockOnTarget": true,
+        "GetPlayers": true,
+        "GetNPCs": {
+          "Compute": "GetNPCs"
+        },
+        "ExcludeOwnType": true,
+        "Filters": [
+          {
+            "Enabled": {
+              "Compute": "!ThroughWalls"
+            },
+            "Type": "LineOfSight"
+          },
+          {
+            "Type": "NPCGroup",
+            "Enabled": {
+              "Compute": "!isEmptyStringArray(ExcludeGroups)"
+            },
+            "ExcludeGroups": {
+              "Compute": "ExcludeGroups"
+            }
+          },
+          {
+            "Type": "Not",
+            "Filter": {
+              "Type": "MovementState",
+              "State": "Crouching"
+            }
+          }
+        ],
+        "Prioritiser": {
+          "Type": "Attitude",
+          "AttitudesByPriority": {
+            "Compute": "Attitudes"
+          }
+        },
+        "Collector": {
+          "Type": "CombatTargets"
         }
-      },
-      {
-        "Type": "HyThiefStealthAcquisition",
-        "BaseRange": 2,
-        "Channel": "sight",
-        "Projected": false
       }
-    ],
-    "Prioritiser": {
-      "Type": "Attitude",
-      "AttitudesByPriority": {
-        "Compute": "Attitudes"
-      }
-    },
-    "Collector": {
-      "Type": "CombatTargets"
-    }
-  },
-  "Type": "Component"
+    ]
+  }
 }
