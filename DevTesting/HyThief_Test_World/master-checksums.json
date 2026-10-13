@@ -1,0 +1,110 @@
+[
+  {
+    "Relative": "client_metadata.json",
+    "Hash": "F027EB3E2F1FE5852A1B221C6A293BAF81C00E0103D52F58701A6251E4D10E43"
+  },
+  {
+    "Relative": "config.json",
+    "Hash": "771AA8C1ADB8D177AEF594A37754109F7D730303ED94B266B27E62426ACE0831"
+  },
+  {
+    "Relative": "hythief-test-world.json",
+    "Hash": "E4D9432191EE0E351252A8B4A32AA4B10CF311A5D8455E02345F321B0D9D92B3"
+  },
+  {
+    "Relative": "mods\\Hytale_HytaleGenerator\\biome_editor.json",
+    "Hash": "4EF3B4259090712651D4860672927E4BBF9BE3E7F93724324BE390E0B548238D"
+  },
+  {
+    "Relative": "mods\\Hytale_Shop\\barter_shop_state.json",
+    "Hash": "4C8C3F2487182215C18F9E08BF73F88C4F174DFA8D3C7A3DE57421966991075F"
+  },
+  {
+    "Relative": "mods\\Local_HyThief\\merchant-storage.txt",
+    "Hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "Relative": "universe\\resources\\GameFlags.json",
+    "Hash": "E4D904DB0E80DD4BEB3301F0CB853B0AB22C603778F5E5FB6C16299D35E9BF8F"
+  },
+  {
+    "Relative": "universe\\resources\\Hardcore.json",
+    "Hash": "637BC55C8E7E80F6844041E54001C45C78CB23CCD7B1E6471B7A6B58116598B9"
+  },
+  {
+    "Relative": "universe\\resources\\Memories.json",
+    "Hash": "3EE81B81C0ABD11DDD4222E971A0F3B0E6AF0B6B6C4764BB9FEAD51C02E25DCB"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\config.json",
+    "Hash": "AD421A9F6D42FBCF08BD7AA173B93E5E9DB8E40B86F5AE86A4492C93C51DB627"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\config.json.bak",
+    "Hash": "FEB15764258A0C6A8EDDD2C08336A26F56FB50A48E24B452BBD0C60A2DD343E9"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\chunks\\-1.-1.region.bin",
+    "Hash": "04D9D0E74C44A1B43AEF4E6E2E3F933CD7F4700330E7515C83418EEEAD859934"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\chunks\\-1.0.region.bin",
+    "Hash": "B1A560F6F7181CE6EF284227DCE5182BA51A7D653B0A307E966BD5A76F069570"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\chunks\\0.-1.region.bin",
+    "Hash": "3B1676AE92F152C0B0D7E59464F25DA4EBF4E95F9A82D6E740334D82915F7B75"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\chunks\\0.0.region.bin",
+    "Hash": "7F85FB58EDF95CD9C9918ADEB427089D646EF4E85DCE67DB6CBAA81611A55350"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\BlockCounter.json",
+    "Hash": "A407F95A6D8BDD2BD72DA2F6094EA48D5DD7645ED0F5366D06DE4AAD404A716D"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\BlockMapMarkers.json",
+    "Hash": "A42E733D2BD06412B8E089B87763A4CE38D644378D9FF0C940D870DA956AE5BB"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\ChunkStorage.json",
+    "Hash": "C86320C3417080DFCD3EC29EB8796BB2D4B8543E3D5EF5E958E52CC98A8791FC"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\InstanceData.json",
+    "Hash": "FF6FF3AE2F52F92EF36AF0540AADA5261925D634707A0F3BCEE951F7E3A9E81A"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\PointData.json",
+    "Hash": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\PrefabEditSession.json",
+    "Hash": "AC1819256005F7570EA0B0DE85C6353C34A77E793ED6CEF848613A1CB575A227"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\ReputationData.json",
+    "Hash": "54A5DDC0D9ECEF2C25503BC007CF368F4D338D3D08FCD69A6E1809C8F92504C4"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\SharedUserMapMarkers.json",
+    "Hash": "0E8E3026844AFC3F2DCE3059D7B9E5F3FCD83904B97453E3B992D2B64B9B173A"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\SpawnSuppressionController.json",
+    "Hash": "6D2B10EDCD7B3B563381DC204FEE7874950E8182B4ED1089273DC2A66E31425C"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\Time.json",
+    "Hash": "89845B47E4E196B4828B7B089DB33E6D015027F0378CAEBE870464B841E4DF38"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\TriggerVolumeData.json",
+    "Hash": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\WorldEventStorage.json",
+    "Hash": "4B63C7BA68DFA7290D7562515A13A4B3E2FECFC52A4D7E786D1AA03C2FB337FE"
+  }
+]

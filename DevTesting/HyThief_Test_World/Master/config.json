@@ -1,0 +1,212 @@
+{
+  "Version": 4,
+  "ServerName": "HyThief Test World",
+  "MOTD": "",
+  "Password": "",
+  "MaxPlayers": 100,
+  "MaxViewRadius": 32,
+  "Defaults": {
+    "World": "default",
+    "GameMode": "Adventure",
+    "HardcoreMode": "None",
+    "CrashRecovery": {}
+  },
+  "ConnectionTimeouts": {},
+  "RateLimit": {},
+  "Modules": {
+    "PathPlugin": {
+      "Modules": {}
+    },
+    "Telemetry": {
+      "Modules": {}
+    }
+  },
+  "LogLevels": {},
+  "Mods": {
+    "Buuz135:AdvancedItemInfo": {
+      "Enabled": false
+    },
+    "dev.ninesliced:BetterMap": {
+      "Enabled": false
+    },
+    "Buuz135:BetterModlist": {
+      "Enabled": false
+    },
+    "org.herolias:DynamicTooltipsLib": {
+      "Enabled": false
+    },
+    "Zbeve:EndlessEliteMobs": {
+      "Enabled": false
+    },
+    "Airijko:EndlessLevelingCore": {
+      "Enabled": false
+    },
+    "Onilke:Expanded Necromancy": {
+      "Enabled": false
+    },
+    "Leiv436:Extended Backpacks (v.4.2.2)": {
+      "Enabled": false
+    },
+    "JarHax:EyeSpy": {
+      "Enabled": false
+    },
+    "Linceros:GrabFromFar": {
+      "Enabled": false
+    },
+    "DragoKane:GrapplingHookMod": {
+      "Enabled": false
+    },
+    "Zurku:Gravestones": {
+      "Enabled": false
+    },
+    "Serilum:Hybrid": {
+      "Enabled": false
+    },
+    "com.hypersonicsharkz:Hytalor": {
+      "Enabled": false
+    },
+    "FirebeardDev:HyThief_Test_Arena": {
+      "Enabled": false
+    },
+    "Local:HyThief": {
+      "Enabled": true
+    },
+    "Ellie:HyUI": {
+      "Enabled": false
+    },
+    "Build-9:Hyxin": {
+      "Enabled": false
+    },
+    "Ashrazel Studios:IncreaseNPCSpawns": {
+      "Enabled": false
+    },
+    "VictorLuck:InfiniteTeleporters": {
+      "Enabled": false
+    },
+    "Keb's:Katanas": {
+      "Enabled": false
+    },
+    "MimStar:Loot4Everyone": {
+      "Enabled": false
+    },
+    "Buuz135:LuckyMining": {
+      "Enabled": false
+    },
+    "BlameJared:MinersHelmet": {
+      "Enabled": false
+    },
+    "Ziggfreed:MmoMobScaling": {
+      "Enabled": false
+    },
+    "Ziggfreed:MMOSkillBountyPack": {
+      "Enabled": false
+    },
+    "Ziggfreed:MMOSkillMasteryPack": {
+      "Enabled": false
+    },
+    "Ziggfreed:MMOSkillTree": {
+      "Enabled": false
+    },
+    "Serj:More Crossbow Tiers": {
+      "Enabled": false
+    },
+    "Skovos:More Arrows by Skovos": {
+      "Enabled": false
+    },
+    "Toskan4134:NaturalRegeneration": {
+      "Enabled": false
+    },
+    "BlameJared:OreCrusher": {
+      "Enabled": false
+    },
+    "Fyrrage:Outlanders Armor Pack": {
+      "Enabled": false
+    },
+    "Darkhax:Overstacked": {
+      "Enabled": false
+    },
+    "narwhals:Perfect Dodges": {
+      "Enabled": false
+    },
+    "narwhals:Perfect Parries": {
+      "Enabled": false
+    },
+    "narwhals:Perfect Utils": {
+      "Enabled": false
+    },
+    "net.night:RecoverArrows": {
+      "Enabled": false
+    },
+    "Helios:Saplings From Trees": {
+      "Enabled": false
+    },
+    "CompanionMod:ScrubyCompanion": {
+      "Enabled": false
+    },
+    "Familiar:Seed Drops": {
+      "Enabled": false
+    },
+    "SharedStructures:SharedStructures": {
+      "Enabled": false
+    },
+    "Buuz135:SimpleClaims": {
+      "Enabled": false
+    },
+    "org.herolias:SimpleEnchantments": {
+      "Enabled": false
+    },
+    "Darkhax:Spellbook": {
+      "Enabled": false
+    },
+    "StarkyMods:Starky's Mjolnir": {
+      "Enabled": false
+    },
+    "BlameJared:ThoriumChests": {
+      "Enabled": false
+    },
+    "BlameJared:ThoriumFurnaces": {
+      "Enabled": false
+    },
+    "Vyklade:Unified Magic Theory": {
+      "Enabled": false
+    },
+    "Darkhax:WaybackCharm": {
+      "Enabled": false
+    },
+    "com.woxtz.weaponinfo:Weapon Stats Viewer": {
+      "Enabled": false
+    },
+    "FalkFirebeard:Wonderous Wardrobes": {
+      "Enabled": false
+    },
+    "RickyRicardo:X1.4.3 OreSight": {
+      "Enabled": false
+    },
+    "ybgur:Ybgur_GliderCraftingRecipe": {
+      "Enabled": false
+    },
+    "Ziggfreed:ZiggfreedCommon": {
+      "Enabled": false
+    }
+  },
+  "DefaultModsEnabled": true,
+  "RequireJoinPermission": false,
+  "DisplayTmpTagsInStrings": false,
+  "PlayerStorage": {
+    "Type": "Hytale"
+  },
+  "UniverseResourceStorage": {
+    "Type": "Hytale"
+  },
+  "BanStorage": {
+    "Type": "Disk",
+    "Path": "bans.json"
+  },
+  "AuthCredentialStore": {
+    "Type": "Encrypted",
+    "Path": "auth.enc"
+  },
+  "Update": {},
+  "Backup": {},
+  "WorldMap": {}
+}

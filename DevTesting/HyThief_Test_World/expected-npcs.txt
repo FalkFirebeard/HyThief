@@ -1,0 +1,16 @@
+Bear_Grizzly 10faa35c-d141-3522-a1ec-e0c4d359f6f3
+Feran_Civilian ab3d47e3-001d-3da4-ae2a-90aa725aee19
+Feran_Sharptooth d2e3d3b2-cf3a-3301-a739-dc2244f998c4
+Fox 185860c9-863d-3469-91ad-bc5681bf3c5b
+Kweebec_Merchant 0e8463af-beda-3f6f-b5ba-7bbe9d45eac9
+Kweebec_Merchant 1bd2315f-d0c8-396e-9352-9e03c94e9b27
+Kweebec_Razorleaf 0c9f3494-f73c-31cf-97e7-66e97a590feb
+Kweebec_Razorleaf a97d8193-8b63-319f-bef2-514ce05a8f04
+Kweebec_Sapling d391751b-9dd2-353b-8a74-b0a690f0191b
+Skeleton_Burnt_Soldier 2488a1ee-0e3a-36e3-b649-d735beec63d0
+Skeleton_Fighter 4a346a7a-7f48-388b-a248-165c788f6d91
+Skeleton_Frost_Fighter 72905cc4-2f5b-36ff-bb57-91e51d3c73aa
+Skeleton_Incandescent_Fighter 98fe836d-26fe-3b4d-a04b-02c1f53901a4
+Skeleton_Pirate_Striker 27beb3bb-50dd-30da-a7fb-fd1c128f5254
+Skeleton_Sand_Guard 1ab11ef9-eebb-38e2-8722-3193b58cd3c5
+Trork_Warrior 7fb8747d-b802-3c76-ab46-5ea8743e53bd

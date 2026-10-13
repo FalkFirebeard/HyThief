@@ -1,0 +1,20 @@
+{
+  "Hytale": "0.7.0",
+  "Build": "648ebf375a034beabf119d7d790cd11d4f665ff4",
+  "PublicMod": "1.3.1",
+  "Bays": 16,
+  "NPCs": 16,
+  "SupportedNPCs": 14,
+  "OriginalUUIDsPreserved": true,
+  "RetiredRole": "Spectre_Void",
+  "RetiredBay": 14,
+  "Replacement": null,
+  "GeometryValidated": true,
+  "OriginalBayPositionsValidated": true,
+  "CleanReload": true,
+  "ActiveResetVerified": true,
+  "ContainerMasterUnchanged": true,
+  "ContainerActiveUnchanged": true,
+  "GameplayUnchanged": true,
+  "RealClientPending": true
+}

@@ -1,0 +1,2 @@
+# Preserve exact saved-world bytes so reset checksums survive checkout.
+/DevTesting/HyThief_Test_World/Master/** -text
