@@ -24,6 +24,21 @@ $installedVersion=[regex]::Match($installed,'Implementation-Version: ([^\r\n]+)'
 $installedRevision=[regex]::Match($installed,'Implementation-Revision-Id: ([^\r\n]+)').Groups[1].Value.Trim()
 $fixture=Get-Content -LiteralPath (Join-Path $master 'mods\ContainerTheftFixture\manifest.json') -Raw|ConvertFrom-Json
 if(!$installedVersion -or !$installedRevision -or $fixture.ServerVersion -cne ('='+$installedVersion) -or $marker.ValidatedHytaleVersion -cne $installedVersion -or $marker.ValidatedHytaleRevision -cne $installedRevision){throw 'Container master target/revision differs from installed Hytale. Audit and revalidate the fixture before resetting. No save changed.'}
+$nativeServer=Get-Content -LiteralPath (Join-Path $master 'config.json') -Raw|ConvertFrom-Json
+$nativeWorld=Get-Content -LiteralPath (Join-Path $master 'universe\worlds\default\config.json') -Raw|ConvertFrom-Json
+if($nativeServer.Version -ne 4 -or $nativeWorld.Version -ne 4){throw 'Native save codec version differs from the verified 0.7.1 codecs. No save changed.'}
+foreach($mf in Get-ChildItem -LiteralPath (Join-Path $master 'mods') -Filter manifest.json -Recurse -File){
+ $pack=Get-Content -LiteralPath $mf.FullName -Raw|ConvertFrom-Json
+ if($pack.ServerVersion -cne ('='+$installedVersion)){throw ('Embedded fixture pack target mismatch: '+$mf.FullName+'. No save changed.')}
+}
+foreach($file in Get-ChildItem -LiteralPath (Join-Path $master 'mods') -File|Where-Object {$_.Extension -in '.zip','.jar'}){
+ $archive=[IO.Compression.ZipFile]::OpenRead($file.FullName)
+ try{
+  $entry=$archive.GetEntry('manifest.json');if(!$entry){throw ('Fixture archive manifest missing: '+$file.Name)}
+  $reader=[IO.StreamReader]::new($entry.Open());try{$pack=$reader.ReadToEnd()|ConvertFrom-Json}finally{$reader.Dispose()}
+  if($pack.ServerVersion -cne ('='+$installedVersion)){throw ('Embedded fixture pack target mismatch: '+$file.Name+'. No save changed.')}
+ }finally{$archive.Dispose()}
+}
 $records=@(Get-Content -LiteralPath (Join-Path $root 'master-checksums.json') -Raw|ConvertFrom-Json)
 Check-Hashes $master $records
 if(@(Get-ChildItem -LiteralPath $master -File -Recurse -Force).Count -ne $records.Count){throw 'Unexpected master files'}

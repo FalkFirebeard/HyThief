@@ -1,6 +1,6 @@
 # Restored container.11 / Hytale 0.7.1 baseline — 2026-10-14
 
-**Fully verified and ready for PREFAB-ID research. No PREFAB implementation or publication performed.**
+**Superseded for client readiness by CONTAINER_WORLD_NATIVE_0_7_1_CORRECTION.md.** The earlier native mechanics tests passed, but this audit missed the =0.6.8 target inside the embedded ContainerFactionField ZIP. Its readiness claim did not establish disappearance of the client warning. No PREFAB implementation or publication performed.
 
 ## Active build and preservation
 

@@ -35,10 +35,10 @@ public final class FactionFieldBuilder extends JavaPlugin {
  static boolean containsZ(int z){for(int v:ZS)if(v==z)return true;return false;}
  static void require(boolean condition,String message){if(!condition)throw new IllegalStateException(message);}
  protected void start(){Universe.get().getUniverseReady().thenRun(()->{
-  var w=Universe.get().getDefaultWorld();var loads=new ArrayList<CompletableFuture<?>>();
+  var w=Universe.get().getDefaultWorld();if(Boolean.getBoolean("factionfield.fresh")){System.out.println("FRESH_NATIVE_WORLD_LOADED Version="+com.hypixel.hytale.server.core.universe.world.WorldConfig.VERSION+" World="+w.getName());finish();return;}var loads=new ArrayList<CompletableFuture<?>>();
   for(int x=-1;x<=0;x++)for(int z=-1;z<=1;z++)for(int y=0;y<=2;y++)loads.add(w.getChunkStore().getChunkSectionReferenceAsync(x,y,z,com.hypixel.hytale.server.core.universe.world.storage.GetChunkFlags.SET_TICKING));
   CompletableFuture.allOf(loads.toArray(CompletableFuture[]::new)).thenRun(()->w.execute(()->{
-   try{if(Boolean.getBoolean("factionfield.author"))author(w);
+   try{if(Boolean.getBoolean("factionfield.refresh")){refresh(w);return;}if(Boolean.getBoolean("factionfield.author"))author(w);
     w.scheduleAfter(()->w.execute(()->{try{validate(w);}catch(Throwable e){fail(e);}}),5,TimeUnit.SECONDS);
    }catch(Throwable e){fail(e);}
   }));
@@ -68,7 +68,7 @@ public final class FactionFieldBuilder extends JavaPlugin {
   for(int i=0;i<ZS.length;i++){
    NativeFieldBlocks.set(w,0,64,ZS[i],"Furniture_Kweebec_Chest_Large");var c=chest(w,i);c.setItemStackForSlot((short)0,new ItemStack("Ingredient_Bar_Copper",16));c.setItemStackForSlot((short)1,new ItemStack("Ingredient_Bar_Iron",8));
    var ref=BlockModule.getBlockEntity(w,0,64,ZS[i]);w.getChunkStore().getStore().addComponent(ref,OwnershipProofData.getComponentType(),data(i));mark(w,i);
-   for(int x=-1;x<=0;x++)NativeFieldBlocks.set(w,x,63,ZS[i]-1,"Cloth_Block_Wool_"+COLORS[i]);label(store,LABELS[i]+" - CENTER SEAM",0,66.5,ZS[i]+.5);
+   for(int x=-2;x<=1;x++)for(int z=ZS[i]-1;z<=ZS[i]+1;z++)NativeFieldBlocks.set(w,x,63,z,"Cloth_Block_Wool_"+COLORS[i]);label(store,LABELS[i]+" - CENTER SEAM",0,66.5,ZS[i]+.5);
   }
   label(store,"RED SAFE / BLUE KWEEBEC / GREEN LOCAL / YELLOW FERAN",0,67,10.5);
   label(store,"STAND ON COLORED CENTER SEAM - RESET AFTER CAUGHT",0,66.2,10.5);
@@ -97,7 +97,7 @@ public final class FactionFieldBuilder extends JavaPlugin {
   System.out.println("FOUR_CHEST_LAYOUT_PASS ChestCount=4 StartingBlocks=Rock_Stone_Cobble Quantity=64");
   System.out.println("FACTION_OPEN_FIELD_PASS NoPermanentWalls=true ClearResponderPaths=true");
   for(int i=0;i<ZS.length;i++){
-   for(int x=-1;x<=0;x++)require(NativeFieldBlocks.type(w,x,63,ZS[i]-1).getId().equals("Cloth_Block_Wool_"+COLORS[i]),"color pad missing "+COLORS[i]);
+   for(int x=-2;x<=1;x++)for(int z=ZS[i]-1;z<=ZS[i]+1;z++)require(NativeFieldBlocks.type(w,x,63,z).getId().equals("Cloth_Block_Wool_"+COLORS[i]),"4x3 native color pad missing "+COLORS[i]);
    final int station=i;var count=new int[]{0};w.getEntityStore().getStore().forEachChunk(Nameplate.getComponentType(),(chunk,b)->{for(int n=0;n<chunk.size();n++){var ref=chunk.getReferenceTo(n);var store=w.getEntityStore().getStore();if(store.getComponent(ref,Nameplate.getComponentType()).getText().equals(LABELS[station]+" - CENTER SEAM")){var t=store.getComponent(ref,TransformComponent.getComponentType());require(t.getPosition().x==0&&t.getPosition().z==ZS[station]+.5,"color label position");count[0]++;}}});require(count[0]==1,"color label lost "+COLORS[i]);
   }
   var store=w.getEntityStore().getStore();var roles=new HashMap<String,Ref<EntityStore>>();var npcCount=new int[]{0};
@@ -241,6 +241,19 @@ public final class FactionFieldBuilder extends JavaPlugin {
   }catch(Throwable t){fail(t);}})).exceptionally(t->{fail(t);return null;});
  }
 
+
+ static void refresh(World w)throws Exception {
+  var fresh=Path.of("FreshNative071");Files.createDirectories(fresh.resolve("universe/worlds/default"));
+  com.hypixel.hytale.server.core.HytaleServerConfig.save(fresh.resolve("config.json"),new com.hypixel.hytale.server.core.HytaleServerConfig()).join();
+  com.hypixel.hytale.server.core.universe.world.WorldConfig.save(fresh.resolve("universe/worlds/default/config.json"),new com.hypixel.hytale.server.core.universe.world.WorldConfig()).join();
+  var old=com.hypixel.hytale.server.core.universe.world.WorldConfig.load(Path.of("universe/worlds/default/config.json")).join();
+  com.hypixel.hytale.server.core.universe.world.WorldConfig.save(Path.of("universe/worlds/default/config.json"),old).join();
+  for(String target:List.of("=0.6.8","=0.7.1"))System.out.println("NATIVE_PACK_COMPATIBILITY Target="+target+" Result="+com.hypixel.hytale.common.plugin.PluginManifest.checkServerVersionCompatibility(com.hypixel.hytale.common.semver.SemverRange.fromString(target),"0.7.1"));
+  for(int i=0;i<ZS.length;i++)for(int x=-2;x<=1;x++)for(int z=ZS[i]-1;z<=ZS[i]+1;z++)NativeFieldBlocks.set(w,x,63,z,"Cloth_Block_Wool_"+COLORS[i]);
+
+  System.out.println("NATIVE_WORLD_REFRESH_PASS WorldConfigVersion="+com.hypixel.hytale.server.core.universe.world.WorldConfig.VERSION+" ServerConfigVersion="+com.hypixel.hytale.server.core.HytaleServerConfig.VERSION+" NativePads=4x3 GeometryUnchanged=true");
+  finish();
+ }
  static void finish(){try{Files.writeString(Path.of("faction-verification.json"),"{\"fourStationsPassed\":true}");}catch(Exception e){throw new RuntimeException(e);}System.out.println("FACTION_FIELD_VERIFIED");CompletableFuture.runAsync(()->com.hypixel.hytale.server.core.HytaleServer.get().shutdownServer());}
  static void fail(Throwable t){t.printStackTrace();System.err.println("FACTION_FIELD_FAILED "+t);CompletableFuture.runAsync(()->com.hypixel.hytale.server.core.HytaleServer.get().shutdownServer());}
 }

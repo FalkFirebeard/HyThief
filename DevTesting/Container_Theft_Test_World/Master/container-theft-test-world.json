@@ -106,6 +106,16 @@
       0,
       64.1,
       10.5
+    ],
+    "NativePadBlocks": {
+      "Red": "Cloth_Block_Wool_Red",
+      "Blue": "Cloth_Block_Wool_Blue",
+      "Green": "Cloth_Block_Wool_Green",
+      "Yellow": "Cloth_Block_Wool_Yellow"
+    },
+    "NativePadSize": [
+      4,
+      3
     ]
   },
   "ValidatedHytaleVersion": "0.7.1",

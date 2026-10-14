@@ -21,3 +21,7 @@ Before handing any test world to Firebeard after any update/hotfix/patch:
 9. Only then hand the world to Firebeard.
 
 Do not blindly rewrite fixtures after patches. If nothing relevant changed, record validation and preserve the fixture. Never load a container-development save with public HyThief, and never invoke historical combined/cross-project reset scripts from active shortcuts.
+
+## Standing public/development patch workflow
+
+Whenever Hytale updates: read actual version/revision; update and test the public release line; publish only when approved; immediately align active development compatibility; migrate or validate active native save formats, masters and fixtures; check every embedded ZIP/JAR/folder manifest; verify reset scripts and actual desktop shortcuts; verify visible colors/labels and starting inventory; run reset, native validation and client-ready handoff before new feature work. Do not leave world migration for later. Native codec versions need not equal the game version: compare fresh native saves and current codecs rather than inventing version numbers. A checksum or custom fixture target does not prove client compatibility. Require client visual confirmation when only the client can establish warning removal.

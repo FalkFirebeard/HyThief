@@ -13,15 +13,7 @@
   },
   {
     "Relative": "container-theft-test-world.json",
-    "Hash": "383FE59CF45A4BD7AA30E63A6A0DDD6783FDB78F303BC2B478DA1FA54C4937D7"
-  },
-  {
-    "Relative": "permissions.json",
-    "Hash": "09E913FA1606F67AA0384D5E0409E333E128BEC6B3ED98217A1303A54EECD97B"
-  },
-  {
-    "Relative": "mods\\HyThief_Faction_Field.zip",
-    "Hash": "80DB17C936833B8A02A6F8A73621A9CB8D883656445D776945CEABBB9A128A43"
+    "Hash": "6A26566FA4F1D21E93BD88382F3A914877968C79FB97A3DB191071AFC274A0A9"
   },
   {
     "Relative": "mods\\ContainerTheftFixture\\manifest.json",
@@ -44,6 +36,14 @@
     "Hash": "16058D7F8803E71BE1084BC0C85F89325D205DDC57DF2D5E0FA2F83834662E92"
   },
   {
+    "Relative": "mods\\HyThief_Faction_Field.zip",
+    "Hash": "497476E212AA6FC8C6BDF2A8A124C8B872B08EB3A9C9B10CB4F88C57B0AEEE5B"
+  },
+  {
+    "Relative": "permissions.json",
+    "Hash": "09E913FA1606F67AA0384D5E0409E333E128BEC6B3ED98217A1303A54EECD97B"
+  },
+  {
     "Relative": "universe\\players\\d49a059a-84ec-4b9c-8560-ef2ff633ce44.json",
     "Hash": "7F99A40AC5AFEF22BE761531276E8B393E418296AF687C593576767875F8B26C"
   },
@@ -60,28 +60,28 @@
     "Hash": "3EE81B81C0ABD11DDD4222E971A0F3B0E6AF0B6B6C4764BB9FEAD51C02E25DCB"
   },
   {
+    "Relative": "universe\\worlds\\default\\chunks\\-1.-1.region.bin",
+    "Hash": "A272F94B7CCE8AAD73C71728ADFFB9C2FBC314674D79585E789A5F07D2B828DF"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\chunks\\-1.0.region.bin",
+    "Hash": "FF4036473CF828AAC13AFCF64721D0B4ADB2C573643949A60180521DAFBEE014"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\chunks\\0.-1.region.bin",
+    "Hash": "504003FC5699E0D7F8A684B0F3DAD541D7DB5B9CFC0A8976E9D667C3F99EAABC"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\chunks\\0.0.region.bin",
+    "Hash": "4E01A4E1C6D661DC8AAF1199843DCE2B389A586CD9D860D42187CCCEA8476860"
+  },
+  {
     "Relative": "universe\\worlds\\default\\config.json",
     "Hash": "83FF49107471B46E77CB461DB386AF85B8C466AA55CA70EF68A4DBE924635A07"
   },
   {
     "Relative": "universe\\worlds\\default\\config.json.bak",
     "Hash": "83FF49107471B46E77CB461DB386AF85B8C466AA55CA70EF68A4DBE924635A07"
-  },
-  {
-    "Relative": "universe\\worlds\\default\\chunks\\-1.-1.region.bin",
-    "Hash": "0ABEE9960D06844FDBF67408E5E7BE4635E36142837E03E36FF1E71CE68C3A8E"
-  },
-  {
-    "Relative": "universe\\worlds\\default\\chunks\\-1.0.region.bin",
-    "Hash": "D68070DE4195C988ED0A6D7A38833AEBA48308CB468FACA3B4F5007EDDA0C707"
-  },
-  {
-    "Relative": "universe\\worlds\\default\\chunks\\0.-1.region.bin",
-    "Hash": "7E3C6E7DB3E051F2DA6E13A9DF3D0CF02E0CF754B9F5D1540D4387E30788511F"
-  },
-  {
-    "Relative": "universe\\worlds\\default\\chunks\\0.0.region.bin",
-    "Hash": "AF22D46B1CCADA61E6D775BF0B202668E2059F9A2DCDC0BE8FD330489022256F"
   },
   {
     "Relative": "universe\\worlds\\default\\resources\\BlockCounter.json",
@@ -121,7 +121,7 @@
   },
   {
     "Relative": "universe\\worlds\\default\\resources\\Time.json",
-    "Hash": "07EFC0AD21C98178B578FF6903F83E5B53AB23DFB68785E5C5B08206590B5F6A"
+    "Hash": "D3CA5B084488BBC7AF0653D27FA2D04F2822D83E1CE19E89132AEA7C4B00634A"
   },
   {
     "Relative": "universe\\worlds\\default\\resources\\TriggerVolumeData.json",

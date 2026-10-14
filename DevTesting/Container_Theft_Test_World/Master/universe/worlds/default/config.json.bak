@@ -1,0 +1,74 @@
+{
+  "Version": 4,
+  "UUID": {
+    "$binary": "W1n2+af0TqSOUlUR6p0Q+A==",
+    "$type": "04"
+  },
+  "DisplayName": "HyThief Container Theft Test World",
+  "Seed": 106081,
+  "SpawnProvider": {
+    "Id": "Global",
+    "SpawnPoint": {
+      "X": 0.5,
+      "Y": 64.1,
+      "Z": 7.5,
+      "Pitch": 0.0,
+      "Yaw": 3.1415927410125732,
+      "Roll": 0.0
+    }
+  },
+  "WorldGen": {
+    "Type": "Flat",
+    "Tint": "#5b9e28",
+    "Layers": [
+      {
+        "From": 0,
+        "To": 64,
+        "BlockType": "Rock_Stone_Cobble",
+        "Environment": "Env_Default_Flat"
+      }
+    ]
+  },
+  "WorldMap": {
+    "Type": "WorldGen"
+  },
+  "ChunkStorage": {
+    "Type": "Hytale"
+  },
+  "ChunkConfig": {},
+  "IsTicking": true,
+  "IsBlockTicking": true,
+  "IsPvpEnabled": false,
+  "IsFallDamageEnabled": false,
+  "IsGameTimePaused": true,
+  "GameTime": "0001-01-01T12:00:00Z",
+  "ClientEffects": {
+    "SunHeightPercent": 100.0,
+    "SunAngleDegrees": 0.0,
+    "BloomIntensity": 0.30000001192092896,
+    "BloomPower": 8.0,
+    "SunIntensity": 0.25,
+    "SunshaftIntensity": 0.30000001192092896,
+    "SunshaftScaleFactor": 4.0
+  },
+  "RequiredPlugins": {},
+  "GameMode": "Adventure",
+  "IsSpawningNPC": false,
+  "IsBlockSpawnersEnabled": false,
+  "IsSpawnMarkersEnabled": false,
+  "IsAllNPCFrozen": false,
+  "GameplayConfig": "Default",
+  "IsCompassUpdating": true,
+  "IsSavingPlayers": true,
+  "IsSavingChunks": true,
+  "SaveNewChunks": true,
+  "IsUnloadingChunks": false,
+  "IsObjectiveMarkersEnabled": true,
+  "DeleteOnUniverseStart": false,
+  "DeleteOnRemove": false,
+  "DisabledFluidTickers": [],
+  "ResourceStorage": {
+    "Type": "Hytale"
+  },
+  "Plugin": {}
+}

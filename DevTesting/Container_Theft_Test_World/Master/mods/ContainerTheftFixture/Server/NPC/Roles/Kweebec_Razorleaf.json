@@ -1,0 +1,23 @@
+{
+  "Type": "Variant",
+  "Reference": "HyThiefContainerFixture_Razorleaf_WitnessHandoff",
+  "Modify": {
+    "Appearance": "Kweebec_Sapling_Razorleaf",
+    "DropList": "Drop_Kweebec_Sapling_Razorleaf",
+    "MaxHealth": 105,
+    "IsMemory": true,
+    "MemoriesCategory": "Kweebec",
+    "MemoriesNameOverride": "Kweebec_Sapling",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "WanderRadius": 1,
+    "MotionComponent": "$Null"
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Kweebec_Razorleaf.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}
