@@ -1,0 +1,114 @@
+{
+  "roleFilesScanned": 1148,
+  "distinctRoleIds": 1147,
+  "duplicatePaths": {
+    "Test_Patrol_Path": [
+      "Server/NPC/Roles/_Core/Tests/Paths/Test_Patrol_Path.json",
+      "Server/NPC/Roles/_Core/Tests_Development/Test_Patrol_Path.json"
+    ]
+  },
+  "types": {
+    "Variant": 545,
+    "Abstract": 89,
+    "Generic": 349,
+    "Component": 164
+  },
+  "families": [
+    "Bramblekin",
+    "Feran",
+    "Goblin",
+    "Hedera",
+    "Human",
+    "Klops",
+    "Kweebec",
+    "Outlander",
+    "Skeleton",
+    "Slothian",
+    "Trork",
+    "Tuluk",
+    "Wraith",
+    "Zombie"
+  ],
+  "concreteRelevant": 254,
+  "ordinarySupportedConcrete": 174,
+  "suitableUnsupported": 42,
+  "specialConcreteReview": 38,
+  "configuredSupported": 185,
+  "configuredMissing": [
+    "Goblin_Hermit",
+    "Goblin_Lobber_Patrol",
+    "Goblin_Miner_Patrol",
+    "Goblin_Ogre",
+    "Goblin_Scavenger",
+    "Goblin_Scavenger_Battleaxe",
+    "Goblin_Scavenger_Sword",
+    "Goblin_Scrapper_Patrol",
+    "Goblin_Thief_Patrol"
+  ],
+  "configuredAbstract": [
+    "Bramblekin",
+    "Bramblekin_Shaman"
+  ],
+  "assetsSha256": "b9164eb07d7c42e697d208ba3d35078a9b4a0125bef6261847a2f91e293e53b4",
+  "installedJarSha256": "f2dca782e22c38839640e8886f764b16ca00c36cdf8b4c812d6c099181eae08c",
+  "deltaFrom070": {
+    "added": [
+      "Test_Scarak_Broodmother_Young_Stationary"
+    ],
+    "removed": [],
+    "changed": [
+      "Test_Dragon_Stationary"
+    ],
+    "previousAssetsSha256": "dd53c25076a8ad9521103a765e7d3c71b18fc9af62e60519f14f757765257fa5"
+  },
+  "familyCounts": {
+    "Bramblekin": {},
+    "Feran": {
+      "A": 5,
+      "C": 3
+    },
+    "Goblin": {
+      "B": 37,
+      "C": 8,
+      "A": 8
+    },
+    "Hedera": {
+      "A": 1
+    },
+    "Human": {
+      "C": 2
+    },
+    "Klops": {
+      "B": 1,
+      "A": 6,
+      "C": 2
+    },
+    "Kweebec": {
+      "B": 1,
+      "A": 7,
+      "C": 19
+    },
+    "Outlander": {
+      "A": 9
+    },
+    "Skeleton": {
+      "A": 118,
+      "C": 4,
+      "B": 2
+    },
+    "Slothian": {},
+    "Trork": {
+      "A": 12
+    },
+    "Tuluk": {
+      "A": 1
+    },
+    "Wraith": {
+      "B": 1
+    },
+    "Zombie": {
+      "A": 7
+    }
+  },
+  "draugrRoleIds": []
+}
