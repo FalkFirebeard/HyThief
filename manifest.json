@@ -9,7 +9,7 @@
     }
   ],
   "Website": "https://www.curseforge.com/hytale/mods/hythief",
-  "ServerVersion": "=0.7.0",
+  "ServerVersion": "=0.7.1",
   "Dependencies": {
     "Hytale:NPC": "*"
   },

@@ -4,15 +4,15 @@ $ErrorActionPreference='Stop'
 $root=Split-Path -Parent $PSScriptRoot
 $project=[IO.Path]::GetFullPath((Join-Path $root '..\..'))
 $run=Join-Path $root ('.verification\Current-'+(Get-Date -Format yyyyMMdd-HHmmss)+'-'+[guid]::NewGuid().ToString('N'))
-$server=Join-Path $project '.build\dependencies\HytaleServer-0.7.0.jar'
+$server=Join-Path $project '.build\dependencies\HytaleServer-0.7.1.jar'
 $jdk='E:\Hytale adjustments\Toolchains\JDK25\bin'
-$public=Join-Path $project '.build\release-candidates\1.3.1-0.7.0\HyThief-1.3.1.jar'
+$public=Join-Path $project '.build\release-candidates\1.3.2-0.7.1\HyThief-1.3.2.jar'
 foreach($path in @($server,$public,(Join-Path $root 'WorldVerifier.java'))){if(!(Test-Path -LiteralPath $path)){throw "Missing validation dependency: $path"}}
 Copy-Item -LiteralPath (Join-Path $root 'Master') -Destination $run -Recurse
 New-Item -ItemType Directory -Path (Join-Path $run 'classes'),(Join-Path $run 'mods') -Force|Out-Null
 & "$jdk\javac.exe" -cp $server -d (Join-Path $run 'classes') (Join-Path $root 'WorldVerifier.java')
 if($LASTEXITCODE){throw 'World verifier compile failed'}
-@{Group='FirebeardDev';Name='WorldVerifier';Version='1.0.0';Main='com.firebeard.hythief.dev.WorldVerifier';ServerVersion='=0.7.0';Dependencies=@{'Hytale:BuilderTools'='*';'Local:HyThief'='*'}}|ConvertTo-Json -Depth 8|Set-Content -LiteralPath (Join-Path $run 'classes\manifest.json')
+@{Group='FirebeardDev';Name='WorldVerifier';Version='1.0.0';Main='com.firebeard.hythief.dev.WorldVerifier';ServerVersion='=0.7.1';Dependencies=@{'Hytale:BuilderTools'='*';'Local:HyThief'='*'}}|ConvertTo-Json -Depth 8|Set-Content -LiteralPath (Join-Path $run 'classes\manifest.json')
 & "$jdk\jar.exe" --create --file (Join-Path $run 'mods\WorldVerifier.jar') -C (Join-Path $run 'classes') .
 if($LASTEXITCODE){throw 'World verifier package failed'}
 Copy-Item -LiteralPath $public -Destination (Join-Path $run 'mods')
