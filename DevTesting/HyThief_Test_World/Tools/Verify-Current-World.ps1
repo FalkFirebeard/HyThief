@@ -20,7 +20,7 @@ $cfg=Get-Content -LiteralPath (Join-Path $run 'config.json') -Raw|ConvertFrom-Js
 $cfg.Mods|Add-Member -NotePropertyName 'FirebeardDev:WorldVerifier' -NotePropertyValue @{Enabled=$true} -Force
 $cfg|ConvertTo-Json -Depth 40|Set-Content -LiteralPath (Join-Path $run 'config.json')
 Push-Location -LiteralPath $run
-try{& "$jdk\java.exe" -jar $server --assets 'C:\Users\askin\AppData\Roaming\Hytale\install\release\package\game\latest\Assets.zip' --auth-mode offline --bind 127.0.0.1:15529 --disable-sentry --disable-file-watcher --disable-cpb-build --boot-command hythiefworld-verify *> (Join-Path $run 'native.log')}finally{Pop-Location}
+try{& "$jdk\java.exe" -Xmx2G -Xms128m -XX:ActiveProcessorCount=4 -jar $server --assets 'C:\Users\askin\AppData\Roaming\Hytale\install\release\package\game\latest\Assets.zip' --auth-mode offline --bind 127.0.0.1:15529 --disable-sentry --disable-file-watcher --disable-cpb-build --boot-command hythiefworld-verify *> (Join-Path $run 'native.log')}finally{Pop-Location}
 $log=Join-Path $run 'native.log'
 if(!(Select-String -LiteralPath $log -Pattern 'WORLD_VERIFIED count=16' -Quiet) -or !(Select-String -LiteralPath $log -Pattern 'CELL_GEOMETRY_PASS' -Quiet)){throw "Native world check failed: $log"}
 if(Select-String -LiteralPath $log -Pattern 'nonexistent role|Failed to validate|WORLD_FAILED' -Quiet){throw "Obsolete asset/role errors: $log"}

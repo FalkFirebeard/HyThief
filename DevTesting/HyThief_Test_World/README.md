@@ -1,6 +1,6 @@
 # HyThief Test World — current general smoke fixture
 
-Validated against installed Hytale **0.7.0**, revision **648ebf375a034beabf119d7d790cd11d4f665ff4**, with public **HyThief 1.3.1** candidate. This remains the original cell-based world, separate from Container Theft Test World. No container mechanics were added.
+Validated against installed Hytale **0.7.1**, revision **69c03ffa58d7e2f46bce8b0356ed206cfc7f10e6**, with public **HyThief 1.3.2** candidate. This remains the original cell-based world, separate from Container Theft Test World. No container mechanics were added.
 
 ## Launch and reset
 
