@@ -1,0 +1,11 @@
+{
+  "Group": "FirebeardDev",
+  "Version": "1.0.0",
+  "Name": "NativePrefabIdProof",
+  "Main": "com.local.pickpocket.NativePrefabIdProof",
+  "ServerVersion": "=0.7.1",
+  "Dependencies": {
+    "Local:HyThief": "*"
+  },
+  "IncludesAssetPack": true
+}
