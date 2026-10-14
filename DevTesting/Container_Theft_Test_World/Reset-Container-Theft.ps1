@@ -17,6 +17,13 @@ Check-NoRedirect $master
 Check-NoRedirect $active
 $marker=Get-Content -LiteralPath (Join-Path $master 'container-theft-test-world.json') -Raw|ConvertFrom-Json
 if($marker.Kind -ne 'Firebeard.HyThief.ContainerDevWorld' -or $marker.Name -ne 'HyThief Container Theft Test World'){throw 'Invalid master marker'}
+$liveServer='C:\Users\askin\AppData\Roaming\Hytale\install\release\package\game\latest\Server\HytaleServer.jar'
+$zip=[IO.Compression.ZipFile]::OpenRead($liveServer)
+try{$reader=[IO.StreamReader]::new($zip.GetEntry('META-INF/MANIFEST.MF').Open());try{$installed=$reader.ReadToEnd()}finally{$reader.Dispose()}}finally{$zip.Dispose()}
+$installedVersion=[regex]::Match($installed,'Implementation-Version: ([^\r\n]+)').Groups[1].Value.Trim()
+$installedRevision=[regex]::Match($installed,'Implementation-Revision-Id: ([^\r\n]+)').Groups[1].Value.Trim()
+$fixture=Get-Content -LiteralPath (Join-Path $master 'mods\ContainerTheftFixture\manifest.json') -Raw|ConvertFrom-Json
+if(!$installedVersion -or !$installedRevision -or $fixture.ServerVersion -cne ('='+$installedVersion) -or $marker.ValidatedHytaleVersion -cne $installedVersion -or $marker.ValidatedHytaleRevision -cne $installedRevision){throw 'Container master target/revision differs from installed Hytale. Audit and revalidate the fixture before resetting. No save changed.'}
 $records=@(Get-Content -LiteralPath (Join-Path $root 'master-checksums.json') -Raw|ConvertFrom-Json)
 Check-Hashes $master $records
 if(@(Get-ChildItem -LiteralPath $master -File -Recurse -Force).Count -ne $records.Count){throw 'Unexpected master files'}
