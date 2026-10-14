@@ -31,9 +31,9 @@ NPC starting centers are X **0.5, 96.5, 192.5, 288.5** by column and Z **50.5, 1
 | 15 | Bear_Grizzly | Excluded wildlife; no Pickpocket |
 | 16 | Kweebec_Merchant + Kweebec_Razorleaf | Caught notification/menu close/native guard pursuit; test last |
 
-Shortest smoke: **01 → 04 → 05 → 06 → 07 → 13/15 → 16 last**. Bays 02/03/08–12 are available for broader coverage. Test front standing/crouched trade and rear crouched menu in Bay 01, successful theft and Escape, then fresh crouched approaches across families. Standing/front must not expose Pickpocket. Bay 16 tests caught/guard response; reset afterwards. This world has no Goblin bay, so the changed 0.7.0 Goblins require a separate existing normal-world encounter; no substitute/additional cell was authored.
+Shortest current public smoke: **Bay 01 → Bay 16 last**. In Bay 01 test normal front trade, toggle-crouched rear Pickpocket and steal an item. In Bay 16 deliberately get caught and confirm the notification, UI closure and nearby Razorleaf response. Reset afterwards. Other cells remain optional; no additional family/Goblin matrix testing is required for this metadata-only candidate.
 
-## Preservation and validation
+## Historical 0.7.0 refresh record
 
 Original master and active world were backed up under **Archives/before-0.7.0-20261012-183703/** before changes. Native whole-save migration retired only the obsolete Spectre saved entity; all remaining **16 NPCs preserve their original UUIDs and roles**. All 16 bay floors/headroom/side walls and original NPC bay positions passed. Spawn/world UUID/native Adventure settings are preserved. All 14 supported NPCs have current interaction instruction trees; Fox/Bear remain controls.
 
@@ -44,4 +44,6 @@ The portable **HyThief_Test_Arena-1.0.0.zip** and prefab remain unchanged. Its o
 Actual connected-client prompts, UI rendering, item transfer, crouch/no-turn and guard reaction remain **Firebeard runtime checks**, not claims from the offline verifier. The public gameplay JAR was not changed for this task.
 
 Evidence: **.verification/Update_0_7_0/** (original/master/container hashes, native logs, exact NPC positions, candidate, reload). Reset restores this exact refreshed master; no other world/master or reusable prefab is changed.
-Current repeatable verification: Tools/Verify-Current-World.ps1 compiles only a disposable development verifier and checks a fresh copy of Master. It never installs the verifier or rewrites Master. The legacy Prepare-World/Save-Master tools retain historical 0.6.8 seeding assumptions; do not use them to refresh the 0.7.0 fixture.
+Current repeatable verification: Tools/Verify-Current-World.ps1 compiles only a disposable development verifier and checks a fresh copy of Master. It never installs the verifier or rewrites Master. The legacy Prepare-World/Save-Master tools retain historical 0.6.8 seeding assumptions; do not use them to refresh the current fixture.
+
+Current 0.7.1 integrity/reset/native evidence: Docs/TEST_ENVIRONMENT_0_7_1.md and DevTesting/Test_Infrastructure_0_7_1_20261013/. All three actual desktop shortcuts were executed and active/master hashes matched.
