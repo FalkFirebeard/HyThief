@@ -1,0 +1,27 @@
+
+
+# Keep the 24 copied Goblin resources byte-stable across Windows release checkouts.
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Lobber.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Lobber_C1.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Lobber_C2.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Lobber_C3.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Lobber_C4.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Miner.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Miner_C1.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Miner_C2.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Miner_C3.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Miner_C4.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Scrapper.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Scrapper_C1.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Scrapper_C2.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Scrapper_C3.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Scrapper_C4.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Thief.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Thief_C1.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Thief_C2.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Thief_C3.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Thief_C4.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/Intelligent/Faction/Goblin/Goblin_Lobber.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/Intelligent/Faction/Goblin/Goblin_Miner.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/Intelligent/Faction/Goblin/Goblin_Scrapper.json text eol=lf
+/BuildSupport/StealthPrototype/assets/Server/NPC/Roles/Intelligent/Faction/Goblin/Goblin_Thief.json text eol=lf

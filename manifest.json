@@ -1,7 +1,7 @@
 {
   "Group": "Local",
   "Name": "HyThief",
-  "Version": "1.3.2",
+  "Version": "1.3.3",
   "Description": "Adds crouch pickpocketing with a container-backed custom loot UI, hybrid alerts, role-based loot, and tuned civilian and hostile cooldowns.",
   "Authors": [
     {
@@ -9,7 +9,7 @@
     }
   ],
   "Website": "https://www.curseforge.com/hytale/mods/hythief",
-  "ServerVersion": "=0.7.1",
+  "ServerVersion": "=0.7.2",
   "Dependencies": {
     "Hytale:NPC": "*"
   },
