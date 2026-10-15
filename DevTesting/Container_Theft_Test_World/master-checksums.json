@@ -13,11 +13,11 @@
   },
   {
     "Relative": "container-theft-test-world.json",
-    "Hash": "6A26566FA4F1D21E93BD88382F3A914877968C79FB97A3DB191071AFC274A0A9"
+    "Hash": "B3722C9E04B424F734DFFCE2E7188755FB3949358746C9AF80AF26DACF8FFFFC"
   },
   {
     "Relative": "mods\\ContainerTheftFixture\\manifest.json",
-    "Hash": "0297DBC9C44EA555B0F202107A90A34C45BFB3F95F0A14FB907E445021880A61"
+    "Hash": "FF1352AFECE772A6D42B44516438B92E0B728770CDB0AC70A34BD688AF329B26"
   },
   {
     "Relative": "mods\\ContainerTheftFixture\\Server\\NPC\\Roles\\HyThiefContainerFixture_Native_Sapling.json",
@@ -37,7 +37,7 @@
   },
   {
     "Relative": "mods\\HyThief_Faction_Field.zip",
-    "Hash": "497476E212AA6FC8C6BDF2A8A124C8B872B08EB3A9C9B10CB4F88C57B0AEEE5B"
+    "Hash": "AEFC4B0AE95C7973771D86C0743AE9DCC5E06EFD1E8C8EDFAD6B181C663EFF21"
   },
   {
     "Relative": "permissions.json",

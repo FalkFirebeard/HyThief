@@ -1,6 +1,6 @@
 # HyThief Test World — current general smoke fixture
 
-Validated against installed Hytale **0.7.1**, revision **69c03ffa58d7e2f46bce8b0356ed206cfc7f10e6**, with public **HyThief 1.3.2** candidate. This remains the original cell-based world, separate from Container Theft Test World. No container mechanics were added.
+Validated against installed Hytale **0.7.2**, revision **d769dc3d57881261a62858e1394f0e4de9a21eca**, with public **HyThief 1.3.3** candidate. This remains the original cell-based world, separate from Container Theft Test World. No container mechanics were added.
 
 ## Launch and reset
 
@@ -46,4 +46,6 @@ Actual connected-client prompts, UI rendering, item transfer, crouch/no-turn and
 Evidence: **.verification/Update_0_7_0/** (original/master/container hashes, native logs, exact NPC positions, candidate, reload). Reset restores this exact refreshed master; no other world/master or reusable prefab is changed.
 Current repeatable verification: Tools/Verify-Current-World.ps1 compiles only a disposable development verifier and checks a fresh copy of Master. It never installs the verifier or rewrites Master. The legacy Prepare-World/Save-Master tools retain historical 0.6.8 seeding assumptions; do not use them to refresh the current fixture.
 
-Current 0.7.1 integrity/reset/native evidence: Docs/TEST_ENVIRONMENT_0_7_1.md and DevTesting/Test_Infrastructure_0_7_1_20261013/. All three actual desktop shortcuts were executed and active/master hashes matched.
+Current 0.7.2 integrity/reset/native evidence: Docs/TEST_ENVIRONMENT_0_7_1.md and DevTesting/Test_Infrastructure_0_7_1_20261013/. All three actual desktop shortcuts were executed and active/master hashes matched.
+
+Current compatibility validation: Hytale 0.7.2 / d769dc3d57881261a62858e1394f0e4de9a21eca. Public 1.3.3 and development container.11 retain the same pickpocket gameplay. Native master load and desktop reset are required before handoff.

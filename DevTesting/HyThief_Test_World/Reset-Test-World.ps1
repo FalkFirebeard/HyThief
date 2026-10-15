@@ -13,6 +13,14 @@ function Assert-Closed {
 function Check-Hashes($base,$records){foreach($r in $records){$p=Join-Path $base $r.Relative;if(!(Test-Path -LiteralPath $p) -or (Get-FileHash -LiteralPath $p).Hash -ne $r.Hash){throw ('Checksum mismatch: '+$p)}}}
 Assert-Closed
 $marker=Get-Content -LiteralPath (Join-Path $master 'hythief-test-world.json') -Raw|ConvertFrom-Json
+
+$installedJar='C:\Users\askin\AppData\Roaming\Hytale\install\release\package\game\latest\Server\HytaleServer.jar'
+$archive=[IO.Compression.ZipFile]::OpenRead($installedJar)
+try{$reader=[IO.StreamReader]::new($archive.GetEntry('META-INF/MANIFEST.MF').Open());try{$nativeManifest=$reader.ReadToEnd()}finally{$reader.Dispose()}}finally{$archive.Dispose()}
+$nativeVersion=[regex]::Match($nativeManifest,'Implementation-Version: ([^\r\n]+)').Groups[1].Value.Trim()
+$nativeRevision=[regex]::Match($nativeManifest,'Implementation-Revision-Id: ([^\r\n]+)').Groups[1].Value.Trim()
+if(!$nativeVersion -or !$nativeRevision -or $marker.ValidatedHytaleVersion -cne $nativeVersion -or $marker.ValidatedHytaleRevision -cne $nativeRevision){throw 'General HyThief master does not match installed Hytale. Revalidate before reset. No save changed.'}
+
 if($marker.Kind -ne 'Firebeard.HyThief.DevWorld' -or $marker.Name -ne 'HyThief Test World'){throw 'Invalid pristine master marker'}
 $records=Get-Content -LiteralPath (Join-Path $root 'master-checksums.json') -Raw|ConvertFrom-Json
 Check-Hashes $master $records

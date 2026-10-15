@@ -26,7 +26,7 @@ $fixture=Get-Content -LiteralPath (Join-Path $master 'mods\ContainerTheftFixture
 if(!$installedVersion -or !$installedRevision -or $fixture.ServerVersion -cne ('='+$installedVersion) -or $marker.ValidatedHytaleVersion -cne $installedVersion -or $marker.ValidatedHytaleRevision -cne $installedRevision){throw 'Container master target/revision differs from installed Hytale. Audit and revalidate the fixture before resetting. No save changed.'}
 $nativeServer=Get-Content -LiteralPath (Join-Path $master 'config.json') -Raw|ConvertFrom-Json
 $nativeWorld=Get-Content -LiteralPath (Join-Path $master 'universe\worlds\default\config.json') -Raw|ConvertFrom-Json
-if($nativeServer.Version -ne 4 -or $nativeWorld.Version -ne 4){throw 'Native save codec version differs from the verified 0.7.1 codecs. No save changed.'}
+if($nativeServer.Version -ne 4 -or $nativeWorld.Version -ne 4){throw 'Native save codec version differs from the verified current codecs. No save changed.'}
 foreach($mf in Get-ChildItem -LiteralPath (Join-Path $master 'mods') -Filter manifest.json -Recurse -File){
  $pack=Get-Content -LiteralPath $mf.FullName -Raw|ConvertFrom-Json
  if($pack.ServerVersion -cne ('='+$installedVersion)){throw ('Embedded fixture pack target mismatch: '+$mf.FullName+'. No save changed.')}

@@ -6,5 +6,7 @@
     "$binary": "osnIYv9eTl6V2uE144h4+Q==",
     "$type": "04"
   },
-  "Name": "HyThief Test World"
+  "Name": "HyThief Test World",
+  "ValidatedHytaleVersion": "0.7.2",
+  "ValidatedHytaleRevision": "d769dc3d57881261a62858e1394f0e4de9a21eca"
 }

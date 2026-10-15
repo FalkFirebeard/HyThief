@@ -4,8 +4,8 @@ $ErrorActionPreference='Stop'
 $project='E:\Hytale adjustments\Mod Projects\HyThief'
 $root=Join-Path $project 'DevTesting\Container_Theft_Test_World'
 $jdk=Join-Path (Split-Path (Split-Path $project -Parent) -Parent) 'Toolchains\JDK25\bin'
-$server=Join-Path $project '.build\dependencies\HytaleServer-0.7.1.jar'
-$jar='E:\Hytale adjustments\Mod Projects\HyThief\DevTesting\Update_0_7_1\Candidates\Development\HyThief-1.3.1-container.11.jar'
+$server=Join-Path $project '.build\dependencies\HytaleServer-0.7.2.jar'
+$jar='E:\Hytale adjustments\Mod Projects\HyThief\build\libs\HyThief-1.3.1-container.11.jar'
 if(!$InputWorld){$InputWorld=Join-Path $root 'Master'}
 $run=Join-Path $PSScriptRoot ('development-native-'+$Response+'-'+[guid]::NewGuid().ToString('N'))
 if(![IO.Path]::GetFullPath($run).StartsWith($PSScriptRoot+'\development-native-')){throw 'Unsafe verifier path'}
@@ -23,7 +23,7 @@ try{foreach($entry in $zip.Entries){if($entry.FullName -match '^com/local/pickpo
  $dest=Join-Path $classes $entry.FullName;New-Item -ItemType Directory -Path (Split-Path $dest -Parent) -Force|Out-Null
  [IO.Compression.ZipFileExtensions]::ExtractToFile($entry,$dest,$true)
 }}}finally{$zip.Dispose()}
-$manifest=@{Group='FirebeardDev';Name='ContainerFactionBuilder';Version='1.0.0';ServerVersion='=0.7.1';Main='com.local.pickpocket.FactionFieldBuilder';Dependencies=@{'Local:HyThief'='*'}}
+$manifest=@{Group='FirebeardDev';Name='ContainerFactionBuilder';Version='1.0.0';ServerVersion='=0.7.2';Main='com.local.pickpocket.FactionFieldBuilder';Dependencies=@{'Local:HyThief'='*'}}
 $manifest|ConvertTo-Json|Set-Content -LiteralPath (Join-Path $classes 'manifest.json')
 & (Join-Path $jdk 'jar.exe') --create --file (Join-Path $run 'mods\FactionFieldBuilder.jar') -C $classes .
 if($LASTEXITCODE -ne 0){throw 'Verifier packaging failed'}

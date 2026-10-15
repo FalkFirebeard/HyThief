@@ -1,6 +1,6 @@
 # HyThief Container Theft Test World - mirrored color field
 
-Gameplay remains **HyThief-1.3.1-container.11.jar**, target =0.7.1. The fixture changed; no gameplay build or rules changed.
+Gameplay remains **HyThief-1.3.1-container.11.jar**, target =0.7.2. The fixture changed; no gameplay build or rules changed.
 
 Use the colored floor pad immediately in front of each identical native chest:
 
@@ -9,7 +9,7 @@ Use the colored floor pad immediately in front of each identical native chest:
 - **GREEN: NEARBY** - either eligible visible civilian witness / LOCAL response from both ready responders.
 - **YELLOW: FACTION / FERAN** - matching Feran witness / Sharptooth response.
 
-Four chests lie along the center line X=0 at Z=-6,-2,2,6. Each color pad spans two floor blocks; stand on its center seam X=0 at Z=-6.5,-2.5,1.5,5.5 respectively. Labels use colors and ownership names, not station numbers. GREEN is near the useful field center. Walk alongside the line to see each marker, then center yourself on that colored pad. No commands needed.
+Four chests lie along the center line X=0 at Z=-6,-2,2,6. Each color pad is the preserved 4-by-3 floor marker; stand on its center seam X=0 at Z=-6.5,-2.5,1.5,5.5 respectively. Labels use colors and ownership names, not station numbers. GREEN is near the useful field center. Walk alongside the line to see each marker, then center yourself on that colored pad. No commands needed.
 
 Spawn (0,64.1,10.5) faces the chest line. Both civilian witnesses are stationary at mirrored (-7.5,64,0.5)/(7.5,64,0.5), facing inward. Mobile responders sit farther behind them at (-21.5,64,0.5)/(21.5,64,0.5). Every pad is equally distant from both witnesses; both LOS/FOV checks pass. All witness-to-responder alert distances are 14 or 29 blocks, within unchanged LOCAL range 30. Both responders are farther than 20 blocks from every pad. No shelters/permanent walls.
 
@@ -21,4 +21,4 @@ Container visual range 20/6 and normal perception 15/4 are unchanged. Exactly fo
 
 ## Current build pairing and reset
 
-Use desktop **Reset HyThief Container Test World** for file-only reset. Before actually opening this save, restore the separately preserved development **HyThief-1.3.1-container.11.jar** targeting =0.7.1. Do not load its persistent ownership with public 1.3.2. The current public smoke setup intentionally leaves 1.3.2 active. The container native integrity check used development only in a disposable copy.
+Use desktop **Reset HyThief Container Test World** for file-only reset. Before actually opening this save, restore the separately preserved development **HyThief-1.3.1-container.11.jar** targeting =0.7.2. Do not load its persistent ownership with public 1.3.2. The current public smoke setup intentionally leaves 1.3.2 active. The container native integrity check used development only in a disposable copy.

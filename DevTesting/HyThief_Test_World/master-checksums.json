@@ -9,7 +9,7 @@
   },
   {
     "Relative": "hythief-test-world.json",
-    "Hash": "E4D9432191EE0E351252A8B4A32AA4B10CF311A5D8455E02345F321B0D9D92B3"
+    "Hash": "EF1DAE97B7FB0A05EDFFA9D0E61C7CE6D8B96D8042682B8500302647C0ABE6B5"
   },
   {
     "Relative": "mods\\Hytale_HytaleGenerator\\biome_editor.json",
@@ -36,14 +36,6 @@
     "Hash": "3EE81B81C0ABD11DDD4222E971A0F3B0E6AF0B6B6C4764BB9FEAD51C02E25DCB"
   },
   {
-    "Relative": "universe\\worlds\\default\\config.json",
-    "Hash": "AD421A9F6D42FBCF08BD7AA173B93E5E9DB8E40B86F5AE86A4492C93C51DB627"
-  },
-  {
-    "Relative": "universe\\worlds\\default\\config.json.bak",
-    "Hash": "FEB15764258A0C6A8EDDD2C08336A26F56FB50A48E24B452BBD0C60A2DD343E9"
-  },
-  {
     "Relative": "universe\\worlds\\default\\chunks\\-1.-1.region.bin",
     "Hash": "04D9D0E74C44A1B43AEF4E6E2E3F933CD7F4700330E7515C83418EEEAD859934"
   },
@@ -58,6 +50,14 @@
   {
     "Relative": "universe\\worlds\\default\\chunks\\0.0.region.bin",
     "Hash": "7F85FB58EDF95CD9C9918ADEB427089D646EF4E85DCE67DB6CBAA81611A55350"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\config.json",
+    "Hash": "AD421A9F6D42FBCF08BD7AA173B93E5E9DB8E40B86F5AE86A4492C93C51DB627"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\config.json.bak",
+    "Hash": "FEB15764258A0C6A8EDDD2C08336A26F56FB50A48E24B452BBD0C60A2DD343E9"
   },
   {
     "Relative": "universe\\worlds\\default\\resources\\BlockCounter.json",
