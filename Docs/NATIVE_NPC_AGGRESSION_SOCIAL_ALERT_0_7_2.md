@@ -135,3 +135,7 @@ Own diagnostic sources: `DevTesting/Native_Social_Alert_0_7_2/SocialAlertProbe.j
 The runner creates new isolated Run-* directories, aborts if one already exists, reads only a copy of the Container Master's world configuration to create a fresh flat save, and never resets or writes Master/ACTIVE. Its config branch temporarily packages the four minimal native Friendly overrides in that disposable run only. The original fixture, reset paths, installed public/development artifacts, and other projects remain unchanged.
 
 Stop for Firebeard review. No multi-faction hub, permanent theft-family rollout, public release, PREFAB work or gameplay build/deployment is part of this checkpoint.
+
+## Personal-witness follow-up
+
+The later personal-witness-only requirement is implemented/proven in `PASSIVE_HUMANOID_WITNESS_0_7_2.md`. The earlier Zombie/Skeleton group-propagation limitations do not block individual native combat. No universal social broadcast is required or added. Five exact representatives are native-server SUPPORTED; connected-client confirmation is pending.

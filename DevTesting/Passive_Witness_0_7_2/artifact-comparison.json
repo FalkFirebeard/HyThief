@@ -1,0 +1,12 @@
+{
+  "changedEntries": [
+    "com/local/pickpocket/HyThiefContainerDiagnostics$Command.class",
+    "com/local/pickpocket/HyThiefContainerDiagnostics.class",
+    "com/local/pickpocket/HyThiefPersonalWitnessAlert.class",
+    "manifest.json"
+  ],
+  "allGameplayAssetsUnchanged": true,
+  "allOtherJavaClassesUnchanged": true,
+  "public133Unchanged": true,
+  "candidateSHA256": "6b4c1500428674b4deb09c116ca6eb7d37360f9137e9a39ac527068d79dbe800"
+}
