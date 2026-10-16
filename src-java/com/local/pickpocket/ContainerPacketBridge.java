@@ -7,7 +7,7 @@ import com.hypixel.hytale.server.core.io.handlers.IPacketHandler;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-/** Diagnostic build only: transport-independent registration for two native transfer packets. */
+/** Transport-independent registration around the two native inventory transfer handlers. */
 final class ContainerPacketBridge implements AutoCloseable {
   private final IPacketHandler handler;
   private final Consumer<MoveItemStack> move;

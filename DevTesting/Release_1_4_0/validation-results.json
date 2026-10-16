@@ -1,0 +1,97 @@
+[
+  {
+    "Mode": "production-reaction-Kweebec",
+    "Run": "Native-Kweebec",
+    "Passed": true
+  },
+  {
+    "Mode": "production-reaction-Feran",
+    "Run": "Native-Feran",
+    "Passed": true
+  },
+  {
+    "Mode": "production-reaction-LOCAL",
+    "Run": "Native-LOCAL",
+    "Passed": true
+  },
+  {
+    "Mode": "peer-response-Trork_Warrior",
+    "Run": "Family-Trork_Warrior",
+    "Passed": true
+  },
+  {
+    "Mode": "peer-response-Outlander_Brute",
+    "Run": "Family-Outlander_Brute",
+    "Passed": true
+  },
+  {
+    "Mode": "peer-response-Skeleton_Fighter",
+    "Run": "Family-Skeleton_Fighter",
+    "Passed": true
+  },
+  {
+    "Mode": "peer-response-Zombie",
+    "Run": "Family-Zombie",
+    "Passed": true
+  },
+  {
+    "Mode": "Kweebec",
+    "Run": "Fixture-Kweebec",
+    "Passed": true
+  },
+  {
+    "Mode": "Feran",
+    "Run": "Fixture-Feran",
+    "Passed": true
+  },
+  {
+    "Mode": "LocalBoth",
+    "Run": "Fixture-LocalBoth",
+    "Passed": true
+  },
+  {
+    "Mode": "LocalKweebec",
+    "Run": "Fixture-LocalKweebec",
+    "Passed": true
+  },
+  {
+    "Mode": "LocalFeran",
+    "Run": "Fixture-LocalFeran",
+    "Passed": true
+  },
+  {
+    "Mode": "persistence",
+    "Run": "Ownership-Persistence",
+    "Passed": true
+  },
+  {
+    "Mode": "restart",
+    "Run": "Ownership-Restart",
+    "Passed": true
+  },
+  {
+    "Mode": "PublicPickpocketMatrix",
+    "Run": "Run-FinalMatrix",
+    "Passed": true
+  },
+  {
+    "Mode": "RepeatedFailedTransfers",
+    "Run": "Run-FinalTransfers",
+    "Passed": true
+  },
+  {
+    "Mode": "ResetActiveNativeLoad",
+    "Run": "Run-ResetReady",
+    "Passed": true
+  },
+  {
+    "Mode": "NativeProductionRoleAndSpawnerAssets",
+    "Run": "Run-ProductionAssets3",
+    "Passed": true
+  },
+  {
+    "Mode": "NativeSpawnerRestart",
+    "Run": "Run-ProductionRestart",
+    "Passed": true
+  }
+]

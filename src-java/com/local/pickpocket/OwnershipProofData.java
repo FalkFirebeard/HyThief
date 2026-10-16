@@ -6,7 +6,7 @@ import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.component.*;
 import com.hypixel.hytale.server.core.universe.world.storage.ChunkStore;
 
-/** Container development builds only; same serialized fields/ID as the persistence proof. */
+/** Persistent container ownership. The established serialized ID is retained for save compatibility. */
 public final class OwnershipProofData implements Component<ChunkStore> {
   public static final BuilderCodec<OwnershipProofData> CODEC =
       BuilderCodec.builder(OwnershipProofData.class, OwnershipProofData::new)

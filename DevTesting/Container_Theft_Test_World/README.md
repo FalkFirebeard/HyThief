@@ -1,3 +1,15 @@
+# Current candidate: HyThief 1.4.0 / Hytale 0.7.2
+
+Use the installed **HyThief-1.4.0.jar** for this candidate test. The fixture remains nine chests / fourteen NPCs, with its existing geometry, idle holds and native combat. The world-local asset pack opts its two stationary aliases into the candidate native witness groups; the candidate itself contains no fixture role IDs.
+
+Orange Goblin is now explicitly **DEFERRED / NO HYTHIEF CONTAINER RESPONSE EXPECTED**. It remains a development control; do not expect the container.12 caught message there. Purple Trork, Cyan Outlander, White Skeleton Fighter and Black Zombie remain active. Start at Purple, reset between caught tests, then test the original RED/BLUE/GREEN/YELLOW area. Opening, browsing, deposits and internal rearranging are safe. Standing visible withdrawals should produce one caught message and native response. Crouch outside 6 blocks should be unseen; standing range remains 20. Normal pickpocket perception remains 15/4.
+
+The existing desktop reset shortcut and scripts are unchanged. Master retains exact original native save data, positions, inventory and geometry; only two fixture-local NPC group assets were added. See Docs/CONTAINER_THEFT_1_4_0_ARCHITECTURE.md and Docs/CONTAINER_THEFT_1_4_0_CONTENT_AUDIT.md.
+
+---
+
+The following are historical container.12 fixture notes (superseded above for candidate version and Goblin policy).
+
 # HyThief Container Theft Test World — current client fixture
 
 Use the installed **HyThief-1.3.1-container.12.jar**, target **=0.7.2**. This fixture expansion did not rebuild/change gameplay. Do not pair this ownership save with public HyThief.

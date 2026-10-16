@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.local'
-version = '1.3.1-container.12'
+version = '1.4.0'
 
 def stableVersion = '0.7.2'
 def serverJar = layout.projectDirectory.file(".build/dependencies/HytaleServer-${stableVersion}.jar")
@@ -22,6 +22,7 @@ java {
 sourceSets {
     main {
         java.setSrcDirs(['src-java'])
+        java.exclude '**/HyThiefContainerDiagnostics.java', '**/DevContainerTestWorld.java', '**/OwnedContainerRegistry.java'
         resources.setSrcDirs([])
     }
 }
@@ -142,7 +143,7 @@ tasks.named('processResources') {
     from('Server') {
         into 'Server'
         exclude 'Prefabs/Testing/**'
-        exclude 'NPC/Spawn/Markers/*_Test_*.json'
+        exclude 'NPC/Spawn/Markers/*_Test_*.json', 'NPC/Spawn/Markers/*_Test.json'
         // Generated variants replace these inputs only in build output, not original source.
         // A role that needs no rewritten reference is copied from the generator as well below.
         supportedMatrix.each { exclude it.Asset.replaceFirst('^Server/', '') }

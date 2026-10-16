@@ -1,3 +1,14 @@
+# Reproducible production text resources; leave binary assets and saved-world bytes alone.
+/Common/**/*.ui text eol=lf
+/Common/**/*.blockymodel text eol=lf
+/Server/**/*.json text eol=lf
+/Server/**/*.lang text eol=lf
+/BuildSupport/**/*.json text eol=lf
+/config/*.json text eol=lf
+/src-java/**/*.java text eol=lf
+/build.gradle text eol=lf
+/manifest.json text eol=lf
+
 # Preserve exact saved-world bytes so reset checksums survive checkout.
 /DevTesting/HyThief_Test_World/Master/** -text
 

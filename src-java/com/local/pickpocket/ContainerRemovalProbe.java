@@ -7,7 +7,7 @@ import java.time.Instant;
 import java.util.*;
 import java.util.function.Consumer;
 
-/** Test-only synchronous transfer evidence. Does not change inventories. */
+/** Synchronous successful transfer evidence. Does not change inventories. */
 final class ContainerRemovalProbe {
   record Removal(short slot, String item, int amount, Instant time, long nanoTime) {}
   private final ItemContainer chest;

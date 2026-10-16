@@ -1,0 +1,9 @@
+{
+  "IncludeRoles": [
+    "Feran_Burrower",
+    "Feran_Civilian",
+    "Feran_Longtooth",
+    "Feran_Sharptooth",
+    "Feran_Windwalker"
+  ]
+}

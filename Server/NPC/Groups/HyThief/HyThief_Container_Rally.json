@@ -1,0 +1,17 @@
+{
+  "IncludeRoles": [
+    "Trork_Brawler",
+    "Trork_Mauler",
+    "Trork_Sentry",
+    "Trork_Sentry_Patrol",
+    "Trork_Unarmed",
+    "Trork_Warrior",
+    "Trork_Warrior_Patrol",
+    "Outlander_Berserker",
+    "Outlander_Brute",
+    "Outlander_Cultist",
+    "Outlander_Hunter",
+    "Outlander_Peon",
+    "Outlander_Stalker"
+  ]
+}

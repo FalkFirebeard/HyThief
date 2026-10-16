@@ -14,7 +14,7 @@ import org.joml.Vector3d;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Development fixture only: fresh visual evidence captured in the removal callback. */
+/** Fresh native visual evidence captured at successful source removal. */
 final class ContainerVisualWitness {
   // Container theft balance experiment only; normal NPC/pickpocket perception is unchanged.
   static final double RANGE = 20.0;
@@ -32,31 +32,12 @@ final class ContainerVisualWitness {
         + " Crouched=" + crouched + " PlayerPosition=" + playerPosition; }
   }
   private ContainerVisualWitness() {}
-  static Evidence capture(Ref<EntityStore> player, Store<EntityStore> store) {
-    if (player == null || !player.isValid() || player.getStore() != store)
-      return missing("invalid-player");
-    var transform = store.getComponent(player, TransformComponent.getComponentType());
-    if (transform == null) return missing("missing-player-transform");
-    var position = new Vector3d(transform.getPosition());
-    var movement = store.getComponent(player, MovementStatesComponent.getComponentType());
-    boolean crouched = movement != null && movement.getMovementStates().crouching;
-    // Select exactly the controlled Sapling; other nearby NPCs are outside this prototype.
-    List<Ref<EntityStore>> candidates = new ArrayList<>();
-    store.forEachChunk(NPCEntity.getComponentType(), (chunk, buffer) -> {
-      for (int i = 0; i < chunk.size(); i++) {
-        var ref = chunk.getReferenceTo(i);
-        var npc = store.getComponent(ref, NPCEntity.getComponentType());
-        var t = store.getComponent(ref, TransformComponent.getComponentType());
-        if ("Kweebec_Sapling".equals(npc.getRoleName()) && npc.getRole() != null && t != null
-            && t.getPosition().distance(.5, 64, 10.5) < .75
-            && store.getComponent(ref, DeathComponent.getComponentType()) == null) candidates.add(ref);
-      }
-    });
-    if (candidates.size() != 1) return missing("missing-or-ambiguous-fixture-witness");
-    return evaluate(candidates.getFirst(), player, position, crouched, store);
-  }
   static List<Evidence> capture(Ref<EntityStore> player, Store<EntityStore> store,
       OwnershipProofData ownership, java.util.Set<String> enabledRoles, java.util.function.Consumer<String> log) {
+    return capture(player, store, ownership, ref -> enabledRoles.contains(store.getComponent(ref, NPCEntity.getComponentType()).getRoleName()), log);
+  }
+  static List<Evidence> capture(Ref<EntityStore> player, Store<EntityStore> store,
+      OwnershipProofData ownership, java.util.function.Predicate<Ref<EntityStore>> eligible, java.util.function.Consumer<String> log) {
     var result=new ArrayList<Evidence>();
     if(player==null || !player.isValid())return result;
     var t=store.getComponent(player,TransformComponent.getComponentType());
@@ -69,7 +50,7 @@ final class ContainerVisualWitness {
       for(int n=0;n<chunk.size();n++) {
         var ref=chunk.getReferenceTo(n);var npc=store.getComponent(ref,NPCEntity.getComponentType());
         var transform=store.getComponent(ref,TransformComponent.getComponentType());
-        if(npc.getRole()!=null && enabledRoles.contains(npc.getRoleName()) && transform!=null
+        if(npc.getRole()!=null && eligible.test(ref) && transform!=null
             && transform.getPosition().distance(position)<=RANGE
             && store.getComponent(ref,DeathComponent.getComponentType())==null)candidates.add(ref);
       }

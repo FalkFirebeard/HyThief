@@ -1,0 +1,3066 @@
+{
+  "Hytale": "0.7.2",
+  "Revision": "d769dc3d57881261a62858e1394f0e4de9a21eca",
+  "Containers": [
+    {
+      "Id": "Armor_Adamantite_Chest",
+      "Asset": "Server/Item/Items/Armor/Adamantite/Armor_Adamantite_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Bronze_Chest",
+      "Asset": "Server/Item/Items/Armor/Bronze/Armor_Bronze_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Bronze_Ornate_Chest",
+      "Asset": "Server/Item/Items/Armor/Bronze_Ornate/Armor_Bronze_Ornate_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Cloth_Cindercloth_Chest",
+      "Asset": "Server/Item/Items/Armor/Cloth_Cindercloth/Armor_Cloth_Cindercloth_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Cloth_Cotton_Chest",
+      "Asset": "Server/Item/Items/Armor/Cloth_Cotton/Armor_Cloth_Cotton_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Cloth_Linen_Chest",
+      "Asset": "Server/Item/Items/Armor/Cloth_Linen/Armor_Cloth_Linen_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Cloth_Silk_Chest",
+      "Asset": "Server/Item/Items/Armor/Cloth_Silk/Armor_Cloth_Silk_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Cloth_Wool_Chest",
+      "Asset": "Server/Item/Items/Armor/Cloth_Wool/Armor_Cloth_Wool_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Cobalt_Chest",
+      "Asset": "Server/Item/Items/Armor/Cobalt/Armor_Cobalt_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Copper_Chest",
+      "Asset": "Server/Item/Items/Armor/Copper/Armor_Copper_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Diving_Crude_Chest",
+      "Asset": "Server/Item/Items/Armor/Diving_Crude/Armor_Diving_Crude_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Iron_Chest",
+      "Asset": "Server/Item/Items/Armor/Iron/Armor_Iron_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Kweebec_Chest",
+      "Asset": "Server/Item/Items/Armor/Kweebec/Armor_Kweebec_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Leather_Heavy_Chest",
+      "Asset": "Server/Item/Items/Armor/Leather_Heavy/Armor_Leather_Heavy_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Leather_Light_Chest",
+      "Asset": "Server/Item/Items/Armor/Leather_Light/Armor_Leather_Light_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Leather_Medium_Chest",
+      "Asset": "Server/Item/Items/Armor/Leather_Medium/Armor_Leather_Medium_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Leather_Raven_Chest",
+      "Asset": "Server/Item/Items/Armor/Leather_Raven/Armor_Leather_Raven_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Leather_Soft_Chest",
+      "Asset": "Server/Item/Items/Armor/Leather_Soft/Armor_Leather_Soft_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Mithril_Chest",
+      "Asset": "Server/Item/Items/Armor/Mithril/Armor_Mithril_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Onyxium_Chest",
+      "Asset": "Server/Item/Items/Armor/Onyxium/Armor_Onyxium_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Prisma_Chest",
+      "Asset": "Server/Item/Items/Armor/Prisma/Armor_Prisma_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_QA_Chest",
+      "Asset": "Server/Item/Items/Armor/QA/Armor_QA_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Steel_Chest",
+      "Asset": "Server/Item/Items/Armor/Steel/Armor_Steel_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Steel_Ancient_Chest",
+      "Asset": "Server/Item/Items/Armor/Steel_Ancient/Armor_Steel_Ancient_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Thorium_Chest",
+      "Asset": "Server/Item/Items/Armor/Thorium/Armor_Thorium_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Trooper_Chest",
+      "Asset": "Server/Item/Items/Armor/Trooper/Armor_Trooper_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Trork_Chest",
+      "Asset": "Server/Item/Items/Armor/Trork_Warrior/Armor_Trork_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Wood_Chest",
+      "Asset": "Server/Item/Items/Armor/Wood/Armor_Wood_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Armor_Wool_Chest",
+      "Asset": "Server/Item/Items/Armor/Wool/Armor_Wool_Chest.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Debug_Armor_D_Chest_Of_Damage_Reduction",
+      "Asset": "Server/Item/Items/Armor/_Debug/Debug_Armor_D_Chest_Of_Damage_Reduction.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Debug_Armor_Leather_Light_Chest_Mods",
+      "Asset": "Server/Item/Items/Armor/_Debug/Debug_Armor_Leather_Light_Chest_Mods.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Debug_Armor_O_Chest_Of_Damage_Enhancement",
+      "Asset": "Server/Item/Items/Armor/_Debug/Debug_Armor_O_Chest_Of_Damage_Enhancement.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Container_Bucket",
+      "Asset": "Server/Item/Items/Container/Container_Bucket.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Klops": 68,
+        "Other": 419,
+        "Feran": 3,
+        "Kweebec": 21,
+        "Outlander": 9
+      },
+      "Examples": [
+        "Server/Prefabs/Cave/Klops/Basalt/Bathroom/Klops_Basalt_Bathroom_001.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bathroom/Klops_Basalt_Bathroom_003.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bathroom/Klops_Basalt_Bathroom_003.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bathroom/Klops_Basalt_Bathroom_004.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Kweebec_Chest_Large",
+      "Asset": "Server/Item/Items/Container/Furniture_Kweebec_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Ancient_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Ancient/Furniture_Ancient_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Ancient_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Ancient/Furniture_Ancient_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 676,
+        "Outlander": 8,
+        "Trork": 4
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Ancient_Barrel",
+      "Asset": "Server/Item/Items/Furniture/Ancient/Unique/Furniture_Ancient_Barrel.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 5666,
+        "Klops": 196,
+        "Skeleton": 3,
+        "Outlander": 142,
+        "Trork": 25
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bathroom/Klops_Basalt_Bathroom_001.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bathroom/Klops_Basalt_Bathroom_001.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Ancient_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Ancient/Unique/Furniture_Ancient_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Ancient_Crate",
+      "Asset": "Server/Item/Items/Furniture/Ancient/Unique/Furniture_Ancient_Crate.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 4369,
+        "Skeleton": 14,
+        "Outlander": 21,
+        "Trork": 15
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json",
+        "Server/Prefabs/Cave/Nodes/Rock_Basalt/Mines_Round/Node_Basalt_Mines_Round_001.prefab.json",
+        "Server/Prefabs/Cave/Nodes/Rock_Basalt/Mines_Round/Node_Basalt_Mines_Round_001.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Christmas_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Christmas/Furniture_Christmas_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Christmas_Chest_Small_Green",
+      "Asset": "Server/Item/Items/Furniture/Christmas/Furniture_Christmas_Chest_Small_Green.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Christmas_Chest_Small_Red",
+      "Asset": "Server/Item/Items/Furniture/Christmas/Furniture_Christmas_Chest_Small_Red.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Christmas_Chest_Small_RedDotted",
+      "Asset": "Server/Item/Items/Furniture/Christmas/Furniture_Christmas_Chest_Small_RedDotted.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Christmas_Chest_Small_White",
+      "Asset": "Server/Item/Items/Furniture/Christmas/Furniture_Christmas_Chest_Small_White.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Crude_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Crude/Furniture_Crude_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Crude_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Crude/Furniture_Crude_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 76,
+        "Goblin": 4
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Crude_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Crude/Unique/Furniture_Crude_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Desert_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Desert/Furniture_Desert_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Desert_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Desert/Furniture_Desert_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 56
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Desert_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Desert/Unique/Furniture_Desert_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Dungeon_Chest_Epic",
+      "Asset": "Server/Item/Items/Furniture/Dungeon/Furniture_Dungeon_Chest_Epic.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Dungeon_Chest_Epic_Large",
+      "Asset": "Server/Item/Items/Furniture/Dungeon/Furniture_Dungeon_Chest_Epic_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Dungeon_Chest_Legendary_Large",
+      "Asset": "Server/Item/Items/Furniture/Dungeon/Furniture_Dungeon_Chest_Legendary_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 1
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Feran_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Feran/Furniture_Feran_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Feran_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Feran/Furniture_Feran_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 16,
+        "Feran": 40
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Feran_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Feran/Unique/Furniture_Feran_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Frozen_Castle_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Frozen/Furniture_Frozen_Castle_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Frozen_Castle_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Frozen/Furniture_Frozen_Castle_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 8
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Frozen_Castle_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Frozen/Unique/Furniture_Frozen_Castle_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Goblin_ChestStolen_Small",
+      "Asset": "Server/Item/Items/Furniture/Goblin/Furniture_Goblin_ChestStolen_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "D_DEFERRED_GOBLIN",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Goblin_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "D_DEFERRED_GOBLIN",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Goblin_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "D_DEFERRED_GOBLIN",
+      "PrefabUsage": {
+        "Other": 4
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json",
+        "Server/Prefabs/Goblin_Thief_Chest.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Outpost_Goblin/Encounter_Outpost_Goblin_002.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Goblin_Coffer",
+      "Asset": "Server/Item/Items/Furniture/Goblin/Furniture_Goblin_Coffer.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "D_DEFERRED_GOBLIN",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Throwable_Explosive_Barrel",
+      "Asset": "Server/Item/Items/Furniture/Goblin/Throwable_Explosive_Barrel.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": {
+        "Interactions": [
+          {
+            "Type": "CarryBlock",
+            "EntityEffectId": "Carry_Explosive_Barrel"
+          }
+        ]
+      },
+      "Classification": "D_DEFERRED_GOBLIN",
+      "PrefabUsage": {
+        "Other": 330
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Debug/Entrance_002.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Debug/Entrance_002.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Debug/Entrance_002.prefab.json"
+      ]
+    },
+    {
+      "Id": "Throwable_Explosive_Barrel_Gobliterator",
+      "Asset": "Server/Item/Items/Furniture/Goblin/Throwable_Explosive_Barrel_Gobliterator.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": {
+        "Interactions": [
+          {
+            "Type": "CarryBlock",
+            "EntityEffectId": "Carry_Explosive_Barrel"
+          }
+        ]
+      },
+      "Classification": "D_DEFERRED_GOBLIN",
+      "PrefabUsage": {
+        "Other": 1
+      },
+      "Examples": [
+        "Server/Prefabs/Dungeon/Deepworks/Gobliterator_Arena_Barrel_Arm.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Royal_Magic_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Grand_Wizard/Furniture_Royal_Magic_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Royal_Magic_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Grand_Wizard/Furniture_Royal_Magic_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 8
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Royal_Magic_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Grand_Wizard/Unique/Furniture_Royal_Magic_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Human_Ruins_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Human/Furniture_Human_Ruins_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Human_Ruins_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Human/Furniture_Human_Ruins_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 344
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Human_Ruins_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Human/Unique/Furniture_Human_Ruins_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Jungle_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Jungle/Furniture_Jungle_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Jungle_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Jungle/Furniture_Jungle_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 8
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Jungle_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Jungle/Unique/Furniture_Jungle_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Kweebec_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Kweebec/Furniture_Kweebec_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Kweebec_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Kweebec/Furniture_Kweebec_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 8,
+        "Kweebec": 160
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Lumberjack_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Lumberjack/Furniture_Lumberjack_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Lumberjack_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Lumberjack/Furniture_Lumberjack_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 12,
+        "Outlander": 80
+      },
+      "Examples": [
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Normal/Quarry/Encounter_Zone3_Tier2_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Normal/Quarry/Encounter_Zone3_Tier2_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Normal/Quarry/Encounter_Zone3_Tier2_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Normal/Quarry/Encounter_Zone3_Tier2_001.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Lumberjack_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Lumberjack/Unique/Furniture_Lumberjack_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Scarak_Hive_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Scarak_Hive/Furniture_Scarak_Hive_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Scarak_Hive_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Scarak_Hive/Unique/Furniture_Scarak_Hive_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Tavern_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Tavern/Furniture_Tavern_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Tavern_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Tavern/Furniture_Tavern_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 232,
+        "Klops": 112
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Tavern_Barrel",
+      "Asset": "Server/Item/Items/Furniture/Tavern/Unique/Furniture_Tavern_Barrel.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 2804,
+        "Klops": 120,
+        "Goblin": 25,
+        "Trork": 95,
+        "Feran": 18,
+        "Outlander": 88
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json",
+        "Server/Prefabs/Cave/Klops/Dry/Bathroom/Klops_Dry_Bathroom_001.prefab.json",
+        "Server/Prefabs/Cave/Klops/Dry/Bathroom/Klops_Dry_Bathroom_001.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Tavern_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Tavern/Unique/Furniture_Tavern_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Temple_Dark_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Temple_Dark/Furniture_Temple_Dark_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Temple_Dark_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Temple_Dark/Furniture_Temple_Dark_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 36,
+        "Outlander": 4
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Temple_Dark_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Temple_Dark/Unique/Furniture_Temple_Dark_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Temple_Emerald_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Temple_Emerald/Furniture_Temple_Emerald_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Temple_Emerald_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Temple_Emerald/Furniture_Temple_Emerald_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 8
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Temple_Emerald_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Temple_Emerald/Unique/Furniture_Temple_Emerald_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Temple_Light_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Temple_Light/Furniture_Temple_Light_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Temple_Light_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Temple_Light/Furniture_Temple_Light_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 8
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Temple_Light_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Temple_Light/Unique/Furniture_Temple_Light_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Temple_Scarak_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Temple_Scarak/Furniture_Temple_Scarak_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Temple_Scarak_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Temple_Scarak/Unique/Furniture_Temple_Scarak_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Temple_Wind_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Temple_Wind/Furniture_Temple_Wind_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Temple_Wind_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Temple_Wind/Furniture_Temple_Wind_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 20
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Temple_Wind_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Temple_Wind/Unique/Furniture_Temple_Wind_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Village_Chest_Small",
+      "Asset": "Server/Item/Items/Furniture/Village/Furniture_Village_Chest_Small.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 18
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {
+        "Other": 2
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Village_Wardrobe",
+      "Asset": "Server/Item/Items/Furniture/Village/Furniture_Village_Wardrobe.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 64
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json"
+      ]
+    },
+    {
+      "Id": "Furniture_Village_Chest_Large",
+      "Asset": "Server/Item/Items/Furniture/Village/Unique/Furniture_Village_Chest_Large.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 36
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Furniture_Village_Crate",
+      "Asset": "Server/Item/Items/Furniture/Village/Unique/Furniture_Village_Crate.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 4232,
+        "Klops": 67,
+        "Goblin": 10,
+        "Trork": 195,
+        "Feran": 1,
+        "Outlander": 359
+      },
+      "Examples": [
+        "Server/Prefabs/Blocksets/Blocksets_08.prefab.json",
+        "Server/Prefabs/Blocksets/Blocksets_09.prefab.json",
+        "Server/Prefabs/Cave/Klops/Dry/Cellar/Klops_Dry_Cellar_002.prefab.json",
+        "Server/Prefabs/Cave/Klops/Dry/Cellar/Klops_Dry_Cellar_002.prefab.json"
+      ]
+    },
+    {
+      "Id": "Tool_Capture_Crate",
+      "Asset": "Server/Item/Items/Tool/Capture_Crate/Tool_Capture_Crate.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {},
+      "Examples": []
+    },
+    {
+      "Id": "Debug_Falling_Barrel",
+      "Asset": "Server/Item/Items/_Debug/Debug_Falling_Barrel.json",
+      "InteractiveInventory": false,
+      "Inventory": null,
+      "NativeUse": null,
+      "Classification": "C_DECORATIVE_OR_OTHER",
+      "PrefabUsage": {
+        "Other": 16
+      },
+      "Examples": [
+        "Server/Prefabs/Orbis/Goblins/Incidental_Cave_Ceiling/Goblin_Ceiling_Medium_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Incidental_Cave_Ceiling/Goblin_Ceiling_Medium_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Incidental_Cave_Ceiling/Goblin_Ceiling_Medium_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Incidental_Cave_Ceiling/Goblin_Ceiling_Medium_001.prefab.json"
+      ]
+    },
+    {
+      "Id": "Debug_MusicPlayer",
+      "Asset": "Server/Item/Items/_Debug/Debug_MusicPlayer.json",
+      "InteractiveInventory": true,
+      "Inventory": {
+        "Capacity": 1
+      },
+      "NativeUse": "Open_Container",
+      "Classification": "C_UNOWNED_DEFAULT",
+      "PrefabUsage": {},
+      "Examples": []
+    }
+  ],
+  "Tables": {
+    "Portals_Goblin_Chest_Cache": {
+      "Asset": "Server/Item/Block/Spawners/Portals_Goblin_Chest_Cache.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Goblin_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Portals_Goblin_Chest_Cache",
+                "StayOpenWhenEmpty": true
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 41,
+      "UsageExamples": [
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Crypt/Treasure/Treasure_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/End/Goblin_Mine_End_004_Boomshroom.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/Entrance/Goblin_Mine_Room_X_001_Lobber.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/Room_X/Goblin_Mine_Room_X_001_Lobber.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Cache/Corner/Slum_Corner_Cache_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Cache/Corner/Slum_Corner_Cache_002.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Cache/Corner/Slum_Corner_Cache_003.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Cache/Corner/Slum_Corner_Cache_004.prefab.json"
+      ],
+      "Families": {
+        "Other": 41
+      }
+    },
+    "Portals_Goblin_Chest_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Portals_Goblin_Chest_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Goblin_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Portals_Goblin_Chest_Tier1",
+                "StayOpenWhenEmpty": true
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 107,
+      "UsageExamples": [
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Enkindled_Quarry/Enkindled_Quarry_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Enkindled_Quarry/Enkindled_Quarry_002.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Enkindled_Quarry/Enkindled_Quarry_004.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Enkindled_Quarry/Enkindled_Quarry_006.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Enkindled_Quarry/Enkindled_Quarry_007.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Enkindled_Quarry/Enkindled_Quarry_008.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Enkindled_Quarry/Enkindled_Quarry_009.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Enkindled_Quarry/Enkindled_Quarry_010.prefab.json"
+      ],
+      "Families": {
+        "Other": 107
+      }
+    },
+    "Portals_Goblin_Chest_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Portals_Goblin_Chest_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Goblin_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Portals_Goblin_Chest_Tier2",
+                "StayOpenWhenEmpty": true
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 80,
+      "UsageExamples": [
+        "Server/Prefabs/Orbis/Goblins/Debug/Entrance_002.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Debug/Goblin_Spider_Entrance_Graybox_002.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/End/Goblin_Mine_End_001_Boomshroom.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/End/Goblin_Mine_End_003_Boomshroom.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/Entrance/Goblin_Mine_Room_X_001_Lobber.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/Entrance/Goblin_Mine_Room_X_Graybox_002_Lobber.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/Room_Corner/Goblin_Mine_Corner_001_Miners.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/Room_Corner/Goblin_Mine_Corner_Graybox_002_Miners.prefab.json"
+      ],
+      "Families": {
+        "Other": 80
+      }
+    },
+    "Portals_Goblin_Chest_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Portals_Goblin_Chest_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Goblin_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Portals_Goblin_Chest_Tier3",
+                "StayOpenWhenEmpty": true
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 38,
+      "UsageExamples": [
+        "Server/Prefabs/Orbis/Goblins/Debug/Goblin_Spider_Entrance_Graybox_002.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/End/Goblin_Mine_End_002_Boomshroom.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/Room_Corner_2/Goblin_Mine_Corner_Graybox_002_Boomshroom.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Mine/Room_T/Goblin_Mine_T_Graybox_002_BoomshroomMiner.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum/Standard/Slum_Market_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum/Standard/Slum_Market_002.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum/Standard/Slum_Market_003.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum/Standard/Slum_Market_005.prefab.json"
+      ],
+      "Families": {
+        "Other": 38
+      }
+    },
+    "Portals_Goblin_Chest_Tier4": {
+      "Asset": "Server/Item/Block/Spawners/Portals_Goblin_Chest_Tier4.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Goblin_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Portals_Goblin_Chest_Tier4",
+                "StayOpenWhenEmpty": true
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 12,
+      "UsageExamples": [
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Dungeon/Elite_001/Encounter_Elite_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Dungeon/Elite_002/Encounter_Elite_002.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Dungeon/Elite_003/Encounter_Elite_003.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Dungeon/Elite_004/Encounter_Elite_004.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Dungeon/Entrance/Main_Encounter.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Dungeon/Kitchen/Encounter_Kitchen.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Mountain_Statue/Statue_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Mountain_Statue/Statue_002.prefab.json"
+      ],
+      "Families": {
+        "Other": 12
+      }
+    },
+    "Portals_Goblin_Chest_Tier5": {
+      "Asset": "Server/Item/Block/Spawners/Portals_Goblin_Chest_Tier5.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Goblin_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Portals_Goblin_Chest_Tier5",
+                "StayOpenWhenEmpty": true
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 2,
+      "UsageExamples": [
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Dungeon/Elite_003/Encounter_Elite_003.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Slum_Dungeon/Elite_Arena_003/Encounter_Elite_003.prefab.json"
+      ],
+      "Families": {
+        "Other": 2
+      }
+    },
+    "Portals_Goblin_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Portals_Goblin_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Goblin_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Portals_Goblin_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 0,
+      "UsageExamples": [],
+      "Families": {}
+    },
+    "Portals_Goblin_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Portals_Goblin_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Goblin_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Portals_Goblin_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 0,
+      "UsageExamples": [],
+      "Families": {}
+    },
+    "Portals_Hollows_Ancient_Chest": {
+      "Asset": "Server/Item/Block/Spawners/Portals_Hollows_Ancient_Chest.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Portals_Hollows_Ancient_Chest",
+                "StayOpenWhenEmpty": true
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 19,
+      "UsageExamples": [
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Crypt/Corridor_Up/Large_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Cave_Crypt/Elite/Crypt_Elite_Room_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Outpost_Enkindled/Encounter_Outpost_Enkindled_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Shack_Enkindled/Enkindled_Shack_Undead_001.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Shack_Enkindled/Enkindled_Shack_Undead_002.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Shack_Enkindled/Enkindled_Shack_Undead_003.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Shack_Enkindled/Enkindled_Shack_Undead_004.prefab.json",
+        "Server/Prefabs/Orbis/Goblins/Encounter_Surface_Objective_Shack_Enkindled/Enkindled_Shack_Undead_005.prefab.json"
+      ],
+      "Families": {
+        "Other": 19
+      }
+    },
+    "Portals_Oasis": {
+      "Asset": "Server/Item/Block/Spawners/Portals_Oasis.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Feran_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Portals_Oasis"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 9,
+      "UsageExamples": [
+        "Server/Prefabs/Npc/Feran/Portals_Oasis/Chieftain/Feran_Tier2_Chieftain_001.prefab.json",
+        "Server/Prefabs/Npc/Feran/Portals_Oasis/Hut/Feran_Tier2_Hut_001.prefab.json",
+        "Server/Prefabs/Npc/Feran/Portals_Oasis/Hut/Feran_Tier2_Hut_002.prefab.json",
+        "Server/Prefabs/Npc/Feran/Portals_Oasis/Hut/Feran_Tier2_Hut_004.prefab.json",
+        "Server/Prefabs/Npc/Feran/Portals_Oasis/Hut/Feran_Tier2_Hut_005.prefab.json",
+        "Server/Prefabs/Npc/Feran/Portals_Oasis/Pillar_Hut/Feran_Tier3_Hut_001.prefab.json"
+      ],
+      "Families": {
+        "Feran": 9
+      }
+    },
+    "Zone1_Encounters_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Encounters_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Crude_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Encounters_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 167,
+      "UsageExamples": [
+        "Server/Prefabs/Dungeon/Labyrinth/Boss_Prep/Labyrinth_Boss_Prep_001.prefab.json",
+        "Server/Prefabs/Dungeon/Labyrinth/Room/Corner_EL/Labyrinth_Room_Corner_EL_001.prefab.json",
+        "Server/Prefabs/Dungeon/Labyrinth/Room/Single_EL/Labyrinth_Room_Single_EL_001.prefab.json",
+        "Server/Prefabs/Dungeon/Labyrinth/Room/Single_EL/Labyrinth_Room_Single_EL_003.prefab.json",
+        "Server/Prefabs/Dungeon/Labyrinth/Room/Single_SR/Labyrinth_Room_Single_SR_001.prefab.json",
+        "Server/Prefabs/Dungeon/Labyrinth/Room/Single_WR/Labyrinth_Room_Single_WR_001.prefab.json",
+        "Server/Prefabs/Dungeon/Labyrinth/Room/Straight_SR/Labyrinth_Room_Straight_SR_003.prefab.json",
+        "Server/Prefabs/Dungeon/Labyrinth/Room/Straight_WR/Labyrinth_Room_Straight_WR_002.prefab.json"
+      ],
+      "Families": {
+        "Other": 167
+      }
+    },
+    "Zone1_Encounters_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Encounters_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Village_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Encounters_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 274,
+      "UsageExamples": [
+        "Server/Prefabs/Dungeon/Cursed_Crypt/Cursed/C_Large_Cave/Medium/Crypt_Cursed_C_Large_Cave_Medium_001.prefab.json",
+        "Server/Prefabs/Dungeon/Cursed_Crypt/Cursed/Rooms/End_Small/Crypt_Cursed_Rooms_End_Small_001.prefab.json",
+        "Server/Prefabs/Dungeon/Stone/Level_2/Room_Small_Left/Stone_Level_2_Room_Small_Left_001.prefab.json",
+        "Server/Prefabs/Dungeon/Stone/Level_2/Room_Small_Right/Stone_Level_2_Room_Small_Right_001.prefab.json",
+        "Server/Prefabs/Dungeon/Stone/Level_3/Room_Large/Stone_Level_3_Room_Large_003.prefab.json",
+        "Server/Prefabs/Mineshaft/Shaft/Mines/Stage_01/Branch_Right/Mineshaft_Shaft_Stage_01_Branch_Right_001.prefab.json",
+        "Server/Prefabs/Mineshaft/Shaft/Mines/Stage_01/Branch_Right/Mineshaft_Shaft_Stage_01_Branch_Right_002.prefab.json",
+        "Server/Prefabs/Mineshaft/Shaft/Mines/Stage_01/Branch_Right/Mineshaft_Shaft_Stage_01_Branch_Right_003.prefab.json"
+      ],
+      "Families": {
+        "Other": 274
+      }
+    },
+    "Zone1_Encounters_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Encounters_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Dungeon_Chest_Epic",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Encounters_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 387,
+      "UsageExamples": [
+        "Server/Prefabs/Cave/Klops/Dry/Main_2/Klops_Dry_Main2_001.prefab.json",
+        "Server/Prefabs/Cave/Klops/Oak/Bedroom/Klops_Oak_Bedroom_001.prefab.json",
+        "Server/Prefabs/Cave/Klops/Oak/Bedroom/Klops_Oak_Bedroom_002.prefab.json",
+        "Server/Prefabs/Cave/Klops/Oak/Bedroom/Klops_Oak_Bedroom_003.prefab.json",
+        "Server/Prefabs/Cave/Klops/Oak/Bedroom/Klops_Oak_Bedroom_004.prefab.json",
+        "Server/Prefabs/Cave/Klops/Oak/Cellar/Klops_Oak_Cellar_001.prefab.json",
+        "Server/Prefabs/Cave/Klops/Oak/Cellar/Klops_Oak_Cellar_003.prefab.json",
+        "Server/Prefabs/Cave/Klops/Oak/Cellar/Klops_Oak_Cellar_004.prefab.json"
+      ],
+      "Families": {
+        "Klops": 34,
+        "Other": 353
+      }
+    },
+    "Zone1_Encounters_Tier4": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Encounters_Tier4.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Temple_Emerald_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Encounters_Tier4"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 17,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier3/Outpost_NoBoss/Encounter_Zone1_Tier3_003.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Quartzite/Incidental_Treasure_Rooms_Quartzite_001.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Quartzite/Incidental_Treasure_Rooms_Quartzite_002.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Quartzite/Incidental_Treasure_Rooms_Quartzite_003.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Quartzite/Incidental_Treasure_Rooms_Quartzite_004.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Quartzite/Incidental_Treasure_Rooms_Quartzite_005.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Quartzite/Incidental_Treasure_Rooms_Quartzite_006.prefab.json",
+        "Server/Prefabs/Monuments/Story/Forgotten_temple/Grasslands/Story_Forgotten_Temple_Grasslands_Entrance_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 17
+      }
+    },
+    "Zone1_Goblin_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Goblin_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Goblin_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Goblin_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 1,
+      "UsageExamples": [
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Cap/Hidden_Treasure/Goblin_Lair_Cap_Hidden_Treasure_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 1
+      }
+    },
+    "Zone1_Goblin_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Goblin_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Goblin_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Goblin_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 6,
+      "UsageExamples": [
+        "Server/Prefabs/Dungeon/Goblin_Lair/Entrance_Mine/Abandoned_Village/Layout/Goblin_Lair_Entrance_Abandoned_Village_Layout_001.prefab.json",
+        "Server/Prefabs/Dungeon/Goblin_Lair/Entrance_Mine/Abandoned_Village/Stairs/Goblin_Lair_Entrance_Abandoned_Village_Stairs_001.prefab.json",
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Cap/Hidden_Treasure/Goblin_Lair_Cap_Hidden_Treasure_001.prefab.json",
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Room/Large2/Goblin_Lair_Room_Large2_Large2_001.prefab.json",
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Straight/Length_9/Goblin_Lair_Straight_Length_9_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 6
+      }
+    },
+    "Zone1_Goblin_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Goblin_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Goblin_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Goblin_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 95,
+      "UsageExamples": [
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Corner/Goblin_Lair_Corner_001.prefab.json",
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Corner_Long/Goblin_Lair_Corner_Long_001.prefab.json",
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Houses/Basalt_1/Goblin_Lair_Houses_Basalt_1_001.prefab.json",
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Houses/Basalt_2/Goblin_Lair_Houses_Basalt_2_001.prefab.json",
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Houses/Basalt_3/Goblin_Lair_Houses_Basalt_3_001.prefab.json",
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Houses/Basalt_4/Goblin_Lair_Houses_Basalt_4_001.prefab.json",
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Houses/Stone_1/Goblin_Lair_Houses_Stone_1_001.prefab.json",
+        "Server/Prefabs/Dungeon/Goblin_Lair/Prefabs_Goblin/Houses/Stone_2/Goblin_Lair_Houses_Stone_2_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 95
+      }
+    },
+    "Zone1_Kweebec_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Kweebec_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Kweebec_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Kweebec_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 30,
+      "UsageExamples": [
+        "Server/Prefabs/Npc/Kweebec/Oak/Houses_Guard/Kweebec_Oak_Houses_Guard_001.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Oak/Houses_Guard/Kweebec_Oak_Houses_Guard_002.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Oak/Houses_Guard/Kweebec_Oak_Houses_Guard_003.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Oak/Houses_Guard/Kweebec_Oak_Houses_Guard_004.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Oak/Shops/Kweebec_Oak_Shops_001.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Oak/Shops/Kweebec_Oak_Shops_002.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Oak/Shops/Kweebec_Oak_Shops_003.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Oak/Shops/Kweebec_Oak_Shops_004.prefab.json"
+      ],
+      "Families": {
+        "Kweebec": 30
+      }
+    },
+    "Zone1_Kweebec_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Kweebec_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Kweebec_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Kweebec_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 1,
+      "UsageExamples": [
+        "Server/Prefabs/Npc/Kweebec/Azure/Kweebec_Azure_KweebecCamps_Azure_001.prefab.json"
+      ],
+      "Families": {
+        "Kweebec": 1
+      }
+    },
+    "Zone1_Kweebec_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Kweebec_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Kweebec_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Kweebec_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 15,
+      "UsageExamples": [
+        "Server/Prefabs/Npc/Kweebec/Autumn/Shops/Kweebec_Autumn_Shops_001.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Autumn/Shops/Kweebec_Autumn_Shops_002.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Autumn/Shops/Kweebec_Autumn_Shops_003.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Autumn/Shops/Kweebec_Autumn_Shops_004.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Autumn/Shops/Kweebec_Autumn_Shops_005.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Autumn/Shops/Kweebec_Autumn_Shops_006.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Autumn/Shops/Kweebec_Autumn_Shops_007.prefab.json",
+        "Server/Prefabs/Npc/Kweebec/Autumn/Shops/Kweebec_Autumn_Shops_008.prefab.json"
+      ],
+      "Families": {
+        "Kweebec": 15
+      }
+    },
+    "Zone1_Trork_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Trork_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Lumberjack_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Trork_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 5,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier3/Trork/Coast/Tower/Encounter_Coast_Tower_001.prefab.json",
+        "Server/Prefabs/Npc/Trork/Tier_1/Encampment/Hunter/Forest_Birch/Trork_Tier_1_Encampment_Hunter_Forest_Birch_001.prefab.json",
+        "Server/Prefabs/Npc/Trork/Tier_1/Encampment/Hunter/Forest_Flower/Trork_Tier_1_Encampment_Hunter_Forest_Flower_001.prefab.json",
+        "Server/Prefabs/Npc/Trork/Tier_1/Encampment/Outpost/Plains_Birch/Trork_Tier_1_Encampment_Outpost_Plains_Birch_001.prefab.json",
+        "Server/Prefabs/Npc/Trork/Tier_1/Encampment/Outpost/Plains_Smooth/Trork_Tier_1_Encampment_Outpost_Plains_Smooth_001.prefab.json"
+      ],
+      "Families": {
+        "Trork": 5
+      }
+    },
+    "Zone1_Trork_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Trork_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Lumberjack_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Trork_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 8,
+      "UsageExamples": [
+        "Server/Prefabs/Npc/Trork/Tier_2/Encampment/Lumber/Forest_Aspen/Trork_Tier_2_Encampment_Lumber_Forest_Aspen_001.prefab.json",
+        "Server/Prefabs/Npc/Trork/Tier_2/Encampment/Lumber/Forest_Autumn/Trork_Tier_2_Encampment_Lumber_Forest_Autumn_001.prefab.json",
+        "Server/Prefabs/Npc/Trork/Tier_2/Encampment/Lumber/Forest_Gully/Trork_Tier_2_Encampment_Lumber_Forest_Gully_001.prefab.json",
+        "Server/Prefabs/Npc/Trork/Tier_2/Encampment/Quarry/Trork_Tier_2_Encampment_Quarry_001.prefab.json"
+      ],
+      "Families": {
+        "Trork": 8
+      }
+    },
+    "Zone1_Trork_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Trork_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Lumberjack_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Trork_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 16,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier3/Trork/Coast/Large/Encounter_Coast_Large_Trork_Zone3_Tier3_Coast_Large_001PLACEHOLDER.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier3/Trork/Coast/Small/High/Encounter_Small_High_Trork_Zone3_Tier3_Coast_Small_001PLACEHOLDER.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier3/Trork/Coast/Small/High/Encounter_Small_High_Trork_Zone3_Tier3_Coast_Small_002PLACEHOLDER.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier3/Trork/Coast/Small/High/Encounter_Small_High_Trork_Zone3_Tier3_Coast_Small_003PLACEHOLDER.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier3/Trork/Coast/Small/Low/Encounter_Small_Low_Trork_Zone3_Tier3_Coast_Small_001PLACEHOLDER.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier3/Trork/Coast/Small/Low/Encounter_Small_Low_Trork_Zone3_Tier3_Coast_Small_002PLACEHOLDER.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier3/Trork/Coast/Small/Low/Encounter_Small_Low_Trork_Zone3_Tier3_Coast_Small_003PLACEHOLDER.prefab.json",
+        "Server/Prefabs/Npc/Trork/Tier_3/Encampment/Castle/Trork_Tier_3_Encampment_Castle_001.prefab.json"
+      ],
+      "Families": {
+        "Trork": 16
+      }
+    },
+    "Zone1_Undead_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Undead_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Undead_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 12,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier1/Outpost/Encounter_Zone1_Tier1_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier1/Outpost/Encounter_Zone1_Tier1_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier1/Outpost/Encounter_Zone1_Tier1_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier1/Outpost/Encounter_Zone1_Tier1_004.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier3/Outpost_NoBoss/Encounter_Zone1_Tier3_001_NoBoss.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Basalt/Incidental_Treasure_Rooms_Basalt_001.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Quartzite/Tier_3/Monuments_MageTower_Quartzite_Tier3_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 12
+      }
+    },
+    "Zone1_Undead_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Undead_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Undead_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 81,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone1/Paths_Dirt/Encounter_Zone1_Tier2_004.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier2/Outpost/Encounter_Zone1_Tier2_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier2/Outpost/Encounter_Zone1_Tier2_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier2/Outpost/Encounter_Zone1_Tier2_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier2/Outpost/Encounter_Zone1_Tier2_004.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier2/Outpost/Encounter_Zone1_Tier2_005.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier2/Outpost/Encounter_Zone1_Tier2_006.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier2/Outpost/Encounter_Zone1_Tier2_007.prefab.json"
+      ],
+      "Families": {
+        "Other": 81
+      }
+    },
+    "Zone1_Undead_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone1_Undead_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone1_Undead_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 50,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier2/Outpost/Encounter_Zone1_Tier2_006.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier3/Outpost_Boss/Encounter_Zone1_Tier3_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier3/Outpost_NoBoss/Encounter_Zone1_Tier3_001_NoBoss.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier3/Outpost_NoBoss/Encounter_Zone1_Tier3_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier3/Outpost_NoBoss/Encounter_Zone1_Tier3_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone1/Tier3/Outpost_NoBoss/Encounter_Zone1_Tier3_004.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Basalt/Incidental_Treasure_Rooms_Basalt_001.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Basalt/Incidental_Treasure_Rooms_Basalt_002.prefab.json"
+      ],
+      "Families": {
+        "Other": 50
+      }
+    },
+    "Zone2_Encounters_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone2_Encounters_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Crude_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone2_Encounters_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 33,
+      "UsageExamples": [
+        "Server/Prefabs/Mineshaft/Dry/Mines/Furnished/Mineshaft_Dry_Furnished_006.prefab.json",
+        "Server/Prefabs/Mineshaft/Dry/Mines/Prison_hub/Mineshaft_Dry_Prison_hub_001.prefab.json",
+        "Server/Prefabs/Mineshaft/Dry/Mines_Lvl1/Furnished/Mineshaft_Dry_Lvl1_Furnished_006.prefab.json",
+        "Server/Prefabs/Mineshaft/Dry/Mines_Lvl2/Furnished/Mineshaft_Dry_Lvl2_Furnished_006.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Sandstone/Normal/Incidental_Sandstone_001.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Sandstone/Normal/Incidental_Sandstone_002.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Sandstone/Oasis/Rock_Camp/Incidental_Oasis_Rock_Camp_001.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Sandstone/Oasis/Tent/Incidental_Sandstone_Oasis_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 33
+      }
+    },
+    "Zone2_Encounters_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone2_Encounters_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Village_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone2_Encounters_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 188,
+      "UsageExamples": [
+        "Server/Prefabs/Cave/Nodes/Rock_Sandstone/Surface_Corner/Node_Sandstone_Surface_Corner_002.prefab.json",
+        "Server/Prefabs/Cave/Nodes/Rock_Sandstone/Surface_Straight/Node_Sandstone_Surface_Straight_001.prefab.json",
+        "Server/Prefabs/Cave/Nodes/Rock_Sandstone/Surface_Straight_2/Node_Sandstone_Surface_Straight_2_001.prefab.json",
+        "Server/Prefabs/Dungeon/Labyrinth/Room/T/Labyrinth_Room_T_001.prefab.json",
+        "Server/Prefabs/Mineshaft/Dry/Mines/Branch_Left/Mineshaft_Dry_Branch_Left_003.prefab.json",
+        "Server/Prefabs/Mineshaft/Dry/Mines/Branch_Left/Mineshaft_Dry_Branch_Left_006.prefab.json",
+        "Server/Prefabs/Mineshaft/Dry/Mines/Branch_Straight/Mineshaft_Dry_Branch_Straight_001.prefab.json",
+        "Server/Prefabs/Mineshaft/Dry/Mines/Branch_Straight/Mineshaft_Dry_Branch_Straight_003.prefab.json"
+      ],
+      "Families": {
+        "Other": 188
+      }
+    },
+    "Zone2_Encounters_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone2_Encounters_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Dungeon_Chest_Epic",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone2_Encounters_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 672,
+      "UsageExamples": [
+        "Server/Prefabs/Cave/Klops/Dry/Bedroom/Klops_Dry_Bedroom_001.prefab.json",
+        "Server/Prefabs/Cave/Klops/Dry/Bedroom/Klops_Dry_Bedroom_002.prefab.json",
+        "Server/Prefabs/Cave/Klops/Dry/Cellar/Klops_Dry_Cellar_002.prefab.json",
+        "Server/Prefabs/Cave/Klops/Dry/Main/Klops_Dry_Main_001.prefab.json",
+        "Server/Prefabs/Cave/Klops/Dry/Main/Klops_Dry_Main_002.prefab.json",
+        "Server/Prefabs/Cave/Klops/Dry/Main/Klops_Dry_Main_003.prefab.json",
+        "Server/Prefabs/Cave/Klops/Dry/Main/Klops_Dry_Main_004.prefab.json",
+        "Server/Prefabs/Cave/Klops/Dry/Main_2/Klops_Dry_Main2_001.prefab.json"
+      ],
+      "Families": {
+        "Klops": 23,
+        "Other": 648,
+        "Feran": 1
+      }
+    },
+    "Zone2_Encounters_Tier4": {
+      "Asset": "Server/Item/Block/Spawners/Zone2_Encounters_Tier4.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Temple_Wind_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone2_Encounters_Tier4"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 16,
+      "UsageExamples": [
+        "Server/Prefabs/Dungeon/Sandstone/System_0/Rooms/Boss/Sandstone_System_0_Rooms_Boss_005.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Sandstone/Incidental_Treasure_Rooms_Sandstone_001.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Sandstone/Incidental_Treasure_Rooms_Sandstone_002.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Sandstone/Incidental_Treasure_Rooms_Sandstone_004.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Sandstone/Incidental_Treasure_Rooms_Sandstone_005.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Sandstone/Incidental_Treasure_Rooms_Sandstone_006.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Sandstone/Incidental_Treasure_Rooms_Sandstone_007.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Treasure_Rooms/Sandstone/Incidental_Treasure_Rooms_Sandstone_008.prefab.json"
+      ],
+      "Families": {
+        "Other": 16
+      }
+    },
+    "Zone2_Feran_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone2_Feran_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Feran_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone2_Feran_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 7,
+      "UsageExamples": [
+        "Server/Prefabs/Npc/Feran/Tier1/Corners/Feran_Tier1_Corners_001.prefab.json",
+        "Server/Prefabs/Npc/Feran/Tier1/Corners/Feran_Tier1_Corners_002.prefab.json",
+        "Server/Prefabs/Npc/Feran/Tier1/Corners/Feran_Tier1_Corners_004.prefab.json",
+        "Server/Prefabs/Npc/Feran/Tier1/Straight/Normal/Feran_Tier1_Straight_Normal_001.prefab.json",
+        "Server/Prefabs/Npc/Feran/Tier1/Straight/Normal/Feran_Tier1_Straight_Normal_002.prefab.json"
+      ],
+      "Families": {
+        "Feran": 7
+      }
+    },
+    "Zone2_Feran_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone2_Feran_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Feran_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone2_Feran_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 8,
+      "UsageExamples": [
+        "Server/Prefabs/Npc/Feran/Tier1/Straight/Normal/Feran_Tier1_Straight_Normal_002.prefab.json",
+        "Server/Prefabs/Npc/Feran/Tier2/Chieftain/Feran_Tier2_Chieftain_001.prefab.json",
+        "Server/Prefabs/Npc/Feran/Tier2/Hut/Feran_Tier2_Hut_001.prefab.json",
+        "Server/Prefabs/Npc/Feran/Tier2/Hut/Feran_Tier2_Hut_002.prefab.json",
+        "Server/Prefabs/Npc/Feran/Tier2/Hut/Feran_Tier2_Hut_004.prefab.json",
+        "Server/Prefabs/Npc/Feran/Tier2/Hut/Feran_Tier2_Hut_005.prefab.json"
+      ],
+      "Families": {
+        "Feran": 8
+      }
+    },
+    "Zone2_Undead_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone2_Undead_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone2_Undead_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 22,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier1/Outpost/Encounter_Zone2_Tier1_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier1/Outpost/Encounter_Zone2_Tier1_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier1/Outpost/Encounter_Zone2_Tier1_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier1/Outpost/Encounter_Zone2_Tier1_004.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier1/Outpost/Encounter_Zone2_Tier1_005.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier1/Outpost/Encounter_Zone2_Tier1_006.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier1/Outpost/Encounter_Zone2_Tier1_007.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier1/Outpost/Encounter_Zone2_Tier1_008.prefab.json"
+      ],
+      "Families": {
+        "Other": 22
+      }
+    },
+    "Zone2_Undead_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone2_Undead_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone2_Undead_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 42,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier2/Military_Outpost/Building_Corner/Encounter_Tier2_Building_Corner_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier2/Military_Outpost/Building_Corner/Encounter_Tier2_Building_Corner_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier2/Military_Outpost/Building_Corner/Encounter_Tier2_Building_Corner_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier2/Military_Outpost/Walls_Corner/Encounter_Tier2_Walls_Corner_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier2/Military_Outpost/Walls_Corner/Encounter_Tier2_Walls_Corner_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier2/Military_Outpost/Walls_Corner/Encounter_Tier2_Walls_Corner_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier2/Outpost/Encounter_Zone2_Tier2_001.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Sandstone/Tier_2/Monuments_MageTower_Sandstone_Tier2_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 42
+      }
+    },
+    "Zone2_Undead_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone2_Undead_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone2_Undead_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 53,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier3/Outpost/Base/Encounter_Zone2_Tier3_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier3/Outpost/Base_Boss/Encounter_Tier3_Base_Boss_Ruins_Zone2_Tier3_001_Boss.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier3/Tradingpost/Building_Large/Encounter_Tier3_Building_Large_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier3/Tradingpost/Building_Large/Encounter_Tier3_Building_Large_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier3/Tradingpost/Building_Large/Encounter_Tier3_Building_Large_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier3/Tradingpost/Building_Small/Encounter_Tier3_Building_Small_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier3/Tradingpost/Building_Small/Encounter_Tier3_Building_Small_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone2/Tier3/Tradingpost/Building_Small/Encounter_Tier3_Building_Small_003.prefab.json"
+      ],
+      "Families": {
+        "Other": 53
+      }
+    },
+    "Zone3_Encounters_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Encounters_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Crude_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Encounters_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 18,
+      "UsageExamples": [
+        "Server/Prefabs/Cave/Klops/Oak/Main_2/Klops_Oak_Main2_001.prefab.json",
+        "Server/Prefabs/Mineshaft/Fir/Elevator/Mines_Lvl3/Section_C/Mineshaft_Fir_Elevator_Lvl3_Section_C_004.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Shale/Ruins/Frozen/Incidental_Shale_Monuments_Incidental_Shale_Frozen_001.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Shale/Ruins/Frozen/Incidental_Shale_Monuments_Incidental_Shale_Frozen_002.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Shale/Ruins/Frozen/Incidental_Shale_Monuments_Incidental_Shale_Frozen_003.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Shale/Ruins/Frozen/Incidental_Shale_Monuments_Incidental_Shale_Frozen_005.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Shipwrecks/Cold/Incidental_Cold_Ocean_Shipwreck_Cold_001.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Shipwrecks/Cold/Incidental_Cold_Ocean_Shipwreck_Cold_002.prefab.json"
+      ],
+      "Families": {
+        "Klops": 1,
+        "Other": 15,
+        "Outlander": 2
+      }
+    },
+    "Zone3_Encounters_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Encounters_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Village_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Encounters_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 147,
+      "UsageExamples": [
+        "Server/Prefabs/Cave/Nodes/Rock_Shale/Deep_Fossil/Node_Shale_Deep_Fossil_001.prefab.json",
+        "Server/Prefabs/Cave/Nodes/Rock_Shale/Deep_Fossil/Node_Shale_Deep_Fossil_002.prefab.json",
+        "Server/Prefabs/Cave/Nodes/Rock_Shale/Volcanic2_Ruin/Node_Shale_Volcanic2_Ruin_001.prefab.json",
+        "Server/Prefabs/Cave/Nodes/Rock_Shale/Volcanic_Ruin/Node_Shale_Volcanic_Ruin_001.prefab.json",
+        "Server/Prefabs/Cave/Nodes/Rock_Shale/Volcanic_Ruin/Node_Shale_Volcanic_Ruin_002.prefab.json",
+        "Server/Prefabs/Dungeon/Shale/Room_Large/Shale_Room_Large_001.prefab.json",
+        "Server/Prefabs/Dungeon/Shale/Room_Large/Shale_Room_Large_002.prefab.json",
+        "Server/Prefabs/Dungeon/Shale/Room_Large/Shale_Room_Large_007.prefab.json"
+      ],
+      "Families": {
+        "Other": 146,
+        "Outlander": 1
+      }
+    },
+    "Zone3_Encounters_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Encounters_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Dungeon_Chest_Epic",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Encounters_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 201,
+      "UsageExamples": [
+        "Server/Prefabs/Cave/Klops/Basalt/Bathroom/Klops_Basalt_Bathroom_001.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bathroom/Klops_Basalt_Bathroom_002.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bathroom/Klops_Basalt_Bathroom_003.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bathroom/Klops_Basalt_Bathroom_004.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bedroom/Klops_Basalt_Bedroom_001.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bedroom/Klops_Basalt_Bedroom_002.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bedroom/Klops_Basalt_Bedroom_003.prefab.json",
+        "Server/Prefabs/Cave/Klops/Basalt/Bedroom/Klops_Basalt_Bedroom_004.prefab.json"
+      ],
+      "Families": {
+        "Klops": 50,
+        "Other": 151
+      }
+    },
+    "Zone3_Encounters_Tier4": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Encounters_Tier4.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Temple_Dark_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Encounters_Tier4"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 4,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Shale/Tier_2/Monuments_MageTower_Shale_Tier2_001.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Shale/Tier_3/Monuments_MageTower_Shale_Tier3_001.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Story_Gate/Zone_2/Unique_Story_Gate_Zone_2_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 4
+      }
+    },
+    "Zone3_Kweebec_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Kweebec_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Kweebec_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Kweebec_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 0,
+      "UsageExamples": [],
+      "Families": {}
+    },
+    "Zone3_Kweebec_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Kweebec_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Kweebec_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Kweebec_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 0,
+      "UsageExamples": [],
+      "Families": {}
+    },
+    "Zone3_Kweebec_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Kweebec_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Kweebec_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Kweebec_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 0,
+      "UsageExamples": [],
+      "Families": {}
+    },
+    "Zone3_Outlander_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Outlander_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Human_Ruins_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Outlander_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 37,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier1/Quarry/Encounter_Zone3_Tier1_001.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Boats/Large/Outlander_Boats_Large_001.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Forts/Tier1/Outlander_Forts_Tier1_001.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Forts/Tier1/Outlander_Forts_Tier1_002.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Forts/Tier1/Outlander_Forts_Tier1_003.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Forts/Tier1/Outlander_Forts_Tier1_004.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Forts/Tier1/Outlander_Forts_Tier1_005.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Forts/Tier1/Outlander_Forts_Tier1_006.prefab.json"
+      ],
+      "Families": {
+        "Other": 3,
+        "Outlander": 34
+      }
+    },
+    "Zone3_Outlander_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Outlander_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Human_Ruins_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Outlander_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 19,
+      "UsageExamples": [
+        "Server/Prefabs/Dungeon/Outlander_Temple/Stage2/Room/Temple_Stage2_Room_17x35_N_001v2.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Battlefield/Outlander_Ruins/Encounter_Tier2_Outlander_Ruins_001.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Camps/Tier2/Outlander_Camps_Tier2_001.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Forts/Tier2/Outlander_Forts_Tier2_001.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Forts/Tier2/Outlander_Forts_Tier2_002.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Houses/Tier2/Outlander_Houses_Tier2_001.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Houses/Tier2/Outlander_Houses_Tier2_002.prefab.json",
+        "Server/Prefabs/Npc/Outlander/Houses/Tier2/Outlander_Houses_Tier2_003.prefab.json"
+      ],
+      "Families": {
+        "Other": 5,
+        "Outlander": 14
+      }
+    },
+    "Zone3_Outlander_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Outlander_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Temple_Dark_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Outlander_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 60,
+      "UsageExamples": [
+        "Server/Prefabs/Dungeon/Outlander_Temple/Stage2/Corridor/Turn/18x9/E/Outlander_Temple_Stage2_Corridor_Turn_18x9_E_001.prefab.json",
+        "Server/Prefabs/Dungeon/Outlander_Temple/Stage2/Corridor/Turn/18x9/W-E/Outlander_Temple_Stage2_Corridor_Turn_18x9_W-E_001.prefab.json",
+        "Server/Prefabs/Dungeon/Outlander_Temple/Stage2/Room/17x17/E/Outlander_Temple_Stage2_Room_17x17_E_001.prefab.json",
+        "Server/Prefabs/Dungeon/Outlander_Temple/Stage2/Room/17x17/E/Outlander_Temple_Stage2_Room_17x17_E_002.prefab.json",
+        "Server/Prefabs/Dungeon/Outlander_Temple/Stage2/Room/17x17/N/Outlander_Temple_Stage2_Room_17x17_N_001.prefab.json",
+        "Server/Prefabs/Dungeon/Outlander_Temple/Stage2/Room/17x17/W/Outlander_Temple_Stage2_Room_17x17_W_001.prefab.json",
+        "Server/Prefabs/Dungeon/Outlander_Temple/Stage2/Room/17x17/W/Outlander_Temple_Stage2_Room_17x17_W_002.prefab.json",
+        "Server/Prefabs/Dungeon/Outlander_Temple/Stage2/Room/17x17/X/Outlander_Temple_Stage2_Room_17x17_X_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 38,
+        "Outlander": 22
+      }
+    },
+    "Zone3_Undead_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Undead_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Undead_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 21,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier1/Orbis_Camp/7x7/Encounter_Tier1_7x7_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier1/Orbis_Camp/7x7/Encounter_Tier1_7x7_004.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier1/Orbis_Camp/8x8/Encounter_Tier1_8x8_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier1/Orbis_Camp/8x8/Encounter_Tier1_8x8_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier1/Outpost/Encounter_Zone3_Tier1_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier1/Outpost/Encounter_Zone3_Tier1_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier1/Outpost/Encounter_Zone3_Tier1_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier1/Outpost/Encounter_Zone3_Tier1_004.prefab.json"
+      ],
+      "Families": {
+        "Other": 21
+      }
+    },
+    "Zone3_Undead_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Undead_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Undead_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 36,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Battlefield/Orbis_Ruins/7x7/Encounter_Orbis_Ruins_7x7_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Battlefield/Orbis_Ruins/7x7/Encounter_Orbis_Ruins_7x7_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Battlefield/Orbis_Ruins/7x7/Encounter_Orbis_Ruins_7x7_004.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Battlefield/Orbis_Ruins/8x8/Encounter_Orbis_Ruins_8x8_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Frozen/Outpost/Encounter_Zone3_Tier2_Ruins_Zone3_Tier2_001_Frozen.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Normal/Outpost/Encounter_Zone3_Tier2_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier2/Normal/Quarry/Encounter_Zone3_Tier2_001.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Shale/Tier_2/Monuments_MageTower_Shale_Tier2_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 36
+      }
+    },
+    "Zone3_Undead_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone3_Undead_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone3_Undead_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 19,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier3/Outpost_Boss/Encounter_Tier3_Outpost_Boss_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone3/Tier3/Outpost_NoBoss/Encounter_Tier3_Outpost_NoBoss_Ruins_Zone3_Tier3_001_NoBoss.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Shale/Tier_2/Monuments_MageTower_Shale_Tier2_001.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Shale/Tier_3/Monuments_MageTower_Shale_Tier3_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 19
+      }
+    },
+    "Zone4_Encounters_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone4_Encounters_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Crude_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone4_Encounters_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 33,
+      "UsageExamples": [
+        "Server/Prefabs/Cave/Nodes/Rock_Volcanic/Skeleton/Node_Volcanic_Skeleton_001.prefab.json",
+        "Server/Prefabs/Dungeon/Cursed_Crypt/Cursed/Rooms/End_Small/Crypt_Cursed_Rooms_End_Small_001.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_1/Rooms/Above/Sewer_Tier_1_Rooms_Above_002.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_1/Rooms/Below/Sewer_Tier_1_Rooms_Below_002.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_3/Ladder/Long/Sewer_Tier_3_Ladder_Long_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/City_Ruins/Houses/Farm/Encounter_City_Ruins_001.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Slate/House/Incidental_Slate_001.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Slate/House/Incidental_Slate_003.prefab.json"
+      ],
+      "Families": {
+        "Skeleton": 1,
+        "Other": 32
+      }
+    },
+    "Zone4_Encounters_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone4_Encounters_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Village_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone4_Encounters_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 46,
+      "UsageExamples": [
+        "Server/Prefabs/Dungeon/Sewer/Tier_2/Rooms/1_Pipe/Sewer_Tier_2_Rooms_1_Pipe_005.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_2/Rooms/3_Pipe/Sewer_Tier_2_Rooms_3_Pipe_002.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_2/Rooms/Ends/Right/Sewer_Tier_2_Rooms_Ends_Right_005.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_3/Pipe/Ends/Large/Full/Sewer_Tier_3_Pipe_Ends_Large_Full_002.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_3/Pipe/Ends/Large/Full/Sewer_Tier_3_Pipe_Ends_Large_Full_003.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_3/Pipe/Ends/Small/Empty/Sewer_Tier_3_Pipe_Ends_Small_Empty_003.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_3/Pipe/Ends/Small/Full/Sewer_Tier_3_Pipe_Ends_Small_Full_002.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_3/Pipe/Ends/Small/Full/Sewer_Tier_3_Pipe_Ends_Small_Full_004.prefab.json"
+      ],
+      "Families": {
+        "Other": 46
+      }
+    },
+    "Zone4_Encounters_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone4_Encounters_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Dungeon_Chest_Epic",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone4_Encounters_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 21,
+      "UsageExamples": [
+        "Server/Prefabs/Dungeon/Sewer/Tier_1/Rooms/A/Sewer_Tier_1_Rooms_A_003.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_2/Rooms/1_Pipe/Sewer_Tier_2_Rooms_1_Pipe_006.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_2/Rooms/Ends/Left/Sewer_Tier_2_Rooms_Ends_Left_005.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_3/Pipe/Ends/Large/Empty/Sewer_Tier_3_Pipe_Ends_Large_Empty_001.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_3/Pipe/Ends/Large/Full/Sewer_Tier_3_Pipe_Ends_Large_Full_001.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_3/Pipe/Ends/Large/Full/Sewer_Tier_3_Pipe_Ends_Large_Full_002.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_3/Pipe/Ends/Large/Full/Sewer_Tier_3_Pipe_Ends_Large_Full_003.prefab.json",
+        "Server/Prefabs/Dungeon/Sewer/Tier_3/Pipe/Ends/Small/Empty/Sewer_Tier_3_Pipe_Ends_Small_Empty_002.prefab.json"
+      ],
+      "Families": {
+        "Other": 21
+      }
+    },
+    "Zone4_Encounters_Tier4": {
+      "Asset": "Server/Item/Block/Spawners/Zone4_Encounters_Tier4.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Human_Ruins_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone4_Encounters_Tier4"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 19,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/City_Ruins/Temple/Encounter_City_Ruins_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/City_Ruins/Towers/Encounter_City_Ruins_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/City_Ruins/Towers/Encounter_City_Ruins_003.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Volcanic/Tier_4/Monuments_MageTower_Volcanic_Tier4_001.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Volcanic/Tier_4/Monuments_MageTower_Volcanic_Tier4_002.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Volcanic/Tier_5/Monuments_MageTower_Volcanic_Tier5_001.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Volcanic/Tier_5/Monuments_MageTower_Volcanic_Tier5_002.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Temple/Portal/Firelands/Unique_Portal_Firelands_Monuments.Unique.Portal.Firelands_001.prefab.json"
+      ],
+      "Families": {
+        "Other": 19
+      }
+    },
+    "Zone4_Undead_Tier1": {
+      "Asset": "Server/Item/Block/Spawners/Zone4_Undead_Tier1.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone4_Undead_Tier1"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 33,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Farm/House/Encounter_Zone4_Tier4_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Farm/House/Encounter_Zone4_Tier4_003.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Farm/House/Encounter_Zone4_Tier4_004.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Farm/House/Encounter_Zone4_Tier4_005.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Farm/Townhall/Encounter_Tier4_Townhall_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Forest/House/Encounter_Tier4_Forest_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Forest/House/Encounter_Tier4_Forest_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Forest/House/Encounter_Tier4_Forest_003.prefab.json"
+      ],
+      "Families": {
+        "Other": 33
+      }
+    },
+    "Zone4_Undead_Tier2": {
+      "Asset": "Server/Item/Block/Spawners/Zone4_Undead_Tier2.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone4_Undead_Tier2"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 65,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Outpost/Encounter_Zone4_Tier4_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Outpost/Encounter_Zone4_Tier4_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Farm/Townhall/Encounter_Tier4_Townhall_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Town/Encounter_Tier4_Town_Temp_Desert_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier5/Outpost/Encounter_Zone4_Tier5_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier5/Outpost/Encounter_Zone4_Tier5_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier5/Village/Ash/Slate/Pillar/Encounter_Slate_Pillar_002.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier5/Village/Ash/Slate/Pillar/Encounter_Slate_Pillar_006.prefab.json"
+      ],
+      "Families": {
+        "Other": 65
+      }
+    },
+    "Zone4_Undead_Tier3": {
+      "Asset": "Server/Item/Block/Spawners/Zone4_Undead_Tier3.json",
+      "Entries": [
+        {
+          "Name": "Furniture_Ancient_Chest_Small",
+          "Weight": 100,
+          "Components": {
+            "Components": {
+              "ItemContainerBlock": {
+                "Droplist": "Zone4_Undead_Tier3"
+              }
+            }
+          }
+        }
+      ],
+      "PrefabOccurrences": 33,
+      "UsageExamples": [
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Farm/Townhall/Encounter_Tier4_Townhall_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier4/Village/Town/Encounter_Tier4_Town_Temp_Desert_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier5/Village/Ash/Layout/Encounter_Ash_Layout_001.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier5/Village/Ash/Layout/Encounter_Ash_Layout_001_Temp.prefab.json",
+        "Server/Prefabs/Monuments/Encounter/Zone4/Tier5/Village/Ash/Layout/Encounter_Ash_Layout_002_Temp.prefab.json",
+        "Server/Prefabs/Monuments/Incidental/Ash/Rich/Incidental_Ash_Rich_005.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Volcanic/Tier_5/Monuments_MageTower_Volcanic_Tier5_001.prefab.json",
+        "Server/Prefabs/Monuments/Unique/Mage_Towers/Volcanic/Tier_5/Monuments_MageTower_Volcanic_Tier5_002.prefab.json"
+      ],
+      "Families": {
+        "Other": 33
+      }
+    }
+  },
+  "ConservativeFactionTableCandidates": {
+    "Zone1_Kweebec_Tier1": "Kweebec",
+    "Zone1_Kweebec_Tier2": "Kweebec",
+    "Zone1_Kweebec_Tier3": "Kweebec",
+    "Zone1_Trork_Tier1": "Trork",
+    "Zone1_Trork_Tier2": "Trork",
+    "Zone1_Trork_Tier3": "Trork",
+    "Zone2_Feran_Tier1": "Feran",
+    "Zone2_Feran_Tier2": "Feran",
+    "Zone3_Kweebec_Tier1": "Kweebec",
+    "Zone3_Kweebec_Tier2": "Kweebec",
+    "Zone3_Kweebec_Tier3": "Kweebec",
+    "Zone3_Outlander_Tier1": "Outlander",
+    "Zone3_Outlander_Tier2": "Outlander",
+    "Zone3_Outlander_Tier3": "Outlander"
+  },
+  "PrefabCount": 9282,
+  "NoGlobalContainerOwnership": true,
+  "NoPrefabOverridesRequired": true
+}

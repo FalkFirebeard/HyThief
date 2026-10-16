@@ -1,0 +1,12 @@
+{
+  "IncludeRoles": [
+    "Kweebec_Merchant",
+    "Kweebec_Razorleaf",
+    "Kweebec_Razorleaf_Patrol",
+    "Kweebec_Rootling",
+    "Kweebec_Sapling",
+    "Kweebec_Sapling_Orange",
+    "Kweebec_Sapling_Pink",
+    "Kweebec_Sapling_HyThiefWitness"
+  ]
+}

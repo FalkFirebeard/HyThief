@@ -209,9 +209,19 @@
                     "TargetSlot": "LockedTarget"
                   },
                   {
-                    "Type": "Beacon",
-                    "Message": "Feran_Warriors_Attack",
-                    "TargetSlot": "LockedTarget"
+                    "Type": "Or",
+                    "Sensors": [
+                      {
+                        "Type": "Beacon",
+                        "Message": "Feran_Warriors_Attack",
+                        "TargetSlot": "LockedTarget"
+                      },
+                      {
+                        "Type": "Beacon",
+                        "Message": "HyThief_Local_Theft",
+                        "TargetSlot": "LockedTarget"
+                      }
+                    ]
                   }
                 ]
               },
@@ -654,9 +664,19 @@
                     "TargetSlot": "LockedTarget"
                   },
                   {
-                    "Type": "Beacon",
-                    "Message": "Feran_Warriors_Attack",
-                    "TargetSlot": "LockedTarget"
+                    "Type": "Or",
+                    "Sensors": [
+                      {
+                        "Type": "Beacon",
+                        "Message": "Feran_Warriors_Attack",
+                        "TargetSlot": "LockedTarget"
+                      },
+                      {
+                        "Type": "Beacon",
+                        "Message": "HyThief_Local_Theft",
+                        "TargetSlot": "LockedTarget"
+                      }
+                    ]
                   }
                 ]
               },
@@ -841,9 +861,19 @@
                     "TargetSlot": "LockedTarget"
                   },
                   {
-                    "Type": "Beacon",
-                    "Message": "Feran_Warriors_Attack",
-                    "TargetSlot": "LockedTarget"
+                    "Type": "Or",
+                    "Sensors": [
+                      {
+                        "Type": "Beacon",
+                        "Message": "Feran_Warriors_Attack",
+                        "TargetSlot": "LockedTarget"
+                      },
+                      {
+                        "Type": "Beacon",
+                        "Message": "HyThief_Local_Theft",
+                        "TargetSlot": "LockedTarget"
+                      }
+                    ]
                   }
                 ]
               },

@@ -1,0 +1,20 @@
+{
+  "Entries": [
+    {
+      "Name": "Furniture_Human_Ruins_Chest_Small",
+      "Weight": 100,
+      "Components": {
+        "Components": {
+          "ItemContainerBlock": {
+            "Droplist": "Zone3_Outlander_Tier1"
+          },
+          "HyThiefOwnershipProof": {
+            "Owned": true,
+            "Scope": "FACTION",
+            "Faction": "Outlander"
+          }
+        }
+      }
+    }
+  ]
+}

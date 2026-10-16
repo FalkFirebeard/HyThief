@@ -10,7 +10,7 @@ import com.hypixel.hytale.server.core.universe.world.storage.ChunkStore;
 
 /** Reads the live window's native block entity. No ownership registry, writes or fallback. */
 public final class PersistentContainerOwnership {
-  public record Source(OwnedContainerRegistry.Key key, Ref<ChunkStore> entity, ItemContainer container) {
+  public record Source(ContainerKey key, Ref<ChunkStore> entity, ItemContainer container) {
     public OwnershipProofData read() {
       if(entity==null || !entity.isValid())throw new IllegalStateException("Source entity invalid");
       var store=entity.getStore();
@@ -34,6 +34,6 @@ public final class PersistentContainerOwnership {
     if(entity==null || !entity.isValid())return null;
     var inventory=cs.getStore().getComponent(entity,ItemContainerBlock.getComponentType());
     if(inventory==null || inventory.getItemContainer()!=attributed)return null;
-    return new Source(new OwnedContainerRegistry.Key(world.getWorldConfig().getUuid(),window.getX(),window.getY(),window.getZ()),entity,attributed);
+    return new Source(new ContainerKey(world.getWorldConfig().getUuid(),window.getX(),window.getY(),window.getZ()),entity,attributed);
   }
 }

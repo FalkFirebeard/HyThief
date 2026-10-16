@@ -1,5 +1,7 @@
 # HyThief â€” NPC Pickpocketing
 
+> Development candidate: **1.4.0 — Container Theft**, target `=0.7.2`, awaits final connected-client approval. Public release remains 1.3.3. See [candidate notes](Docs/RELEASE_1.4.0_DRAFT.md) and [production scope](Docs/CONTAINER_THEFT_1_4_0_CONTENT_AUDIT.md). No 1.4.0 publication has occurred.
+
 **HyThief 1.3.3 is compatible with Hytale 0.7.2.**
 
 HyThief adds NPC pickpocketing built around stealth, positioning, and risk versus reward. Approach a supported NPC from behind while crouched, press your normal Interact key, and choose individual items from the Pickpocket menu. Each theft has a chance of detection, and taking more items increases the risk.

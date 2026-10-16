@@ -20,6 +20,14 @@
     "Hash": "31895914DA87AC36398820222B47B25E59D1B35A32D0896FE2A9C3E6B4929AC1"
   },
   {
+    "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Groups\\HyThief\\HyThief_Container_Feran.json",
+    "Hash": "33F6F1844A0B119B8C056FC5BCDED8BBA7AE375F6864B88944108389A6004EB1"
+  },
+  {
+    "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Groups\\HyThief\\HyThief_Container_Kweebec.json",
+    "Hash": "96069586088F047DD7BFB5FEB6F4A971BDA08F74D6046104EFAE968C7783F5FE"
+  },
+  {
     "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Goblin_Scrapper.json",
     "Hash": "1423A8A0398B53C1D92E9905BF079C9104318004525255FF55E176B446122E1C"
   },

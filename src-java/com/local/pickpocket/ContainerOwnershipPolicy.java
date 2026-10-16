@@ -6,7 +6,7 @@ import com.hypixel.hytale.server.npc.role.support.WorldSupport;
 import com.hypixel.hytale.builtin.tagset.config.NPCGroup;
 import java.util.*;
 
-/** Small policy seam: fixture participation supplied by data; native NPC groups define faction membership. */
+/** Small policy seam: eligible witnesses supplied by native NPC-group data; native NPC groups define faction membership. */
 public final class ContainerOwnershipPolicy {
   private ContainerOwnershipPolicy() {}
   public static boolean member(Ref<EntityStore> ref,String group,Store<EntityStore> store) {
@@ -15,7 +15,7 @@ public final class ContainerOwnershipPolicy {
     return npc!=null && index>=0 && WorldSupport.isGroupMember(npc.getRoleIndex(),ref,index,store);
   }
   public static String faction(Ref<EntityStore> ref,Store<EntityStore> store) {
-    for(String id:List.of("Kweebec","Feran"))if(member(ref,id,store))return id;
+    for(String id:List.of("Kweebec","Feran","Trork","Outlander","Skeleton","Zombie"))if(member(ref,id,store))return id;
     return "UNRESOLVED";
   }
   public static String rejection(OwnershipProofData data,Ref<EntityStore> ref,Store<EntityStore> store) {

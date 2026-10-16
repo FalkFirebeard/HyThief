@@ -1,0 +1,12 @@
+{
+  "IncludeRoles": [
+    "Skeleton_Fighter",
+    "Zombie",
+    "Zombie_Aberrant",
+    "Zombie_Aberrant_Big",
+    "Zombie_Aberrant_Small",
+    "Zombie_Burnt",
+    "Zombie_Frost",
+    "Zombie_Sand"
+  ]
+}

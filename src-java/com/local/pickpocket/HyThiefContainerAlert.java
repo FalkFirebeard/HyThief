@@ -43,7 +43,7 @@ final class HyThiefContainerAlert {
       };
       if (signal.isEmpty()) return new Result("FACTION", "", List.of(), "unsupported-faction");
       trace.accept("Action=THEFT_ALERT_CLASSIFIED Type=FACTION Faction=" + ownership.faction() + " Signal=" + signal);
-      var delivery = HyThiefGuardAlert.deliverContainer(plugin, offender, witness, store, ownership.faction(), trace);
+      var delivery = HyThiefGuardAlert.deliverContainer(plugin, offender, witness, store, ownership.faction(), diagnostic);
       return new Result("FACTION", signal, delivery.sent() ? List.of(delivery.guard()) : List.of(), delivery.reason());
     }
     if (!"NEARBY".equals(ownership.scope()))

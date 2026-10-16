@@ -1,0 +1,8 @@
+{
+  "Removed": [
+    "Server/NPC/Spawn/Markers/Kweebec_Merchant_Test.json"
+  ],
+  "Added": [],
+  "Changed": [],
+  "AllRuntimeClassesAndReferencedAssetsIdenticalToPassedNativeSuite": true
+}

@@ -1,0 +1,139 @@
+{
+  "Version": "1.4.0",
+  "Target": "=0.7.2",
+  "HytaleRevision": "d769dc3d57881261a62858e1394f0e4de9a21eca",
+  "CandidateSHA256": "21b302c9e2b44fa519d8428db564d8aff6ec7c674596eb0f515fdc9f7fefc933",
+  "Artifact": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Release_1_4_0\\Candidate\\HyThief-1.4.0.jar",
+  "Installed": "C:\\Users\\askin\\AppData\\Roaming\\Hytale\\UserData\\Mods\\HyThief-1.4.0.jar",
+  "ActiveHyThiefJars": 1,
+  "Rollback": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Release_1_4_0\\Rollback",
+  "CleanBuild": true,
+  "NativeChecks": [
+    {
+      "Mode": "production-reaction-Kweebec",
+      "Run": "Run-Native-Kweebec",
+      "Passed": true
+    },
+    {
+      "Mode": "production-reaction-Feran",
+      "Run": "Run-Native-Feran",
+      "Passed": true
+    },
+    {
+      "Mode": "production-reaction-LOCAL",
+      "Run": "Run-Native-LOCAL",
+      "Passed": true
+    },
+    {
+      "Mode": "peer-response-Trork_Warrior",
+      "Run": "Run-Family-Trork_Warrior",
+      "Passed": true
+    },
+    {
+      "Mode": "peer-response-Outlander_Brute",
+      "Run": "Run-Family-Outlander_Brute",
+      "Passed": true
+    },
+    {
+      "Mode": "peer-response-Skeleton_Fighter",
+      "Run": "Run-Family-Skeleton_Fighter",
+      "Passed": true
+    },
+    {
+      "Mode": "peer-response-Zombie",
+      "Run": "Run-Family-Zombie",
+      "Passed": true
+    },
+    {
+      "Mode": "Kweebec",
+      "Run": "Run-Fixture-Kweebec",
+      "Passed": true
+    },
+    {
+      "Mode": "Feran",
+      "Run": "Run-Fixture-Feran",
+      "Passed": true
+    },
+    {
+      "Mode": "LocalBoth",
+      "Run": "Run-Fixture-LocalBoth",
+      "Passed": true
+    },
+    {
+      "Mode": "LocalKweebec",
+      "Run": "Run-Fixture-LocalKweebec",
+      "Passed": true
+    },
+    {
+      "Mode": "LocalFeran",
+      "Run": "Run-Fixture-LocalFeran",
+      "Passed": true
+    },
+    {
+      "Mode": "persistence",
+      "Run": "Run-Ownership-Persistence",
+      "Passed": true
+    },
+    {
+      "Mode": "restart",
+      "Run": "Run-Ownership-Restart",
+      "Passed": true
+    },
+    {
+      "Mode": "PublicPickpocketMatrix",
+      "Run": "Run-FinalMatrix",
+      "Passed": true
+    },
+    {
+      "Mode": "RepeatedFailedTransfers",
+      "Run": "Run-FinalTransfers",
+      "Passed": true
+    },
+    {
+      "Mode": "ResetActiveNativeLoad",
+      "Run": "Run-ResetReady",
+      "Passed": true
+    },
+    {
+      "Mode": "NativeProductionRoleAndSpawnerAssets",
+      "Run": "Run-ProductionAssets3",
+      "Passed": true
+    },
+    {
+      "Mode": "NativeSpawnerRestart",
+      "Run": "Run-ProductionRestart",
+      "Passed": true
+    }
+  ],
+  "ConcretePublicRoles": 174,
+  "AbstractPublicRoles": 2,
+  "NativeRetiredHistoricalRoles": 9,
+  "ConfiguredContainerWitnessRoles": 33,
+  "AutomaticFactionTables": 11,
+  "MasterFiles": 44,
+  "MasterChanges": {
+    "ModifiedExistingFiles": [],
+    "AddedFixtureOnlyWitnessGroups": [
+      "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Groups\\HyThief\\HyThief_Container_Feran.json",
+      "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Groups\\HyThief\\HyThief_Container_Kweebec.json"
+    ],
+    "NativeWorldSaveBytesUnchanged": true
+  },
+  "ActiveMatchesMaster": true,
+  "DesktopResetVerified": true,
+  "OtherModsUnchanged": true,
+  "Public133Preserved": true,
+  "Container12Preserved": true,
+  "GuardResponses": "FACTION Kweebec only; FACTION Feran only; LOCAL both; exact native offender target and native pursuit verified",
+  "NoCustomSocialBroadcast": true,
+  "GoblinContainerSupport": "Deferred/excluded",
+  "Klops": "Native/untouched",
+  "PrefabInstanceOwnership": "Deferred/not implemented",
+  "StandingContainerRange": 20,
+  "CrouchedContainerRange": 6,
+  "NormalPerceptionStanding": 15,
+  "NormalPerceptionCrouched": 4,
+  "PublicArtifactComparison": "No unexpected content; 1532 existing LF/CRLF-only resource differences explicitly flagged; legacy test spawn marker removed",
+  "NativeSuiteFinalPackageEquivalence": "All runtime class and referenced asset bytes identical; only unused test marker removed, then final matrix/transfer/reset checks rerun",
+  "ClientApproval": "Pending Firebeard; do not publish"
+}

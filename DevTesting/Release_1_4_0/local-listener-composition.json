@@ -1,0 +1,18 @@
+[
+  {
+    "Asset": "BuildSupport\\StealthPrototype\\assets\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Feran_Longtooth.json",
+    "Sensors": 3
+  },
+  {
+    "Asset": "BuildSupport\\StealthPrototype\\assets\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Feran_Sharptooth.json",
+    "Sensors": 3
+  },
+  {
+    "Asset": "BuildSupport\\StealthPrototype\\assets\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Kweebec_Razorleaf.json",
+    "Sensors": 2
+  },
+  {
+    "Asset": "BuildSupport\\StealthPrototype\\assets\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Kweebec_Razorleaf_Patrol.json",
+    "Sensors": 2
+  }
+]

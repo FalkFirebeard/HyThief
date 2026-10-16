@@ -17,15 +17,6 @@ import java.util.function.Consumer;
 final class HyThiefPersonalWitnessAlert {
   private HyThiefPersonalWitnessAlert() {}
 
-  // Deliberately bounded to the five proof profiles. Do not guess at other family templates.
-  private static String entry(String role) {
-    return switch (role) {
-      case "Trork_Warrior", "Outlander_Brute" -> "TrorkEnemySighted";
-      case "Goblin_Scrapper", "Skeleton_Fighter", "Zombie" -> "Combat.Default";
-      default -> "";
-    };
-  }
-
   static int deliver(OwnershipProofData ownership, Ref<EntityStore> offender,
       List<ContainerVisualWitness.Evidence> confirmed, Store<EntityStore> store, Consumer<String> trace) {
     if (store == null || offender == null || !offender.isValid() || offender.getStore() != store
@@ -40,8 +31,8 @@ final class HyThiefPersonalWitnessAlert {
           || store.getComponent(witness, DeathComponent.getComponentType()) != null) continue;
       var npc = store.getComponent(witness, NPCEntity.getComponentType());
       if (npc == null || npc.getRole() == null) continue;
-      String path = entry(npc.getRoleName());
-      if (path.isEmpty()) continue;
+      String path = ContainerWitnessProfiles.entry(witness, store);
+      if (path.isEmpty() || path.equals("Guard")) continue;
       var state = store.getComponent(witness, StateSupport.getComponentType());
       var marked = store.getComponent(witness, MarkedEntitySupport.getComponentType());
       var world = store.getComponent(witness, WorldSupport.getComponentType());

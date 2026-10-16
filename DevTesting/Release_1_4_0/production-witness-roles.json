@@ -1,0 +1,43 @@
+{
+  "Kweebec": [
+    "Kweebec_Merchant",
+    "Kweebec_Razorleaf",
+    "Kweebec_Razorleaf_Patrol",
+    "Kweebec_Rootling",
+    "Kweebec_Sapling",
+    "Kweebec_Sapling_Orange",
+    "Kweebec_Sapling_Pink"
+  ],
+  "Feran": [
+    "Feran_Burrower",
+    "Feran_Civilian",
+    "Feran_Longtooth",
+    "Feran_Sharptooth",
+    "Feran_Windwalker"
+  ],
+  "Rally": [
+    "Trork_Brawler",
+    "Trork_Mauler",
+    "Trork_Sentry",
+    "Trork_Sentry_Patrol",
+    "Trork_Unarmed",
+    "Trork_Warrior",
+    "Trork_Warrior_Patrol",
+    "Outlander_Berserker",
+    "Outlander_Brute",
+    "Outlander_Cultist",
+    "Outlander_Hunter",
+    "Outlander_Peon",
+    "Outlander_Stalker"
+  ],
+  "Combat": [
+    "Skeleton_Fighter",
+    "Zombie",
+    "Zombie_Aberrant",
+    "Zombie_Aberrant_Big",
+    "Zombie_Aberrant_Small",
+    "Zombie_Burnt",
+    "Zombie_Frost",
+    "Zombie_Sand"
+  ]
+}
