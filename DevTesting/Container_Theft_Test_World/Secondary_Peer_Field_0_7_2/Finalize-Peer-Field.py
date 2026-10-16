@@ -1,4 +1,7 @@
-exec((__import__('pathlib').Path(__file__).parent/'peer-field.py').read_text().split("if sys.argv[1]=='setup':")[0])
+from pathlib import Path
+_runner=Path(__file__).parent/'peer-field.py'
+if not _runner.exists():_runner=Path(__file__).parent/'Run-Peer-Field.py'
+exec(_runner.read_text().split("if sys.argv[1]=='setup':")[0])
 phase=sys.argv[1]
 if phase=='install':
  for label,token in [('geometry-s','PEER_VERIFY_PASS'),('idle-s','PEER_IDLE_PASS'),('Trork-s2','PEER_RESPONSE_PASS'),('Outlander-s','PEER_RESPONSE_PASS'),('Goblin-s','PEER_RESPONSE_PASS'),('Skeleton-s','PEER_RESPONSE_PASS'),('Zombie-s','PEER_RESPONSE_PASS')]:
