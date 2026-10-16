@@ -1,0 +1,16 @@
+SURROGATE_ATTITUDE_SETUP Role=Zombie
+OFF_AXIS_FRIENDLY_TARGET Role=Zombie OffsetX=2
+STATIONARY_IDLE_PASS Seconds=60 SamplesPerNPC=240 MaxDistanceDrift=0.0 MaxYawDrift=0.0 States=[Goblin_Scrapper:Idle.Default, Goblin_Scrapper:IdleBlock.Default, Outlander_Brute:Idle.Default, Outlander_Brute:Spar.Default, Skeleton_Fighter:Idle.Default, Trork_Warrior:Idle.Default, Trork_Warrior:Spar.Default, Zombie:Idle.Default]
+STATIONARY_POSE Role=Goblin_Scrapper Position=(-3.600E+1  6.400E+1  5.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Trork_Warrior Position=( 0.000E+0  6.400E+1  5.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Outlander_Brute Position=( 3.600E+1  6.400E+1  5.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Skeleton_Fighter Position=(-1.800E+1  6.400E+1  9.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Zombie Position=( 1.800E+1  6.400E+1  9.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+PASSIVE_WINDOW_PASS Role=Zombie State=Idle.Default
+Action=OWNERSHIP_CANDIDATE Role=Zombie Faction=UNRESOLVED Eligible=true Reason=scope-match
+Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Zombie Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1330943959, index=19} WitnessPosition=( 1.800E+1  6.400E+1  9.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 1.800E+1  6.400E+1  8.750E+1)
+Action=PERSONAL_WITNESS_DELIVERED Role=Zombie Entry=Combat.Default Before=Idle.Default After=Combat.Default ExactOffender=true CustomBroadcast=false
+FACTION_WITHDRAWAL_PASS Role=Zombie Notifications=1 PersonalDeliveries=1
+NATIVE_COMBAT_BOUNDARY Combat=true Damage=93.0 MaxMovement=6.823672031978091 State=Combat.Default Target=Ref{store=class com.hypixel.hytale.component.Store@1330943959, index=29} Position=( 1.800E+1  6.500E+1  8.875E+1)
+NATIVE_RESPONSE_PASS Role=Zombie NativeMovementDistance=6.823672031978091 TargetOffender=true Damage=93.0 CustomBroadcast=false
+RESPONSE_PASS

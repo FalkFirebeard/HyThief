@@ -87,3 +87,7 @@ Connected-client result remains **PENDING Firebeard**. Stop for that result befo
 ## Stationary fixture follow-up
 
 The five new witnesses now reserve passive head/body motion through fixture-only native instructions while preserving detection/actions/state transitions and combat movement. See `CONTAINER_PASSIVE_STATIONARY_FIXTURE_0_7_2.md` for exact poses, idle/combat evidence, reset and rollback. This supersedes the original wandering-idle setup; container.12 gameplay and the Goblin IdleEat gate remain unchanged.
+
+## Secondary same-family fixture follow-up
+
+The existing world now adds five hidden stationary peers and five short walls, preserving all primary roles/poses/configuration and original four-color area. Purple peer is Trork_Sentry; others match their primary. See CONTAINER_SECONDARY_PEER_FIELD_0_7_2.md for exact geometry, passed baseline checks, native outcomes and reset evidence. Gameplay container.12 remains unchanged.

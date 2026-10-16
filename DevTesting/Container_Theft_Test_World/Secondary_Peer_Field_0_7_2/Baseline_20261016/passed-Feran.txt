@@ -1,0 +1,6 @@
+[m[2026/10/16 22:09:38   INFO]                    [SOUT] FACTION_STATION_PASS Station=1 Owned=false Scope= Faction= KweebecLOS=true FeranLOS=true Notifications=0 NoReattach=true[m
+[m[2026/10/16 22:09:38   INFO] [SOUT] FACTION_STATION_PASS Station=2 Owned=true Scope=FACTION Faction=Kweebec KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true[m
+[m[2026/10/16 22:09:38   INFO] [SOUT] FACTION_STATION_PASS Station=3 Owned=true Scope=NEARBY Faction= KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true[m
+[m[2026/10/16 22:09:38   INFO] [SOUT] FACTION_STATION_PASS Station=4 Owned=true Scope=FACTION Faction=Feran KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true[m
+[m[2026/10/16 22:09:41   INFO]          [SOUT] FACTION_NATIVE_RESPONSE_PASS Test=Feran Type=FACTION Signal=Feran_Warriors_Attack Responders=1 Notifications=1 Witness=Feran_Civilian_HyThiefWitness[m
+[m[2026/10/16 22:09:41   INFO]          [SOUT] FACTION_FIELD_VERIFIED[m

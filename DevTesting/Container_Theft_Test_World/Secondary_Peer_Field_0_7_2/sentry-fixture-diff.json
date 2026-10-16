@@ -1,0 +1,10 @@
+{
+  "Asset": "Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Trork_Sentry.json",
+  "OnlyChanges": [
+    "DefaultPlayerAttitude=Friendly",
+    "Prepend native idle-only head/body Nothing hold"
+  ],
+  "NativeSparBranch": "Spar immediately returns to Idle; no spar partner broadcast",
+  "CombatPerceptionAlertInstructionsUnchanged": true,
+  "PrimaryAssetsUntouched": true
+}

@@ -1,0 +1,15 @@
+{
+  "AddedFiles": [
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Trork_Sentry.json"
+  ],
+  "ChangedFiles": [
+    "container-theft-test-world.json",
+    "universe\\worlds\\default\\chunks\\-1.0.region.bin",
+    "universe\\worlds\\default\\chunks\\0.-1.region.bin",
+    "universe\\worlds\\default\\chunks\\0.0.region.bin"
+  ],
+  "AllExistingRoleAssetsUnchanged": true,
+  "OriginalFourAreaSemanticHash": "dceeeb1c852f91ba1e1f89292b2538b13db5fba601e42bc24948547342f8ef97",
+  "PrimaryUUIDPositionFacingStatePreserved": true,
+  "MasterFileCount": 42
+}

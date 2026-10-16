@@ -1,0 +1,15 @@
+SURROGATE_ATTITUDE_SETUP Role=Outlander_Brute
+OFF_AXIS_FRIENDLY_TARGET Role=Outlander_Brute OffsetX=2
+STATIONARY_IDLE_PASS Seconds=60 SamplesPerNPC=240 MaxDistanceDrift=0.0 MaxYawDrift=0.0 States=[Goblin_Scrapper:Idle.Default, Outlander_Brute:Idle.Default, Outlander_Brute:NeutralPlayer.Default, Skeleton_Fighter:Idle.Default, Trork_Warrior:Idle.Default, Zombie:Idle.Default, Zombie:Sleep.Nap]
+STATIONARY_POSE Role=Goblin_Scrapper Position=(-3.600E+1  6.400E+1  5.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Trork_Warrior Position=( 0.000E+0  6.400E+1  5.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Outlander_Brute Position=( 3.600E+1  6.400E+1  5.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Skeleton_Fighter Position=(-1.800E+1  6.400E+1  9.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Zombie Position=( 1.800E+1  6.400E+1  9.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+PASSIVE_WINDOW_PASS Role=Outlander_Brute State=Idle.Default
+Action=OWNERSHIP_CANDIDATE Role=Outlander_Brute Faction=UNRESOLVED Eligible=true Reason=scope-match
+Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Outlander_Brute Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@952358131, index=28} WitnessPosition=( 3.600E+1  6.400E+1  5.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 3.600E+1  6.400E+1  4.750E+1)
+Action=PERSONAL_WITNESS_DELIVERED Role=Outlander_Brute Entry=TrorkEnemySighted Before=Idle.Default After=Idle.Default ExactOffender=true CustomBroadcast=false
+FACTION_WITHDRAWAL_PASS Role=Outlander_Brute Notifications=1 PersonalDeliveries=1
+NATIVE_RESPONSE_PASS Role=Outlander_Brute NativeMovementDistance=10.27943630652095 TargetOffender=true Damage=20.0 CustomBroadcast=false
+RESPONSE_PASS

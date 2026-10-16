@@ -1,0 +1,52 @@
+{
+  "Idle": [
+    "STATIONARY_IDLE_PASS Seconds=60 SamplesPerNPC=240 MaxDistanceDrift=0.0 MaxYawDrift=0.0 States=[Goblin_Scrapper:Idle.Default, Goblin_Scrapper:IdleBlock.Default, Goblin_Scrapper:IdleEat.Default, Outlander_Brute:Idle.Default, Outlander_Brute:NeutralPlayer.Default, Outlander_Brute:Spar.Default, Skeleton_Fighter:Idle.Default, Trork_Warrior:Idle.Default, Trork_Warrior:NeutralPlayer.Default, Zombie:Idle.Default]"
+  ],
+  "Outlander_Brute": [
+    "STATIONARY_IDLE_PASS Seconds=60 SamplesPerNPC=240 MaxDistanceDrift=0.0 MaxYawDrift=0.0 States=[Goblin_Scrapper:Idle.Default, Outlander_Brute:Idle.Default, Outlander_Brute:NeutralPlayer.Default, Skeleton_Fighter:Idle.Default, Trork_Warrior:Idle.Default, Zombie:Idle.Default, Zombie:Sleep.Nap]",
+    "NATIVE_RESPONSE_PASS Role=Outlander_Brute NativeMovementDistance=10.27943630652095 TargetOffender=true Damage=20.0 CustomBroadcast=false"
+  ],
+  "Trork_Warrior": [
+    "STATIONARY_IDLE_PASS Seconds=60 SamplesPerNPC=240 MaxDistanceDrift=0.0 MaxYawDrift=0.0 States=[Goblin_Scrapper:Idle.Default, Goblin_Scrapper:IdleEat.Default, Outlander_Brute:Idle.Default, Outlander_Brute:Spar.Default, Skeleton_Fighter:Idle.Default, Trork_Warrior:Idle.Default, Trork_Warrior:NeutralPlayer.Default, Zombie:Idle.Default]",
+    "NATIVE_COMBAT_BOUNDARY Combat=true Damage=35.0 MaxMovement=11.209581719168561 State=Chase.Attack Target=Ref{store=class com.hypixel.hytale.component.Store@412048035, index=29} Position=(-1.888E-1  6.400E+1  4.472E+1)",
+    "NATIVE_RESPONSE_PASS Role=Trork_Warrior NativeMovementDistance=11.209581719168561 TargetOffender=true Damage=35.0 CustomBroadcast=false"
+  ],
+  "Skeleton_Fighter": [
+    "STATIONARY_IDLE_PASS Seconds=60 SamplesPerNPC=240 MaxDistanceDrift=0.0 MaxYawDrift=0.0 States=[Goblin_Scrapper:Idle.Default, Goblin_Scrapper:IdleEat.Default, Outlander_Brute:Idle.Default, Outlander_Brute:Spar.Default, Skeleton_Fighter:Idle.Default, Trork_Warrior:Idle.Default, Trork_Warrior:Spar.Default, Zombie:Idle.Default, Zombie:Sleep.Nap]",
+    "NATIVE_COMBAT_BOUNDARY Combat=true Damage=156.0 MaxMovement=6.05683297341028 State=Combat.Default Target=Ref{store=class com.hypixel.hytale.component.Store@407364443, index=29} Position=(-1.800E+1  6.400E+1  8.944E+1)",
+    "NATIVE_RESPONSE_PASS Role=Skeleton_Fighter NativeMovementDistance=6.05683297341028 TargetOffender=true Damage=156.0 CustomBroadcast=false"
+  ],
+  "Zombie": [
+    "STATIONARY_IDLE_PASS Seconds=60 SamplesPerNPC=240 MaxDistanceDrift=0.0 MaxYawDrift=0.0 States=[Goblin_Scrapper:Idle.Default, Goblin_Scrapper:IdleBlock.Default, Outlander_Brute:Idle.Default, Outlander_Brute:Spar.Default, Skeleton_Fighter:Idle.Default, Trork_Warrior:Idle.Default, Trork_Warrior:Spar.Default, Zombie:Idle.Default]",
+    "NATIVE_COMBAT_BOUNDARY Combat=true Damage=93.0 MaxMovement=6.823672031978091 State=Combat.Default Target=Ref{store=class com.hypixel.hytale.component.Store@1330943959, index=29} Position=( 1.800E+1  6.500E+1  8.875E+1)",
+    "NATIVE_RESPONSE_PASS Role=Zombie NativeMovementDistance=6.823672031978091 TargetOffender=true Damage=93.0 CustomBroadcast=false"
+  ],
+  "Kweebec": [
+    "\u001b[m[2026/10/16 22:09:12   INFO]                    [SOUT] FACTION_STATION_PASS Station=1 Owned=false Scope= Faction= KweebecLOS=true FeranLOS=true Notifications=0 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:09:12   INFO] [SOUT] FACTION_STATION_PASS Station=2 Owned=true Scope=FACTION Faction=Kweebec KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:09:12   INFO] [SOUT] FACTION_STATION_PASS Station=3 Owned=true Scope=NEARBY Faction= KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:09:12   INFO] [SOUT] FACTION_STATION_PASS Station=4 Owned=true Scope=FACTION Faction=Feran KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:09:15   INFO]          [SOUT] FACTION_NATIVE_RESPONSE_PASS Test=Kweebec Type=FACTION Signal=Kweebec_All_Danger Responders=1 Notifications=1 Witness=Kweebec_Sapling_HyThiefWitness\u001b[m",
+    "\u001b[m[2026/10/16 22:09:15   INFO]          [SOUT] FACTION_FIELD_VERIFIED\u001b[m"
+  ],
+  "Feran": [
+    "\u001b[m[2026/10/16 22:09:38   INFO]                    [SOUT] FACTION_STATION_PASS Station=1 Owned=false Scope= Faction= KweebecLOS=true FeranLOS=true Notifications=0 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:09:38   INFO] [SOUT] FACTION_STATION_PASS Station=2 Owned=true Scope=FACTION Faction=Kweebec KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:09:38   INFO] [SOUT] FACTION_STATION_PASS Station=3 Owned=true Scope=NEARBY Faction= KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:09:38   INFO] [SOUT] FACTION_STATION_PASS Station=4 Owned=true Scope=FACTION Faction=Feran KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:09:41   INFO]          [SOUT] FACTION_NATIVE_RESPONSE_PASS Test=Feran Type=FACTION Signal=Feran_Warriors_Attack Responders=1 Notifications=1 Witness=Feran_Civilian_HyThiefWitness\u001b[m",
+    "\u001b[m[2026/10/16 22:09:41   INFO]          [SOUT] FACTION_FIELD_VERIFIED\u001b[m"
+  ],
+  "LocalBoth": [
+    "\u001b[m[2026/10/16 22:10:04   INFO]                    [SOUT] FACTION_STATION_PASS Station=1 Owned=false Scope= Faction= KweebecLOS=true FeranLOS=true Notifications=0 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:10:04   INFO] [SOUT] FACTION_STATION_PASS Station=2 Owned=true Scope=FACTION Faction=Kweebec KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:10:04   INFO] [SOUT] FACTION_STATION_PASS Station=3 Owned=true Scope=NEARBY Faction= KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:10:04   INFO] [SOUT] FACTION_STATION_PASS Station=4 Owned=true Scope=FACTION Faction=Feran KweebecLOS=true FeranLOS=true Notifications=1 NoReattach=true\u001b[m",
+    "\u001b[m[2026/10/16 22:10:07   INFO]          [SOUT] FACTION_NATIVE_RESPONSE_PASS Test=LocalBoth Type=LOCAL Signal=HyThief_Local_Theft Responders=2 Notifications=1 Witness=Feran_Civilian_HyThiefWitness\u001b[m",
+    "\u001b[m[2026/10/16 22:10:07   INFO]          [SOUT] FACTION_FIELD_VERIFIED\u001b[m"
+  ],
+  "TrorkCaveat": "Initial unchanged 20-second combined combat/movement/damage assertion failed. Its combined message cannot distinguish which operand failed. A diagnostic rerun with separate measurements confirmed Combat=true, 11.20958-block movement, 35 damage. No gameplay/fixture change was made to obtain that result. Native timing/weapon warnings remain observable; no persistent regression established.",
+  "Goblin": "IdleEat.Default observed in repeated baseline idle runs; source/JAR exact hash unchanged. Existing personal-alert Idle/Alerted gate still excludes IdleEat, unchanged and not repaired.",
+  "InitialActiveSave": "Client-used active contained runtime changes and was preserved. Direct dirty-save probe lacked an expected NPC reference; this was not a clean-reset baseline test. Actual desktop reset restored all 41 Master files before accepted baseline checks.",
+  "BaselinePassedBeforeExpansion": true
+}

@@ -13,7 +13,7 @@
   },
   {
     "Relative": "container-theft-test-world.json",
-    "Hash": "4B9BACAEC25CFF22BD6A002CB85A7285224C5EC775164C9EF0F175D332086776"
+    "Hash": "55242FC713F60A8F2383E4C7B7DC2D82B933500261EDA846B63995693962299A"
   },
   {
     "Relative": "mods\\ContainerPassiveClientFixture\\manifest.json",
@@ -30,6 +30,10 @@
   {
     "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Skeleton_Fighter.json",
     "Hash": "D782668C619D98C1141DC2FE5628B3F09933C02EE0F7476C396A0FD5F157F821"
+  },
+  {
+    "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Trork_Sentry.json",
+    "Hash": "125281913738EE467E1D959B9A2E5E12E9E78967E77C91572F992A54000DAC13"
   },
   {
     "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Trork_Warrior.json",
@@ -93,15 +97,15 @@
   },
   {
     "Relative": "universe\\worlds\\default\\chunks\\-1.0.region.bin",
-    "Hash": "ACCF1E4689D8549A78BF0B0140E32D7AAB7C272AD99A6743AD55BA940302A256"
+    "Hash": "99D3BD6FE9F6E12E3E1580D31A52FAE550AB118479DC4EFAD90C687261F697D5"
   },
   {
     "Relative": "universe\\worlds\\default\\chunks\\0.-1.region.bin",
-    "Hash": "64F453785370C8398CF851C90CA883B0BB088771E53A8274B836F460715DD1C2"
+    "Hash": "896426C7B83B8754100A6C7C570A4C1513A26E0757E301EDA3866317DF6C1ADA"
   },
   {
     "Relative": "universe\\worlds\\default\\chunks\\0.0.region.bin",
-    "Hash": "386668985832C54D730AFBCAF509DF8E625417B7D8F4B7165E2009491B852500"
+    "Hash": "B5633B48EFF7B1F28CD46512CB82C782F953CD6E69BD2565A7DC6D3579C35DAA"
   },
   {
     "Relative": "universe\\worlds\\default\\config.json",

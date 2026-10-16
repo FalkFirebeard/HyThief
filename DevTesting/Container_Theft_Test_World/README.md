@@ -21,7 +21,7 @@ Follow the gray path behind spawn to five new sections:
 | WHITE | Skeleton Fighter | -18,64,88 | FACTION Skeleton | 8 |
 | BLACK | Zombie | 18,64,88 | FACTION Zombie | 8 |
 
-Each new native chest has 16 copper / 8 iron bars. Stand on its colored center seam, half a block before chest Z. All five use the proven world-local native Friendly setting, retain AI/perception/combat, and have no extra peers. There are nine chests and nine NPCs total. Nearby stations cannot witness each other's theft at reset positions; ownership also filters by native family. The five new witnesses now hold their exact position and facing while passive/idle; native combat movement is allowed after hostility begins.
+Each new native chest has 16 copper / 8 iron bars. Stand on its colored center seam, half a block before chest Z. All five use the proven world-local native Friendly setting, retain AI/perception/combat, and now each have one hidden stationary same-family peer. There are nine chests and fourteen NPCs total. Nearby stations cannot witness each other's theft at reset positions; ownership also filters by native family. The five new witnesses now hold their exact position and facing while passive/idle; native combat movement is allowed after hostility begins.
 
 **Start at PURPLE Trork**, straight along the path. Opening/browsing/deposit/rearrangement should be safe. Standing visible withdrawal should give one caught message and native attack/chase. Reset between caught tests. For a blocked-LOS case, use the starting blocks to build a sufficiently tall temporary wall between the witness and chest; reset removes it.
 
@@ -32,3 +32,5 @@ Use the existing desktop **Reset HyThief Container Test World** shortcut. It sti
 Full note: Docs/CONTAINER_PASSIVE_CLIENT_FIELD_0_7_2.md. Evidence/tools and rollback: Passive_Client_Expansion_0_7_2/.
 
 Stationary fixture correction: `Docs/CONTAINER_PASSIVE_STATIONARY_FIXTURE_0_7_2.md`. All five held exact starting poses for 60 seconds; Purple Trork still moved and attacked natively after witnessed theft. The actual desktop reset restores these poses. Rollback/evidence: `Stationary_Witness_0_7_2/`.
+
+Secondary alert test: one PEER behind a 4-wide, 2-high cobblestone wall at each passive station. Purple uses native Trork Sentry to avoid Warrior sparring; other peers match their primary role. All ten held exact poses for 60 seconds. Test Trork -> Outlander -> Goblin -> Skeleton -> Zombie, resetting between thefts. Observe native peer response; do not remove its wall. Goblin IdleEat skip is unchanged. See Docs/CONTAINER_SECONDARY_PEER_FIELD_0_7_2.md and Secondary_Peer_Field_0_7_2/ for measurements, results and rollback.
