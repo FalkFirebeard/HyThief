@@ -1,24 +1,32 @@
-# HyThief Container Theft Test World - mirrored color field
+# HyThief Container Theft Test World — current client fixture
 
-Gameplay remains **HyThief-1.3.1-container.11.jar**, target =0.7.2. The fixture changed; no gameplay build or rules changed.
+Use the installed **HyThief-1.3.1-container.12.jar**, target **=0.7.2**. This fixture expansion did not rebuild/change gameplay. Do not pair this ownership save with public HyThief.
 
-Use the colored floor pad immediately in front of each identical native chest:
+The original area is preserved:
 
-- **RED: CONTROL / UNOWNED** - safe, no theft notification/response.
-- **BLUE: FACTION / KWEEBEC** - matching Kweebec witness / Razorleaf response.
-- **GREEN: NEARBY** - either eligible visible civilian witness / LOCAL response from both ready responders.
-- **YELLOW: FACTION / FERAN** - matching Feran witness / Sharptooth response.
+- RED: UNOWNED control.
+- BLUE: Kweebec FACTION.
+- GREEN: NEARBY / LOCAL, both responders.
+- YELLOW: Feran FACTION.
 
-Four chests lie along the center line X=0 at Z=-6,-2,2,6. Each color pad is the preserved 4-by-3 floor marker; stand on its center seam X=0 at Z=-6.5,-2.5,1.5,5.5 respectively. Labels use colors and ownership names, not station numbers. GREEN is near the useful field center. Walk alongside the line to see each marker, then center yourself on that colored pad. No commands needed.
+Original chest seams remain X=0, Z=-6.5,-2.5,1.5,5.5. Spawn remains (0,64.1,10.5), with 64 cobblestone blocks for temporary LOS walls. Witnesses/guards and original labels/colors are unchanged.
 
-Spawn (0,64.1,10.5) faces the chest line. Both civilian witnesses are stationary at mirrored (-7.5,64,0.5)/(7.5,64,0.5), facing inward. Mobile responders sit farther behind them at (-21.5,64,0.5)/(21.5,64,0.5). Every pad is equally distant from both witnesses; both LOS/FOV checks pass. All witness-to-responder alert distances are 14 or 29 blocks, within unchanged LOCAL range 30. Both responders are farther than 20 blocks from every pad. No shelters/permanent walls.
+Follow the gray path behind spawn to five new sections:
 
-Start with 64 Rock_Stone_Cobble blocks in hotbar slot 1, matching the field floor. Manually block civilian LOS as required; keep responder routes open. Use standing for alert-scope comparisons. Each chest holds 16 copper / 8 iron bars; withdrawing one copper bar is enough. Opening/browsing alone is safe.
+| Color | NPC | Chest X,Y,Z | Ownership | Initial witness distance |
+|---|---|---|---|---|
+| ORANGE | Goblin Scrapper | -36,64,48 | FACTION Goblin | 8 |
+| PURPLE | Trork Warrior | 0,64,48 | FACTION Trork | 8 |
+| CYAN | Outlander Brute | 36,64,48 | FACTION Outlander | 8 |
+| WHITE | Skeleton Fighter | -18,64,88 | FACTION Skeleton | 8 |
+| BLACK | Zombie | 18,64,88 | FACTION Zombie | 8 |
 
-For GREEN, test both visible, then each witness blocked separately, resetting between caught trials. Each confirmed theft should produce one caught message and both native responders. RED remains safe; BLUE/YELLOW retain faction isolation. Close Hytale and use the existing Reset Container Theft launcher; it archives the active save and restores this exact clean field, loot, spawn, colors and starting blocks.
+Each new native chest has 16 copper / 8 iron bars. Stand on its colored center seam, half a block before chest Z. All five use the proven world-local native Friendly setting, retain AI/perception/combat, and have no extra peers. There are nine chests and nine NPCs total. Nearby stations cannot witness each other's theft at reset positions; ownership also filters by native family. NPCs may move normally afterward.
 
-Container visual range 20/6 and normal perception 15/4 are unchanged. Exactly four chests/four NPCs remain. The previous master and active save are preserved in Rollback-color-field-20261012-163359. See Docs/COLOR_FIELD_AND_NATIVE_PREFAB_REVIEW.md for measured geometry, native validation evidence and research-only PREFAB conclusions.
+**Start at PURPLE Trork**, straight along the path. Opening/browsing/deposit/rearrangement should be safe. Standing visible withdrawal should give one caught message and native attack/chase. Reset between caught tests. For a blocked-LOS case, use the starting blocks to build a sufficiently tall temporary wall between the witness and chest; reset removes it.
 
-## Current build pairing and reset
+**Known container.12 Goblin limitation:** IdleEat.Default is rejected by the existing personal adapter even when visual witnessing succeeds. Two native runs reproduced this; no gameplay change or idle-behavior suppression was made. Record the Goblin result/state and any weapon/animation problem for the next repair review. The other four new profiles passed native FACTION combat tests. Connected-client confirmation is pending.
 
-Use desktop **Reset HyThief Container Test World** for file-only reset. Before actually opening this save, restore the separately preserved development **HyThief-1.3.1-container.11.jar** targeting =0.7.2. Do not load its persistent ownership with public 1.3.2. The current public smoke setup intentionally leaves 1.3.2 active. The container native integrity check used development only in a disposable copy.
+Use the existing desktop **Reset HyThief Container Test World** shortcut. It still runs Reset-Container-Theft.cmd/.ps1, archives the dirty active save and restores the current 0.7.2 master with all nine stations, loot, ownership, starting inventory and original spawn. No extra world or shortcut is required. Actual desktop reset plus native-load/geometry validation passed. Container sight 20/6, normal perception 15/4, existing faction/LOCAL/guard behavior remain unchanged.
+
+Full note: Docs/CONTAINER_PASSIVE_CLIENT_FIELD_0_7_2.md. Evidence/tools and rollback: Passive_Client_Expansion_0_7_2/.

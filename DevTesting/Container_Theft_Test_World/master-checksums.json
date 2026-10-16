@@ -5,15 +5,43 @@
   },
   {
     "Relative": "client_metadata.json",
-    "Hash": "F027EB3E2F1FE5852A1B221C6A293BAF81C00E0103D52F58701A6251E4D10E43"
+    "Hash": "53184DCA36AA71DD86DE8B6C9DEA80749377483C0A05A96F8304856349010E66"
   },
   {
     "Relative": "config.json",
-    "Hash": "589C80C5B38CC64FF5809B428799108C36C5EB013B64947823E262C81FDC14AC"
+    "Hash": "A2D3F539517574FC0437FF531F3569E384572D3A7126582431FD4782D2E4D2C4"
   },
   {
     "Relative": "container-theft-test-world.json",
-    "Hash": "B3722C9E04B424F734DFFCE2E7188755FB3949358746C9AF80AF26DACF8FFFFC"
+    "Hash": "4B9BACAEC25CFF22BD6A002CB85A7285224C5EC775164C9EF0F175D332086776"
+  },
+  {
+    "Relative": "mods\\ContainerPassiveClientFixture\\manifest.json",
+    "Hash": "31895914DA87AC36398820222B47B25E59D1B35A32D0896FE2A9C3E6B4929AC1"
+  },
+  {
+    "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Goblin_Scrapper.json",
+    "Hash": "969294BB4A20AC3CB4A90CADEF434CA23C2C413C3AB4AFC20030A7D8193993AE"
+  },
+  {
+    "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Outlander_Brute.json",
+    "Hash": "18EFAC2DFB4B4F2290F357F36B8C78CB1835A32755EE34B2C7F8171EFF59566A"
+  },
+  {
+    "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Skeleton_Fighter.json",
+    "Hash": "410EEBF5187D7901A9661266481E819F5C0EC5AAE15C922E3C005B360EEAAC80"
+  },
+  {
+    "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Trork_Warrior.json",
+    "Hash": "28C10B63D6C3E3835A1F699CFBD7E4E3D34001A6C857A8AB13052D007EC714E6"
+  },
+  {
+    "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Zombie.json",
+    "Hash": "3D6B70E157EF2DFA9832F018FAAE8E6984A5373B6C4C328231A01758B044465F"
+  },
+  {
+    "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\Undead\\Skeleton\\Skeleton\\Skeleton_Fighter.json",
+    "Hash": "7592EEAE1790376253DEB750E4A8CB7303FB5A25B784FC7977CCE90E0D40E885"
   },
   {
     "Relative": "mods\\ContainerTheftFixture\\manifest.json",
@@ -25,15 +53,15 @@
   },
   {
     "Relative": "mods\\ContainerTheftFixture\\Server\\NPC\\Roles\\HyThiefContainerFixture_Razorleaf_WitnessHandoff.json",
-    "Hash": "C5EC0D18954CEB4F8EB9933CE9C6BFFCBB91DEDE1F74D639329EE3B11702D125"
+    "Hash": "A0BE82CFB59E5F51B3D32786D9F57ABF309339A647EF49A5F8526CBEB126415C"
   },
   {
     "Relative": "mods\\ContainerTheftFixture\\Server\\NPC\\Roles\\Kweebec_Razorleaf.json",
-    "Hash": "99333AA4AE7AA8EC63D00997F0AEB95CFBBF85A110DD6EDFF73A0DC0215D230E"
+    "Hash": "5106136A5A022E13E7EA3B2BA6462132BF53C08AC5147B90AE2D13E7266EDA8B"
   },
   {
     "Relative": "mods\\ContainerTheftFixture\\Server\\NPC\\Roles\\Kweebec_Sapling.json",
-    "Hash": "16058D7F8803E71BE1084BC0C85F89325D205DDC57DF2D5E0FA2F83834662E92"
+    "Hash": "D7907F1B671A3DD68AEF23DA3ABB170E364A50EF6E6E8802D39FDD59666275DF"
   },
   {
     "Relative": "mods\\HyThief_Faction_Field.zip",
@@ -45,7 +73,7 @@
   },
   {
     "Relative": "universe\\players\\d49a059a-84ec-4b9c-8560-ef2ff633ce44.json",
-    "Hash": "7F99A40AC5AFEF22BE761531276E8B393E418296AF687C593576767875F8B26C"
+    "Hash": "5905B191FA4AE7792D5E1900B06CF5CB40764DD4DAB12105D976355CEDD6099A"
   },
   {
     "Relative": "universe\\resources\\GameFlags.json",
@@ -61,19 +89,19 @@
   },
   {
     "Relative": "universe\\worlds\\default\\chunks\\-1.-1.region.bin",
-    "Hash": "A272F94B7CCE8AAD73C71728ADFFB9C2FBC314674D79585E789A5F07D2B828DF"
+    "Hash": "F96B1B8DC0AA36F785CC158B8DAC565F6AF9D7020AFC0CC5DDD7F7530AE84F8A"
   },
   {
     "Relative": "universe\\worlds\\default\\chunks\\-1.0.region.bin",
-    "Hash": "FF4036473CF828AAC13AFCF64721D0B4ADB2C573643949A60180521DAFBEE014"
+    "Hash": "ACCF1E4689D8549A78BF0B0140E32D7AAB7C272AD99A6743AD55BA940302A256"
   },
   {
     "Relative": "universe\\worlds\\default\\chunks\\0.-1.region.bin",
-    "Hash": "504003FC5699E0D7F8A684B0F3DAD541D7DB5B9CFC0A8976E9D667C3F99EAABC"
+    "Hash": "64F453785370C8398CF851C90CA883B0BB088771E53A8274B836F460715DD1C2"
   },
   {
     "Relative": "universe\\worlds\\default\\chunks\\0.0.region.bin",
-    "Hash": "4E01A4E1C6D661DC8AAF1199843DCE2B389A586CD9D860D42187CCCEA8476860"
+    "Hash": "386668985832C54D730AFBCAF509DF8E625417B7D8F4B7165E2009491B852500"
   },
   {
     "Relative": "universe\\worlds\\default\\config.json",
@@ -125,6 +153,10 @@
   },
   {
     "Relative": "universe\\worlds\\default\\resources\\TriggerVolumeData.json",
+    "Hash": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A"
+  },
+  {
+    "Relative": "universe\\worlds\\default\\resources\\VoidEvent.json",
     "Hash": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A"
   },
   {

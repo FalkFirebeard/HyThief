@@ -115,3 +115,7 @@ Public 1.3.3 remains `3c39a85557edd8504f5d8e080762b9028be135049a504b372106fd89b6
 See `results.json`, `artifact-comparison.json`, `deployment.json`, reset evidence and native run logs in the checkpoint folder. Native/reference copied assets and save data stay local; only diagnostic source/summary/reset instructions are committed.
 
 Sources: installed 0.7.2 role trees and copied native-server API/bytecode, prior `NATIVE_NPC_AGGRESSION_SOCIAL_ALERT_0_7_2.md`, [official WorldSupport API](https://docs.hytale.com/api/com/hypixel/hytale/server/npc/role/support/WorldSupport), and [official Update 7 modder notes](https://hytale.com/news/2026/10/modder-facing-patch-notes-update-7).
+
+## Expanded-field follow-up: Goblin idle flavor
+
+The later existing-world client fixture exposed a container.12 limitation: Goblin_Scrapper in IdleEat.Default personally sees the theft, but the adapter state gate skips it. The earlier Idle.Default proof is still valid; it did not cover every passive main state. Gameplay remains unchanged. See `CONTAINER_PASSIVE_CLIENT_FIELD_0_7_2.md` for exact evidence and the ready client fixture.

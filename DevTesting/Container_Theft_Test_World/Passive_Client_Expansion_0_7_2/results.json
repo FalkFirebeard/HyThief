@@ -1,0 +1,185 @@
+{
+  "Hytale": "0.7.2",
+  "Revision": "d769dc3d57881261a62858e1394f0e4de9a21eca",
+  "Gameplay": "1.3.1-container.12",
+  "JarRebuilt": false,
+  "JarSHA256": "6b4c1500428674b4deb09c116ca6eb7d37360f9137e9a39ac527068d79dbe800",
+  "ConnectedClientResult": "PENDING Firebeard",
+  "OriginalAreaPreserved": true,
+  "NativeOriginalAreaSHA256": "dceeeb1c852f91ba1e1f89292b2538b13db5fba601e42bc24948547342f8ef97",
+  "Stations": [
+    {
+      "Role": "Goblin_Scrapper",
+      "Family": "Goblin",
+      "Color": "Orange",
+      "X": -36,
+      "Z": 48
+    },
+    {
+      "Role": "Trork_Warrior",
+      "Family": "Trork",
+      "Color": "Purple",
+      "X": 0,
+      "Z": 48
+    },
+    {
+      "Role": "Outlander_Brute",
+      "Family": "Outlander",
+      "Color": "Cyan",
+      "X": 36,
+      "Z": 48
+    },
+    {
+      "Role": "Skeleton_Fighter",
+      "Family": "Skeleton",
+      "Color": "White",
+      "X": -18,
+      "Z": 88
+    },
+    {
+      "Role": "Zombie",
+      "Family": "Zombie",
+      "Color": "Black",
+      "X": 18,
+      "Z": 88
+    }
+  ],
+  "Structure": [
+    "Action=OWNERSHIP_CANDIDATE Role=Goblin_Scrapper Faction=UNRESOLVED Eligible=true Reason=scope-match",
+    "Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Goblin_Scrapper Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1982777876, index=3} WitnessPosition=(-3.600E+1  6.400E+1  5.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=(-3.600E+1  6.400E+1  4.750E+1)",
+    "SAFE_ACTIONS_PASS Role=Goblin_Scrapper NativeOpenClose=true Deposit=true Rearrange=true FalseThefts=0",
+    "STATION_VALID Role=Goblin_Scrapper Color=Orange Ownership=FACTION:Goblin Passive=FRIENDLY Distance=8.0 HeadYaw=0.0 FOV=true LOS=true NearestOtherNPC=36.87817782917155 BlockedLOS=UNSEEN NativeChest=true Peers=0",
+    "Action=OWNERSHIP_CANDIDATE Role=Trork_Warrior Faction=UNRESOLVED Eligible=true Reason=scope-match",
+    "Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Trork_Warrior Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1982777876, index=24} WitnessPosition=( 0.000E+0  6.400E+1  5.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 0.000E+0  6.400E+1  4.750E+1)",
+    "SAFE_ACTIONS_PASS Role=Trork_Warrior NativeOpenClose=true Deposit=true Rearrange=true FalseThefts=0",
+    "STATION_VALID Role=Trork_Warrior Color=Purple Ownership=FACTION:Trork Passive=FRIENDLY Distance=8.0 HeadYaw=0.0 FOV=true LOS=true NearestOtherNPC=36.87817782917155 BlockedLOS=UNSEEN NativeChest=true Peers=0",
+    "Action=OWNERSHIP_CANDIDATE Role=Outlander_Brute Faction=UNRESOLVED Eligible=true Reason=scope-match",
+    "Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Outlander_Brute Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1982777876, index=28} WitnessPosition=( 3.600E+1  6.400E+1  5.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 3.600E+1  6.400E+1  4.750E+1)",
+    "SAFE_ACTIONS_PASS Role=Outlander_Brute NativeOpenClose=true Deposit=true Rearrange=true FalseThefts=0",
+    "STATION_VALID Role=Outlander_Brute Color=Cyan Ownership=FACTION:Outlander Passive=FRIENDLY Distance=8.0 HeadYaw=0.0 FOV=true LOS=true NearestOtherNPC=36.87817782917155 BlockedLOS=UNSEEN NativeChest=true Peers=0",
+    "Action=OWNERSHIP_CANDIDATE Role=Skeleton_Fighter Faction=UNRESOLVED Eligible=true Reason=scope-match",
+    "Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Skeleton_Fighter Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1982777876, index=6} WitnessPosition=(-1.800E+1  6.400E+1  9.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=(-1.800E+1  6.400E+1  8.750E+1)",
+    "SAFE_ACTIONS_PASS Role=Skeleton_Fighter NativeOpenClose=true Deposit=true Rearrange=true FalseThefts=0",
+    "STATION_VALID Role=Skeleton_Fighter Color=White Ownership=FACTION:Skeleton Passive=FRIENDLY Distance=8.0 HeadYaw=0.0 FOV=true LOS=true NearestOtherNPC=36.71511950137164 BlockedLOS=UNSEEN NativeChest=true Peers=0",
+    "Action=OWNERSHIP_CANDIDATE Role=Zombie Faction=UNRESOLVED Eligible=true Reason=scope-match",
+    "Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Zombie Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1982777876, index=12} WitnessPosition=( 1.800E+1  6.400E+1  9.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 1.800E+1  6.400E+1  8.750E+1)",
+    "SAFE_ACTIONS_PASS Role=Zombie NativeOpenClose=true Deposit=true Rearrange=true FalseThefts=0",
+    "STATION_VALID Role=Zombie Color=Black Ownership=FACTION:Zombie Passive=FRIENDLY Distance=8.0 HeadYaw=0.0 FOV=true LOS=true NearestOtherNPC=36.71511950137164 BlockedLOS=UNSEEN NativeChest=true Peers=0",
+    "ALL_STATIONS_VALID NativeChests=9 NPCs=9 OldAreaPreserved=true NormalPerception=15/4 ContainerWitness=20/6 SpawnUnchanged=true StartingBlocks=64",
+    "VERIFY_PASS"
+  ],
+  "Responses": {
+    "Trork_Warrior": {
+      "NativeResult": "PASS",
+      "Evidence": [
+        "SURROGATE_ATTITUDE_SETUP Role=Trork_Warrior",
+        "PASSIVE_WINDOW_PASS Role=Trork_Warrior State=NeutralPlayer.Default",
+        "Action=OWNERSHIP_CANDIDATE Role=Trork_Warrior Faction=UNRESOLVED Eligible=true Reason=scope-match",
+        "Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Trork_Warrior Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@659559805, index=24} WitnessPosition=( 0.000E+0  6.400E+1  5.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 0.000E+0  6.400E+1  4.750E+1)",
+        "Action=PERSONAL_WITNESS_DELIVERED Role=Trork_Warrior Entry=TrorkEnemySighted Before=NeutralPlayer.Default After=NeutralPlayer.Default ExactOffender=true CustomBroadcast=false",
+        "FACTION_WITHDRAWAL_PASS Role=Trork_Warrior Notifications=1 PersonalDeliveries=1",
+        "NATIVE_RESPONSE_PASS Role=Trork_Warrior TargetOffender=true Damage=35.0 CustomBroadcast=false",
+        "RESPONSE_PASS"
+      ]
+    },
+    "Outlander_Brute": {
+      "NativeResult": "PASS",
+      "Evidence": [
+        "SURROGATE_ATTITUDE_SETUP Role=Outlander_Brute",
+        "PASSIVE_WINDOW_PASS Role=Outlander_Brute State=NeutralPlayer.Default",
+        "Action=OWNERSHIP_CANDIDATE Role=Outlander_Brute Faction=UNRESOLVED Eligible=true Reason=scope-match",
+        "Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Outlander_Brute Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1733126485, index=28} WitnessPosition=( 3.600E+1  6.400E+1  5.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 3.600E+1  6.400E+1  4.750E+1)",
+        "Action=PERSONAL_WITNESS_DELIVERED Role=Outlander_Brute Entry=TrorkEnemySighted Before=NeutralPlayer.Default After=NeutralPlayer.Default ExactOffender=true CustomBroadcast=false",
+        "FACTION_WITHDRAWAL_PASS Role=Outlander_Brute Notifications=1 PersonalDeliveries=1",
+        "NATIVE_RESPONSE_PASS Role=Outlander_Brute TargetOffender=true Damage=30.0 CustomBroadcast=false",
+        "RESPONSE_PASS"
+      ]
+    },
+    "Skeleton_Fighter": {
+      "NativeResult": "PASS",
+      "Evidence": [
+        "SURROGATE_ATTITUDE_SETUP Role=Skeleton_Fighter",
+        "PASSIVE_WINDOW_PASS Role=Skeleton_Fighter State=Idle.Default",
+        "Action=OWNERSHIP_CANDIDATE Role=Skeleton_Fighter Faction=UNRESOLVED Eligible=true Reason=scope-match",
+        "Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Skeleton_Fighter Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1159645438, index=4} WitnessPosition=(-1.800E+1  6.400E+1  9.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=(-1.800E+1  6.400E+1  8.750E+1)",
+        "Action=PERSONAL_WITNESS_DELIVERED Role=Skeleton_Fighter Entry=Combat.Default Before=Idle.Default After=Combat.Default ExactOffender=true CustomBroadcast=false",
+        "FACTION_WITHDRAWAL_PASS Role=Skeleton_Fighter Notifications=1 PersonalDeliveries=1",
+        "NATIVE_RESPONSE_PASS Role=Skeleton_Fighter TargetOffender=true Damage=109.0 CustomBroadcast=false",
+        "RESPONSE_PASS"
+      ]
+    },
+    "Zombie": {
+      "NativeResult": "PASS",
+      "Evidence": [
+        "SURROGATE_ATTITUDE_SETUP Role=Zombie",
+        "PASSIVE_WINDOW_PASS Role=Zombie State=Idle.Default",
+        "Action=OWNERSHIP_CANDIDATE Role=Zombie Faction=UNRESOLVED Eligible=true Reason=scope-match",
+        "Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Zombie Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1157004416, index=26} WitnessPosition=( 1.800E+1  6.400E+1  9.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 1.800E+1  6.400E+1  8.750E+1)",
+        "Action=PERSONAL_WITNESS_DELIVERED Role=Zombie Entry=Combat.Default Before=Idle.Default After=Combat.Default ExactOffender=true CustomBroadcast=false",
+        "FACTION_WITHDRAWAL_PASS Role=Zombie Notifications=1 PersonalDeliveries=1",
+        "NATIVE_RESPONSE_PASS Role=Zombie TargetOffender=true Damage=80.0 CustomBroadcast=false",
+        "RESPONSE_PASS"
+      ]
+    },
+    "selected-Goblin_Scrapper": {
+      "NativeResult": "KNOWN EXISTING STATE-GATE FAILURE; gameplay untouched",
+      "LastSuccessfulStage": "Owned FACTION match, visual seen, one notification; adapter skips IdleEat.Default",
+      "Evidence": [
+        "SURROGATE_ATTITUDE_SETUP Role=Goblin_Scrapper",
+        "PASSIVE_WINDOW_PASS Role=Goblin_Scrapper State=IdleEat.Default",
+        "Action=OWNERSHIP_CANDIDATE Role=Goblin_Scrapper Faction=UNRESOLVED Eligible=true Reason=scope-match",
+        "Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Goblin_Scrapper Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1247869871, index=7} WitnessPosition=(-3.600E+1  6.400E+1  5.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=(-3.600E+1  6.400E+1  4.750E+1)",
+        "Action=PERSONAL_WITNESS_SKIP Role=Goblin_Scrapper State=IdleEat.Default",
+        "FAILED java.lang.IllegalStateException: personal native handoff",
+        "FAILED"
+      ]
+    },
+    "goblin-repeat": {
+      "NativeResult": "KNOWN EXISTING STATE-GATE FAILURE; gameplay untouched",
+      "LastSuccessfulStage": "Owned FACTION match, visual seen, one notification; adapter skips IdleEat.Default",
+      "Evidence": [
+        "SURROGATE_ATTITUDE_SETUP Role=Goblin_Scrapper",
+        "PASSIVE_WINDOW_PASS Role=Goblin_Scrapper State=IdleEat.Default",
+        "Action=OWNERSHIP_CANDIDATE Role=Goblin_Scrapper Faction=UNRESOLVED Eligible=true Reason=scope-match",
+        "Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Goblin_Scrapper Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1023258513, index=3} WitnessPosition=(-3.600E+1  6.400E+1  5.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=(-3.600E+1  6.400E+1  4.750E+1)",
+        "Action=PERSONAL_WITNESS_SKIP Role=Goblin_Scrapper State=IdleEat.Default",
+        "FAILED java.lang.IllegalStateException: personal native handoff",
+        "FAILED"
+      ]
+    }
+  },
+  "LegacyRegressions": {
+    "Kweebec": [
+      "FACTION_NATIVE_RESPONSE_PASS Test=Kweebec Type=FACTION Signal=Kweebec_All_Danger Responders=1 Notifications=1 Witness=Kweebec_Sapling_HyThiefWitness\u001b[m"
+    ],
+    "Feran": [
+      "FACTION_NATIVE_RESPONSE_PASS Test=Feran Type=FACTION Signal=Feran_Warriors_Attack Responders=1 Notifications=1 Witness=Feran_Civilian_HyThiefWitness\u001b[m"
+    ],
+    "LocalBoth": [
+      "FACTION_NATIVE_RESPONSE_PASS Test=LocalBoth Type=LOCAL Signal=HyThief_Local_Theft Responders=2 Notifications=1 Witness=Feran_Civilian_HyThiefWitness\u001b[m"
+    ],
+    "LocalKweebec": [
+      "FACTION_NATIVE_RESPONSE_PASS Test=LocalKweebec Type=LOCAL Signal=HyThief_Local_Theft Responders=2 Notifications=1 Witness=Kweebec_Sapling_HyThiefWitness\u001b[m"
+    ],
+    "LocalFeran": [
+      "FACTION_NATIVE_RESPONSE_PASS Test=LocalFeran Type=LOCAL Signal=HyThief_Local_Theft Responders=2 Notifications=1 Witness=Feran_Civilian_HyThiefWitness\u001b[m"
+    ]
+  },
+  "DesktopReset": {
+    "ActualDesktopShortcut": "C:\\Users\\askin\\OneDrive\\Desktop\\Reset HyThief Container Test World.lnk",
+    "Target": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Container_Theft_Test_World\\Reset-Container-Theft.cmd",
+    "WorkingDirectory": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Container_Theft_Test_World",
+    "ShortcutUnchanged": true,
+    "ScriptsUnchanged": true,
+    "Active": "C:\\Users\\askin\\AppData\\Roaming\\Hytale\\UserData\\Saves\\HyThief Container Theft Test World",
+    "ActiveMatchesMaster": true,
+    "VerifiedFiles": 41,
+    "NativeTicking": true
+  },
+  "ProtectedSourceAndOtherWorldsUnchanged": true,
+  "Count": {
+    "Chests": 9,
+    "NPCs": 9,
+    "OptionalPeers": 0
+  }
+}

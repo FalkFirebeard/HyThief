@@ -6,11 +6,11 @@
     "$binary": "W1n2+af0TqSOUlUR6p0Q+A==",
     "$type": "04"
   },
-  "DiagnosticVersion": "1.3.1-container.11",
+  "DiagnosticVersion": "1.3.1-container.12",
   "PrefabSHA256": "18570914CCA51CF30A800CADEB21629677EBBB83B357BAA73E7D4D3B190EB26B",
   "CivilianFrozen": true,
-  "FixtureVersion": "1.0.3",
-  "LayoutVersion": 9,
+  "FixtureVersion": "1.1.0",
+  "LayoutVersion": 10,
   "TestOrder": [
     "CONTROL",
     "KWEEBEC_FACTION",
@@ -40,10 +40,15 @@
   "OwnershipField": true,
   "WitnessRoles": [
     "Kweebec_Sapling_HyThiefWitness",
-    "Feran_Civilian_HyThiefWitness"
+    "Feran_Civilian_HyThiefWitness",
+    "Goblin_Scrapper",
+    "Trork_Warrior",
+    "Outlander_Brute",
+    "Skeleton_Fighter",
+    "Zombie"
   ],
   "PermanentLOSWalls": false,
-  "ChestCount": 4,
+  "ChestCount": 9,
   "StartingBlocks": {
     "Id": "Rock_Stone_Cobble",
     "Quantity": 64
@@ -119,5 +124,45 @@
     ]
   },
   "ValidatedHytaleVersion": "0.7.2",
-  "ValidatedHytaleRevision": "d769dc3d57881261a62858e1394f0e4de9a21eca"
+  "ValidatedHytaleRevision": "d769dc3d57881261a62858e1394f0e4de9a21eca",
+  "NPCCount": 9,
+  "PassiveHumanoidStations": [
+    {
+      "Role": "Goblin_Scrapper",
+      "Family": "Goblin",
+      "Color": "Orange",
+      "X": -36,
+      "Z": 48
+    },
+    {
+      "Role": "Trork_Warrior",
+      "Family": "Trork",
+      "Color": "Purple",
+      "X": 0,
+      "Z": 48
+    },
+    {
+      "Role": "Outlander_Brute",
+      "Family": "Outlander",
+      "Color": "Cyan",
+      "X": 36,
+      "Z": 48
+    },
+    {
+      "Role": "Skeleton_Fighter",
+      "Family": "Skeleton",
+      "Color": "White",
+      "X": -18,
+      "Z": 88
+    },
+    {
+      "Role": "Zombie",
+      "Family": "Zombie",
+      "Color": "Black",
+      "X": 18,
+      "Z": 88
+    }
+  ],
+  "PassiveWitnessDistance": 8,
+  "OptionalPeers": false
 }

@@ -1,0 +1,22 @@
+{
+  "UnchangedJSONRestoredToExistingGitBytes": true,
+  "OriginalWorldClockRestored": true,
+  "Files": [
+    "client_metadata.json",
+    "config.json",
+    "container-theft-test-world.json",
+    "mods\\ContainerPassiveClientFixture\\manifest.json",
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Goblin_Scrapper.json",
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Outlander_Brute.json",
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Skeleton_Fighter.json",
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Trork_Warrior.json",
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Zombie.json",
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\Undead\\Skeleton\\Skeleton\\Skeleton_Fighter.json",
+    "mods\\ContainerTheftFixture\\Server\\NPC\\Roles\\HyThiefContainerFixture_Razorleaf_WitnessHandoff.json",
+    "mods\\ContainerTheftFixture\\Server\\NPC\\Roles\\Kweebec_Razorleaf.json",
+    "mods\\ContainerTheftFixture\\Server\\NPC\\Roles\\Kweebec_Sapling.json",
+    "universe\\players\\d49a059a-84ec-4b9c-8560-ef2ff633ce44.json",
+    "universe\\worlds\\default\\config.json",
+    "universe\\worlds\\default\\resources\\Time.json"
+  ]
+}

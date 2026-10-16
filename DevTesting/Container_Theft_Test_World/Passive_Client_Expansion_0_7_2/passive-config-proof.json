@@ -1,0 +1,12 @@
+{
+  "OnlySettingChanged": "DefaultPlayerAttitude=Friendly",
+  "NativeMovementPerceptionCombatUntouched": true,
+  "Assets": [
+    "Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Goblin_Scrapper.json",
+    "Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Outlander_Brute.json",
+    "Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Skeleton_Fighter.json",
+    "Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Trork_Warrior.json",
+    "Server/NPC/Roles/HyThief/Stealth/HyThiefStealth_Zombie.json",
+    "Server/NPC/Roles/Undead/Skeleton/Skeleton/Skeleton_Fighter.json"
+  ]
+}
