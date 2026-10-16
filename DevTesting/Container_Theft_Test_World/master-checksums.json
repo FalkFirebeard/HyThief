@@ -21,23 +21,23 @@
   },
   {
     "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Goblin_Scrapper.json",
-    "Hash": "969294BB4A20AC3CB4A90CADEF434CA23C2C413C3AB4AFC20030A7D8193993AE"
+    "Hash": "1423A8A0398B53C1D92E9905BF079C9104318004525255FF55E176B446122E1C"
   },
   {
     "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Outlander_Brute.json",
-    "Hash": "18EFAC2DFB4B4F2290F357F36B8C78CB1835A32755EE34B2C7F8171EFF59566A"
+    "Hash": "0F3DA61C68DF76767F119C3C5097E82D3D6B8850CEDD0591B414837802AF7892"
   },
   {
     "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Skeleton_Fighter.json",
-    "Hash": "410EEBF5187D7901A9661266481E819F5C0EC5AAE15C922E3C005B360EEAAC80"
+    "Hash": "D782668C619D98C1141DC2FE5628B3F09933C02EE0F7476C396A0FD5F157F821"
   },
   {
     "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Trork_Warrior.json",
-    "Hash": "28C10B63D6C3E3835A1F699CFBD7E4E3D34001A6C857A8AB13052D007EC714E6"
+    "Hash": "B011021AE66DFEA42DEFCA8A0D3287D1C54D1781EB3BDD0D05A34C50C82A67D6"
   },
   {
     "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Zombie.json",
-    "Hash": "3D6B70E157EF2DFA9832F018FAAE8E6984A5373B6C4C328231A01758B044465F"
+    "Hash": "A26FA2254AAF41A7567587900238C94B9C253F2933728AE0A4BDC5A9B0EAAF09"
   },
   {
     "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\Undead\\Skeleton\\Skeleton\\Skeleton_Fighter.json",

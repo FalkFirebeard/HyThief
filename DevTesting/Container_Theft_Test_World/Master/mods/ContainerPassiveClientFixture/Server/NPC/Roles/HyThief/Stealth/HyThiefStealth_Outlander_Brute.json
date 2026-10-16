@@ -193,6 +193,33 @@
   },
   "Instructions": [
     {
+      "$Comment": "Development fixture only: reserve idle head/body motion while continuing native perception, actions and state transitions. Combat/chase motions are not reserved.",
+      "Continue": true,
+      "Sensor": {
+        "Type": "Or",
+        "Sensors": [
+          {
+            "Type": "State",
+            "State": "Idle"
+          },
+          {
+            "Type": "State",
+            "State": "NeutralPlayer"
+          },
+          {
+            "Type": "State",
+            "State": "Revered"
+          }
+        ]
+      },
+      "HeadMotion": {
+        "Type": "Nothing"
+      },
+      "BodyMotion": {
+        "Type": "Nothing"
+      }
+    },
+    {
       "Continue": true,
       "Instructions": [
         {

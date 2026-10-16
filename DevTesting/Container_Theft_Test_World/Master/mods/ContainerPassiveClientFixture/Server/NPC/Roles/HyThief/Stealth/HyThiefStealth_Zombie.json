@@ -675,6 +675,29 @@
   },
   "Instructions": [
     {
+      "$Comment": "Development fixture only: reserve idle head/body motion while continuing native perception, actions and state transitions. Combat/chase motions are not reserved.",
+      "Continue": true,
+      "Sensor": {
+        "Type": "Or",
+        "Sensors": [
+          {
+            "Type": "State",
+            "State": "Idle"
+          },
+          {
+            "Type": "State",
+            "State": "Sleep"
+          }
+        ]
+      },
+      "HeadMotion": {
+        "Type": "Nothing"
+      },
+      "BodyMotion": {
+        "Type": "Nothing"
+      }
+    },
+    {
       "$Comment": "This is separate so it can run all the time regardless of the rest of the script",
       "Continue": true,
       "Instructions": [

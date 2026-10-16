@@ -1,0 +1,169 @@
+{
+  "StagedMasterMatchesChecksums": true,
+  "Files": [
+    {
+      "Relative": "bans.json",
+      "SHA256": "63FE399D355804BA1CA6EDF9A7E4E93593AD095F3C25A4B9E993D90F929A3C85"
+    },
+    {
+      "Relative": "client_metadata.json",
+      "SHA256": "53184DCA36AA71DD86DE8B6C9DEA80749377483C0A05A96F8304856349010E66"
+    },
+    {
+      "Relative": "config.json",
+      "SHA256": "A2D3F539517574FC0437FF531F3569E384572D3A7126582431FD4782D2E4D2C4"
+    },
+    {
+      "Relative": "container-theft-test-world.json",
+      "SHA256": "4B9BACAEC25CFF22BD6A002CB85A7285224C5EC775164C9EF0F175D332086776"
+    },
+    {
+      "Relative": "mods\\ContainerPassiveClientFixture\\manifest.json",
+      "SHA256": "31895914DA87AC36398820222B47B25E59D1B35A32D0896FE2A9C3E6B4929AC1"
+    },
+    {
+      "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Goblin_Scrapper.json",
+      "SHA256": "1423A8A0398B53C1D92E9905BF079C9104318004525255FF55E176B446122E1C"
+    },
+    {
+      "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Outlander_Brute.json",
+      "SHA256": "0F3DA61C68DF76767F119C3C5097E82D3D6B8850CEDD0591B414837802AF7892"
+    },
+    {
+      "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Skeleton_Fighter.json",
+      "SHA256": "D782668C619D98C1141DC2FE5628B3F09933C02EE0F7476C396A0FD5F157F821"
+    },
+    {
+      "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Trork_Warrior.json",
+      "SHA256": "B011021AE66DFEA42DEFCA8A0D3287D1C54D1781EB3BDD0D05A34C50C82A67D6"
+    },
+    {
+      "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Zombie.json",
+      "SHA256": "A26FA2254AAF41A7567587900238C94B9C253F2933728AE0A4BDC5A9B0EAAF09"
+    },
+    {
+      "Relative": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\Undead\\Skeleton\\Skeleton\\Skeleton_Fighter.json",
+      "SHA256": "7592EEAE1790376253DEB750E4A8CB7303FB5A25B784FC7977CCE90E0D40E885"
+    },
+    {
+      "Relative": "mods\\ContainerTheftFixture\\manifest.json",
+      "SHA256": "FF1352AFECE772A6D42B44516438B92E0B728770CDB0AC70A34BD688AF329B26"
+    },
+    {
+      "Relative": "mods\\ContainerTheftFixture\\Server\\NPC\\Roles\\HyThiefContainerFixture_Native_Sapling.json",
+      "SHA256": "927ECB3CDE9ADB9CC6245A8CE66081178CAA4FB121D3A3D8D51775AFE8FAE2CE"
+    },
+    {
+      "Relative": "mods\\ContainerTheftFixture\\Server\\NPC\\Roles\\HyThiefContainerFixture_Razorleaf_WitnessHandoff.json",
+      "SHA256": "A0BE82CFB59E5F51B3D32786D9F57ABF309339A647EF49A5F8526CBEB126415C"
+    },
+    {
+      "Relative": "mods\\ContainerTheftFixture\\Server\\NPC\\Roles\\Kweebec_Razorleaf.json",
+      "SHA256": "5106136A5A022E13E7EA3B2BA6462132BF53C08AC5147B90AE2D13E7266EDA8B"
+    },
+    {
+      "Relative": "mods\\ContainerTheftFixture\\Server\\NPC\\Roles\\Kweebec_Sapling.json",
+      "SHA256": "D7907F1B671A3DD68AEF23DA3ABB170E364A50EF6E6E8802D39FDD59666275DF"
+    },
+    {
+      "Relative": "mods\\HyThief_Faction_Field.zip",
+      "SHA256": "AEFC4B0AE95C7973771D86C0743AE9DCC5E06EFD1E8C8EDFAD6B181C663EFF21"
+    },
+    {
+      "Relative": "permissions.json",
+      "SHA256": "09E913FA1606F67AA0384D5E0409E333E128BEC6B3ED98217A1303A54EECD97B"
+    },
+    {
+      "Relative": "universe\\players\\d49a059a-84ec-4b9c-8560-ef2ff633ce44.json",
+      "SHA256": "5905B191FA4AE7792D5E1900B06CF5CB40764DD4DAB12105D976355CEDD6099A"
+    },
+    {
+      "Relative": "universe\\resources\\GameFlags.json",
+      "SHA256": "E4D904DB0E80DD4BEB3301F0CB853B0AB22C603778F5E5FB6C16299D35E9BF8F"
+    },
+    {
+      "Relative": "universe\\resources\\Hardcore.json",
+      "SHA256": "637BC55C8E7E80F6844041E54001C45C78CB23CCD7B1E6471B7A6B58116598B9"
+    },
+    {
+      "Relative": "universe\\resources\\Memories.json",
+      "SHA256": "3EE81B81C0ABD11DDD4222E971A0F3B0E6AF0B6B6C4764BB9FEAD51C02E25DCB"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\chunks\\-1.-1.region.bin",
+      "SHA256": "F96B1B8DC0AA36F785CC158B8DAC565F6AF9D7020AFC0CC5DDD7F7530AE84F8A"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\chunks\\-1.0.region.bin",
+      "SHA256": "ACCF1E4689D8549A78BF0B0140E32D7AAB7C272AD99A6743AD55BA940302A256"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\chunks\\0.-1.region.bin",
+      "SHA256": "64F453785370C8398CF851C90CA883B0BB088771E53A8274B836F460715DD1C2"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\chunks\\0.0.region.bin",
+      "SHA256": "386668985832C54D730AFBCAF509DF8E625417B7D8F4B7165E2009491B852500"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\config.json",
+      "SHA256": "83FF49107471B46E77CB461DB386AF85B8C466AA55CA70EF68A4DBE924635A07"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\config.json.bak",
+      "SHA256": "83FF49107471B46E77CB461DB386AF85B8C466AA55CA70EF68A4DBE924635A07"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\BlockCounter.json",
+      "SHA256": "A407F95A6D8BDD2BD72DA2F6094EA48D5DD7645ED0F5366D06DE4AAD404A716D"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\BlockMapMarkers.json",
+      "SHA256": "A42E733D2BD06412B8E089B87763A4CE38D644378D9FF0C940D870DA956AE5BB"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\ChunkStorage.json",
+      "SHA256": "C86320C3417080DFCD3EC29EB8796BB2D4B8543E3D5EF5E958E52CC98A8791FC"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\InstanceData.json",
+      "SHA256": "FF6FF3AE2F52F92EF36AF0540AADA5261925D634707A0F3BCEE951F7E3A9E81A"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\PointData.json",
+      "SHA256": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\PrefabEditSession.json",
+      "SHA256": "AC1819256005F7570EA0B0DE85C6353C34A77E793ED6CEF848613A1CB575A227"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\ReputationData.json",
+      "SHA256": "54A5DDC0D9ECEF2C25503BC007CF368F4D338D3D08FCD69A6E1809C8F92504C4"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\SharedUserMapMarkers.json",
+      "SHA256": "0E8E3026844AFC3F2DCE3059D7B9E5F3FCD83904B97453E3B992D2B64B9B173A"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\SpawnSuppressionController.json",
+      "SHA256": "6D2B10EDCD7B3B563381DC204FEE7874950E8182B4ED1089273DC2A66E31425C"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\Time.json",
+      "SHA256": "D3CA5B084488BBC7AF0653D27FA2D04F2822D83E1CE19E89132AEA7C4B00634A"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\TriggerVolumeData.json",
+      "SHA256": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\VoidEvent.json",
+      "SHA256": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A"
+    },
+    {
+      "Relative": "universe\\worlds\\default\\resources\\WorldEventStorage.json",
+      "SHA256": "4B63C7BA68DFA7290D7562515A13A4B3E2FECFC52A4D7E786D1AA03C2FB337FE"
+    }
+  ]
+}

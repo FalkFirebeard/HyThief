@@ -625,6 +625,45 @@
   ],
   "Instructions": [
     {
+      "$Comment": "Development fixture only: reserve idle head/body motion while continuing native perception, actions and state transitions. Combat/chase motions are not reserved.",
+      "Continue": true,
+      "Sensor": {
+        "Type": "Or",
+        "Sensors": [
+          {
+            "Type": "State",
+            "State": "Idle"
+          },
+          {
+            "Type": "State",
+            "State": "IdleBlock"
+          },
+          {
+            "Type": "State",
+            "State": "IdleBrawl"
+          },
+          {
+            "Type": "State",
+            "State": "IdleChaseNPC"
+          },
+          {
+            "Type": "State",
+            "State": "IdleEat"
+          },
+          {
+            "Type": "State",
+            "State": "IdleWatchJuggle"
+          }
+        ]
+      },
+      "HeadMotion": {
+        "Type": "Nothing"
+      },
+      "BodyMotion": {
+        "Type": "Nothing"
+      }
+    },
+    {
       "Reference": "Component_Instruction_Hit_Interrupt"
     },
     {

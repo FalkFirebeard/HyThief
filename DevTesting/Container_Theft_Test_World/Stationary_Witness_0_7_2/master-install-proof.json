@@ -1,0 +1,14 @@
+{
+  "ChangedMasterFiles": [
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Goblin_Scrapper.json",
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Outlander_Brute.json",
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Skeleton_Fighter.json",
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Trork_Warrior.json",
+    "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Zombie.json"
+  ],
+  "AllOtherMasterBytesUnchanged": true,
+  "FileCount": 41,
+  "NativeSaveChunksUnchanged": true,
+  "Rollback": "Stationary_Witness_0_7_2/Rollback",
+  "GameplayJarUnchanged": true
+}

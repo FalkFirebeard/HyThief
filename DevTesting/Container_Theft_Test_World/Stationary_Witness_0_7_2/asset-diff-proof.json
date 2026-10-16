@@ -1,0 +1,53 @@
+[
+  {
+    "File": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Goblin_Scrapper.json",
+    "HeldStates": [
+      "Idle",
+      "IdleBlock",
+      "IdleBrawl",
+      "IdleChaseNPC",
+      "IdleEat",
+      "IdleWatchJuggle"
+    ],
+    "OnlyChange": "Prepend Continue=true idle-only Nothing head/body motions",
+    "NativeInstructionsUnchanged": true
+  },
+  {
+    "File": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Outlander_Brute.json",
+    "HeldStates": [
+      "Idle",
+      "NeutralPlayer",
+      "Revered"
+    ],
+    "OnlyChange": "Prepend Continue=true idle-only Nothing head/body motions",
+    "NativeInstructionsUnchanged": true
+  },
+  {
+    "File": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Skeleton_Fighter.json",
+    "HeldStates": [
+      "Idle",
+      "Sleep"
+    ],
+    "OnlyChange": "Prepend Continue=true idle-only Nothing head/body motions",
+    "NativeInstructionsUnchanged": true
+  },
+  {
+    "File": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Trork_Warrior.json",
+    "HeldStates": [
+      "Idle",
+      "NeutralPlayer",
+      "Revered"
+    ],
+    "OnlyChange": "Prepend Continue=true idle-only Nothing head/body motions",
+    "NativeInstructionsUnchanged": true
+  },
+  {
+    "File": "mods\\ContainerPassiveClientFixture\\Server\\NPC\\Roles\\HyThief\\Stealth\\HyThiefStealth_Zombie.json",
+    "HeldStates": [
+      "Idle",
+      "Sleep"
+    ],
+    "OnlyChange": "Prepend Continue=true idle-only Nothing head/body motions",
+    "NativeInstructionsUnchanged": true
+  }
+]

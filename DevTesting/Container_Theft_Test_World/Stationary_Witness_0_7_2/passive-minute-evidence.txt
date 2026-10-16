@@ -1,0 +1,7 @@
+STATIONARY_IDLE_PASS Seconds=60 SamplesPerNPC=240 MaxDistanceDrift=0.0 MaxYawDrift=0.0 States=[Goblin_Scrapper:Idle.Default, Goblin_Scrapper:IdleEat.Default, Outlander_Brute:Idle.Default, Outlander_Brute:NeutralPlayer.Default, Skeleton_Fighter:Idle.Default, Trork_Warrior:Idle.Default, Trork_Warrior:NeutralPlayer.Default, Zombie:Idle.Default]
+STATIONARY_POSE Role=Goblin_Scrapper Position=(-3.600E+1  6.400E+1  5.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Trork_Warrior Position=( 0.000E+0  6.400E+1  5.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Outlander_Brute Position=( 3.600E+1  6.400E+1  5.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Skeleton_Fighter Position=(-1.800E+1  6.400E+1  9.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_POSE Role=Zombie Position=( 1.800E+1  6.400E+1  9.550E+1) Head=Rotation3f{x=0.0, y=0.0, z=0.0} Body=Rotation3f{x=0.0, y=0.0, z=0.0}
+STATIONARY_PASS

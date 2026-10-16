@@ -1,0 +1,22 @@
+Action=OWNERSHIP_CANDIDATE Role=Goblin_Scrapper Faction=UNRESOLVED Eligible=true Reason=scope-match
+Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Goblin_Scrapper Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1626516794, index=6} WitnessPosition=(-3.600E+1  6.400E+1  5.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=(-3.600E+1  6.400E+1  4.750E+1)
+SAFE_ACTIONS_PASS Role=Goblin_Scrapper NativeOpenClose=true Deposit=true Rearrange=true FalseThefts=0
+STATION_VALID Role=Goblin_Scrapper Color=Orange Ownership=FACTION:Goblin Passive=FRIENDLY Distance=8.0 HeadYaw=0.0 FOV=true LOS=true NearestOtherNPC=36.87817782917155 BlockedLOS=UNSEEN NativeChest=true Peers=0
+Action=OWNERSHIP_CANDIDATE Role=Trork_Warrior Faction=UNRESOLVED Eligible=true Reason=scope-match
+Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Trork_Warrior Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1626516794, index=24} WitnessPosition=( 0.000E+0  6.400E+1  5.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 0.000E+0  6.400E+1  4.750E+1)
+SAFE_ACTIONS_PASS Role=Trork_Warrior NativeOpenClose=true Deposit=true Rearrange=true FalseThefts=0
+STATION_VALID Role=Trork_Warrior Color=Purple Ownership=FACTION:Trork Passive=FRIENDLY Distance=8.0 HeadYaw=0.0 FOV=true LOS=true NearestOtherNPC=36.87817782917155 BlockedLOS=UNSEEN NativeChest=true Peers=0
+Action=OWNERSHIP_CANDIDATE Role=Outlander_Brute Faction=UNRESOLVED Eligible=true Reason=scope-match
+Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Outlander_Brute Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1626516794, index=28} WitnessPosition=( 3.600E+1  6.400E+1  5.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 3.600E+1  6.400E+1  4.750E+1)
+SAFE_ACTIONS_PASS Role=Outlander_Brute NativeOpenClose=true Deposit=true Rearrange=true FalseThefts=0
+STATION_VALID Role=Outlander_Brute Color=Cyan Ownership=FACTION:Outlander Passive=FRIENDLY Distance=8.0 HeadYaw=0.0 FOV=true LOS=true NearestOtherNPC=36.87817782917155 BlockedLOS=UNSEEN NativeChest=true Peers=0
+Action=OWNERSHIP_CANDIDATE Role=Skeleton_Fighter Faction=UNRESOLVED Eligible=true Reason=scope-match
+Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Skeleton_Fighter Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1626516794, index=3} WitnessPosition=(-1.800E+1  6.400E+1  9.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=(-1.800E+1  6.400E+1  8.750E+1)
+SAFE_ACTIONS_PASS Role=Skeleton_Fighter NativeOpenClose=true Deposit=true Rearrange=true FalseThefts=0
+STATION_VALID Role=Skeleton_Fighter Color=White Ownership=FACTION:Skeleton Passive=FRIENDLY Distance=8.0 HeadYaw=0.0 FOV=true LOS=true NearestOtherNPC=36.71511950137164 BlockedLOS=UNSEEN NativeChest=true Peers=0
+Action=OWNERSHIP_CANDIDATE Role=Zombie Faction=UNRESOLVED Eligible=true Reason=scope-match
+Action=VISUAL_CANDIDATE Faction=UNRESOLVED WITNESS=Zombie Reason=seen Distance=8.0 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@1626516794, index=12} WitnessPosition=( 1.800E+1  6.400E+1  9.550E+1) HeadYaw=0.0 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 1.800E+1  6.400E+1  8.750E+1)
+SAFE_ACTIONS_PASS Role=Zombie NativeOpenClose=true Deposit=true Rearrange=true FalseThefts=0
+STATION_VALID Role=Zombie Color=Black Ownership=FACTION:Zombie Passive=FRIENDLY Distance=8.0 HeadYaw=0.0 FOV=true LOS=true NearestOtherNPC=36.71511950137164 BlockedLOS=UNSEEN NativeChest=true Peers=0
+ALL_STATIONS_VALID NativeChests=9 NPCs=9 OldAreaPreserved=true NormalPerception=15/4 ContainerWitness=20/6 SpawnUnchanged=true StartingBlocks=64
+VERIFY_PASS

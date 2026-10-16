@@ -1,0 +1,37 @@
+[
+  {
+    "Role": "Goblin_Scrapper",
+    "Family": "Goblin",
+    "Color": "Orange",
+    "X": -36,
+    "Z": 48
+  },
+  {
+    "Role": "Trork_Warrior",
+    "Family": "Trork",
+    "Color": "Purple",
+    "X": 0,
+    "Z": 48
+  },
+  {
+    "Role": "Outlander_Brute",
+    "Family": "Outlander",
+    "Color": "Cyan",
+    "X": 36,
+    "Z": 48
+  },
+  {
+    "Role": "Skeleton_Fighter",
+    "Family": "Skeleton",
+    "Color": "White",
+    "X": -18,
+    "Z": 88
+  },
+  {
+    "Role": "Zombie",
+    "Family": "Zombie",
+    "Color": "Black",
+    "X": 18,
+    "Z": 88
+  }
+]

@@ -83,3 +83,7 @@ Generated/native-run Java plugins stay outside the Master. Client runtime uses o
 3. Safe actions should cause no reaction; withdrawal should show one caught message and native attack/chase. Reset with the existing desktop shortcut before another caught/blocked-LOS case. Orange Goblin has the known IdleEat limitation above.
 
 Connected-client result remains **PENDING Firebeard**. Stop for that result before a gameplay repair, role rollout, or next container mechanic.
+
+## Stationary fixture follow-up
+
+The five new witnesses now reserve passive head/body motion through fixture-only native instructions while preserving detection/actions/state transitions and combat movement. See `CONTAINER_PASSIVE_STATIONARY_FIXTURE_0_7_2.md` for exact poses, idle/combat evidence, reset and rollback. This supersedes the original wandering-idle setup; container.12 gameplay and the Goblin IdleEat gate remain unchanged.
