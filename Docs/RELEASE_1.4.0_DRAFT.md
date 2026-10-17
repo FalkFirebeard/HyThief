@@ -1,3 +1,5 @@
+> Historical candidate draft. Superseded by [public 1.4.0 release notes](RELEASE_1.4.0.md).
+
 # HyThief 1.4.0 — Container Theft (candidate)
 
 Hytale target: `=0.7.2`. Not published; final client approval pending.

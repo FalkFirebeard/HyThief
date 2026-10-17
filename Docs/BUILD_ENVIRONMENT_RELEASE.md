@@ -1,11 +1,11 @@
-# Building HyThief development container.11
+# Building HyThief 1.4.0 / Hytale 0.7.2
 
-Use a complete Java 25 JDK and the included Gradle 9.1.0 wrapper. Copy the server from your licensed stable Hytale 0.7.0 installation to `.build/dependencies/HytaleServer-0.7.0.jar`.
+Check out tag **v1.4.0**. Use a complete Java 25 JDK and the included Gradle 9.1.0 wrapper. Copy the server from your licensed Hytale 0.7.2 installation to `.build/dependencies/HytaleServer-0.7.2.jar`.
 
-Required SHA256: `c3b5985b9e72727bf3bcf220923d7e61e78fe0f37cd1cd9c2a73f51e4f408ff8`.
+Pinned server SHA-256: `23f71f03763422ce7c04df191db49cd0e7d87d43b12baad75c43fdc202410aff`, revision `d769dc3d57881261a62858e1394f0e4de9a21eca`.
 
-Run `./build.ps1 -JdkHome 'E:/Hytale adjustments/Toolchains/JDK25' clean build`. The default JDK lookup expects a standard project layout; the isolated public worktree must supply the explicit JDK path. Output: `build/libs/HyThief-1.3.1-container.11.jar`; exact manifest server target `=0.7.0`. Native dependencies are compile-only and are not bundled.
+Run `./build.ps1 -JdkHome 'E:/Hytale adjustments/Toolchains/JDK25' clean build`. Output: `build/libs/HyThief-1.4.0.jar`, exact manifest target `=0.7.2`. Native dependencies are compile-only and not bundled.
 
-The main checkout is ongoing container development. The public candidate is separately based on tag v1.3.0, branch compatibility/1.3.1. Do not publish a main-checkout container JAR as the public patch.
+1.4.0 intentionally includes production container theft. Earlier 1.3.x compatibility releases excluded container development; those historical tags and artifacts remain unchanged. Development test helpers, worlds and diagnostic registries are excluded from the public JAR. Existing inventory/Gradle deprecation notes are documented in the container architecture note.
 
-The same two inventory removal warnings and Gradle deprecation notice remain. Test helpers, native server dependencies, worlds and backups are excluded from published JARs. Client testing is required before publishing 1.3.1.
+Production text resources have explicit LF attributes; saved-world bytes retain their independent -text protection. See [release notes](RELEASE_1.4.0.md) and [container scope](CONTAINER_THEFT_1_4_0_CONTENT_AUDIT.md).
