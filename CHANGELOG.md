@@ -1,4 +1,8 @@
-## Development compatibility � Hytale 0.7.0
+## 1.4.2 — Container Access & Pursuit
+
+Witnessed theft closes the container after completing the transfer. Recognized native pursuit blocks owned-container opening with one denial message per attempt; access returns when pursuit ends. Unowned storage stays accessible. Optional Wonderous Wardrobes compatibility continues; custom pursuit-state limitations remain.
+
+## Development compatibility — Hytale 0.7.0
 
 Container.11 is preserved and updated for 0.7.0. Public compatibility candidate 1.3.1 is isolated from v1.3.0; see Docs/UPDATE_0_7_0_COMPATIBILITY_AUDIT.md. No public container release is approved.
 
