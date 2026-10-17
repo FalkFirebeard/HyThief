@@ -1,6 +1,6 @@
 # HyThief — Pickpocketing & Container Theft
 
-**HyThief 1.4.0 — Container Theft** is compatible with **Hytale 0.7.2**, exact target `=0.7.2`.
+**HyThief 1.4.1 — Pickpocket UI Hotfix** is compatible with **Hytale 0.7.2**, exact target `=0.7.2`.
 
 HyThief adds stealth-focused pickpocketing and witnessed theft from owned containers. Positioning, visibility and player choice determine whether you get away with it.
 
@@ -30,7 +30,7 @@ Initial container witnessing covers **33 ordinary roles**: 7 Kweebec, 5 Feran, 7
 
 ## Install
 
-Download **HyThief-1.4.0.jar** from [GitHub releases](https://github.com/FalkFirebeard/HyThief/releases/latest) or [CurseForge](https://www.curseforge.com/hytale/mods/hythief). Place it in your Hytale Mods folder, remove older active HyThief JARs, and enable it for your world/server. Requires **Hytale 0.7.2**. No separate third-party mod dependency is required. Back up your world before upgrading.
+Download **HyThief-1.4.1.jar** from [GitHub releases](https://github.com/FalkFirebeard/HyThief/releases/latest) or [CurseForge](https://www.curseforge.com/hytale/mods/hythief). Place it in your Hytale Mods folder, remove older active HyThief JARs, and enable it for your world/server. Requires **Hytale 0.7.2**. No separate third-party mod dependency is required. Back up your world before upgrading.
 
 Use **toggle crouch** to remain crouched while using the menu. Releasing a held crouch key makes you stand normally. Normal NPC perception remains 15/4; container witnessing uses 20/6.
 
@@ -42,8 +42,8 @@ Report issues through [GitHub issues](https://github.com/FalkFirebeard/HyThief/i
 
 ## Build this release
 
-Check out **v1.4.0**. Use Java 25 and the pinned Hytale 0.7.2 server dependency, then run `./build.ps1`. See [build instructions](Docs/BUILD_ENVIRONMENT_RELEASE.md). Main continues development; use the release tag to reproduce public source. Game binaries and test-world/helper assets are not redistributed in the JAR.
+Check out **v1.4.1**. Use Java 25 and the pinned Hytale 0.7.2 server dependency, then run `./build.ps1`. See [build instructions](Docs/BUILD_ENVIRONMENT_RELEASE.md). Main continues development; use the release tag to reproduce public source. Game binaries and test-world/helper assets are not redistributed in the JAR.
 
-[Release notes](Docs/RELEASE_1.4.0.md) · [CurseForge](https://www.curseforge.com/hytale/mods/hythief) · [GitHub releases](https://github.com/FalkFirebeard/HyThief/releases)
+[Release notes](Docs/RELEASE_1.4.1.md) · [CurseForge](https://www.curseforge.com/hytale/mods/hythief) · [GitHub releases](https://github.com/FalkFirebeard/HyThief/releases)
 
 Developed by **Falk Interactive Studios**. Part of the Firebeard Archives.
