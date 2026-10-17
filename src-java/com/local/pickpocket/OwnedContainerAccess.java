@@ -25,6 +25,11 @@ final class OwnedContainerAccess extends EntityEventSystem<EntityStore, UseBlock
     if (block == null || !block.isValid()
         || chunks.getStore().getComponent(block, ItemContainerBlock.getComponentType()) == null) return;
     if (PersistentContainerOwnership.eligible(chunks.getStore().getComponent(block, OwnershipProofData.getComponentType()))
-        && NativePursuit.blocks(chunk.getReferenceTo(index), store)) event.setCancelled(true);
+        && NativePursuit.blocks(chunk.getReferenceTo(index), store)) {
+      // Cancellation is the per-attempt guard: redispatch of this event returns above.
+      event.setCancelled(true);
+      buffer.getComponent(chunk.getReferenceTo(index), PlayerRef.getComponentType()).sendMessage(
+          com.hypixel.hytale.server.core.Message.raw("You cannot access this container while being pursued."));
+    }
   }
 }
