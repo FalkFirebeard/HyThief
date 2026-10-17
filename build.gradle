@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.local'
-version = '1.4.1'
+version = '1.4.2-access.1'
 
 def stableVersion = '0.7.2'
 def serverJar = layout.projectDirectory.file(".build/dependencies/HytaleServer-${stableVersion}.jar")

@@ -69,6 +69,7 @@ public final class PickpocketPlugin extends JavaPlugin {
     com.hypixel.hytale.server.npc.NPCPlugin.get().registerCoreComponentType(
         HyThiefStealthAcquisition.TYPE, HyThiefStealthAcquisition.FilterBuilder::new);
     getEntityStoreRegistry().registerSystem(new HyThiefNativeProbe(this));
+    getEntityStoreRegistry().registerSystem(new OwnedContainerAccess());
     OwnershipProofData.register(this);
     containerDiagnostics = new ContainerTheftService(this);
   }

@@ -92,6 +92,8 @@ final class ContainerTheftService implements AutoCloseable {
     try {
       int from = packet instanceof MoveItemStack m ? m.fromSectionId : ((SmartMoveItemStack) packet).fromSectionId;
       var source = InventoryUtils.getSectionById(ref, from, store);
+      // A previous witnessed request may already have closed this window. Never replay it.
+      if (source == null) return;
       PersistentContainerOwnership.Source owned = null;
       var entity = store.getComponent(ref, Player.getComponentType());
       if (entity != null && source != null) for (var open : entity.getWindowManager().getWindows()) {
@@ -104,6 +106,10 @@ final class ContainerTheftService implements AutoCloseable {
       if (attached == null || !PersistentContainerOwnership.eligible(attached.read())) {
         executed = true;
         executeNative(player, packet, ref, store);
+        return;
+      }
+      if (NativePursuit.blocks(ref, store)) {
+        closeSource(ref, store, source);
         return;
       }
       var ownership = attached.read().clone();
@@ -132,6 +138,9 @@ final class ContainerTheftService implements AutoCloseable {
       for (var registration : registrations) registration.unregister();
       registrations.clear();
       ContainerCaughtNotification.notifyWitnessed(confirmed, player::sendMessage).ifPresent(witness -> {
+        // The successful transfer and all callbacks have finished. Remove the server window
+        // before another queued request can use it; native close listeners restore block state.
+        closeSource(ref, store, source);
         HyThiefPersonalWitnessAlert.deliver(ownership, ref, confirmed, store, message -> {});
         HyThiefContainerAlert.deliver(plugin, ownership, ref, witness.witness(), store, null);
       });
@@ -141,6 +150,16 @@ final class ContainerTheftService implements AutoCloseable {
       if (!executed) executeNative(player, packet, ref, store);
     } finally {
       for (var registration : registrations) registration.unregister();
+    }
+  }
+
+  static void closeSource(Ref<EntityStore> ref, Store<EntityStore> store, ItemContainer source) {
+    var player = store.getComponent(ref, Player.getComponentType());
+    if (player == null) return;
+    for (var window : List.copyOf(player.getWindowManager().getWindows())) {
+      if (window instanceof ContainerBlockWindow container && container.getItemContainer() == source) {
+        window.close(ref, store);
+      }
     }
   }
 
