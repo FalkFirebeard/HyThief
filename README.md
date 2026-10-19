@@ -31,9 +31,11 @@ Automatic ownership is deliberately conservative: eleven selected Kweebec, Feran
 
 Initial container witnessing covers **33 ordinary roles**: 7 Kweebec, 5 Feran, 7 Trork, 6 Outlander, Skeleton Fighter and 7 Zombie variants. [Exact role list and content coverage](Docs/CONTAINER_THEFT_1_4_0_CONTENT_AUDIT.md). Goblin container support, Klop integration, prefab-instance ownership and special/scripted roles are deferred. Existing native property/hostility behavior is preserved. Existing pickpocket support is unchanged.
 
-## Optional Wonderous Wardrobes compatibility
+## Optional HyStash compatibility
 
-[Wonderous Wardrobes 1.3.0](https://www.curseforge.com/hytale/mods/wonderous-wardrobes) adds ownership metadata to eligible newly generated wardrobes. HyThief handles theft, visual witnesses, native NPC reactions and pursuit lockout; Wardrobes retains its own 54-slot storage implementation. Both mods work independently, with no hard dependency or bridge plugin. Pre-existing unmarked and player-placed wardrobes remain unowned.
+**Compatible with HyStash (previously known as Wondrous Wardrobes).** [HyStash 1.4.0](https://www.curseforge.com/hytale/mods/wonderous-wardrobes) provides standalone 54-slot wardrobe storage and ownership metadata for supported generated locations. HyThief recognizes supported owned HyStash wardrobes through native storage mechanics and that metadata, applying its existing theft, visual witness, native NPC response and pursuit-access rules.
+
+Both mods function independently, with no hard dependency or bridge plugin. Player-placed and pre-existing unmarked wardrobes remain unowned. See [compatibility details](Docs/HYSTASH_COMPATIBILITY.md).
 
 ## Install
 
