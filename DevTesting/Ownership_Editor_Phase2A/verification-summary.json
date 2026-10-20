@@ -1,0 +1,159 @@
+{
+  "author-result.json": {
+    "Passed": true,
+    "Mode": "editor-author",
+    "Run": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Run-Author",
+    "Markers": [
+      "\u001b[m[2026/10/20 22:52:18   INFO]                    [SOUT] OWNERSHIP_EDITOR AUTHOR_PASS FiveContainers=true NativeStorage=true NoSpawner=true\u001b[m",
+      "\u001b[m[2026/10/20 22:52:18   INFO]                    [SOUT] OWNERSHIP_EDITOR PASS Mode=editor-author\u001b[m"
+    ]
+  },
+  "command-result.json": {
+    "Passed": true,
+    "Mode": "editor-command",
+    "Run": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Run-Command",
+    "Markers": [
+      "\u001b[m[2026/10/20 23:00:54   INFO]                    [SOUT] OWNERSHIP_EDITOR COMMAND_TARGET (-8.000E+0  6.400E+1  2.000E+0)\u001b[m",
+      "\u001b[m[2026/10/20 23:00:54   INFO]                    [SOUT] OWNERSHIP_EDITOR REGISTERED_COMMAND_PASS NativeDispatch=true TargetChest=true PageOpen=true\u001b[m",
+      "\u001b[m[2026/10/20 23:00:54   INFO]                    [SOUT] OWNERSHIP_EDITOR PASS Mode=editor-command\u001b[m"
+    ]
+  },
+  "editor4-result.json": {
+    "Passed": true,
+    "Mode": "editor-verify",
+    "Run": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Run-Editor4",
+    "Markers": [
+      "\u001b[m[2026/10/20 22:57:06   INFO]                    [SOUT] OWNERSHIP_EDITOR COMMAND_PERMISSIONS_APPLY_PASS Allowed=true Denied=true UnsupportedBlockRejected=true NoOp=true StaleConflictRejected=true InvalidFactionRejected=true IndependentChest=true InventorySlotsUnchanged=true\u001b[m",
+      "\u001b[m[2026/10/20 22:57:06   INFO]                    [SOUT] OWNERSHIP_EDITOR NATIVE_UI_PASS OpenPacket=true Codec=true Edit=true CancelNoWrite=true Apply=true DuplicateSuppressed=true\u001b[m",
+      "\u001b[m[2026/10/20 22:57:06   INFO]                    [SOUT] OWNERSHIP_EDITOR WARDROBE_PASS NativeFillerTarget=( 4.000E+0  6.400E+1  2.000E+0) Slots54=true IndependentOwnership=true UnownedToggle=true\u001b[m",
+      "\u001b[m[2026/10/20 22:57:06   INFO]                    [SOUT] OWNERSHIP_EDITOR REPLACEMENT_REJECTED_PASS\u001b[m",
+      "\u001b[m[2026/10/20 22:57:06   INFO]                    [SOUT] OWNERSHIP_EDITOR PASS Mode=editor-verify\u001b[m"
+    ]
+  },
+  "EditorAccess-result.json": {
+    "Passed": true,
+    "Mode": "access",
+    "Run": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Run-EditorAccess",
+    "Markers": [
+      "\u001b[m[2026/10/20 22:54:25   INFO]                    [SOUT] WARDROBE_PHASE2A OWNERSHIP_PASS Mode=access Typed=true Native54Slots=true\u001b[m",
+      "\u001b[m[2026/10/20 22:54:25   INFO]                    [SOUT] WARDROBE_PHASE2A PURSUIT_STATE_PASS ExactTarget=true IdleWatchSafe=true ReleaseRestores=true NoTimer=true\u001b[m",
+      "\u001b[m[2026/10/20 22:54:25   INFO]                    [SOUT] WARDROBE_PHASE2A Action=THEFT_ALERT_CLASSIFIED Type=FACTION Faction=Kweebec Signal=Kweebec_All_Danger\u001b[m",
+      "\u001b[m[2026/10/20 22:54:25   INFO]                    [SOUT] WARDROBE_PHASE2A Action=DANGER_ADAPTER Offender=Ref{store=class com.hypixel.hytale.component.Store@1310748837, index=5} Witness=Ref{store=class com.hypixel.hytale.component.Store@1310748837, index=2}\u001b[m",
+      "\u001b[m[2026/10/20 22:54:25   INFO]                    [SOUT] WARDROBE_PHASE2A Action=GUARD_CANDIDATE Faction=Kweebec Role=Kweebec_Razorleaf Ref=Ref{store=class com.hypixel.hytale.component.Store@1310748837, index=1} State=Idle.Default Slot=0 Enabled=true Queued=false Ready=true Position=(-2.200E+1  6.400E+1  5.000E-1)\u001b[m",
+      "\u001b[m[2026/10/20 22:54:25   INFO]                    [SOUT] WARDROBE_PHASE2A Action=NATIVE_DANGER_QUEUED Guard=Ref{store=class com.hypixel.hytale.component.Store@1310748837, index=1} Slot=0 Signal=Kweebec_All_Danger Queued=true ExactOffender=true\u001b[m",
+      "\u001b[m[2026/10/20 22:54:25   INFO]                    [SOUT] WARDROBE_PHASE2A PENDING_NATIVE_DANGER_PASS\u001b[m",
+      "\u001b[m[2026/10/20 22:54:25   INFO]                    [SOUT] WARDROBE_PHASE2A Action=NATIVE_GUARD_OBSERVATION DelayMs=250 Guard=Ref{store=class com.hypixel.hytale.component.Store@1310748837, index=1} State=Attack.Default DangerQueued=false OffenderMarked=true\u001b[m",
+      "\u001b[m[2026/10/20 22:54:26   INFO]                    [SOUT] WARDROBE_PHASE2A Action=NATIVE_GUARD_OBSERVATION DelayMs=1250 Guard=Ref{store=class com.hypixel.hytale.component.Store@1310748837, index=1} State=Attack.Default DangerQueued=false OffenderMarked=true\u001b[m",
+      "\u001b[m[2026/10/20 22:54:28   INFO]                    [SOUT] WARDROBE_PHASE2A ACTUAL_NATIVE_PURSUIT_LOCK_PASS State=Attack.Default\u001b[m",
+      "\u001b[m[2026/10/20 22:54:28   INFO]                    [SOUT] WARDROBE_PHASE2A NATIVE_WINDOW_CLOSE_PASS ItemKept=true WindowInvalid=true ClosePacket=true CloseListener=true\u001b[m",
+      "\u001b[m[2026/10/20 22:54:28   INFO]                    [SOUT] WARDROBE_PHASE2A DENIED_NOTIFICATION_PASS ExactText=true FirstAttempt=1 SameEventRepeat=0 NewAttempt=1\u001b[m",
+      "\u001b[m[2026/10/20 22:54:28   INFO]                    [SOUT] WARDROBE_PHASE2A NATIVE_USE_EVENT_PASS OwnedBlocked=true UnownedSafe=true\u001b[m",
+      "\u001b[m[2026/10/20 22:54:28   INFO]                    [SOUT] WARDROBE_PHASE2A DENIED_SAFE_PATHS_PASS UnownedSilent=true RestoredAccessSilent=true\u001b[m",
+      "\u001b[m[2026/10/20 22:54:28   INFO]                    [SOUT] WARDROBE_PHASE2A REAL_SERVICE_DISPATCH_PASS ItemKept=1 Notification=1 WindowClosed=true QueuedSecondRejected=true\u001b[m",
+      "\u001b[m[2026/10/20 22:54:28   INFO]                    [SOUT] WARDROBE_PHASE2A REAL_UNSEEN_DISPATCH_PASS SeparateWithdrawals=2 WindowOpen=true Notification=0\u001b[m",
+      "\u001b[m[2026/10/20 22:54:28   INFO]                    [SOUT] WARDROBE_PHASE2A ALREADY_OPEN_PURSUIT_PASS TransferBlocked=true WindowClosed=true\u001b[m",
+      "\u001b[m[2026/10/20 22:54:28   INFO]                    [SOUT] WARDROBE_PHASE2A SAFE_DEPOSIT_INTERNAL_PASS NativeTransfers=true WindowOpen=true Notification=0\u001b[m",
+      "\u001b[m[2026/10/20 22:54:28   INFO]                    [SOUT] WARDROBE_PHASE2A SMART_TRANSFER_PASS Quantity=2 Notification=1 Closed=true StaleRejected=true\u001b[m",
+      "\u001b[m[2026/10/20 22:54:28   INFO]                    [SOUT] WARDROBE_PHASE2A PASS Mode=access\u001b[m"
+    ]
+  },
+  "EditorChest-result.json": {
+    "Passed": true,
+    "Mode": "access-chest",
+    "Run": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Run-EditorChest",
+    "Markers": [
+      "\u001b[m[2026/10/20 23:05:03   INFO]                    [SOUT] WARDROBE_PHASE2A PURSUIT_STATE_PASS ExactTarget=true IdleWatchSafe=true ReleaseRestores=true NoTimer=true\u001b[m",
+      "\u001b[m[2026/10/20 23:05:03   INFO]                    [SOUT] WARDROBE_PHASE2A Action=THEFT_ALERT_CLASSIFIED Type=FACTION Faction=Kweebec Signal=Kweebec_All_Danger\u001b[m",
+      "\u001b[m[2026/10/20 23:05:03   INFO]                    [SOUT] WARDROBE_PHASE2A Action=DANGER_ADAPTER Offender=Ref{store=class com.hypixel.hytale.component.Store@1091429617, index=5} Witness=Ref{store=class com.hypixel.hytale.component.Store@1091429617, index=2}\u001b[m",
+      "\u001b[m[2026/10/20 23:05:03   INFO]                    [SOUT] WARDROBE_PHASE2A Action=GUARD_CANDIDATE Faction=Kweebec Role=Kweebec_Razorleaf Ref=Ref{store=class com.hypixel.hytale.component.Store@1091429617, index=1} State=Idle.Default Slot=0 Enabled=true Queued=false Ready=true Position=(-2.200E+1  6.400E+1  5.000E-1)\u001b[m",
+      "\u001b[m[2026/10/20 23:05:03   INFO]                    [SOUT] WARDROBE_PHASE2A Action=NATIVE_DANGER_QUEUED Guard=Ref{store=class com.hypixel.hytale.component.Store@1091429617, index=1} Slot=0 Signal=Kweebec_All_Danger Queued=true ExactOffender=true\u001b[m",
+      "\u001b[m[2026/10/20 23:05:03   INFO]                    [SOUT] WARDROBE_PHASE2A PENDING_NATIVE_DANGER_PASS\u001b[m",
+      "\u001b[m[2026/10/20 23:05:03   INFO]                    [SOUT] WARDROBE_PHASE2A Action=NATIVE_GUARD_OBSERVATION DelayMs=250 Guard=Ref{store=class com.hypixel.hytale.component.Store@1091429617, index=1} State=Attack.Default DangerQueued=false OffenderMarked=true\u001b[m",
+      "\u001b[m[2026/10/20 23:05:04   INFO]                    [SOUT] WARDROBE_PHASE2A Action=NATIVE_GUARD_OBSERVATION DelayMs=1250 Guard=Ref{store=class com.hypixel.hytale.component.Store@1091429617, index=1} State=Attack.Default DangerQueued=false OffenderMarked=true\u001b[m",
+      "\u001b[m[2026/10/20 23:05:06   INFO]                    [SOUT] WARDROBE_PHASE2A ACTUAL_NATIVE_PURSUIT_LOCK_PASS State=Attack.Default\u001b[m",
+      "\u001b[m[2026/10/20 23:05:06   INFO]                    [SOUT] WARDROBE_PHASE2A NATIVE_WINDOW_CLOSE_PASS ItemKept=true WindowInvalid=true ClosePacket=true CloseListener=true\u001b[m",
+      "\u001b[m[2026/10/20 23:05:06   INFO]                    [SOUT] WARDROBE_PHASE2A DENIED_NOTIFICATION_PASS ExactText=true FirstAttempt=1 SameEventRepeat=0 NewAttempt=1\u001b[m",
+      "\u001b[m[2026/10/20 23:05:06   INFO]                    [SOUT] WARDROBE_PHASE2A NATIVE_USE_EVENT_PASS OwnedBlocked=true UnownedSafe=true\u001b[m",
+      "\u001b[m[2026/10/20 23:05:06   INFO]                    [SOUT] WARDROBE_PHASE2A DENIED_SAFE_PATHS_PASS UnownedSilent=true RestoredAccessSilent=true\u001b[m",
+      "\u001b[m[2026/10/20 23:05:06   INFO]                    [SOUT] WARDROBE_PHASE2A REAL_SERVICE_DISPATCH_PASS ItemKept=1 Notification=1 WindowClosed=true QueuedSecondRejected=true\u001b[m",
+      "\u001b[m[2026/10/20 23:05:06   INFO]                    [SOUT] WARDROBE_PHASE2A REAL_UNSEEN_DISPATCH_PASS SeparateWithdrawals=2 WindowOpen=true Notification=0\u001b[m",
+      "\u001b[m[2026/10/20 23:05:06   INFO]                    [SOUT] WARDROBE_PHASE2A ALREADY_OPEN_PURSUIT_PASS TransferBlocked=true WindowClosed=true\u001b[m",
+      "\u001b[m[2026/10/20 23:05:06   INFO]                    [SOUT] WARDROBE_PHASE2A SAFE_DEPOSIT_INTERNAL_PASS NativeTransfers=true WindowOpen=true Notification=0\u001b[m",
+      "\u001b[m[2026/10/20 23:05:06   INFO]                    [SOUT] WARDROBE_PHASE2A SMART_TRANSFER_PASS Quantity=2 Notification=1 Closed=true StaleRejected=true\u001b[m",
+      "\u001b[m[2026/10/20 23:05:06   INFO]                    [SOUT] WARDROBE_PHASE2A PASS Mode=access-chest\u001b[m"
+    ]
+  },
+  "final-author-result.json": {
+    "Passed": true,
+    "Mode": "editor-author",
+    "Run": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Run-FinalAuthor",
+    "Markers": [
+      "\u001b[m[2026/10/20 22:58:30   INFO]                    [SOUT] OWNERSHIP_EDITOR AUTHOR_PASS FiveContainers=true NativeStorage=true NoSpawner=true\u001b[m",
+      "\u001b[m[2026/10/20 22:58:30   INFO]                    [SOUT] OWNERSHIP_EDITOR PASS Mode=editor-author\u001b[m"
+    ]
+  },
+  "final-editor2-result.json": {
+    "Passed": true,
+    "Mode": "editor-verify",
+    "Run": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Run-FinalEditor",
+    "Markers": [
+      "\u001b[m[2026/10/20 23:04:06   INFO]                    [SOUT] OWNERSHIP_EDITOR COMMAND_PERMISSIONS_APPLY_PASS Allowed=true Denied=true UnsupportedBlockRejected=true NoOp=true StaleConflictRejected=true InvalidFactionRejected=true IndependentChest=true InventorySlotsUnchanged=true\u001b[m",
+      "\u001b[m[2026/10/20 23:04:06   INFO]                    [SOUT] OWNERSHIP_EDITOR NATIVE_UI_PASS OpenPacket=true Codec=true Edit=true CancelNoWrite=true Apply=true DuplicateSuppressed=true\u001b[m",
+      "\u001b[m[2026/10/20 23:04:06   INFO]                    [SOUT] OWNERSHIP_EDITOR WARDROBE_PASS NativeFillerTarget=( 4.000E+0  6.400E+1  2.000E+0) Slots54=true IndependentOwnership=true UnownedToggle=true\u001b[m",
+      "\u001b[m[2026/10/20 23:04:06   INFO]                    [SOUT] OWNERSHIP_EDITOR REPLACEMENT_REJECTED_PASS\u001b[m",
+      "\u001b[m[2026/10/20 23:04:06   INFO]                    [SOUT] OWNERSHIP_EDITOR PASS Mode=editor-verify\u001b[m"
+    ]
+  },
+  "final-restart-result.json": {
+    "Passed": true,
+    "Mode": "editor-restart",
+    "Run": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Run-FinalEditor",
+    "Markers": [
+      "\u001b[m[2026/10/20 23:04:59   INFO]                    [SOUT] OWNERSHIP_EDITOR FULL_PROCESS_RESTART_PASS EditedChestNearby=true EditedWardrobeFeran=true ExplicitUnowned=true InventoryIntact=true\u001b[m",
+      "\u001b[m[2026/10/20 23:04:59   INFO]                    [SOUT] OWNERSHIP_EDITOR PASS Mode=editor-restart\u001b[m"
+    ]
+  },
+  "fixture2-result.json": {
+    "Passed": true,
+    "Mode": "editor-fixture",
+    "Run": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Run-Fixture",
+    "Markers": [
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=OWNERSHIP_CANDIDATE Role=Kweebec_Merchant Faction=Kweebec Eligible=false Reason=UNOWNED_OR_INVALID_SCOPE\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=OWNERSHIP_CANDIDATE Role=Kweebec_Merchant Faction=Kweebec Eligible=false Reason=UNOWNED_OR_INVALID_SCOPE\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=OWNERSHIP_CANDIDATE Role=Kweebec_Merchant Faction=Kweebec Eligible=true Reason=scope-match\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=VISUAL_CANDIDATE Faction=Kweebec WITNESS=Kweebec_Merchant Reason=seen Distance=9.192388155425117 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@993438925, index=8} WitnessPosition=( 0.000E+0  6.400E+1 -8.000E+0) HeadYaw=-3.1415927 ViewSectorDegrees=180 Crouched=false PlayerPosition=(-3.500E+0  6.400E+1  5.000E-1)\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=OWNERSHIP_CANDIDATE Role=Kweebec_Merchant Faction=Kweebec Eligible=true Reason=scope-match\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=VISUAL_CANDIDATE Faction=Kweebec WITNESS=UNSEEN Reason=range Distance=9.192388155425117 Range=6.0 StandingRange=20.0 Sector=true LOS=false Witness=Ref{store=class com.hypixel.hytale.component.Store@993438925, index=8} WitnessPosition=( 0.000E+0  6.400E+1 -8.000E+0) HeadYaw=-3.1415927 ViewSectorDegrees=180 Crouched=true PlayerPosition=(-3.500E+0  6.400E+1  5.000E-1)\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=OWNERSHIP_CANDIDATE Role=Kweebec_Merchant Faction=Kweebec Eligible=true Reason=scope-match\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=VISUAL_CANDIDATE Faction=Kweebec WITNESS=Kweebec_Merchant Reason=seen Distance=8.514693182963201 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@993438925, index=8} WitnessPosition=( 0.000E+0  6.400E+1 -8.000E+0) HeadYaw=-3.1415927 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 5.000E-1  6.400E+1  5.000E-1)\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=OWNERSHIP_CANDIDATE Role=Kweebec_Merchant Faction=Kweebec Eligible=true Reason=scope-match\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=VISUAL_CANDIDATE Faction=Kweebec WITNESS=UNSEEN Reason=range Distance=8.514693182963201 Range=6.0 StandingRange=20.0 Sector=true LOS=false Witness=Ref{store=class com.hypixel.hytale.component.Store@993438925, index=8} WitnessPosition=( 0.000E+0  6.400E+1 -8.000E+0) HeadYaw=-3.1415927 ViewSectorDegrees=180 Crouched=true PlayerPosition=( 5.000E-1  6.400E+1  5.000E-1)\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=OWNERSHIP_CANDIDATE Role=Kweebec_Merchant Faction=Kweebec Eligible=false Reason=UNOWNED_OR_INVALID_SCOPE\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=OWNERSHIP_CANDIDATE Role=Kweebec_Merchant Faction=Kweebec Eligible=false Reason=UNOWNED_OR_INVALID_SCOPE\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=OWNERSHIP_CANDIDATE Role=Kweebec_Merchant Faction=Kweebec Eligible=true Reason=scope-match\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=VISUAL_CANDIDATE Faction=Kweebec WITNESS=Kweebec_Merchant Reason=seen Distance=12.020815280171307 Range=20.0 StandingRange=20.0 Sector=true LOS=true Witness=Ref{store=class com.hypixel.hytale.component.Store@993438925, index=8} WitnessPosition=( 0.000E+0  6.400E+1 -8.000E+0) HeadYaw=-3.1415927 ViewSectorDegrees=180 Crouched=false PlayerPosition=( 8.500E+0  6.400E+1  5.000E-1)\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=OWNERSHIP_CANDIDATE Role=Kweebec_Merchant Faction=Kweebec Eligible=true Reason=scope-match\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR Action=VISUAL_CANDIDATE Faction=Kweebec WITNESS=UNSEEN Reason=range Distance=12.020815280171307 Range=6.0 StandingRange=20.0 Sector=true LOS=false Witness=Ref{store=class com.hypixel.hytale.component.Store@993438925, index=8} WitnessPosition=( 0.000E+0  6.400E+1 -8.000E+0) HeadYaw=-3.1415927 ViewSectorDegrees=180 Crouched=true PlayerPosition=( 8.500E+0  6.400E+1  5.000E-1)\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR FIXTURE_PASS StorageCount=5 NativeChest=3 HyStash54=2 NPCs=2 Pose=true FOV=true LOS=true StandingWitness=true CrouchedUnseen=true CreatorPermission=true\u001b[m",
+      "\u001b[m[2026/10/20 23:04:08   INFO]                    [SOUT] OWNERSHIP_EDITOR PASS Mode=editor-fixture\u001b[m"
+    ]
+  },
+  "ready-author-result.json": {
+    "Passed": true,
+    "Mode": "editor-author",
+    "Run": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Run-ReadyAuthor",
+    "Markers": [
+      "\u001b[m[2026/10/20 23:00:56   INFO]                    [SOUT] OWNERSHIP_EDITOR AUTHOR_PASS FiveContainers=true NativeStorage=true NoSpawner=true\u001b[m",
+      "\u001b[m[2026/10/20 23:00:56   INFO]                    [SOUT] OWNERSHIP_EDITOR PASS Mode=editor-author\u001b[m"
+    ]
+  },
+  "restart-result.json": {
+    "Passed": true,
+    "Mode": "editor-restart",
+    "Run": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Run-Editor4",
+    "Markers": [
+      "\u001b[m[2026/10/20 22:58:31   INFO]                    [SOUT] OWNERSHIP_EDITOR FULL_PROCESS_RESTART_PASS EditedChestNearby=true EditedWardrobeFeran=true ExplicitUnowned=true InventoryIntact=true\u001b[m",
+      "\u001b[m[2026/10/20 22:58:31   INFO]                    [SOUT] OWNERSHIP_EDITOR PASS Mode=editor-restart\u001b[m"
+    ]
+  }
+}

@@ -40,3 +40,6 @@
 
 # Preserve exact container-world save bytes through checkout and reset.
 /DevTesting/Container_Theft_Test_World/Master/** -text
+
+# Preserve exact isolated ownership-editor fixture bytes for reset verification.
+/DevTesting/Ownership_Editor_Phase2A/Master/** -text

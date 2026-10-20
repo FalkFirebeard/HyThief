@@ -1,0 +1,24 @@
+{
+  "ExistingWorldsAndMasters": {
+    "C:\\Users\\askin\\AppData\\Roaming\\Hytale\\UserData\\Saves": "UNCHANGED",
+    "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Container_Theft_Test_World\\Master": "UNCHANGED",
+    "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\HyThief_Test_World\\Master": "UNCHANGED",
+    "E:\\Hytale adjustments\\Mod Projects\\WonderousWardrobes\\DevTesting\\HyThief_Wardrobe_Phase2A\\Master": "UNCHANGED"
+  },
+  "ActiveHyThief": [
+    "HyThief-1.5.0-editor.1.jar"
+  ],
+  "MasterEqualsActive": true,
+  "InstalledHashes": [
+    {
+      "File": "HyThief-1.5.0-editor.1.jar",
+      "SHA256": "3da4895d8dace3f3b210bfa3012ba016e95f36a197516d6510ad105672426b92"
+    },
+    {
+      "File": "HyStash_v1.4.0.zip",
+      "SHA256": "75edd948e8b86b00cdc74f95d9566f24a4b7d9ffa97e248602b7d4671b2069bb"
+    }
+  ],
+  "ClientWorldNeverLaunched": true,
+  "DesktopReset": "PASS twice, including removal of file-only sentinel"
+}

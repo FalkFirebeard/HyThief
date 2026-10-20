@@ -1,0 +1,16 @@
+{
+  "Version": "1.5.0-editor.1",
+  "Hytale": "0.7.2",
+  "Revision": "d769dc3d57881261a62858e1394f0e4de9a21eca",
+  "ServerSHA256": "23f71f03763422ce7c04df191db49cd0e7d87d43b12baad75c43fdc202410aff",
+  "Mods": [
+    {
+      "File": "HyThief-1.5.0-editor.1.jar",
+      "SHA256": "3da4895d8dace3f3b210bfa3012ba016e95f36a197516d6510ad105672426b92"
+    },
+    {
+      "File": "HyStash_v1.4.0.zip",
+      "SHA256": "75edd948e8b86b00cdc74f95d9566f24a4b7d9ffa97e248602b7d4671b2069bb"
+    }
+  ]
+}

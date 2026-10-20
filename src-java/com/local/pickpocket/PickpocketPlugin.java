@@ -71,6 +71,7 @@ public final class PickpocketPlugin extends JavaPlugin {
     getEntityStoreRegistry().registerSystem(new HyThiefNativeProbe(this));
     getEntityStoreRegistry().registerSystem(new OwnedContainerAccess());
     OwnershipProofData.register(this);
+    getCommandRegistry().registerCommand(new OwnershipEditorCommand());
     containerDiagnostics = new ContainerTheftService(this);
   }
 

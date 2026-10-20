@@ -1,0 +1,12 @@
+{
+  "users": {
+    "d49a059a-84ec-4b9c-8560-ef2ff633ce44": {
+      "groups": [
+        "hytale:Admin"
+      ],
+      "permissions": [
+        "hythief.ownership.edit"
+      ]
+    }
+  }
+}

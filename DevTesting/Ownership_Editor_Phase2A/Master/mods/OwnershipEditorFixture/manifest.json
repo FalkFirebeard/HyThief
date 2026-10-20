@@ -1,0 +1,10 @@
+{
+  "Group": "FirebeardDev",
+  "Name": "OwnershipEditorFixture",
+  "Version": "1.0.0",
+  "ServerVersion": "=0.7.2",
+  "IncludesAssetPack": true,
+  "Dependencies": {
+    "Local:HyThief": "*"
+  }
+}
