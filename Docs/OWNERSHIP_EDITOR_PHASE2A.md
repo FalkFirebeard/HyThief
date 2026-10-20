@@ -104,3 +104,16 @@ Public rollback JAR: `DevTesting/Ownership_Editor_Phase2A/Rollback/Installed-HyT
 ## Boundaries / next gate
 
 No publication or public-branch push. No HyStash production changes, schema changes, new crime systems, spawner outcomes, multi-faction, generation/migration, break protection, undo/redo or prefab export proof. Save/restart is proven for native containers and the tested wardrobe. Full authoring/export/rotation/clipboard round trips and rendering remain separate gates. Await Falk's Phase 2A client result before any Phase 2B work.
+
+
+## HyStash world-reference correction (2026-10-20)
+
+Falk reported a missing Wonderous Wardrobes warning. The fixture's copied root mod configuration retained enabled `FalkFirebeard:Wonderous Wardrobes` even though current `FalkFirebeard:HyStash` was also correctly enabled. This was a missed stale fixture entry, not a HyThief/HyStash production dependency. Installed HyStash 1.4.0 and HyThief 1.5.0-editor.1 hashes still match the pins above. No rebuild, asset-ID rename, dependency or source change was needed.
+
+Removed only that legacy enabled entry from ACTIVE `01 HyThief/config.json` and this fixture's `Master/config.json`; updated only the matching master checksum. Original configs are preserved under `DevTesting/Ownership_Editor_Phase2A/HyStash-Reference-Fix`. Existing `.bak` files and internal saved-block IDs remain unchanged.
+
+The actual active save was NOT reset, recreated, launched or resaved. Before/after SHA-256 manifests prove every active/master file except root config.json is byte-identical, including chunks, entities, ownership, inventories and player data. Native validation of a disposable active-save copy explicitly loaded `FalkFirebeard:HyStash`, passed all five fixture containers/ownership/inventory/54-slot checks, and dispatched `/hythief ownership` successfully.
+
+The existing desktop shortcut's target/working directory and both reset scripts are unchanged. Exact script copies passed a reset against disposable APPDATA with the corrected master and original mod pins; the active shortcut was deliberately not executed because Falk prohibited resetting the active world. An initial deeply nested disposable reset path exceeded Windows PowerShell path limits; validation passed from the shorter `.build/ownership-config-fix` path. No production reset change was necessary.
+
+The latest real-client log records saving this world's mod config at 17:12:48.0502, but does not log the popup's explicit warning text. Native copied-save loading passes; Falk must reopen the client world list to visually confirm the warning is gone. Result: `DevTesting/Ownership_Editor_Phase2A/hystash-config-fix-result.json`. No publication.

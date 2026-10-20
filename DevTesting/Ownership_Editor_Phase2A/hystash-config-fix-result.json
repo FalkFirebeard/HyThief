@@ -1,0 +1,29 @@
+{
+  "Cause": "Inherited enabled FalkFirebeard:Wonderous Wardrobes entry in active/master root config.json; no actual mod dependency. Current HyStash already enabled and installed.",
+  "ChangedSaveFiles": {
+    "Active": [
+      "config.json"
+    ],
+    "Master": [
+      "config.json"
+    ]
+  },
+  "ActiveReset": false,
+  "ActiveWorldLaunched": false,
+  "SaveDataUnchanged": true,
+  "InstalledArtifactsUnchanged": [
+    {
+      "File": "HyThief-1.5.0-editor.1.jar",
+      "SHA256": "3da4895d8dace3f3b210bfa3012ba016e95f36a197516d6510ad105672426b92"
+    },
+    {
+      "File": "HyStash_v1.4.0.zip",
+      "SHA256": "75edd948e8b86b00cdc74f95d9566f24a4b7d9ffa97e248602b7d4671b2069bb"
+    }
+  ],
+  "NativeCopyFixture": "PASS: 3 chests, 2 wardrobes, original ownership, inventories, 54 slots, witnesses",
+  "NativeCopyCommand": "PASS: registered /hythief ownership opens page",
+  "DesktopShortcut": "Unchanged target verified; exact referenced reset scripts passed in disposable APPDATA, no active reset",
+  "ClientWarning": "Explicit warning text not present in latest client log; client log records world mod-config save at 2026-10-20 17:12:48.0502. Reopen client world list to confirm UI warning cleared.",
+  "NativeLoadedPack": "Loaded pack: FalkFirebeard:HyStash from HyStash_v1.4.0.zip"
+}
