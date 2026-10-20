@@ -1,0 +1,34 @@
+{
+  "Mapping": {
+    "A": "GREEN / Unowned chest",
+    "B": "BLUE / Kweebec faction chest",
+    "C": "YELLOW / Nearby chest",
+    "D": "ORANGE / Unowned wardrobe",
+    "E": "RED / Kweebec faction wardrobe"
+  },
+  "Substitutions": null,
+  "FloorStripBlocks": 30,
+  "OverheadBlocks": 5,
+  "TargetLabels": 15,
+  "ChangedSaveFiles": {
+    "Active": [
+      "universe\\worlds\\default\\chunks\\-1.0.region.bin",
+      "universe\\worlds\\default\\chunks\\0.0.region.bin"
+    ],
+    "Master": [
+      "universe\\worlds\\default\\chunks\\-1.0.region.bin",
+      "universe\\worlds\\default\\chunks\\0.0.region.bin"
+    ]
+  },
+  "Backups": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\ColorCoding\\Before",
+  "ActiveWasReset": false,
+  "CurrentOwnershipAndInventoriesPreserved": true,
+  "OriginalNonLabelNPCEntityHoldersPreserved": true,
+  "NonMarkerBlocksAndAllRotationsFillersUnchanged": true,
+  "NativeCellsComparedPerSave": 131072,
+  "NativePhase2AFixture": "PASS",
+  "DesktopShortcut": "Unchanged; exact referenced scripts restored new master in disposable APPDATA",
+  "GlobalModsUnchanged": true,
+  "StandingRule": "E:\\Hytale adjustments\\AGENTS.md",
+  "ClientReadability": "Pending Falk visual confirmation; placement and native load verified"
+}

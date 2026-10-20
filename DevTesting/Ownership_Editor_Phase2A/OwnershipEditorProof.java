@@ -329,14 +329,19 @@ public final class OwnershipEditorProof extends JavaPlugin {
         var b=block(x,64,2);if(b.getItemContainer()==null)b.setItemContainer(new SimpleItemContainer(b.getCapacity()));
         b.getItemContainer().clear();b.getItemContainer().setItemStackForSlot((short)0,new ItemStack("Ingredient_Bar_Copper",16));b.getItemContainer().setItemStackForSlot((short)1,new ItemStack("Ingredient_Bar_Iron",8));
         assign(x,k==1||k==2||k==4,k==2?"NEARBY":(k==1||k==4?"FACTION":""),k==1||k==4?"Kweebec":"");
-        set(x,63,0,"Cloth_Block_Wool_Green"); label(labels[k],x+.5,67,2.5);
+        String[] colors={"Green","Blue","Yellow","Orange","Red"};
+        String[] kinds={"UNOWNED CHEST","KWEEBEC FACTION CHEST","NEARBY CHEST","UNOWNED WARDROBE","KWEEBEC FACTION WARDROBE"};
+        String name=(char)('A'+k)+" / "+colors[k].toUpperCase(java.util.Locale.ROOT)+" / "+kinds[k];
+        for(int dx=-1;dx<=1;dx++)for(int z:new int[]{0,5})set(x+dx,63,z,"Cloth_Block_Wool_"+colors[k]);
+        set(x,69,2,"Cloth_Block_Wool_"+colors[k]);
+        label(name,x+.5,70.3,2.5);label(name,x+.5,66.5,-.5);label(name,x+.5,66.5,5.5);
         cs.getStore().getComponent(sr,BlockComponentSection.getComponentType()).markBlockNeedsSaving(ChunkUtil.indexBlock(x,64,2));
         cs.getStore().getComponent(cs.getChunkReference(ChunkUtil.indexChunkFromBlock(x,2)),WorldChunk.getComponentType()).markNeedsSaving();
       }
       merchant=spawn("Kweebec_Merchant",0,-8,"WITNESS - FACE CHEST ROW");guard=spawn("Kweebec_Razorleaf",0,-20,"RAZORLEAF - NATIVE RESPONSE");
       for(var ref:List.of(merchant,guard)){var rot=new Rotation3f(0,(float)Math.PI,0);s.getComponent(ref,TransformComponent.getComponentType()).setRotation(rot);s.getComponent(ref,HeadRotation.getComponentType()).setRotation(rot);}
       label("01 HYTHIEF - LOOK AT CONTAINER: /hythief ownership",.5,68,7);
-      label("A / D SAFE | B / E KWEEBEC | C NEARBY - RESET AFTER CAUGHT",.5,68.8,7);
+      label("GREEN A | BLUE B | YELLOW C | ORANGE D | RED E",.5,68.8,7);
       log("AUTHOR_PASS FiveContainers=true NativeStorage=true NoSpawner=true");finish();return;
     }
     findNPCs();require(merchant!=null&&guard!=null,"fixture NPCs missing");
