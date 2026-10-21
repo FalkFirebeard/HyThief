@@ -1,0 +1,28 @@
+{
+  "Version": "1.5.0-editor.2",
+  "Hytale": "=0.7.2",
+  "SHA256": "f496b908a07e02289fbb32e6da4a824786acb01f6390f57a94540661c8873939",
+  "Results": {
+    "Tool8-result.json": true,
+    "AccessChest-result.json": true,
+    "AccessWardrobe-result.json": true,
+    "HyThiefAlone-result.json": true,
+    "EditorBackend-result.json": true,
+    "EditorRestart-result.json": true,
+    "EditorCommandGive-result.json": true
+  },
+  "Matrix": "\u001b[m[2026/10/21 00:41:20   INFO] [SOUT] FULL_MATRIX_VERIFIED configuredRoles=185 spawnedRoles=174 nativeRetired=9 validatedAbstracts=2 actualRolePreserved=true interactionTrees=true\u001b[m",
+  "PackagedTestFiles": false,
+  "ExistingUiPersistenceTheftPursuitClassesByteIdentical": true,
+  "WorldChangesOnlyNativePluginVersionPin": {
+    "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Master": [
+      "universe\\worlds\\default\\config.json"
+    ],
+    "C:\\Users\\askin\\AppData\\Roaming\\Hytale\\UserData\\Saves\\01 HyThief": [
+      "universe\\worlds\\default\\config.json"
+    ]
+  },
+  "ResetDisposablePassed": true,
+  "ActualLiveResetRun": false,
+  "ManualClientToolTest": "Pending Falk"
+}

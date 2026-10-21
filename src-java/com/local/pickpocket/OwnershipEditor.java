@@ -2,6 +2,7 @@ package com.local.pickpocket;
 
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
+import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.builtin.buildertools.prefabeditor.PrefabEditSession;
 import com.hypixel.hytale.builtin.tagset.config.NPCGroup;
 import com.hypixel.hytale.math.util.ChunkUtil;
@@ -33,6 +34,20 @@ public final class OwnershipEditor {
   public static Vector3i target(Ref<EntityStore> actor, Store<EntityStore> store) {
     // In stable 0.7.2 this predicate means continue traversal, not accept hit.
     return com.hypixel.hytale.server.core.util.TargetUtil.getTargetBlockOrigin(actor, id -> id == 0, REACH, store);
+  }
+  /** Shared world-thread entry. Opening is read-only; Apply revalidates independently. */
+  public static void open(Ref<EntityStore> actor, Store<EntityStore> store, PlayerRef player) {
+    if (!player.hasPermission(PERMISSION))
+      throw new IllegalArgumentException("You do not have permission to edit ownership.");
+    if (actor == null || !actor.isValid() || actor.getStore() != store
+        || !actor.equals(player.getReference()))
+      throw new IllegalArgumentException("The editor's player or world changed. Reopen the editor.");
+    var entity = store.getComponent(actor, Player.getComponentType());
+    if (entity == null) throw new IllegalArgumentException("The editor's player is unavailable.");
+    // Queued activations must not replace a page or discard unsaved edits.
+    if (entity.getPageManager().getCustomPage() instanceof OwnershipEditorPage) return;
+    var selection = select(store.getExternalData().getWorld(), target(actor, store));
+    entity.getPageManager().openCustomPage(actor, store, new OwnershipEditorPage(player, selection));
   }
   public record Value(boolean owned, String scope, String faction) {
     static Value read(OwnershipProofData data) {

@@ -52,7 +52,7 @@
     "SunshaftScaleFactor": 4.0
   },
   "RequiredPlugins": {
-    "Local:HyThief": "=1.5.0-editor.1"
+    "Local:HyThief": "=1.5.0-editor.2"
   },
   "GameMode": "Adventure",
   "IsSpawningNPC": false,

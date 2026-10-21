@@ -6,7 +6,6 @@ import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
 import com.hypixel.hytale.server.core.command.system.basecommands.AbstractCommandCollection;
 import com.hypixel.hytale.server.core.command.system.basecommands.AbstractPlayerCommand;
-import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
@@ -28,9 +27,7 @@ public final class OwnershipEditorCommand extends AbstractCommandCollection {
         context.sendMessage(Message.raw("You do not have permission to edit ownership.")); return;
       }
       try {
-        var target = OwnershipEditor.select(world, OwnershipEditor.target(actor, store));
-        var entity = store.getComponent(actor, Player.getComponentType());
-        entity.getPageManager().openCustomPage(actor, store, new OwnershipEditorPage(player, target));
+        OwnershipEditor.open(actor, store, player);
       } catch (IllegalArgumentException ex) { context.sendMessage(Message.raw(ex.getMessage())); }
     }
   }

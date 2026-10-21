@@ -1,0 +1,25 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.HyThief_Ownership_Editor_Tool.name",
+    "Description": "server.items.HyThief_Ownership_Editor_Tool.description"
+  },
+  "Icon": "Icons/Items/EditorTools/Prefab.png",
+  "Categories": [
+    "Tool.PrefabEditing"
+  ],
+  "SubCategory": "PrefabTools",
+  "Model": "Items/Tools/Brush/Brush.blockymodel",
+  "Texture": "Items/Tools/Brush/Brush_Texture.png",
+  "MaxStack": 1,
+  "PlayerAnimationsId": "Item",
+  "Quality": "Tool",
+  "Interactions": {
+    "Primary": "HyThief_Ownership_Editor"
+  },
+  "InteractionConfig": {
+    "UseDistance": {
+      "Adventure": 8,
+      "Creative": 8
+    }
+  }
+}
