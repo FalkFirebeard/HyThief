@@ -29,6 +29,7 @@ final class HyThiefPersonalWitnessAlert {
           || witness.getStore() != store || !visited.add(witness)) continue;
       if (ContainerOwnershipPolicy.rejection(ownership, witness, store) != null
           || store.getComponent(witness, DeathComponent.getComponentType()) != null) continue;
+      if (!NpcParticipation.allowed(NpcOverrides.Capability.RESPONSE,witness,store,true)) continue;
       var npc = store.getComponent(witness, NPCEntity.getComponentType());
       if (npc == null || npc.getRole() == null) continue;
       String path = ContainerWitnessProfiles.entry(witness, store);

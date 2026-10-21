@@ -71,6 +71,10 @@ public final class PickpocketPlugin extends JavaPlugin {
     getEntityStoreRegistry().registerSystem(new HyThiefNativeProbe(this));
     getEntityStoreRegistry().registerSystem(new OwnedContainerAccess());
     OwnershipProofData.register(this);
+    NpcOverrides.register(this);
+    NpcWorldOverrides.register(this);
+    getCodecRegistry(com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction.CODEC)
+        .register(NpcEditorToolInteraction.TYPE,NpcEditorToolInteraction.class,NpcEditorToolInteraction.codec(this));
     getCodecRegistry(com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction.CODEC)
         .register(OwnershipEditorToolInteraction.TYPE, OwnershipEditorToolInteraction.class, OwnershipEditorToolInteraction.CODEC);
     getCommandRegistry().registerCommand(new OwnershipEditorCommand());
@@ -87,6 +91,11 @@ public final class PickpocketPlugin extends JavaPlugin {
       merchantInteractListener.shutdown();
     }
     saveStorageState();
+  }
+
+  public boolean isPickpocketable(Ref<EntityStore> ref, Store<EntityStore> store) {
+    var npc=ref==null || !ref.isValid()?null:store.getComponent(ref,NPCEntity.getComponentType());
+    return npc!=null && NpcParticipation.allowed(NpcOverrides.Capability.PICKPOCKET,ref,store,isPickpocketableRole(npc.getRoleName()));
   }
 
   public int getStorageSize() {
@@ -415,7 +424,7 @@ public final class PickpocketPlugin extends JavaPlugin {
       return false;
     }
 
-    if (result.detected()) {
+    if (result.detected() && NpcParticipation.allowed(NpcOverrides.Capability.WITNESS,targetRef,targetStore,true)) {
       HyThiefGuardAlert.signal(this, playerRef, roleName, targetRef, targetStore);
       boolean usingStateReaction = triggerCaughtReaction(playerRef, roleName, targetRef, targetStore);
       if (usingStateReaction) {
@@ -474,6 +483,7 @@ public final class PickpocketPlugin extends JavaPlugin {
       String roleName,
       Ref<EntityStore> targetRef,
       Store<EntityStore> targetStore) {
+    if (!NpcParticipation.allowed(NpcOverrides.Capability.RESPONSE,targetRef,targetStore,true)) return false;
     if (roleName == null || roleName.isBlank() || targetRef == null || !targetRef.isValid() || targetStore == null) {
       return false;
     }

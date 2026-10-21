@@ -1,0 +1,28 @@
+$C = "../Common.ui";
+$C.@PageOverlay {
+  LayoutMode: Middle;
+  $C.@DecoratedContainer {
+    Anchor: (Width: 680, Height: 700);
+    #Title { $C.@Title { @Text = "HYTHIEF NPC CONFIGURATION"; } }
+    #Content {
+      LayoutMode: Top;
+      Padding: (Full: 20);
+      Label #Selected { Text: ""; Style: (FontSize: 14, TextColor: #b4c8dc, Wrap: true); Anchor: (Height: 48); }
+      Label { Text: "Editing Scope"; Style: (...$C.@DefaultLabelStyle); Anchor: (Height: 28); }
+      $C.@DropdownBox #Scope { }
+      Label { Text: "Pickpocket Eligibility"; Style: (...$C.@DefaultLabelStyle); Anchor: (Height: 36); Padding: (Top: 8); }
+      $C.@DropdownBox #Pickpocket { }
+      Label { Text: "Witness Eligibility"; Style: (...$C.@DefaultLabelStyle); Anchor: (Height: 36); Padding: (Top: 8); }
+      $C.@DropdownBox #Witness { }
+      Label { Text: "Crime Response Eligibility"; Style: (...$C.@DefaultLabelStyle); Anchor: (Height: 36); Padding: (Top: 8); }
+      $C.@DropdownBox #Response { }
+      Label #Capabilities { Text: ""; Style: (FontSize: 13, TextColor: #b4c8dc, Wrap: true); Anchor: (Height: 64); Padding: (Top: 8); }
+      Label #Status { Text: "Default inherits broader settings. Escape cancels."; Style: (FontSize: 14, TextColor: #d9b879, Wrap: true); Anchor: (Height: 70); Padding: (Top: 8); }
+      Group {
+        LayoutMode: Left; Anchor: (Height: 44);
+        $C.@TextButton #Apply { @Text = "Apply"; Anchor: (Width: 180, Right: 12); }
+        $C.@SecondaryTextButton #Cancel { @Text = "Cancel"; Anchor: (Width: 180); }
+      }
+    }
+  }
+}

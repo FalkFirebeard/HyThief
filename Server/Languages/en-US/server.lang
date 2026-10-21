@@ -2,3 +2,6 @@ hythief.interactionHints.pickpocketTest = Pickpocket
 
 items.HyThief_Ownership_Editor_Tool.name = HyThief Ownership Editor Tool
 items.HyThief_Ownership_Editor_Tool.description = Aim at a storage container and use Primary to edit ownership. Requires hythief.ownership.edit.
+
+items.HyThief_NPC_Editor_Tool.name = HyThief NPC Editor Tool
+items.HyThief_NPC_Editor_Tool.description = Aim at an NPC and use Primary to configure HyThief participation. Requires hythief.npc.edit.

@@ -48,7 +48,7 @@ final class HyThiefNativeProbe extends EntityEventSystem<EntityStore, UseEntityE
       ComponentAccessor<EntityStore> accessor) {
     if (target == null || !target.isValid()) return false;
     NPCEntity npc = accessor.getComponent(target, NPCEntity.getComponentType());
-    return npc != null && plugin.isPickpocketableRole(npc.getRoleName());
+    return npc != null && plugin.isPickpocketable(target,target.getStore());
   }
 
   private static boolean isCrouched(Ref<EntityStore> player, ComponentAccessor<EntityStore> accessor) {

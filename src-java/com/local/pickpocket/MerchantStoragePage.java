@@ -64,6 +64,7 @@ public final class MerchantStoragePage {
 
   public void open(
       PlayerRef playerRef, Ref<EntityStore> playerEntityRef, Store<EntityStore> playerStore) {
+    if (targetRef != null && targetRef.isValid() && !plugin.isPickpocketable(targetRef,targetStore)) return;
     Player player = playerStore.getComponent(playerEntityRef, Player.getComponentType());
     if (player == null) {
       return;
@@ -320,6 +321,11 @@ public final class MerchantStoragePage {
       return true;
     }
 
+    if (targetRef != null && targetRef.isValid() && !plugin.isPickpocketable(targetRef,targetStore)) {
+      closing=true; kickedOut=true;
+      if (notifyPlayer) playerRef.sendMessage(Message.raw("Pickpocketing is disabled for this NPC."));
+      return true;
+    }
     if (!plugin.isPickpocketTargetUnsafe(targetRef, targetStore)) {
       return false;
     }

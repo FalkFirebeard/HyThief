@@ -62,6 +62,8 @@ final class HyThiefGuardAlert {
           || victim.getStore() != store) {
         return new Delivery(false, "invalid-source-or-offender", null);
       }
+      if (!NpcParticipation.allowed(NpcOverrides.Capability.WITNESS,victim,store,true))
+        return new Delivery(false,"witness-disabled",null);
       TransformComponent origin = store.getComponent(victim, TransformComponent.getComponentType());
       if (origin == null) {
         return new Delivery(false, "missing-source-transform", null);
@@ -75,7 +77,8 @@ final class HyThiefGuardAlert {
         if (candidate == null || !candidate.isValid()) continue;
         NPCEntity npc = store.getComponent(candidate, NPCEntity.getComponentType());
         if (npc == null || !responderRoles.contains(npc.getRoleName())
-            || !plugin.isPickpocketableRole(npc.getRoleName())) continue;
+            || !plugin.isPickpocketableRole(npc.getRoleName())
+            || !NpcParticipation.allowed(NpcOverrides.Capability.RESPONSE,candidate,store,true)) continue;
         StateSupport state = store.getComponent(candidate, StateSupport.getComponentType());
         BeaconSupport beacon = store.getComponent(candidate, BeaconSupport.getComponentType());
         TransformComponent position = store.getComponent(candidate, TransformComponent.getComponentType());

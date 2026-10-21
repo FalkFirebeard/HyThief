@@ -1,0 +1,74 @@
+{
+  "Candidate": {
+    "Version": "1.5.0-editor.3",
+    "Target": "=0.7.2",
+    "SHA256": "89334a1850735a0f50f5caa4b3ab0f579a75447acd5db088aeacbd8f903328ac",
+    "Artifact": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Npc_Editor\\Candidates\\HyThief-1.5.0-editor.3.jar",
+    "Installed": false,
+    "PublicationAuthorized": false,
+    "NativeValidationContentsIdentical": true
+  },
+  "Proofs": {
+    "Npc1": {
+      "Passed": true,
+      "Mode": "npc"
+    },
+    "Restart1": {
+      "Passed": true,
+      "Mode": "npc-restart"
+    },
+    "Prefab2": {
+      "Passed": true,
+      "Mode": "npc-prefab"
+    },
+    "Command1": {
+      "Passed": true,
+      "Mode": "editor-command"
+    },
+    "OwnershipTool1": {
+      "Passed": true,
+      "Mode": "tool"
+    },
+    "Chest1": {
+      "Passed": true,
+      "Mode": "access-chest"
+    },
+    "Wardrobe1": {
+      "Passed": true,
+      "Mode": "access"
+    },
+    "Alone1": {
+      "Passed": true,
+      "Mode": "hy-alone"
+    },
+    "Metadata1": {
+      "Passed": true,
+      "Mode": "npc-metadata"
+    },
+    "Matrix1": {
+      "Passed": true,
+      "Configured": 185,
+      "Spawned": 174,
+      "Retired": 9,
+      "Abstract": 2
+    }
+  },
+  "Preservation": {
+    "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Master": {
+      "OriginalFiles": 28,
+      "CurrentFiles": 28,
+      "Changed": [],
+      "Added": []
+    },
+    "C:\\Users\\askin\\AppData\\Roaming\\Hytale\\UserData\\Saves\\01 HyThief": {
+      "OriginalFiles": 63,
+      "CurrentFiles": 63,
+      "Changed": [],
+      "Added": []
+    }
+  },
+  "LiveResetPerformed": false,
+  "HyStashModified": false,
+  "ManualNpcClientTest": "Pending",
+  "DynamicMetadata": "Research only; bounded current faction UI limitation documented"
+}

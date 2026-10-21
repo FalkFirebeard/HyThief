@@ -50,7 +50,7 @@ final class ContainerVisualWitness {
       for(int n=0;n<chunk.size();n++) {
         var ref=chunk.getReferenceTo(n);var npc=store.getComponent(ref,NPCEntity.getComponentType());
         var transform=store.getComponent(ref,TransformComponent.getComponentType());
-        if(npc.getRole()!=null && eligible.test(ref) && transform!=null
+        if(npc.getRole()!=null && NpcParticipation.allowed(NpcOverrides.Capability.WITNESS,ref,store,eligible.test(ref)) && transform!=null
             && transform.getPosition().distance(position)<=RANGE
             && store.getComponent(ref,DeathComponent.getComponentType())==null)candidates.add(ref);
       }

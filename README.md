@@ -4,6 +4,10 @@
 
 HyThief adds stealth-focused pickpocketing and witnessed theft from owned containers. Positioning, visibility and player choice determine whether you get away with it.
 
+## Creator Update development preview
+
+HyThief 1.5.0 is in development and is not a public release. See the [NPC editor checkpoint](Docs/NPC_EDITOR_PHASE_B.md) and [draft release copy](Docs/CREATOR_UPDATE_1_5_0_DRAFT.md). Public installation instructions below remain for released 1.4.2.
+
 ## NPC pickpocketing
 
 Crouch behind a supported NPC, press your normal Interact key, and select individual items from the Pickpocket menu. Each theft carries a chance of detection; taking more items increases the risk.

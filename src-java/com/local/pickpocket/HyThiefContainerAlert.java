@@ -33,6 +33,8 @@ final class HyThiefContainerAlert {
     if (store == null || offender == null || witness == null || !offender.isValid()
         || !witness.isValid() || offender.getStore() != store || witness.getStore() != store)
       return new Result("NONE", "", List.of(), "invalid-offender-or-witness");
+    if (!NpcParticipation.allowed(NpcOverrides.Capability.WITNESS,witness,store,true))
+      return new Result("NONE","",List.of(),"witness-disabled");
     if ("FACTION".equals(ownership.scope())) {
       if (ContainerOwnershipPolicy.rejection(ownership, witness, store) != null)
         return new Result("FACTION", "", List.of(), "witness-faction-mismatch");
@@ -58,7 +60,8 @@ final class HyThiefContainerAlert {
     for (var candidate : candidates) {
       if (candidate == null || !candidate.isValid() || candidate.equals(offender)) continue;
       var npc = store.getComponent(candidate, NPCEntity.getComponentType());
-      if (npc == null || npc.getRole() == null || !plugin.isPickpocketableRole(npc.getRoleName())) continue;
+      if (npc == null || npc.getRole() == null || !plugin.isPickpocketableRole(npc.getRoleName())
+          || !NpcParticipation.allowed(NpcOverrides.Capability.RESPONSE,candidate,store,true)) continue;
       var beacon = store.getComponent(candidate, BeaconSupport.getComponentType());
       int slot = slot(beacon);
       if (slot < 0) continue; // Native role sensor is the data-driven opt-in, not a Java role-ID list.
