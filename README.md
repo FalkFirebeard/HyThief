@@ -2,7 +2,7 @@
 
 **HyThief provides the mechanics. You create the opportunities.**
 
-Hytale **0.7.2**, exact target **=0.7.2**. [GitHub 1.5.0 is live](https://github.com/FalkFirebeard/HyThief/releases/tag/v1.5.0). CurseForge file [9273461](https://www.curseforge.com/hytale/mods/hythief/files/9273461) is submitted and Processing; approval/default-file promotion is pending.
+Hytale **0.7.2**, exact target **=0.7.2**. [GitHub 1.5.0 is live](https://github.com/FalkFirebeard/HyThief/releases/tag/v1.5.0). CurseForge file [9273461](https://www.curseforge.com/hytale/mods/hythief/files/9273461) is approved and live.
 
 The Creator Update expands HyThief's existing pickpocketing and owned-container theft into a configurable stealth and theft system. For Hytale mod developers, world builders, adventure-map creators, dungeon designers, server administrators, roleplay server creators, and stealth/RPG experience designers.
 

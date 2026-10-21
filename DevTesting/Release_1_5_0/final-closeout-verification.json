@@ -1,0 +1,22 @@
+{
+  "Version": "1.5.0",
+  "Target": "=0.7.2",
+  "ReleaseCommit": "64449b272100c7ee188b93637dabb4c320d4d314",
+  "Tag": "v1.5.0",
+  "GitHubURL": "https://github.com/FalkFirebeard/HyThief/releases/tag/v1.5.0",
+  "GitHubLiveLatest": true,
+  "DuplicateGitHubRelease": false,
+  "GitHubSHA256": "c57bfbcb81fe619fe0e6beb8bf96ccb1066b4273d8fbb7404d1122597e5c709e",
+  "CurseForgeFileID": 9273461,
+  "CurseForgeURL": "https://www.curseforge.com/hytale/mods/hythief/files/9273461",
+  "CurseForgeSHA256": "c57bfbcb81fe619fe0e6beb8bf96ccb1066b4273d8fbb7404d1122597e5c709e",
+  "CurseForgeApproval": "Approved / Live; independently verified public page/download and single public listing",
+  "MainFastForwardToApprovedCommitPossible": true,
+  "KnownReleaseBranchTip": "ddf014b89704ac1520f9e1076399bce361b9cc28",
+  "MainUpdate": "Fast-forwarded to exact approved release commit after explicit clarification",
+  "MainCommit": "64449b272100c7ee188b93637dabb4c320d4d314",
+  "CurseForgeCurrentPublicRelease": true,
+  "DuplicateCurseForgeRelease": false,
+  "CreatorCommandsOnApprovedMain": true,
+  "RemainingAdministrativeTasks": []
+}
