@@ -1,4 +1,4 @@
-# Native metadata compatibility review — Creator Update
+# Native metadata compatibility review â€” Creator Update
 
 2026-10-20. Installed Hytale 0.7.2 / d769dc3d57881261a62858e1394f0e4de9a21eca. Research only; no broad production refactor or HyStash modification.
 
@@ -56,3 +56,7 @@ Installed API/bytecode and native data are authoritative: NPCPlugin, BuilderMana
 Production source: ContainerOwnershipPolicy, OwnershipEditor, PersistentContainerOwnership, ContainerRemovalProbe, ContainerTheftService, ContainerWitnessProfiles, HyThiefContainerAlert, HyThiefPersonalWitnessAlert, NativePursuit. Existing containers/ownership schema are unchanged.
 
 Official context: [Update 7 notes](https://hytale.com/news/2026/10/2026-10-12-modder-facing-patch-notes-update-7) and [NPC technical rundown](https://hytale.com/news/2026/2/npc-technical-rundown). [NPC group documentation](https://docs.hytale.com/assets/npc/groups/) was discoverable but direct retrieval failed this session; conclusions rely on installed APIs and the real registry proof. No newer/pre-release subsystem was adopted.
+
+## Final 1.5.0 release disposition
+
+Falk explicitly deferred broad metadata refactoring from 1.5.0; only an actual defect in existing promised functionality should block release. Reported manual tests passed for bounded editor functionality. Recommend a separately approved later metadata update; universal compatibility is not advertised.

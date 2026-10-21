@@ -1,0 +1,90 @@
+{
+  "Version": "1.5.0",
+  "Target": "=0.7.2",
+  "SHA256": "c57bfbcb81fe619fe0e6beb8bf96ccb1066b4273d8fbb7404d1122597e5c709e",
+  "ProductionArtifact": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\.build\\public-release\\1.5.0\\HyThief-1.5.0.jar",
+  "NativeProofs": {
+    "FinalNpcClean": {
+      "Passed": true,
+      "Mode": "npc",
+      "CleanShutdown": true,
+      "NonAllocatorSevereMessages": []
+    },
+    "FinalRestart": {
+      "Passed": true,
+      "Mode": "npc-restart",
+      "CleanShutdown": true,
+      "NonAllocatorSevereMessages": []
+    },
+    "FinalPrefab": {
+      "Passed": true,
+      "Mode": "npc-prefab",
+      "CleanShutdown": true,
+      "NonAllocatorSevereMessages": []
+    },
+    "FinalOwnershipClean": {
+      "Passed": true,
+      "Mode": "tool",
+      "CleanShutdown": true,
+      "NonAllocatorSevereMessages": []
+    },
+    "FinalOwnershipCommandClean": {
+      "Passed": true,
+      "Mode": "editor-command-ownership",
+      "CleanShutdown": true,
+      "NonAllocatorSevereMessages": []
+    },
+    "FinalNpcCommandClean": {
+      "Passed": true,
+      "Mode": "editor-command",
+      "CleanShutdown": true,
+      "NonAllocatorSevereMessages": []
+    },
+    "FinalChest": {
+      "Passed": true,
+      "Mode": "access-chest",
+      "CleanShutdown": true,
+      "NonAllocatorSevereMessages": []
+    },
+    "FinalWardrobe": {
+      "Passed": true,
+      "Mode": "access",
+      "CleanShutdown": true,
+      "NonAllocatorSevereMessages": []
+    },
+    "FinalAlone": {
+      "Passed": true,
+      "Mode": "hy-alone",
+      "CleanShutdown": true,
+      "NonAllocatorSevereMessages": []
+    },
+    "FinalMatrix": {
+      "Passed": true,
+      "Configured": 185,
+      "Spawned": 174,
+      "Retired": 9,
+      "Abstract": 2,
+      "CleanShutdown": true
+    }
+  },
+  "Preservation": {
+    "C:\\Users\\askin\\AppData\\Roaming\\Hytale\\UserData\\Saves\\01 HyThief": {
+      "Files": 61,
+      "ByteIdentical": true
+    },
+    "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Ownership_Editor_Phase2A\\Master": {
+      "Files": 28,
+      "ByteIdentical": true
+    },
+    "C:\\Users\\askin\\AppData\\Roaming\\Hytale\\UserData\\Mods": {
+      "Files": 31,
+      "ByteIdentical": true
+    }
+  },
+  "OnlyJarDifference": "manifest.json Version editor.3 -> 1.5.0",
+  "GameplaySourceChanges": false,
+  "LiveInstallChanged": false,
+  "ResetPerformed": false,
+  "PublicationAuthorized": false,
+  "ReleaseBlockers": []
+}

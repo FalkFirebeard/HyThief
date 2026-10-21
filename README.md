@@ -1,64 +1,68 @@
-# HyThief — Pickpocketing & Container Theft
+# HyThief 1.5.0 — The Creator Update
 
-**HyThief 1.4.2 — Container Access & Pursuit** is compatible with **Hytale 0.7.2**, exact target `=0.7.2`.
+**HyThief provides the mechanics. You create the opportunities.**
 
-HyThief adds stealth-focused pickpocketing and witnessed theft from owned containers. Positioning, visibility and player choice determine whether you get away with it.
+Hytale **0.7.2**, exact target **=0.7.2**. Release materials are prepared locally and await final publication approval; public downloads are not updated by this preparation.
 
-## Creator Update development preview
+The Creator Update expands HyThief's existing pickpocketing and owned-container theft into a configurable stealth and theft system. For Hytale mod developers, world builders, adventure-map creators, dungeon designers, server administrators, roleplay server creators, and stealth/RPG experience designers.
 
-HyThief 1.5.0 is in development and is not a public release. See the [NPC editor checkpoint](Docs/NPC_EDITOR_PHASE_B.md) and [draft release copy](Docs/CREATOR_UPDATE_1_5_0_DRAFT.md). Public installation instructions below remain for released 1.4.2.
+Use in-game tools to author guarded storage, towns and stealth encounters alongside Hytale's native building/NPC systems. HyThief configures ownership and theft participation; it does not replace native AI.
 
-## NPC pickpocketing
+## Creator Tools — Commands & Setup
 
-Crouch behind a supported NPC, press your normal Interact key, and select individual items from the Pickpocket menu. Each theft carries a chance of detection; taking more items increases the risk.
+| Command | What it does | Permission |
+|---|---|---|
+| `/give HyThief_Ownership_Editor_Tool` | Obtain the container editor tool | Native `hytale.command.give.self` to obtain; `hythief.ownership.edit` to edit |
+| `/give HyThief_NPC_Editor_Tool` | Obtain the NPC editor tool | Native `hytale.command.give.self` to obtain; `hythief.npc.edit` to edit |
+| `/hythief ownership` | Open container ownership editor directly while aiming at storage | `hythief.ownership.edit` |
 
-- Role-specific loot, escalating risk and cooldowns.
-- Caught notifications and clean menu closure on Escape or when caught.
-- Native, role-dependent NPC reactions; Kweebec merchants can alert an eligible nearby Razorleaf.
-- Normal front merchant trade works standing or crouched.
-- Crouch-aware fresh acquisition; crouching does not erase existing awareness.
+Use a suitably authorized administrator/operator account, or delegate these permissions to trusted creators. HyThief checks permissions, not a separate operator flag; possessing a tool alone grants no editing authority. Native /give has its own permission policy.
 
-## Container theft — new in 1.4.0
+Equip the tool in your hotbar, aim at compatible storage or a live NPC within **8 blocks**, and use **Primary**. Apply saves; Cancel/Escape discards pending changes. There is no custom hotkey or NPC-editor chat command. [Full creator guide](Docs/CREATOR_GUIDE.md).
 
-When access is permitted, browsing, depositing and rearranging are safe under HyThief. Removing items from an owned container triggers a fresh witness check for each successful withdrawal.
+## Container ownership
 
-- Persistent **FACTION** and **NEARBY/LOCAL** ownership.
-- Witnesses need clear LOS, correct facing and range: **20 blocks standing / 6 crouched**.
-- Unseen theft succeeds silently; witnessed theft gives exactly one **"You have been caught stealing!"** notification per withdrawal.
-- Hytale's native NPC behavior handles alerts, pursuit and combat. No universal HyThief faction broadcast is added.
-- When theft is witnessed, the successful transfer completes and you keep the item; the container window immediately closes and queued withdrawals are rejected.
-- Owned-container opening is blocked during recognized native NPC pursuit. Each denied attempt displays **"You cannot access this container while being pursued."** once.
-- Access returns automatically when native pursuit ends; there is no artificial heat timer.
-- Unowned/player-placed containers remain accessible, including during pursuit.
+Configure this placed container as Unowned, Nearby-owned or supported Faction-owned. Nearby permits any supported visual witness; Faction requires matching native membership. Inventories and slot arrangements stay intact, and ownership persists through native saves.
 
-Automatic ownership is deliberately conservative: eleven selected Kweebec, Feran, Trork and Outlander loot-spawner tables stamp ownership on newly resolved chests. **Previously generated unmarked chests are not backfilled.** Player-placed chest defaults remain unowned.
+Native chests and supported optional **HyStash 1.4.0** wardrobes are verified. Native storage capabilities determine compatibility; custom/virtual inventory systems may be unsupported. Existing unmarked/player-placed containers stay unowned until configured; no retroactive migration is added.
 
-Initial container witnessing covers **33 ordinary roles**: 7 Kweebec, 5 Feran, 7 Trork, 6 Outlander, Skeleton Fighter and 7 Zombie variants. [Exact role list and content coverage](Docs/CONTAINER_THEFT_1_4_0_CONTENT_AUDIT.md). Goblin container support, Klop integration, prefab-instance ownership and special/scripted roles are deferred. Existing native property/hostility behavior is preserved. Existing pickpocket support is unchanged.
+## NPC participation
 
-## Optional HyStash compatibility
+Configure Pickpocket, Witness and Crime Response separately with Default/Enabled/Disabled. Resolve each field **individual NPC → exact role/type → recognized faction → existing defaults**. Individual settings follow saved NPCs; broad rules apply throughout this world. Replacement spawns inherit applicable role/faction rules, not another NPC's individual settings.
 
-**Compatible with HyStash (previously known as Wondrous Wardrobes).** [HyStash 1.4.0](https://www.curseforge.com/hytale/mods/wonderous-wardrobes) provides standalone 54-slot wardrobe storage and ownership metadata for supported generated locations. HyThief recognizes supported owned HyStash wardrobes through native storage mechanics and that metadata, applying its existing theft, visual witness, native NPC response and pursuit-access rules.
+Enabled does not create missing loot, interaction wiring or AI. Current faction scopes remain bounded and are documented in the guide; universal dynamic faction compatibility is not claimed. Native identities/factions, movement, patrols, AI definitions, spawning and arbitrary scripting/world triggers are not edited. Response Disabled is not global pacification: native hostility and social behavior may still act independently.
 
-Both mods function independently, with no hard dependency or bridge plugin. Player-placed and pre-existing unmarked wardrobes remain unowned. See [compatibility details](Docs/HYSTASH_COMPATIBILITY.md).
+Individual settings passed native JSON/binary prefab serialization and placement. World-wide rules do not travel inside an NPC prefab; every clipboard/spawn/undo path is not verified.
 
-## Install
+## Existing stealth and theft gameplay
 
-Download **HyThief-1.4.2.jar** from [GitHub releases](https://github.com/FalkFirebeard/HyThief/releases/latest) or [CurseForge](https://www.curseforge.com/hytale/mods/hythief). Place it in your Hytale Mods folder, remove older active HyThief JARs, and enable it for your world/server. Requires **Hytale 0.7.2**. No separate third-party mod dependency is required. Back up your world before upgrading.
+- Crouch behind a supported NPC and use normal Interact: role-specific loot, escalating risk/caught behavior, clean menu closure and normal front merchant trade.
+- Native NPC fresh-acquisition perception remains **15 standing / 4 crouched**. Crouching does not erase existing awareness. Toggle crouch avoids standing when releasing a held crouch key in the UI.
+- Owned-container withdrawals require a valid visual witness: **20 standing / 6 crouched**, facing and unobstructed LOS. Browsing/deposits/internal rearrangement remain safe.
+- Witnessed theft displays **"You have been caught stealing!"** once, completes the transfer, closes the container and rejects queued extra withdrawals.
+- Owned containers are blocked during recognized native pursuit with **"You cannot access this container while being pursued."** Access restores naturally; unowned storage remains accessible. No heat timer.
+- Existing native NPC roles handle supported alerts/pursuit/combat. No universal faction-wide alarm or automatic hostility editor is added.
 
-Use **toggle crouch** to remain crouched while using the menu. Releasing a held crouch key makes you stand normally. Normal NPC perception remains 15/4; container witnessing uses 20/6.
+Existing configured pickpocket support, container ownership profiles and loot/rules remain. [Container content coverage](Docs/CONTAINER_THEFT_1_4_0_CONTENT_AUDIT.md). Custom NPC state/target contracts and unsupported storage transaction models remain limitations.
 
-## Compatibility and feedback
+## Optional integrations and installation
 
-Native validation passed the container ownership/transaction/witness/response pipeline, persistence across unload/reload and fresh restart, and the public pickpocket matrix of 174 concrete roles plus two abstract definitions. Nine historical configured IDs are retired by Hytale. Every encounter has not been manually tested.
+HyThief works independently. **HyStash is optional**; neither mod requires the other. HyPick and HyRep are not dependencies. [HyStash compatibility](Docs/HYSTASH_COMPATIBILITY.md).
 
-Report issues through [GitHub issues](https://github.com/FalkFirebeard/HyThief/issues) or [CurseForge comments](https://www.curseforge.com/hytale/mods/hythief/comments), including NPC role, Hytale version, other mods, reproduction steps and relevant logs. HyThief continues to receive compatibility maintenance.
+After publication, obtain HyThief-1.5.0.jar from [GitHub releases](https://github.com/FalkFirebeard/HyThief/releases) or [CurseForge](https://www.curseforge.com/hytale/mods/hythief). Back up saves, replace older active HyThief JARs, and enable the mod for Hytale 0.7.2. Do not install multiple JARs with the same plugin identity.
 
-Pursuit lockout reads loaded native `LockedTarget`, recognized combat/chase/search states and pending danger signals. Custom/scripted NPCs with unsupported state names, target slots or position-only tracking require an explicit adapter. It is not a universal pursuit detector. Existing awareness, combat AI and ownership rules are unchanged.
+## Verification and feedback
 
-## Build this release
+Falk reported successful editor.3 manual gameplay tests; these are recorded separately from the production native tests. Production classes/assets are identical to that candidate except manifest version. See [release verification](Docs/RELEASE_1_5_0_VERIFICATION.md) and [release notes](Docs/RELEASE_1.5.0.md).
 
-Check out **v1.4.2**. Use Java 25 and the pinned Hytale 0.7.2 server dependency, then run `./build.ps1`. See [build instructions](Docs/BUILD_ENVIRONMENT_RELEASE.md). The synchronized development branch is preserved; use the release tag to reproduce public source. Game binaries and test-world/helper assets are not redistributed in the JAR.
+[Metadata compatibility investigation](Docs/NATIVE_METADATA_COMPATIBILITY_REVIEW.md) documents automatic discovery feasibility and current restrictions. Broader refactoring is deferred; no universal third-party compatibility promise.
 
-[Release notes](Docs/RELEASE_1.4.2.md) · [CurseForge](https://www.curseforge.com/hytale/mods/hythief) · [GitHub releases](https://github.com/FalkFirebeard/HyThief/releases)
+No video is required. Optional screenshot placements/captions are prepared in the creator guide; publication does not depend on images.
+
+Report reproducible issues through [GitHub](https://github.com/FalkFirebeard/HyThief/issues) or [CurseForge](https://www.curseforge.com/hytale/mods/hythief/comments), with role/block IDs, game version and logs.
+
+## Build
+
+Use Java 25, the pinned Hytale 0.7.2 server dependency and `./build.ps1`. See [build instructions](Docs/BUILD_ENVIRONMENT_RELEASE.md). Release tags are created only after approval; development history and test fixtures remain preserved. No test worlds or helper plugins are shipped in the JAR.
 
 Developed by **Falk Interactive Studios**. Part of the Firebeard Archives.

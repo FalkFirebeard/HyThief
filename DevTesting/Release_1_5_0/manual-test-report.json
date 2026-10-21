@@ -1,0 +1,20 @@
+{
+  "Source": "Falk user-reported successful client testing of 1.5.0-editor.3",
+  "CandidateSHA256": "89334a1850735a0f50f5caa4b3ab0f579a75447acd5db088aeacbd8f903328ac",
+  "NpcEditor": [
+    "Acquisition/targeting/page",
+    "Apply/restore",
+    "Pickpocket eligibility",
+    "Witness Enabled/Disabled",
+    "Response Disabled/Default",
+    "Kweebec guard restoration",
+    "Save/reload",
+    "Role/faction precedence",
+    "Normal merchant interaction"
+  ],
+  "OwnershipEditor": [
+    "Tool/native chests/HyStash",
+    "Persistence/inventory preservation"
+  ],
+  "NewClientTestsExecutedByDex": false
+}

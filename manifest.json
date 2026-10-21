@@ -1,7 +1,7 @@
 {
   "Group": "Local",
   "Name": "HyThief",
-  "Version": "1.4.2",
+  "Version": "1.5.0",
   "Description": "Stealth pickpocketing and witnessed theft from owned containers, with role-specific loot and native NPC reactions.",
   "Authors": [
     {

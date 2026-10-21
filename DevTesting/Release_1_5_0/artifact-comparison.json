@@ -1,0 +1,16 @@
+{
+  "ProductionSHA256": "c57bfbcb81fe619fe0e6beb8bf96ccb1066b4273d8fbb7404d1122597e5c709e",
+  "DevelopmentSHA256": "89334a1850735a0f50f5caa4b3ab0f579a75447acd5db088aeacbd8f903328ac",
+  "DifferingEntries": [
+    "manifest.json"
+  ],
+  "ManifestDifference": {
+    "Version": [
+      "1.5.0-editor.3",
+      "1.5.0"
+    ]
+  },
+  "AllClassesAndOtherAssetsIdentical": true,
+  "NoTestArtifacts": true,
+  "EntryCount": 1674
+}
