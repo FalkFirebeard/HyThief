@@ -1,14 +1,14 @@
-# HyThief 1.5.0 — The Creator Update
+# HyThief 1.5.0 â€” The Creator Update
 
 **HyThief provides the mechanics. You create the opportunities.**
 
-Hytale **0.7.2**, exact target **=0.7.2**. Release materials are prepared locally and await final publication approval; public downloads are not updated by this preparation.
+Hytale **0.7.2**, exact target **=0.7.2**. [GitHub 1.5.0 is live](https://github.com/FalkFirebeard/HyThief/releases/tag/v1.5.0). CurseForge file [9273461](https://www.curseforge.com/hytale/mods/hythief/files/9273461) is submitted and Processing; approval/default-file promotion is pending.
 
 The Creator Update expands HyThief's existing pickpocketing and owned-container theft into a configurable stealth and theft system. For Hytale mod developers, world builders, adventure-map creators, dungeon designers, server administrators, roleplay server creators, and stealth/RPG experience designers.
 
 Use in-game tools to author guarded storage, towns and stealth encounters alongside Hytale's native building/NPC systems. HyThief configures ownership and theft participation; it does not replace native AI.
 
-## Creator Tools — Commands & Setup
+## Creator Tools â€” Commands & Setup
 
 | Command | What it does | Permission |
 |---|---|---|
@@ -28,7 +28,7 @@ Native chests and supported optional **HyStash 1.4.0** wardrobes are verified. N
 
 ## NPC participation
 
-Configure Pickpocket, Witness and Crime Response separately with Default/Enabled/Disabled. Resolve each field **individual NPC → exact role/type → recognized faction → existing defaults**. Individual settings follow saved NPCs; broad rules apply throughout this world. Replacement spawns inherit applicable role/faction rules, not another NPC's individual settings.
+Configure Pickpocket, Witness and Crime Response separately with Default/Enabled/Disabled. Resolve each field **individual NPC â†’ exact role/type â†’ recognized faction â†’ existing defaults**. Individual settings follow saved NPCs; broad rules apply throughout this world. Replacement spawns inherit applicable role/faction rules, not another NPC's individual settings.
 
 Enabled does not create missing loot, interaction wiring or AI. Current faction scopes remain bounded and are documented in the guide; universal dynamic faction compatibility is not claimed. Native identities/factions, movement, patrols, AI definitions, spawning and arbitrary scripting/world triggers are not edited. Response Disabled is not global pacification: native hostility and social behavior may still act independently.
 

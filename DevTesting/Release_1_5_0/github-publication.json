@@ -1,0 +1,23 @@
+{
+  "ReleaseID": 419084232,
+  "URL": "https://github.com/FalkFirebeard/HyThief/releases/tag/v1.5.0",
+  "Draft": false,
+  "Assets": [
+    {
+      "ID": 661137109,
+      "Name": "HyThief-1.5.0.jar",
+      "SHA256": "c57bfbcb81fe619fe0e6beb8bf96ccb1066b4273d8fbb7404d1122597e5c709e",
+      "URL": "https://github.com/FalkFirebeard/HyThief/releases/download/v1.5.0/HyThief-1.5.0.jar",
+      "PublicDownloadVerified": true
+    },
+    {
+      "ID": 661137179,
+      "Name": "SHA256SUMS.txt",
+      "SHA256": "a70498837be5d9fa22384524fa6b5caa0ab017be8bc20f52f2814ec873a2e56b",
+      "URL": "https://github.com/FalkFirebeard/HyThief/releases/download/v1.5.0/SHA256SUMS.txt",
+      "PublicDownloadVerified": true
+    }
+  ],
+  "PublishedAt": "2026-10-21T02:38:31Z",
+  "Latest": true
+}
