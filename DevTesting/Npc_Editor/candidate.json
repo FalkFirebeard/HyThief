@@ -3,7 +3,7 @@
   "Target": "=0.7.2",
   "SHA256": "89334a1850735a0f50f5caa4b3ab0f579a75447acd5db088aeacbd8f903328ac",
   "Artifact": "E:\\Hytale adjustments\\Mod Projects\\HyThief\\DevTesting\\Npc_Editor\\Candidates\\HyThief-1.5.0-editor.3.jar",
-  "Installed": false,
+  "Installed": true,
   "PublicationAuthorized": false,
   "NativeValidationContentsIdentical": true
 }

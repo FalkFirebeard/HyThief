@@ -1,4 +1,4 @@
-# NPC Editor — verified development checkpoint
+# NPC Editor â€” verified development checkpoint
 
 2026-10-20 (America/Denver). Hytale 0.7.2 / d769dc3d57881261a62858e1394f0e4de9a21eca.
 
@@ -14,7 +14,7 @@ Version 1.5.0-editor.3, exact target =0.7.2. Artifact: DevTesting/Npc_Editor/Can
 
 SHA-256: 89334a1850735a0f50f5caa4b3ab0f579a75447acd5db088aeacbd8f903328ac.
 
-Not installed. editor.2 remains active. Separate reversible installation/version-pin approval is required. No public release/tag/publication is authorized.
+Deployment update: Falk approved installation and pin updates. editor.3 is now installed as the only active HyThief JAR. Previous editor.2 and old pins are backed up under DevTesting/Npc_Editor/Deployment-editor.3-736f9de2-285d-43fd-a5e3-6b9bb7fdbdeb. Only the active/master required-plugin version, reset candidate version/hash and affected master checksum changed. No reset ran. All other active/master files and unrelated mods, including HyStash, remained byte-identical. No public release/tag/publication is authorized.
 
 ## Implementation
 
@@ -68,3 +68,7 @@ After separately approved installation, use existing 01 HyThief without resettin
 7. Existing ownership tool on chest and both wardrobe halves; normal trade, rear pickpocket, theft/caught, owned-container closure, pursuit denial and restoration.
 
 Permissions: hythief.npc.edit and hythief.ownership.edit as applicable. No active installation or required-plugin pin changes until Falk approves. Public 1.5.0 readiness still requires manual testing and final scope review.
+
+## Approved deployment verification
+
+Installed exact candidate SHA above, one Local:HyThief identity. Active/master RequiredPlugins now =1.5.0-editor.3. Master checksum inventory and installed reset candidate pins pass; reset PS1/CMD are byte-identical. Existing desktop shortcut is inspected, not launched, to preserve active edits. Manual connected-client testing is next. Prior preservation results above describe the pre-deployment checkpoint; deployment changed only the stated version pins.
